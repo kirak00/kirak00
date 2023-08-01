@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  table {width:100%; }
+td  {border:1px solid #ddd; padding:10px; }
+</style>
+
+  <div>
+    <table>
+      <tr>
+        <th>1 depth</th>
+        <th>2 depth</th>
+        <th>3 depth</th>
+        <th>File Name</th>
+      </tr>
+      <tbody id="ddd">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<script>
+
+  
+
+  var jsonList = [
+   {
+    tit : '1 뎁스 1', folder : 'folder_1', page : 'index.html', 
+    sub : [
+      {tit : '1 - 1', folder : 'folder_2', page : '', 
+        sub : [
+          {tit : '1 - 1 - 1', folder : 'folder_3', page : '',
+            sub : [
+              {tit : '1 - 1 - 1', folder : 'folder_3', page : ''},
+              {tit : '1 - 1 - 1', folder : 'folder_3', page : ''},
+              {tit : '1 - 1 - 1', folder : 'folder_3', page : ''},
+            ],
+          },
+          {tit : '1 - 1 -2', folder : 'folder_3', page : '',
+            sub : [
+              {tit : '1 - 1 - 2 - 1', folder : 'folder_3', page : ''},
+              {tit : '1 - 1 - 2 - 2', folder : 'folder_3', page : ''},
+              {tit : '1 - 1 - 2 - 3', folder : 'folder_3', page : ''},
+            ],
+          }
+        ],
+      }
+    ],
+   },
+   {
+    tit : '1 뎁스 2', folder : 'folder_2', page : 'index.html', 
+    sub : [],
+   }
+  ]
+
+
+  // console.log(jsonList)
+
+
+  var txt = ""
+  jsonList.forEach((o,i)=>{
+      console.log(o,i);
+      // one
+      txt += `<tr><td>${o.folder}</td><td></td><td></td><td><a href="${o.page}">${o.tit}</a></td><tr>\n`
+
+      o.sub.forEach((o2,i2)=>{
+        txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td></td><td><a href="${o2.page}">${o2.tit}</a></td><tr>\n`;
+          
+        o2.sub.forEach((o3,i3)=>{
+          txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td>${o3.folder}</td><td><a href="${o3.page}">${o3.tit}</a></td><tr>\n`
+              
+          // o3.sub.forEach((o3,i3)=>{
+          //   txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td>${o3.folder}</td><td><a href="${o3.page}">${o3.tit}</a></td><tr>\n`
+          // })
+          
+        })
+      })
+  })
+
+  document.querySelector("#ddd").innerHTML = txt
+  console.log(txt)
+
+</script>
+  
+</body>
+</html>
