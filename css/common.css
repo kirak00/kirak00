@@ -8,24 +8,25 @@
 
 
 *{-webkit-text-size-adjust:none; margin:0; padding:0; font-family:'Pretendard', sans-serif, HelveticalNeue-Light,AppleSDGothicNeo; -webkit-tap-highlight-color:rgba(0,0,0,0); }
-strong,h1,h2,h3,h4,h5,h6	{ font-family:'Pretendard',sans-serif; font-weight:700; letter-spacing: -0.115em;  }
+strong,h1,h2,h3,h4,h5,h6	{ font-family:'Pretendard',sans-serif; font-weight:700;    }
 html{height:100%;}
 html.popOpen {overflow:hidden; }
-body{margin:0; padding:0; min-width:1280px; -webkit-text-size-adjust:100%; height:100%; position:relative; font-size:17px; line-height:30px; font-weight:400; color:#666; letter-spacing: -0.025em; }
+body{margin:0; padding:0; min-width:1400px; -webkit-text-size-adjust:100%; height:100%; position:relative; font-size:14px; line-height:20px; color:#666;  }
+button,select,input,label {font-size:14px; }
 
-     
+
 @media screen and (max-width: 691px) {
-body		{font-size:14px; }
+  /* body		{font-size:14px; } */
 }
 
 p,h1,h2,h3,h4,h5,h6,menu,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img{margin:0;padding:0;-webkit-text-size-adjust: 100%; vertical-align:top}
 table,th,td{vertical-align:middle; text-align:center; }
-button,select,input,label {cursor:pointer;font-size:14px; box-sizing: border-box; appearance: none;}
+button,select,input,label {cursor:pointer;  box-sizing: border-box; appearance: none;}
 hr, legend, caption {display:none; }
 
-@media screen and (max-width: 691px) {
+/* @media screen and (max-width: 691px) {
 button,select,input[type=radio],input[type=checkbox],label,textarea {cursor:pointer;font-size:14px; border-radius:0;-webkit-appearance:none}
-}
+} */
 
 /* ---[ reset html5 element ]---------------- */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
@@ -35,10 +36,8 @@ em {font-style:normal;}
 fieldset,img {border:0 none;  }
 .hidden {visibility:hidden;width:2px; height:2px; overflow:hidden; position:absolute;left:-1000px;}
 .m_hidden {visibility:hidden; width:2px; height:2px; overflow:hidden; position:absolute;left:-10000px; margin:0 !important; }
-.nohidden {visibility:visible !important; width:auto; height:auto; overflow:hidden;   position:relative; left:0;}
-.nohidden2 {visibility:visible !important; width:auto; height:auto; overflow:hidden;  position:relative;left:0;}
 
-table {border-collapse:collapse;border-spacing:0; }/*margin-top:10px;*/
+table {border-collapse:collapse;border-spacing:0; }
 table caption {width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden;}
 table tr td span{white-space: normal;}
 table tr td img{vertical-align:middle; }
