@@ -2,21 +2,4 @@
 
 
 
-/*  진희 */
-
-/* 메인 */
-
-.banner_type.bannerLoansMain { height: 620px; background: #323C94; }
-.banner_type.bannerLoansMain h2 { color: #fff; font-size: 38px; line-height: 2; }
-.banner_type.bannerLoansMain h2 strong { font-size: 52px; }
-
-.step_type { display: flex; }
-.step_type .box { display: flex; flex-direction: column;}
-.step_type.stepLoans { gap: 20px; height: 368px; background-color: #fff; }
-.step_type.stepLoans .box { width: 25%; }
-
-.banner_type.bannerLoans { color: #fff; font-size: 30px; }
-
-
-.btn_52 { height: 52px; padding: 0 50px;}
-[class*='btn_blue'] { background: blue;}
+/* */
