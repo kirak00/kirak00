@@ -11,7 +11,7 @@
 strong,h1,h2,h3,h4,h5,h6	{ font-family:'Pretendard',sans-serif; font-weight:700;    }
 html{height:100%;}
 html.popOpen {overflow:hidden; }
-body{margin:0; padding:0; min-width:1400px; -webkit-text-size-adjust:100%; height:100%; position:relative; font-size:14px; line-height:20px; color:#666;  }
+body{margin:0; padding:0; min-width:1400px; -webkit-text-size-adjust:100%; height:100%; position:relative; font-size:14px; line-height:1.4; color:#666;  }
 button,select,input,label {font-size:14px; }
 
 
@@ -48,7 +48,7 @@ a img {border: none;}
 a:link,a:visited {text-decoration: none;color:#666; font-family:inherit}
 a:hover {text-decoration:underline;}
 
-button{position:relative;margin:0;padding:0;border:0;background:#fff;cursozr:pointer;vertical-align:middle;  box-sizing:border-box;  }
+button{position:relative;margin:0;padding:0;border:0; vertical-align:middle;  box-sizing:border-box;  }
 
 .clear{clear:both;height:0;line-height:0;font-size:0;}
 .mob_clear {clear: both;}
@@ -93,6 +93,8 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 **********  button  **********
 *****************************/
 /* MAIN 버튼 */ 
+[class*='btn_52'] { height: 52px; padding: 0 50px; border-radius: 8px; background: #5B7DDC; color: #fff;}
+/* [class*='btn_blue'] { background: blue;} */
 
 /****************************
 **********  form  **********
