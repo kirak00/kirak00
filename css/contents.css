@@ -15,23 +15,44 @@
 
 .stepLoans { display: flex; gap: 20px; margin-top: -238px;  }
 .stepLoans .step {display: flex; flex-direction: column; width: 25%;}
-.stepLoans .box { height: 368px; padding: 60px 0; background-color: #fff; border-radius: 15px; text-align: center;}
-.stepLoans .box::before { content: ''; display: block; width: 80px; height: 80px; margin: 0 auto;}
-.stepLoans .box:nth-child(1)::before { background: url(../images/common/ico_loanstep_1.png) center / contain no-repeat}
-.stepLoans .box:nth-child(2)::before { background: url(../images/common/ico_loanstep_2.png) center / contain no-repeat}
-.stepLoans .box:nth-child(3)::before { background: url(../images/common/ico_loanstep_3.png) center / contain no-repeat}
-.stepLoans .box:nth-child(4)::before { background: url(../images/common/ico_loanstep_4.png) center / contain no-repeat}
-.stepLoans .box h3 { margin-top: 60px; color: #5B7DDC; font-size: 24px;}
-.stepLoans .box p { margin-top: 10px;}
+.stepLoans .step .box { height: 368px; padding: 60px 0; background-color: #fff; border-radius: 15px; text-align: center;}
+.stepLoans .step .box::before { content: ''; display: block; width: 80px; height: 80px; margin: 0 auto;}
+.stepLoans .step:nth-child(1) .box::before { background: url(../images/common/ico_loanstep_1.png) center / contain no-repeat}
+.stepLoans .step:nth-child(2) .box::before { background: url(../images/common/ico_loanstep_2.png) center / contain no-repeat}
+.stepLoans .step:nth-child(3) .box::before { background: url(../images/common/ico_loanstep_3.png) center / contain no-repeat}
+.stepLoans .step:nth-child(4) .box::before { background: url(../images/common/ico_loanstep_4.png) center / contain no-repeat}
+.stepLoans .step .box h3 { margin-top: 60px; color: #5B7DDC; font-size: 24px;}
+.stepLoans .step .box p { margin-top: 10px;}
 .stepLoans ul { display: block;}
+
+.stepLoans.is_logined {}
+.stepLoans.is_logined .step {}
 
 .bannerLoans { height: 120px; display: flex; align-items: center; margin-top: 80px; background: #71F4E4; border-radius: 15px; color: #fff; font-size: 30px; }
 .bannerLoans .inner { width: 768px; margin: 0 auto;}
 
-
+.userInfoMain { }
+.userInfoMain .greeting_msg { color: #fff; font-size: 20px; }
+.userInfoMain .user { font-size: 40px; }
+.userInfoMain .user strong { font-weight: 700;}
+.userInfoMain .user .icon { }
+.userInfoMain .tooltip_wrap {}
+.userInfoMain .tooltip_wrap .icon {}
+.userInfoMain .tooltip_wrap .tooltip_con {}
 
 .bannerWithUs { margin-top: 80px; }
 .bannerWithUs h2 { color: #333; font-size: 32px; text-align: center;}
 .bannerWithUs p { margin-top: 20px; color: #555; text-align: center;}
 .bannerWithUs ul { display: flex; gap: 40px; margin-top: 60px;}
 .bannerWithUs ul li { width: 200px; height: 70px; border-radius: 8px; border: 1px solid #DDD; line-height: 70px; text-align: center;}
+
+.tableInfo.suggest { margin: 40px 0;}
+.tableInfo.suggest table {}
+.tableInfo.suggest tr {}
+.tableInfo.suggest td { padding: 20px 0;}
+
+.tableInfo.suggest .status {}
+.tableInfo.suggest .opt {}
+
+
+.suggestLoanList { background: #d9d9d9; border-radius: 15px; }

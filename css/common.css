@@ -93,8 +93,13 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 **********  button  **********
 *****************************/
 /* MAIN 버튼 */ 
-[class*='btn_52'] { height: 52px; padding: 0 50px; border-radius: 8px; background: #5B7DDC; color: #fff;}
-/* [class*='btn_blue'] { background: blue;} */
+.btnSize52 { height: 52px; padding: 0 50px; font-size: 20px; border-radius: 8px; }
+.btnBlue { background: #5b7ddc; color: #fff; }
+.btnBlueLine { border: 1px solid #323c94; color: #323c94; }
+.btnBlueLine:hover { background: #323c94; color: #fff;}
+
+.btnLink90 { height: 90px; font-size: 30px; border-radius: 15px;}
+.btnBlue2 { background: #6b74c7; color: #fff; }
 
 /****************************
 **********  form  **********
