@@ -14,17 +14,18 @@
 .skip_nav a:focus, 
 .skip_nav a:active{top: 0;}
 
-
+body  {background:rgba(244, 246, 248, 1)}
 
 .wrap {}
 
 header {}
 header::after {content:''; position:absolute; width:100%; height:740px; top:0; lefT:0; z-index:0; background:#323C94; }
-header.on::before {content:''; width:100%; left:0; top:0; z-index:1; position:fixed; height:100vh; background: rgba(0, 0, 0, 0.40); }
+header.on::before {content:''; width:100%; left:0; top:0; z-index:499; position:fixed; height:100vh; background: rgba(0, 0, 0, 0.40); }
 header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:120px; background:#fff;  transition: .5s; opacity:0 ; }
 header.on .bg  {height:450px; opacity: 1; background:#fff; top:0; }
+header .line  {content:''; position:absolute; width:100%; height:0; top:120px; left:0; z-index:599; background:#323C94; border-bottom:1px solid #515BB7; }
 
-.headerCont {position:relative; z-index:500; height:120px; border-bottom:1px solid #515BB7;   }
+.headerCont {position:relative; z-index:500; width:1400px; margin:0 auto; height:120px; }
 .headerCont h1.logo       {position:relative; z-index:10; float:left; padding:44px 90px 0 0 }
 .headerCont h1.logo a     {font-size:28px; font-weight: 700; color:#fff; transition: .3s;  }
 .on .headerCont h1.logo a     {color:#323C94; }
@@ -48,9 +49,30 @@ header.on .bg  {height:450px; opacity: 1; background:#fff; top:0; }
 .headerCont ul.headerUtil li a {font-size:20px; font-weight: 500;  color:#fff; transition: .3s; ;}
 .headerCont ul.headerUtil li a.login {position:relative; margin-left:10px; padding-left:10px; }
 .headerCont ul.headerUtil li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#fff; border-radius: 50%; left:0; top:50%;}
+.headerCont ul.headerUtil li a.logout {position:relative; padding-right:34px; }
+.headerCont ul.headerUtil li a.logout::before {content:''; position: absolute; width:24px; height:24px; background:#fff; right:0; top:0%; background:url(../images/common/ico_logout_off.png) no-repeat 0 0 / 100%;}
 .on .headerCont ul.headerUtil li a {color:#323C94; }
 .on .headerCont ul.headerUtil li a.login::before {background:#323C94; }
+.on .headerCont ul.headerUtil li a.logout::before {background-image:url(../images/common/ico_logout_on.png)}
 
-.container {position:relative; z-index:2; }
+
+.headerCont ul.gnb li.depth_1 > a span.ico_gnb_acc    {  }
 
 
+
+.container {position:relative; z-index:2; min-height:500px }
+
+
+
+footer    {position:relative; z-index:2; background:rgba(244, 246, 248, 1) }
+footer::before    {content:""; position:absolute; width:100%; top:90px; border-top:1px solid #ddd}
+.footerWrap {width:1400px; margin:0 auto;}
+ul.footerLnk  {padding:40px 0 30px; overflow: hidden; }
+ul.footerLnk li  {float:left; }
+ul.footerLnk li a  {font-size:18px; }
+ul.footerLnk li::before  {content:"ㆍ";padding:0 14px; }
+ul.footerLnk li:first-child:before  {content:"";padding:0; }
+footer .copy    {overflow:hidden; padding:40px 0 ; }
+footer .copy p    {float:left; padding:10px 0 0; }
+footer .copy p span {display:block; line-height:28px; font-size:16px;  }
+footer .copy .wa    {float:right; }
