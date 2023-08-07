@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./guide.css" />
+    <script src="./guide.js"></script>
+    <link rel="stylesheet" href="../../../css/COP/style.css"/>
+    <title>SHINHAN</title>
+  </head>
+  <body class="c-body">
+    <div class="g-wrapper guide">
+      <header class="g-header">
+        <div class="g-hgroup">
+          <h1><span>가이드 목록</span></h1>
+          <div class="g-tbl-states">
+            <a class="g-link" href="list_pc.html" target="_blank">페이지 목록</a>
+          </div>
+        </div>
+      </header>
+      <main class="g-container">
+        <nav class="g-nav">
+          <ul class="g-nav-list">
+            <li><a href="./layout.html" target="ifrContents">Layout</a></li>
+            <li><a href="./header.html" target="ifrContents">Header</a></li>
+            <li><a href="./divider.html" target="ifrContents">단락구분</a></li>
+            <li><a href="./title.html" target="ifrContents">Title</a></li>
+            <li><a href="./text.html" target="ifrContents">Text</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="./badge.html" target="ifrContents">뱃지</a></li>
+            <li><a href="./button.html" target="ifrContents">버튼/라디오 버튼/스위치</a></li>
+            <li><a href="./tab.html" target="ifrContents">탭</a></li>
+            <li><a href="./pagination.html" target="ifrContents">페이지네이션</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="./form.html" target="ifrContents">폼그룹</a></li>
+            <li><a href="./checkbox.html" target="ifrContents">체크박스</a></li>
+            <li><a href="./select.html" target="ifrContents">셀렉트</a></li>
+            <li><a href="./contract.html" target="ifrContents">약관동의</a></li>
+            <li><a href="./data_table.html" target="ifrContents">Data tables</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="./list.html" target="ifrContents">Lists</a></li>
+            <li><a href="./msg.html" target="ifrContents">msg</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="/alert.html" target="ifrContents">레이어 팝업 _ L</a></li>
+            <li><a href="/alert.html" target="ifrContents">레이어 팝업 _ M</a></li>
+            <li><a href="/alert.html" target="ifrContents">레이어 팝업 _ S</a></li>
+            <li><a href="/alert.html" target="ifrContents">알럿 팝업</a></li>
+            <li><a href="/alert.html" target="ifrContents">토스트 메세지</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="./banner.html" target="ifrContents">Banners</a></li>
+            <li><a href="./box.html" target="ifrContents">box</a></li>
+            <li><a href="./card.html" target="ifrContents">Cards</a></li>
+          </ul>
+          <ul class="g-nav-list">
+            <li><a href="./swiper.html" target="ifrContents">Swiper</a></li>
+            <li><a href="./slider.html" target="ifrContents">Sliders</a></li>
+            <li><a href="./progress.html" target="ifrContents">Progress bar</a></li>
+          </ul>
+        </nav>
+        <div class="g-contents">
+          <iframe
+            onload="calcHeight()"
+            src="./layout.html"
+            frameborder="0"
+            name="ifrContents"
+            id="ifrContents"
+          ></iframe>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function calcHeight() {
+        //find the height of the internal page
+        var the_height = document.getElementById("ifrContents").contentWindow.document.body.scrollHeight;
+        // console.log(the_height);
+        //change the height of the iframe
+        document.getElementById("ifrContents").height = the_height;
+        //document.getElementById('the_iframe').scrolling = "no";
+        document.getElementById("ifrContents").style.overflow = "hidden";
+      }
+      var iframe = document.getElementById("ifrContents");
+      window.addEventListener("DOMContentLoaded", function () {
+        iframe.addEventListener("load", autoHeight);
+      });
+
+      function autoHeight() {
+        var frame = iframe;
+        var sub = frame.contentDocument ? frame.contentDocument : frame.contentWindow.document;
+        iframe.height = sub.body.scrollHeight;
+      }
+    </script>
+  </body>
+</html>
