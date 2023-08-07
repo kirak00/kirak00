@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../guide.css" />
+    <script src="./guide.js"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/juqery-3.7.0.min.js"></script>
+    <title>SHINHAN</title>
+  </head>
+  <body class="c-body">
+    <div class="c-container">
+      <div class="c-title">
+        <h1 class="c-h1">Guage</h1>
+      </div>
+      <div class="c-guide">
+          <div class="gaugeBox">
+            <dl class="gauge_val">
+              <dt class="tit">차트 타이틀</dt>
+              <dd class="val"><strong class="numberWithoutPercent">50</strong>%</dd>
+            </dl>
+            <div class="gauge_circle">
+              <div class="gauge_body">
+                <div class="gauge_fill"></div>
+              </div>
+              <div class="gauge_pointer_wrap">
+                <div class="gauge_pointer"></div>
+              </div>
+              <div class="gauge_bg"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function(){
+            setGaugeValue(gaugeCircle, 0.3);
+        },300)
+      })
+      const gaugeCircle = document.querySelector(".gauge_circle");
+      function setGaugeValue(gauge, value) {
+        if (value < 0 || value > 1) { return; }
+        $('.gauge_fill, .gauge_pointer').css('transform','rotate(' + value / 2 + 'turn)')
+        $('.numberWithoutPercent').text(value*100);
+      }
+
+ 
+        
+     
+    </script>
+  </body>
+</html>
