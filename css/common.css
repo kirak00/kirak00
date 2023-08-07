@@ -21,7 +21,7 @@ button,select,input,label {font-size:14px; }
 
 p,h1,h2,h3,h4,h5,h6,menu,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img{margin:0;padding:0;-webkit-text-size-adjust: 100%; vertical-align:top}
 table,th,td{vertical-align:middle; text-align:center; }
-button,select,input,label {cursor:pointer;  box-sizing: border-box; appearance: none;}
+/* button,select,input,label {cursor:pointer;  box-sizing: border-box; appearance: none;} */
 hr, legend, caption {display:none; }
 
 /* @media screen and (max-width: 691px) {
@@ -93,6 +93,7 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 **********  button  **********
 *****************************/
 /* MAIN 버튼 */ 
+.btnM.btnBlue {}
 
 /****************************
 **********  form  **********
