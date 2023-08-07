@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>SHINHAN</title>
+  <style>
+    
+    
+  </style>
+</head>
+<body>
+  <script src="./jquery-1.10.2.js"></script>
+<script src="./jquery-ui.js"></script>
+<div class="shot">
+</div>
+<div class="drag-me">Drag me around!</div>
+
+<style>
+* {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f7dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(67, 137, 162, 0.75), rgba(92, 37, 141, 0.75));
+}
+
+.drag-me {
+  background: #d94fed;
+  width: 180px;
+  padding: 0 0 0 40px;
+  color: #830f94;
+  line-height: 50px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: #cf21e8 0 0 3px;
+  -webkit-box-shadow: #cf21e8 0 0 3px;
+  box-shadow: #cf21e8 0 0 3px;
+}
+.drag-me:hover {
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+  -moz-box-shadow: #830f94 0 1px 3px;
+  -webkit-box-shadow: #830f94 0 1px 3px;
+  box-shadow: #830f94 0 1px 3px;
+}
+.drag-me:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  -moz-box-shadow: rgba(131, 15, 148, 0.7) 0 2px 8px;
+  -webkit-box-shadow: rgba(131, 15, 148, 0.7) 0 2px 8px;
+  box-shadow: rgba(131, 15, 148, 0.7) 0 2px 8px;
+}
+.drag-me:before {
+  content: ".";
+  position: absolute;
+  left: 14px;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ac14c2;
+  text-shadow: 0 5px #ac14c2, 0 10px #ac14c2, 5px 0 #ac14c2, 5px 5px #ac14c2, 5px 10px #ac14c2, 10px 0 #ac14c2, 10px 5px #ac14c2, 10px 10px #ac14c2;
+}
+
+.shot {
+  position: absolute;
+}
+
+</style>
+<script>
+  $(function() {
+  $(".drag-me").draggable({ helper: "clone"});
+});
+</script>
+</body>
+</html>

@@ -30,12 +30,13 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:120px; l
 .headerCont h1.logo a     {font-size:28px; font-weight: 700; color:#fff; transition: .3s;  }
 .on .headerCont h1.logo a     {color:#323C94; }
 .headerCont h1.logo a:hover  {}
-.headerCont ul.gnb        {position:relative; padding:42px 0 0; z-index:10; float:left; width:780px; display:flex; justify-content: space-between;  }
+.headerCont ul.gnb        {position:relative; padding:42px 0 0; z-index:10; float:left; width:780px; display:flex; justify-content:center;  }
 .headerCont ul.gnb li         {}
 .headerCont ul.gnb li a       {display:block; width:145px; padding:7px 0; text-align: center; text-decoration: none; box-shadow:inset 0 0 0  0  #fff; transition: .3s; }
 .headerCont ul.gnb li.on > a {font-weight: 700;  }
 .headerCont ul.gnb li a:hover    {box-shadow:inset 0 -18px 0  0  rgba(82, 132, 227, 0.15);}
-.headerCont ul.gnb li.depth_1        {}
+.headerCont ul.gnb li.depth_1        {margin-left:70px}
+.headerCont ul.gnb li.depth_1:first-child        {margin-left:0px}
 .headerCont ul.gnb li.depth_1 > a    {font-size:24px; color:#fff; transition: .3s;  }
 .on .headerCont ul.gnb li.depth_1 > a    {color:#323C94; }
 .headerCont ul.gnb li.depth_1 ul     {display:none; position:absolute; top:120px; width:145px; }
