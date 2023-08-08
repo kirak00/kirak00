@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/****************************
+**********  color  **********
+*****************************/
+/* Main color */
+.mainGreen {color:#21847c} 
+.darkGreen {color:#3a6261} 
+
+/* Point color */
+.pntCol_1 {color:#e22000} 
+.pntCol_2 {color:#d2c297} 
+.pntCol_3  {color:#9a895d}
+
+/* color */
+.black	{color:#000} 
+.brown	{color:#7f6c66} 
+.green	{color:#537a7c}
+
+/****************************
+**********  button  **********
+*****************************/
+/* MAIN 버튼 */ 
+
+.btnM.btnBlue {}
+
+.btnSize52 { height: 52px; padding: 0 50px; font-size: 20px; border-radius: 8px; }
+.btnBlue { background: #5b7ddc; color: #fff; }
+.btnBlueLine { border: 1px solid #323c94; color: #323c94; }
+.btnBlueLine:hover { background: #323c94; color: #fff;}
+
+.btnLink90 { height: 90px; font-size: 30px; border-radius: 15px;}
+.btnBlue2 { background: #6b74c7; color: #fff; }
+
+
+/****************************
+**********  form  **********
+*****************************/
+/* checkbox, radio */
+
+/* checkbox */ 
+
+/* radio */ 
+
+
+/****************************
+**********  table  **********
+*****************************/
+
+
+
+/****************************
+**********  content  **********
+*****************************/
+
+
+/****************************
+**********  layer  **********
+*****************************/
+
+.alertWrap      {position:fixed; width:100%; height:100%; z-index:5000; left:0; top:0; }
+.alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:610px; padding:40px 40px 60px; border-radius: 16px; background:#fff }
+.alertWrap .alertBody .alertCont      {padding-bottom:60px; text-align: center;}
+.alertWrap .alertBody .alertFooter    {display:flex; gap:16px }
+.alertWrap .alertBody .alertFooter button    {width:100%; background:#ddd; }
+.alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .5)}

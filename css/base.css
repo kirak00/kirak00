@@ -65,72 +65,8 @@ select	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-
 input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o-transition: all 300ms linear;-ms-transition: all 300ms linear;transition: all 300ms linear;}
 */
 
-
-/**********************************************************************************************************************************/
-/**********************************************************************************************************************************/
-/****************************************************    COMMON    **********************************************************/
-/**********************************************************************************************************************************/
-/**********************************************************************************************************************************/
-
-/****************************
-**********  color  **********
-*****************************/
-/* Main color */
-.mainGreen {color:#21847c} 
-.darkGreen {color:#3a6261} 
-
-/* Point color */
-.pntCol_1 {color:#e22000} 
-.pntCol_2 {color:#d2c297} 
-.pntCol_3  {color:#9a895d}
-
-/* color */
-.black	{color:#000} 
-.brown	{color:#7f6c66} 
-.green	{color:#537a7c}
-
-/****************************
-**********  button  **********
-*****************************/
-/* MAIN 버튼 */ 
-
-.btnM.btnBlue {}
-
-.btnSize52 { height: 52px; padding: 0 50px; font-size: 20px; border-radius: 8px; }
-.btnBlue { background: #5b7ddc; color: #fff; }
-.btnBlueLine { border: 1px solid #323c94; color: #323c94; }
-.btnBlueLine:hover { background: #323c94; color: #fff;}
-
-.btnLink90 { height: 90px; font-size: 30px; border-radius: 15px;}
-.btnBlue2 { background: #6b74c7; color: #fff; }
-
-
-/****************************
-**********  form  **********
-*****************************/
-/* checkbox, radio */
-.radioItem input[type=radio] + label ,
-.checkItem input[type=checkbox] + label {display:inline-block;line-height:0;vertical-align:middle}
-.radioItem input[type=radio],
-.checkItem input[type=checkbox] {border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
-
-/* checkbox */ 
-.checkItem input[type=checkbox] + label {position:relative;display:inline-block;padding:0 35px 0 30px;min-height:20px;line-height:19px;background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check.png") no-repeat;cursor:pointer}
-.checkItem input[type=checkbox]:focus + label {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_.png") no-repeat}
-.checkItem input[type=checkbox] + label.on {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_on.png") no-repeat}
-.checkItem input[type=checkbox]:checked  + label {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_on.png") no-repeat}
-.checkItem input[type=checkbox]:focus + label.on {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_on_.png") no-repeat}
-.checkItem input[type=checkbox] + label.disable {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_off.png") no-repeat}
-.checkItem input[type=checkbox]:disabled + label {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/check_off.png") no-repeat;cursor:default}
-
-/* radio */ 
-.radioItem input[type=radio] + label {position:relative;display:inline-block;padding:0 35px 0 30px;min-height:20px;line-height:19px;background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio.png") no-repeat;cursor:pointer;color:#666}
-.radioItem input[type=radio]:focus + label {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio_on_.png") no-repeat}
-.radioItem input[type=radio] + label.on {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio_on.png") no-repeat}
-.radioItem input[type=radio]:checked  + label {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio_on.png") no-repeat}
-.radioItem input[type=radio]:focus + label.on {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio_on_.png") no-repeat}
-.radioItem input[type=radio] + label.disable,
-.radioItem input[type=radio]:disabled + label {background:url("//image.uplus.co.kr/images/renewal/images/cm/pc/radio_off.png") no-repeat}
-.radioItem input[type=radio] + label.disable,
-.radioItem input[type=radio]:disabled + label.disableOn {background:url("http://image.uplus.co.kr/images/renewal/images/cm/pc/radio_on.png") no-repeat}
+.skip_nav{position:relative;z-index:9999;}
+.skip_nav a{position: absolute; top: -200px; left:0; width: 160px; line-height: 30px;border: 1px solid #dedede; background-color: #333;}
+.skip_nav a:focus, 
+.skip_nav a:active{top: 0;}
 
