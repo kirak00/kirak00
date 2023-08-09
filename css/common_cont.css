@@ -21,7 +21,7 @@
 **********  button  **********
 *****************************/
 
-button    {background:none; cursor: pointer;}
+button    {background:none; cursor: pointer; transition: .2s;}
 
 /* MAIN 버튼 */ 
 button.btnBlue        {padding:0 50px; height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
@@ -69,6 +69,10 @@ button.btnReset     {font-size: 20px; font-weight: 700; color:#555}
 button.btnReset::after     {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_refresh.png) no-repeat 50% 50%; }
 button.btnFile      {font-size: 20px; font-weight: 700; color:#323C94; text-decoration: underline;}
 button.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+button.btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #323C94;  }
+button.btnDown:hover    {background-color:#4260BB ;  }
+button.btnDown.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
+button.btnDown.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
 
 
@@ -125,7 +129,22 @@ input[type=checkbox].star:checked    {background:url(../../images/common/ico_24_
 /****************************
 **********  content  **********
 *****************************/
+.pageTop        {padding-bottom:40px; overflow: hidden; }
+.pageTop h2.pageTit        {float:left; font-size:40px; color:#333; font-weight: 700; }
+.pageTop ul.breadcrumb     {float:right; }
+.pageTop ul.breadcrumb li  {float:left; height:24px; }
+.pageTop ul.breadcrumb li a.home {display:block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
+.pageTop ul.breadcrumb li::before  {content: ""; width:24px; height:24px; margin:0 8px; float:left; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; }
+.pageTop ul.breadcrumb li:first-child:before  {display:none;}
+.pageTop ul.breadcrumb li a  {line-height:24px; font-size:16px; color:#555; }
+.pageTop ul.breadcrumb li a strong{color:#323C94; }
 
+ul.tab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidden; }
+ul.tab li   {width:100%; }
+ul.tab li button   {display:block; width:100%; height:70px; text-align: center; font-size:24px; background:#F4F6F8; }
+ul.tab li.on button   {background:#323C94; color:#fff; font-weight: 700;  }
+ul.tab li:hover button,
+ul.tab li button:focus   {background:#5B7DDC; color:#fff;  }
 
 /****************************
 **********  layer  **********
