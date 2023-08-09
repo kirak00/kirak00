@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/contents_COP.css">
   <script src="../../js/juqery-3.7.0.min.js"></script>
-  <script src="../../js/jquery-ui.js"></script>
-  <script src="../../js/common.js"></script>
+   <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
   <script src="../../js/common_COP.js"></script>
   <title>SHINHAN</title>
 <style>
@@ -24,7 +23,7 @@
     <!-- **************** -->
     <!-- header : start -->
     <!-- **************** -->
-    <header class="" >
+    <header class="">
       
       <div class="headerCont ">
         <h1 class="logo"><a href="#none">법인중개대출플랫폼</a></h1>
@@ -74,9 +73,82 @@
     <!-- **************** -->
     <!-- contents : start -->
     <!-- **************** -->
-    <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <div class="container" id="skip_content">
       <section>
-        <button aria-haspopup="dialog" data-popup="alert" onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
+
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div>
+          </div>
+        </fieldset>
+<style>
+
+
+
+</style>
+        <div class="table_top">
+          <div class="total">총 15건 </div>
+          <div class="sortBox">
+            <select name="" id="" title="테이블 정렬">
+              <option value="">신청 금액 높은순</option>
+              <option value="">마감일 최신순</option>
+            </select>
+          </div>
+        </div>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>
+              제안서 제출 가능 목록
+            </caption>
+            <colgroup>
+              <col width=""/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">관심대출</th>
+                <th scope="col">제안서 <br> 제출유무</th>
+                <th scope="col">제출</th>
+                <th scope="col">심사 완료 유무</th>
+                <th scope="col">법인명</th>
+                <th scope="col">희망 신청 금액</th>
+                <th scope="col">지역</th>
+                <th scope="col">자금용도</th>
+                <th scope="col">담보유무</th>
+                <th scope="col">제안서 마감일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="star" title="관심 대출" checked /></td>
+                <td>제출완료</td>
+                <td><a href="#none" class="btn" >제출하기</a></td>
+                <td>심사완료</td>
+                <td>길동건설</td>
+                <td>1억 2000만원 <br>~2억</td>
+                <td>서울</td>
+                <td>시설자금</td>
+                <td>유</td>
+                <td>2023-08-30</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="star" title="관심 대출" /></td>
+                <td>제출완료</td>
+                <td><a class="btn" >상세보기</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_bt">
+          <div class="btn_r">
+            <button class="btn ico_down">엑셀 다운로드</button>
+          </div>
+        </div>
+        
       </section>
 
       <!-- 하단 풀 배너 : start -->
@@ -96,12 +168,11 @@
     <!-- contents : end -->
     <!-- **************** -->
 
-<script>
-</script>
+
     <!-- **************** -->
     <!-- footer : start -->
     <!-- **************** -->
-    <footer id="skip_footer"  aria-label="푸터">
+    <footer>
        <div class="footerWrap">
         <ul class="footerLnk">
           <li><a href="#none">고객센터</a></li>
@@ -125,9 +196,7 @@
     <!-- footer : end -->
     <!-- **************** -->
   </div>
-<script>
-  
-</script>
+
 
   <!-- **************** -->
   <!-- layer : start -->

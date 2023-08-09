@@ -75,8 +75,10 @@
     <!-- **************** -->
     <div class="container" id="skip_content">
       <section>
-        <div id="jsGrid"></div>
+        <div id="jsGrid" class="nomal_table"></div>
         <div id="externalPager" class="external-pager"></div>
+        <div id="jsGrid2" class="long_data_table"></div>
+        <div id="externalPager2" class="external-pager"></div>
         
     <script>
       $(function() {
@@ -107,20 +109,42 @@
             { Name: "United Kingdom", Id: 3 }
         ];
     
+        function itemTemplateType1(value, item){
+          console.log(value, item
+          
+          )
+          if(value=="Otto Clay"){
+              return "<span class='star off'></span>";
+          }else if(value=="N"){
+              return "미사용";
+          }else{
+              return "-";
+          }
+        } 
+
+        function grid_itemTemplate_button(value, item){
+          if(value=="Otto Clay"){
+              return "<span class='star off'></span>";
+          }else if(value=="N"){
+              return "미사용";
+          }else{
+              return "-";
+          }
+        }
+
         $("#jsGrid").jsGrid({
             width: "100%",
-            height: "400px",
     
             // inserting: true,
             // editing: true,
             sorting: true,
             paging: true,
-            pageSize: 15,
+            pageSize: 10,
     
             data: clients,
     
             fields: [
-                { name: "Name", type: "text", width: 150, validate: "required" },
+                { name: "Name", type: "text", width: 150, validate: "required", itemTemplate:itemTemplateType1 },
                 { name: "Age", type: "number", width: 50 },
                 { name: "Address", type: "text", width: 200 },
                 { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
@@ -138,6 +162,37 @@
                 pageNavigatorNextText: "&#8230;",
                 pageNavigatorPrevText: "&#8230;",
 
+        });
+        $("#jsGrid2").jsGrid({
+            width: "100%",
+            // height: '1136px',
+    
+            // inserting: true,
+            // editing: true,
+            sorting: true,
+            paging: true,
+            pageSize: 10,
+    
+            data: clients,
+    
+            fields: [
+                { name: "Name", type: "text", width: 150, validate: "required" },
+                { name: "Age", type: "number", width: 50 },
+                { name: "Address", type: "text", width: 200 },
+                { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
+                { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
+                { type: "control" }
+            ],
+            
+            pagerContainer: "#externalPager2",
+            // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
+            pagerFormat: "{first} {prev} {pages} {next} {last}",
+            pagePrevText: "<",
+            pageNextText: ">",
+            pageFirstText: "<<",
+            pageLastText: ">>",
+            pageNavigatorNextText: "&#8230;",
+            pageNavigatorPrevText: "&#8230;",
         });
 
       });
