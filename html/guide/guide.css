@@ -380,17 +380,7 @@ h4 {
 }
 .c-container { padding: 1rem;}
 
-.c-title { margin-top: 0.8rem;}
-.c-title .c-h1 {
-    color: #111;
-    font-size: 1.6rem;
-}
-.c-title .c-h1 + .c-h2 { margin-top: 10px;}
-
-.c-title .c-h2 {
-    color: #111;
-    font-size: 1.2rem;
-}
+.c-h2 { margin: 20px 0 15px;}
 .c-guide { margin-top: 0.8rem; }
 
 .c-body { min-width: unset;}
