@@ -2,6 +2,7 @@
 /* init action */
 $(function(){
   skip_navi();
+  // ui.checkLabel();
 });
 
 
