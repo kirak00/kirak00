@@ -21,7 +21,7 @@
 **********  button  **********
 *****************************/
 
-button    {background:none; cursor: pointer;}
+button    {background:none; cursor: pointer; transition: .2s;}
 
 /* MAIN 버튼 */ 
 button.btnBlue        {padding:0 50px; height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
@@ -69,6 +69,10 @@ button.btnReset     {font-size: 20px; font-weight: 700; color:#555}
 button.btnReset::after     {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_refresh.png) no-repeat 50% 50%; }
 button.btnFile      {font-size: 20px; font-weight: 700; color:#323C94; text-decoration: underline;}
 button.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+button.btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #323C94;  }
+button.btnDown:hover    {background-color:#4260BB ;  }
+button.btnDown.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
+button.btnDown.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
 
 
@@ -98,14 +102,15 @@ table.bbs_list tr:first-child th:first-child   { border-radius: 16px 0 0 0 }
 table.bbs_list tr:first-child th:last-child   { border-radius:  0 16px 0 0 }
 table.bbs_list td   {height:100px; border-bottom:1px solid #ddd; }
 
-input[type=checkbox].star    {border:0; width:24px; height:24px; background:url(../../images/common/ico_24_star_off.png) no-repeat 50% 50%; -webkit-appearance:none}
-input[type=checkbox].star:checked    {background:url(../../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
+input[type=checkbox].star    {border:0; width:24px; height:24px; background:url(../images/common/ico_24_star_off.png) no-repeat 50% 50%; -webkit-appearance:none}
+input[type=checkbox].star:checked    {background:url(../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
 
 
 
 /****************************
 **********  grid  **********
 *****************************/
+.jsgrid-table {table-layout: fixed;}
 .nomal_table .jsgrid-grid-header,
 .nomal_table .jsgrid-grid-body   {overflow: auto;}
 .jsgrid-grid-header  {}
@@ -114,18 +119,57 @@ input[type=checkbox].star:checked    {background:url(../../images/common/ico_24_
 
 .jsgrid-header-row > .jsgrid-header-cell, 
 .jsgrid-grid-header {border:0; }
-.jsgrid-grid-body, 
+.jsgrid-grid-body {border:0; }
 .jsgrid-filter-row > .jsgrid-cell, 
 .jsgrid-insert-row > .jsgrid-cell, 
 .jsgrid-cell,
 .jsgrid-edit-row > .jsgrid-cell {border:0; border-bottom:1px solid #ddd;}
+.jsgrid-header-row:first-child .jsgrid-header-cell:first-child  {border-radius: 16px 0 0;}
+.jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {border-radius:  0 16px 0 0;}
+.jsgrid-grid-header {background:none}
 
+th{word-break: break-all;}
+.jsgrid-cell,
+.jsgrid-header-cell {padding:0; }
 
 
 /****************************
 **********  content  **********
 *****************************/
+.pageTop        {padding-bottom:40px; overflow: hidden; }
+.pageTop h2.pageTit        {float:left; font-size:40px; color:#333; font-weight: 700; }
+.pageTop ul.breadcrumb     {float:right; }
+.pageTop ul.breadcrumb li  {float:left; height:24px; }
+.pageTop ul.breadcrumb li a.home {display:block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
+.pageTop ul.breadcrumb li::before  {content: ""; width:24px; height:24px; margin:0 8px; float:left; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; }
+.pageTop ul.breadcrumb li:first-child:before  {display:none;}
+.pageTop ul.breadcrumb li a  {line-height:24px; font-size:16px; color:#555; }
+.pageTop ul.breadcrumb li a strong{color:#323C94; }
 
+ul.tab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidden; }
+ul.tab li   {width:100%; }
+ul.tab li button   {display:block; width:100%; height:70px; text-align: center; font-size:24px; background:#F4F6F8; }
+ul.tab li.on button   {background:#323C94; color:#fff; font-weight: 700;  }
+ul.tab li:hover button,
+ul.tab li button:focus   {background:#5B7DDC; color:#fff;  }
+
+/* pager */
+.external-pager     {text-align: center; margin-top:40px; }
+.external-pager .jsgrid-pager     {font-size: 0;}
+.external-pager .jsgrid-pager span     {display:inline-block; width:30px; height:30px;  }
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button     {width:24px; height:30px; margin:0 3px 0 4px; }
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button a   {display:block; width:100%; height:30px; overflow: hidden; text-indent: -200px;  }
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(1) a     {background: url(../images/common/ico_24_left_double_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(2) a     {background: url(../images/common/ico_24_left_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(2) a {background: url(../images/common/ico_24_right_03.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(1) a {background: url(../images/common/ico_24_right_double_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button.jsgrid-pager-nav-inactive-button     {display:none; }
+.external-pager .jsgrid-pager span.jsgrid-pager-page,
+.external-pager .jsgrid-pager span.jsgrid-pager-page a          {font-size:18px; line-height:30px; color:#555; padding:0; }
+.external-pager .jsgrid-pager span.jsgrid-pager-page      {margin:7px 7px;}
+.external-pager .jsgrid-pager .jsgrid-pager-nav-button + .jsgrid-pager-page      {margin-left:11px}
+.external-pager .jsgrid-pager .jsgrid-pager-page + .jsgrid-pager-nav-button      {margin-left:7px}
+.external-pager .jsgrid-pager span.jsgrid-pager-page.jsgrid-pager-current-page          {background:rgba(82, 132, 227, 0.15); border-radius: 8px; color:#323C94; font-weight: 700; }
 
 /****************************
 **********  layer  **********
