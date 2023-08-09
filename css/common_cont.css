@@ -20,17 +20,56 @@
 /****************************
 **********  button  **********
 *****************************/
+
+button    {background:none; cursor: pointer;}
+
 /* MAIN 버튼 */ 
+button.btnBlue        {padding:0 50px; height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
+button.btnSky         {padding:0 50px; height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
+button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
+button.btnBlack       {padding:0 50px; height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
-.btnM.btnBlue {}
+table button.btnBlue        {padding:0 32px; height:50px; }
+table button.btnSky         {padding:0 32px; height:50px; }
+table button.btnWhite       {padding:0 32px; height:50px; }
+table button.btnBlack       {padding:0 32px; height:50px; }
 
-.btnSize52 { height: 52px; padding: 0 50px; font-size: 20px; border-radius: 8px; }
-.btnBlue { background: #5b7ddc; color: #fff; }
-.btnBlueLine { border: 1px solid #323c94; color: #323c94; }
-.btnBlueLine:hover { background: #323c94; color: #fff;}
+button.btnBlue:hover        { background:#4260BB;  }
+button.btnSky:hover         { background:#7793E2;  }
+button.btnWhite:hover       { background:#323C94; color:#fff }
+button.btnBlack:hover       { background:#ffffff; color:#323C94 }
 
-.btnLink90 { height: 90px; font-size: 30px; border-radius: 15px;}
-.btnBlue2 { background: #6b74c7; color: #fff; }
+button.btnBlue:active        { background:#323C94;  }
+button.btnSky:active         { background:#5B7DDC ;  }
+button.btnWhite:active       { background:#323C94; color:#fff }
+button.btnBlack:active       { background:#ffffff; color:#323C94 }
+
+button.btnBlue:disabled,
+button.btnSky:disabled,
+button.btnWhite:disabled,
+button.btnBlack:disabled       { background:#dddddd; color:#999; border:0;  }
+
+button.ico_down       {padding:0 32px;}
+button.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+button.btnBlue.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+button.btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+button.btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+button.btnWhite:active.ico_down::after,
+button.btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+button.btnBlack.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+button.btnBlack:hover.ico_down::after,
+button.btnBlack:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+
+button.size_XL      {height:70px;  }
+button.size_M       {height:50px; }
+button.wid_530      {min-width:530px;}
+
+/* 유틸 버튼 */
+button.btnReset     {font-size: 20px; font-weight: 700; color:#555}
+button.btnReset::after     {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_refresh.png) no-repeat 50% 50%; }
+button.btnFile      {font-size: 20px; font-weight: 700; color:#323C94; text-decoration: underline;}
+button.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+
 
 
 /****************************
@@ -46,6 +85,40 @@
 /****************************
 **********  table  **********
 *****************************/
+.table_top     {}
+.table_bt      {width:100%; padding:20px 0 0px;}
+.table_bt::after      {content: ""; display:block; clear: both;}
+.table_bt .btn_r      {float:right; }
+
+.table_wrap    {}
+
+table.bbs_list    {width:100%;; }
+table.bbs_list th   {height:80px; background:#F4F6F8;  }
+table.bbs_list tr:first-child th:first-child   { border-radius: 16px 0 0 0 }
+table.bbs_list tr:first-child th:last-child   { border-radius:  0 16px 0 0 }
+table.bbs_list td   {height:100px; border-bottom:1px solid #ddd; }
+
+input[type=checkbox].star    {border:0; width:24px; height:24px; background:url(../../images/common/ico_24_star_off.png) no-repeat 50% 50%; -webkit-appearance:none}
+input[type=checkbox].star:checked    {background:url(../../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
+
+
+
+/****************************
+**********  grid  **********
+*****************************/
+.nomal_table .jsgrid-grid-header,
+.nomal_table .jsgrid-grid-body   {overflow: auto;}
+.jsgrid-grid-header  {}
+.jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#F4F6F8;}
+.jsgrid-cell    {height:100px; font-size:20px;  }
+
+.jsgrid-header-row > .jsgrid-header-cell, 
+.jsgrid-grid-header {border:0; }
+.jsgrid-grid-body, 
+.jsgrid-filter-row > .jsgrid-cell, 
+.jsgrid-insert-row > .jsgrid-cell, 
+.jsgrid-cell,
+.jsgrid-edit-row > .jsgrid-cell {border:0; border-bottom:1px solid #ddd;}
 
 
 
@@ -63,4 +136,4 @@
 .alertWrap .alertBody .alertCont      {padding-bottom:60px; text-align: center;}
 .alertWrap .alertBody .alertFooter    {display:flex; gap:16px }
 .alertWrap .alertBody .alertFooter button    {width:100%; background:#ddd; }
-.alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .5)}
+.alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .4)}
