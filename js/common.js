@@ -5,6 +5,8 @@ $(function(){
   layer_open_setting(); // layer btn search
   // ui.checkLabel();
 
+  browser   
+
 });
 
 
