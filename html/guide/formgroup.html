@@ -18,47 +18,47 @@
     <div class="c-container">
 
       <h2 class="c-h2">CHECKBOX</h2>
-      <div class="checkbox">
+      <span class="checkbox">
         <input type="checkbox" id="testCheckBoxOnly" name="testCheckBoxOnly" value="A" />
         <label for="testCheckBoxOnly"><span></span>Checkbox</label>
-      </div>
+      </span>
 
       <h2 class="c-h2">CHECKBOX GROUP</h2>
       <div class="checkboxGroup">
-        <div class="checkbox">
+        <span class="checkbox">
           <input type="checkbox" id="testCheckBoxA" name="testCheckBox" value="A" />
           <label for="testCheckBoxA"><span></span>Checkbox</label>
-        </div>
-        <div class="checkbox">
+        </span>
+        <span class="checkbox">
           <input type="checkbox" id="testCheckBoxB" name="testCheckBox" value="A" />
           <label for="testCheckBoxB"><span></span>Checkbox</label>
-        </div>
-        <div class="checkbox">
+        </span>
+        <span class="checkbox">
           <input type="checkbox" id="testCheckBoxC" name="testCheckBox" value="A" />
           <label for="testCheckBoxC"><span></span>Checkbox</label>
-        </div>
+        </span>
       </div>
       
       <h2 class="c-h2">RADIO</h2>
-      <div class="radio">
+      <span class="radio">
         <input type="radio" id="testRdoBoxOnly" name="testRdoBoxOnly" value="A" />
         <label for="testRdoBoxOnly"><span></span>Radio</label>
-      </div>
+      </span>
 
       <h2 class="c-h2">RADIO GROUP</h2>
       <div class="radioGroup">
-        <div class="radio">
+        <span class="radio">
           <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
           <label for="testRdoBoxA"><span></span>Radio</label>
-        </div>
-        <div class="radio">
+        </span>
+        <span class="radio">
           <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
           <label for="testRdoBoxB"><span></span>Radio</label>
-        </div>
-        <div class="radio"> 
+        </span>
+        <span class="radio"> 
           <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
           <label for="testRdoBoxC"><span></span>Radio</label>
-        </div>
+        </span>
       </div>
 
       <h2 class="c-h2">TOGGLE</h2>
@@ -95,7 +95,7 @@
       <!-- [D] error 상태 .hasError 추가 -->
       <div class="inputWrap hasError">
         <input class="input" type="text" name="inpReasonError" id="inpReasonError" placeholder="" value="자금 용도 변경 요청" aria-describedby="errorComment">
-        <div id="errorComment" class="error">다시 입력해주세요.</div>
+        <p id="errorComment" class="error">다시 입력해주세요.</p>
       </div>
 
       <br/>
@@ -136,18 +136,18 @@
 
       <div class="row">
         <div class="controls" role="group">
-          <div class="select">
+          <span class="select">
             <select title="본부선택">
               <option>본부1</option>
               <option>본부2</option>
             </select>
-          </div>
-          <div class="select">
+          </span>
+          <span class="select">
             <select title="본부선택">
               <option>본부1</option>
               <option>본부2</option>
             </select>
-          </div>
+          </span>
         </div>
       </div>
 
@@ -170,18 +170,18 @@
         <div class="inputWrap">
           <input class="input" type="text" placeholder="" value="새마을금고중앙회">
         </div>
-        <div class="select">
+        <span class="select">
           <select title="한번에 보여줄 리스트 갯수">
             <option value="10개씩 보기">10씩 보기</option>
             <option value="20개씩 보기">20씩 보기</option>
           </select>
-        </div>
-        <div class="select">
+        </span>
+        <span class="select">
           <select title="한번에 보여줄 리스트 갯수">
             <option value="10개씩 보기">10씩 보기</option>
             <option value="20개씩 보기">20씩 보기</option>
           </select>
-        </div>
+        </span>
         <button class="btnSize64 btnBlue">지점 선택</button>
       </div>
     
@@ -193,72 +193,72 @@
           <div class="searchControlItem">
             <label for="selectLabelState" class="label">상태</label>
             <div class="controls">
-              <div class="item">
+              <span class="select">
                 <select id="selectLabelState">
                   <option>전체</option>
                   <option>셀렉트</option>
                 </select>
-              </div>
+              </span>
             </div>
           </div>
           <div class="searchControlItem">
             <label for="selectLabelArea" class="label">지역</label>
             <div class="controls">
-              <div class="item">
+              <span class="select">
                 <select id="selectLabelArea">
                   <option>전체</option>
                   <option>셀렉트</option>
                 </select>
-              </div>
+              </span>
             </div>
           </div>
           <div class="searchControlItem">
             <label id="selectLabelPay" class="label">희망 신청 금액</label>
             <div class="controls" role="group" aria-labelledby="selectLabelPay">
-              <div class="item">
+              <span class="select">
                 <input class="input inputXs" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
                 <span class="unit">억</span>
-              </div>
-              <div class="item">
+              </span>
+              <span class="select">
                 <select title="범위">
                   <option>이상</option>
                   <option>이하</option>
                 </select>
-              </div>
+              </span>
             </div>
           </div>
           <div class="searchControlItem">
             <label id="selectLabelPay" class="label">CRETOP 등급</label>
             <div class="controls" role="group" aria-labelledby="selectLabelPay">
-              <div class="item">
+              <span class="select">
                 <select title="등급">
                   <option>전체</option>
                   <option>이하</option>
                 </select>
-              </div>
-              <div class="item">
+              </span>
+              <span class="select">
                 <select title="범위">
                   <option>이상</option>
                   <option>이하</option>
                 </select>
-              </div>
+              </span>
             </div>
           </div>
           <div class="searchControlItem">
             <label for="selectLabelPatent" class="label">특허 보유 여부</label>
             <div class="controls">
-              <div class="item">
+              <span class="select">
                 <select id="selectLabelPatent">
                   <option>전체</option>
                   <option>셀렉트</option>
                 </select>
-              </div>
+              </span>
             </div>
           </div>
-          <div class="checkbox">
+          <span class="checkbox">
             <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
             <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
-          </div>
+          </span>
         </div>
         <button class="btnReset">초기화</button>
         <button class="btnBlue size_M">조회</button>
