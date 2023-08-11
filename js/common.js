@@ -166,9 +166,10 @@ function faq(){
     const box = $(o);
     var dt = box.find("dt");
     var dd = box.find("dd");
-    dd.hide().eq(0).show();
-    dt.on("click",fucntion(){
-      
+    dd.eq(0).addClass("on");
+    dt.on("click",function(){
+      $(this).toggleClass("on");
+      $(this).siblings("dt").removeClass("on");
     })
   })
 }

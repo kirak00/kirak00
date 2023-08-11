@@ -315,8 +315,10 @@ dl.faqCont dt         {position:relative; padding:30px 40px; background:#F4F6F8;
 dl.faqCont dt ~ dt    {border-top:1px solid #ddd; }
 dl.faqCont dt label   {font-size:24px; font-weight: 700 }
 dl.faqCont dt label em.required   {color:#323C94; margin-left:4px; }
-dl.faqCont dt::after  {content:""; position:absolute; right:40px; top:50%; width:24px; height:24px; transform: translateY(-50%); background:url(../images/common/ico_24_down.png) no-repeat  }
-dl.faqCont dd         {padding:30px 80px; font-size:20px; line-height:1.5  }
+dl.faqCont dt::after  {content:""; transition: .3s; position:absolute; right:40px; top:50%; width:24px; height:24px; transform: translateY(-50%); background:url(../images/common/ico_24_down.png) no-repeat  }
+dl.faqCont dd         {display:none; padding:30px 80px; font-size:20px; line-height:1.5  }
+dl.faqCont dt.on + dd {display:block; }
+dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 
 /****************************
