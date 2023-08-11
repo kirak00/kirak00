@@ -17,6 +17,14 @@
 .brown	{color:#7f6c66} 
 .green	{color:#537a7c}
 
+.srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
+
+/****************************
+**********  section  **********
+*****************************/
+.sectionBlock ~ .sectionBlock { margin-top: 60px;}
+
+
 /****************************
 **********  button  **********
 *****************************/
@@ -89,14 +97,14 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 *****************************/
 /* checkbox, radio */
 .radio input[type=radio] + label , 
-.checkbox input[type=checkbox] + label { display: inline-flex; align-items: center;} 
+.checkbox input[type=checkbox] + label { display: inline-flex; align-items: center; color: #333; font-size: 20px;} 
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; gap: 60px;}
 .checkbox { display: inline-flex;}
-.checkbox input[type=checkbox] + label span { position: relative; display: block; width: 24px; height: 24px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
+.checkbox input[type=checkbox] + label span { position: relative; display: block; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
 .checkbox input[type=checkbox]:focus + label span::before,
@@ -107,7 +115,7 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 /* radio */ 
 .radioGroup { display: flex; align-items: center; gap: 60px;}
 .radio { display: inline-flex;}
-.radio input[type=radio] + label span { position: relative; display: block; width: 24px; height: 24px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
+.radio input[type=radio] + label span { position: relative; display: block; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
 .radio input[type=radio]:focus + label span::before,
@@ -121,46 +129,51 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .toggleGroup { display: flex; align-items: center; gap: 60px;}
 .switch { display: inline-flex; align-items: center; cursor: pointer; }
 .switch [type="checkbox"] { appearance: none; position: relative; border: 2px solid #323C94; border-radius: 14px; width: 52px; height: 28px;}
-.switch [type="checkbox"]::before { content: ""; position: absolute; left: 2px; top: 2px; width: 22px; height: 22px; border-radius: 50%; background-color: #323C94; transition: left 250ms linear;}
+.switch [type="checkbox"]::before { content: ""; position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background-color: #323C94; transition: left 250ms linear;}
 .switch [type="checkbox"]:checked { background-color: #323C94; border-color: #323C94;}
 .switch [type="checkbox"]:checked::before { background-color: white; left: 25px;}
 .switch [type="checkbox"]:disabled { border-color: lightgray; opacity: 0.7; cursor: not-allowed;}
 .switch [type="checkbox"]:disabled:before { background-color: lightgray;}
 .switch [type="checkbox"]:disabled+span { opacity: 0.7; cursor: not-allowed;}
 .switch [type="checkbox"]:focus-visible { outline-offset: 2px; outline: 2px solid #323C94;}
-.switch [type="checkbox"]:enabled:hover { box-shadow: 0 0 0 max(4px, 2px) #e1e2ee;}
+/* .switch [type="checkbox"]:enabled:hover { box-shadow: 0 0 0 max(4px, 2px) #e1e2ee;} */
 .switch span { display: inline-block; margin-left: 8px;}
 /* fieldset { border: none; display: flex; flex-direction: column; gap: 0.5rem;} */
 
-.fieldItem { display: block;}
-.fieldItem .label { display: block; margin-bottom: 8px; color: #333; font-size: 20px; font-weight: 700;}
-.fieldItem .input { display: block;}
-.fieldItem .unit { color: #333; font-size: 20px;}
-.fieldItem .controls { display: flex; gap: 10px;}
-.fieldItem .btnBlue { display: inline-flex;  }
+.label .required { display: inline-flex; align-items: center;}
+.label .required::after { content: '*'; margin-right: 2px; color: red; font-size: 20px;} 
+
+.row { display: flex; align-items: center;}
+.row .label { display: inline-block; padding: 0 60px 0 20px; color: #333; font-size: 20px; font-weight: 700; vertical-align: middle;}
+.row .input { display: block;}
+.row .unit { color: #333; font-size: 20px;}
+.row .btnBlue { display: inline-flex;  }
+.controls { display: flex; gap: 10px; vertical-align: middle;}
 /* .fieldControl */
 
 /* 가로사이즈 가변 */
-/* .inputWrap { display: flex; } */
-.inputWrap .input { display: inline-block; width: auto; min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; vertical-align: middle;}
-.inputWrap .input::placeholder { color: #999; line-height: normal; }
+.input { width: 100%; min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; vertical-align: middle;}
+.input::placeholder { color: #999; line-height: normal; }
+.input.inputXs { width: 96px; }
+.inputWrap { display: flex; align-items: center; vertical-align: middle;}
 .inputWrap .input.inputMd { min-width: 540px;}
 .inputWrap .unit { display: inline-block; padding-left: 6px; vertical-align: middle;}
-.inputWrap .error { margin-top: 10px; color: #FE5050; font-size: 16px;}
+.inputWrap .error { display: inline-flex; align-items: center; margin-top: 10px; color: #FE5050; font-size: 16px;}
+.inputWrap .error::before { content: ''; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_error.png') center center no-repeat;}
 .inputWrap.disabled .input:disabled { background: #f4f6f8;}
 
-.inputWrap.hasUnit { display: inline-flex; align-items: center; padding: 0 14px 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
+.inputWrap.hasUnit { padding: 0 14px 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
 .inputWrap.hasUnit .input { padding: 0 15px; border: 0;}
 .inputWrap.hasUnit .unit {display: block; flex: 0 0 auto;}
 .inputWrap.hasUnit.disabled { background: #f4f6f8; }
-.inputWrap.hasError {}
+.inputWrap.hasError { flex-direction: column; align-items: flex-start;}
 
 .btnSize64 { height: 64px; padding: 0 50px; border-radius: 8px; background: #323C94; font-size: 20px; line-height: 64px; }
 
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-.select select { width: auto; height: 64px; padding: 20px 40px 20px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; }
+.select select { width: 100%; height: 64px; padding: 20px 40px 20px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 
 /* textarea */
 .textareaWrap {}
@@ -169,23 +182,30 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 
 /* control group */
-.searchControlGroup {}
+.searchControlBox { position: relative; padding: 32px 40px; background: #E5EDFB; border-radius: 16px;}
+.searchControlGroup { display: flex; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 .searchControlGroup .checkbox{}
 .searchControlItem {display: inline-flex; align-items: center; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
 .searchControlItem .controls { display: flex; height: 100%;}
-.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; }
+.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
+.searchControlItem .controls .item { position: relative; display: inline-flex; align-items: center;}
 .searchControlItem .controls .item:last-of-type { padding-right: 0;}
 .searchControlItem .controls .item:last-of-type select { background-position: calc(100% - 16px) center;}
-.searchControlItem .controls .item { position: relative; display: flex; align-items: center;}
 .searchControlItem .controls .item::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
-.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px;}
-.searchControlItem .controls .unit { padding: 0 30px 0 10px;}
+.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
+.searchControlBox .btnReset { position: absolute; top: 32px; right: 36px; padding: 4px;}
+.searchControlBox .btnBlue { position: absolute; bottom: 32px; right: 40px;}
 
 
 /****************************
 **********  table  **********
 *****************************/
+.tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
+.tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 20px; color: #555;}
+.tableFilterGroup .count strong { margin-left: 4px; color: #323C94;}
+
 .table_top     {}
 .table_bt      {width:100%; padding:20px 0 0px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
@@ -229,6 +249,22 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 th{word-break: break-all;}
 .jsgrid-cell,
 .jsgrid-header-cell {padding:0; }
+
+
+
+/****************************
+**********  Range picker  **********
+*****************************/
+.rangeControl { position: relative; display: flex; gap: 10px; }
+.rangeControl.sm .input { min-height: 50px; padding: 0 16px;}
+.rangeControl.sm .btnBlue { height: 50px;}
+.rangeControl.sm .btnBlue::after { content: ""; display: inline-block; margin-left: 8px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
+
+
+/* lib override */
+.datepicker { top: 50px;}
+.datepicker__topbar { display: none;}
+
 
 
 /****************************
