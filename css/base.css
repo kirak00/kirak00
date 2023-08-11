@@ -71,3 +71,4 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 .skip_nav a:focus, 
 .skip_nav a:active{top: 0;}
 
+*:focus   {outline: 2px dashed red; border-radius: 5px;}
