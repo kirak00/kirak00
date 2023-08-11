@@ -4,7 +4,7 @@
 @import url('../js/lib/jsgrid-1.5.3/dist/jsgrid.css');
 @import url('../js/lib/jsgrid-1.5.3/dist/jsgrid-theme.css');
 @import url('./base.css');
-@import url('./common.css');
+@import url('./common_cont.css');
 
 
 /* layout */
