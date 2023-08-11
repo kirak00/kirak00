@@ -103,7 +103,7 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; gap: 60px;}
-.checkbox { display: inline-flex;}
+.checkbox { display: inline-block;}
 .checkbox input[type=checkbox] + label span { position: relative; display: block; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
@@ -152,19 +152,20 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 /* .fieldControl */
 
 /* 가로사이즈 가변 */
-.input { width: 100%; min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; vertical-align: middle;}
+.input { min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
 .input::placeholder { color: #999; line-height: normal; }
 .input.inputXs { width: 96px; }
-.inputWrap { display: flex; align-items: center; vertical-align: middle;}
+
+.inputWrap { position: relative; display: inline-block; vertical-align: middle;}
 .inputWrap .input.inputMd { min-width: 540px;}
 .inputWrap .unit { display: inline-block; padding-left: 6px; vertical-align: middle;}
-.inputWrap .error { display: inline-flex; align-items: center; margin-top: 10px; color: #FE5050; font-size: 16px;}
-.inputWrap .error::before { content: ''; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_error.png') center center no-repeat;}
+.inputWrap .error { display: block; margin-top: 10px; color: #FE5050; font-size: 16px;}
+.inputWrap .error::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: middle; }
 .inputWrap.disabled .input:disabled { background: #f4f6f8;}
 
 .inputWrap.hasUnit { padding: 0 14px 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
 .inputWrap.hasUnit .input { padding: 0 15px; border: 0;}
-.inputWrap.hasUnit .unit {display: block; flex: 0 0 auto;}
+.inputWrap.hasUnit .unit { position: absolute; top: 22px; right: 20px; display: block; flex: 0 0 auto;}
 .inputWrap.hasUnit.disabled { background: #f4f6f8; }
 .inputWrap.hasError { flex-direction: column; align-items: flex-start;}
 
@@ -173,6 +174,7 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
+.select { display: inline-block; vertical-align: middle;}
 .select select { width: 100%; height: 64px; padding: 20px 40px 20px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 
 /* textarea */
@@ -183,22 +185,23 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 /* control group */
 .searchControlBox { position: relative; padding: 32px 40px; background: #E5EDFB; border-radius: 16px;}
-.searchControlGroup { display: flex; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
-.searchControlGroup .checkbox{}
-.searchControlItem {display: inline-flex; align-items: center; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
-.searchControlItem .controls { display: flex; height: 100%;}
-.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .controls .item { position: relative; display: inline-flex; align-items: center;}
-.searchControlItem .controls .item:last-of-type { padding-right: 0;}
-.searchControlItem .controls .item:last-of-type select { background-position: calc(100% - 16px) center;}
-.searchControlItem .controls .item::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
-.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
 .searchControlBox .btnReset { position: absolute; top: 32px; right: 36px; padding: 4px;}
 .searchControlBox .btnBlue { position: absolute; bottom: 32px; right: 40px;}
+.searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 
-
+.searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
+.searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
+.searchControlItem .controls { display: inline-block; height: 100%;}
+.searchControlItem .controls .select { position: relative; height: 100%; }
+.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
+/* .searchControlItem .controls .item { position: relative; display: inline-block;}
+.searchControlItem .controls .item:last-of-type { padding-right: 0;}
+.searchControlItem .controls .item:last-of-type select { background-position: calc(100% - 16px) center;}
+.searchControlItem .controls .item::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;} */
+.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
+.searchControlItem .controls .select::before, 
+.searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
 /****************************
 **********  table  **********
 *****************************/
@@ -258,7 +261,7 @@ th{word-break: break-all;}
 .rangeControl { position: relative; display: flex; gap: 10px; }
 .rangeControl.sm .input { min-height: 50px; padding: 0 16px;}
 .rangeControl.sm .btnBlue { height: 50px;}
-.rangeControl.sm .btnBlue::after { content: ""; display: inline-block; margin-left: 8px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
+.rangeControl.sm .btnBlue::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
 
 
 /* lib override */
