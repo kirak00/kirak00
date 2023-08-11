@@ -14,134 +14,68 @@
 
 </style>
 </head>
-<body>
-  <div class="skip_nav">
-    <a href="#skip_gnb">주메뉴 바로가기</a>
-    <a href="#skip_content">컨텐츠 바로가기</a>
-  </div>
 
-  <div class="wrap">
-    <!-- **************** -->
-    <!-- header : start -->
-    <!-- **************** -->
-    <header class="" >
-      <div class="headerCont ">
-        <h1 class="logo"><a href="#none">법인중개대출플랫폼</a></h1>
-        <ul class="gnb" id="skip_gnb" aria-label="주메뉴">
-          <li class="depth_1 on" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_acc">대출 접수</span></a>
-            <ul>
-              <li class="depth_2"><a href="#none">대출 접수절차</a></li>
-              <li class="depth_2 on"><a href="#none">운전자금 대출</a></li>
-              <li class="depth_2"><a href="#none">시설자금 대출</a></li>
-              <li class="depth_2"><a href="#none">법인 리스</a></li>
-              <li class="depth_2"><a href="#none">장기 렌트</a></li>
-            </ul>
-          </li>
-          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
-            <ul>
-              <li class="depth_2"><a href="#none">대출절차안내</a></li>
-              <li class="depth_2"><a href="#none">제출서류안내</a></li>
-              <li class="depth_2"><a href="#none">정보지원사업</a></li>
-              <li class="depth_2"><a href="#none">F&Q</a></li>
-              <li class="depth_2"><a href="#none">Q&A</a></li>
-            </ul>
-          </li>
-          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
-            <ul>
-              <li class="depth_2"><a href="#none">고객센터번호</a></li>
-              <li class="depth_2"><a href="#none">1:1 문의</a></li>
-              <li class="depth_2"><a href="#none">F&Q</a></li>
-              <li class="depth_2"><a href="#none">Q&A</a></li>
-            </ul>
-          </li>
-          <li class="depth_1"><a href="#none"><span class="ico_gnb_my">마이페이지</span></a></li>
-        </ul>
-        <ul class="headerUtil">
-          <!-- <li><a href="#none" class="join">회원가입</a></li>
-          <li><a href="#none" class="login">로그인</a></li> -->
-          <li><a href="#none" class="logout">로그아웃</a></li>
-        </ul>
-      </div>
-      <div class="bg"></div>
-      <div class="line"></div>
-    </header>
-    <!-- **************** -->
-    <!-- header : end -->
-    <!-- **************** -->
+<body class="c-body">
+<div class="wrap">
+  
+  <div class="c-container">
+    <h1 class="c-h1">Button</h1>
+        <div style="padding:10px 0;">
+          <button class="btnBlue" onclick='layer_alert("로그인 5회 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", this )'>alert 기본</button>
+          <button class="btnBlue" onclick='layer_alert("로그인 5회 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", this , {confirm:{txt:"비밀번호 변경",callback:function(){alert(3)}}} )'>alert 버튼 문구변경</button>
+        </div>
+        <div style="padding:10px 0;">
+          <button class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this )'>confirm 기본</button>
+          <button class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this , {confirm:{txt:"확인1", callback:function(){alert(3)}}} )'>confirm 확인 문구변경</button>
+          <button class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this , {confirm:{txt:"확인1", callback:function(){alert(3)}},cancel:{txt:"취소1",callback:function(){alert(2)}}} )'>confirm 확인 취소 문구변경</button>
+          <button class="btnBlue" id="confirmClick">confirm 이벤트</button>
+        </div>
+        <script>
+          $("#confirmClick").on("click",function(){
+            
+            layer_alert(
+              "로그인 5회 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", 
+              this,
+              {confirm:{
+                txt:"비밀번호 변경",
+                callback:function(){alert(3)}
+              }
+            } 
+            )
 
+            // layer alert
+            layer_confirm(
+              "문구", //  confirm 문구
+              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "확인1", 
+                  callback : function(){ 
+                    alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "취소1",
+                  callback : function(){
+                    alert(2)
+                  }
+                }
+              }
+            )
+            // layer alert
 
-    <!-- **************** -->
-    <!-- contents : start -->
-    <!-- **************** -->
-    <hr/>
-    <div class="container" id="skip_content"  aria-label="컨텐츠">
-
-      <section class="pageTop">
-        <h2 class="pageTit">제안서 제출 가능 목록</h2>
-        <ul class="breadcrumb">
-           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-           <li><a href="#none"><span>1뎁스</span></a></li>
-           <li><a href="#none"><span>2뎁스</span></a></li>
-           <li><a href="#none"><strong>3뎁스</strong></a></li>
-        </ul>
+          })
+        </script>
       </section>
-
-      
-      <section class="guideCont">
-        <button class="btnBlue" onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
-        <button class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this , function(){alert(2)}, function(){alert(3)} )'>confirm</button>
-      </section>
-
-      <!-- 하단 풀 배너 : start -->
-      <section class="bnrInerCont">
-        
-      </section> 
-      <!-- 하단 풀 배너 : end -->
-
-      <!-- 하단 풀 배너 : start -->
-      <div class="btFullBnr">
-        
-      </div>
-      <!-- 하단 풀 배너 : end -->
+ 
 
     </div>
-    <!-- **************** -->
-    <!-- contents : end -->
-    <!-- **************** -->
 
-<script>
-</script>
-    <!-- **************** -->
-    <!-- footer : start -->
-    <!-- **************** -->
-    <hr/>
-    <footer id="skip_footer"  aria-label="푸터">
-       <div class="footerWrap">
-        <ul class="footerLnk">
-          <li><a href="#none">고객센터</a></li>
-          <li><a href="#none">약관동의</a></li>
-          <li><a href="#none">대출신청 정보 제공 동의</a></li>
-          <li><a href="#none">자금 세탁 방지법</a></li>
-          <li><a href="#none">대출 서비스 안내</a></li>
-         </ul>
-         <div class="copy">
-          <p>
-            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
-            <span>Copyright Since 2023</span>
-          </p>
-          <div class="wa">
-            <img src="./images/common/wa-logo.png" alt="">
-          </div>
-         </div>
-       </div>
-    </footer>
-    <!-- **************** -->
-    <!-- footer : end -->
-    <!-- **************** -->
   </div>
-<script>
+
+
+</div>
   
-</script>
 
   <!-- **************** -->
   <!-- layer : start -->
@@ -155,6 +89,8 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
+
 
 </body>
 </html>
