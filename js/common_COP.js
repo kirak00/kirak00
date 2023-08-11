@@ -24,6 +24,13 @@ function gnbAction(){
     },300)
   }
 
+  $(".gnb a").on("focus",function(){
+    gnbOn();
+  })
+  $(".gnb a").on("blur",function(){
+    gnbOff();
+  })
+
   $(".headerCont").hover(function(){
     gnbOn();
   },function(){

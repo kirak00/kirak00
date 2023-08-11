@@ -20,66 +20,77 @@
 .srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
 
 /****************************
+**********  section  **********
+*****************************/
+.sectionBlock ~ .sectionBlock { margin-top: 60px;}
+
+
+/****************************
 **********  button  **********
 *****************************/
 
 button    {background:none; cursor: pointer; transition: .2s;}
 
 /* MAIN 버튼 */ 
-button.btnBlue        {padding:0 50px; height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
-button.btnSky         {padding:0 50px; height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
-button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
-button.btnBlack       {padding:0 50px; height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+button.btnBlue        {padding:0 50px; height:64px; line-height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
+button.btnSky         {padding:0 50px; height:64px; line-height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
+button.btnWhite       {padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
+button.btnBlack       {padding:0 50px; height:64px; line-height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
-table button.btnBlue        {padding:0 32px; height:50px; }
-table button.btnSky         {padding:0 32px; height:50px; }
-table button.btnWhite       {padding:0 32px; height:50px; }
-table button.btnBlack       {padding:0 32px; height:50px; }
+a.btnBlue        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
+a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
+a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
+a.btnBlack       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
-button.btnBlue:hover        { background:#4260BB;  }
-button.btnSky:hover         { background:#7793E2;  }
-button.btnWhite:hover       { background:#323C94; color:#fff }
-button.btnBlack:hover       { background:#ffffff; color:#323C94 }
+table .btnBlue        {padding:0 32px; height:50px; line-height:50px; }
+table .btnSky         {padding:0 32px; height:50px; line-height:50px; }
+table .btnWhite       {padding:0 32px; height:50px; line-height:50px; }
+table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 
-button.btnBlue:active        { background:#323C94;  }
-button.btnSky:active         { background:#5B7DDC ;  }
-button.btnWhite:active       { background:#323C94; color:#fff }
-button.btnBlack:active       { background:#ffffff; color:#323C94 }
+.btnBlue:focus,
+.btnBlue:hover        { background:#4260BB; text-decoration: none;  }
+.btnSky:focus,
+.btnSky:hover         { background:#7793E2; text-decoration: none;  }
+.btnWhite:focus,
+.btnWhite:hover       { background:#323C94; text-decoration: none; color:#fff }
+.btnBlack:focus,
+.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#323C94 }
 
-button.btnBlue:disabled,
-button.btnSky:disabled,
-button.btnWhite:disabled,
-button.btnBlack:disabled       { background:#dddddd; color:#999; border:0;  }
+.btnBlue:active        { background:#323C94;  }
+.btnSky:active         { background:#5B7DDC ;  }
+.btnWhite:active       { background:#323C94; color:#fff }
+.btnBlack:active       { background:#ffffff; color:#323C94 }
 
-button.ico_down       {padding:0 32px;}
-button.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
-button.btnBlue.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-button.btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-button.btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
-button.btnWhite:active.ico_down::after,
-button.btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-button.btnBlack.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-button.btnBlack:hover.ico_down::after,
-button.btnBlack:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnBlue:disabled,
+.btnSky:disabled,
+.btnWhite:disabled,
+.btnBlack:disabled       { background:#dddddd; color:#999; border:0;  }
 
-button.size_XL      {height:70px;  }
-button.size_M       {height:50px; }
-button.wid_530      {min-width:530px;}
+.ico_down       {padding:0 32px;}
+.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnBlue.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnWhite:active.ico_down::after,
+.btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnBlack.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnBlack:hover.ico_down::after,
+.btnBlack:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+
+.size_XL      {height:70px;  }
+.size_M       {height:50px; }
+.wid_530      {min-width:530px;}
 
 /* 유틸 버튼 */
-button.btnReset     {font-size: 20px; font-weight: 700; color:#555}
-button.btnReset::after     {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_refresh.png) no-repeat 50% 50%; }
-button.btnFile      {font-size: 20px; font-weight: 700; color:#323C94; text-decoration: underline;}
-button.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
-button.btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #323C94;  }
-button.btnDown:hover    {background-color:#4260BB ;  }
-button.btnDown.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
-button.btnDown.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_download_white.png);  }
+.btnReset     {font-size: 20px; font-weight: 700; color:#555}
+.btnReset::after     {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_refresh.png) no-repeat 50% 50%; }
+.btnFile      {font-size: 20px; font-weight: 700; color:#323C94; text-decoration: underline;}
+.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #323C94;  }
+.btnDown:hover    {background-color:#4260BB ;  }
+.btnDown.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
+.btnDown.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
-/****************************
-**********  section  **********
-*****************************/
-.sectionBlock ~ .sectionBlock { margin-top: 60px;}
 
 /****************************
 **********  form  **********
@@ -233,10 +244,27 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 .jsgrid-header-row:first-child .jsgrid-header-cell:first-child  {border-radius: 16px 0 0;}
 .jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {border-radius:  0 16px 0 0;}
 .jsgrid-grid-header {background:none}
+.jsgrid-selected-row > .jsgrid-cell   {background:#E5EDFB ;}
 
 th{word-break: break-all;}
 .jsgrid-cell,
 .jsgrid-header-cell {padding:0; }
+
+
+
+/****************************
+**********  Range picker  **********
+*****************************/
+.rangeControl { position: relative; display: flex; gap: 10px; }
+.rangeControl.sm .input { min-height: 50px; padding: 0 16px;}
+.rangeControl.sm .btnBlue { height: 50px;}
+.rangeControl.sm .btnBlue::after { content: ""; display: inline-block; margin-left: 8px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
+
+
+/* lib override */
+.datepicker { top: 50px;}
+.datepicker__topbar { display: none;}
+
 
 
 /****************************
@@ -283,21 +311,39 @@ ul.tab li button:focus   {background:#5B7DDC; color:#fff;  }
 
 .alertWrap      {position:fixed; width:100%; height:100%; z-index:5000; left:0; top:0; }
 .alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:610px; padding:40px 40px 60px; border-radius: 16px; background:#fff }
-.alertWrap .alertBody .alertCont      {padding-bottom:60px; text-align: center;}
-.alertWrap .alertBody .alertFooter    {display:flex; gap:16px }
-.alertWrap .alertBody .alertFooter button    {width:100%; background:#ddd; }
+.alertWrap .alertBody .alertCont      {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
+.alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
+.alertWrap .alertBody .alertFooter button    {width:100%; }
+.alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
 .alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .4)}
 
+.layerWrap      {position:fixed; left:-100%; z-index:1000; width:100%; height:100%; top:0; display: flex; overflow: auto; overflow-y: scroll; }
+.layerWrap .layerBody         {
+  position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; overflow: hidden;
+  transition: .3s; opacity: 0; transform: translateY(-50px); 
+}
+.layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
+.layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
+.layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
+.layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
+.layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
+.layerWrap .layerBody .layerFoot button    {min-width:250px; }
+.layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100% - 16px); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
+.layerWrap.show      {left:0; }
+.layerWrap.show .layerBody      {opacity:1; transform: translateY(0px); }
+.layerWrap.show .layerDimm      {opacity:1; left:0; }
 
-/****************************
-**********  Range picker  **********
-*****************************/
-.rangeControl { position: relative; display: flex; gap: 10px; }
-.rangeControl.sm .input { min-height: 50px; padding: 0 16px;}
-.rangeControl.sm .btnBlue { height: 50px;}
-.rangeControl.sm .btnBlue::after { content: ""; display: inline-block; margin-left: 8px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
 
+/* layout */
+.headerUtil     {position:relative;  z-index:500; height:52px; background:rgba(255, 255, 255, 0.10); }
+.headerUtil .utilCont     {width:1400px; margin:0 auto; overflow: hidden; }
+.headerUtil .utilCont .zommBox   {float:right; padding:14px 0 0; }
+.headerUtil .utilCont .zommBox span.tit   {font-size: 16px; line-height:24px; color:#fff; }
+.btn_zoom_plus    {width:24px; height:24px; background:url(../images/common/ico_24_plus.png) }
+.btn_zoom_minus   {width:24px; height:24px; background:url(../images/common/ico_24_minus.png) }
 
-/* lib override */
-.datepicker { top: 50px;}
-.datepicker__topbar { display: none;}
+.on .headerUtil     { background:rgba(50, 60, 148, 0.10); }
+.on .headerUtil .utilCont .zommBox span.tit   {color:#999; }
+.on .btn_zoom_plus    {background:url(../images/common/ico_24_plus_on.png) }
+.on .btn_zoom_minus   {background:url(../images/common/ico_24_minus_on.png) }
+
