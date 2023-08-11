@@ -5,7 +5,9 @@ $(function(){
   layer_open_setting(); // layer btn search
   // ui.checkLabel();
 
-  browser   
+  // browser   
+
+  faq();
 
 });
 
@@ -152,4 +154,21 @@ function layer_close(id){
   layer.removeClass("show");
   layer[0].focusTarget.focus();
   $(".wrap").removeAttr("aria-hidden"); 
+}
+
+
+
+
+
+/* faq */
+function faq(){
+  $(".faqCont").each(function(i,o){
+    const box = $(o);
+    var dt = box.find("dt");
+    var dd = box.find("dd");
+    dd.hide().eq(0).show();
+    dt.on("click",fucntion(){
+      
+    })
+  })
 }
