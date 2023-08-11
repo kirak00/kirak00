@@ -2,7 +2,9 @@
 /* init action */
 $(function(){
   skip_navi();
+  layer_open_setting(); // layer btn search
   // ui.checkLabel();
+
 });
 
 
@@ -17,52 +19,40 @@ function skip_navi(){
   nav.html(txt);
 }
 
-
-
-function layer_alert(ment,focusObj,callback){
-  //  aria-haspopup="dialog" data-popup="alert";
-  var alertBody = $("<div>")
-  alertBody.attr({
-    class:'alertWrap',
-    'data-popup' : 'alert',
-    role : 'dialog',
-  });
-  const alertHTML = `
-    <div class="alertBody">
-      <div class="alertCont" tabindex="0">
-        <p>${ment}</p>
-      </div>
-      <div class="alertFooter">
-        <button class="alertConfirm" popup-close="alert" popup-confirm="alert">확인</button>
-      </div>
-      <button class="alertClose" popup-close="popup1"><span class="hidden">팝업 닫기</span></button>
-    </div>
-    
-    <div class="alertDimm"></div>
-  `;
-  alertBody.html(alertHTML)
+function alert_control(alertBody ,focusObj , btnObj){
 
   $("body").append(alertBody);
+  $(".wrap").attr("aria-hidden", "true"); 
+
   alertBody.find(".alertCont").focus();
-  alertBody.find(".alertConfirm").click(function(){
-    if(callback) eval(callback)();
+  alertBody.find(".alertClose").click(function(){
     close(this);
   });
+
+  alertBody.find(".alertConfirm").click(function(){
+    if(btnObj?.confirm?.callback) eval(btnObj.confirm.callback)();
+    close(this);
+  });
+
+  alertBody.find(".alertCancel").click(function(){
+    if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
+    close(this);
+  });
+
   function close(obj){
     $(obj).closest(".alertWrap").remove();
-    if(focusObj) focusObj.focus()
+    if(focusObj) focusObj.focus();
+    $(".wrap").removeAttr("aria-hidden"); 
   }
 
   $("body").one("keydown",function(e){
-    console.log()
     if(e.keyCode == 27){
       close(alertBody);
     }
   })
 }
 
-
-function layer_confirm(ment,focusObj,callback1,callback2){
+function layer_alert(ment,focusObj,btnObj){
   //  aria-haspopup="dialog" data-popup="alert";
   var alertBody = $("<div>")
   alertBody.attr({
@@ -70,41 +60,94 @@ function layer_confirm(ment,focusObj,callback1,callback2){
     'data-popup' : 'alert',
     role : 'dialog',
   });
+  
+  var confirmTxt = '확인';
+  if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   const alertHTML = `
     <div class="alertBody">
       <div class="alertCont" tabindex="0">
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
-        <button class="alertConfirm" popup-close="alert" popup-confirm="alert">확인</button>
-        <button class="alertCancel" popup-close="alert" popup-cancel="alert">취소</button>
+        <button class="alertConfirm btnBlue size-XL" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
       </div>
-      <button class="alertClose" popup-close="popup1"><span class="hidden">팝업 닫기</span></button>
+      <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
     </div>
     
     <div class="alertDimm"></div>
   `;
   alertBody.html(alertHTML)
 
-  $("body").append(alertBody);
-  alertBody.find(".alertCont").focus();
-  alertBody.find(".alertConfirm").click(function(){
-    if(callback1) eval(callback1)();
-    close(this);
-  });
-  alertBody.find(".alertCancel").click(function(){
-    if(callback2) eval(callback2)();
-    close(this);
-  });
-  function close(obj){
-    $(obj).closest(".alertWrap").remove();
-    if(focusObj) focusObj.focus()
-  }
+  alert_control(alertBody, focusObj , btnObj)
+}
 
-  $("body").one("keydown",function(e){
-    console.log()
-    if(e.keyCode == 27){
-      close(alertBody);
-    }
+
+function layer_confirm(ment,focusObj,btnObj){
+  //  aria-haspopup="dialog" data-popup="alert";
+  var alertBody = $("<div>")
+  alertBody.attr({
+    class:'alertWrap',
+    'data-popup' : 'alert',
+    role : 'dialog',
+    'aria-modal' : "true"
+  });
+  var confirmTxt = '확인';
+  var cancelTxt = '취소';
+  if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
+  if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt
+  const alertHTML = `
+    <div class="alertBody">
+      <div class="alertCont" tabindex="0">
+        <p>${ment}</p>
+      </div>
+      <div class="alertFooter">
+        <button class="alertConfirm btnBlue size-XL" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertCancel btnBlue size-XL" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
+      </div>
+      <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
+    </div>
+    
+    <div class="alertDimm"></div>
+  `;
+  alertBody.html(alertHTML)
+  
+  alert_control(alertBody, focusObj , btnObj)
+
+}
+
+
+/* layer btn search  */
+function layer_open_setting(){
+  var btns = $(".open_layer");
+  btns.on("click",function(){
+    layer_open(this.getAttribute('aria-controls'),this);
   })
+  
+  $(document).on("click",".layerDimm" , function(){
+    var layerwrap = $(this).closest(".layerWrap")
+    layerwrap.removeClass("show")
+    layerwrap[0].focusTarget.focus()
+  })
+
+  $(document).on("click", '.layerClose',function(){
+    var layerwrap = $(this).closest(".layerWrap");
+    layerwrap.removeClass("show");
+    layerwrap[0].focusTarget.focus();
+  })
+}
+
+/* layer control  */
+function layer_open(id , obj){
+  var layer = $("#" +id )
+  layer.addClass("show");
+  layer.find(".layerBody").focus();
+  layer[0].focusTarget = obj;
+  $(".wrap").attr("aria-hidden", "true"); 
+}
+
+function layer_close(id){
+  var layer = $("#" +id )
+  layer.removeClass("show");
+  layer[0].focusTarget.focus();
+  $(".wrap").removeAttr("aria-hidden"); 
 }
