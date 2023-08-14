@@ -46,7 +46,7 @@ table tr td img{vertical-align:middle; }
 /* ---[ links ]------------------------------- */
 a  { box-sizing:border-box; }
 a img {border: none;}
-a:link,a:visited {text-decoration: none;color:#666; font-family:inherit}
+a {text-decoration: none;color:#666; font-family:inherit}
 a:hover {text-decoration:underline;}
 
 button{position:relative;margin:0;padding:0;border:0; vertical-align:middle;  box-sizing:border-box;  }
@@ -55,7 +55,6 @@ button{position:relative;margin:0;padding:0;border:0; vertical-align:middle;  bo
 .mob_clear {clear: both;}
 
 /* clear */
-.clearfix{*zoom: 1;} /* for IE 6/7 */
 .clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
 
 .hide {  position: absolute;  width: 1px;  height: 1px;  padding: 0;  margin: -1px;  overflow: hidden;  clip: rect(0, 0, 0, 0);  border: 0;}
@@ -71,4 +70,4 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 .skip_nav a:focus, 
 .skip_nav a:active{top: 0;}
 
-*:focus   {outline: 2px dashed red; border-radius: 5px;}
+*:focus   {outline: 2px dashed #5B7DDC; border-radius: 5px;}

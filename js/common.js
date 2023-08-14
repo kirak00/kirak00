@@ -28,7 +28,7 @@ function alert_control(alertBody ,focusObj , btnObj){
   $("body").append(alertBody);
   $(".wrap").attr("aria-hidden", "true"); 
 
-  alertBody.find(".alertCont").focus();
+  alertBody.find(".alertBody").focus();
   alertBody.find(".alertClose").click(function(){
     close(this);
   });
@@ -68,8 +68,8 @@ function layer_alert(ment,focusObj,btnObj){
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   const alertHTML = `
-    <div class="alertBody">
-      <div class="alertCont" tabindex="0">
+    <div class="alertBody"  tabindex="0">
+      <div class="alertCont">
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
@@ -100,8 +100,8 @@ function layer_confirm(ment,focusObj,btnObj){
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt
   const alertHTML = `
-    <div class="alertBody">
-      <div class="alertCont" tabindex="0">
+    <div class="alertBody"  tabindex="0">
+      <div class="alertCont">
         <p>${ment}</p>
       </div>
       <div class="alertFooter">

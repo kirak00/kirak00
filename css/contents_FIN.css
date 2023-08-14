@@ -38,6 +38,13 @@
 
 /* 락 */
 
+div.login_form  {width:530px; padding:60px 0 0;  }
+div.login_form .row + .row  {margin-top:20px; }
+div.login_form label   {min-width:130px; padding-left:0;padding-right:0;  }
+div.login_form .inputWrap input   {width:400px; }
+div.login_form#cont_certificate_login .inputWrap input   {width:100px; }
+div.login_form div.loginBtn   {margin-top:60px; }
+
 
 
 /* 진희 */

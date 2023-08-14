@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/contents_COP.css">
+  <script src="../js/juqery-3.7.0.min.js"></script>
+</head>
+<body>
+<style>
+
+table {width:100%; }
+td  {border:1px solid #ddd; padding:10px; }
+tr.false    {background:#ddd; color:#999}
+tr.false a    {color:#999;}
+tr td.td_1    {background:#fff; color:#000}
+tr td.status    {text-align: center;}
+h1    {height:60px; line-height:60px;  text-align: center; background:#f0f0f0; }
+ul    {overflow: hidden; height:40px; line-height:40px;  text-align: center; background:#ddd;  }
+ul li    {float:left; width:50%;  }
+ul li a    {display:block; color:#333; font-weight: 700;}
+ul li a.on    {display:block; color:#fff; font-weight: 700; background:#84a8f7;}
+ul li + li a    {border-left:1px solid #fff;}
+iframe    {width:100%; height:calc(100vh - 100px)}
+</style>
+<div>
+  <h1>법인대출중계플랫폼 HTML 가이드</h1>
+  <ul >
+    <li><a class="on" href="#list_COP.html">금융회원(COP)</a></li>
+    <li><a href="#list_FIN.html">법인회원(FIN)</a></li>
+  </ul>
+  <div>
+    <iframe src="list_COP.html" id="frame" frameborder="0"></iframe>
+  </div>
+
+
+<script>
+$("a").click(function(){
+  $("#frame")[0].src = this.href.split("#")[1];
+  $("a").removeClass("on")
+  $(this).addClass("on")
+})
+</script>
+
+
+</div>
+</body>
+</html>

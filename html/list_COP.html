@@ -13,9 +13,20 @@ tr.false    {background:#ddd; color:#999}
 tr.false a    {color:#999;}
 tr td.td_1    {background:#fff; color:#000}
 tr td.status    {text-align: center;}
+tr.guide     {background:#323C94; }
+tr.guide td.td_1 ,
+tr.guide td,
+tr.guide td a  {color:#fff; background:#919ae9;  }
+tr th   {background:#323C94; height:50px; color:#fff; } 
+
+h1  {text-align: center; font-size:24px;}
+
+table {margin:0 20px; width:calc(100% - 40px)}
+
 </style>
 
   <div>
+    <h1>금융회원(COP)</h1>
     <table>
       <colgroup>
         <col width="150"/>
@@ -48,6 +59,7 @@ tr td.status    {text-align: center;}
   
 
   var jsonList = [
+   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', },
    {tit : '메인', folder : 'main', page : 'COP_F1.html', status : false, ment : '', },
    {
     tit : '로그인', folder : 'member', page : '', status : false, ment : '',
@@ -132,10 +144,11 @@ tr td.status    {text-align: center;}
           })
         }
       });
-      var folder = "./"
-      folder += o.folder
-      
-      txt += `<tr class="${o.status}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
+      var folder = "./COP/"
+      folder += o.folder;
+      var status_1 = o.status;
+      if(o.folder == "guide") {status_1 += " guide"}
+      txt += `<tr class="${status_1}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
       
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
