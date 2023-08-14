@@ -231,6 +231,10 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .formListTable .th { display: table-cell; width: 186px; font-weight: 700;}
 .formListTable .td {}
 
+.formListTable table { display: table; width: 100%; } 
+.formListTable th { display: table-cell; width: 186px; font-weight: 700; text-align: left;}
+.formListTable td { text-align: left;}
+
 .formGrayBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
 .formGrayBox .formListTable { margin-top: 0;}
 
