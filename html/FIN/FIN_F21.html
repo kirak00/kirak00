@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/contents_COP.css">
+  <script src="../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../js/jquery-ui.js"></script>
+  <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출 가능 목록</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
+          <li><a href="#none"><span>제안서 제출 가능 목록</span></a></li>
+      </ul>
+    </section>
+
+    <section class="sectionBlock">
+      <!-- 검색 -->
+      <div class="searchControlBox">
+        <div class="searchControlGroup">
+          <div class="searchControlItem">
+            <label for="selectLabelState" class="label">제안서 제출 유무</label>
+            <div class="controls">
+              <span class="select">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelDone" class="label">심사 완료 유무</label>
+            <div class="controls">
+              <span class="select">
+                <select id="selectLabelDone">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelPay" class="label srOnly">제출자</label>
+            <input class="input wid400" type="text" name="" id="selectLabelPay" placeholder="제출자를 입력해 주세요" value="">
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelArea" class="label">지역</label>
+            <div class="controls">
+              <span class="select">
+                <select id="selectLabelArea">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelPatent" class="label">자금 용도</label>
+            <div class="controls">
+              <span class="select">
+                <select id="selectLabelPatent">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelPa" class="label">담보 유무</label>
+            <div class="controls">
+              <span class="select">
+                <select id="selectLabelPa">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+            <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+          </span>
+        </div>
+        <button class="btnReset">초기화</button>
+        <button class="btnBlue">조회</button>
+      </div>
+      <!-- 검색 -->
+    </section>
+    <section class="sectionBlock">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>15</strong>건</span>
+        <div class="controls" role="group">
+          <span class="select">
+            <select title="신청금액 선 택">
+              <option>신청 금액 높은순</option>
+              <option>본부2</option>
+            </select>
+          </span>
+          <span class="select">
+            <select title="마감일 선택">
+              <option>마감일 최신순</option>
+              <option>본부2</option>
+            </select>
+          </span>
+          <span class="select">
+            <select title="보기갯수 선택">
+              <option>10개씩 보기</option>
+              <option>본부2</option>
+            </select>
+          </span>
+        </div>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid" class=""></div>
+        <div class="table_bt">
+          <div class="btn_r">
+            <button class="btnBlue ico_down">엑셀 다운로드</button>
+          </div>
+        </div>
+        <div id="externalPager" class="external-pager"></div>
+        
+      </div>
+    </section>
+
+    <!-- 하단 풀 배너 : start -->
+    <section class="bnrInerCont">
+      
+    </section>
+    <!-- 하단 풀 배너 : end -->
+
+    <!-- 하단 풀 배너 : start -->
+    <div class="btFullBnr">
+      
+    </div>
+    <!-- 하단 풀 배너 : end -->
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

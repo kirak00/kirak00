@@ -186,6 +186,7 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .inputWrap { position: relative; display: block; }
 .inputWrap.wid400 .input { width: 400px;}
 .inputWrap.widFull .input { width: 100%;}
+.input.wid400 { width: 400px;}
 
 .inputWrap button { margin-left: 5px;}
 /* .inputWrap .input.inputMd { min-width: 540px;} */
@@ -240,9 +241,9 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .formVertical .inputWrap ~ .radioGroup { margin-top: 20px; }
 
 /* control group */
-.searchControlBox { position: relative; padding: 32px 40px; background: #E5EDFB; border-radius: 16px;}
+.searchControlBox { position: relative; padding: 32px 228px 32px 40px; background: #E5EDFB; border-radius: 16px;}
 .searchControlBox .btnReset { position: absolute; top: 32px; right: 36px; padding: 4px;}
-.searchControlBox .btnBlue { position: absolute; bottom: 32px; right: 40px;}
+.searchControlBox .btnBlue { position: absolute; bottom: 32px; right: 40px; width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
@@ -309,6 +310,8 @@ td .formListTable { margin-top: 25px;}
 .tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 20px; color: #555;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #323C94;}
+.tableFilterGroup .select { min-width: 206px; }
+.tableFilterGroup .select select { padding-right: 74px; }
 
 .table_top     {}
 .table_bt      {width:100%; padding:20px 0 0px;}
@@ -331,6 +334,7 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 /****************************
 **********  grid  **********
 *****************************/
+.jsGridWrap { margin-top: 20px;}
 .jsgrid-table {table-layout: fixed;}
 .nomal_table .jsgrid-grid-header,
 .nomal_table .jsgrid-grid-body   {overflow: auto;}
@@ -340,7 +344,7 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 
 .jsgrid-header-row > .jsgrid-header-cell, 
 .jsgrid-grid-header {border:0; }
-.jsgrid-grid-body {border:0; }
+.jsgrid-grid-body {border:0; height: calc(100% - 80px) !important}
 .jsgrid-filter-row > .jsgrid-cell, 
 .jsgrid-insert-row > .jsgrid-cell, 
 .jsgrid-cell,
@@ -354,7 +358,9 @@ th{word-break: break-all;}
 .jsgrid-cell,
 .jsgrid-header-cell {padding:0; }
 
-
+.jsgrid-header-sort:before { display: inline-block; float: none; margin-right: 10px; vertical-align: middle;}
+.jsgrid-header-sort-asc:before { border-color: transparent transparent #323C94 transparent}
+.jsgrid-header-sort-desc:before { border-color: #323C94 transparent transparent transparent}
 
 /****************************
 **********  Range picker  **********
