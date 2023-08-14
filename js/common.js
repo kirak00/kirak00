@@ -167,8 +167,8 @@ function faq(){
     var dt = box.find("dt");
     var dd = box.find("dd");
     dd.eq(0).addClass("on");
-    dt.on("click",function(){
-      $(this).toggleClass("on");
+    dt.on("focus",function(){
+      $(this).addClass("on");
       $(this).siblings("dt").removeClass("on");
     })
   })
