@@ -107,21 +107,29 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .btnDown:hover    {background-color:#4260BB ;  }
 .btnDown.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
 .btnDown.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_download_white.png);  }
+.btnPlus { width: 50px; height: 50px; background: #323C94; border-radius: 8px; font-weight: 700; color:#555}
+.btnPlus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
+.btnPlus:hover    {background-color:#4260BB;}
 
+.btnMinus { width: 50px; height: 50px; background: #fff; border: 1px solid #323C94; border-radius: 8px; font-weight: 700; color:#555}
+.btnMinus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_minus_w.png) no-repeat 50% 50%; vertical-align: top;}
+.btnMinus:hover    {background-color:#4260BB; }
+
+.addBtnSet { display: flex; column-gap: 20px;}
 
 /****************************
 **********  form  **********
 *****************************/
 /* checkbox, radio */
 .radio input[type=radio] + label , 
-.checkbox input[type=checkbox] + label { display: inline-flex; align-items: center; color: #333; font-size: 20px;} 
+.checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; gap: 30px;}
-.checkbox { display: inline-block;}
-.checkbox input[type=checkbox] + label span { position: relative; display: block; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
+.checkbox { display: inline-block; white-space: nowrap;}
+.checkbox input[type=checkbox] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
 .checkbox input[type=checkbox]:focus + label span::before,
@@ -131,8 +139,9 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 
 /* radio */ 
 .radioGroup { display: flex; align-items: center; gap: 60px;}
-.radio { display: inline-flex;}
-.radio input[type=radio] + label span { position: relative; display: block; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
+.radioGroup.mt30 { margin-top: 30px;}
+.radio { display: inline-block; white-space: nowrap;}
+.radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
 .radio input[type=radio]:focus + label span::before,
@@ -170,10 +179,16 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 /* 가로사이즈 가변 */
 .input { min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
 .input::placeholder { color: #999; line-height: normal; }
-.input.inputXs { width: 96px; }
+/* .input.inputXs { width: 96px; }
+.inputWrap.full {width: 100%;}
+.inputWrap.full .input, .input.full { width: 100%;} */
 
-.inputWrap { position: relative; display: inline-block; vertical-align: middle;  }
-.inputWrap .input.inputMd { min-width: 540px;}
+.inputWrap { position: relative; display: block; }
+.inputWrap.wid400 .input { width: 400px;}
+.inputWrap.widFull .input { width: 100%;}
+
+.inputWrap button { margin-left: 5px;}
+/* .inputWrap .input.inputMd { min-width: 540px;} */
 .inputWrap .unit { display: inline-block; padding-left: 6px; vertical-align: middle;}
 .inputWrap .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .inputWrap .error { display: block; margin-top: 10px; color: #FE5050; font-size: 16px;}
@@ -187,7 +202,13 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .inputWrap.hasError { flex-direction: column; align-items: flex-start;}
 
 .inputBizNumber { }
-.inputBizNumber .input {}
+.inputBizNumber .input { margin: 0 3px;}
+.inputBizNumber .input:nth-child(1) {width: 76px; margin-left: 0;}
+.inputBizNumber .input:nth-child(2) {width: 64px;}
+.inputBizNumber .input:nth-child(3) {width: 100px; margin-right: 0;}
+
+
+
 
 .btnSize64 { height: 64px; padding: 0 50px; border-radius: 8px; background: #323C94; font-size: 20px; line-height: 64px; }
 
@@ -202,6 +223,19 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .textarea { min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
 .textarea:focus {}
 
+/* 폼그룹 */
+.radioGroup.w673 { width: 673px;}
+.radioGroup.w673 .radioInput,
+.radioGroup.w673 .radioInput .inputWrap,
+.radioGroup.w673 .radioInput .input { width: 100%;}
+
+.radioInput { display: inline-flex; align-items: center; column-gap: 16px;}
+.radioInput.w673 { width: 673px;}
+.radioInput.w673 .inputWrap,
+.radioInput.w673 .inputWrap .input { width: 100%;}
+
+/* form 정력 */
+.formVertical .inputWrap ~ .radioGroup { margin-top: 20px; }
 
 /* control group */
 .searchControlBox { position: relative; padding: 32px 40px; background: #E5EDFB; border-radius: 16px;}
@@ -224,22 +258,30 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
 
 /* form div table */
-.formListTable { margin-top: 60px;}
+/* .formListTable { margin-top: 60px;}
 .formListTable .titH3 { margin-top: 60px;}
 .formListTable .tr { display: table; width: 100%; min-height: 64px; margin-top: 30px;}
 .formListTable .tr:first-child { margin-top: 0}
 .formListTable .th { display: table-cell; width: 186px; font-weight: 700;}
-.formListTable .td {}
+.formListTable .td {} */
 
+
+.formListTable { margin-top: 45px;}
 .formListTable table { display: table; width: 100%; } 
-.formListTable th { display: table-cell; width: 186px; font-weight: 700; text-align: left;}
-.formListTable td { text-align: left;}
+.formListTable th { display: table-cell; padding: 35px 0; font-weight: 700; text-align: left; vertical-align: top;}
+.formListTable th .checkbox { font-weight: 400;}
+.formListTable td { padding: 15px 0; text-align: left;}
+.formListTable .btnWhite { height: 64px; padding: 0 50px; line-height: 64px;}
+/* .formListTable .input { width: 400px;} */
 
+td .formGrayBox { margin: 10px 0;}
+td .formListTable { margin-top: 25px;}
 .formGrayBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
-.formGrayBox .formListTable { margin-top: 0;}
-
-/* form 정력 */
-.formVertical .inputWrap ~ .radioGroup { margin-top: 20px; }
+/* .formGrayBox .formListTable { margin-top: 0;} */
+.formGrayBox th { padding-left: 60px;}
+.formGrayBox th:first-child { padding-left: 0;}
+.formGrayBox .list:not(:first-child) { margin-top: 60px; padding-top: 60px; border-top: 1px solid #ddd;}
+.addControl { display: flex; justify-content: space-between; align-items: center;}
 
 /****************************
 **********  table  **********
