@@ -13,9 +13,20 @@ tr.false    {background:#ddd; color:#999}
 tr.false a    {color:#999;}
 tr td.td_1    {background:#fff; color:#000}
 tr td.status    {text-align: center;}
+tr.guide     {background:#323C94; }
+tr.guide td.td_1 ,
+tr.guide td,
+tr.guide td a  {color:#fff; background:#919ae9;  }
+tr th   {background:#323C94; height:50px; color:#fff; } 
+
+h1  {text-align: center; font-size:24px;}
+
+table {margin:0 20px; width:calc(100% - 40px)}
+
 </style>
 
   <div>
+    <h1>법인회원(FIN)</h1>
     <table>
       <colgroup>
         <col width="150"/>
@@ -48,39 +59,50 @@ tr td.status    {text-align: center;}
   
 
   var jsonList = [
-   {tit : '메인', folder : 'main', page : 'main.html', status : false, ment : '', },
+   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', },
+   {tit : '메인', folder : 'main', page : 'FIN_F1.html', status : false, ment : '', },
    {
     tit : '로그인', folder : 'login', page : '', status : false, ment : '',
     sub : [
-      {tit : '로그인', folder : 'login', page : 'login.html', status : true , ment : '',},
-      {tit : '아이디찾기', folder : 'login', page : 'login_id_search.html', status : false , ment : '',},
-      {tit : '비밀번호 찾기', folder : 'login', page : 'login_pw_search.html', status : false, ment : '',},
+      {tit : '로그인', folder : '', page : 'FIN_F03.html', status : false , ment : '',},
+      {tit : '아이디찾기', folder : '', page : 'FIN_F07.html', status : false , ment : '',},
+      {tit : '비밀번호 찾기', folder : '', page : 'FIN_F08.html', status : false, ment : '',},
     ],
    },
    {
-    tit : '회원가입', folder : 'member', page : '', status : false,  ment : '',
+    tit : '대출 신청 조회', folder : 'mypage', page : 'index.html', status : false, pop : false, ment : '',
     sub : [
-      {tit : '회원가입', folder : 'member', page : '', status : false, ment : '', },
-      {tit : '대표자 본인인증', folder : 'member', page : '', status : false, ment : 'popup', },
-      {tit : '담당자등록', folder : 'member', page : '', status : false, ment : '', },
-      {tit : '담당자인증', folder : 'member', page : '', status : false, ment : 'popup', },
+      {tit : '회원정보', folder : '', page : 'COP_F10.html', status : false, ment : '', },
     ],
    },
    {
-    tit : '마이페이지', folder : 'mypage', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '제안서 등록', folder : 'proposal', page : 'index.html', status : false, pop : false, ment : '',
     sub : [
-      {tit : '회원정보', folder : '', page : '', status : false, ment : '', },
-      {tit : '대출 신청 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '추가 서류 요청 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '제안서 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '대출 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '대출 관리 상세', folder : '', page : '', status : false, ment : '', },
+      {tit : '제안서 제출 가능 대출 신청 목록', folder : '', page : 'FIN_F21.html', status : false, ment : '', },
     ],
    },
    {
-    tit : '대출신청', folder : 'folder', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '서비스안내', folder : 'service', page : '', status : false, pop : false, ment : '',
     sub : [
-      {tit : '대출신청절차 > 대출정보제공동의', folder : '', page : '', status : false, ment : '', },],
+      {tit : '대출신청절차', folder : '', page : 'COP_F44.html', status : false, ment : '', },
+      {tit : '제출서류안내', folder : '', page : 'COP_F45.html', status : false, ment : '', },
+      {tit : '정부지원사업 - 리스트', folder : '', page : 'COP_F46.html', status : false, ment : '', },
+      {tit : '정부지원사업 - 상세', folder : '', page : 'COP_F47.html', status : false, ment : '', },
+      {tit : '홍보영상', folder : '', page : 'COP_F48.html', status : false, ment : '', },
+      {tit : '이벤트', folder : '', page : 'COP_F49.html', status : false, ment : '', },
+      {tit : '당첨자발표', folder : '', page : 'COP_F51.html', status : false, ment : '', },
+    ],
+   },
+   {
+    tit : '고객센터', folder : 'custom', page : '', status : false, pop : false, ment : '',
+    sub : [
+      {tit : '고객센터번호', folder : '', page : 'cop_F53.html', status : false, ment : '', },
+      {tit : '1:1문의 - 리스트', folder : '', page : 'cop_F54.html', status : false, ment : '', },
+      {tit : '1:1문의 - 상세', folder : '', page : 'cop_F56.html', status : false, ment : '', },
+      {tit : '1:1문의 - 상세-수정팝업', folder : '', page : 'cop_F57.html', status : false, ment : '', },
+      {tit : '1:1문의 - 작성', folder : '', page : 'cop_F58.html', status : false, ment : '', },
+      {tit : 'F&Q', folder : '', page : 'cop_F59.html', status : false, ment : '', },
+    ],
    }
   ]
 
@@ -106,10 +128,11 @@ tr td.status    {text-align: center;}
           })
         }
       });
-      var folder = "./"
-      folder += o.folder
-      
-      txt += `<tr class="${o.status}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
+      var folder = "./FIN/"
+      folder += o.folder;
+      var status_1 = o.status;
+      if(o.folder == "guide") {status_1 += " guide"}
+      txt += `<tr class="${status_1}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
       
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
