@@ -311,7 +311,7 @@ td .formListTable { margin-top: 25px;}
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 20px; color: #555;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #323C94;}
 .tableFilterGroup .select { min-width: 206px; }
-.tableFilterGroup .select select { padding-right: 74px; }
+.tableFilterGroup .select select { height: 50px; padding: 0 60px 0 15px }
 
 .table_top     {}
 .table_bt      {width:100%; padding:20px 0 0px;}
