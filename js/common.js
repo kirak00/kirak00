@@ -167,9 +167,19 @@ function faq(){
     var dt = box.find("dt");
     var dd = box.find("dd");
     dd.eq(0).addClass("on");
+    var focusChk = false;
     dt.on("focus",function(){
       $(this).addClass("on");
       $(this).siblings("dt").removeClass("on");
+      focusChk = true;
+      console.log(2, focusChk)
+      setTimeout(()=>{
+        focusChk = false;
+      },100)
     })
+    dt.on("click",function(){
+      console.log(1, focusChk)
+      if(!focusChk) $(this).toggleClass("on");
+    });
   })
 }
