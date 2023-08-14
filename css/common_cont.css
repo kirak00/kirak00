@@ -16,12 +16,29 @@
 .black	{color:#000} 
 .brown	{color:#7f6c66} 
 .green	{color:#537a7c}
+.blue { color: #323c94;}
 
 .srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
 
 /****************************
+**********  align  **********
+*****************************/
+.textCenter { text-align: center;}
+
+
+
+/****************************
+**********  title  **********
+*****************************/
+.titH2 { font-size: 40px; font-weight: 700;}
+.titH3 { font-size: 30px; font-weight: 700;}
+
+.titH3.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
+.titH3 strong.blue { margin-left: 10px;}
+/****************************
 **********  section  **********
 *****************************/
+.formListBlock { margin-top: 80px; } 
 .sectionBlock ~ .sectionBlock { margin-top: 60px;}
 
 
@@ -169,6 +186,9 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .inputWrap.hasUnit.disabled { background: #f4f6f8; }
 .inputWrap.hasError { flex-direction: column; align-items: flex-start;}
 
+.inputBizNumber { }
+.inputBizNumber .input {}
+
 .btnSize64 { height: 64px; padding: 0 50px; border-radius: 8px; background: #323C94; font-size: 20px; line-height: 64px; }
 
 /* select */
@@ -202,6 +222,21 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
 .searchControlItem .controls .select::before, 
 .searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+
+/* form div table */
+.formListTable { margin-top: 60px;}
+.formListTable .titH3 { margin-top: 60px;}
+.formListTable .tr { display: table; width: 100%; min-height: 64px; margin-top: 30px;}
+.formListTable .tr:first-child { margin-top: 0}
+.formListTable .th { display: table-cell; width: 186px; font-weight: 700;}
+.formListTable .td {}
+
+.formGrayBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
+.formGrayBox .formListTable { margin-top: 0;}
+
+/* form 정력 */
+.formVertical .inputWrap ~ .radioGroup { margin-top: 20px; }
+
 /****************************
 **********  table  **********
 *****************************/
