@@ -183,13 +183,3 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .suggestLoanList { background: #d9d9d9; border-radius: 15px; }
 
 
-.gaugeBox { width: 376px; border-bottom: 1px solid #EAEEF1;}
-.gauge_circle { position: relative; left: 50%; margin-left: -160px; width: 320px; height: 190px; overflow: hidden;}
-.gauge_body { position: absolute; top: 30px; width: 320px; height: 160px; background: #EAEEF2; border-radius: 160px 160px 0 0;  overflow: hidden;}
-.gauge_fill { position: absolute; top: 100%; left: 0; width: inherit; height: 100%; background: #19376D; transform-origin: center top; transform: rotate(0.1turn);}
-
-.gauge_pointer_wrap { position: absolute; top: 30px; width: 320px; height: 160px; z-index: 1;}
-.gauge_pointer { position: absolute; top: 100%; left: 0; width: inherit; height: 100%; transform-origin: center top; transform: rotate(0.1turn);}
-.gauge_pointer:before {content:""; position: absolute; bottom: calc(100% + -9px); left: -4px; width: 18px; height: 18px; background: #19376D; border-radius: 50%;}
-.gauge_pointer:after {content:""; position: absolute; bottom: calc(100% + -13px); left: -8px; width: 26px; height: 26px; background: rgba(25, 55, 109, 0.20); border-radius: 50%;}
-.gauge_bg { position: absolute; top: 40px; left: 50%; width: 300px; height: 300px; margin-left: -150px; background: #fff; border-radius: 50%;}
