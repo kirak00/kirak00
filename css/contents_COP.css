@@ -113,7 +113,10 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 
 
 /* 락 */
-
+/* 약관 */
+.content_terms    {margin-top:80px; }
+.content_terms .terms_type    {padding:40px 0 0;}
+.content_terms .terms_ment    {padding:40px 0 20px;}
 
 
 /* 진희 */

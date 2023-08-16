@@ -22,9 +22,43 @@
     <hr/>
     <div class="container member" id="skip_content"  aria-label="콘텐츠">
 
-      <h2 class="hide">콘텐츠 영역</h2> 
+      
+      <h2 class="titH2 textCenter">회원 가입 정보</h2>
+
+      <ol class="joinStep">
+        <li class="on">
+          <span class="circle">1</span>
+          <p class="name">약관 동의(법인)</p>
+        </li>
+        <li>
+          <span class="circle">2</span>
+          <p class="name">약관 동의(대표자)</p>
+        </li>
+        <li>
+          <span class="circle">3</span>
+          <p class="name">정보 입력</p>
+        </li>
+      </ol>
+
+
       <section class="content_terms">
-        
+        <h3 class="titH3 hasLine">법인 회사 유형</h3>
+        <div class="terms_type">
+          <span class="radio">
+            <input type="radio" id="testRdoBoxOnly" name="testRdoBoxOnly" value="A" />
+            <label for="testRdoBoxOnly"><span></span>외감법인</label>
+          </span>
+          <span class="radio">
+            <input type="radio" id="testRdoBoxOnly" name="testRdoBoxOnly" value="A" />
+            <label for="testRdoBoxOnly"><span></span>일반 법인</label>
+          </span>
+        </div>
+
+        <h3 class="titH3 hasLine">약관 동의</h3>
+        <div class="terms_ment">
+          법인대출 중개 플롯폼 회원 가입을 원하실 경우, <br>
+          법인 동의를 위해 아래 의 ‘이용약관.(필수/선택) 개인정보 수집 및 이용,  개인정보 제3자제공에’ 대한 안내를 읽고 동의 여부를 선택해 주세요.
+        </div>
         <!-- 약관 -->
         <dl class="faqCont">
           <dt tabindex="0">
@@ -55,6 +89,10 @@
           </dd>
         </dl>
         
+        <section class="bottomBtn">
+          <button class="btnBlue">확인</button>
+        </section>
+
       </section>
 
 

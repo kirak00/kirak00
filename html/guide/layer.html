@@ -31,11 +31,46 @@
           <button class="btnBlue" onclick="layer_close('sampleLayer')" >레이어 닫기 </button>
         </div>
         <div style="padding:10px 0;">
+          <button class="btnBlue open_layer" aria-controls="sampleLayer_file">파일 레이어 </button>
         </div>
 
     </div>
 
   </div>
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid-870" tabindex="0">
+      <div class="layerHead">
+        <h3>파일 업로드</h3>
+        <p>업로드 파일을 선택해 주세요.</p>
+        <button class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="fileForm">
+          
+          <label for="inpFile" class="label">파일명</label>
+          <div class="inputWrap">
+            <input class="input" type="text" name="inpFile" id="inpFile" placeholder="파일을 선택해주세요.">
+          </div>
+          <button class="btnSky">파일선택</button>
+          <button class="btnBlue">등록</button>
+        </div>
+        <p class="txt_fileForm">
+          업로드 가능한 파일 포맷은 PPT, PDF,IMG 입니다. (최대 용량 50MB)
+        </p>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
 
   
 
