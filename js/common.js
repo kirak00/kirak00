@@ -56,9 +56,17 @@ function alert_control(alertBody ,focusObj , btnObj){
   })
 }
 
-function layer_alert(ment,focusObj,btnObj){
+function layer_alert(msg,focusObj,btnObj){
   //  aria-haspopup="dialog" data-popup="alert";
   var alertBody = $("<div>")
+  var ment = ''
+  var tit = ''
+  if(typeof msg == "string"){
+    ment = msg
+  }else{
+    ment = msg.ment
+    tit = msg.tit
+  }
   alertBody.attr({
     class:'alertWrap',
     'data-popup' : 'alert',
@@ -67,7 +75,7 @@ function layer_alert(ment,focusObj,btnObj){
   
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
-  const alertHTML = `
+  let alertHTML = `
     <div class="alertBody"  tabindex="0">
       <div class="alertCont">
         <p>${ment}</p>
@@ -77,18 +85,41 @@ function layer_alert(ment,focusObj,btnObj){
       </div>
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
     </div>
-    
     <div class="alertDimm"></div>
   `;
+  if(tit){
+    console.log(11)
+     alertHTML = `
+      <div class="alertBody"  tabindex="0">
+        <div class="alertCont">
+          <div class="tit">${tit}</div>
+          <p>${ment}</p>
+        </div>
+        <div class="alertFooter">
+          <button class="alertConfirm btnBlue size-XL" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        </div>
+        <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
+      </div>
+      <div class="alertDimm"></div>
+    `;
+  }
   alertBody.html(alertHTML)
 
   alert_control(alertBody, focusObj , btnObj)
 }
 
 
-function layer_confirm(ment,focusObj,btnObj){
+function layer_confirm(msg,focusObj,btnObj){
   //  aria-haspopup="dialog" data-popup="alert";
-  var alertBody = $("<div>")
+  var alertBody = $("<div>");
+  var ment = ''
+  var tit = ''
+  if(typeof msg == "string"){
+    ment = msg
+  }else{
+    ment = msg.ment
+    tit = msg.tit
+  }
   alertBody.attr({
     class:'alertWrap',
     'data-popup' : 'alert',
@@ -99,15 +130,31 @@ function layer_confirm(ment,focusObj,btnObj){
   var cancelTxt = '취소';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt
-  const alertHTML = `
+  let alertHTML = `
     <div class="alertBody"  tabindex="0">
-      <div class="alertCont">
+      <div class="confirmCont">`
+      + `  <p>${ment}</p>
+      </div>
+      <div class="alertFooter">
+        <button class="alertConfirm btnBlue size-XL" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertCancel btnWhite size-XL" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
+      </div>
+      <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
+    </div>
+    
+    <div class="alertDimm"></div>
+  `;
+   if(tit) 
+   alertHTML = `
+    <div class="alertBody"  tabindex="0">
+      <div class="confirmCont">
+        <div class="tit">${tit}</div>
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
         <button class="alertConfirm btnBlue size-XL" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
-        <button class="alertCancel btnBlue size-XL" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
-      </div>
+        <button class="alertCancel btnWhite  size-XL" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
+      </div> 
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
     </div>
     
@@ -128,7 +175,8 @@ function layer_open_setting(){
   })
   
   $(document).on("click",".layerDimm" , function(){
-    var layerwrap = $(this).closest(".layerWrap")
+    var layerwrap = $(this).closest(".layerWrap");
+    if(layerwrap.hasClass("modal")) return false;
     layerwrap.removeClass("show")
     layerwrap[0].focusTarget.focus()
   })
@@ -184,3 +232,4 @@ function faq(){
   })
 }
 
+ 

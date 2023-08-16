@@ -31,14 +31,15 @@
 **********  title  **********
 *****************************/
 .titH2 { font-size: 40px; font-weight: 700;}
-.titH3 { font-size: 30px; font-weight: 700;}
+.titH3 { font-size: 30px; font-weight: 700; margin-top:60px;}
+.titH3:first-child {margin-top: ; }
 
 .titH3.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
 /****************************
 **********  section  **********
 *****************************/
-.formListBlock { margin-top: 80px; } 
+.formListBlock { margin-top: 0; } 
 .sectionBlock ~ .sectionBlock { margin-top: 60px;}
 
 
@@ -94,7 +95,7 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .btnBlack:hover.ico_down::after,
 .btnBlack:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 
-.size_XL      {height:70px;  }
+.size_XL      {height:70px; }
 .size_M       {height:50px; }
 .wid_530      {min-width:530px;}
 
@@ -117,6 +118,10 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 
 .addBtnSet { display: flex; column-gap: 20px;}
 
+.bottomBtn      {text-align: center; margin-top:60px; }
+.bottomBtn button   {min-width:225px;}
+
+
 /****************************
 **********  form  **********
 *****************************/
@@ -127,8 +132,9 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 
 /* checkbox */
-.checkboxGroup { display: flex; align-items: center; gap: 30px;}
+.checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
+.checkbox + .checkbox { margin-left:26px; }
 .checkbox input[type=checkbox] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
@@ -138,9 +144,11 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .checkbox input[type=checkbox]:disabled + label span {background:url("../images/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
 /* radio */ 
-.radioGroup { display: flex; align-items: center; gap: 60px;}
+.radioGroup { display: flex; align-items: center; }
 .radioGroup.mt30 { margin-top: 30px;}
 .radio { display: inline-block; white-space: nowrap;}
+.radio + .radio { margin-left:26px; }
+.radio + .radioInput { margin-left:26px; }
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
@@ -215,6 +223,17 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 
 .btnSize64 { height: 64px; padding: 0 50px; border-radius: 8px; background: #323C94; font-size: 20px; line-height: 64px; }
 
+/* file */
+.fileForm {display: flex; padding-top:40px ; gap:8px;  }
+.fileForm label {font-weight: 700; line-height: 64px; padding-right:12px; }
+p.txt_fileForm {padding-left:72px; margin-top:10px;  }
+
+/* */
+.btnTypeRadio   {}
+.btnTypeRadio input[type=radio]   {position:absolute; opacity:0;}
+.btnTypeRadio label   {display:inline-block; height:40px; line-height:40px; padding:0 18px; border:1px solid #ddd; border-radius: 4px; cursor: pointer; }
+.btnTypeRadio input:checked + label   {background:#323C94; color:#fff; }
+
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
@@ -271,9 +290,12 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 .formListTable { margin-top: 45px;}
 .formListTable table { display: table; width: 100%; } 
-.formListTable th { display: table-cell; padding: 35px 0; font-weight: 700; text-align: left; vertical-align: top;}
+.formListTable th { display: table-cell; padding: 30px 0; font-weight: 700; text-align: left; vertical-align: top;}
 .formListTable th .checkbox { font-weight: 400;}
 .formListTable td { padding: 15px 0; text-align: left;}
+.formGrayBox .formListTable th { padding: 25px 0 25px 60px; }
+.formGrayBox .formListTable th:first-child { padding-left:0; }
+.formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite { height: 64px; padding: 0 50px; line-height: 64px;}
 /* .formListTable .input { width: 400px;} */
 
@@ -421,7 +443,7 @@ dl.faqCont            {border-top:2px solid #323C94; }
 dl.faqCont dt         {position:relative; padding:30px 40px; background:#F4F6F8; cursor: pointer; }
 dl.faqCont dt ~ dt    {border-top:1px solid #ddd; }
 dl.faqCont dt label   {font-size:24px; font-weight: 700 }
-dl.faqCont dt label em.required   {color:#323C94; margin-left:4px; }
+dl.faqCont dt label em.required   {color:#323C94; margin-left:4px; vertical-align: 1px; }
 dl.faqCont dt::after  {content:""; transition: .3s; position:absolute; right:40px; top:50%; width:24px; height:24px; transform: translateY(-50%); background:url(../images/common/ico_24_down.png) no-repeat  }
 dl.faqCont dd         {display:none; padding:30px 80px; font-size:20px; line-height:1.5  }
 dl.faqCont dt.on + dd {display:block; }
@@ -433,8 +455,14 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 *****************************/
 
 .alertWrap      {position:fixed; width:100%; height:100%; z-index:5000; left:0; top:0; }
-.alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:610px; padding:40px 40px 60px; border-radius: 16px; background:#fff }
+.alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:500px; padding:40px 40px 40px; border-radius: 16px; background:#fff }
 .alertWrap .alertBody .alertCont      {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
+.alertWrap .alertBody .confirmCont    {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
+.alertWrap .alertBody .alertCont .tit      {font-size:30px; font-weight: 700; padding-bottom:40px;  }
+.alertWrap .alertBody .alertCont strong,
+.alertWrap .alertBody .confirmCont strong    {font-weight: 700; vertical-align: top;}
+.alertWrap .alertBody .alertCont strong.red,
+.alertWrap .alertBody .confirmCont strong.red     {color:#FE5050;}
 .alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
 .alertWrap .alertBody .alertFooter button    {width:100%; }
 .alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
@@ -445,8 +473,10 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
   position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; overflow: hidden;
   transition: .3s; opacity: 0; transform: translateY(-50px); 
 }
+.layerWrap .layerBody.wid-870       {width:870px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
+.layerWrap .layerBody .layerHead p  {text-align: center; font-weight: 500;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
 .layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
 .layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
