@@ -32,8 +32,9 @@
       </ul>
     </section>
  
-    <section class="formListBlock">
+    <section class="">
       <!-- <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3>  -->
+      <h3 class="boxTit">(주)길동건설</h3>
       <div class="formListTable">
         <table>
           <caption>제안서 정보</caption>
@@ -47,7 +48,7 @@
                 <label for="inpLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th> 
               <td>
-                <div class="radioGroup">
+                <div class="radioGroup type2">
                   <span class="radio">
                     <input type="radio" id="inpLabel1_1" name="inpLabel1" value="" />
                     <label for="inpLabel1_1"><span></span>미완료</label>
@@ -60,6 +61,7 @@
               </td>
             </tr>
             <tr> 
+              <th>
                 <label id="inpLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
               </th>
               <td>
@@ -70,7 +72,7 @@
                       <option value="20개씩 보기">20씩 보기</option>
                     </select>
                   </span>
-                  <div class="textareaWrap full">
+                  <div class="textareaWrap widFull">
                     <textarea class="textarea">제안서를 제출합니다.</textarea>
                   </div>
                 </div>
@@ -81,7 +83,7 @@
                 <label for="inpPwCheck"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="inputWrap widFull">
                   <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
@@ -91,9 +93,15 @@
                 <label for="inpAdd"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpAdd" class="input" type="text" placeholder="대표자 본인 명의 휴대전화 - 없이 입력" value="">
-                  <button class="btnWhite">본인확인</button>
+                <div class="controls">
+                  제안서 채택 후 약
+                  <span class="select selectSm">
+                    <select title="범위">
+                      <option>이상</option>
+                      <option>이하</option>
+                    </select>
+                  </span>
+                  <span class="unit">일</span>
                 </div>
               </td>
             </tr>
@@ -102,18 +110,38 @@
                 <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="inputWrap hasUnit inputXs">
+                  <input id="inpEmail" class="input" type="text" placeholder="000" value="">
+                  <span class="unit">개월</span>
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">제안 금리(변동/고정)</span>대출 기간</label>
+                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리(변동/고정)</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="controls" role="group">
+                  <div class="">
+                    <button class="">변동</button>
+                    <button class="">고정</button>
+                  </div>
+                  <span class="select selectSm">
+                    <select title="기준금리 선택">
+                      <option value="기준금리">기준금리</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <span class="select selectSm">
+                    <select title="금리기간 선택">
+                      <option value="금리기간">금리기간</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <div class="inputWrap hasUnit inputXs">
+                    <input class="input" type="text" placeholder="000" value="">
+                    <span class="unit">%</span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -122,8 +150,39 @@
                 <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="formVertical">
+                  <div class="radioGroup type2">
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                      <label for="testRdoBank1"><span></span>담보 불필요</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                      <label for="testRdoBank1"><span></span>담보 필요</label>
+                    </span>
+                  </div>
+                  <div class="formAdd">
+                    <div class="controls">
+                      <span class="select selectSm">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input widFull" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button class="btnPlus"></button>
+                    </div>
+                    <div class="controls mt10">
+                      <span class="select selectSm">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input widFull" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button class="btnMinus"></button>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -133,37 +192,9 @@
                 <label for="inpRoute">기타조건</label>
               </th>
               <td>
-                <div class="formVertical">
-                  <div class="radioInput w673">
-                    <span class="radio">
-                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
-                      <label for="testRdoBank1"><span></span>신한은행</label>
-                    </span>
-                    <span class="inputWrap">
-                      <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
-                    </span>
-                  </div>
-                  <div class="radioGroup w673 mt30">
-                    <span class="radio">
-                      <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
-                      <label for="testRdoSns1"><span></span>소셜 미디어</label>
-                    </span>
-                    <span class="radio">
-                      <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
-                      <label for="testRdoSns2"><span></span>유튜브</label>
-                    </span>
-                    <div class="radioInput">
-                      <span class="radio"> 
-                        <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
-                        <label for="testRdoSns3"><span></span>기타</label>
-                      </span>
-                      <span class="inputWrap">
-                        <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
-                      </span>
-                    </div>
-                  </div>
+                <div class="inputWrap widFull">
+                  <input id="inpRoute" class="input" type="text" placeholder="상환 조건 등 조건을 입력해주세요." value="">
                 </div>
-    
               </td>
             </tr>
             <tr>
@@ -171,8 +202,8 @@
                 <label for="inpEmail">제안 메시지</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="textareaWrap widFull">
+                  <textarea id="textareaVal" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
                 </div>
               </td>
             </tr>
@@ -181,15 +212,17 @@
                 <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="inputWrap wid540">
+                  <input id="inpEmail" class="input" type="text" placeholder="2023-07-10" value="">
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
-        <div class="">
-          <button class="btnBlue">제출하기</button>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button class="btnBlue">제출하기</button>
+          </div>
         </div>
       </div>
 
