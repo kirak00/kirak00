@@ -32,9 +32,10 @@
 *****************************/
 .titH2 { font-size: 40px; font-weight: 700;}
 .titH3 { font-size: 30px; font-weight: 700; margin-top:60px;}
-.titH3:first-child {margin-top: ; }
+.titH3:first-child {margin-top: 80px; }
 .tableTit { font-size: 34px; font-size: 700; }
 
+.tableTit { font-size: 34px; font-size: 700; }
 .titH3.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
 .boxTit { height: 90px; line-height: 90px; background: #E5EDFB; border-radius: 15px; color: #323C94; font-size: 30px; font-weight: 700; text-align: center;}
