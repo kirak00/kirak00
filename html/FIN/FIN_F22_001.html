@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/contents_COP.css">
+  <script src="../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../js/jquery-ui.js"></script>
+  <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
+          <li><a href="#none"><span>제안서 제출 가능 목록</span></a></li>
+          <li><a href="#none"><span>제안서 제출</span></a></li>
+      </ul>
+    </section>
+ 
+    <section class="formListBlock">
+      <!-- <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3>  -->
+      <div class="formListTable">
+        <table>
+          <caption>제안서 정보</caption>
+          <colgroup>
+            <col width="238px">
+            <col wieth="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+              </th> 
+              <td>
+                <div class="radioGroup">
+                  <span class="radio">
+                    <input type="radio" id="inpLabel1_1" name="inpLabel1" value="" />
+                    <label for="inpLabel1_1"><span></span>미완료</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="inpLabel1_2" name="inpLabel1" value="" />
+                    <label for="inpLabel1_2"><span></span>완료</label>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr> 
+                <label id="inpLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
+              </th>
+              <td>
+                <div class="formVertical" role="group" aria-labelledby="inpLabel2">
+                  <span class="select selectSm">
+                    <select>
+                      <option value="10개씩 보기">운전자금</option>
+                      <option value="20개씩 보기">20씩 보기</option>
+                    </select>
+                  </span>
+                  <div class="textareaWrap full">
+                    <textarea class="textarea">제안서를 제출합니다.</textarea>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpPwCheck"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpAdd"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpAdd" class="input" type="text" placeholder="대표자 본인 명의 휴대전화 - 없이 입력" value="">
+                  <button class="btnWhite">본인확인</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">제안 금리(변동/고정)</span>대출 기간</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                </div>
+              </td>
+            </tr>
+           
+            <tr>
+              <th scope="row">
+                <label for="inpRoute">기타조건</label>
+              </th>
+              <td>
+                <div class="formVertical">
+                  <div class="radioInput w673">
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                      <label for="testRdoBank1"><span></span>신한은행</label>
+                    </span>
+                    <span class="inputWrap">
+                      <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
+                    </span>
+                  </div>
+                  <div class="radioGroup w673 mt30">
+                    <span class="radio">
+                      <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
+                      <label for="testRdoSns1"><span></span>소셜 미디어</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
+                      <label for="testRdoSns2"><span></span>유튜브</label>
+                    </span>
+                    <div class="radioInput">
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
+                        <label for="testRdoSns3"><span></span>기타</label>
+                      </span>
+                      <span class="inputWrap">
+                        <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+    
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpEmail">제안 메시지</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="">
+          <button class="btnBlue">제출하기</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 하단 풀 배너 : start -->
+    <section class="bnrInerCont">
+      
+    </section>
+    <!-- 하단 풀 배너 : end -->
+
+    <!-- 하단 풀 배너 : start -->
+    <div class="btFullBnr">
+      
+    </div>
+    <!-- 하단 풀 배너 : end -->
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
