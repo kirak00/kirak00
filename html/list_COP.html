@@ -147,7 +147,10 @@ table {margin:0 20px; width:calc(100% - 40px)}
       var folder = "./COP/"
       folder += o.folder;
       var status_1 = o.status;
-      if(o.folder == "guide") {status_1 += " guide"}
+      if(o.folder == "guide") {
+        status_1 += " guide"
+        folder = "./guide"
+      }
       txt += `<tr class="${status_1}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
       
       if(o.sub)

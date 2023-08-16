@@ -341,8 +341,8 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 *****************************/
 .jsGridWrap { margin-top: 20px;}
 .jsgrid-table {table-layout: fixed;}
-.nomal_table .jsgrid-grid-header,
-.nomal_table .jsgrid-grid-body   {overflow: auto;}
+.bbs .jsgrid-grid-header,
+.bbs .jsgrid-grid-body   {overflow: auto;}
 .jsgrid-grid-header  {}
 .jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#F4F6F8;}
 .jsgrid-cell    {height:100px; font-size:20px;  }
