@@ -136,11 +136,6 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .formGrayBox .inputWrap:not(.hasUnit) { display: block;}
 .formGrayBox .input { width: 100%;}
 
-/* 페이지 테이블 - 제안서 제출 */
-.formFullTable .textarea { width: 100%; }
-.formFullTable .inputWrap:not(.hasUnit) { display: block;}
-.formFullTable .input { width: 100%; }
-
 
 
 /* 메인 */
