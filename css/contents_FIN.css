@@ -29,6 +29,7 @@
 
 
 
+
 /* 진희 */
 
 
@@ -38,6 +39,7 @@
 
 /* 락 */
 
+/* 로그인 */
 div.login_form  {width:530px; padding:60px 0 0;  }
 div.login_form .row + .row  {margin-top:20px; }
 div.login_form label   {min-width:130px; padding-left:0;padding-right:0;  }
@@ -46,6 +48,43 @@ div.login_form#cont_certificate_login .inputWrap input   {width:100px; }
 div.login_form div.loginBtn   {margin-top:60px; }
 
 
+/* 메인 */
+.wrap.main      {}
+.main header::after {height:790px; }
+
+.main_visual_logout     {padding:80px 0 105px; width:1270px; margin:0 auto; }
+.main_visual_logout .txtBox   {padding:53px 0 23px; font-size:40px; color:#fff; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
+
+ol.main_step_guide      {position:relative; display:flex; justify-content: space-between; }
+ol.main_step_guide li      {position:relative; width:264px; height:368px; text-align: center; padding:60px 0 0; border-radius: 15px; background: #FFF; box-shadow: 0px 3px 8px 0px #ECF0F4;   }
+ol.main_step_guide li::before      {content:'icon'; width:80px; height:80px; display:block; margin:0 auto 55px; overflow: hidden; background:url(../images/FIN/ico_80_main_01.png) no-repeat 0 0; text-indent: -2000px; }
+ol.main_step_guide li em.num      {display:block; color:#5B7DDC; font-size: 24px; font-weight: 7000; }
+ol.main_step_guide li span.tit    {display:block; font-size: 24px; margin-top:10px; }
+ol.main_step_guide li + li::after {content:"next"; position:absolute; top:50%; left:-36px; width:46px; height:46px; border:1px solid #ddd; border-radius:50%; background:url(../images/FIN/ico_24_right.png) no-repeat 50% 50% #fff; overflow: hidden; text-indent: -1000px;   }
+ol.main_step_guide li.step_between {position:absolute; left:56.4%; top:35%; z-index: 10; width:106px; height:32px; padding:0; box-shadow: none; background:#FFD43C; border-radius: 8px; font-size:18px; font-weight: 700;  line-height:32px;  }
+ol.main_step_guide li.step_between::after {content:""; width:19px; height:19px; left:40%; top:95%; background:url(../images/FIN/bul_polygon.png) no-repeat 0 0; border:0; border-radius: 0; }
+ol.main_step_guide li.step_between::before  {content:none }
+
+ol.main_step_guide li.step_1::before      {background-image:url(../images/FIN/ico_80_main_01.png)}
+ol.main_step_guide li.step_2::before      {background-image:url(../images/FIN/ico_80_main_02.png)}
+ol.main_step_guide li.step_3::before      {background-image:url(../images/FIN/ico_80_main_03.png)}
+ol.main_step_guide li.step_4::before      {background-image:url(../images/FIN/ico_80_main_04.png)}
+ol.main_step_guide li.step_5::before      {background-image:url(../images/FIN/ico_80_main_05.png)}
+ 
+.main .bnrInerCont      {margin:80px auto;}
+
+.main_strength      {}
+.main_strength .titBox      {text-align: center;}
+.main_strength .titBox h3   {font-size:34px; font-weight: 700;}
+.main_strength .titBox p    {margin-top:20px; }
+.main_strength ul.info      {margin-top:60px; display:flex; justify-content: space-between; }
+.main_strength ul.info li   {width:440px; height:400px; background:#F8F8F8; border-radius:16px; text-align: center; }
+.main_strength ul.info li strong    {display:block; font-size:24px; font-weight: 700; }
+.main_strength ul.info li p         {color:#555; margin-top:20px; }
+.main_strength ul.info li::before   {content:"icon"; display:block; height:230px; background:url(../images/FIN/main_strength_1.png) no-repeat 50% 50%; overflow: hidden; text-indent: -1000px;; }
+.main_strength ul.info li.info_1::before   {background-image:url(../images/FIN/main_strength_1.png)}
+.main_strength ul.info li.info_2::before   {background-image:url(../images/FIN/main_strength_2.png)}
+.main_strength ul.info li.info_3::before   {background-image:url(../images/FIN/main_strength_3.png)}
 
 /* 진희 */
 

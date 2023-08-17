@@ -9,7 +9,26 @@ $(function(){
 
   faq();
 
+  /* Range 달력 */
+  datepickerRange_init();
+
 });
+
+
+function datepickerRange_init(){
+  var el = document.querySelectorAll('.rangePicker');
+  el.forEach(function(o){
+    var datepicker = new RangeDatepicker(o);
+    var open_datepicker_button = $(o).siblings(".rangePickerBtn")[0];
+    if(open_datepicker_button){
+      open_datepicker_button.addEventListener('click', open_rangepicker_function);
+      function open_rangepicker_function() {
+        datepicker.open();
+      }
+    }
+ })
+
+}
 
 
 /* 스킵네비 */
@@ -76,7 +95,7 @@ function layer_alert(msg,focusObj,btnObj){
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   let alertHTML = `
-    <div class="alertBody"  tabindex="0">
+    <div class="alertBody"  tabindex="0"  role="alert">
       <div class="alertCont">
         <p>${ment}</p>
       </div>
@@ -90,7 +109,7 @@ function layer_alert(msg,focusObj,btnObj){
   if(tit){
     console.log(11)
      alertHTML = `
-      <div class="alertBody"  tabindex="0">
+      <div class="alertBody"  tabindex="0"  role="alert">
         <div class="alertCont">
           <div class="tit">${tit}</div>
           <p>${ment}</p>
@@ -130,8 +149,14 @@ function layer_confirm(msg,focusObj,btnObj){
   var cancelTxt = '취소';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt
+  // let alertHTML = ''
+  // alertHTML += ''
+
+
+
+
   let alertHTML = `
-    <div class="alertBody"  tabindex="0">
+    <div class="alertBody"  tabindex="0"  role="alert">
       <div class="confirmCont">`
       + `  <p>${ment}</p>
       </div>
@@ -146,7 +171,7 @@ function layer_confirm(msg,focusObj,btnObj){
   `;
    if(tit) 
    alertHTML = `
-    <div class="alertBody"  tabindex="0">
+    <div class="alertBody"  tabindex="0" role="alert">
       <div class="confirmCont">
         <div class="tit">${tit}</div>
         <p>${ment}</p>

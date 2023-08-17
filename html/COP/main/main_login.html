@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/contents_COP.css">
-  <script src="../../js/juqery-3.7.0.min.js"></script>
-  <script src="../../js/jquery-ui.js"></script>
-  <script src="../../js/common.js"></script>
-  <script src="../../js/common_COP.js"></script>
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
   <title>SHINHAN</title>
 <style>
 
@@ -20,7 +20,7 @@
     <a href="#skip_content">컨텐츠 바로가기</a>
   </div>
 
-  <div class="wrap">
+  <div class="wrap main">
     <!-- **************** -->
     <!-- header : start -->
     <!-- **************** -->
@@ -38,7 +38,7 @@
         <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
         <h2 class="hide">메뉴 영역</h2>
         <ul class="gnb" id="skip_gnb" aria-label="주메뉴">
-          <li class="depth_1 on" role="menuitem" ><a href="#none"><span class="ico_gnb_acc">대출 비교 요청</span></a>
+          <li class="depth_1 on" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_acc">대출 비교 요청</span></a>
             <ul>
               <li class="depth_2"><a href="#none">대출 비교</a></li>
               <li class="depth_2 on"><a href="#none">시설자금 대출</a></li>
@@ -47,7 +47,7 @@
               <li class="depth_2"><a href="#none">장기 렌트</a></li>
             </ul>
           </li>
-          <li class="depth_1" role="menuitem"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
+          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
             <ul>
               <li class="depth_2"><a href="#none">대출절차안내</a></li>
               <li class="depth_2"><a href="#none">제출서류안내</a></li>
@@ -55,14 +55,14 @@
               <li class="depth_2"><a href="#none">홍보영상</a></li>
             </ul>
           </li>
-          <li class="depth_1" role="menuitem"><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
+          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
             <ul>
               <li class="depth_2"><a href="#none">고객센터번호</a></li>
               <li class="depth_2"><a href="#none">1:1 문의</a></li>
               <li class="depth_2"><a href="#none">F&Q</a></li>
             </ul>
           </li>
-          <li class="depth_1" role="menuitem"><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
             <ul>
               <li class="depth_2"><a href="#none">회원정보</a></li>
               <li class="depth_2"><a href="#none">대출 신청 관리</a></li>
@@ -75,9 +75,9 @@
           </li>
         </ul>
         <ul class="headerLogin">
-          <!-- <li><a href="#none" class="join">회원가입</a></li>
-          <li><a href="#none" class="login">로그인</a></li> -->
-          <li><a href="#none" class="logout">로그아웃</a></li>
+          <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li>
+          <!-- <li><a href="#none" class="logout">로그아웃</a></li> -->
         </ul>
       </div>
       <div class="bg"></div>
@@ -94,34 +94,41 @@
     <hr/>
     <div class="container" id="skip_content"  aria-label="콘텐츠">
 
-      <section class="pageTop">
-        <h2 class="pageTit">제안서 제출 가능 목록</h2>
-        <ul class="breadcrumb">
-           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-           <li><a href="#none"><span>1뎁스</span></a></li>
-           <li><a href="#none"><span>2뎁스</span></a></li>
-           <li><a href="#none"><strong>3뎁스</strong></a></li>
+      <h2 class="hide">콘텐츠 영역</h2>
+      <section>
+
+        <div>
+          회사 급한 자금이 필요 할 때
+          대출 비교 해주는 법인중개 대출 플랫폼
+          <button class="btnSky">대출 비교 요청</button>
+        </div>
+        
+        <ul>
+          <li>
+            <em>STEP 1.</em>
+            <span>정보제공 동의 및 <br>정보 조회 동의</span>
+          </li>
+          <li>Loan&Biz만의 장점 ✨
+            <em>STEP 2.</em>
+            <span>대출 비교 법인 정보</span>
+          </li>
+          <li> 
+            <em>STEP 3.</em>
+            <span>대출 비교 정보</span> 
+          </li>
+          <li>
+            <em>STEP 4.</em>
+            <span>대출 비교 완료 </span>
+          </li>
         </ul>
       </section>
 
-      <h2 class="hide">콘텐츠 영역</h2>
-      <section>
-        CONTENTS
-        <!-- <button onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
-        <button onclick='layer_confirm("ㅁㄴㅇㄹ", this , function(){alert(2)}, function(){alert(3)} )'>confirm</button> -->
-      </section>
-
-      <!-- 하단 풀 배너 : start -->
+      <!-- 하단 center 배너 : start -->
       <section class="bnrInerCont">
         
       </section>
-      <!-- 하단 풀 배너 : end -->
+      <!-- 하단 center  배너 : end -->
 
-      <!-- 하단 풀 배너 : start -->
-      <div class="btFullBnr">
-        
-      </div>
-      <!-- 하단 풀 배너 : end -->
 
     </div>
     <!-- **************** -->
@@ -157,18 +164,6 @@
     <!-- **************** -->
   </div>
 
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap">
-    <div class="layerHeader"></div>
-    <div class="layerContainer"></div>
-    <div class="layerFooter"></div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
 
 </body>
 </html>

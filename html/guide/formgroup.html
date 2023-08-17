@@ -149,7 +149,7 @@
           <span class="select">
             <select title="본부선택">
               <option>본부1</option>
-              <option>본부2</option>
+              <option>본부1본부1본부1본부1본부1</option>
             </select>
           </span>
           <span class="select">
@@ -163,17 +163,9 @@
 
       <br/>
       <div class="rangeControl sm">
-        <input type="text" class="input" id="rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
-        <button type="button" id="openRangePicker" class="btnBlue"><span class="srOnly">달력 팝업 열기</span></button>
+        <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
+        <button type="button" class="btnBlue rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
      </div>
-     <script>
-      var datepicker = new RangeDatepicker(document.getElementById('rangePicker'));
-      var open_datepicker_button = document.getElementById('openRangePicker');
-      open_datepicker_button.addEventListener('click', open_rangepicker_function);
-      function open_rangepicker_function() {
-        datepicker.open();
-      }
-     </script>
       <br/>
 
       <div class="controls" role="group">
@@ -225,7 +217,7 @@
           <div class="searchControlItem">
             <label for="login_input_certificate_1" class="label">희망 신청 금액</label>
             <div class="controls" role="group" aria-labelledby="login_input_certificate">
-              <span class="select">
+              <span class="inputWrap">
                 <input class="input inputXs" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
                 <span class="unit">억</span>
               </span>
@@ -270,8 +262,10 @@
             <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
           </span>
         </div>
-        <button class="btnReset">초기화</button>
-        <button class="btnBlue size_M">조회</button>
+        <div class="searchBtns">
+          <button class="btnReset">초기화</button>
+          <button class="btnBlue sm">조회</button>
+        </div>
       </div>
       
       <br/> 
