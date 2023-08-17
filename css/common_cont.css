@@ -149,8 +149,8 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .checkbox input[type=checkbox]:disabled + label span {background:url("../images/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
 /* radio */ 
-.radioGroup { display: flex; align-items: center; gap: 60px;}
-.radioGroup.type2 { gap: 16px; }
+.radioGroup { display: flex; align-items: center; gap: 30px;}
+.radioGroup .radio + .radio { margin-left: 0;}
 .radioGroup.mt30 { margin-top: 30px;}
 .radio { display: inline-block; white-space: nowrap;}
 .radio + .radio { margin-left:26px; }
@@ -197,12 +197,12 @@ table .btnBlack       {padding:0 32px; height:50px; line-height:50px; }
 .inputWrap.full .input, .input.full { width: 100%;} */
 
 .inputWrap { position: relative; display: inline-block; }
-.inputWrap.wid400 .input { width: 400px;}
-.inputWrap.wid540 .input { width: 540px;}
-.inputWrap.widFull { display: block;}
-.inputWrap.widFull .input { width: 100%;}
+/* .inputWrap.wid400 .input { width: 400px;} */
+/* .inputWrap.wid540 .input { width: 540px;} */
+/* .inputWrap.widFull { display: block;} */
+/* .inputWrap.widFull .input { width: 100%;} */
 .input.wid400 { width: 400px;}
-.input.widFull {width: 100%;}
+/* .input.widFull {width: 100%;} */
 .inputWrap.hasUnit.inputXs .input { width: 70px;}
 
 .inputWrap button { margin-left: 5px;}
@@ -346,7 +346,7 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .formListTable th .checkbox { font-weight: 400;}
 .formListTable .radioGroup {min-height: 64px;} 
 .formListTable td { padding: 15px 0; text-align: left;}
-.formGrayBox .formListTable th { padding: 25px 0 25px 60px; }
+.formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite { height: 64px; padding: 0 50px; line-height: 64px;}
