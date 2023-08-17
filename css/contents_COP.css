@@ -70,6 +70,12 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #323C94; }
 
+/* 페이지 테이블 - 가입 */
+.joinTable .input { width: 400px;}
+.formGrayBox .inputWrap:not(.hasUnit) { display: block;}
+.formGrayBox .input { width: 100%;}
+
+
 
 /* 메인 */
 .container.main { padding-bottom: 100px;}

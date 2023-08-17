@@ -8,6 +8,7 @@
     <link href="../../js/lib/rangeDatepicker.css" rel="stylesheet">
     <script src="../../js/lib/fecha.js"></script>
     <script src="../../js/lib/rangeDatepicker.js"></script>
+    <script src="../../js/jquery.ui.datepicker_koreaWA.js"></script>
     <script src="../../js/common.js"></script>
 
     <link rel="stylesheet" href="./guide.css" />
@@ -162,10 +163,20 @@
       </div>
 
       <br/>
-      <div class="rangeControl sm">
+      <div class="rangeControl">
         <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
         <button type="button" class="btnBlue rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
      </div>
+      <br/>
+      <!-- <div class="dateControl">
+        <input type="text" class="input" id="datepicker" value="" aria-label="시작 및 종료기간 선택"/>
+        <button type="button" id="openRangePicker" class="btnBlue"><span class="srOnly">달력 팝업 열기</span></button>
+      </div>
+      <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+      </script> -->
       <br/>
 
       <div class="controls" role="group">
@@ -184,7 +195,7 @@
             <option value="20개씩 보기">20씩 보기</option>
           </select>
         </span>
-        <button class="btnSize64 btnBlue">지점 선택</button>
+        <button class="btnBlue">지점 선택</button>
       </div>
     
       <br/>
@@ -270,11 +281,9 @@
       
       <br/> 
       
-      <div class="row">
-        <label for="textareaVal" class="label">Value_Textarea</label>
-        <div class="textareaWrap">
-          <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
-        </div>
+      <label for="textareaVal" class="label">Value_Textarea</label>
+      <div class="textareaWrap">
+        <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
       </div>
 
       <br/>
