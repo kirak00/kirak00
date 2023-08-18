@@ -50,9 +50,9 @@ div.login_form div.loginBtn   {margin-top:60px; }
 
 /* 메인 */
 .wrap.main      {}
-.main header::after {height:790px; }
+.main header::after {height:760px; }
 
-.main_visual_logout     {padding:80px 0 105px; width:1270px; margin:0 auto; }
+.main_visual_logout     {padding:40px 0 105px; width:1270px; margin:0 auto; }
 .main_visual_logout .txtBox   {padding:53px 0 23px; font-size:40px; color:#fff; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
 
 ol.main_step_guide      {position:relative; display:flex; justify-content: space-between; }
@@ -85,5 +85,87 @@ ol.main_step_guide li.step_5::before      {background-image:url(../images/FIN/ic
 .main_strength ul.info li.info_1::before   {background-image:url(../images/FIN/main_strength_1.png)}
 .main_strength ul.info li.info_2::before   {background-image:url(../images/FIN/main_strength_2.png)}
 .main_strength ul.info li.info_3::before   {background-image:url(../images/FIN/main_strength_3.png)}
+
+.main_myInfo        {display:flex; justify-content: space-between; padding:50px 0 120px; }
+.main_myInfo .welcomeBox        {display:flex;  gap:40px; align-items: end;}
+.main_myInfo .welcomeBox .welcometit        {color:#fff; }
+.main_myInfo .welcomeBox .welcometit span   {}
+.main_myInfo .welcomeBox .welcometit strong {display:block; font-size:40px; margin-top:13px;  }
+.main_myInfo .welcomeBox button        {margin-bottom:5px;}
+.main_myInfo .msgBox        {position:relative; width:48px; height:48px; }
+.main_myInfo .msgBox span.ico_msg        {display:block; width:48px; height:48px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0; }
+.main_myInfo .msgBox span.ico_msg em     {position:absolute; width:22px; height:22px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:14px; line-height:22px; font-weight: 700; text-align: center; border-radius:50%;  }
+.main_myInfo .msgBox .layer_msg         {position:absolute; opacity:0;  padding:20px 30px; right:70px; bottom:0px; text-align: right; min-width:200px; background:#FFD43C; border-radius: 8px; white-space: nowrap;  }
+.main_myInfo .msgBox .layer_msg strong  {display:block; }
+.main_myInfo .msgBox .layer_msg::after  {content:''; position:absolute; right:-15px; bottom:20px; width:18px; height:15px; background:url(../images/FIN/bul_polygon.png); transform: rotate(270deg); }
+.main_myInfo .msgBox.on .layer_msg  {animation:msgLayer 2s forwards }
+
+@keyframes msgLayer {
+  0% {
+    opacity:0;
+    right:40px;
+  }
+  40%  {opacity:1; right:70px;  background:#FFD43C; }
+  60%  {opacity:1; right:70px;  background:#FFD43C; }
+  /* 70% { background:#FE5050; }
+  80% { background:#FFD43C; }
+  90% { background:#FE5050; } */
+  70% { opacity: 0;}
+  80% { opacity: 1;}
+  90% { opacity: 0;}
+  100% {
+    background:#FFD43C; 
+    opacity:1;
+  }
+}
+
+
+
+
+.main_list_status       {display:flex; justify-content: space-between;}
+.main_list_status a       {width:335px; height:328px; padding:40px 0 0; border:3px solid #fff; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 15px; background:#fff; text-align: center;  }
+.main_list_status a.on    {box-shadow: none; border:3px solid #323C94;  }
+.main_list_status a span.icon     {display:block; margin:0 auto; width:84px; height:84px; border-radius: 50%; background:url(../images/FIN/main_status_1.png) no-repeat 50% 50% #323C94; }
+.main_list_status a em.tit        {display:block; margin:20px 0 0; font-size:24px; font-weight: 700;}
+.main_list_status a span.size     {position:relative; display:inline-block; margin:52px 0 0; padding:0 10px;  }
+.main_list_status a span.size::after    {content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(82, 132, 227, 0.15); }
+.main_list_status a span.size strong    {position:relative; z-index:2; display:inline-block; vertical-align: 0; font-size: 44px; }
+.main_list_status a span.size span      {position:relative; z-index:2; display:inline-block; vertical-align: 3px; font-size: 30px; font-weight: 700;}
+
+.main_list_status a.item_1 span.icon    {background-image:url(../images/FIN/main_status_1.png)}
+.main_list_status a.item_2 span.icon    {background-image:url(../images/FIN/main_status_2.png)}
+.main_list_status a.item_3 span.icon    {background-image:url(../images/FIN/main_status_3.png)}
+.main_list_status a.item_4 span.icon    {background-image:url(../images/FIN/main_status_4.png)}
+
+#main_list_contents .list_top_box      {width:830px; margin: 0 auto; padding:80px 0 60px; display:flex; justify-content: space-between; }
+#main_list_contents .list_top_box .info_txt   {text-align: center; font-size:24px; }
+#main_list_contents .list_top_box .info_txt strong   {display:block; }
+
+section.main_dashboard       {}
+.main_dashboard .mng_btns           {padding:140px 0 40px; text-align: right;}
+.main_dashboard ul.dashboardWrap    { display:flex; flex-wrap: wrap; gap:20px; }
+.main_dashboard ul.dashboardWrap li.items    {width:335px; height:360px; border:1px solid #ddd; border-radius:16px; text-align: center; }
+.main_dashboard ul.dashboardWrap li.items strong.tit    {display:block; font-size:24px; color:#323C94; padding:20px 0 0;  }
+.main_dashboard ul.dashboardWrap li.items .dash_data    {display:flex; height:180px; flex-direction: column; align-items: center; }
+.main_dashboard ul.dashboardWrap li.items .dash_data span.dataSize {margin:auto;}
+.main_dashboard ul.dashboardWrap li.items::before   {content:""; display:block; height:124px; background:url(../images/FIN/main/ico_84_01.png) no-repeat 50% 100%;  }
+.main_dashboard ul.dashboardWrap li.items .barChart   {width: 215px; margin: 25px 0 0; }
+.main_dashboard ul.dashboardWrap li.items .barChart + span.dataSize   {margin:20px 0 auto; }
+
+.main_dashboard ul.dashboardWrap li.items.type_F04::before   {}
+
+span.dataSize      {position:relative; display:inline-block; padding:0 10px;  }
+span.dataSize::after    {content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(82, 132, 227, 0.15); }
+span.dataSize strong    {position:relative; z-index:2; display:inline-block; vertical-align: 0; font-size: 44px; }
+span.dataSize span      {position:relative; z-index:2; display:inline-block; vertical-align: 3px; font-size: 30px; font-weight: 700;}
+
+
+.barChart         {width:100%; position:relative; height:26px;  }
+.barChart::before {content:""; display:block; position:absolute; width:100%; height:10px; top:8px; background:#F4F6F8; border-radius: 5px; }
+.barChart span {display:block; position:relative; z-index: 2; float:left; height:10px; margin-top:8px; background:#19376D; border-radius: 5px; }  
+.barChart span em {position:absolute; z-index:10; width:18px; height:18px; right:-4px; border:4px solid rgba(25, 55, 109, 0.20); border-radius: 50%; margin-top: -8px; box-sizing: content-box;   } 
+.barChart span em::before {content: ""; display:block; width:18px; height:18px; background:#19376D; border-radius: 50%;; } 
+
+
 
 /* 진희 */

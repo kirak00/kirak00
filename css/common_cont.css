@@ -60,17 +60,17 @@ button    {background:none; cursor: pointer; transition: background .2s;}
 button.btnBlue        {padding:0 50px; height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 button.btnSky         {padding:0 50px; height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
-button.btnBlack       {padding:0 50px; height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
 a.btnBlue        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#323C94; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
-a.btnBlack       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#333333; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+a.btnWhiteLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
 table .btnBlue        {padding:0 32px; height:50px; }
 table .btnSky         {padding:0 32px; height:50px; }
 table .btnWhite       {padding:0 32px; height:50px; }
-table .btnBlack       {padding:0 32px; height:50px; }
+table .btnWhiteLine       {padding:0 32px; height:50px; }
 
 .btnBlue:focus,
 .btnBlue:hover        { background:#4260BB; text-decoration: none;  }
@@ -78,18 +78,18 @@ table .btnBlack       {padding:0 32px; height:50px; }
 .btnSky:hover         { background:#7793E2; text-decoration: none;  }
 .btnWhite:focus,
 .btnWhite:hover       { background:#323C94; text-decoration: none; color:#fff }
-.btnBlack:focus,
-.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#323C94 }
+.btnWhiteLine:focus,
+.btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#323C94 }
 
 .btnBlue:active        { background:#323C94;  }
 .btnSky:active         { background:#5B7DDC ;  }
 .btnWhite:active       { background:#323C94; color:#fff }
-.btnBlack:active       { background:#ffffff; color:#323C94 }
+.btnWhiteLine:active       { background:#ffffff; color:#323C94 }
 
 .btnBlue:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
-.btnBlack:disabled       { background:#dddddd; color:#999; border:0;  }
+.btnWhiteLine:disabled       { background:#dddddd; color:#999; border:0;  }
 
 .ico_down       {padding:0 32px;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
@@ -98,9 +98,24 @@ table .btnBlack       {padding:0 32px; height:50px; }
 .btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnWhite:active.ico_down::after,
 .btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-.btnBlack.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-.btnBlack:hover.ico_down::after,
-.btnBlack:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnWhiteLine.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnWhiteLine:hover.ico_down::after,
+.btnWhiteLine:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+
+.ico_chart       {padding:0 32px;}
+.ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
+.btnWhite.ico_chart::after  {background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
+.btnWhite:focus.ico_chart::after,
+.btnWhite:active.ico_chart::after,
+.btnWhite:hover.ico_chart::after  {background:url(../images/common/ico_24_chart_w.png) no-repeat 50% 50%; }
+
+.ico_setting       {padding:0 32px;}
+.ico_setting::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
+.btnWhite.ico_setting::after  {background:url(../images/common/ico_24_setting_primary.png) no-repeat 50% 50%; }
+.btnWhite:focus.ico_chart::after,
+.btnWhite:active.ico_setting::after,
+.btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
+
 
 
 /* 유틸 버튼 */
@@ -116,6 +131,9 @@ table .btnBlack       {padding:0 32px; height:50px; }
 
 .btnCalendar          {width:64px; height:64px; border-radius: 8px; background:url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50% #323C94;  }
 .btnCalendar:hover    {background-color:#4260BB ;  }
+.btnCalendar.white      {border:1px solid #323C94; background-image:url(../images/common/ico_24_calendar_b.png); background-color:#fff ;  }
+.btnCalendar.white:hover {border:1px solid #323C94; background-color:#323C94 ; background-image:url(../images/common/ico_24_calendar_w.png);  }
+.btnCalendar.sm          {width:50px; height:50px;}
 
 .btnPlus { width: 50px; height: 50px; flex-shrink: 0; background: #323C94; border-radius: 8px; font-weight: 700; color:#555}
 .btnPlus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
@@ -266,7 +284,7 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-.select { display: inline-block; vertical-align: middle;}
+.select { display: inline-block; vertical-align: middle; min-width:140px;}
 .select select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 .select.selectSm { min-width: 206px;}
 .select.w-300 { min-width: 300px;}
@@ -301,6 +319,7 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 /* control group */
 .searchControlBox { position: relative; padding: 32px 228px 32px 40px; background: #E5EDFB; border-radius: 16px;}
+.main .searchControlBox { background: #fff; }
 .searchControlBox .searchBtns .btnReset { position: absolute; top: 32px; right: 36px; padding: 4px;}
 .searchControlBox .searchBtns .btnBlue { position: absolute; bottom: 32px; right: 40px; width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
@@ -451,7 +470,7 @@ td .formListTable { margin-top: 25px;}
 header {}
 header::after {content:''; position:absolute; width:100%; height:740px; height:150px; top:0; lefT:0; z-index:0; background:#323C94; }
 header.on::before {content:''; width:100%; left:0; top:0; z-index:499; position:fixed; height:100vh; background: rgba(0, 0, 0, 0.40); }
-header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#fff;  transition: .5s; opacity:0 ; }
+header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#323C94;  transition: .5s; opacity:0 ; }
 header.on .bg  {height:608px; opacity: 1; background:#fff; top:0; }
 header .line  {content:''; position:absolute; width:100%; height:0; top:150px; left:0; z-index:599; background:#323C94; border-bottom:1px solid #515BB7; }
 
@@ -463,17 +482,17 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .headerCont h1.logo a:hover  {}
 .headerCont ul.gnb        {position:relative; padding:30px 0 0; z-index:10; float:left; width:1000px; display:flex; justify-content:center;  }
 .headerCont ul.gnb li         {}
-.headerCont ul.gnb li a       {display:block; width:200px; padding:7px 0; text-align: center; text-decoration: none; box-shadow:inset 0 0 0  0  #fff; transition: .3s; }
+.headerCont ul.gnb li a       {display:block; width:220px; padding:7px 0; text-align: center; text-decoration: none; box-shadow:inset 0 0 0  0  #fff; transition: .3s; }
 .headerCont ul.gnb li.on > a {font-weight: 700;  }
 .headerCont ul.gnb li a:hover    {box-shadow:inset 0 -18px 0  0  rgba(82, 132, 227, 0.15);}
 .headerCont ul.gnb li.depth_1        {margin-left:70px}
 .headerCont ul.gnb li.depth_1:first-child        {margin-left:0px}
 .headerCont ul.gnb li.depth_1 > a    {font-size:24px; color:#fff; transition: .3s;  }
 .on .headerCont ul.gnb li.depth_1 > a    {color:#323C94; }
-.headerCont ul.gnb li.depth_1 ul     {display:none; position:absolute; top:100px; width:185px; margin-left:-20px; }
+.headerCont ul.gnb li.depth_1 ul     {display:none; position:absolute; top:100px;  margin-left:10px; }
 .on .headerCont ul.gnb li.depth_1 ul {display:block; padding:25px 0 0; }
 .headerCont ul.gnb li li.depth_2     {padding:15px 0; }
-.headerCont ul.gnb li li.depth_2 > a {padding:0 0; width:185px; font-size: 20px; line-height:24px; color:#333; margin:0 auto; }
+.headerCont ul.gnb li li.depth_2 > a {padding:0 0; width:220px; font-size: 20px; line-height:24px; color:#333; margin:0 auto; }
 .headerCont ul.gnb li li.depth_2 > a:hover {box-shadow:inset 0 -14px 0  0  rgba(82, 132, 227, 0.15);}
 .headerCont ul.gnb li li.depth_2.on > a {color:#323C94;}
 .headerCont ul.headerLogin {position:relative; float:right; z-index:10; padding:37px 0 0; }
@@ -488,9 +507,13 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .on .headerCont ul.headerLogin li a.logout::before {background-image:url(../images/COP/ico_logout_on.png)}
 
 
-.headerCont ul.gnb li.depth_1 > a span  {padding-left:34px; background:url(../images/COP/ico_acc_off.png) no-repeat 0 0 / 24px 24px;}
+.headerCont ul.gnb li.depth_1 > a span  {padding-left:34px; background:url(../images/COP/ico_acc_off.png) no-repeat 0 2px / 24px 24px;}
 .headerCont ul.gnb li.depth_1 > a span.ico_gnb_acc    {background-image:url(../images/COP/ico_acc_off.png)}
 .on .headerCont ul.gnb li.depth_1 > a span.ico_gnb_acc    {background-image:url(../images/COP/ico_acc_on.png)}
+.headerCont ul.gnb li.depth_1 > a span.ico_gnb_pro    {background-image:url(../images/common/ico_gnb_proposal_w.png)}
+.on .headerCont ul.gnb li.depth_1 > a span.ico_gnb_pro    {background-image:url(../images/common/ico_gnb_proposal_b.png)}
+.headerCont ul.gnb li.depth_1 > a span.ico_gnb_my    {background-image:url(../images/common/ico_gnb_mypage_off.png)}
+.on .headerCont ul.gnb li.depth_1 > a span.ico_gnb_my    {background-image:url(../images/common/ico_gnb_mypage_on.png)}
 
 
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
@@ -511,9 +534,6 @@ footer .copy .wa    {float:right; }
 
 
 section   {margin:0 auto; max-width: 1400px;}
-
-
-
 
 .loginCont     {width:530px; margin:0 auto;  }
 .loginCont .loginTit        {width:100%; text-align: center;}
@@ -630,6 +650,50 @@ th{word-break: break-all;}
 
 
 /****************************
+**********  layer  **********
+*****************************/
+
+.alertWrap      {position:fixed; width:100%; height:100%; z-index:5000; left:0; top:0; }
+.alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:500px; padding:40px 40px 40px; border-radius: 16px; background:#fff }
+.alertWrap .alertBody .alertCont      {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
+.alertWrap .alertBody .confirmCont    {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
+.alertWrap .alertBody .alertCont .tit      {font-size:30px; font-weight: 700; padding-bottom:40px;  }
+.alertWrap .alertBody .alertCont strong,
+.alertWrap .alertBody .confirmCont strong    {font-weight: 700; vertical-align: top;}
+.alertWrap .alertBody .alertCont strong.red,
+.alertWrap .alertBody .confirmCont strong.red     {color:#FE5050;}
+.alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
+.alertWrap .alertBody .alertFooter button    {width:100%; }
+.alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
+.alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .4)}
+
+.layerWrap      {position:fixed; left:-100%; z-index:1000; width:100%; height:100%; top:0; display: flex; overflow: auto; overflow-y: scroll; }
+.layerWrap .layerBody         {
+  position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; overflow: hidden;
+  transition: .3s; opacity: 0; transform: translateY(-50px); 
+}
+.layerWrap .layerBody.wid-870       {width:870px;  }
+.layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
+.layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
+.layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
+.layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
+.layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #5B7DDC; border-radius: 5px;}
+.layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
+.layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
+.layerWrap .layerBody .layerFoot button    {min-width:250px; }
+.layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100% - 16px); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
+.layerWrap.show      {left:0; }
+.layerWrap.show .layerBody      {opacity:1; transform: translateY(0px); }
+.layerWrap.show .layerDimm      {opacity:1; left:0; }
+
+
+.layerWrap .layerBody.sizeM { width: 800px;}
+
+
+
+
+
+/****************************
 **********  content  **********
 *****************************/
 .pageTop        { position: relative; padding-bottom:40px; overflow: hidden; }
@@ -681,44 +745,6 @@ dl.faqCont dd         {display:none; padding:30px 80px; font-size:20px; line-hei
 dl.faqCont dt.on + dd {display:block; }
 dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
-
-/****************************
-**********  layer  **********
-*****************************/
-
-.alertWrap      {position:fixed; width:100%; height:100%; z-index:5000; left:0; top:0; }
-.alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:500px; padding:40px 40px 40px; border-radius: 16px; background:#fff }
-.alertWrap .alertBody .alertCont      {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
-.alertWrap .alertBody .confirmCont    {padding-bottom:60px; padding-top:40px; text-align: center; font-size:24px; line-height:1.5;}
-.alertWrap .alertBody .alertCont .tit      {font-size:30px; font-weight: 700; padding-bottom:40px;  }
-.alertWrap .alertBody .alertCont strong,
-.alertWrap .alertBody .confirmCont strong    {font-weight: 700; vertical-align: top;}
-.alertWrap .alertBody .alertCont strong.red,
-.alertWrap .alertBody .confirmCont strong.red     {color:#FE5050;}
-.alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
-.alertWrap .alertBody .alertFooter button    {width:100%; }
-.alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
-.alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .4)}
-
-.layerWrap      {position:fixed; left:-100%; z-index:1000; width:100%; height:100%; top:0; display: flex; overflow: auto; overflow-y: scroll; }
-.layerWrap .layerBody         {
-  position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; overflow: hidden;
-  transition: .3s; opacity: 0; transform: translateY(-50px); 
-}
-.layerWrap .layerBody.wid-870       {width:870px;  }
-.layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
-.layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
-.layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
-.layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
-.layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
-.layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
-.layerWrap .layerBody .layerFoot button    {min-width:250px; }
-.layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100% - 16px); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
-.layerWrap.show      {left:0; }
-.layerWrap.show .layerBody      {opacity:1; transform: translateY(0px); }
-.layerWrap.show .layerDimm      {opacity:1; left:0; }
-
-
-.layerWrap .layerBody.sizeM { width: 800px;}
-
-
+/* bbs */
+.no-data      {height:430px; text-align: center; display:flex; background:#F4F6F8; border-radius: 16px; }
+.no-data span {margin:auto; }

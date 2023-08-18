@@ -1,7 +1,11 @@
 
 /* init action */
 $(function(){
+
+  gnbAction(); // gnb hover
+
   skip_navi();
+
   layer_open_setting(); // layer btn search
   // ui.checkLabel();
 
@@ -12,7 +16,59 @@ $(function(){
   /* Range 달력 */
   datepickerRange_init();
 
+
+  tabScript()
+
 });
+
+
+function tabScript(){
+  $(".tabScript").each(function(i,o){
+    var tabCont = $(o);
+    var menu = tabCont.children();
+    menu.on("click", function(){
+      menu.removeClass("on").attr({'aria-selected' : 'false'})
+      $(this).addClass("on").attr({'aria-selected' : 'true'})
+    })
+  })
+}
+
+
+function gnbAction(){
+  var header = $("header");
+  var gnbStatus = false;
+  function gnbOn(){
+    gnbStatus = true;
+    header.addClass("on");
+  }
+  function gnbOff(){
+    gnbStatus = false;
+    setTimeout(function(){
+      if(!gnbStatus){
+        header.removeClass("on");
+      }
+    },300)
+  }
+
+  $(".gnb a").on("focus",function(){
+    gnbOn();
+  })
+  $(".gnb a").on("blur",function(){
+    gnbOff();
+  })
+
+  $(".headerCont").hover(function(){
+    gnbOn();
+  },function(){
+    gnbOff();
+  })
+  $("header .bg").hover(function(){
+    gnbOn();
+  },function(){
+    gnbOff();
+  })
+}
+
 
 
 function datepickerRange_init(){
@@ -152,9 +208,6 @@ function layer_confirm(msg,focusObj,btnObj){
   // let alertHTML = ''
   // alertHTML += ''
 
-
-
-
   let alertHTML = `
     <div class="alertBody"  tabindex="0"  role="alert">
       <div class="confirmCont">`
@@ -217,7 +270,7 @@ function layer_open_setting(){
 function layer_open(id , obj){
   var layer = $("#" +id )
   layer.addClass("show");
-  layer.find(".layerBody").focus();
+  layer.find(".layerBody").attr({tabindex:0}).focus();
   layer[0].focusTarget = obj;
   $(".wrap").attr("aria-hidden", "true"); 
 }
@@ -225,6 +278,7 @@ function layer_open(id , obj){
 function layer_close(id){
   var layer = $("#" +id )
   layer.removeClass("show");
+  layer.find(".layerBody").attr({tabindex:-1});
   layer[0].focusTarget.focus();
   $(".wrap").removeAttr("aria-hidden"); 
 }
