@@ -116,6 +116,14 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhite:active.ico_setting::after,
 .btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 
+button.btnWhite.ico_prev         {padding:0 32px;}
+button.btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50%; }
+button.btnWhite.ico_prev:focus::before ,
+button.btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
+button.btnWhite.ico_next         {padding:0 32px;}
+button.btnWhite.ico_next::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_next.png) no-repeat 50% 50%; }
+button.btnWhite.ico_next:focus::after ,
+button.btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
 
 
 /* 유틸 버튼 */
@@ -614,10 +622,14 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox   {float:right;  }
 .table_top .sortBox .select {margin-left:6px; }
 .table_top .sortBox .select select { width: 100%; height: 50px; }
-.table_bt      {width:100%; padding:20px 0 0px;}
+
+.table_bt      {width:100%;  padding:60px 0 0px; min-height:64px; box-sizing: content-box; }
 .table_bt::after      {content: ""; display:block; clear: both;}
+.table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
-.table_bt .btn_c      {text-align: center; }
+.table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; }
+.table_bt .btn_c button.btnBlue {min-width:225px; }
+.table_bt button + button      {margin-left:6px; }
 
 .table_wrap    {}
 
