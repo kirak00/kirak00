@@ -169,12 +169,26 @@
 
       <section class="main_dashboard">
         <div class="mng_btns">
-          <button class="btnSky ico_setting">대시보드 설정</button>
+          <button class="btnSky ico_setting" id="dashboard_layer_btn" >대시보드 설정</button>
           <button class="btnWhite ico_chart" title="프린트" onclick="print()">대시보드 출력</button>
         </div>
+        <script>
+          // var dashList_data = []
+          $("#dashboard_layer_btn").on("click",function(){
+            // var list = {};
+            // var getWrap = $(".dashboardWrap li");
+
+            // getWrap.each(function(i,o){
+            //   console.log(o.className.replace("items " ,""))
+            //   var obj = {};
+            // });
+
+            layer_open('dashboard_setting_Layer',this);
+          })
+        </script>
 
         <ul class="dashboardWrap">
-          <li class="items type_F01">
+          <li class="items type_1">
             <strong class="tit">취급 건수</strong>
             <div class="dash_data">
               <span class="dataSize">
@@ -281,7 +295,7 @@
             </div>
           </li>
         </ul>
-         
+
       </section>
       
 
@@ -318,6 +332,89 @@
     <!-- footer : end -->
     <!-- **************** -->
   </div>
+
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** show -->
+  <div class="layerWrap " id="dashboard_setting_Layer" role="dialog" aria-modal="true" >
+    <div class="layerBody">
+      <div class="layerHead">
+        <h3>대시보드 설정</h3>
+        <p>대시보드에 노출할 항목을 설정하고 순서를 변경할 수 있습니다. <br>
+          최소 8개 이상의 노출 항목을 설정해 주세요.</p>
+        <button class="layerClose" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="dashboard_setting">
+           <table>
+            <caption>대시보드 화면 설정</caption>
+            <colgroup>
+              <col width="130px" />
+              <col width="140px" />
+              <col width="" />
+              <col width="100px"   />
+            </colgroup>
+            <thead>
+              <th class="chk">노출</th>
+              <th class="num">번호</th>
+              <th class="tit">항목명</th>
+              <th class="idx">순서</th>
+            </thead>
+            <tbody id="sortable">
+              <tr>
+                <td class="chk">고정</td>
+                <td class="num">1</td>
+                <td class="tit">취급건수</td>
+                <td class="move"><span></span></td>
+              </tr>
+              <tr class="moveable">
+                <td class="chk">
+                  <span class="checkbox">
+                    <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                    <label for="searchCheckBox"><span></span></label>
+                  </span></td>
+                <td class="num">5</td>
+                <td class="tit">취급액</td>
+                <td class="move"><span></span></td>
+              </tr>
+            </tbody>
+           </table>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button class="btnBlue xl" onclick="layer_close('dashboard_setting_Layer')"  aria-label="레이어 닫기">적용</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+<script>
+
+  
+$(function() {
+  // $("tr").draggable({ helper: "clone" , axis: "y" });
+  $( "#sortable" ).sortable({
+      axis: "y" ,cursor: "move",
+      update : function(){
+        
+      }
+    },{ cancel: "tr.tr_fix" },{
+      items: "tr.moveable"
+    });
+
+    // $( "tr.moveable" ).draggable({ helper: "clone"});
+ 
+});
+
+</script>
+
 
 
 </body>
