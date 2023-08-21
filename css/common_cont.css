@@ -365,6 +365,8 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .fixedTable tbody td:last-child { border-right: 1px solid #ddd;}
 .fixedTable .defaultTable tbody tr:last-child { border-bottom: 0;}
 .fixedTableWrap .table_bt { padding-top: 60px;}
+
+.defaultTable { margin-top: 20px;}
 .defaultTable table { display: table; width: 100%; } 
 .defaultTable thead tr.top th { background: #E5EDFB;}
 .defaultTable thead tr.top th:first-child { border-radius: 16px 0 0 0;}
@@ -455,6 +457,7 @@ td .formListTable { margin-top: 25px;}
 .accordion .accordionTitle {  border-bottom: 1px solid #ddd; font-weight: 700; }
 .accordion .accordionTitle .q { color: #5B7DDC;}
 .accordionTrigger { position: relative; display: block; width: 100%; padding: 30px 40px; text-align: left; font-weight: inherit;}
+.accordionTrigger:focus { outline: 2px dashed #5B7DDC; }
 .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg) translateY(50%); }
 .accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 40px; top: 50%; width: 24px; height: 24px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat;}
 .accordionPanel { padding: 30px 40px; line-height: 1.5;}
@@ -599,7 +602,6 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_r      {float:right; }
 .table_bt .btn_c      {text-align: center; }
-.table_bt button { min-width: 226px;}
 
 .table_wrap    {}
 

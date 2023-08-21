@@ -322,7 +322,19 @@ function accordion() {
       this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
     }
     onButtonClick() {
-      this.toggle(!this.open);
+      const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
+      if (accordionOption === 'only') { //only type
+        document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
+          trigger.setAttribute('aria-expanded', 'false');
+          this.buttonEl.setAttribute('aria-expanded', 'true');
+        })
+        document.querySelectorAll('.accordionPanel').forEach((panel) => {
+          panel.setAttribute('hidden', '');
+          this.contentEl.removeAttribute('hidden');
+        })
+      } else { //toggle type
+        this.toggle(!this.open);
+      }
     }
     toggle(open) {
       if (open === this.open) {
@@ -344,7 +356,7 @@ function accordion() {
     }
   }
 
-  const accordions = document.querySelectorAll('.accordion h3');
+  const accordions = document.querySelectorAll('.accordion .accordionTitle');
   accordions.forEach((accordionEl) => {
     new Accordion(accordionEl);
   });
