@@ -45,7 +45,24 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 
 
 /* content - page */
+/* 제안서 관리 */
+.proposalManage .formListTable ~ .formListTable { margin-top: 65px; }
+.proposalManage .fixedTableWrap { margin-top: 65px;}
+.proposalManage .fixedTable { margin-top: 40px;}
+.proposalManage .fixedTable .defaultTable { height: 660px;}
+.proposalManage .formFullTable .radioGroup { min-height: 0;}
 
+/* faq */ 
+.faqPage .accordion { margin-top: 60px;}
+
+/* 일대일 문의 */
+.oneOnone .defaultTable td:nth-child(2) { text-align: left;}
+.defaultTable .reply td:nth-child(2) { color: #323C94; font-weight: 700;}
+.defaultTable .re_1 td:nth-child(2) {}
+.defaultTable .re_2 td:nth-child(2) { padding-left: 40px;}
+.defaultTable .re_3 td:nth-child(2) { padding-left: 80px;}
+.defaultTable .reply td:nth-child(2)::before,
+.defaultTable .quest td:nth-child(2)::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 5px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 
 /* 락 */
 /* 메인 */

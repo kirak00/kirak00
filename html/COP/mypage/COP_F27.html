@@ -34,33 +34,29 @@
       </ul>
     </section>
  
-    <section class="">
+    <section class="proposalManage">
       <h3 class="boxTit">새마을금고</h3>
       <div class="formListTable formFullTable">
         <table>
           <caption>제안서 정보</caption>
           <colgroup>
-            <col width="230px" />
+            <col width="235px" />
+            <col width="503px" />
             <col />
-            <col width="230px" />
-            <col />
+            <col width="400px" />
           </colgroup>
           <tbody>
             <tr>
-              <th scope="row">
-                <label for="formLabel1"><span class="srOnly">필수값</span>담당자</label>
-              </th> 
+              <th scope="row">담당자</th> 
               <td>
                 <div class="inputWrap">
-                  <input id="formLabel1" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="" disabled>
+                  <input class="input" type="text" placeholder="" value="고길동" readonly>
                 </div>
               </td>
-              <th scope="row">
-                <label for="formLabel2"><span class="srOnly">필수값</span>담당자</label>
-              </th> 
+              <th scope="row">제안서 유효기간</th> 
               <td>
                 <div class="inputWrap">
-                  <input id="formLabel2" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="" disabled>
+                  <input class="input" type="text" placeholder="" value="2023-07-31" readonly>
                 </div>
               </td>
             </tr>
@@ -72,33 +68,71 @@
         <table>
           <caption>금융회사 제안서 정보 합계</caption>
           <colgroup>
-            <col width="230px" />
+            <col width="235px" />
+            <col width="503px" />
             <col />
-            <col width="230px" />
-            <col />
+            <col width="400px" />
           </colgroup>
           <tbody>
             <tr>
-              <th scope="row">제안 자금 용도</th> 
+              <th scope="row">제안 합계 대출 금액</th> 
               <td>
                 <div class="inputWrap">
-                  <input class="input" type="text" placeholder="" value="시설자금" disabled>
+                  <input class="input" type="text" placeholder="" value="45억원 (4,500,000,000)" readonly>
                 </div>
               </td>
             </tr>
             <tr>
-              <th scope="row">제안 자금 상세 용도</th> 
+              <th scope="row">제안 합계 대출 금리</th> 
               <td>
                 <div class="inputWrap">
-                  <input class="input" type="text" placeholder="" value="기계기구 등의 신,증설 개보수/다른 은행 운전 자금 상환" disabled>
+                  <input class="input" type="text" placeholder="" value="9.01%(연9.01%)" readonly>
                 </div>
               </td>
             </tr>
             <tr>
-              <th scope="row">제안 자금 변경 사유</th> 
+              <th scope="row">제안 합계 대출 수</th> 
+              <td>
+                <div class="inputWrap">
+                  <input class="input" type="text" placeholder="" value="1건" readonly>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="formListTable formFullTable">
+        <p class="titH4 hasLine">금융회사 감당자 제안내용</p>
+        <table>
+          <caption>금융회사 감당자 제안내용</caption>
+          <colgroup>
+            <col width="235px" />
+            <col width="503px" />
+            <col />
+            <col width="400px" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">제안 자금 용도</th>
+              <td>
+                <div class="inputWrap">
+                  <input class="input" type="text" placeholder="" value="시설자금" readonly>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">제안 자금 상세 용도</th>
+              <td>
+                <div class="inputWrap">
+                  <input class="input" type="text" placeholder="" value="기계기구 등의 신,증설 개보수/다른 은행 운전 자금 상환" readonly>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">제안 자금 변경 사유</th>
               <td colspan="3">
                 <div class="textareaWrap">
-                  <textarea class="textarea" type="text" placeholder="" value="고객님의 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경 되었습니다." disabled></textarea>
+                  <textarea class="textarea" readonly>고객님의 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경 되었습니다.</textarea>
                 </div>
               </td>
             </tr>
@@ -106,14 +140,14 @@
               <th scope="row">대출금액</th>
               <td>
                 <div class="inputWrap">
-                  <input class="input" type="text" placeholder="" value="45억원 (4,500,000,000)">
+                  <input class="input" type="text" placeholder="" value="45억원 (4,500,000,000)" readonly>
                 </div>
               </td>
               <th scope="row">취급 가능일</th>
               <td>
                 <div class="controls" aria-labelledby="inpLabel4">
                   제안서 채택 후 약
-                  <input class="input inputXs" type="text" placeholder="" value="5">
+                  <input class="input inputXs" type="text" placeholder="" value="5" readonly>
                   <span class="unit">일</span>
                 </div>
               </td>
@@ -121,9 +155,15 @@
             <tr>
               <th scope="row">대출 기간</th>
               <td>
-                <div class="inputWrap hasUnit">
-                  <input class="input" type="text" placeholder="" value="48">
+                <div class="inputWrap hasUnit inputXs">
+                  <input class="input" type="text" placeholder="" value="48" readonly>
                   <span class="unit">개월</span>
+                </div>
+              </td>
+              <th scope="row">상환 방식</th>
+              <td>
+                <div class="inputWrap">
+                  <input class="input" type="text" placeholder="" value="만기일시상환" readonly>
                 </div>
               </td>
             </tr>
@@ -132,11 +172,11 @@
               <td>
                 <div class="controls">
                   <div class="radioBtn">
-                    <span class="radio"><input type="radio" id="selectLabel1" name="selectLabel"><label for="selectLabel1">변동</label></span>
+                    <span class="radio"><input type="radio" id="selectLabel1" name="selectLabel" disabled><label for="selectLabel1">변동</label></span>
                     <!-- <span class="radio"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span> -->
                   </div>
                   <div class="inputWrap">
-                    <input class="input" type="text" placeholder="" value="변동 9.01%(cd+180일+기준금리)">
+                    <input class="input" type="text" placeholder="" value="변동 9.01%(cd+180일+기준금리)" readonly>
                   </div>
                 </div>
               </td>
@@ -144,10 +184,10 @@
             <tr>
               <th scope="row">담보 정보</th>
               <td colspan="3">
-                <div class="controls">
-                  <input class="input auto" type="text" placeholder="" value="부동산">
-                  <input class="input auto" type="text" placeholder="" value="대표자 지인">
-                  <input class="input" type="text" placeholder="" value="서울 마포구 서교 아파트 102동">
+                <div class="controls guarant">
+                  <input class="input" type="text" placeholder="" value="부동산" readonly>
+                  <input class="input" type="text" placeholder="" value="대표자 지인" readonly>
+                  <input class="input" type="text" placeholder="" value="서울 마포구 서교 아파트 102동" readonly>
                 </div>
                 
               </td>
@@ -157,7 +197,7 @@
               <th scope="row">메모</th>
               <td colspan="3">
                 <div class="textareaWrap">
-                  <textarea class="textarea" type="text" placeholder="" value="">
+                  <textarea class="textarea" type="text" placeholder="" value="" readonly>
 담보 물건 확인 후 대출 금리 변동 될 수 있습니다.
 직접 방문하여 자세한 상담 드리겠습니다.
                   </textarea>
@@ -170,7 +210,7 @@
               <td>
                 <div class="radioGroup">
                   <span class="radio">
-                    <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
+                    <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
                     <label for="formLabel1_1"><span></span>완료</label>
                   </span>
                   <span class="radio">
@@ -184,104 +224,122 @@
         </table>
            
       </div>
-      <div class="jsGridWrap">
-        <div id="jsGrid" class="bbs"></div>
-        <div id="externalPager" class="external-pager"></div>
-<script>
-          
-/* jsgrid sample */
-$(function() {
+      <div class="formListTable textTable">
+        <p class="titH4 hasLine">유의사항</p>
+        <table>
+          <caption>유의사항</caption>
+          <colgroup>
+            <col width="235px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">이자 부과 시기 및 방법</th> 
+              <td>1개월 후 취</td>
+            </tr>
+            <tr>
+              <th scope="row">연체 금리</th> 
+              <td>법정 최고 금리 20% 이율적용</td>
+            </tr>
+            <tr>
+              <th scope="row">중도 상환 수수료</th> 
+              <td>3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</td>
+            </tr>
+            <tr>
+              <th scope="row">대출시 부대 비용</th> 
+              <td>부대비용 대출금액 1% 부과됩니다.</td>
+            </tr>
+            <tr>
+              <th scope="row">유의사항</th> 
+              <td>2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-var clients = [
-  { "Name1": "OK저축은행",
-    "Name2": "4.6%", 
-    "Name3": "복합", 
-    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
-    "Name5": "2023-07-05", 
-    "Name6": "회수", 
-    "Name7": "<button class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "수협은행",
-    "Name2": "4.6%", 
-    "Name3": "변동", 
-    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
-    "Name5": "2023-07-10", 
-    "Name6": "제안서 변경", 
-    "Name7": "<button class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "새마을금고",
-    "Name2": "4.6%", 
-    "Name3": "고정", 
-    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
-    "Name5": "2023-07-10", 
-    "Name6": "선택", 
-    "Name7": "<button class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "DBG저축은행",
-    "Name2": "4.6%", 
-    "Name3": "변동", 
-    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
-    "Name5": "2023-07-10", 
-    "Name6": "접수 완료", 
-    "Name7": "<button class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "롯데캐피탈",
-    "Name2": "4.6%", 
-    "Name3": "고정", 
-    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
-    "Name5": "2023-07-10", 
-    "Name6": "접수 완료", 
-    "Name7": "<button class='btnWhite'>상세보기</button>", 
-  },
-];
-
-
-$("#jsGrid").jsGrid({
-width: "100%",
-// inserting: true,
-// editing: true,
-sorting: true,
-paging: true,
-pageSize: 10,
-pageButtonCount: 5,
-data: clients,
-
-fields: [
-  { name: "Name1",  type: "button", title : "금융회사", width: 165, validate: "required", sorting: false },
-  { name: "Name2", type: "text", title : "제안 금리", width: 154, validate: "required" },
-  { name: "Name3", type: "text", title : "금리 유형", width: 168, validate: "required" },
-  { name: "Name4", type: "text", title : "제안 대출 금액", width: 220, validate: "required" },
-  { name: "Name5", type: "text", title : "제안서 접수일", width: 194, validate: "required" },
-  { name: "Name6", type: "text", title : "제안서 상태", width: 194, validate: "required" },
-  { name: "Name7", type: "text", title : "상세보기", width: 220, validate: "required" },
-],
-    
-pagerContainer: "#externalPager",
-  // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
-  pagerFormat: "{first} {prev} {pages} {next} {last}",
-  pagePrevText: "<",
-  pageNextText: ">",
-  pageFirstText: "<<",
-  pageLastText: ">>",
-  pageNavigatorNextText: "&#8230;",
-  pageNavigatorPrevText: "&#8230;",
-
-});
-
-});
-
-</script>
+      <div class="fixedTableWrap">
+        <p class="titH4 hasLine">상환방식</p>
+        <div class="fixedTable">
+          <div class="defaultTable">
+            <table>
+              <caption>금융회사 감당자 제안내용</caption>
+              <colgroup>
+                <col width="235px" />
+                <col width="503px" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr class="top">
+                  <th colspan="3">원금 균등</th>
+                </tr>
+                <tr>
+                  <th>회차</th>
+                  <th>대출이자</th>
+                  <th>월 상환금</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button class="btnBlue">선택</button>
+          </div>
+        </div>
       </div>
     </section>
 
 
   </div>
           
-      <div class="table_bt">
-        <div class="btn_c">
-          <button class="btnBlue">선택</button>
-        </div>
-      </div>
+   
 
     </section>
 
