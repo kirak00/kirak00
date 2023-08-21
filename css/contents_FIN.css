@@ -167,5 +167,25 @@ span.dataSize span      {position:relative; z-index:2; display:inline-block; ver
 .barChart span em::before {content: ""; display:block; width:18px; height:18px; background:#19376D; border-radius: 50%;; } 
 
 
+/* 대시보드 레이어  */
+.dashboard_setting table      {width:100%; position:relative; table-layout: fixed; border:1px solid #ddd;  }
+.dashboard_setting table thead th {border-bottom:1px solid #333; }
+.dashboard_setting table thead th,
+.dashboard_setting table tbody td  {height:80px; text-align: center; }
+.dashboard_setting table tbody td  {border-bottom:1px solid #ddd;  }
+.dashboard_setting table tbody td.num  {width:140px; font-weight: 700; }
+.dashboard_setting table tbody td.chk  {width:150px; font-weight: 700; color:#323C94;  }
+.dashboard_setting table tbody td.tit  {width:270px; text-align: left;}
+.dashboard_setting table tbody td.move  {width:100px; }
+.dashboard_setting table tbody .moveable td.move span  {display:block; margin:0 auto; height:48px; width:24px; }
+.dashboard_setting table tbody .moveable td.move span::before  {content:""; display:block; width:24px; height:24px; background:url(../images/FIN/main/ico_24_up_g.png); }
+.dashboard_setting table tbody .moveable td.move span::after  {content:""; display:block; width:24px; height:24px;  background:url(../images/FIN/main/ico_24_down_g.png);}
+.dashboard_setting table tbody tr {width:400px;cursor: move; cursor: grab;cursor: -moz-grab;cursor: -webkit-grab;}
+.dashboard_setting table tbody tr:active {cursor: move;cursor: -moz-grabbing;  cursor: -webkit-grabbing;}
+tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
+
+
+
+
 
 /* 진희 */
