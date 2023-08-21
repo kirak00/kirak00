@@ -26,10 +26,23 @@ function tabScript(){
   $(".tabScript").each(function(i,o){
     var tabCont = $(o);
     var menu = tabCont.children();
+    var tab = tabCont.find("button[role=tab]").each(function(n){this.n=n});
+
     menu.on("click", function(){
       menu.removeClass("on").attr({'aria-selected' : 'false'})
       $(this).addClass("on").attr({'aria-selected' : 'true'})
-    })
+    });
+    
+    var tabCont = $(this).siblings("[role=tabpanel]");
+    
+    if(tabCont.length == tab.length ){
+      tabCont.hide().eq(0).show()
+      tab.click(function(){
+        var cont = $("[aria-labelledby="+ this.id +"]");
+        tabCont.hide().attr("aria-hidden", "false"); ;
+        cont.show().attr("aria-hidden", "true"); ;
+      })
+    }
   })
 }
 
@@ -163,7 +176,6 @@ function layer_alert(msg,focusObj,btnObj){
     <div class="alertDimm"></div>
   `;
   if(tit){
-    console.log(11)
      alertHTML = `
       <div class="alertBody"  tabindex="0"  role="alert">
         <div class="alertCont">
