@@ -45,8 +45,15 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 
 
 /* content - page */
+/* 제안서 관리 */
+.proposalManage .formListTable ~ .formListTable { margin-top: 65px; }
+.proposalManage .fixedTableWrap { margin-top: 65px;}
+.proposalManage .fixedTable { margin-top: 40px;}
+.proposalManage .fixedTable .defaultTable { height: 660px;}
+.proposalManage .formFullTable .radioGroup { min-height: 0;}
 
-
+/* faq */ 
+.faqPage .accordion { margin-top: 60px;}
 /* 락 */
 /* 메인 */
 
