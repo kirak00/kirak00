@@ -480,7 +480,7 @@ td .formListTable { margin-top: 25px;}
 *****************************/
 .accordion { }
 .accordion .accordionTitle {  border-bottom: 1px solid #ddd; font-weight: 700; }
-.accordion .accordionTitle .q { color: #5B7DDC;}
+.accordion .accordionTitle .q { margin-right: 2px; color: #5B7DDC; vertical-align: top;}
 .accordionTrigger { position: relative; display: block; width: 100%; padding: 30px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #5B7DDC; }
 .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg) translateY(50%); }
