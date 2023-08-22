@@ -32,7 +32,8 @@
     </section>
 
     <section class="">
-      <div class="viewLineTable noLastLine">
+      <div class="notiBox"><p class="noti">oan&Biz 이용과 관련한 문의만 가능해요. 대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해주세요.</p></div>
+      <div class="viewLineTable noLastLine formFullTable">
         <table>
           <caption>일대일 문의</caption>
           <colgroup>
@@ -45,8 +46,13 @@
               <td>2023-01-07</td>
             </tr>
             <tr>
-              <th scope="row">제목</th> 
-              <td>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</td>
+              <th scope="row">
+                <label for="inpLabel1">제목</label></th> 
+              <td>
+                <div class="inputWrap">
+                  <input id="inpLabel1" class="input" type="text" placeholder="제목을 입력해 주세요." value="">
+                </div>
+              </td>
             </tr>
             <tr> 
               <th scope="row">
@@ -54,10 +60,7 @@
               </th> 
               <td colspan="3">
                 <div class="textareaWrap">
-                  <textarea class="textarea" id="inpLabel2">안녕하세요.
-법인 대출이 시급하게 필요하여 신청했습니다.
-대출 비교 요청을 하게 되면 대략 얼마 정도 시간이 소요되는지 궁금합니다.
-답변 부탁 드립니다.</textarea>
+                  <textarea class="textarea" id="inpLabel2" placeholder="문의 내용을 입력해 주세요."></textarea>
                 </div>
               </td>
             </tr>
