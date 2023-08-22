@@ -34,9 +34,9 @@
     <section class="sectionBlock">
       
       <ul class="evtTab tabScript" role="tablist">
-        <li class="on"><button role="tab" id="tab-1" aria-selected="true">진행중인 이벤트</button></li>
-        <li><button role="tab" id="tab-2" aria-selected="false">당첨자 발표</button></li>
-        <li><button role="tab" id="tab-3" aria-selected="false">종료된 이벤트</button></li> 
+        <li class="on"><button type="button" role="tab" id="tab-1" aria-selected="true">진행중인 이벤트</button></li>
+        <li><button type="button" role="tab" id="tab-2" aria-selected="false">당첨자 발표</button></li>
+        <li><button type="button" role="tab" id="tab-3" aria-selected="false">종료된 이벤트</button></li> 
       </ul>
       <div role="tabpanel" aria-labelledby="tab-1">
         <ul class="evtThumList">
@@ -84,14 +84,17 @@
       <div role="tabpanel" aria-labelledby="tab-2" aria-hidden="true" >
         <div class="evtWinner">
           
-          <div class="bbsSearch">
-            <span class="inputWrap">
-              <input class="input" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="이벤트 명을 입력해주세요." value="">
-            </span>
-            <div class="searchBtns">
-              <button class="btnBlue">검색</button>
+          <fieldset>
+            <legend>이벤트 검색</legend>
+            <div class="bbsSearch">
+              <span class="inputWrap">
+                <input class="input" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="이벤트 명을 입력해주세요." value="">
+              </span>
+              <div class="searchBtns">
+                <button type="button" class="btnBlue">검색</button>
+              </div>
             </div>
-          </div>
+          </fieldset>
           
           <div class="table_wrap">
             <table class="bbs_list">
@@ -99,7 +102,9 @@
                 제안서 제출 가능 목록
               </caption>
               <colgroup>
+                <col width="150"/>
                 <col width=""/>
+                <col width="300"/>
               </colgroup>
               <thead>
                 <tr>
@@ -111,29 +116,29 @@
               <tbody>
                 <tr>
                   <td>22</td>
-                  <td><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
                 </tr>
                 <tr>
                   <td>22</td>
-                  <td><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
                 </tr>
                 <tr>
                   <td>22</td>
-                  <td><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
                 </tr>
                 <tr>
                   <td>22</td>
-                  <td><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
                 </tr>
                 <tr>
                   <td>22</td>
-                  <td><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
-                </tr> 
+                </tr>
               </tbody>
             </table>
           </div>
