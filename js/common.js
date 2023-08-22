@@ -336,14 +336,19 @@ function accordion() {
     onButtonClick() {
       const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
       if (accordionOption === 'only') { //only type
-        document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
-          trigger.setAttribute('aria-expanded', 'false');
-          this.buttonEl.setAttribute('aria-expanded', 'true');
-        })
-        document.querySelectorAll('.accordionPanel').forEach((panel) => {
-          panel.setAttribute('hidden', '');
-          this.contentEl.removeAttribute('hidden');
-        })
+        if (this.buttonEl.ariaExpanded === 'false') { //close 
+          document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
+            trigger.setAttribute('aria-expanded', 'false');
+            this.buttonEl.setAttribute('aria-expanded', 'true');
+          })
+          document.querySelectorAll('.accordionPanel').forEach((panel) => {
+            panel.setAttribute('hidden', '');
+            this.contentEl.removeAttribute('hidden');
+          })
+        } else { // open
+          this.buttonEl.setAttribute('aria-expanded', 'false');
+          this.contentEl.setAttribute('hidden', '');
+        }
       } else { //toggle type
         this.toggle(!this.open);
       }
