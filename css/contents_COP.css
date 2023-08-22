@@ -89,11 +89,21 @@ ul.evtThumList li span.evtTit span    {display:block; font-size: 18px; margin-to
 ul.evtThumList li.end::before    {content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:30px; align-items: center; justify-content: center; }
 
 .evtWinner      {margin:60px 0 0;  }
-.evtWinner .bbsSearch      {margin-bottom:40px; }
+.bbsSearch      {margin-bottom:40px; }
 .detailCont.evt     {}
 .detailCont.evt .evtImg     {}
 .detailCont.evt .evtImg img {max-width:100%; }
 .detailCont.evt .evtTxt     {margin-top:40px; font-weight: 500; }
+
+
+/* 서비스 - 대출절차 */
+.serviceInfo_visual         {width:1240px; height:381px; margin:0 auto; background:url(../images/COP/img_service_info.png) no-repeat 0 0;}
+.serviceInfo_txt            {padding:60px 0 0;}
+.serviceInfo_txt dl         {position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
+.serviceInfo_txt dl dt      {position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
+.serviceInfo_txt dl dd      {padding-left:200px; }
+
+
 
 /* 진희 */
 

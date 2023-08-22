@@ -128,6 +128,7 @@ button.btnWhite.ico_next::after  {content:""; display:inline-block; margin-left:
 button.btnWhite.ico_next:focus::after ,
 button.btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
 
+a.download       {padding-left:32px; font-weight: 700; color:#323C94;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 
 /* 유틸 버튼 */
 .btnReset     {font-size: 20px; font-weight: 700; color:#555}
@@ -651,6 +652,13 @@ table.bbs_list th   {height:80px; background:#F4F6F8;  }
 table.bbs_list tr:first-child th:first-child   { border-radius: 16px 0 0 0 }
 table.bbs_list tr:first-child th:last-child   { border-radius:  0 16px 0 0 }
 table.bbs_list td   {height:100px; border-bottom:1px solid #ddd; }
+table.bbs_list td.tit   {text-align: left;}
+
+.bbsViewCont     {margin-top:40px; padding:60px; min-height:250xp; border:1px solid #ddd; border-radius: 16px; }
+table.bbs_view     {width:100%;}
+table.bbs_view th,
+table.bbs_view td  {padding:30px 0; padding-left:20px; text-align: left; border-bottom:1px solid #ddd;  }
+
 
 input[type=checkbox].star    {border:0; width:24px; height:24px; background:url(../images/common/ico_24_star_off.png) no-repeat 50% 50%; -webkit-appearance:none}
 input[type=checkbox].star:checked    {background:url(../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
@@ -856,6 +864,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox span.date { font-size: 18px; font-weight: 500; text-align: right; flex:1;}
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
 
+/* 가이드 */
+ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin-top:40px; }
 
 .bbsDetailBox .viewLineTable { margin-top: 20px; }
 .bbsDetailBox:has(.titBox) .viewLineTable { margin-top: 40px; }
