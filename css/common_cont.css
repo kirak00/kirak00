@@ -89,7 +89,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnBlue:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
-.btnWhiteLine:disabled       { background:#dddddd; color:#999; border:0;  }
+.btnWhiteLine:disabled       { background:#dddddd; color:#999; border:0; cursor:unset;  }
 
 .ico_down       {padding:0 32px;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
@@ -115,6 +115,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhite:focus.ico_chart::after,
 .btnWhite:active.ico_setting::after,
 .btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
+.ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important; }
 
 button.btnWhite.ico_prev         {padding:0 32px;}
 button.btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50%; }
@@ -629,7 +630,8 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
 .table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; }
-.table_bt .btn_c button.btnBlue {min-width:225px; }
+.table_bt .btn_c button {min-width:225px; }
+.table_bt .btn_c button {min-width:225px; }
 .table_bt button + button      {margin-left:6px; }
 
 .table_wrap    {}
@@ -852,6 +854,17 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 /* 가이드 */
 ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin-top:40px; }
+
+
+/* 보안프로그램 */
+.programDownCont      {}
+.programDownCont .programTit      { text-align: center; }
+.programDownCont .programTit p      { margin-top:20px;  }
+.programDownCont .programTit .downBtn{ margin-top:30px;  }
+.programDownCont .programList {margin-top:80px; }
+.programDownCont .programList table {}
+.programDownCont .programList table td button { width:170px; }
+
 
 
 /* 진 */
