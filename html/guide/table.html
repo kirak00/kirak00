@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js/juqery-3.7.0.min.js"></script>
+    
+    <link href="../../js/lib/rangeDatepicker.css" rel="stylesheet">
+    <script src="../../js/lib/fecha.js"></script>
+    <script src="../../js/lib/rangeDatepicker.js"></script>
+    <script src="../../js/jquery.ui.datepicker_koreaWA.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <link rel="stylesheet" href="./guide.css" />
+    <link rel="stylesheet" href="../../css/contents_COP.css" />
+    <title>SHINHAN</title>
+  </head>
+  <body class="c-body">
+    <div class="c-container">
+
+      <h2 class="c-h2">Default Table</h2>
+      <fieldset class="tableFilterGroup">
+        <span class=""></span>
+        <span class="select">
+          <select title="보기갯수 선택">
+            <option>10개씩 보기</option>
+            <option>본부2</option>
+          </select>
+        </span>
+      </fieldset>
+      <div class="defaultTable">
+        <table>
+          <caption>금융회사 감당자 제안내용</caption>
+          <colgroup>
+            <col />
+            <col width="820px" />
+            <col width="320px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">문의 내용</th>
+              <th scope="col">작성일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href="#;">대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a></td>
+              <td>2023-08-01</td>
+            </tr>
+            <tr class="re_1 reply">
+              <td></td>
+              <td><a href="#;">대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a></td>
+              <td>2023-08-01</td>
+            </tr>
+            <tr class="re_2 quest">
+              <td></td>
+              <td><a href="#;">대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a></td>
+              <td>2023-08-01</td>
+            </tr>
+          </thead>
+          <tbody>
+        </table>
+      </div>
+
+      <h2 class="c-h2">Fixed Table</h2>
+      <div class="fixedTableWrap">
+        <p class="titH4 hasLine">상환방식</p>
+        <div class="fixedTable">
+          <div class="defaultTable" style="height: 300px">
+            <table>
+              <caption>금융회사 감당자 제안내용</caption>
+              <colgroup>
+                <col width="235px" />
+                <col width="503px" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr class="top">
+                  <th colspan="3">원금 균등</th>
+                </tr>
+                <tr>
+                  <th>회차</th>
+                  <th>대출이자</th>
+                  <th>월 상환금</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>123,456</td>
+                  <td>2천만원<p class="sub">(20,000,000)</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnBlue">선택</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="c-h2">Line Table</h2>
+      <h3 class="tableTit">(주)길동건설</h3> 
+      <div class="viewLineTable">
+        <table>
+          <caption>제안서 상세</caption>
+          <colgroup>
+            <col width="220px">
+            <col width="auto">
+            <col width="220px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr> 
+              <th scope="row">취급 가능일</th> 
+              <td>제안서 채택 후 약 5일</td>
+              <th scope="row">대출 기간</th> 
+              <td>24개월</td>
+            </tr>
+            <tr> 
+              <th scope="row">제안 금리</th> 
+              <td><button type="button" class="btnBlue">금리 표기 방식 변경</button></td>
+              <th scope="row">담보 정보</th> 
+              <td>담보 필요<br>
+                · 부동산 - 서울특별시 마포구 길동로 1길 88</td>
+            </tr>
+            <tr>
+              <th scope="row">기타 조건</th> 
+              <td colspan="3">조건 내용</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <h2 class="c-h2">Line Table - No last line</h2>
+      <div class="viewLineTable noLastLine">
+        <table>
+          <caption>일대일 문의</caption>
+          <colgroup>
+            <col width="140px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">작성일</th> 
+              <td>2023-01-07</td>
+            </tr>
+            <tr>
+              <th scope="row">제목</th> 
+              <td>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</td>
+            </tr>
+            <tr> 
+              <th scope="row">
+                <label for="inpLabel2">내용</label>
+              </th> 
+              <td colspan="3">
+                <div class="textareaWrap">
+                  <textarea class="textarea" id="inpLabel2">안녕하세요.
+법인 대출이 시급하게 필요하여 신청했습니다.
+대출 비교 요청을 하게 되면 대략 얼마 정도 시간이 소요되는지 궁금합니다.
+답변 부탁 드립니다.</textarea>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="c-h2">Line Table (With Box) - No last line</h2>
+      <div class="lineBox">
+        <div class="viewLineTable noLastLine">
+          <table>
+            <caption>제안서 상세</caption>
+            <colgroup>
+              <col width="230px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">지점</th> 
+                <td>길동캐피탈</td>
+              </tr>
+              <tr>
+                <th scope="row">사업자등록번호</th> 
+                <td>123-45-67890</td>
+              </tr>
+              <tr>
+                <th scope="row">아이디</th> 
+                <td>GD_00001</td>
+              </tr>
+              <tr>
+                <th scope="row">주소1</th> 
+                <td>서울시</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="c-h2">BBS Table</h2>
+      <table class="bbs_view">
+        <caption>정부 지원 사업 안내 상세</caption>
+        <colgroup>
+          <col width="" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">제목</th>
+            <td>제11회 재도전 사례 공모전 참가 모집공고</td>
+            <th scope="row">조회수</th>
+            <td>1023</td>
+            <th scope="row">등록일</th>
+            <td>2023-07-24</td>
+          </tr>
+          <tr>
+            <th scope="row">담당부서</th>
+            <td>중소기업벤처기업부</td>
+            <th scope="row">담당자</th>
+            <td>최선미</td>
+            <th scope="row">담당자 연락처</th>
+            <td>02-2011-1234</td>
+          </tr>
+  
+          <tr>
+            <th scope="row">첨부파일</th>
+            <td colspan="5"><a href="#" class="download">제11회 재도전 사례 공모전 참가 모집공고.hwp</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="c-h2">Form Table</h2>
+      <div class="formListTable">
+        <table>
+          <caption>회원가입정보 법인회사정보</caption>
+          <colgroup>
+            <col width="186px">
+            <col width="auto">
+            <col width="186px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="inpIdBox1">담당자 명</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
+                </div>
+              </td>
+              <th scope="row">
+                <label for="inpIdBox2">직함</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpIdBox4">유선번호</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
+                </div>
+              </td>
+              <th scope="row">
+                <span class="checkbox">
+                  <input type="checkbox" id="ckbCell1" name="ckbCell" />
+                  <label for="ckbCell1"><span></span>휴대전화</label>
+                </span>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="c-h2">Form Full Table - input이 100%인 table</h2>
+      <div class="formListTable formFullTable">
+        <table>
+          <caption>제안서 정보</caption>
+          <colgroup>
+            <col width="238px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="formLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+              </th> 
+              <td>
+                <div class="radioGroup">
+                  <span class="radio">
+                    <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
+                    <label for="formLabel1_1"><span></span>미완료</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="formLabel1_2" name="formLabel1" value="" />
+                    <label for="formLabel1_2"><span></span>완료</label>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr> 
+              <th>
+                <label id="formLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
+              </th>
+              <td>
+                <div class="formVertical" role="group" aria-labelledby="formLabel2">
+                  <span class="select">
+                    <select>
+                      <option value="10개씩 보기">운전자금</option>
+                      <option value="20개씩 보기">20씩 보기</option>
+                    </select>
+                  </span>
+                  <div class="textareaWrap">
+                    <textarea class="textarea">제안서를 제출합니다.</textarea>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpLabel3" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label id="inpLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
+              </th>
+              <td>
+                <div class="controls" aria-labelledby="inpLabel4">
+                  제안서 채택 후 약
+                  <span class="select">
+                    <select title="범위">
+                      <option>이상</option>
+                      <option>이하</option>
+                    </select>
+                  </span>
+                  <span class="unit">일</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
+              </th>
+              <td>
+                <div class="inputWrap hasUnit">
+                  <input id="inpLabel5" class="input" type="text" placeholder="000" value="">
+                  <span class="unit">개월</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label id="inpLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리(변동/고정)</label>
+              </th>
+              <td>
+                <div class="controls" role="group" aria-labelledby="inpLabel6">
+                  <!-- <div class="">
+                    <button type="button" class="">변동</button>
+                    <button type="button" class="">고정</button>
+                  </div> -->
+                  <div class="radioBtn">
+                    <span class="radio"><input type="radio" id="selectLabel1" name="selectLabel"><label for="selectLabel1">변동</label></span>
+                    <span class="radio"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
+                  </div>
+                 
+                  <span class="select">
+                    <select title="기준금리 선택">
+                      <option value="기준금리">기준금리</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <span class="select">
+                    <select title="금리기간 선택">
+                      <option value="금리기간">금리기간</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <div class="inputWrap hasUnit">
+                    <input class="input" type="text" placeholder="000" value="">
+                    <span class="unit">%</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label id="inpLabel7"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+              </th>
+              <td>
+                <div class="formVertical" role="group" aria-labelledby="inpLabel7">
+                  <div class="radioGroup">
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                      <label for="testRdoBank1"><span></span>담보 불필요</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank2" name="testRdoBank" value="" />
+                      <label for="testRdoBank2"><span></span>담보 필요</label>
+                    </span>
+                  </div>
+                  <div class="formAdd">
+                    <div class="controls">
+                      <span class="select">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button type="button" class="btnPlus"></button>
+                    </div>
+                    <div class="controls">
+                      <span class="select">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button type="button" class="btnMinus"></button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+           
+            <tr>
+              <th scope="row">
+                <label for="inpLabel8">기타조건</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="inpLabel8" class="input" type="text" placeholder="상환 조건 등 조건을 입력해주세요." value="">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel9">제안 메시지</label>
+              </th>
+              <td>
+                <div class="textareaWrap">
+                  <textarea id="inpLabel9" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel10"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
+              </th>
+              <td>
+                <div class="dateControl">
+                  <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
+                  <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
+                  까지 유효
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="c-h2">Form Small Table - form 너비가 218px인 table</h2>
+      <div class="formListTable formSmallTable">
+        <table>
+          <caption>제안서 관리</caption>
+          <colgroup>
+            <col width="195px">
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="formLabel1">대출 비교 신청 건</label>
+              </th>
+              <td>
+                <span class="select">
+                  <select id="formLabel1">
+                    <option value="10개씩 보기">운전자금</option>
+                    <option value="20개씩 보기">20씩 보기</option>
+                  </select>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="formLabel2">보증기관검토</label>
+              </th>
+              <td>
+                <div class="inputWrap">
+                  <input id="formLabel2" class="input" type="text" placeholder="" value="1건">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="formLabel3">대출 비교 신청일</label>
+              </th>
+              <td>
+                <div class="dateControl">
+                  <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
+                  <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
+    </div>
+  </body>
+</html>

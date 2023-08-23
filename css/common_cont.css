@@ -265,7 +265,7 @@ button.sm       {height:50px; }
 /* .inputWrap.widFull .input { width: 100%;} */
 .input.wid400 { width: 400px;}
 /* .input.widFull {width: 100%;} */
-.inputWrap.hasUnit.inputXs .input { width: 70px;}
+.inputWrap.hasUnit .input { width: 70px;}
 
 .inputWrap button { margin-left: 5px;}
 /* .inputWrap .input.inputMd { min-width: 540px;} */
@@ -457,8 +457,6 @@ td .formListTable { margin-top: 25px;}
 .formFullTable .select { width: 206px;}
 .formFullTable .dateControl .input { width: 540px;}
 .formFullTable .input.inputXs { width: 58px;}
-.formFullTable .inputWrap.hasUnit .input {width: auto;}
-.formFullTable .inputWrap.hasUnit.inputXs .input { width: 70px;}
 .formFullTable .input.auto { width: auto;}
 .formFullTable tr th ~ th { padding-left: 76px;}
 /* .formFullTable .titH4.hasLine + table { margin-top: 25px; } */

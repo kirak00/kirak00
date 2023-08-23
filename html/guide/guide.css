@@ -378,9 +378,9 @@ h4 {
 .c-wrapper {
   padding: 1.2rem;
 }
-.c-container { padding: 1rem;}
+.c-container { padding: 1rem 2rem;}
 
-.c-h2 { margin: 20px 0 15px;}
+.c-h2 { margin: 30px 0; padding: 10px; background: gray; color: #fff;}
 .c-guide { margin-top: 0.8rem; }
 
 .c-body { min-width: unset;}
