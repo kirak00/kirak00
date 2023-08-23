@@ -166,9 +166,6 @@ a.download       {padding-left:32px; font-weight: 700; color:#323C94;  backgroun
 
 .addBtnSet { display: flex; column-gap: 20px;}
 
-.bottomBtn      {text-align: center; margin-top:60px; }
-.bottomBtn button   {min-width:225px;}
-
 
 button.xl      {height:70px; }
 button.sm       {height:50px; }
@@ -271,8 +268,10 @@ button.sm       {height:50px; }
 /* .inputWrap .input.inputMd { min-width: 540px;} */
 .inputWrap .unit { display: inline-block; margin-left: 6px; vertical-align: middle;}
 .inputWrap .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
-.inputWrap .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
-.inputWrap .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: middle; }
+.errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
+.errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: middle; }
+.inputWrap.hasError { flex-direction: column; align-items: flex-start;}
+.inputWrap.hasError .input {  border: 1px solid #FE5050}
 .inputWrap.hasError .errorTxt { display: block; }
 .inputWrap.hasError .input:disabled { background: #f4f6f8;}
 
@@ -281,13 +280,9 @@ button.sm       {height:50px; }
 .inputWrap.hasUnit .input { float:left; padding: 0 14px 0 20px; border: 0;}
 .inputWrap.hasUnit .unit { float:right; display: block; line-height:64px; padding-right:20px; }
 .inputWrap .input:disabled + .unit { background: #f4f6f8;}
-.inputWrap.hasError { flex-direction: column; align-items: flex-start;}
 
-.inputBizNumber { }
-.inputBizNumber .input { margin: 0 3px;}
-.inputBizNumber .input:nth-child(1) {width: 76px; margin-left: 0;}
-.inputBizNumber .input:nth-child(2) {width: 64px;}
-.inputBizNumber .input:nth-child(3) {width: 100px; margin-right: 0;}
+.inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
+.inputBizNumber .input { text-align: center; }
 
 
 
@@ -334,9 +329,8 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 /* form 정력 */
 /* .formVertical { display: flex; flex-direction: column;} */
+.formVertical > * + * { margin-top: 10px; }
 .formVertical .inputWrap ~ .radioGroup { margin-top: 20px; }
-.formVertical .select ~ .textareaWrap { margin-top: 10px; } 
-.formVertical .radioGroup ~ .textareaWrap { margin-top: 10px; }
 .formAdd .controls { margin-top: 10px;}
 .formAdd .select { width: 186px;}
 .formAdd .btnPlus,
@@ -450,6 +444,9 @@ td .formListTable { margin-top: 25px;}
 .formGrayBox .list:not(:first-child) { margin-top: 60px; padding-top: 60px; border-top: 1px solid #ddd;}
 .addControl { display: flex; justify-content: space-between; align-items: center;}
 
+.textTable { margin-top: 60px;}
+.textTable th, .textTable td { padding: 5px 0;}
+
 /* 페이지 테이블 - 제안서 제출 */
 .formFullTable .textarea,
 .formFullTable .input { width: 100%; }
@@ -458,20 +455,31 @@ td .formListTable { margin-top: 25px;}
 .formFullTable .dateControl .input { width: 540px;}
 .formFullTable .input.inputXs { width: 58px;}
 .formFullTable .input.auto { width: auto;}
-.formFullTable tr th ~ th { padding-left: 76px;}
-/* .formFullTable .titH4.hasLine + table { margin-top: 25px; } */
+
 .formFullTable .guarant .input:nth-child(1) { width: 100px; }
 .formFullTable .guarant .input:nth-child(2) { width: 140px; }
 .formFullTable .guarant .input:nth-child(3) { width: 100%; }
 
+.formMdTable .input,
+.formMdTable .inputBizNumber {  width: 578px; }
+.formMdTable .inputBizNumber .input { width: 100%; flex: 1;}
+.formMdTable .formVertical,
+.formMdTable .controls { width: 578px;}
+.formMdTable .formVertical .input { width: 100%;}
+.formMdTable .formVertical .controls .input:first-child { width: 400px; flex-shrink: 0;} 
 
-.textTable th, .textTable td { padding: 5px 0;}
-/* .textTable .titH4.hasLine + table { margin-top: 25px; } */
 
-.formSmallTable .input,
-.formSmallTable .select,
-.formSmallTable .dateControl { width: 218px; }
-.formSmallTable .dateControl .input { width: 100%;}
+.formSmTable .input,
+.formSmTable .inputBizNumber { width: 400px;}
+.formSmTable .inputBizNumber .input { width: 100%;}
+.formGrayBox .inputWrap:not(.hasUnit) { display: block;}
+.formGrayBox .input { width: 100%;}
+
+
+.formXsTable .input,
+.formXsTable .select,
+.formXsTable .dateControl { width: 218px; }
+.formXsTable .dateControl .input { width: 100%;}
 
 
 /****************************
@@ -598,6 +606,9 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
 .container.member {padding:160px 0 130px; }
+.container.hasBg { padding-bottom: 0;}
+.container.hasBg .bgGray { padding-bottom: 100px; overflow: hidden;}
+.bgGray { background: #FAFAFA;}
 
 footer    {position:relative; z-index:1; background:rgba(244, 246, 248, 1) }
 footer::before    {content:""; position:absolute; width:100%; top:90px; border-top:1px solid #ddd}
@@ -807,6 +818,10 @@ th{word-break: break-all;}
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 
+/****************************
+**********  tab  **********
+*****************************/
+
 ul.tab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidden; }
 ul.tab li   {width:100%; }
 ul.tab li button   {display:block; width:100%; height:70px; text-align: center; font-size:24px; background:#F4F6F8; }
@@ -821,6 +836,20 @@ ul.evtTab li button   {display:block; width:100%; height:64px; padding:0 32px; b
 ul.evtTab li.on button   {background:#323C94; color:#fff; font-weight: 700; border:1px solid #323C94;  }
 ul.evtTab li:hover button,
 ul.evtTab li button:focus   {background:#5B7DDC; color:#fff;  }
+
+
+ul.innerTab      {width:100%; display:flex; margin-top: 60px; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
+ul.innerTab li   { }
+ul.innerTab li button   {display:block; width:100%; height:64px; padding:0 32px; border-radius: 32px; text-align: center; font-size:20px; background:#fff; border:1px solid #323C94; color: #323C94; }
+ul.innerTab li.on button   {background:#323C94; color:#fff; font-weight: 700; border:1px solid #323C94;  }
+ul.innerTab li:hover button,
+ul.innerTab li button:focus   {background:#5B7DDC; color:#fff;  }
+
+.tabLineWrap { border-bottom: 1px solid #ddd; }
+.tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; }
+.tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 700;}
+.tabLine li.on button { border-bottom: 3px solid #323C94; color: #323C94; }
+.tabLine li button:focus { border: 2px dashed #5B7DDC; border-radius: 16px;}
 
 
 /* pager */
