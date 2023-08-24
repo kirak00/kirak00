@@ -376,21 +376,15 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .fixedTable { border-bottom: 1px solid #ddd;}
 .fixedTable .defaultTable { overflow: auto; border-radius: 16px 16px 0 0;}
 .fixedTable thead {position: sticky; top: 0;} 
-.fixedTable tbody td:first-child { border-left: 1px solid #ddd;} 
-.fixedTable tbody td:last-child { border-right: 1px solid #ddd;}
 .fixedTable .defaultTable tbody tr:last-child { border-bottom: 0;}
 .fixedTableWrap .table_bt { padding-top: 60px;}
 
-.defaultTable { margin-top: 20px;}
+.defaultTable { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; overflow: hidden;}
 .defaultTable table { display: table; width: 100%; } 
+.defaultTable thead tr:last-child { border-bottom: 1px solid #ddd;}
 .defaultTable thead tr.top th { background: #E5EDFB;}
-.defaultTable thead tr.top th:first-child { border-radius: 16px 0 0 0;}
-.defaultTable thead tr.top th:last-child { border-radius: 0 16px 0 0;}
-.defaultTable thead tr.top th:only-child { border-radius: 16px 16px 0 0;}
 .defaultTable thead:has(.top) tr th { border-radius: 0;}
-.defaultTable thead tr:only-child th:first-child { border-radius: 16px 0 0 0;}
-.defaultTable thead tr:only-child th:last-child { border-radius: 0 16px 0 0;}
-.defaultTable tbody tr { border-bottom: 1px solid #ddd; }
+.defaultTable tbody tr:not(:last-child) { border-bottom: 1px solid #ddd; }
 .defaultTable th,
 .defaultTable td { padding: 0 10px; text-align: center;} 
 .defaultTable th { height: 80px; background: #F4F6F8; font-weight: 700; } 
@@ -689,6 +683,7 @@ input[type=checkbox].star:checked    {background:url(../images/common/ico_24_sta
 .jsGridWrap { margin-top: 20px;}
 .jsGridWrap .titH4.hasLine ~ .defaultTable { margin-top: 40px;}
 .jsgrid-table {table-layout: fixed;}
+.bbs { border: 1px solid #ddd; border-radius: 16px;}
 .bbs .jsgrid-grid-header,
 .bbs .jsgrid-grid-body   {overflow: auto;}
 .jsgrid-grid-header  {}
@@ -717,6 +712,8 @@ th{word-break: break-all;}
 
 
 .jsgrid-cell .sub { color: #999;}
+.jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
+.jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
 /****************************
 **********  Gauge  **********
 *****************************/
