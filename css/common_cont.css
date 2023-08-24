@@ -253,7 +253,7 @@ button.sm       {height:50px; }
 .row .label { display: inline-block; padding: 20px 0 0; color: #333; font-size: 20px; font-weight: 700; vertical-align: middle;}
 .row .unit { color: #333; font-size: 20px;}
 .row .btnBlue { display: inline-flex;  }
-.controls { display: flex; align-items: center; gap: 10px; vertical-align: middle;}
+.formRow { display: flex; align-items: center; gap: 10px; vertical-align: middle;}
 /* .fieldControl */
 
 /* 가로사이즈 가변 */
@@ -264,25 +264,25 @@ button.sm       {height:50px; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 
-.controlWrap { position: relative; display: inline-block; }
+/* .formRow { position: relative; display: inline-block; } */
 .input.wid400 { width: 400px;}
 .inputWrap.hasUnit .input { width: 70px;}
 
-/* .controlWrap button { margin-left: 5px;} */
-.controlWrap .unit { display: inline-block; margin-left: 6px; vertical-align: middle;}
-.controlWrap .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
+/* .formRow button { margin-left: 5px;} */
+.formRow .unit { display: inline-block; margin-left: 6px; vertical-align: middle;}
+.formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
-.controlWrap.hasError { flex-direction: column; align-items: flex-start;}
-.controlWrap.hasError .input {  border: 1px solid #FE5050}
-.controlWrap.hasError .errorTxt { display: block; }
-.controlWrap.hasError .input:disabled { background: #f4f6f8;}
+.formRow.hasError { flex-direction: column; align-items: flex-start;}
+.formRow.hasError .input {  border: 1px solid #FE5050}
+.formRow.hasError .errorTxt { display: block; }
+.formRow.hasError .input:disabled { background: #f4f6f8;}
 .inputWrap { position: relative; display: inline-block; }
 .inputWrap.hasUnit {padding: 0 0 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
 .inputWrap.hasUnit::after {content:""; display:block; clear: both;}
 .inputWrap.hasUnit .input { float:left; padding: 0 14px 0 20px; border: 0;}
 .inputWrap.hasUnit .unit { float:right; display: block; line-height:64px; padding-right:20px; }
-.controlWrap .input:disabled + .unit { background: #f4f6f8;}
+.formRow .input:disabled + .unit { background: #f4f6f8;}
 
 .inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
 .inputBizNumber .input { text-align: center; }
@@ -302,41 +302,40 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-.select { display: inline-block; vertical-align: middle; min-width:140px;}
-.select select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
-.select.selectSm { min-width: 206px;}
-.select.w-300 { min-width: 300px;}
+select { display: inline-block; vertical-align: middle; min-width:140px;}
+select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
+select.w-300 { min-width: 300px;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-.textareaWrap.widFull .textarea { width: 100%; }
+/* .textareaWrap.widFull .textarea { width: 100%; } */
 .layerCont .textarea { min-height: 180px;}
 
 /* 폼그룹 */
 .radioGroup.w673 { width: 673px;}
 .radioGroup.w673 .radioInput,
-.radioGroup.w673 .radioInput .controlWrap,
+.radioGroup.w673 .radioInput .formRow,
 .radioGroup.w673 .radioInput .input { width: 100%;}
 
 .radioInput { display: inline-flex; align-items: center; column-gap: 16px;}
 .radioInput.w673 { width: 673px;}
-.radioInput.w673 .controlWrap,
-.radioInput.w673 .controlWrap .input { width: 100%;}
+.radioInput.w673 .formRow,
+.radioInput.w673 .formRow .input { width: 100%;}
 
 /* form 정력 */
 /* .formVertical { display: flex; flex-direction: column;} */
 .formVertical > * + * { margin-top: 10px; }
-.formVertical .controlWrap ~ .radioGroup { margin-top: 20px; }
-.formAdd .controls { margin-top: 10px;}
-.formAdd .select { width: 186px;}
+.formVertical .formRow ~ .radioGroup { margin-top: 20px; }
+.formAdd .formRow { margin-top: 10px;}
+.formAdd select { width: 186px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
 
 /* control group */
 .bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #E5EDFB; border-radius: 16px; display:flex; gap:20px; }
-.bbsSearch .controlWrap { width:100%; }
-.bbsSearch .controlWrap input { width:100%; }
+.bbsSearch .formRow { width:100%; }
+.bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
 
 
@@ -348,13 +347,12 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
-.searchControlItem .controls { display: inline-block; height: 100%;}
-.searchControlItem .controls .select { position: relative; height: 100%; }
-.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .controls .select::before, 
-.searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+.searchControlItem .formItem { display: inline-block; height: 100%;}
+.searchControlItem .formItem select { position: relative; height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
+.searchControlItem .formItem .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .formItem .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
+.searchControlItem .formItem select::before, 
+.searchControlItem .formItem .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -443,8 +441,8 @@ td .formListTable { margin-top: 25px;}
 /* 페이지 테이블 - 제안서 제출 */
 .formFullTable .textarea,
 .formFullTable .input { width: 100%; }
-.formFullTable .controlWrap:not(.hasUnit) { display: block; flex: 1;}
-.formFullTable .select { width: 206px;}
+/* .formFullTable .formRow:not(.hasUnit) { display: block; flex: 1;} */
+.formFullTable select { width: 206px;}
 .formFullTable .dateControl .input { width: 540px;}
 .formFullTable .input.inputXs { width: 58px;}
 .formFullTable .input.auto { width: auto;}
@@ -457,20 +455,20 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .inputBizNumber {  width: 578px; }
 .formMdTable .inputBizNumber .input { width: 100%; flex: 1;}
 .formMdTable .formVertical,
-.formMdTable .controls { width: 578px;}
+.formMdTable .formRow { width: 578px;}
 .formMdTable .formVertical .input { width: 100%;}
-.formMdTable .formVertical .controls .input:first-child { width: 400px; flex-shrink: 0;} 
+.formMdTable .formVertical .formRow .input:first-child { width: 400px; flex-shrink: 0;} 
 
 
 .formSmTable .input,
 .formSmTable .inputBizNumber { width: 400px;}
 .formSmTable .inputBizNumber .input { width: 100%;}
-.formGrayBox .controlWrap:not(.hasUnit) { display: block;}
+.formGrayBox .formRow:not(.hasUnit) { display: block;}
 .formGrayBox .input { width: 100%;}
 
 
 .formXsTable .input,
-.formXsTable .select,
+.formXsTable select,
 .formXsTable .dateControl { width: 218px; }
 .formXsTable .dateControl .input { width: 100%;}
 
@@ -635,8 +633,8 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 20px; color: #555;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #323C94;}
-/* .tableFilterGroup .select { min-width: 206px; } */
-.tableFilterGroup .select select { height: 50px; padding: 0 60px 0 15px }
+/* .tableFilterGroup select { min-width: 206px; } */
+.tableFilterGroup select { height: 50px; padding: 0 60px 0 15px }
 .tableFilterGroup ~ .defaultTable { margin-top: 20px;}
 
 .table_top     {position:relative; margin-bottom:20px;  }
@@ -644,8 +642,8 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .total     {float:left; }
 .table_top .tipTxt    {float:left; padding-top:20px; color:#555;    }
 .table_top .sortBox   {float:right;  }
-.table_top .sortBox .select {margin-left:6px; }
-.table_top .sortBox .select select { width: 100%; height: 50px; }
+.table_top .sortBox select {margin-left:6px; }
+.table_top .sortBox select { width: 100%; height: 50px; }
 
 .table_bt      {width:100%;  padding:20px 0 0px; min-height:64px; box-sizing: content-box; }
 .table_bt::after      {content: ""; display:block; clear: both;}

@@ -36,8 +36,8 @@ ul.loginTab li + li div.login_form  {transform:translateX(100%);  }
 ul.loginTab li + li.on div.login_form  {transform:translateX(0%);  }
 ul.loginTab li div.login_form .row + .row  {margin-top:20px; }
 ul.loginTab li div.login_form label   {min-width:130px; padding-left:0;padding-right:0;  }
-ul.loginTab li div.login_form .controlWrap input   {width:400px; }
-ul.loginTab li div.login_form#cont_certificate_login .controlWrap input   {width:100px; }
+ul.loginTab li div.login_form .formRow input   {width:400px; }
+ul.loginTab li div.login_form#cont_certificate_login .formRow input   {width:100px; }
 ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 
 

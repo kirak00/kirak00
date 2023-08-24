@@ -91,20 +91,20 @@
       </fieldset>
       
       <h2 class="c-h2">INPUT : 가로사이즈 가변</h2>
-      <div class="controlWrap">
+      <div class="formRow">
         <input class="input" type="text" name="inpReason" id="inpReason" placeholder="자금 용도 변경 사유를 입력해주세요.(필수/500자 이내)">
       </div>
 
       <br/>
       
-      <div class="controlWrap">
+      <div class="formRow">
         <input class="input" type="text" name="inpReasonVal" id="inpReasonVal" placeholder="자금 용도 변경 사유를 입력해주세요.(필수/500자 이내)" value="자금 용도 변경 요청" disabled>
       </div>
 
       <br/>
 
       <!-- [D] error 상태 .hasError 추가 -->
-      <div class="controlWrap hasError">
+      <div class="formRow hasError">
         <input class="input" type="text" name="inpReasonError" id="inpReasonError" placeholder="" value="자금 용도 변경 요청" aria-describedby="errorComment">
         <p id="errorComment" class="errorTxt">다시 입력해주세요.</p>
       </div>
@@ -128,7 +128,7 @@
 
       <br/>
 
-      <div class="controlWrap">
+      <div class="formRow">
         <input class="input" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="024">
         <span class="unit">원</span>
       </div>
@@ -137,7 +137,7 @@
       <div class="row">
         <label for="inpReason" class="label"><i class="required"></i>Placeholder</label>
         <!-- <div role="group" class=""> -->
-          <div class="controlWrap">
+          <div class="formRow">
             <input class="input" type="text" name="inpReason" id="inpReason" placeholder="">
           </div>
         <!-- </div> -->
@@ -146,19 +146,15 @@
       <br/>
 
       <div class="row">
-        <div class="controls" role="group">
-          <span class="select">
-            <select title="본부선택">
-              <option>본부1</option>
-              <option>본부1본부1본부1본부1본부1</option>
-            </select>
-          </span>
-          <span class="select">
-            <select title="본부선택">
-              <option>본부1</option>
-              <option>본부2</option>
-            </select>
-          </span>
+        <div class="formRow" role="group">
+          <select title="본부선택">
+            <option>본부1</option>
+            <option>본부1본부1본부1본부1본부1</option>
+          </select>
+          <select title="본부선택">
+            <option>본부1</option>
+            <option>본부2</option>
+          </select>
         </div>
       </div>
 
@@ -179,22 +175,18 @@
       </script> -->
       <br/>
 
-      <div class="controls" role="group">
-        <div class="controlWrap">
+      <div class="formRow" role="group">
+        <div class="formRow">
           <input class="input" type="text" placeholder="" value="새마을금고중앙회">
         </div>
-        <span class="select">
-          <select title="한번에 보여줄 리스트 갯수">
-            <option value="10개씩 보기">10씩 보기</option>
-            <option value="20개씩 보기">20씩 보기</option>
-          </select>
-        </span>
-        <span class="select">
-          <select title="한번에 보여줄 리스트 갯수">
-            <option value="10개씩 보기">10씩 보기</option>
-            <option value="20개씩 보기">20씩 보기</option>
-          </select>
-        </span>
+        <select title="한번에 보여줄 리스트 갯수">
+          <option value="10개씩 보기">10씩 보기</option>
+          <option value="20개씩 보기">20씩 보기</option>
+        </select>
+        <select title="한번에 보여줄 리스트 갯수">
+          <option value="10개씩 보기">10씩 보기</option>
+          <option value="20개씩 보기">20씩 보기</option>
+        </select>
         <button type="button"class="btnBlue">지점 선택</button>
       </div>
     
@@ -205,67 +197,55 @@
         <div class="searchControlGroup">
           <div class="searchControlItem">
             <label for="selectLabelState" class="label">상태</label>
-            <div class="controls">
-              <span class="select">
-                <select id="selectLabelState">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </span>
+            <div class="formRow">
+              <select id="selectLabelState">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
             </div>
           </div>
           <div class="searchControlItem">
             <label for="selectLabelArea" class="label">지역</label>
-            <div class="controls">
-              <span class="select">
-                <select id="selectLabelArea">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </span>
+            <div class="formItem">
+              <select id="selectLabelArea">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
             </div>
           </div>
           <div class="searchControlItem">
             <label for="login_input_certificate_1" class="label">희망 신청 금액</label>
-            <div class="controls" role="group" aria-labelledby="login_input_certificate">
+            <div class="formItem" role="group" aria-labelledby="login_input_certificate">
               <span class="inputWrap">
                 <input class="input inputXs" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
                 <span class="unit">억</span>
               </span>
-              <span class="select">
-                <select title="범위">
-                  <option>이상</option>
-                  <option>이하</option>
-                </select>
-              </span>
+              <select title="범위">
+                <option>이상</option>
+                <option>이하</option>
+              </select>
             </div>
           </div>
           <div class="searchControlItem">
             <label id="selectLabelPay" class="label">CRETOP 등급</label>
-            <div class="controls" role="group" aria-labelledby="selectLabelPay">
-              <span class="select">
-                <select title="등급">
-                  <option>전체</option>
-                  <option>이하</option>
-                </select>
-              </span>
-              <span class="select">
-                <select title="범위">
-                  <option>이상</option>
-                  <option>이하</option>
-                </select>
-              </span>
+            <div class="formItem" role="group" aria-labelledby="selectLabelPay">
+              <select title="등급">
+                <option>전체</option>
+                <option>이하</option>
+              </select>
+              <select title="범위">
+                <option>이상</option>
+                <option>이하</option>
+              </select>
             </div>
           </div>
           <div class="searchControlItem">
             <label for="selectLabelPatent" class="label">특허 보유 여부</label>
-            <div class="controls">
-              <span class="select">
-                <select id="selectLabelPatent">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </span>
+            <div class="formItem">
+              <select id="selectLabelPatent">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
             </div>
           </div>
           <span class="checkbox">
@@ -282,9 +262,7 @@
       <br/> 
       
       <label for="textareaVal" class="label">Value_Textarea</label>
-      <div class="textareaWrap">
-        <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
-      </div>
+      <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
 
       <br/>
       <!-- <h2 class="c-h2">Default(가로/세로 사이즈 가변 : 디폴트60, 최소 20)</h2>
@@ -327,7 +305,7 @@
                     <label for="inpIdBox1">담당자 명</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -335,7 +313,7 @@
                     <label for="inpIdBox2">직함</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -345,7 +323,7 @@
                     <label for="inpIdBox3">담당자 이메일</label>
                   </th>
                   <td colspan="3">
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -355,7 +333,7 @@
                     <label for="inpIdBox4">유선번호</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -366,7 +344,7 @@
                     </span>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -401,7 +379,7 @@
                     <label for="inpIdBox1">담당자 명</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -409,7 +387,7 @@
                     <label for="inpIdBox2">직함</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -419,7 +397,7 @@
                     <label for="inpIdBox3">담당자 이메일</label>
                   </th>
                   <td colspan="3">
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -429,7 +407,7 @@
                     <label for="inpIdBox4">유선번호</label>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -440,7 +418,7 @@
                     </span>
                   </th>
                   <td>
-                    <div class="controlWrap widFull">
+                    <div class="formRow">
                       <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -467,8 +445,8 @@
                   <label id="inpBizNum">사업자등록번호</label>
                 </th>
                 <td>
-                  <div class="controlWrap hasError">
-                    <div class="controls">
+                  <div class="formRow hasError">
+                    <div class="formRow">
                       <div class="inputBizNumber "role="group" aria-labelledby="inpBizNum">
                         <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
                         <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
@@ -485,7 +463,7 @@
                   <label for="inpAdd">상호명</label>
                 </th>
                 <td>
-                  <div class="controlWrap">
+                  <div class="formRow">
                     <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
                     <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                   </div>
@@ -496,7 +474,7 @@
                   <label for="inpBizTel">회사대표번호</label>
                 </th>
                 <td>
-                  <div class="controlWrap">
+                  <div class="formRow">
                     <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
                     <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                   </div>
@@ -508,7 +486,7 @@
                 </th>
                 <td>
                   <div class="formVertical">
-                    <div class="controlWrap">
+                    <div class="formRow">
                       <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
                       <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                     </div>

@@ -67,13 +67,11 @@
               </th>
               <td>
                 <div class="formVertical" role="group" aria-labelledby="formLabel2">
-                  <span class="select">
-                    <select>
-                      <option value="10개씩 보기">운전자금</option>
-                      <option value="20개씩 보기">20씩 보기</option>
-                    </select>
-                  </span>
-                  <div class="controlWrap">
+                  <select>
+                    <option value="10개씩 보기">운전자금</option>
+                    <option value="20개씩 보기">20씩 보기</option>
+                  </select>
+                  <div class="formRow">
                     <textarea class="textarea">제안서를 제출합니다.</textarea>
                   </div>
                 </div>
@@ -84,7 +82,7 @@
                 <label for="inpLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpLabel3" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
@@ -94,14 +92,12 @@
                 <label id="inpLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
               </th>
               <td>
-                <div class="controls" aria-labelledby="inpLabel4">
+                <div class="formRow" aria-labelledby="inpLabel4">
                   제안서 채택 후 약
-                  <span class="select">
-                    <select title="범위">
-                      <option>이상</option>
-                      <option>이하</option>
-                    </select>
-                  </span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
                   <span class="unit">일</span>
                 </div>
               </td>
@@ -122,7 +118,7 @@
                 <label id="inpLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리(변동/고정)</label>
               </th>
               <td>
-                <div class="controls" role="group" aria-labelledby="inpLabel6">
+                <div class="formRow" role="group" aria-labelledby="inpLabel6">
                   <!-- <div class="">
                     <button type="button" class="">변동</button>
                     <button type="button" class="">고정</button>
@@ -132,22 +128,16 @@
                     <span class="radio"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
                   </div>
                  
-                  <span class="select">
-                    <select title="기준금리 선택">
-                      <option value="기준금리">기준금리</option>
-                      <option value="옵션">옵션</option>
-                    </select>
-                  </span>
-                  <span class="select">
-                    <select title="금리기간 선택">
-                      <option value="금리기간">금리기간</option>
-                      <option value="옵션">옵션</option>
-                    </select>
-                  </span>
-                  <div class="inputWrap hasUnit">
-                    <input class="input" type="text" placeholder="000" value="">
-                    <span class="unit">%</span>
-                  </div>
+                  <select title="기준금리 선택">
+                    <option value="기준금리">기준금리</option>
+                    <option value="옵션">옵션</option>
+                  </select>
+                  <select title="금리기간 선택">
+                    <option value="금리기간">금리기간</option>
+                    <option value="옵션">옵션</option>
+                  </select>
+                  <input class="input" type="text" placeholder="000" value="">
+                  <span class="unit">%</span>
                 </div>
               </td>
             </tr>
@@ -168,23 +158,19 @@
                     </span>
                   </div>
                   <div class="formAdd">
-                    <div class="controls">
-                      <span class="select">
-                        <select title="담보종류 선택">
-                          <option value="담보종류">담보종류</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                      </span>
+                    <div class="formRow">
+                      <select title="담보종류 선택">
+                        <option value="담보종류">담보종류</option>
+                        <option value="옵션">옵션</option>
+                      </select>
                       <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
                       <button type="button" class="btnPlus"></button>
                     </div>
-                    <div class="controls">
-                      <span class="select">
-                        <select title="담보종류 선택">
-                          <option value="담보종류">담보종류</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                      </span>
+                    <div class="formRow">
+                      <select title="담보종류 선택">
+                        <option value="담보종류">담보종류</option>
+                        <option value="옵션">옵션</option>
+                      </select>
                       <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
                       <button type="button" class="btnMinus"></button>
                     </div>
@@ -198,7 +184,7 @@
                 <label for="inpLabel8">기타조건</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpLabel8" class="input" type="text" placeholder="상환 조건 등 조건을 입력해주세요." value="">
                 </div>
               </td>
@@ -208,7 +194,7 @@
                 <label for="inpLabel9">제안 메시지</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <textarea id="inpLabel9" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
                 </div>
               </td>

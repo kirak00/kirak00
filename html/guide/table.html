@@ -197,13 +197,11 @@
                 <label for="inpLabel2">내용</label>
               </th> 
               <td colspan="3">
-                <div class="controlWrap">
-                  <div class="textareaWrap">
-                    <textarea class="textarea" id="inpLabel2">안녕하세요.
+                <div class="formRow">
+                  <textarea class="textarea" id="inpLabel2">안녕하세요.
 법인 대출이 시급하게 필요하여 신청했습니다.
 대출 비교 요청을 하게 되면 대략 얼마 정도 시간이 소요되는지 궁금합니다.
 답변 부탁 드립니다.</textarea>
-                  </div>
                 </div>
               </td>
             </tr>
@@ -289,7 +287,7 @@
                 <label for="inpIdBox1">담당자 명</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                 </div>
               </td>
@@ -297,7 +295,7 @@
                 <label for="inpIdBox2">직함</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                 </div>
               </td>
@@ -307,7 +305,7 @@
                 <label for="inpIdBox4">유선번호</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                 </div>
               </td>
@@ -318,7 +316,7 @@
                 </span>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                 </div>
               </td>
@@ -365,10 +363,8 @@
                       <option value="20개씩 보기">20씩 보기</option>
                     </select>
                   </span>
-                  <div class="controlWrap">
-                    <div class="textareaWrap">
-                      <textarea class="textarea">제안서를 제출합니다.</textarea>
-                    </div>
+                  <div class="formRow">
+                    <textarea class="textarea">제안서를 제출합니다.</textarea>
                   </div>
                 </div>
               </td>
@@ -378,7 +374,7 @@
                 <label for="inpLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpLabel3" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
@@ -388,7 +384,7 @@
                 <label id="inpLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
               </th>
               <td>
-                <div class="controls" aria-labelledby="inpLabel4">
+                <div class="formRow" aria-labelledby="inpLabel4">
                   제안서 채택 후 약
                   <span class="select">
                     <select title="범위">
@@ -416,7 +412,7 @@
                 <label id="inpLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리(변동/고정)</label>
               </th>
               <td>
-                <div class="controls" role="group" aria-labelledby="inpLabel6">
+                <div class="formRow" role="group" aria-labelledby="inpLabel6">
                   <!-- <div class="">
                     <button type="button" class="">변동</button>
                     <button type="button" class="">고정</button>
@@ -462,7 +458,7 @@
                     </span>
                   </div>
                   <div class="formAdd">
-                    <div class="controls">
+                    <div class="formRow">
                       <span class="select">
                         <select title="담보종류 선택">
                           <option value="담보종류">담보종류</option>
@@ -472,7 +468,7 @@
                       <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
                       <button type="button" class="btnPlus"></button>
                     </div>
-                    <div class="controls">
+                    <div class="formRow">
                       <span class="select">
                         <select title="담보종류 선택">
                           <option value="담보종류">담보종류</option>
@@ -492,7 +488,7 @@
                 <label for="inpLabel8">기타조건</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpLabel8" class="input" type="text" placeholder="상환 조건 등 조건을 입력해주세요." value="">
                 </div>
               </td>
@@ -502,10 +498,8 @@
                 <label for="inpLabel9">제안 메시지</label>
               </th>
               <td>
-                <div class="controlWrap">
-                  <div class="textareaWrap">
-                    <textarea id="inpLabel9" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
-                  </div>
+                <div class="formRow">
+                  <textarea id="inpLabel9" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
                 </div>
               </td>
             </tr>
@@ -539,7 +533,7 @@
                 <label id="formLabel1">사업자등록번호</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <div class="inputBizNumber" role="group" aria-labelledby="formLabel1">
                     <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
                     <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
@@ -553,7 +547,7 @@
                 <label for="formLabel2">상호명</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="formLabel2" class="input" type="text" placeholder="상호명을 입력해 주세요." value="" readonly>
                 </div>
               </td>
@@ -563,7 +557,7 @@
                 <label for="formLabel3">아이디</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="formLabel3" class="input" type="text" placeholder="" value="" readonly>
                 </div>
               </td>
@@ -573,7 +567,7 @@
                 <label for="formLabel4">비밀번호</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="formLabel4" class="input" type="password" placeholder="" value="" readonly>
                 </div>
               </td>
@@ -583,7 +577,7 @@
                 <label id="formLabel5">회사 대표전화</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <div class="inputBizNumber" role="group" aria-labelledby="formLabel5">
                     <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
                     <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
@@ -597,7 +591,7 @@
                 <label for="formLabel6">이메일</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="formLabel6" class="input" type="text" placeholder="lonlon@gmail.com" value="" readonly>
                 </div>
               </td>
@@ -608,7 +602,7 @@
               </th>
               <td>
                 <div class="formVertical" role="group" aria-labelledby="formLabel7">
-                  <div class="controls">
+                  <div class="formRow">
                     <input class="input" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
                     <button type="button" class="btnWhite" disabled>주소검색</button>
                   </div>
@@ -622,7 +616,7 @@
               </th>
               <td>
                 <div class="formVertical">
-                  <div class="controls" role="group" aria-labelledby="formLabel8">
+                  <div class="formRow" role="group" aria-labelledby="formLabel8">
                     <input class="input" type="text" placeholder="" value="홍길동" readonly>
                     <input class="input" type="text" placeholder="" value="1인 대표" readonly>
                   </div>
@@ -634,7 +628,7 @@
                 <label id="formLabel9">대표자 휴대전화</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <div class="inputBizNumber" role="group" aria-labelledby="formLabel9">
                     <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
                     <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
@@ -661,8 +655,8 @@
                 <label id="inpBizNum">사업자등록번호</label>
               </th>
               <td>
-                <div class="controlWrap">
-                  <div class="controls">
+                <div class="formRow">
+                  <div class="formRow">
                     <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
                       <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3"> -
                       <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2"> -
@@ -678,7 +672,7 @@
                 <label for="inpAdd">상호명</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
                 </div>
               </td>
@@ -688,7 +682,7 @@
                 <label for="inpBizTel">회사대표번호</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
                 </div>
               </td>
@@ -699,7 +693,7 @@
               </th>
               <td>
                 <div class="formVertical">
-                  <div class="controlWrap">
+                  <div class="formRow">
                     <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
                   </div>
                   <div class="radioGroup">
@@ -750,7 +744,7 @@
                 <label for="formLabel2">보증기관검토</label>
               </th>
               <td>
-                <div class="controlWrap">
+                <div class="formRow">
                   <input id="formLabel2" class="input" type="text" placeholder="" value="1건">
                 </div>
               </td>
