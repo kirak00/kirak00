@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container mypage" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">희망 업체 기준 설정</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>희망 업체 기준 설정 </strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="setting_alert">
+      
+      <ul class="guideBox">
+        <li>· 대출 신청을 위해 대표자의 본인확인서비스 및 법인공동인증서를 사용하게 됩니다.</li>
+        <li>· 특허 정보 등 추가 정보 제공을 통해 금융기관의 신속한 심사 및 제안서 제출에 도움을 줄 수 있습니다.</li>
+      </ul>
+
+      <div class="formListTable">
+        <table>
+          <caption>회원가입정보 법인회사정보</caption>
+          <colgroup>
+            <col width="186px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="inpAdd">제안 용도</label>
+              </th>
+              <td>
+                <div class="inputWrap wid400">
+                  <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
+                  <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpBizNum">희망 신청 금액</label>
+              </th>
+              <td class="controls" role="group" aria-labelledby="inpBizNum">
+                  <span class="inputWrap"><input class="input" type="text" placeholder="000" value="" ></span>
+                  <span class="inputWrap"><input class="input" type="text" placeholder="000" value="" ></span>
+                  <span>억</span>
+                  <span class="select">
+                    <select title="">
+                      <option>이상</option>
+                      <option>이하</option>
+                    </select>
+                  </span>
+                  <p class="errorTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
+                </div>
+
+
+                <div class="inputWrap hasError">
+                  <div class="controls" role="group" aria-labelledby="inpBizNum">
+                    <input class="input" type="text" placeholder="000" value="" > 
+                    <span>억</span>
+                    <span class="select">
+                      <select title="">
+                        <option>이상</option>
+                        <option>이하</option>
+                      </select>
+                    </span>
+                  </div>
+                  <p class="errorTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="collateral_yn">담보 유무</label>
+              </th>
+              <td>
+                <span class="select" >
+                  <select id="collateral_yn">
+                    <option>담보 유무를 선택해 주세요.</option>
+                  </select>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="cretop_level">CRETOP 등급</label>
+              </th>
+              <td role="group" aria-labelledby="cretop_level">
+                <span class="select" title="cretop 등급">
+                  <select >
+                    <option>CRETOP 등급을 선택해 주세요.</option>
+                  </select>
+                </span>
+                <span class="select">
+                  <select title="cretop 등급 상세 ">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
