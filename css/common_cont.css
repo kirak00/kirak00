@@ -225,13 +225,13 @@ button.sm       {height:50px; }
 .radio input[type=radio]:disabled + label.disableOn span { background: url("../images/COP/radio_disabled_active.png") no-repeat} */
 
 /* 라디오 버튼 */
-.radioBtn { display: flex; gap: 8px; }
-.radioBtn .radio + .radio { margin-left: 0;}
-.radioBtn .radio input[type=radio]{ display: none; }
-.radioBtn .radio input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
-.radioBtn .radio input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
-.radioBtn .radio input[type=radio]:checked+label{ background: #323C94; border: 1px solid #323C94; color: #fff; }
-.radioBtn .radio input[type=radio]:disabled+label { background: #ddd; color: #999;}
+/* .radioBtn { display: flex; gap: 8px; } */
+.radioBtn + .radioBtn { margin-left: -2px;}
+.radioBtn input[type=radio]{ display: none; }
+.radioBtn input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
+.radioBtn input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
+.radioBtn input[type=radio]:checked+label{ background: #323C94; border: 1px solid #323C94; color: #fff; }
+.radioBtn input[type=radio]:disabled+label { background: #ddd; color: #999;}
 /* toggle */
 .toggleGroup { display: flex; align-items: center; gap: 60px;}
 .switch { display: inline-flex; align-items: center; cursor: pointer; }
