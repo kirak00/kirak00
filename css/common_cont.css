@@ -181,7 +181,7 @@ a.download       {padding-left:32px; font-weight: 700; color:#323C94;  backgroun
 
 button.xl      {height:70px; }
 button.sm       {height:50px; }
-.wid_530      {min-width:530px;}
+.wid530      {min-width:530px;}
 
 
 /****************************
@@ -206,14 +206,12 @@ button.sm       {height:50px; }
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
 /* radio */ 
-.radioGroup { display: flex; align-items: center; gap: 30px;}
-.radioGroup .radio + .radio { margin-left: 0;}
-.radioGroup.mt30 { margin-top: 30px;}
-.radio { display: inline-block; white-space: nowrap;}
+.formRow { }
+.formRow .radio + .radio { margin-left: 26px;}
+.formRow .radio + input[type=text] { margin-left: 26px;}
+.formRow.mt30 { margin-top: 30px;}
+.radio { display: inline-block; white-space: nowrap; vertical-align: middle; padding:17px 0 ;}
 .radio + .radio { margin-left:26px; }
-.radioGroup .radio + .radio { margin-left:30px; }
-.radio + .radioInput { margin-left:26px; }
-.radioGroup .radio + .radioInput { margin-left:30px; }
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
@@ -225,13 +223,12 @@ button.sm       {height:50px; }
 .radio input[type=radio]:disabled + label.disableOn span { background: url("../images/COP/radio_disabled_active.png") no-repeat} */
 
 /* 라디오 버튼 */
-.radioBtn { display: flex; gap: 8px; }
-.radioBtn .radio + .radio { margin-left: 0;}
-.radioBtn .radio input[type=radio]{ display: none; }
-.radioBtn .radio input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
-.radioBtn .radio input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
-.radioBtn .radio input[type=radio]:checked+label{ background: #323C94; border: 1px solid #323C94; color: #fff; }
-.radioBtn .radio input[type=radio]:disabled+label { background: #ddd; color: #999;}
+.radioBtn { display: inline-block; vertical-align: middle; margin-right:4px  }
+.radioBtn input[type=radio]{ display: none; }
+.radioBtn input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
+.radioBtn input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
+.radioBtn input[type=radio]:checked+label{ background: #323C94; border: 1px solid #323C94; color: #fff; }
+.radioBtn input[type=radio]:disabled+label { background: #ddd; color: #999;}
 /* toggle */
 .toggleGroup { display: flex; align-items: center; gap: 60px;}
 .switch { display: inline-flex; align-items: center; cursor: pointer; }
@@ -253,39 +250,44 @@ button.sm       {height:50px; }
 .row .label { display: inline-block; padding: 20px 0 0; color: #333; font-size: 20px; font-weight: 700; vertical-align: middle;}
 .row .unit { color: #333; font-size: 20px;}
 .row .btnBlue { display: inline-flex;  }
-.controls { display: flex; align-items: center; gap: 10px; vertical-align: middle;}
 /* .fieldControl */
 
 /* 가로사이즈 가변 */
 .input { min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
 .input::placeholder { color: #999; line-height: normal; }
-.input:disabled, .input:read-only,
-.inputWrap.hasUnit:has(.input:disabled), .inputWrap.hasUnit:has(.input:read-only) { background: #f4f6f8; color: #999; }
+.input:read-only {background: #f4f6f8; color: #999; color: #999; line-height: normal; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 
-.controlWrap { position: relative; display: inline-block; }
 .input.wid400 { width: 400px;}
-.inputWrap.hasUnit .input { width: 70px;}
 
-.controlWrap button { margin-left: 5px;}
-.controlWrap .unit { display: inline-block; margin-left: 6px; vertical-align: middle;}
-.controlWrap .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
+/* .formRow { display: flex; align-items: center; gap: 10px; vertical-align: middle;} */
+.formRow button { margin-left: 5px;}
+.formRow .unit { display: inline-block; margin-left: 6px; vertical-align: middle; margin-right:6px;}
+.formRow .unit:first-child { margin-left:0; }
+.formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
-.controlWrap.hasError { flex-direction: column; align-items: flex-start;}
-.controlWrap.hasError .input {  border: 1px solid #FE5050}
-.controlWrap.hasError .errorTxt { display: block; }
-.controlWrap.hasError .input:disabled { background: #f4f6f8;}
+.formRow.hasError { flex-direction: column; align-items: flex-start;}
+.formRow.hasError .input {  border: 1px solid #FE5050}
+.formRow.hasError .errorTxt { display: block; }
+.formRow.hasError .input:disabled { background: #f4f6f8;}
 
-.inputWrap.hasUnit {padding: 0 0 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
-.inputWrap.hasUnit::after {content:""; display:block; clear: both;}
-.inputWrap.hasUnit .input { float:left; padding: 0 14px 0 20px; border: 0;}
-.inputWrap.hasUnit .unit { float:right; display: block; line-height:64px; padding-right:20px; }
-.controlWrap .input:disabled + .unit { background: #f4f6f8;}
+input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
+input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:64px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_1         { margin-right:-54px;  padding: 0 44px 0 20px; }
+input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:64px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_1.wid_12 {width:12%; }
+
+
+
+
+.formRow .input:disabled + .unit { background: #f4f6f8;}
 
 .inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
 .inputBizNumber .input { text-align: center; }
+
+
 
 
 /* file */
@@ -302,10 +304,9 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-.select { display: inline-block; vertical-align: middle; min-width:140px;}
-.select select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
-.select.selectSm { min-width: 206px;}
-.select.w-300 { min-width: 300px;}
+select {  display: inline-block; vertical-align: middle; min-width:140px; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
+select.selectSm { min-width: 206px;}
+select.w-300 { min-width: 300px;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
@@ -314,29 +315,29 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .layerCont .textarea { min-height: 180px;}
 
 /* 폼그룹 */
-.radioGroup.w673 { width: 673px;}
-.radioGroup.w673 .radioInput,
-.radioGroup.w673 .radioInput .controlWrap,
-.radioGroup.w673 .radioInput .input { width: 100%;}
+.formRow    {position:relative;}
+.formRow.flex    {display:flex; flex-direction: row; gap:10px }
+.formRow + .formRow    {margin-top:10px; }
+.formRow.w673 { width: 673px; display:flex;}
+.formRow.w673 .input { width: 100%;}
 
 .radioInput { display: inline-flex; align-items: center; column-gap: 16px;}
 .radioInput.w673 { width: 673px;}
-.radioInput.w673 .controlWrap,
-.radioInput.w673 .controlWrap .input { width: 100%;}
+.radioInput.w673 .formRow,
+.radioInput.w673 .formRow .input { width: 100%;}
 
 /* form 정력 */
 /* .formVertical { display: flex; flex-direction: column;} */
 .formVertical > * + * { margin-top: 10px; }
-.formVertical .controlWrap ~ .radioGroup { margin-top: 20px; }
-.formAdd .controls { margin-top: 10px;}
+.formAdd .formRow { margin-top: 10px;}
 .formAdd .select { width: 186px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
 
 /* control group */
 .bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #E5EDFB; border-radius: 16px; display:flex; gap:20px; }
-.bbsSearch .controlWrap { width:100%; }
-.bbsSearch .controlWrap input { width:100%; }
+.bbsSearch .formRow { width:100%; }
+.bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
 
 
@@ -348,14 +349,14 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
-.searchControlItem .controls { display: inline-block; height: 100%;}
-.searchControlItem .controls .select { position: relative; height: 100%; }
-.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .controls .inputWrap { position: relative; display: inline-block; }
-.searchControlItem .controls .select::before, 
-.searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+.searchControlItem .formRow { display: inline-block; height: 100%;}
+.searchControlItem .formRow .select { position: relative; height: 100%; }
+.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
+.searchControlItem .formRow .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
+.searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
+.searchControlItem .formRow .select::before, 
+.searchControlItem .formRow .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -420,7 +421,7 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 /* .formListTable th label { display: inline-block; padding: 20px 0;} */
 .formListTable th .checkbox { font-weight: 400;}
-.formListTable .radioGroup {min-height: 64px;} 
+.formListTable .formRow {min-height: 64px;} 
 .formListTable td { padding: 15px 0; text-align: left;}
 .formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
@@ -442,10 +443,8 @@ td .formListTable { margin-top: 25px;}
 .textTable .sub { color: #999; font-size: 18px; font-weight: 400;}
 
 /* 페이지 테이블 - 제안서 제출 */
-.formFullTable .textarea,
-.formFullTable .input { width: 100%; }
-.formFullTable .controlWrap:not(.hasUnit) { display: block; flex: 1;}
-.formFullTable .select { width: 206px;}
+.formFullTable select { width: 206px;}
+.formFullTable input[type=text] { width: 100%; }
 .formFullTable .dateControl .input { width: 540px;}
 .formFullTable .input.inputXs { width: 58px;}
 .formFullTable .input.auto { width: auto;}
@@ -458,15 +457,15 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .inputBizNumber {  width: 578px; }
 .formMdTable .inputBizNumber .input { width: 100%; flex: 1;}
 .formMdTable .formVertical,
-.formMdTable .controls { width: 578px;}
+.formMdTable .formRow { width: 578px;}
 .formMdTable .formVertical .input { width: 100%;}
-.formMdTable .formVertical .controls .input:first-child { width: 400px; flex-shrink: 0;} 
+.formMdTable .formVertical .formRow .input:first-child { width: 400px; flex-shrink: 0;} 
 
 
 .formSmTable .input,
 .formSmTable .inputBizNumber { width: 400px;}
 .formSmTable .inputBizNumber .input { width: 100%;}
-.formGrayBox .controlWrap:not(.hasUnit) { display: block;}
+.formGrayBox .formRow:not(.hasUnit) { display: block;}
 .formGrayBox .input { width: 100%;}
 
 
@@ -780,7 +779,7 @@ th{word-break: break-all;}
 
 .layerCont        { max-height: calc(100vh - 400px); overflow: auto; }
 
-.layerWrap .layerBody.wid-870       {width:870px;  }
+.layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
