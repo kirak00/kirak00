@@ -50,7 +50,7 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .proposalManage .fixedTableWrap { margin-top: 65px;}
 .proposalManage .fixedTable { margin-top: 40px;}
 .proposalManage .fixedTable .defaultTable { height: 660px;}
-.proposalManage .formFullTable .radioGroup { min-height: 0;}
+.proposalManage .formFullTable .radio { min-height: 0;}
 .proposalManage .formFullTable tr th ~ th { padding-left: 76px;}
 
 /* faq */ 

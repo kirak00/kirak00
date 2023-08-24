@@ -206,14 +206,14 @@ button.sm       {height:50px; }
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
 /* radio */ 
-.radioGroup { display: flex; align-items: center; gap: 30px;}
-.radioGroup .radio + .radio { margin-left: 0;}
-.radioGroup.mt30 { margin-top: 30px;}
 .radio { display: inline-block; white-space: nowrap;}
-.radio + .radio { margin-left:26px; }
-.radioGroup .radio + .radio { margin-left:30px; }
-.radio + .radioInput { margin-left:26px; }
-.radioGroup .radio + .radioInput { margin-left:30px; }
+.radio + input[type="text"] { margin-left: 26px;}
+.formRow .radio + input[type="text"] { margin-left: 16px;}
+.radio + .radio { margin-left:30px; }
+.formRow .radio + .radio { margin-left: 20px;}
+
+.radioBtn + input[type="text"] { margin-left: 0px;}
+
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
@@ -226,7 +226,8 @@ button.sm       {height:50px; }
 
 /* 라디오 버튼 */
 /* .radioBtn { display: flex; gap: 8px; } */
-.radioBtn + .radioBtn { margin-left: -2px;}
+.radioBtn + .radioBtn { margin-left: 8px;}
+.formRow .radioBtn + .radioBtn { margin-left: -2px;}
 .radioBtn input[type=radio]{ display: none; }
 .radioBtn input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
 .radioBtn input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
@@ -254,6 +255,9 @@ button.sm       {height:50px; }
 .row .unit { color: #333; font-size: 20px;}
 .row .btnBlue { display: inline-flex;  }
 .formRow { display: flex; align-items: center; gap: 10px; vertical-align: middle;}
+.formRow + .formRow { margin-top: 10px;}
+.formRow.mt20 { margin-top: 20px; }
+
 /* .fieldControl */
 
 /* 가로사이즈 가변 */
@@ -302,31 +306,25 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-select { display: inline-block; vertical-align: middle; min-width:140px;}
+select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0;}
 select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 select.w-300 { min-width: 300px;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-/* .textareaWrap.widFull .textarea { width: 100%; } */
 .layerCont .textarea { min-height: 180px;}
 
 /* 폼그룹 */
-.radioGroup.w673 { width: 673px;}
-.radioGroup.w673 .radioInput,
-.radioGroup.w673 .radioInput .formRow,
-.radioGroup.w673 .radioInput .input { width: 100%;}
+.formRow.wid673 { width: 673px;}
+.formRow.wid673 .input { width: 100%;}
 
-.radioInput { display: inline-flex; align-items: center; column-gap: 16px;}
-.radioInput.w673 { width: 673px;}
-.radioInput.w673 .formRow,
-.radioInput.w673 .formRow .input { width: 100%;}
+.formRow.wid673 { width: 673px;}
+.formRow.wid673 .input { width: 100%;}
+.formRow.wid673.mt30 { margin-top: 30px;}
 
 /* form 정력 */
-/* .formVertical { display: flex; flex-direction: column;} */
-.formVertical > * + * { margin-top: 10px; }
-.formVertical .formRow ~ .radioGroup { margin-top: 20px; }
+/* .formVertical .formRow ~ .radio { margin-top: 20px; } */
 .formAdd .formRow { margin-top: 10px;}
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
@@ -417,7 +415,7 @@ select.w-300 { min-width: 300px;}
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 /* .formListTable th label { display: inline-block; padding: 20px 0;} */
 .formListTable th .checkbox { font-weight: 400;}
-.formListTable .radioGroup {min-height: 64px;} 
+.formListTable .radio {min-height: 64px; line-height: 64px;} 
 .formListTable td { padding: 15px 0; text-align: left;}
 .formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
@@ -451,13 +449,10 @@ td .formListTable { margin-top: 25px;}
 .formFullTable .guarant .input:nth-child(2) { width: 140px; }
 .formFullTable .guarant .input:nth-child(3) { width: 100%; }
 
-.formMdTable .input,
-.formMdTable .inputBizNumber {  width: 578px; }
-.formMdTable .inputBizNumber .input { width: 100%; flex: 1;}
-.formMdTable .formVertical,
+
 .formMdTable .formRow { width: 578px;}
-.formMdTable .formVertical .input { width: 100%;}
-.formMdTable .formVertical .formRow .input:first-child { width: 400px; flex-shrink: 0;} 
+.formMdTable .input { width: 100%;}
+.formMdTable .input.wid400 { width: 400px; flex-shrink: 0;}
 
 
 .formSmTable .input,

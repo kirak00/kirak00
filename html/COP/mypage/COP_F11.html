@@ -142,12 +142,14 @@
                   <label for="formLabel7">사업장 주소</label>
                 </th>
                 <td>
-                  <div class="formVertical" role="group" aria-labelledby="formLabel7">
+                  <div role="group" aria-labelledby="formLabel7">
                     <div class="formRow">
                       <input class="input" type="text" placeholder="" value="서울 중구 청계천로 54">
                       <button type="button" class="btnWhite" disabled>주소검색</button>
                     </div>
-                    <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="">
+                    <div class="formRow">
+                      <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="">
+                    </div>
                   </div>
                 </td>
               <tr>
@@ -157,7 +159,6 @@
                 <td>
                   <div class="formRow" role="group" aria-labelledby="formLabel8">
                     <input class="input" type="text" placeholder="" value="홍길동">
-                    <!-- <input class="input" type="text" placeholder="" value="1인 대표"> -->
                   </div>
                 </td>
               </tr>
@@ -166,7 +167,7 @@
                   <label>대표자 유형</label>
                 </th>
                 <td>
-                  <div class="radioGroup">
+                  <div class="formRow">
                     <span class="radio">
                       <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
                       <label for="testRdoBoxA"><span></span>1인 대표</label>
