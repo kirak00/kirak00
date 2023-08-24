@@ -189,4 +189,15 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .messageList table tr td  {font-weight: 400;}
 .messageList table tr.checked td  {font-weight: 700;}
 
+/* bbs_alert */
+.lineBox_table        {}
+.lineBox_table::before    {content:""; display:block; height:90px; background:#E5EDFB; border-radius: 16px 16px 0 0 ;  }
+.lineBox_table .line    {border-radius: 0 0 16px 16px; padding:0 60px; border:1px solid #ddd; border-top:0;  }
+.lineBox_table .line table  {margin-top:-90px; width:100%; }
+.lineBox_table .line table th,
+.lineBox_table .line table td {height:90px; }
+.lineBox_table .line table td {border-bottom:1px solid #ddd;  }
+.lineBox_table .line table tr:last-child td {border-bottom:0}
+.lineBox_table .line table td.tit {text-align: left; padding-left:20px; }
+
 /* 진희 */
