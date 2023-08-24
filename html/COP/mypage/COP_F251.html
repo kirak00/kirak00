@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 관리</h2>
+      <p class="pageSub">제안서에 표시된 대출금액, 금리, 금리의 형태는 실제 대출을 위한 심사과정에서 변경 될 수 있습니다.</p>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>제안서 관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <div class="formListTable formXsTable">
+        <table>
+          <caption>제안서 관리</caption>
+          <colgroup>
+            <col width="195px">
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="formLabel1">대출 비교 신청 건</label>
+              </th>
+              <td>
+                <span class="select">
+                  <select id="formLabel1">
+                    <option value="10개씩 보기">운전자금</option>
+                    <option value="20개씩 보기">20씩 보기</option>
+                  </select>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="formLabel2">보증기관검토</label>
+              </th>
+              <td>
+                <div class="controlWrap">
+                  <input id="formLabel2" class="input" type="text" placeholder="" value="1건">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="formLabel3">대출 비교 신청일</label>
+              </th>
+              <td>
+                <div class="dateControl">
+                  <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
+                  <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="sectionBlock60">
+      <div class="defaultTable">
+        <table>
+          <caption>제안서 관리</caption>
+          <colgroup>
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">보증기관 명</th>
+              <th scope="col">제안서 접수일</th>
+              <th scope="col">제안서 상태</th>
+              <th scope="col">상세 보기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>서울신용보증기관</td>
+              <td>2023-08-10</td>
+              <td>제안서 열람</td>
+              <td><button type="button" class="btnWhite">보증 예비 심사 결과 보기</button></td>
+            </tr>
+            <tr>
+              <td>서울신용보증기관</td>
+              <td>2023-08-10</td>
+              <td>제안서 열람</td>
+              <td><button type="button" class="btnWhite">보증 예비 심사 결과 보기</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="sectionBlock60">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>5</strong>건</span>
+        <div class="controls" role="group">
+          <span class="select">
+            <select title="금리 선택">
+              <option>금리 낮은순</option>
+              <option>옵션</option> 
+            </select>
+          </span>
+          <span class="select">
+            <select title="금리유형 선택">
+              <option>금리 유형 전체</option>
+              <option>옵션</option>
+            </select>
+          </span>
+          <span class="select">
+            <select title="대출금액 선택">
+              <option>대출 금액 낮은순</option>
+              <option>옵션</option>
+            </select>
+          </span>
+        </div>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid" class="bbs"></div>
+        <div id="externalPager" class="external-pager"></div>
+<script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { "Name1": "OK저축은행",
+    "Name2": "4.6%", 
+    "Name3": "복합", 
+    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
+    "Name5": "2023-07-05", 
+    "Name6": "회수", 
+    "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "수협은행",
+    "Name2": "4.6%", 
+    "Name3": "변동", 
+    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
+    "Name5": "2023-07-10", 
+    "Name6": "제안서 변경", 
+    "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "새마을금고",
+    "Name2": "4.6%", 
+    "Name3": "고정", 
+    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
+    "Name5": "2023-07-10", 
+    "Name6": "선택", 
+    "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "DBG저축은행",
+    "Name2": "4.6%", 
+    "Name3": "변동", 
+    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
+    "Name5": "2023-07-10", 
+    "Name6": "접수 완료", 
+    "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "롯데캐피탈",
+    "Name2": "4.6%", 
+    "Name3": "고정", 
+    "Name4": "9억 2000만원 <span class='sub'>(920,000,000)</span>", 
+    "Name5": "2023-07-10", 
+    "Name6": "접수 완료", 
+    "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+];
+
+
+$("#jsGrid").jsGrid({
+width: "100%",
+// inserting: true,
+// editing: true,
+sorting: true,
+paging: true,
+pageSize: 10,
+pageButtonCount: 5,
+data: clients,
+
+fields: [
+  { name: "Name1",  type: "button", title : "금융회사", width: 165, validate: "required", sorting: false },
+  { name: "Name2", type: "text", title : "제안 금리", width: 154, validate: "required" },
+  { name: "Name3", type: "text", title : "금리 유형", width: 168, validate: "required" },
+  { name: "Name4", type: "text", title : "제안 대출 금액", width: 220, validate: "required" },
+  { name: "Name5", type: "text", title : "제안서 접수일", width: 194, validate: "required" },
+  { name: "Name6", type: "text", title : "제안서 상태", width: 194, validate: "required" },
+  { name: "Name7", type: "text", title : "상세보기", width: 220, validate: "required" },
+],
+    
+pagerContainer: "#externalPager",
+  // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
+  pagerFormat: "{first} {prev} {pages} {next} {last}",
+  pagePrevText: "<",
+  pageNextText: ">",
+  pageFirstText: "<<",
+  pageLastText: ">>",
+  pageNavigatorNextText: "&#8230;",
+  pageNavigatorPrevText: "&#8230;",
+
+});
+
+});
+
+</script>
+      </div>
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

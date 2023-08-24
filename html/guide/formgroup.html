@@ -8,6 +8,7 @@
     <link href="../../js/lib/rangeDatepicker.css" rel="stylesheet">
     <script src="../../js/lib/fecha.js"></script>
     <script src="../../js/lib/rangeDatepicker.js"></script>
+    <script src="../../js/jquery.ui.datepicker_koreaWA.js"></script>
     <script src="../../js/common.js"></script>
 
     <link rel="stylesheet" href="./guide.css" />
@@ -61,11 +62,21 @@
         </span>
       </div>
 
+      <h2 class="c-h2">BTN type radio </h2>
+      <span class="btnTypeRadio">
+        <input type="radio" name="btnRadio" id="btnRadio_1" checked title="제안 금리(변동)" />
+        <label for="btnRadio_1" class="btnType">변동</label>
+        <input type="radio" name="btnRadio" id="btnRadio_2" title="제안 금리(고정)" />
+        <label for="btnRadio_2" class="btnType">고정</label>
+      </span>
+
+      
       <h2 class="c-h2">TOGGLE</h2>
       <label class="switch">
         <input role="switch" type="checkbox" />
         <span>토글</span>
       </label>
+
 
       <h2 class="c-h2">TOGGLE GROUP</h2>
       <fieldset class="toggleGroup">
@@ -80,20 +91,20 @@
       </fieldset>
       
       <h2 class="c-h2">INPUT : 가로사이즈 가변</h2>
-      <div class="inputWrap">
+      <div class="controlWrap">
         <input class="input" type="text" name="inpReason" id="inpReason" placeholder="자금 용도 변경 사유를 입력해주세요.(필수/500자 이내)">
       </div>
 
       <br/>
       
-      <div class="inputWrap">
+      <div class="controlWrap">
         <input class="input" type="text" name="inpReasonVal" id="inpReasonVal" placeholder="자금 용도 변경 사유를 입력해주세요.(필수/500자 이내)" value="자금 용도 변경 요청" disabled>
       </div>
 
       <br/>
 
       <!-- [D] error 상태 .hasError 추가 -->
-      <div class="inputWrap hasError">
+      <div class="controlWrap hasError">
         <input class="input" type="text" name="inpReasonError" id="inpReasonError" placeholder="" value="자금 용도 변경 요청" aria-describedby="errorComment">
         <p id="errorComment" class="errorTxt">다시 입력해주세요.</p>
       </div>
@@ -117,7 +128,7 @@
 
       <br/>
 
-      <div class="inputWrap">
+      <div class="controlWrap">
         <input class="input" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="024">
         <span class="unit">원</span>
       </div>
@@ -126,7 +137,7 @@
       <div class="row">
         <label for="inpReason" class="label"><i class="required"></i>Placeholder</label>
         <!-- <div role="group" class=""> -->
-          <div class="inputWrap">
+          <div class="controlWrap">
             <input class="input" type="text" name="inpReason" id="inpReason" placeholder="">
           </div>
         <!-- </div> -->
@@ -139,7 +150,7 @@
           <span class="select">
             <select title="본부선택">
               <option>본부1</option>
-              <option>본부2</option>
+              <option>본부1본부1본부1본부1본부1</option>
             </select>
           </span>
           <span class="select">
@@ -152,22 +163,24 @@
       </div>
 
       <br/>
-      <div class="rangeControl sm">
-        <input type="text" class="input" id="rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
-        <button type="button" id="openRangePicker" class="btnBlue"><span class="srOnly">달력 팝업 열기</span></button>
+      <div class="rangeControl">
+        <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
+        <button type="button"type="button" class="btnBlue rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
      </div>
-     <script>
-      var datepicker = new RangeDatepicker(document.getElementById('rangePicker'));
-      var open_datepicker_button = document.getElementById('openRangePicker');
-      open_datepicker_button.addEventListener('click', open_rangepicker_function);
-      function open_rangepicker_function() {
-        datepicker.open();
-      }
-     </script>
+      <br/>
+      <!-- <div class="dateControl">
+        <input type="text" class="input" id="datepicker" value="" aria-label="시작 및 종료기간 선택"/>
+        <button type="button"type="button" id="openRangePicker" class="btnBlue"><span class="srOnly">달력 팝업 열기</span></button>
+      </div>
+      <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+      </script> -->
       <br/>
 
       <div class="controls" role="group">
-        <div class="inputWrap">
+        <div class="controlWrap">
           <input class="input" type="text" placeholder="" value="새마을금고중앙회">
         </div>
         <span class="select">
@@ -182,7 +195,7 @@
             <option value="20개씩 보기">20씩 보기</option>
           </select>
         </span>
-        <button class="btnSize64 btnBlue">지점 선택</button>
+        <button type="button"class="btnBlue">지점 선택</button>
       </div>
     
       <br/>
@@ -215,7 +228,7 @@
           <div class="searchControlItem">
             <label for="login_input_certificate_1" class="label">희망 신청 금액</label>
             <div class="controls" role="group" aria-labelledby="login_input_certificate">
-              <span class="select">
+              <span class="inputWrap">
                 <input class="input inputXs" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
                 <span class="unit">억</span>
               </span>
@@ -260,17 +273,17 @@
             <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
           </span>
         </div>
-        <button class="btnReset">초기화</button>
-        <button class="btnBlue size_M">조회</button>
+        <div class="searchBtns">
+          <button type="button"class="btnReset">초기화</button>
+          <button type="button"class="btnBlue sm">조회</button>
+        </div>
       </div>
       
       <br/> 
       
-      <div class="row">
-        <label for="textareaVal" class="label">Value_Textarea</label>
-        <div class="textareaWrap">
-          <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
-        </div>
+      <label for="textareaVal" class="label">Value_Textarea</label>
+      <div class="textareaWrap">
+        <textarea id="textareaVal" class="textarea">제안서를 제출합니다.</textarea>
       </div>
 
       <br/>
@@ -295,8 +308,8 @@
               <label for="ckbMember1"><span></span>대표자 동일</label>
             </span>
             <div class="addBtnSet">
-              <button class="btnPlus"><span class="hide">리스트 추가</span></button>
-              <button class="btnMinus"><span class="hide">리스트 삭제</span></button>
+              <button type="button"class="btnPlus"><span class="hide">리스트 추가</span></button>
+              <button type="button"class="btnMinus"><span class="hide">리스트 삭제</span></button>
             </div>
           </div>
           <div class="formListTable">
@@ -314,7 +327,7 @@
                     <label for="inpIdBox1">담당자 명</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -322,7 +335,7 @@
                     <label for="inpIdBox2">직함</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -332,7 +345,7 @@
                     <label for="inpIdBox3">담당자 이메일</label>
                   </th>
                   <td colspan="3">
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -342,7 +355,7 @@
                     <label for="inpIdBox4">유선번호</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -353,7 +366,7 @@
                     </span>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -369,8 +382,8 @@
               <label for="ckbMember1"><span></span>대표자 동일</label>
             </span>
             <div class="addBtnSet">
-              <button class="btnPlus"><span class="hide">리스트 추가</span></button>
-              <button class="btnMinus"><span class="hide">리스트 삭제</span></button>
+              <button type="button"class="btnPlus"><span class="hide">리스트 추가</span></button>
+              <button type="button"class="btnMinus"><span class="hide">리스트 삭제</span></button>
             </div>
           </div>
           <div class="formListTable">
@@ -388,7 +401,7 @@
                     <label for="inpIdBox1">담당자 명</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -396,7 +409,7 @@
                     <label for="inpIdBox2">직함</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -406,7 +419,7 @@
                     <label for="inpIdBox3">담당자 이메일</label>
                   </th>
                   <td colspan="3">
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -416,7 +429,7 @@
                     <label for="inpIdBox4">유선번호</label>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -427,7 +440,7 @@
                     </span>
                   </th>
                   <td>
-                    <div class="inputWrap widFull">
+                    <div class="controlWrap widFull">
                       <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
@@ -454,11 +467,15 @@
                   <label id="inpBizNum">사업자등록번호</label>
                 </th>
                 <td>
-                  <div class="inputWrap inputBizNumber"role="group" aria-labelledby="inpBizNum">
-                    <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
-                    <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
-                    <input class="input" type="text" placeholder="00000" value="" maxlength="5">
-                    <button class="btnWhite">사업자등록번호 검증</button>
+                  <div class="controlWrap hasError">
+                    <div class="controls">
+                      <div class="inputBizNumber "role="group" aria-labelledby="inpBizNum">
+                        <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
+                        <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
+                        <input class="input" type="text" placeholder="00000" value="" maxlength="5">
+                      </div>
+                      <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                    </div>
                     <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                   </div>
                 </td>
@@ -468,7 +485,7 @@
                   <label for="inpAdd">상호명</label>
                 </th>
                 <td>
-                  <div class="inputWrap wid400">
+                  <div class="controlWrap">
                     <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
                     <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                   </div>
@@ -479,7 +496,7 @@
                   <label for="inpBizTel">회사대표번호</label>
                 </th>
                 <td>
-                  <div class="inputWrap wid400">
+                  <div class="controlWrap">
                     <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
                     <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                   </div>
@@ -491,7 +508,7 @@
                 </th>
                 <td>
                   <div class="formVertical">
-                    <div class="inputWrap wid400">
+                    <div class="controlWrap">
                       <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
                       <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
                     </div>

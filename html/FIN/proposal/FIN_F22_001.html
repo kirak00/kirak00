@@ -7,6 +7,7 @@
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../../js/lib/calendar_min.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_COP.js"></script>
   <title>SHINHAN</title>
@@ -32,45 +33,47 @@
       </ul>
     </section>
  
-    <section class="formListBlock">
+    <section class="">
       <!-- <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3>  -->
-      <div class="formListTable">
+      <h3 class="boxTit">(주)길동건설</h3>
+      <div class="formListTable formFullTable">
         <table>
           <caption>제안서 정보</caption>
           <colgroup>
             <col width="238px">
-            <col wieth="auto">
+            <col width="auto">
           </colgroup>
           <tbody>
             <tr>
               <th scope="row">
-                <label for="inpLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+                <label for="formLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th> 
               <td>
                 <div class="radioGroup">
                   <span class="radio">
-                    <input type="radio" id="inpLabel1_1" name="inpLabel1" value="" />
-                    <label for="inpLabel1_1"><span></span>미완료</label>
+                    <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
+                    <label for="formLabel1_1"><span></span>미완료</label>
                   </span>
                   <span class="radio">
-                    <input type="radio" id="inpLabel1_2" name="inpLabel1" value="" />
-                    <label for="inpLabel1_2"><span></span>완료</label>
+                    <input type="radio" id="formLabel1_2" name="formLabel1" value="" />
+                    <label for="formLabel1_2"><span></span>완료</label>
                   </span>
                 </div>
               </td>
             </tr>
             <tr> 
-                <label id="inpLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
+              <th>
+                <label id="formLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
               </th>
               <td>
-                <div class="formVertical" role="group" aria-labelledby="inpLabel2">
-                  <span class="select selectSm">
+                <div class="formVertical" role="group" aria-labelledby="formLabel2">
+                  <span class="select">
                     <select>
                       <option value="10개씩 보기">운전자금</option>
                       <option value="20개씩 보기">20씩 보기</option>
                     </select>
                   </span>
-                  <div class="textareaWrap full">
+                  <div class="controlWrap">
                     <textarea class="textarea">제안서를 제출합니다.</textarea>
                   </div>
                 </div>
@@ -78,118 +81,156 @@
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpPwCheck"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
+                <label for="inpLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출금액</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
+                <div class="controlWrap">
+                  <input id="inpLabel3" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpAdd"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
+                <label id="inpLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취급 가능일</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpAdd" class="input" type="text" placeholder="대표자 본인 명의 휴대전화 - 없이 입력" value="">
-                  <button class="btnWhite">본인확인</button>
+                <div class="controls" aria-labelledby="inpLabel4">
+                  제안서 채택 후 약
+                  <span class="select">
+                    <select title="범위">
+                      <option>이상</option>
+                      <option>이하</option>
+                    </select>
+                  </span>
+                  <span class="unit">일</span>
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
+                <label for="inpLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="inputWrap hasUnit">
+                  <input id="inpLabel5" class="input" type="text" placeholder="000" value="">
+                  <span class="unit">개월</span>
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">제안 금리(변동/고정)</span>대출 기간</label>
+                <label id="inpLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리(변동/고정)</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="controls" role="group" aria-labelledby="inpLabel6">
+                  <!-- <div class="">
+                    <button type="button" class="">변동</button>
+                    <button type="button" class="">고정</button>
+                  </div> -->
+                  <div class="radioBtn">
+                    <span class="radio"><input type="radio" id="selectLabel1" name="selectLabel"><label for="selectLabel1">변동</label></span>
+                    <span class="radio"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
+                  </div>
+                 
+                  <span class="select">
+                    <select title="기준금리 선택">
+                      <option value="기준금리">기준금리</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <span class="select">
+                    <select title="금리기간 선택">
+                      <option value="금리기간">금리기간</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                  </span>
+                  <div class="inputWrap hasUnit">
+                    <input class="input" type="text" placeholder="000" value="">
+                    <span class="unit">%</span>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+                <label id="inpLabel7"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="formVertical" role="group" aria-labelledby="inpLabel7">
+                  <div class="radioGroup">
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                      <label for="testRdoBank1"><span></span>담보 불필요</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank2" name="testRdoBank" value="" />
+                      <label for="testRdoBank2"><span></span>담보 필요</label>
+                    </span>
+                  </div>
+                  <div class="formAdd">
+                    <div class="controls">
+                      <span class="select">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button type="button" class="btnPlus"></button>
+                    </div>
+                    <div class="controls">
+                      <span class="select">
+                        <select title="담보종류 선택">
+                          <option value="담보종류">담보종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                      </span>
+                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                      <button type="button" class="btnMinus"></button>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
            
             <tr>
               <th scope="row">
-                <label for="inpRoute">기타조건</label>
+                <label for="inpLabel8">기타조건</label>
               </th>
               <td>
-                <div class="formVertical">
-                  <div class="radioInput w673">
-                    <span class="radio">
-                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
-                      <label for="testRdoBank1"><span></span>신한은행</label>
-                    </span>
-                    <span class="inputWrap">
-                      <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
-                    </span>
-                  </div>
-                  <div class="radioGroup w673 mt30">
-                    <span class="radio">
-                      <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
-                      <label for="testRdoSns1"><span></span>소셜 미디어</label>
-                    </span>
-                    <span class="radio">
-                      <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
-                      <label for="testRdoSns2"><span></span>유튜브</label>
-                    </span>
-                    <div class="radioInput">
-                      <span class="radio"> 
-                        <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
-                        <label for="testRdoSns3"><span></span>기타</label>
-                      </span>
-                      <span class="inputWrap">
-                        <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-    
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label for="inpEmail">제안 메시지</label>
-              </th>
-              <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="controlWrap">
+                  <input id="inpLabel8" class="input" type="text" placeholder="상환 조건 등 조건을 입력해주세요." value="">
                 </div>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="inpEmail"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
+                <label for="inpLabel9">제안 메시지</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                <div class="controlWrap">
+                  <textarea id="inpLabel9" class="textarea" placeholder="제안 메시지를 입력해주세요.(500자 이내)"></textarea>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpLabel10"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
+              </th>
+              <td>
+                <div class="dateControl">
+                  <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
+                  <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
+                  까지 유효
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
-        <div class="">
-          <button class="btnBlue">제출하기</button>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnBlue">제출하기</button>
+          </div>
         </div>
       </div>
 

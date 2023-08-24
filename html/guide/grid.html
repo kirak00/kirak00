@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/contents_COP.css">
   <script src="../../js/juqery-3.7.0.min.js"></script>
-   <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
   <script src="../../js/common_COP.js"></script>
   <link rel="stylesheet" href="./guide.css" />
+  <link rel="stylesheet" href="../../css/contents_COP.css">
   <title>SHINHAN</title>
 <style>
 
@@ -24,11 +24,11 @@
     <div class="c-guide">
 
 
-      <div id="jsGrid" class="nomal_table"></div>
+      <div id="jsGrid" class="bbs"></div>
       
       <div class="table_bt">
         <div class="btn_r">
-          <button class="btnBlue ico_down">엑셀 다운로드</button>
+          <button type="button" class="btnBlue ico_down">엑셀 다운로드</button>
         </div>
       </div>
 
@@ -36,87 +36,87 @@
       <div id="externalPager" class="external-pager"></div>
       <!-- <div id="jsGrid2" class="long_data_table"></div>
       <div id="externalPager2" class="external-pager"></div> -->
-        
-    <script>
-      $(function() {
-        
-        function grid_template_star(value, item){
-          console.log(value)
-          if(value==true){
-              return "<input type='checkbox' class='star' checked></input>";
-          }else if(value==false){
-              return "<input type='checkbox' class='star'></input>";
-          }else{
-              return "-";
-          }
-        }
-
-        var clients = [
-          {
-            "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-            "상태": '심사전', "법인명": 'askldjfn', 
-            "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
-            "지역": '서울', "업종": '건설',
-            "담보 유무": '유',
-            "특허 보유 <br>여부": '미보유',
-            "CRETOP <br>등급": 'AAA+',
-            "제안서 마감일": '서울',
-            "상세보기": '<button class="btnWhite" onclick="alert(1)">상세보기</button>'  
-          },
-          {
-            "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-            "상태": '심사전', "법인명": 'askldjfn', 
-            "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
-            "지역": '서울', "업종": '건설',
-            "담보 유무": '유',
-            "특허 보유 <br>여부": '미보유',
-            "CRETOP <br>등급": 'AAA+',
-            "제안서 마감일": '서울',
-            "상세보기": '<button class="btnWhite" onclick="alert(1)">상세보기</button>'  
-          },
-        ];
-  
-
-        $("#jsGrid").jsGrid({
-          width: "1400px",
-          // inserting: true,
-          // editing: true,
-          sorting: true,
-          paging: true,
-          pageSize: 10,
-  
-          data: clients,
-  
-          fields: [
-            // { width: 70, name: "관심대출", type: "text", itemTemplate:grid_template_star },
-            { width: 100, name: "관심대출", type: "text",  },
-            { width: 80, name: "상태", type: "text",  },
-            { width: 120, name: "법인명", type: "text",  },
-            { width: 140, name: "희망 신청 금액", type: "text",  },
-            { width: 70, name: "지역", type: "text",  },
-            { width: 80, name: "상태", type: "text", sorting: false  },
-            { width: 70, name: "지역", type: "text",  },
-            { width: 70, name: "업종", type: "text",  },
-            { width: 80, name: "담보 유무", type: "text",  },
-            { width: 120, name: "특허 보유 <br>여부", type: "text",  },
-            { width: 120, name: "CRETOP <br>등급", type: "text",  },
-            { width: 130, name: "제안서 마감일", type: "text",  },
-            { width: 200, name: "상세보기", type: "text", }
-          ],
           
-          pagerContainer: "#externalPager",
-            // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
-            pagerFormat: "{first} {prev} {pages} {next} {last}",
-            pagePrevText: "이전",
-            pageNextText: "다음",
-            pageFirstText: "처음으로",
-            pageLastText: "맨끝으로",
-            pageNavigatorNextText: "&#8230;",
-            pageNavigatorPrevText: "&#8230;",
+      <script>
+        $(function() {
+          
+          function grid_template_star(value, item){
+            console.log(value)
+            if(value==true){
+                return "<input type='checkbox' class='star' checked></input>";
+            }else if(value==false){
+                return "<input type='checkbox' class='star'></input>";
+            }else{
+                return "-";
+            }
+          }
 
+          var clients = [
+            {
+              "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "상태": '심사전', "법인명": 'askldjfn', 
+              "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
+              "지역": '서울', "업종": '건설',
+              "담보 유무": '유',
+              "특허 보유 <br>여부": '미보유',
+              "CRETOP <br>등급": 'AAA+',
+              "제안서 마감일": '서울',
+              "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'  
+            },
+            {
+              "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "상태": '심사전', "법인명": 'askldjfn', 
+              "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
+              "지역": '서울', "업종": '건설',
+              "담보 유무": '유',
+              "특허 보유 <br>여부": '미보유',
+              "CRETOP <br>등급": 'AAA+',
+              "제안서 마감일": '서울',
+              "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'  
+            },
+          ];
+
+
+          $("#jsGrid").jsGrid({
+            width: "1400px",
+            // inserting: true,
+            // editing: true,
+            sorting: true,
+            paging: true,
+            pageSize: 10,
+
+            data: clients,
+
+            fields: [
+              // { width: 70, name: "관심대출", type: "text", itemTemplate:grid_template_star },
+              { width: 100, name: "관심대출", type: "text",  },
+              { width: 80, name: "상태", type: "text",  },
+              { width: 120, name: "법인명", type: "text",  },
+              { width: 140, name: "희망 신청 금액", type: "text",  },
+              { width: 70, name: "지역", type: "text",  },
+              { width: 80, name: "상태", type: "text", sorting: false  },
+              { width: 70, name: "지역", type: "text",  },
+              { width: 70, name: "업종", type: "text",  },
+              { width: 80, name: "담보 유무", type: "text",  },
+              { width: 120, name: "특허 보유 <br>여부", type: "text",  },
+              { width: 120, name: "CRETOP <br>등급", type: "text",  },
+              { width: 130, name: "제안서 마감일", type: "text",  },
+              { width: 200, name: "상세보기", type: "text", }
+            ],
+            
+            pagerContainer: "#externalPager",
+              // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
+              pagerFormat: "{first} {prev} {pages} {next} {last}",
+              pagePrevText: "이전",
+              pageNextText: "다음",
+              pageFirstText: "처음으로",
+              pageLastText: "맨끝으로",
+              pageNavigatorNextText: "&#8230;",
+              pageNavigatorPrevText: "&#8230;",
+
+          });
         });
-      });
-  </script>
+      </script>
 <style>
   
 

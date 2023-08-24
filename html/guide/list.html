@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/contents_COP.css">
   <script src="../../js/juqery-3.7.0.min.js"></script>
    <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
   <script src="../../js/common_COP.js"></script>
   <link rel="stylesheet" href="./guide.css" />
+  <link rel="stylesheet" href="../../css/contents_COP.css">
   <title>SHINHAN</title>
 <style>
 
@@ -18,83 +18,103 @@
 
   <div class="c-container">
 
-    <div class="c-title">
-      <h1 class="c-h1">Table List</h1>
-    </div>
-    <div class="c-guide">
 
         <fieldset>
           <legend>게시물 검색</legend>
-          <div>
+          <div class="bbsSearch">
+            <span class="controlWrap">
+              <input class="input" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="이벤트 명을 입력해주세요." value="">
+            </span>
+            <div class="searchBtns">
+              <button type="button" class="btnBlue">검색</button>
+            </div>
           </div>
         </fieldset>
 
         <div class="table_top">
-          <div class="total">총 15건 </div>
+          <!-- <div class="total">총 15건 </div> -->
           <div class="sortBox">
-            <select name="" id="" title="테이블 정렬">
-              <option value="">신청 금액 높은순</option>
-              <option value="">마감일 최신순</option>
-            </select>
+            
+            <span class="select">
+              <select name="" id="" title="테이블 정렬">
+                <option value="">신청 금액 높은순</option>
+                <option value="">마감일 최신순</option>
+              </select>
+            </span>
+            <span class="select">
+              <select name="" id="" title="테이블 정렬">
+                <option value="">신청 금액 높은순</option>
+                <option value="">마감일 최신순</option>
+              </select>
+            </span>
           </div>
         </div>
+        
         <div class="table_wrap">
           <table class="bbs_list">
             <caption>
               제안서 제출 가능 목록
             </caption>
             <colgroup>
+              <col width="150"/>
               <col width=""/>
+              <col width="300"/>
             </colgroup>
             <thead>
               <tr>
-                <th scope="col">관심대출</th>
-                <th scope="col">제안서 <br> 제출유무</th>
-                <th scope="col">제출</th>
-                <th scope="col">심사 완료 유무</th>
-                <th scope="col">법인명</th>
-                <th scope="col">희망 신청 금액</th>
-                <th scope="col">지역</th>
-                <th scope="col">자금용도</th>
-                <th scope="col">담보유무</th>
-                <th scope="col">제안서 마감일</th>
+                <th scope="col">번호</th>
+                <th scope="col">이벤트 명</th>
+                <th scope="col">이벤트 기간</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="checkbox" class="star" title="관심 대출" checked /></td>
-                <td>제출완료</td>
-                <td><a href="#none" class="btnWhite">제출하기</a></td>
-                <td>심사완료</td>
-                <td>길동건설</td>
-                <td>1억 2000만원 <br>~2억</td>
-                <td>서울</td>
-                <td>시설자금</td>
-                <td>유</td>
-                <td>2023-08-30</td>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
               </tr>
               <tr>
-                <td><input type="checkbox" class="star" title="관심 대출" checked /></td>
-                <td>제출완료</td>
-                <td><a href="#none" class="btn" >제출하기</a></td>
-                <td>심사완료</td>
-                <td>길동건설</td>
-                <td>1억 2000만원 <br>~2억</td>
-                <td>서울</td>
-                <td>시설자금</td>
-                <td>유</td>
-                <td>2023-08-30</td>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td>2023-08-01~2023-08-01</td>
               </tr>
             </tbody>
           </table>
         </div>
+
         <div class="table_bt">
+          <div class="btn_l">
+          </div>
+          <div class="btn_c">
+            <button type="button" class="btnBlue">목록</button>
+          </div>
           <div class="btn_r">
-            <button class="btnBlue ico_down">엑셀 다운로드</button>
           </div>
         </div>
+    
 
-        <div id="externalPager" class="external-pager jsgrid-pager-container">
+        
+        <div class="external-pager jsgrid-pager-container">
           <div class="jsgrid-pager">
             <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;&lt;</a></span> 
             <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;</a></span> 

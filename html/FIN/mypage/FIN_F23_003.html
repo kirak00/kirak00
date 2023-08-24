@@ -23,7 +23,7 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
       <div class="table_bt">
         <div class="btn_c">
-          <button class="btnBlue size_M open_layer"  aria-controls="sampleLayer">제출 취소하기</button>
+          <button type="button" class="btnBlue sm open_layer"  aria-controls="sampleLayer">제출 취소하기</button>
         </div>
       </div>
   </div>
@@ -39,7 +39,7 @@
       <div class="layerHead">
         <h3>제출 제안서 취소</h3>
         <p>제출한 제안서를 회수합니다.</p>
-        <button class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
         <div class="viewNolineTable">
@@ -47,7 +47,7 @@
             <caption>제안서 취소 상세</caption>
             <colgroup>
               <col width="204px">
-              <col wieth="auto">
+              <col width="auto">
             </colgroup>
             <tbody>
               <tr>
@@ -61,8 +61,10 @@
               <tr>
                 <th scope="row"><i class="required" aria-hidden="true">*</i><span class="srOnly">필수값</span>제출 취소 사유</th> 
                 <td>
-                  <div class="textareaWrap">
-                    <textarea id="textareaVal" class="textarea">기타 사유를 입력해주세요.(500자 이내)</textarea>
+                  <div class="controlWrap">
+                    <div class="textareaWrap">
+                      <textarea id="textareaVal" class="textarea">기타 사유를 입력해주세요.(500자 이내)</textarea>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -71,7 +73,7 @@
         </div>
       </div>
       <div class="layerFoot">
-        <button class="btnBlue size_XL" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">제출 취소</button>
+        <button type="button" class="btnBlue xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">제출 취소</button>
       </div>
     </div>
     <div class="layerDimm"></div>

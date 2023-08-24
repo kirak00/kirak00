@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/contents_COP.css">
   <script src="../../js/juqery-3.7.0.min.js"></script>
   <script src="../../js/jquery-ui.js"></script>
   <script src="../../js/common.js"></script>
   <script src="../../js/common_COP.js"></script>
+  <link rel="stylesheet" href="./guide.css" />
+  <link rel="stylesheet" href="../../css/contents_COP.css">
   <title>SHINHAN</title>
 <style>
 
@@ -29,16 +30,16 @@
         <div class="utilCont">
           <div class="zommBox">
             <span class="tit">글자크기</span>
-            <button class="btn_zoom_plus"><span class="hide">화면확대</span></button>
-            <button class="btn_zoom_minus"><span class="hide">화면축소</span></button>
+            <button type="button" class="btn_zoom_plus"><span class="hide">화면확대</span></button>
+            <button type="button" class="btn_zoom_minus"><span class="hide">화면축소</span></button>
           </div>
         </div>
       </div>
-      <div class="headerCont ">
+      <nav class="headerCont ">
         <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
         <h2 class="hide">메뉴 영역</h2>
-        <ul class="gnb" id="skip_gnb" aria-label="주메뉴">
-          <li class="depth_1 on" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_acc">대출 비교 요청</span></a>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
+          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 비교 요청</span></a>
             <ul>
               <li class="depth_2"><a href="#none">대출 비교</a></li>
               <li class="depth_2 on"><a href="#none">시설자금 대출</a></li>
@@ -47,7 +48,7 @@
               <li class="depth_2"><a href="#none">장기 렌트</a></li>
             </ul>
           </li>
-          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
             <ul>
               <li class="depth_2"><a href="#none">대출절차안내</a></li>
               <li class="depth_2"><a href="#none">제출서류안내</a></li>
@@ -55,14 +56,14 @@
               <li class="depth_2"><a href="#none">홍보영상</a></li>
             </ul>
           </li>
-          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
             <ul>
               <li class="depth_2"><a href="#none">고객센터번호</a></li>
               <li class="depth_2"><a href="#none">1:1 문의</a></li>
               <li class="depth_2"><a href="#none">F&Q</a></li>
             </ul>
           </li>
-          <li class="depth_1"><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
             <ul>
               <li class="depth_2"><a href="#none">회원정보</a></li>
               <li class="depth_2"><a href="#none">대출 신청 관리</a></li>
@@ -79,7 +80,7 @@
           <li><a href="#none" class="login">로그인</a></li> -->
           <li><a href="#none" class="logout">로그아웃</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="bg"></div>
       <div class="line"></div>
     </header>
@@ -96,6 +97,7 @@
 
       <section class="pageTop">
         <h2 class="pageTit">제안서 제출 가능 목록</h2>
+        <p class="pageSub">대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해 주세요.</p>
         <ul class="breadcrumb">
            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
            <li><a href="#none"><span>1뎁스</span></a></li>
@@ -107,8 +109,8 @@
       <h2 class="hide">콘텐츠 영역</h2>
       <section>
         CONTENTS
-        <!-- <button onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
-        <button onclick='layer_confirm("ㅁㄴㅇㄹ", this , function(){alert(2)}, function(){alert(3)} )'>confirm</button> -->
+        <!-- <button type="button" onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
+        <button type="button" onclick='layer_confirm("ㅁㄴㅇㄹ", this , function(){alert(2)}, function(){alert(3)} )'>confirm</button> -->
       </section>
 
       <!-- 하단 풀 배너 : start -->

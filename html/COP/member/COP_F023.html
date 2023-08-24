@@ -48,12 +48,12 @@
 
     <section class="formListBlock">
       <h3 class="titH3 hasLine">법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable">
+      <div class="formListTable formSmTable">
         <table>
           <caption>회원가입정보 법인회사정보</caption>
           <colgroup>
             <col width="186px">
-            <col wieth="auto">
+            <col width="auto">
           </colgroup>
           <tbody>
             <tr>
@@ -61,11 +61,15 @@
                 <label id="inpBizNum">사업자등록번호</label>
               </th>
               <td>
-                <div class="inputWrap inputBizNumber"role="group" aria-labelledby="inpBizNum">
-                  <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
-                  <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
-                  <input class="input" type="text" placeholder="00000" value="" maxlength="5">
-                  <button class="btnWhite">사업자등록번호 검증</button>
+                <div class="controlWrap">
+                  <div class="controls">
+                    <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
+                      <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3"> -
+                      <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2"> -
+                      <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
+                    </div>
+                    <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -74,7 +78,7 @@
                 <label for="inpAdd">상호명</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
                 </div>
               </td>
@@ -84,7 +88,7 @@
                 <label for="inpBizTel">회사대표번호</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
                 </div>
               </td>
@@ -95,7 +99,7 @@
               </th>
               <td>
                 <div class="formVertical">
-                  <div class="inputWrap wid400">
+                  <div class="controlWrap">
                     <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
                   </div>
                   <div class="radioGroup">
@@ -121,12 +125,12 @@
     </section>
     <section class="formListBlock">
       <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable">
+      <div class="formListTable formSmTable">
         <table>
           <caption>회원가입정보 기본정보</caption>
           <colgroup>
             <col width="186px">
-            <col wieth="auto">
+            <col />
           </colgroup>
           <tbody>
             <tr>
@@ -134,9 +138,9 @@
                 <label for="inpId">아이디</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpId" class="input" type="text" placeholder="영문, 숫자포함 20자내, 비속어 금지" value="">
-                  <button class="btnWhite">중복 체크</button>
+                  <button type="button" class="btnWhite">중복 체크</button>
                   <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
                 </div>
               </td>
@@ -146,7 +150,7 @@
                 <label for="inpPw">비밀번호</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpPw" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
@@ -156,7 +160,7 @@
                 <label for="inpPwCheck">비밀번호 확인</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
                 </div>
               </td>
@@ -166,9 +170,9 @@
                 <label for="inpAdd">대표자 휴대전화</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpAdd" class="input" type="text" placeholder="대표자 본인 명의 휴대전화 - 없이 입력" value="">
-                  <button class="btnWhite">본인확인</button>
+                  <button type="button" class="btnWhite">본인확인</button>
                 </div>
               </td>
             </tr>
@@ -177,7 +181,7 @@
                 <label for="inpEmail">대표자 이메일</label>
               </th>
               <td>
-                <div class="inputWrap wid400">
+                <div class="controlWrap">
                   <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
                 </div>
               </td>
@@ -193,8 +197,8 @@
                         <label for="ckbMember1"><span></span>대표자 동일</label>
                       </span>
                       <div class="addBtnSet">
-                        <button class="btnPlus"><span class="hide">리스트 추가</span></button>
-                        <button class="btnMinus"><span class="hide">리스트 삭제</span></button>
+                        <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
+                        <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
                       </div>
                     </div>
                     <div class="formListTable">
@@ -202,9 +206,9 @@
                         <caption>회원가입정보 법인회사정보</caption>
                         <colgroup>
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                         </colgroup>
                         <tbody>
                           <tr>
@@ -212,7 +216,7 @@
                               <label for="inpIdBox1">담당자 명</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -220,7 +224,7 @@
                               <label for="inpIdBox2">직함</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -230,7 +234,7 @@
                               <label for="inpIdBox3">담당자 이메일</label>
                             </th>
                             <td colspan="3">
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -240,7 +244,7 @@
                               <label for="inpIdBox4">유선번호</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -251,7 +255,7 @@
                               </span>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -267,8 +271,8 @@
                         <label for="ckbMember1"><span></span>대표자 동일</label>
                       </span>
                       <div class="addBtnSet">
-                        <button class="btnPlus"><span class="hide">리스트 추가</span></button>
-                        <button class="btnMinus"><span class="hide">리스트 삭제</span></button>
+                        <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
+                        <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
                       </div>
                     </div>
                     <div class="formListTable">
@@ -276,9 +280,9 @@
                         <caption>회원가입정보 법인회사정보</caption>
                         <colgroup>
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                         </colgroup>
                         <tbody>
                           <tr>
@@ -286,7 +290,7 @@
                               <label for="inpIdBox1">담당자 명</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -294,7 +298,7 @@
                               <label for="inpIdBox2">직함</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -304,7 +308,7 @@
                               <label for="inpIdBox3">담당자 이메일</label>
                             </th>
                             <td colspan="3">
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -314,7 +318,7 @@
                               <label for="inpIdBox4">유선번호</label>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox4" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -325,7 +329,7 @@
                               </span>
                             </th>
                             <td>
-                              <div class="inputWrap widFull">
+                              <div class="controlWrap">
                                 <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
@@ -349,7 +353,7 @@
                       <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
                       <label for="testRdoBank1"><span></span>신한은행</label>
                     </span>
-                    <span class="inputWrap">
+                    <span class="controlWrap">
                       <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
                     </span>
                   </div>
@@ -367,7 +371,7 @@
                         <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
                         <label for="testRdoSns3"><span></span>기타</label>
                       </span>
-                      <span class="inputWrap">
+                      <span class="controlWrap">
                         <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
                       </span>
                     </div>
@@ -382,58 +386,20 @@
 
     </section>
 
+    
+    <div class="table_bt">
+      <div class="btn_c">
+        <button type="button" class="btnBlue">가입</button>
+      </div>
+    </div>
+
+
 
   </div>
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
 
-<script>
-</script>
-    <!-- **************** -->
-    <!-- footer : start -->
-    <!-- **************** -->
-    <hr/>
-    <footer id="skip_footer"  aria-label="푸터">
-       <div class="footerWrap">
-        <ul class="footerLnk">
-          <li><a href="#none">고객센터</a></li>
-          <li><a href="#none">약관동의</a></li>
-          <li><a href="#none">대출신청 정보 제공 동의</a></li>
-          <li><a href="#none">자금 세탁 방지법</a></li>
-          <li><a href="#none">대출 서비스 안내</a></li>
-         </ul>
-         <div class="copy">
-          <p>
-            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
-            <span>Copyright Since 2023</span>
-          </p>
-          <div class="wa">
-            <img src="./images/common/wa-logo.png" alt="">
-          </div>
-         </div>
-       </div>
-    </footer>
-    <!-- **************** -->
-    <!-- footer : end -->
-    <!-- **************** -->
-  </div>
-<script>
-  
-</script>
-
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap">
-    <div class="layerHeader"></div>
-    <div class="layerContainer"></div>
-    <div class="layerFooter"></div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
 
 </body>
 </html>
