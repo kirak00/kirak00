@@ -264,6 +264,7 @@ button.sm       {height:50px; }
 /* .formRow { display: flex; align-items: center; gap: 10px; vertical-align: middle;} */
 .formRow button { margin-left: 5px;}
 .formRow .unit { display: inline-block; margin-left: 6px; vertical-align: middle; margin-right:6px;}
+.formRow > div > .unit {margin-left:0; margin-right:0; }
 .formRow .unit:first-child { margin-left:0; }
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
@@ -284,8 +285,8 @@ input[type=text].innerTxt_1.wid_12 {width:12%; }
 
 .formRow .input:disabled + .unit { background: #f4f6f8;}
 
-.inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
-.inputBizNumber .input { text-align: center; }
+.inputBizNumber { display: inline-flex; width: 578px; align-items: center; gap: 8px; }
+.inputBizNumber .input { text-align: center;  width: 100%; }
 
 
 
@@ -305,7 +306,8 @@ select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
 select {  display: inline-block; vertical-align: middle; min-width:140px; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 select.selectSm { min-width: 206px;}
-select.w-300 { min-width: 300px;}
+select.wid300 { min-width: 300px;}
+select.wid145 { min-width: 145px !important;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
@@ -348,7 +350,7 @@ select.w-300 { min-width: 300px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
+.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding:17px 0; padding-left: 16px; padding-right: 30px; }
 .searchControlItem .formRow { display: inline-block; height: 100%;}
 .searchControlItem .formRow .select { position: relative; height: 100%; }
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
@@ -357,6 +359,9 @@ select.w-300 { min-width: 300px;}
 .searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
 .searchControlItem .formRow .select::before, 
 .searchControlItem .formRow .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+
+.searchControlItem .formRow .line  {display:inline-block; height:20px; width:1px; margin-right:-4px; background:url(../images/common/line_bar.png) no-repeat 0 50%;}
+
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -423,7 +428,7 @@ select.w-300 { min-width: 300px;}
 .formListTable th .checkbox { font-weight: 400;}
 .formListTable .formRow {min-height: 64px;} 
 .formListTable td { padding: 15px 0; text-align: left;}
-.formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
+.formGrayBox .formListTable th { padding: 30px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite { height: 64px; padding: 0 50px; line-height: 64px;}
@@ -452,6 +457,9 @@ td .formListTable { margin-top: 25px;}
 .formFullTable .guarant .input:nth-child(1) { width: 100px; }
 .formFullTable .guarant .input:nth-child(2) { width: 140px; }
 .formFullTable .guarant .input:nth-child(3) { width: 100%; }
+
+
+
 
 .formMdTable .input,
 .formMdTable .inputBizNumber {  width: 578px; }

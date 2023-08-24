@@ -200,4 +200,10 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .lineBox_table .line table tr:last-child td {border-bottom:0}
 .lineBox_table .line table td.tit {text-align: left; padding-left:20px; }
 
+
+.setting_alert .formListTable   {}
+.setting_alert .formListTable select  {min-width:430px}
+.setting_alert .formListTable ~ .table_bt  {margin-top:45px; }
+
+
 /* 진희 */
