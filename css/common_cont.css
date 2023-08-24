@@ -289,7 +289,6 @@ input[type=text].innerTxt_1.wid_12 {width:12%; }
 
 
 
-
 /* file */
 .fileForm {display: flex; padding-top:40px ; gap:8px;  }
 .fileForm label {font-weight: 700; line-height: 64px; padding-right:12px; }
@@ -317,6 +316,7 @@ select.w-300 { min-width: 300px;}
 /* 폼그룹 */
 .formRow    {position:relative;}
 .formRow.flex    {display:flex; flex-direction: row; gap:10px }
+.formRow.flex button    {margin-left:0; }
 .formRow + .formRow    {margin-top:10px; }
 .formRow.w673 { width: 673px; display:flex;}
 .formRow.w673 .input { width: 100%;}
@@ -349,7 +349,6 @@ select.w-300 { min-width: 300px;}
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
 .searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
-<<<<<<< HEAD
 .searchControlItem .formRow { display: inline-block; height: 100%;}
 .searchControlItem .formRow .select { position: relative; height: 100%; }
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
@@ -358,15 +357,6 @@ select.w-300 { min-width: 300px;}
 .searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
 .searchControlItem .formRow .select::before, 
 .searchControlItem .formRow .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
-=======
-.searchControlItem .controls { display: inline-block; height: 100%;}
-.searchControlItem .controls .select { position: relative; height: 100%; }
-.searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .controls .select::before, 
-.searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
->>>>>>> e96a2610808aa93f276e52532383ce0d15097924
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -466,6 +456,9 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .input,
 .formMdTable .inputBizNumber {  width: 578px; }
 .formMdTable .inputBizNumber .input { width: 100%; flex: 1;}
+.formMdTable .inputBoss { display: inline-flex; align-items: center; gap: 10px; width: 578px; }
+.formMdTable .inputBoss .input  {}
+.formMdTable .inputBoss .input + .input {width:170px;}
 .formMdTable .formVertical,
 .formMdTable .formRow { width: 578px;}
 .formMdTable .formVertical .input { width: 100%;}
@@ -480,7 +473,7 @@ td .formListTable { margin-top: 25px;}
 
 
 .formXsTable .input,
-.formXsTable .select,
+.formXsTable select,
 .formXsTable .dateControl { width: 218px; }
 .formXsTable .dateControl .input { width: 100%;}
 
