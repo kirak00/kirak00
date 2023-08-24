@@ -643,11 +643,12 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
 .table_top .total     {float:left; }
+.table_top .tipTxt    {float:left; padding-top:20px; color:#555;    }
 .table_top .sortBox   {float:right;  }
 .table_top .sortBox .select {margin-left:6px; }
 .table_top .sortBox .select select { width: 100%; height: 50px; }
 
-.table_bt      {width:100%;  padding:60px 0 0px; min-height:64px; box-sizing: content-box; }
+.table_bt      {width:100%;  padding:20px 0 0px; min-height:64px; box-sizing: content-box; }
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
@@ -655,6 +656,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt .btn_c button {min-width:225px; }
 .table_bt button + button      {margin-left:6px; }
 
+.bbsDetailBox ~ .table_bt      {padding:60px 0 0px;}
 .table_wrap    {}
 
 table.bbs_list    {width:100%;; }

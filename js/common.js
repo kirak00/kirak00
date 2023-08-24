@@ -17,9 +17,37 @@ $(function(){
   datepickerRange_init();
 
   accordion();
-  tabScript()
+  tabScript();
+  messageList()
 
 });
+
+function messageList(){
+  var chk =  $(".messageList input[type=checkbox]");
+  chk.on("click",function(){
+    if(this.classList.contains("chk_all")){
+      
+      if(!this.checked){
+        $(".messageList tr").removeClass("checked")
+        chk.each(function(i,o){
+          o.checked=false
+        })
+      }else{
+        $(".messageList tr").removeClass("checked").addClass("checked")
+        chk.each(function(i,o){
+          o.checked=true
+        })
+      }
+      
+    }else{
+      if(this.checked){
+        $(this).closest("tr").addClass("checked");
+      }else{
+        $(this).closest("tr").removeClass("checked");
+      }
+    }
+  })
+}
 
 
 function tabScript(){
