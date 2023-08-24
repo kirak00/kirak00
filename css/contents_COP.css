@@ -51,6 +51,7 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .proposalManage .fixedTable { margin-top: 40px;}
 .proposalManage .fixedTable .defaultTable { height: 660px;}
 .proposalManage .formFullTable .radioGroup { min-height: 0;}
+.proposalManage .formFullTable tr th ~ th { padding-left: 76px;}
 
 /* faq */ 
 .faqPage .accordion { margin-top: 60px;}
@@ -64,6 +65,16 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .defaultTable .reply td:nth-child(2)::before,
 .defaultTable .quest td:nth-child(2)::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 5px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 
+/* 법인회원정보 */
+.bizMemberInfo .formListTable { position: relative}
+.bizMemberInfo .formListTable tr th ~ th { padding-left: 40px;}
+.bizMemberInfo .formListTable ~ .formListTable { margin-top: 25px; padding-top: 25px; border-top: 1px solid #ddd;}
+.bizMemberInfo .formListTable td { vertical-align: top;}
+.bizMemberInfo .formListTable .checkbox label { font-weight: 700;}
+.bizMemberInfo .addBtnSet { position: absolute; top: 15px; right: 0; column-gap: 10px;}
+.bizMemberInfo .addBtnSet .btnMinus,
+.bizMemberInfo .addBtnSet .btnPlus { width: 64px; height: 64px;}
+.bizMemberInfo .formListTable ~ .formListTable .addBtnSet { top: 40px;}
 /* 락 */
 /* 메인 */
 
@@ -117,10 +128,7 @@ ul.evtThumList li.end::before    {content:"종료된 이벤트 입니다."; posi
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #323C94; }
 
-/* 페이지 테이블 - 가입 */
-.joinTable .input { width: 400px;}
-.formGrayBox .inputWrap:not(.hasUnit) { display: block;}
-.formGrayBox .input { width: 100%;}
+
 
 
 

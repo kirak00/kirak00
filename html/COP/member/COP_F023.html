@@ -48,12 +48,12 @@
 
     <section class="formListBlock">
       <h3 class="titH3 hasLine">법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable joinTable">
+      <div class="formListTable formSmTable">
         <table>
           <caption>회원가입정보 법인회사정보</caption>
           <colgroup>
             <col width="186px">
-            <col wieth="auto">
+            <col width="auto">
           </colgroup>
           <tbody>
             <tr>
@@ -61,11 +61,15 @@
                 <label id="inpBizNum">사업자등록번호</label>
               </th>
               <td>
-                <div class="inputWrap inputBizNumber" role="group" aria-labelledby="inpBizNum">
-                  <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
-                  <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
-                  <input class="input" type="text" placeholder="00000" value="" maxlength="5">
-                  <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                <div class="inputWrap">
+                  <div class="controls">
+                    <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
+                      <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3"> -
+                      <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2"> -
+                      <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
+                    </div>
+                    <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -121,7 +125,7 @@
     </section>
     <section class="formListBlock">
       <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable joinTable">
+      <div class="formListTable formSmTable">
         <table>
           <caption>회원가입정보 기본정보</caption>
           <colgroup>
@@ -202,9 +206,9 @@
                         <caption>회원가입정보 법인회사정보</caption>
                         <colgroup>
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                         </colgroup>
                         <tbody>
                           <tr>
@@ -276,9 +280,9 @@
                         <caption>회원가입정보 법인회사정보</caption>
                         <colgroup>
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                           <col width="186px">
-                          <col wieth="auto">
+                          <col width="auto">
                         </colgroup>
                         <tbody>
                           <tr>
@@ -383,9 +387,11 @@
     </section>
 
     
-    <section class="bottomBtn">
-      <button type="button" class="btnBlue">가입</button>
-    </section>
+    <div class="table_bt">
+      <div class="btn_c">
+        <button type="button" class="btnBlue">가입</button>
+      </div>
+    </div>
 
 
 

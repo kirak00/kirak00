@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/contents_COP.css">
   <script src="../../js/juqery-3.7.0.min.js"></script>
   <script src="../../js/jquery-ui.js"></script>
   <script src="../../js/common.js"></script>
   <script src="../../js/common_COP.js"></script>
   <link rel="stylesheet" href="./guide.css" />
+  <link rel="stylesheet" href="../../css/contents_COP.css">
   <title>SHINHAN</title>
 <style>
 
@@ -38,7 +38,42 @@
         <li><button type="button" role="tab" id="tab-2" aria-selected="false">당첨자 발표</button></li>
         <li><button type="button" role="tab" id="tab-3" aria-selected="false">종료된 이벤트</button></li> 
       </ul>
+
+      <h1 class="c-h1">innerTab Tab</h1>
+      
+      <!-- 탭 안의 탭 -->
+      <ul class="innerTab tabScript" role="tablist">
+        <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true">진행중인 이벤트</button></li>
+        <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">당첨자 발표</button></li>
+        <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">종료된 이벤트</button></li> 
+      </ul>
   
+      <h1 class="c-h1">Line Tab</h1>
+
+      <div class="tabLineWrap">
+        <ul class="tabLine tabScript" role="tablist">
+          <li class="on"><button type="button" role="tab" id="Linetab_1" aria-selected="true">법인</button></li>
+          <li><button type="button" role="tab" id="Linetab_2" aria-selected="false">담당자</button></li>
+          <li><button type="button" role="tab" id="Linetab_3" aria-selected="false">기업 정보</button></li>
+        </ul>
+      </div>
+      <!-- <div class="tabWrap">
+        <ul role="tablist" class="tabLine tabScript">
+          <li><button id="tab_1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">법인</button></li>
+          <li><button id="tab_2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2" tabindex="-1">담당자</button></li>
+          <li><button id="tab_3" type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3" tabindex="-1">기업 정보</button></li>
+        </ul>
+        <div id="tabpanel_1" role="tabpanel" tabindex="0" aria-labelledby="tab_1">
+          탭내용1
+        </div>
+        <div id="tabpanel_2" role="tabpanel" tabindex="0" aria-labelledby="tab_2" class="isHidden">
+          탭내용2
+        </div>
+        <div id="tabpanel_3" role="tabpanel" tabindex="0" aria-labelledby="tab_3" class="isHidden">
+          탭내용3
+        </div>
+      </div> -->
+              
 
   </div>
 
