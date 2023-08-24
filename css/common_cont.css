@@ -268,7 +268,7 @@ button.sm       {height:50px; }
 .input.wid400 { width: 400px;}
 .inputWrap.hasUnit .input { width: 70px;}
 
-.controlWrap button { margin-left: 5px;}
+/* .controlWrap button { margin-left: 5px;} */
 .controlWrap .unit { display: inline-block; margin-left: 6px; vertical-align: middle;}
 .controlWrap .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
@@ -277,7 +277,7 @@ button.sm       {height:50px; }
 .controlWrap.hasError .input {  border: 1px solid #FE5050}
 .controlWrap.hasError .errorTxt { display: block; }
 .controlWrap.hasError .input:disabled { background: #f4f6f8;}
-
+.inputWrap { position: relative; display: inline-block; }
 .inputWrap.hasUnit {padding: 0 0 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
 .inputWrap.hasUnit::after {content:""; display:block; clear: both;}
 .inputWrap.hasUnit .input { float:left; padding: 0 14px 0 20px; border: 0;}
@@ -353,7 +353,6 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 .searchControlItem .controls select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
 .searchControlItem .controls .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
 .searchControlItem .controls .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .controls .inputWrap { position: relative; display: inline-block; }
 .searchControlItem .controls .select::before, 
 .searchControlItem .controls .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
 
