@@ -181,7 +181,7 @@ a.download       {padding-left:32px; font-weight: 700; color:#323C94;  backgroun
 
 button.xl      {height:70px; }
 button.sm       {height:50px; }
-.wid_530      {min-width:530px;}
+.wid530      {min-width:530px;}
 
 
 /****************************
@@ -221,7 +221,7 @@ button.sm       {height:50px; }
 .radio input[type=radio]:disabled + label.disableOn span { background: url("../images/COP/radio_disabled_active.png") no-repeat} */
 
 /* 라디오 버튼 */
-/* .radioBtn { display: flex; gap: 8px; } */
+.radioBtn { display: inline-block; vertical-align: middle; margin-right:4px  }
 .radioBtn + .radioBtn { margin-left: -2px;}
 .radioBtn + input[type="text"] { margin-left: 0px;}
 .radioBtn input[type=radio]{ display: none; }
@@ -288,6 +288,7 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
 
+
 .inputBizNumber .input { text-align: center; }
 .inputBizNumber.type2 .input:nth-of-type(1) { width: 80px;}
 .inputBizNumber.type2 .input:nth-of-type(2) { width: 68px;}
@@ -306,16 +307,16 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0;}
-select { height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
-select.w-300 { min-width: 300px;}
+select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
+select.selectSm { min-width: 206px;}
+select.wid300 { min-width: 300px;}
+select.wid145 { min-width: 145px !important;}
+
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 .layerCont .textarea { min-height: 180px;}
-
-
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
@@ -338,13 +339,16 @@ select.w-300 { min-width: 300px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 
 .searchControlItem {display: inline-block; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px;}
-.searchControlItem .formItem { display: inline-block; height: 100%;}
-.searchControlItem .formItem select { position: relative; height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .formItem .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .formItem .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .formItem select::before, 
-.searchControlItem .formItem .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding:17px 0; padding-left: 16px; padding-right: 30px; }
+.searchControlItem .formRow { display: inline-block; height: 100%;}
+.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
+.searchControlItem .formRow .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
+.searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
+.searchControlItem .formRow .select::before, 
+.searchControlItem .formRow .inputWrap::before { content: ''; display: block; position: absolute; left: 0; top: 20px; width: 1px; height: 20px; background: #ddd;}
+.searchControlItem .formRow .line  {display:inline-block; height:20px; width:1px; margin-right:-4px; background:url(../images/common/line_bar.png) no-repeat 0 50%;}
+
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -404,9 +408,10 @@ select.w-300 { min-width: 300px;}
 .formListTable { margin-top: 45px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
+
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left;}
-.formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
+.formGrayBox .formListTable th { padding: 30px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite,
@@ -428,8 +433,7 @@ td .formListTable { margin-top: 25px;}
 
 /* 페이지 테이블 - 제안서 제출 */
 .formFullTable .textarea,
-.formFullTable .input { width: 100%; }
-/* .formFullTable .formRow:not(.hasUnit) { display: block; flex: 1;} */
+.formFullTable input[type=text] { width: 100%; }
 .formFullTable select { width: 206px;}
 .formFullTable .dateControl .input { width: 540px;}
 .formFullTable .input.inputXs { width: 58px;}
@@ -444,17 +448,9 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.wid400 { width: 400px; flex-shrink: 0;}
-
-
-/* .formSmTable .inputBizNumber,
-.formSmTable .formRow { width: 400px; flex-shrink: 0;}
-.formSmTable .inputBizNumber .input,
-.formSmTable .formRow .input { width: 100%;} */
-
 .formMdTable .formGrayBox .formRow { width: 100%;}
-/* .formGrayBox .formRow:not(.hasUnit) { display: block;} */
-.formGrayBox .input { width: 100%;}
 
+.formGrayBox .input { width: 100%;}
 
 .formXsTable .input,
 .formXsTable select,
@@ -766,7 +762,7 @@ th{word-break: break-all;}
 
 .layerCont        { max-height: calc(100vh - 400px); overflow: auto; }
 
-.layerWrap .layerBody.wid-870       {width:870px;  }
+.layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}

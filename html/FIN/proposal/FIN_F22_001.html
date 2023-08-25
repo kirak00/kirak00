@@ -65,17 +65,15 @@
               <th>
                 <label id="formLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
               </th>
-              <td>
-                <div role="group" aria-labelledby="formLabel2">
-                  <div class="formRow">
-                    <select>
-                      <option value="10개씩 보기">운전자금</option>
-                      <option value="20개씩 보기">20씩 보기</option>
-                    </select>
-                  </div>
-                  <div class="formRow">
-                    <textarea class="textarea">제안서를 제출합니다.</textarea>
-                  </div>
+              <td role="group" aria-labelledby="formLabel2">
+                <div class="formRow">
+                  <select>
+                    <option value="10개씩 보기">운전자금</option>
+                    <option value="20개씩 보기">20씩 보기</option>
+                  </select>
+                </div>
+                <div class="formRow">
+                  <textarea class="textarea">제안서를 제출합니다.</textarea>
                 </div>
               </td>
             </tr>
@@ -140,35 +138,33 @@
               <th scope="row">
                 <label id="inpLabel7"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th>
-              <td>
-                <div role="group" aria-labelledby="inpLabel7">
+              <td role="group" aria-labelledby="inpLabel7">
+                <div class="formRow">
+                  <span class="radio ht64">
+                    <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+                    <label for="testRdoBank1"><span></span>담보 불필요</label>
+                  </span>
+                  <span class="radio ht64">
+                    <input type="radio" id="testRdoBank2" name="testRdoBank" value="" />
+                    <label for="testRdoBank2"><span></span>담보 필요</label>
+                  </span>
+                </div>
+                <div class="formAdd">
                   <div class="formRow">
-                    <span class="radio ht64">
-                      <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
-                      <label for="testRdoBank1"><span></span>담보 불필요</label>
-                    </span>
-                    <span class="radio ht64">
-                      <input type="radio" id="testRdoBank2" name="testRdoBank" value="" />
-                      <label for="testRdoBank2"><span></span>담보 필요</label>
-                    </span>
+                    <select title="담보종류 선택">
+                      <option value="담보종류">담보종류</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                    <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                    <button type="button" class="btnPlus"></button>
                   </div>
-                  <div class="formAdd">
-                    <div class="formRow">
-                      <select title="담보종류 선택">
-                        <option value="담보종류">담보종류</option>
-                        <option value="옵션">옵션</option>
-                      </select>
-                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
-                      <button type="button" class="btnPlus"></button>
-                    </div>
-                    <div class="formRow">
-                      <select title="담보종류 선택">
-                        <option value="담보종류">담보종류</option>
-                        <option value="옵션">옵션</option>
-                      </select>
-                      <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
-                      <button type="button" class="btnMinus"></button>
-                    </div>
+                  <div class="formRow">
+                    <select title="담보종류 선택">
+                      <option value="담보종류">담보종류</option>
+                      <option value="옵션">옵션</option>
+                    </select>
+                    <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                    <button type="button" class="btnMinus"></button>
                   </div>
                 </div>
               </td>
