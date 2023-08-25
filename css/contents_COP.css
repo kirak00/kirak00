@@ -75,9 +75,30 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .bizMemberInfo .addBtnSet .btnMinus,
 .bizMemberInfo .addBtnSet .btnPlus { width: 64px; height: 64px;}
 .bizMemberInfo .formListTable ~ .formListTable .addBtnSet { top: 40px;}
+
 /* 락 */
 /* 메인 */
 
+.main header::after {height:760px; }
+
+.main_visual_logout     {padding:40px 0 105px; width:1270px; margin:0 auto; }
+.main_visual_logout .txtBox   {padding:53px 0 23px; font-size:40px; color:#fff; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
+.main_visual_logout button   {margin-top:20px; }
+
+
+.main .serviceInfo_tit      {padding:60px 0; font-size:34px; font-weight: 700; text-align: center;}
+
+
+.bnr_associate    {margin-top:100px; }
+.bnr_associate .tit    {text-align: center;}
+.bnr_associate .tit strong    {display:block; font-size:34px; font-weight: 700;}
+.bnr_associate .tit p    {}
+
+.main_bnr_list          {display:flex; justify-content: space-between; margin-top:60px; }
+.main_bnr_list span.btnItem        {width:200px; height:70px; display:flex; border:1px solid #ddd; border-radius:8px; margin:auto 0;   }
+.main_bnr_list span.btnItem img    {margin:auto; }
+
+.main section.bgBox   {background:#fff; border-radius: 16px 16px 0 0 ;}
 
 
 /* 약관 */

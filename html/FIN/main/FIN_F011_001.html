@@ -151,8 +151,10 @@
             <button type="button" class="btnBlue">전체보기</button>
           </div>
 
-          <div>
-            총 15건
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
           </div>
           <div id="jsGrid_1" class="bbs"></div>
           <div class="no-data">
@@ -164,32 +166,32 @@
             $(function () {
 
               var main_list_data_1 = [{
-                  "관심<br>대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "상태": '심사전',
-                  "법인명": 'askldjfn',
-                  "희망 신청 금액": "1억 2000만원 <br>~ 2억",
-                  "지역": '서울',
-                  "업종": '건설',
-                  "자금 용도": '운전자금',
-                  "담보<br>유무": '유',
-                  "특허<br>보유 <br>여부": '미보유',
-                  "CRETOP <br>등급": 'AAA+',
-                  "제안서 마감일": '서울',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": 'askldjfn',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
                 {
-                  "관심<br>대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "상태": '심사전',
-                  "법인명": 'askldjfn',
-                  "희망 신청 금액": "1억 2000만원 <br>~ 2억",
-                  "지역": '서울',
-                  "업종": '건설',
-                  "자금 용도": '시설자금',
-                  "담보<br>유무": '유',
-                  "특허 보유 <br>여부": '미보유',
-                  "CRETOP <br>등급": 'AAA+',
-                  "제안서 마감일": '서울',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": '(주)****',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
               ];
 
@@ -201,18 +203,18 @@
                 pageSize: 10,
                 data: main_list_data_1,
                 fields: [
-                  {width: 100, name: "관심<br>대출", type: "text", },
-                  {width: 120, name: "법인명", type: "text", },
-                  {width: 140, name: "희망 신청 금액", type: "text", },
-                  {width: 70, name: "지역", type: "text",},
-                  {width: 70, name: "지역", type: "text",},
-                  {width: 70, name: "업종", type: "text",},
-                  {width: 70, name: "자금 용도", type: "text",},
-                  {width: 80, name: "담보<br>유무", type: "text",},
-                  {width: 120, name: "특허 보유 <br>여부", type: "text",},
-                  {width: 120, name: "CRETOP <br>등급", type: "text",},
-                  {width: 130, name: "제안서 마감일", type: "text",},
-                  {width: 200, name: "상세보기", type: "text", sorting: false}
+                  {name:"N1", width: 100, title: "관심<br>대출", type: "text", },
+                  {name:"N2", width: 100, title: "상태", type: "text", },
+                  {name:"N3", width: 120, title: "법인명", type: "text", },
+                  {name:"N4", width: 140, title: "희망 신청 금액", type: "text", },
+                  {name:"N5", width: 70, title: "지역", type: "text",},
+                  {name:"N6", width: 70, title: "업종", type: "text",},
+                  {name:"N7", width: 70, title: "자금 용도", type: "text",},
+                  {name:"N8", width: 80, title: "담보<br>유무", type: "text",},
+                  {name:"N9", width: 120, title: "특허 보유 <br>여부", type: "text",},
+                  {name:"N10", width: 120, title: "CRETOP <br>등급", type: "text",},
+                  {name:"N11", width: 130, title: "제안서 마감일", type: "text",},
+                  {name:"N12", width: 200, title: "상세보기", type: "text", sorting: false}
                 ],
 
                 pagerContainer: "#externalPager_1",
@@ -243,8 +245,10 @@
             <button type="button" class="btnBlue">전체보기</button>
           </div>
 
-          <div>
-            총 15건
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
           </div>
           <div id="jsGrid_2" class="bbs"></div>
           <div id="externalPager_2" class="external-pager"></div>
@@ -253,26 +257,26 @@
             $(function () {
 
               var main_list_data_2 = [{
-                  "관심 대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "제안서": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
-                  "마감 기한 연장 요청": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
-                  "법인명": '(주)길동건설',
-                  "희망 신청 금액": "1억 2000만원 <br>~ 2억",
-                  "지역": '서울',
-                  "자금 용도": '운전자금',
-                  "담보 유무": '유',
-                  "제안서 마감일": '2023-08-30',
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
+                  "N3": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
+                  "N4": '(주)길동건설',
+                  "N5": "1억 2000만원 <br>~ 2억",
+                  "N6": '서울',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '2023-08-30',
                 },
                 {
-                  "관심<br>대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "제안서": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
-                  "마감 기한 연장 요청": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
-                  "법인명": '(주)길동건설',
-                  "희망 신청 금액": "1억 2000만원 <br>~ 2억",
-                  "지역": '서울',
-                  "자금 용도": '운전자금',
-                  "담보 유무": '유',
-                  "제안서 마감일": '2023-08-30',
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
+                  "N3": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
+                  "N4": '(주)길동건설',
+                  "N5": "1억 2000만원 <br>~ 2억",
+                  "N6": '서울',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '2023-08-30',
                 },
               ];
 
@@ -284,15 +288,15 @@
                 pageSize: 10,
                 data: main_list_data_2,
                 fields: [
-                  {width: 100, name: "관심 대출", type: "text", },
-                  {width: 120, name: "제안서", type: "text", },
-                  {width: 300, name: "마감 기한 연장 요청", type: "text",},
-                  {width: 120, name: "법인명", type: "text",},
-                  {width: 200, name: "희망 신청 금액", type: "text", },
-                  {width: 80, name: "지역", type: "text",},
-                  {width: 130, name: "자금 용도", type: "text",},
-                  {width: 100, name: "담보 유무", type: "text",},
-                  {width: 150, name: "제안서 마감일", type: "text",},
+                  {name:"N1", width: 100, title: "관심 대출", type: "text", },
+                  {name:"N2", width: 120, title: "제안서", type: "text", },
+                  {name:"N3", width: 300, title: "마감 기한 연장 요청", type: "text",},
+                  {name:"N4", width: 120, title: "법인명", type: "text",},
+                  {name:"N5", width: 200, title: "희망 신청 금액", type: "text", },
+                  {name:"N6", width: 80,  title: "지역", type: "text",},
+                  {name:"N7", width: 130, title: "자금 용도", type: "text",},
+                  {name:"N8", width: 100, title: "담보 유무", type: "text",},
+                  {name:"N9", width: 150, title: "제안서 마감일", type: "text",},
                 ],
 
                 pagerContainer: "#externalPager_2",
@@ -325,8 +329,10 @@
             <button type="button" class="btnBlue">전체보기</button>
           </div>
 
-          <div>
-            총 15건
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
           </div>
           <div id="jsGrid_3" class="bbs"></div>
           <div id="externalPager_3" class="external-pager"></div>
@@ -335,15 +341,15 @@
             $(function () {
 
               var main_list_data_3 = [{
-                  "상태": '미채택',
-                  "법인명": 'askldjfn',
-                  "대출 금액": "1억 2000만원 <br>~ 2억",
-                  "담보 유무": '유',
-                  "대출 기간": '24개월',
-                  "제안 금리<br>(평균)": '연 8.65%',
-                  "제출일": '2023-06-25',
-                  "제출자": '홍길동',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": '미채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
               ];
 
@@ -355,15 +361,15 @@
                 pageSize: 10,
                 data: main_list_data_3,
                 fields: [
-                  {width: 100, name: "상태", type: "text", },
-                  {width: 120, name: "법인명", type: "text", },
-                  {width: 200, name: "대출 금액", type: "text", },
-                  {width: 80, name: "담보 유무", type: "text",},
-                  {width: 120, name: "대출기간", type: "text",},
-                  {width: 120, name: "제안 금리<br>(평균)", type: "text",},
-                  {width: 120, name: "제출일", type: "text",},
-                  {width: 120, name: "제출자", type: "text",},
-                  {width: 200, name: "상세보기", type: "text", sorting: false}
+                  {name:"N1", width: 100, title: "상태", type: "text", },
+                  {name:"N2", width: 120, title: "법인명", type: "text", },
+                  {name:"N3", width: 200, title: "대출 금액", type: "text", },
+                  {name:"N4", width: 80,  title: "담보 유무", type: "text",},
+                  {name:"N5", width: 120, title: "대출기간", type: "text",},
+                  {name:"N6", width: 120, title: "제안 금리<br>(평균)", type: "text",},
+                  {name:"N7", width: 120, title: "제출일", type: "text",},
+                  {name:"N8", width: 120, title: "제출자", type: "text",},
+                  {name:"N9", width: 200, title: "상세보기", type: "text", sorting: false}
                 ],
 
                 pagerContainer: "#externalPager_3",
@@ -394,8 +400,10 @@
             <button type="button" class="btnBlue">전체보기</button>
           </div>
 
-          <div>
-            총 15건
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
           </div>
           <div id="jsGrid_4" class="bbs"></div>
           <div id="externalPager_4" class="external-pager"></div>
@@ -405,37 +413,37 @@
 
               var main_list_data_4 = [
                 {
-                  "상태": '채택',
-                  "법인명": 'askldjfn',
-                  "대출 금액": "1억 2000만원 <br>~ 2억",
-                  "담보 유무": '유',
-                  "대출 기간": '24개월',
-                  "제안 금리<br>(평균)": '연 8.65%',
-                  "제출일": '2023-06-25',
-                  "제출자": '홍길동',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
                 {
-                  "상태": '채택',
-                  "법인명": 'askldjfn',
-                  "대출 금액": "1억 2000만원 <br>~ 2억",
-                  "담보 유무": '유',
-                  "대출 기간": '24개월',
-                  "제안 금리<br>(평균)": '연 8.65%',
-                  "제출일": '2023-06-25',
-                  "제출자": '홍길동',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
                 {
-                  "상태": '채택',
-                  "법인명": 'askldjfn',
-                  "대출 금액": "1억 2000만원 <br>~ 2억",
-                  "담보 유무": '유',
-                  "대출 기간": '24개월',
-                  "제안 금리<br>(평균)": '연 8.65%',
-                  "제출일": '2023-06-25',
-                  "제출자": '홍길동',
-                  "상세보기": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
                 },
               ];
 
@@ -447,15 +455,15 @@
                 pageSize: 10,
                 data: main_list_data_4,
                 fields: [
-                  {width: 100, name: "상태", type: "text", },
-                  {width: 120, name: "법인명", type: "text", },
-                  {width: 200, name: "대출 금액", type: "text", },
-                  {width: 80, name: "담보 유무", type: "text",},
-                  {width: 120, name: "대출기간", type: "text",},
-                  {width: 120, name: "제안 금리<br>(평균)", type: "text",},
-                  {width: 120, name: "제출일", type: "text",},
-                  {width: 120, name: "제출자", type: "text",},
-                  {width: 200, name: "상세보기", type: "text", sorting: false}
+                  {name:"N1", width: 100, title: "상태",  type: "text", },
+                  {name:"N2", width: 120, title: "법인명", type: "text", },
+                  {name:"N3", width: 200, title: "대출 금액", type: "text", },
+                  {name:"N4", width: 80,  title: "담보 유무", type: "text",},
+                  {name:"N5", width: 120, title: "대출기간", type: "text",},
+                  {name:"N6", width: 120, title: "제안 금리<br>(평균)", type: "text",},
+                  {name:"N7", width: 120, title: "제출일", type: "text",},
+                  {name:"N8", width: 120, title: "제출자", type: "text",},
+                  {name:"N9", width: 200, title: "상세보기", type: "text", sorting: false}
                 ],
 
                 pagerContainer: "#externalPager_4",

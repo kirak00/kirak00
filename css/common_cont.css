@@ -612,6 +612,14 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginUtilBtn a + a::before {content:'·'; display:inline-block; margin:0 10px; }
 
 
+@media print { 
+  header {display:none;}
+  .mainTop {display:none; }
+  .mng_btns   {display:none; }
+  footer   {display:none; }
+}
+
+
 /****************************
 **********  table  **********
 *****************************/
@@ -625,6 +633,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
 .table_top .total     {float:left; }
+.table_top .total strong{color:#323C94; font-size:24px; }
 .table_top .tipTxt    {float:left; padding-top:20px; color:#555;    }
 .table_top .sortBox   {float:right;  }
 .table_top .sortBox select {margin-left:6px; }
@@ -902,6 +911,10 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 .programDownCont .programList {margin-top:80px; }
 .programDownCont .programList table {}
 .programDownCont .programList table td button { width:170px; }
+
+/* main */
+
+.bnrInerCont      {margin:80px auto;}
 
 
 
