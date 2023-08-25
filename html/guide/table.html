@@ -527,12 +527,12 @@
                 <label id="formLabel1">사업자등록번호</label>
               </th>
               <td>
-                <div class="formRow">
-                  <div class="inputBizNumber" role="group" aria-labelledby="formLabel1">
-                    <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
-                    <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
-                    <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
-                  </div>
+                <div class="formRow inputBizNumber" role="group" aria-labelledby="formLabel1">
+                  <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
                 </div>
               </td>
             </tr>
@@ -571,12 +571,12 @@
                 <label id="formLabel5">회사 대표전화</label>
               </th>
               <td>
-                <div class="formRow">
-                  <div class="inputBizNumber" role="group" aria-labelledby="formLabel5">
-                    <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
-                    <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
-                    <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
-                  </div>
+                <div class="formRow inputBizNumber" role="group" aria-labelledby="formLabel5">
+                  <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
                 </div>
               </td>
             </tr>
@@ -595,12 +595,14 @@
                 <label for="formLabel7">사업장 주소</label>
               </th>
               <td>
-                <div class="formVertical" role="group" aria-labelledby="formLabel7">
+                <div role="group" aria-labelledby="formLabel7">
                   <div class="formRow">
-                    <input class="input" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
+                    <input class="input wid400" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
                     <button type="button" class="btnWhite" disabled>주소검색</button>
                   </div>
-                  <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="4층" readonly>
+                  <div class="formRow">
+                    <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="4층" readonly>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -609,11 +611,9 @@
                 <label for="formLabel8">대표자명</label>
               </th>
               <td>
-                <div class="formVertical">
-                  <div class="formRow" role="group" aria-labelledby="formLabel8">
-                    <input class="input" type="text" placeholder="" value="홍길동" readonly>
-                    <input class="input" type="text" placeholder="" value="1인 대표" readonly>
-                  </div>
+                <div class="formRow" role="group" aria-labelledby="formLabel8">
+                  <input class="input wid400" type="text" placeholder="" value="홍길동" readonly>
+                  <input class="input" type="text" placeholder="" value="1인 대표" readonly>
                 </div>
               </td>
             </tr>
@@ -622,12 +622,12 @@
                 <label id="formLabel9">대표자 휴대전화</label>
               </th>
               <td>
-                <div class="formRow">
-                  <div class="inputBizNumber" role="group" aria-labelledby="formLabel9">
-                    <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly> -
-                    <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly> -
-                    <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
-                  </div>
+                <div class="formRow inputBizNumber" role="group" aria-labelledby="formLabel9">
+                  <input class="input" type="text" placeholder="000" value="" maxlength="3" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00" value="" maxlength="2" readonly>
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="00000" value="" maxlength="5" readonly>
                 </div>
               </td>
             </tr>
@@ -636,78 +636,7 @@
       </div>
 
       <h2 class="c-h2">Form Sm Table - form 너비가 400px인 table</h2>
-      <div class="formListTable formSmTable">
-        <table>
-          <caption>회원가입정보 법인회사정보</caption>
-          <colgroup>
-            <col width="186px">
-            <col width="auto">
-          </colgroup>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <label id="inpBizNum">사업자등록번호</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <div class="formRow">
-                    <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
-                      <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3"> -
-                      <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2"> -
-                      <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
-                    </div>
-                    <button type="button" class="btnWhite">사업자등록번호 검증</button>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label for="inpAdd">상호명</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label for="inpBizTel">회사대표번호</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label for="inpCeo">대표자명</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
-                </div>
-                <div class="formRow">
-                  <span class="radio">
-                    <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
-                    <label for="testRdoBoxA"><span></span>1인 대표</label>
-                  </span>
-                  <span class="radio">
-                    <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
-                    <label for="testRdoBoxB"><span></span>공동 대표</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
-                    <label for="testRdoBoxC"><span></span>각자 대표</label>
-                  </span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
 
       <h2 class="c-h2">Form xs Table - form 너비가 218px인 table</h2>
       <div class="formListTable formXsTable">

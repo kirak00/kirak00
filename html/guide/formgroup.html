@@ -410,8 +410,12 @@
                     </span>
                   </th>
                   <td>
-                    <div class="formRow">
-                      <input id="inpIdBox5" class="input" type="text" placeholder="" value="">
+                    <div class="formRow inputBizNumber" role="group" aria-labelledby="ckbCell1">
+                      <input class="input" type="text" placeholder="" value="">
+                      <span class="unit">-</span>
+                      <input class="input" type="text" placeholder="" value="">
+                      <span class="unit">-</span>
+                      <input class="input" type="text" placeholder="" value="">
                     </div>
                   </td>
                 </tr>
@@ -423,84 +427,85 @@
       <h2 class="c-h2">table form</h2>
 
       <section class="formListBlock">
-        <h3 class="titH3 hasLine">법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3> 
-        <div class="formListTable">
-          <table>
-            <caption>회원가입정보 법인회사정보</caption>
-            <colgroup>
-              <col width="186px">
-              <col wieth="auto">
-            </colgroup>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  <label id="inpBizNum">사업자등록번호</label>
-                </th>
-                <td class="hasError">
-                  <div class="formRow">
-                    <div class="formRow">
-                      <div class="inputBizNumber "role="group" aria-labelledby="inpBizNum">
-                        <input class="input" type="text" placeholder="000" value="" maxlength="3"> -
-                        <input class="input" type="text" placeholder="00" value="" maxlength="2"> -
-                        <input class="input" type="text" placeholder="00000" value="" maxlength="5">
-                      </div>
-                      <button type="button" class="btnWhite">사업자등록번호 검증</button>
-                    </div>
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="inpAdd">상호명</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="inpBizTel">회사대표번호</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="inpCeo">대표자명</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </div>
-                  <div class="formRow">
-                    <span class="radio">
-                      <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
-                      <label for="testRdoBoxA"><span></span>1인 대표</label>
-                    </span>
-                    <span class="radio">
-                      <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
-                      <label for="testRdoBoxB"><span></span>공동 대표</label>
-                    </span>
-                    <span class="radio"> 
-                      <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
-                      <label for="testRdoBoxC"><span></span>각자 대표</label>
-                    </span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <h3 class="titH3 hasLine">법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3> 
+      <div class="formListTable formMdTable">
+        <table>
+          <caption>회원가입정보 법인회사정보</caption>
+          <colgroup>
+            <col width="186px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label id="inpBizNum">사업자등록번호</label>
+              </th>
+              <td>
+                <div class="formRow hasError inputBizNumber" role="group" aria-labelledby="inpBizNum">
+                  <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
+                  <button type="button" class="btnBlue">사업자등록번호 검증</button>
+                </div>
+                <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpAdd">상호명</label>
+              </th>
+              <td>
+                <div class="formRow hasError">
+                  <input id="inpAdd" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
+                </div>
+                <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpBizTel">회사대표번호</label>
+              </th>
+              <td>
+                <div class="formRow inputBizNumber" role="group" aria-labelledby="inpBizTel">
+                  <input class="input" type="text" placeholder="" value="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="" value="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="" value="">
+                </div>
+                <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="inpCeo">대표자명</label>
+              </th>
+              <td>
+                <div class="formRow">
+                  <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
+                </div>
+                <div class="formRow mt20">
+                  <span class="radio">
+                    <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
+                    <label for="testRdoBoxA"><span></span>1인 대표</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
+                    <label for="testRdoBoxB"><span></span>공동 대표</label>
+                  </span>
+                  <span class="radio"> 
+                    <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
+                    <label for="testRdoBoxC"><span></span>각자 대표</label>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
       
 
       <h2 class="c-h2">Textarea(가로/세로사이즈 가변)</h2>

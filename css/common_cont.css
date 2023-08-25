@@ -24,7 +24,7 @@
 **********  align  **********
 *****************************/
 .textCenter { text-align: center;}
-
+.required { margin-right: 4px;; color: #FE5050;}
 
 
 /****************************
@@ -208,16 +208,13 @@ button.sm       {height:50px; }
 /* radio */ 
 .radio { display: inline-block; white-space: nowrap;}
 .radio + input[type="text"] { margin-left: 16px;}
-.formRow .radio + input[type="text"] { margin-left: 6px;}
 .radio + .radio { margin-left:30px; }
-.formRow .radio + .radio { margin-left: 20px;}
-
-.radioBtn + input[type="text"] { margin-left: 0px;}
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid red; border-radius: 50%;}
+
 /* .radio input[type=radio] + label.disable span,
 .radio input[type=radio]:disabled + label span { background: url("../images/COP/radio_disabled_inactive.png") no-repeat}
 .radio input[type=radio] + label.disable span,
@@ -226,7 +223,7 @@ button.sm       {height:50px; }
 /* 라디오 버튼 */
 /* .radioBtn { display: flex; gap: 8px; } */
 .radioBtn + .radioBtn { margin-left: -2px;}
-.formRow .radioBtn + .radioBtn { margin-left: -2px;}
+.radioBtn + input[type="text"] { margin-left: 0px;}
 .radioBtn input[type=radio]{ display: none; }
 .radioBtn input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
 .radioBtn input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
@@ -247,26 +244,36 @@ button.sm       {height:50px; }
 .switch span { display: inline-block; margin-left: 8px;}
 /* fieldset { border: none; display: flex; flex-direction: column; gap: 0.5rem;} */
 
-.required { margin-right: 4px;; color: #FE5050;}
-
 .row { display: flex; align-items: top; justify-content: space-between;}
 .row .label { display: inline-block; padding: 20px 0 0; color: #333; font-size: 20px; font-weight: 700; vertical-align: middle;}
 .row .unit { color: #333; font-size: 20px;}
 .row .btnBlue { display: inline-flex;  }
-.formRow { display: flex; align-items: center; gap: 10px; vertical-align: middle;}
-.formRow + .formRow { margin-top: 10px;}
+
+/* 폼 한줄 그룹  */
+.formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
+.formRow > div { display: flex; align-items: center; gap: 8px;}
+.formRow ~ .formRow { margin-top: 10px;}
 .formRow.mt20 { margin-top: 20px; }
+.formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
+.formRow .unit.mail { margin: 0 8px;}
 
-/* .fieldControl */
+.formRow.wid673 { width: 673px;}
+.formRow.wid673.mt30 { margin-top: 30px;}
+.formRow.wid673 .input { width: 100%;}
+.formRow .radio + input[type="text"] { margin-left: 6px;}
+.formRow .radio + .radio { margin-left: 20px;}
+.formRow .radioBtn + .radioBtn { margin-left: -2px;}
 
-/* 가로사이즈 가변 */
-.input { min-height: 64px; padding: 0 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
+
+/* input */
+.input { min-height: 64px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
 .input::placeholder { color: #999; line-height: normal; }
-/* .input:disabled, .input:read-only, */
-/* .inputWrap.hasUnit:has(.input:disabled), .inputWrap.hasUnit:has(.input:read-only) { background: #f4f6f8; color: #999; } */
+.input:disabled, .input:read-only { background: #f4f6f8; color: #999; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
+.input.wid400 { width: 400px;}
 
+/* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
 input[type=text].innerTxt_2.wid135  { width:135px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:64px;padding-right:20px; text-align: right;  }
@@ -274,31 +281,16 @@ input[type=text].innerTxt_1         { margin-right:-54px;  padding: 0 44px 0 20p
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:64px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1.wid114 {width:114px; }
 
-/* .formRow { position: relative; display: inline-block; } */
-.input.wid400 { width: 400px;}
-.inputWrap.hasUnit .input { width: 70px;}
-
-/* .formRow button { margin-left: 5px;} */
-/* .formRow .unit { display: inline-block; margin-left: 6px; vertical-align: middle;} */
-.formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
+/* 에러 상태 */
+.hasError .input {  border: 1px solid #FE5050}
+.hasError + .errorTxt { display: block; }
+.hasError .input:disabled { background: #f4f6f8;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
-.hasError { flex-direction: column; align-items: flex-start;}
-.hasError .input {  border: 1px solid #FE5050}
-.hasError .errorTxt { display: block; }
-.hasError .input:disabled { background: #f4f6f8;}
-/* .inputWrap { position: relative; display: inline-block; }
-.inputWrap.hasUnit {padding: 0 0 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
-.inputWrap.hasUnit::after {content:""; display:block; clear: both;}
-.inputWrap.hasUnit .input { float:left; padding: 0 14px 0 20px; border: 0;}
-.inputWrap.hasUnit .unit { float:right; display: block; line-height:64px; padding-right:20px; } */
-.formRow .input:disabled + .unit { background: #f4f6f8;}
 
-.inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
 .inputBizNumber .input { text-align: center; }
-.inputBizNumber .input:nth-of-type(1) { width: 80px;}
-.inputBizNumber .input:nth-of-type(2) { width: 68px;}
-
+.inputBizNumber.type2 .input:nth-of-type(1) { width: 80px;}
+.inputBizNumber.type2 .input:nth-of-type(2) { width: 68px;}
 
 /* file */
 .fileForm {display: flex; padding-top:40px ; gap:8px;  }
@@ -323,13 +315,7 @@ select.w-300 { min-width: 300px;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 .layerCont .textarea { min-height: 180px;}
 
-/* 폼그룹 */
-.formRow.wid673 { width: 673px;}
-.formRow.wid673 .radioInput .input { width: 100%;}
 
-.formRow.wid673 { width: 673px;}
-.formRow.wid673 .input { width: 100%;}
-.formRow.wid673.mt30 { margin-top: 30px;}
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
@@ -367,9 +353,6 @@ select.w-300 { min-width: 300px;}
 .formListTable .tr:first-child { margin-top: 0}
 .formListTable .th { display: table-cell; width: 186px; font-weight: 700;}
 .formListTable .td {} */
-
-
-
 
 
 /* Default table */
