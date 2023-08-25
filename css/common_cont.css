@@ -862,7 +862,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 /* bbs */
 .no-data      {height:430px; text-align: center; display:flex; background:#F4F6F8; border-radius: 16px; }
-.no-data span {margin:auto; }
+.no-data span {margin:auto; padding-top:220px; background:url(../images/common/no_data_1.png) no-repeat 50% 0; }
 
 /* bbs detail */
 .bbsDetailBox       {  overflow: hidden; }
