@@ -48,7 +48,7 @@
 
     <section class="formListBlock">
       <h3 class="titH3 hasLine">법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable formSmTable">
+      <div class="formListTable formMdTable">
         <table>
           <caption>회원가입정보 법인회사정보</caption>
           <colgroup>
@@ -62,14 +62,14 @@
               </th>
               <td>
                 <div class="formRow">
-                  <div class="formRow">
-                    <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
-                      <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3"> -
-                      <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2"> -
-                      <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
-                    </div>
-                    <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                  <div class="inputBizNumber" role="group" aria-labelledby="inpBizNum">
+                    <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3">
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2">
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5">
                   </div>
+                  <button type="button" class="btnBlue">사업자등록번호 검증</button>
                 </div>
               </td>
             </tr>
@@ -88,8 +88,12 @@
                 <label for="inpBizTel">회사대표번호</label>
               </th>
               <td>
-                <div class="formRow">
-                  <input id="inpBizTel" class="input" type="text" placeholder="대표 번호를 입력해 주세요." value="">
+                <div class="formRow" role="group" aria-labelledby="inpBizTel">
+                  <input class="input" type="text" placeholder="" value="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="" value="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" placeholder="" value="">
                 </div>
               </td>
             </tr>
@@ -123,7 +127,7 @@
     </section>
     <section class="formListBlock">
       <h3 class="titH3 hasLine">기본정보 입력 <strong class="blue">(필수)</strong></h3> 
-      <div class="formListTable formSmTable">
+      <div class="formListTable formMdTable">
         <table>
           <caption>회원가입정보 기본정보</caption>
           <colgroup>
@@ -138,7 +142,7 @@
               <td>
                 <div class="formRow">
                   <input id="inpId" class="input" type="text" placeholder="영문, 숫자포함 20자내, 비속어 금지" value="">
-                  <button type="button" class="btnWhite">중복 체크</button>
+                  <button type="button" class="btnBlue">중복 체크</button>
                   <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
                 </div>
               </td>
@@ -170,7 +174,7 @@
               <td>
                 <div class="formRow">
                   <input id="inpAdd" class="input" type="text" placeholder="대표자 본인 명의 휴대전화 - 없이 입력" value="">
-                  <button type="button" class="btnWhite">본인확인</button>
+                  <button type="button" class="btnBlue">본인확인</button>
                 </div>
               </td>
             </tr>
@@ -180,7 +184,9 @@
               </th>
               <td>
                 <div class="formRow">
-                  <input id="inpEmail" class="input" type="text" placeholder="hong@gmail.com" value="">
+                  <input id="inpEmail" class="input" type="text" placeholder="hong" value="">
+                  <span class="unit">@</span>
+                  <input id="inpEmail" class="input" type="text" placeholder="gmail.com" value="">
                 </div>
               </td>
             </tr>
@@ -232,8 +238,10 @@
                               <label for="inpIdBox3">담당자 이메일</label>
                             </th>
                             <td colspan="3">
-                              <div class="formRow">
-                                <input id="inpIdBox3" class="input" type="text" placeholder="" value="">
+                              <div class="formRow" role="group" aria-labelledby="inpIdBox3">
+                                <input class="input" type="text" placeholder="" value="">
+                                <span class="unit">@</span>
+                                <input class="input" type="text" placeholder="" value="">
                               </div>
                             </td>
                           </tr>
@@ -348,26 +356,52 @@
                 <div class="formRow wid673">
                   <span class="radio">
                     <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
-                    <label for="testRdoBank1"><span></span>신한은행</label>
+                    <label for="testRdoBank1"><span></span>신한은행 직원 소개</label>
                   </span>
-                  <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
+                  <input id="inpRoute" class="input" type="text" placeholder="신한은행 직원의 행번을 입력해주세요." value="">
                 </div>
-                <div class="formRow wid673 mt30">
+                <div class="formRow wid673">
                   <span class="radio">
                     <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
-                    <label for="testRdoSns1"><span></span>소셜 미디어</label>
+                    <label for="testRdoSns1"><span></span>유튜브</label>
                   </span>
                   <span class="radio">
                     <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
-                    <label for="testRdoSns2"><span></span>유튜브</label>
+                    <label for="testRdoSns2"><span></span>네이버</label>
                   </span>
                   <span class="radio"> 
                     <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
-                    <label for="testRdoSns3"><span></span>기타</label>
+                    <label for="testRdoSns3"><span></span>다음</label>
+                  </span>
+                  <span class="radio"> 
+                    <input type="radio" id="testRdoSns4" name="testRdoSns" value="" />
+                    <label for="testRdoSns4"><span></span>구글</label>
+                  </span>
+                  <span class="radio"> 
+                    <input type="radio" id="testRdoSns5" name="testRdoSns" value="" />
+                    <label for="testRdoSns5"><span></span>기타</label>
                   </span>
                   <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
                 </div>
-    
+                <div class="formRow wid673">
+                  <span class="radio">
+                    <input type="radio" id="whereRdo1" name="whereRdo" value="" />
+                    <label for="whereRdo1"><span></span>라디오 광고</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="whereRdo2" name="whereRdo" value="" />
+                    <label for="whereRdo2"><span></span>블로그</label>
+                  </span>
+                  <span class="radio"> 
+                    <input type="radio" id="whereRdo3" name="whereRdo" value="" />
+                    <label for="whereRdo3"><span></span>카페</label>
+                  </span>
+                  <span class="radio"> 
+                    <input type="radio" id="whereRdo4" name="whereRdo" value="" />
+                    <label for="whereRdo4"><span></span>기타</label>
+                  </span>
+                  <input id="inpRoute" class="input" type="text" placeholder="Ex) 지인추천" value="">
+                </div>
               </td>
             </tr>
           </tbody>

@@ -192,7 +192,7 @@ button.sm       {height:50px; }
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
-
+.radio.ht64 { height: 64px; line-height: 64px;}
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
@@ -208,6 +208,7 @@ button.sm       {height:50px; }
 /* radio */ 
 .radio { display: inline-block; white-space: nowrap;}
 .radio + input[type="text"] { margin-left: 16px;}
+.formRow .radio + input[type="text"] { margin-left: 6px;}
 .radio + .radio { margin-left:30px; }
 .formRow .radio + .radio { margin-left: 20px;}
 
@@ -282,10 +283,10 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .errorTxt { display: none; margin-top: 10px; color: #FE5050; font-size: 16px;}
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
-.formRow.hasError { flex-direction: column; align-items: flex-start;}
-.formRow.hasError .input {  border: 1px solid #FE5050}
-.formRow.hasError .errorTxt { display: block; }
-.formRow.hasError .input:disabled { background: #f4f6f8;}
+.hasError { flex-direction: column; align-items: flex-start;}
+.hasError .input {  border: 1px solid #FE5050}
+.hasError .errorTxt { display: block; }
+.hasError .input:disabled { background: #f4f6f8;}
 /* .inputWrap { position: relative; display: inline-block; }
 .inputWrap.hasUnit {padding: 0 0 0 0; background: #fff; border: 1px solid #ddd; border-radius: 8px;}
 .inputWrap.hasUnit::after {content:""; display:block; clear: both;}
@@ -295,6 +296,8 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 
 .inputBizNumber { display: inline-flex; align-items: center; gap: 8px; }
 .inputBizNumber .input { text-align: center; }
+.inputBizNumber .input:nth-of-type(1) { width: 80px;}
+.inputBizNumber .input:nth-of-type(2) { width: 68px;}
 
 
 /* file */
@@ -312,7 +315,7 @@ p.txt_fileForm {padding-left:72px; margin-top:10px;  }
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
 select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0;}
-select { width: 100%; height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
+select { height: 64px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 20px; }
 select.w-300 { min-width: 300px;}
 
 /* textarea */
@@ -330,7 +333,7 @@ select.w-300 { min-width: 300px;}
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
-.formAdd .formRow { margin-top: 10px;}
+.formRow + .formAdd { margin-top: 10px; }
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
@@ -418,14 +421,13 @@ select.w-300 { min-width: 300px;}
 .formListTable { margin-top: 45px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
-/* .formListTable th label { display: inline-block; padding: 20px 0;} */
-.formListTable th .checkbox { font-weight: 400;}
-.formListTable .radio {min-height: 64px; line-height: 64px;} 
+.formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left;}
 .formGrayBox .formListTable th { padding: 15px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
-.formListTable .btnWhite { height: 64px; padding: 0 50px; line-height: 64px;}
+.formListTable .btnWhite,
+.formListTable .btnBlue { height: 64px; padding: 0 50px; line-height: 64px;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
 
@@ -456,14 +458,18 @@ td .formListTable { margin-top: 25px;}
 
 
 .formMdTable .formRow { width: 578px;}
+.formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.wid400 { width: 400px; flex-shrink: 0;}
 
 
-.formSmTable .input,
-.formSmTable .inputBizNumber { width: 400px;}
-.formSmTable .inputBizNumber .input { width: 100%;}
-.formGrayBox .formRow:not(.hasUnit) { display: block;}
+/* .formSmTable .inputBizNumber,
+.formSmTable .formRow { width: 400px; flex-shrink: 0;}
+.formSmTable .inputBizNumber .input,
+.formSmTable .formRow .input { width: 100%;} */
+
+.formMdTable .formGrayBox .formRow { width: 100%;}
+/* .formGrayBox .formRow:not(.hasUnit) { display: block;} */
 .formGrayBox .input { width: 100%;}
 
 

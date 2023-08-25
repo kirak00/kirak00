@@ -49,14 +49,16 @@
                 <label for="formLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
               </th> 
               <td>
-                <span class="radio">
-                  <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
-                  <label for="formLabel1_1"><span></span>미완료</label>
-                </span>
-                <span class="radio">
-                  <input type="radio" id="formLabel1_2" name="formLabel1" value="" />
-                  <label for="formLabel1_2"><span></span>완료</label>
-                </span>
+                <div class="formRow">
+                  <span class="radio">
+                    <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
+                    <label for="formLabel1_1"><span></span>미완료</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="formLabel1_2" name="formLabel1" value="" />
+                    <label for="formLabel1_2"><span></span>완료</label>
+                  </span>
+                </div>
               </td>
             </tr>
             <tr> 
@@ -119,14 +121,8 @@
               </th>
               <td>
                 <div class="formRow" role="group" aria-labelledby="inpLabel6">
-                  <!-- <div class="">
-                    <button type="button" class="">변동</button>
-                    <button type="button" class="">고정</button>
-                  </div> -->
                   <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel"><label for="selectLabel1">변동</label></span>
                   <span class="radio radioBtn"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
-  
-                 
                   <select title="기준금리 선택">
                     <option value="기준금리">기준금리</option>
                     <option value="옵션">옵션</option>
@@ -147,11 +143,11 @@
               <td>
                 <div role="group" aria-labelledby="inpLabel7">
                   <div class="formRow">
-                    <span class="radio">
+                    <span class="radio ht64">
                       <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
                       <label for="testRdoBank1"><span></span>담보 불필요</label>
                     </span>
-                    <span class="radio">
+                    <span class="radio ht64">
                       <input type="radio" id="testRdoBank2" name="testRdoBank" value="" />
                       <label for="testRdoBank2"><span></span>담보 필요</label>
                     </span>
@@ -203,10 +199,12 @@
                 <label for="inpLabel10"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
               </th>
               <td>
-                <div class="dateControl">
-                  <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
-                  <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
-                  까지 유효
+                <div class="formRow">
+                  <div class="dateControl">
+                    <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24">
+                    <button type="button" class="btnBlue"><span class="srOnly">달력열기</span></button>
+                    까지 유효
+                  </div>
                 </div>
               </td>
             </tr>
