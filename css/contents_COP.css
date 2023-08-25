@@ -34,14 +34,15 @@ ul.loginTab li.on div.login_form    {transform:translateX(0%);}
 ul.loginTab li.on.fast div.login_form    {transition:none;}
 ul.loginTab li + li div.login_form  {transform:translateX(100%);  }
 ul.loginTab li + li.on div.login_form  {transform:translateX(0%);  }
-ul.loginTab li div.login_form .row + .row  {margin-top:20px; }
-ul.loginTab li div.login_form label   {min-width:130px; padding-left:0;padding-right:0;  }
-ul.loginTab li div.login_form .formRow input   {width:400px; }
-ul.loginTab li div.login_form#cont_certificate_login .formRow input   {width:100px; }
+ul.loginTab li .row + .row  {margin-top:20px; }
+ul.loginTab li .row .formRow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; width: 400px;}
+ul.loginTab li .row label   {min-width:130px; padding-left:0;padding-right:0;  }
+ul.loginTab li .row input   { width: 100%; }
+ul.loginTab li #cont_certificate_login .formRow { width:346px; }
 ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
+ul.loginTab .hasError .errorTxt { display: block;}   
 
-
-/* 진희 */
+/* 진희 */ 
 
 
 /* content - page */
@@ -49,7 +50,7 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .proposalManage .formListTable ~ .formListTable { margin-top: 65px; }
 .proposalManage .fixedTableWrap { margin-top: 65px;}
 .proposalManage .fixedTable { margin-top: 40px;}
-.proposalManage .fixedTable .defaultTable { height: 660px;}
+.proposalManage .fixedTable .table_wrap { height: 660px;}
 .proposalManage .formFullTable .formRow { min-height: 0;}
 .proposalManage .formFullTable tr th ~ th { padding-left: 76px;}
 
@@ -57,13 +58,13 @@ ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 .faqPage .accordion { margin-top: 60px;}
 
 /* 일대일 문의 */
-.oneOnone .defaultTable td:nth-child(2) { text-align: left;}
-.defaultTable .reply td:nth-child(2) { color: #323C94; font-weight: 700;}
-.defaultTable .re_1 td:nth-child(2) {}
-.defaultTable .re_2 td:nth-child(2) { padding-left: 40px;}
-.defaultTable .re_3 td:nth-child(2) { padding-left: 80px;}
-.defaultTable .reply td:nth-child(2)::before,
-.defaultTable .quest td:nth-child(2)::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 5px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
+.oneOnone .bbs_list td:nth-child(2) { text-align: left;}
+.bbs_list .reply td:nth-child(2) { color: #323C94; font-weight: 700;}
+.bbs_list .re_1 td:nth-child(2) {}
+.bbs_list .re_2 td:nth-child(2) { padding-left: 40px;}
+.bbs_list .re_3 td:nth-child(2) { padding-left: 80px;}
+.bbs_list .reply td:nth-child(2)::before,
+.bbs_list .quest td:nth-child(2)::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 5px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 
 /* 법인회원정보 */
 .bizMemberInfo .formListTable { position: relative}
