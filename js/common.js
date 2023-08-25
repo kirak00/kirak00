@@ -63,7 +63,6 @@ function tabScript(){
     });
     
     var tabCont = $(this).siblings("[role=tabpanel]");
-    console.log(tabCont)
     if(tabCont.length == tab.length ){
       tabCont.hide().eq(0).show()
       tab.click(function(){

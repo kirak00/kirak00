@@ -27,13 +27,12 @@
 
 /* 락 */
 ul.loginTab li button.loginTabBtn  {position:absolute; height:70px; width:50%; top:0; font-size:24px; border-bottom:1px solid #ddd;   }
+ul.loginTab li button.loginTabBtn:focus  {outline: 2px dashed #5B7DDC; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  {color:#323C94; font-weight: 700; border-bottom:2px solid #323C94; }
 ul.loginTab li + li button.loginTabBtn  {left:50%;  }
-ul.loginTab li div.login_form  {position:absolute; left:0; top:110px; width:530px; transform:translateX(-100%); transition: transform .3s;   }
-ul.loginTab li.on div.login_form    {transform:translateX(0%);}
+ul.loginTab li div.login_form  {position:absolute; left:0; top:110px; width:530px;  display:none   }
+ul.loginTab li.on div.login_form    {display:block;}
 ul.loginTab li.on.fast div.login_form    {transition:none;}
-ul.loginTab li + li div.login_form  {transform:translateX(100%);  }
-ul.loginTab li + li.on div.login_form  {transform:translateX(0%);  }
 ul.loginTab li .row + .row  {margin-top:20px; }
 ul.loginTab li .row .formRow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; width: 400px;}
 ul.loginTab li .row label   {min-width:130px; padding-left:0;padding-right:0;  }
@@ -41,6 +40,7 @@ ul.loginTab li .row input   { width: 100%; }
 ul.loginTab li #cont_certificate_login .formRow { width:346px; }
 ul.loginTab li div.loginBtn   {position:absolute; top:214px; width:100%; }
 ul.loginTab .hasError .errorTxt { display: block;}   
+ul.loginTab li div.login_form p.info_txt  {position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
 
 /* 진희 */ 
 

@@ -506,7 +506,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont     {margin:0 auto;  }
 .loginCont .loginTit        {width:100%; text-align: center;}
 .loginCont .loginTit p      {padding-top:20px; white-space: nowrap;}
-.loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:40px auto 0; overflow: hidden; }
+.loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:90px auto 0;  }
 .loginCont .loginBtn button     {width:100%; }
 
 .loginUtilBtn     {text-align: center; padding:40px 0 0; }
