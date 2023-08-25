@@ -60,6 +60,16 @@
         <label for="testRdoBoxC"><span></span>Radio</label>
       </span>
 
+      
+      <div class="formRow ">
+        <span class="radio">
+          <input type="radio" id="testRdoBank1" name="testRdoBank" value="" />
+          <label for="testRdoBank1"><span></span>radioInput</label>
+        </span>
+        <input id="inpRoute" class="input" type="text" placeholder="대출중개플랫폼을 소개해준 신한은행 직원의 행번을 입력해주세요." value="">
+      </div>
+
+
       <h2 class="c-h2">BTN type radio </h2>
       <span class="btnTypeRadio">
         <input type="radio" name="btnRadio" id="btnRadio_1" checked title="제안 금리(변동)" />
@@ -154,7 +164,7 @@
       <div class="rangeControl">
         <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
         <button type="button"type="button" class="btnBlue rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
-     </div>
+      </div>
       <br/>
       <!-- <div class="dateControl">
         <input type="text" class="input" id="datepicker" value="" aria-label="시작 및 종료기간 선택"/>
@@ -168,9 +178,7 @@
       <br/>
 
       <div class="formRow" role="group">
-        <div class="formRow">
-          <input class="input" type="text" placeholder="" value="새마을금고중앙회">
-        </div>
+        <input class="input" type="text" placeholder="" value="새마을금고중앙회">
         <select title="한번에 보여줄 리스트 갯수">
           <option value="10개씩 보기">10씩 보기</option>
           <option value="20개씩 보기">20씩 보기</option>
@@ -189,7 +197,8 @@
         <div class="searchControlGroup">
           <div class="searchControlItem">
             <label for="selectLabelState" class="label">상태</label>
-            <div class="formItem">
+            <div class="formRow">
+              <span class="line"></span>
               <select id="selectLabelState">
                 <option>전체</option>
                 <option>셀렉트</option>
@@ -198,7 +207,8 @@
           </div>
           <div class="searchControlItem">
             <label for="selectLabelArea" class="label">지역</label>
-            <div class="formItem">
+            <div class="formRow">
+              <span class="line"></span>
               <select id="selectLabelArea">
                 <option>전체</option>
                 <option>셀렉트</option>
@@ -207,11 +217,11 @@
           </div>
           <div class="searchControlItem">
             <label for="login_input_certificate_1" class="label">희망 신청 금액</label>
-            <div class="formItem" role="group" aria-labelledby="login_input_certificate">
-              <span class="inputWrap">
-                <input class="input inputXs" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
-                <span class="unit">억</span>
-              </span>
+            <div class="formRow" role="group" aria-labelledby="login_input_certificate">
+              <span class="line"></span>
+              <input class="input inputXs" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
+              <span class="unit">억</span>
+              <span class="line"></span>
               <select title="범위">
                 <option>이상</option>
                 <option>이하</option>
@@ -220,11 +230,13 @@
           </div>
           <div class="searchControlItem">
             <label id="selectLabelPay" class="label">CRETOP 등급</label>
-            <div class="formItem" role="group" aria-labelledby="selectLabelPay">
+            <div class="formRow" role="group" aria-labelledby="selectLabelPay">
+              <span class="line"></span>
               <select title="등급">
                 <option>전체</option>
                 <option>이하</option>
               </select>
+              <span class="line"></span>
               <select title="범위">
                 <option>이상</option>
                 <option>이하</option>
@@ -233,7 +245,8 @@
           </div>
           <div class="searchControlItem">
             <label for="selectLabelPatent" class="label">특허 보유 여부</label>
-            <div class="formItem">
+            <div class="formRow">
+              <span class="line"></span>
               <select id="selectLabelPatent">
                 <option>전체</option>
                 <option>셀렉트</option>
@@ -241,6 +254,7 @@
             </div>
           </div>
           <span class="checkbox">
+            <span class="line"></span>
             <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
             <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
           </span>
@@ -505,7 +519,6 @@
           </tbody>
         </table>
       </div>
-    </section>
       
 
       <h2 class="c-h2">Textarea(가로/세로사이즈 가변)</h2>
