@@ -54,15 +54,16 @@ function tabScript(){
   $(".tabScript").each(function(i,o){
     var tabCont = $(o);
     var menu = tabCont.children();
-    var tab = tabCont.find("button[role=tab]").each(function(n){this.n=n});
+    var tab = tabCont.find("[role=tab]").each(function(n){this.n=n});
 
     menu.on("click", function(){
       menu.removeClass("on").attr({'aria-selected' : 'false'})
       $(this).addClass("on").attr({'aria-selected' : 'true'})
+      return false;
     });
     
     var tabCont = $(this).siblings("[role=tabpanel]");
-    
+    console.log(tabCont)
     if(tabCont.length == tab.length ){
       tabCont.hide().eq(0).show()
       tab.click(function(){
@@ -350,6 +351,20 @@ function faq(){
     });
   })
 }
+
+
+
+function grid_template_star(value, item) {
+  if (value == true) {
+    return "<input type='checkbox' class='star' checked></input>";
+  } else if (value == false) {
+    return "<input type='checkbox' class='star'></input>";
+  } else {
+    return "-";
+  }
+}
+
+
 
 function accordion() {
   class Accordion {

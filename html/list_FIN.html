@@ -18,6 +18,7 @@ tr.guide td.td_1 ,
 tr.guide td,
 tr.guide td a  {color:#fff; background:#919ae9;  }
 tr th   {background:#323C94; height:50px; color:#fff; } 
+tr td.date   {text-align: center; } 
 
 h1  {text-align: center; font-size:24px;}
 
@@ -34,13 +35,14 @@ table {margin:0 20px; width:calc(100% - 40px)}
         <col width="150"/>
         <col width="300"/>
         <col width="100"/>
+        <col width="200"/>
       </colgroup>
       <tr>
         <th>메뉴</th>
         <th>경로</th>
         <th>상태</th>
         <th>파일</th>
-        <th>일정</th>
+        <th>완료계획</th>
         <th>비고</th>
       </tr>
       <tbody id="ddd">
@@ -61,7 +63,13 @@ table {margin:0 20px; width:calc(100% - 40px)}
 
   var jsonList = [
    {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', end : '' },
-   {tit : '메인', folder : 'main', page : 'FIN_F1.html', status : false, ment : '', end : '09/01' },
+   {tit : '메인', folder : 'main', page : '', status : false, ment : '', end : '09/01',
+    sub : [
+       {tit : '메인 로그인 전', folder : '', page : 'FIN_F01_001.html', status : true , ment : 'v1.0 적용완료', end : '09/01'},
+       {tit : '메인 로그인 후 ', folder : '', page : 'FIN_F011_001.html', status : true , ment : 'v1.0 적용완료', end : '09/01'},
+       {tit : '메인 중앙회', folder : '', page : 'FIN_F012_001.html', status : false, ment : '기획 대기중', end : '09/01'},
+    ],
+   },
    {
      tit : '로그인', folder : 'login', page : '', status : false, ment : '', end : '09/01',
      sub : [
@@ -72,14 +80,14 @@ table {margin:0 20px; width:calc(100% - 40px)}
     ],
    },
    {
-    tit : '대출 신청 조회', folder : 'loan', page : 'index.html', status : false, pop : false, ment : '', end : '09/08',
+    tit : '대출 신청 조회', folder : 'loan', page : '', status : false, pop : false, ment : '', end : '09/08',
     sub : [
       {tit : '회원정보', folder : '', page : 'COP_F10.html', status : false, ment : '', end : '09/08' },
       {tit : '대출신청 업체목록', folder : '', page : 'FIN_F13_001.html', status : false, ment : '진희 ing', end : '09/08' },
     ],
    },
    {
-    tit : '제안서 등록', folder : 'proposal', page : 'index.html', status : false, pop : false, ment : '', end : '09/15',
+    tit : '제안서 등록', folder : 'proposal', page : '', status : false, pop : false, ment : '', end : '09/15',
     sub : [
       {tit : '제안서 제출 가능 대출 신청 목록', folder : '', page : 'FIN_F21.html', status : false, ment : '', end : '09/15' },
       {tit : '제안서 제출 가능 목록', folder : '', page : 'FIN_F21_001.html', status : true, ment : '진희 8/14', end : '09/15' },
@@ -136,22 +144,29 @@ table {margin:0 20px; width:calc(100% - 40px)}
           })
         }
       });
-      var folder = "./COP/"
+      var folder = "./FIN/"
       folder += o.folder;
       var status_1 = o.status;
       if(o.folder == "guide") {
         status_1 += " guide"
         folder = "./guide"
       }
-      txt += `
-        <tr class="${status_1}">
-          <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
-          <td></td><td class="status">${status}</td>
-          <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
-            <td>${o.end}</td>
-          <td>${o.ment}</td>
-        </tr>\n`
-      
+      if(o.page !=''){
+        txt += `
+          <tr class="${status_1}">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+            <td></td>
+            <td class="status">${status}</td>
+            <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
+            <td class="date">${o.end}</td>
+            <td>${o.ment}</td>
+          </tr>\n`
+      }else{
+        txt += `
+          <tr class="depth_1">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+          </tr>\n`
+      }
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
         status = o2.status != true ? '-' : '완료' ;
@@ -162,7 +177,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
           <tr class="${o2.status}">
             <td >${o2.tit}</td><td class="status">${status}</td>
             <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
-            <td>${o2.end}</td>
+            <td class="date">${o2.end}</td>
             <td>${o2.ment}</td>
           </tr>\n`;
           

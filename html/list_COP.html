@@ -18,6 +18,7 @@ tr.guide td.td_1 ,
 tr.guide td,
 tr.guide td a  {color:#fff; background:#919ae9;  }
 tr th   {background:#323C94; height:50px; color:#fff; } 
+tr td.date   {text-align: center; } 
 
 h1  {text-align: center; font-size:24px;}
 
@@ -34,13 +35,14 @@ table {margin:0 20px; width:calc(100% - 40px)}
         <col width="150"/>
         <col width="300"/>
         <col width="100"/>
+        <col width="200"/>
       </colgroup>
       <tr>
         <th>메뉴</th>
         <th>경로</th>
         <th>상태</th>
         <th>파일</th>
-        <th>일정</th>
+        <th>완료계획</th>
         <th>비고</th>
       </tr>
       <tbody id="ddd">
@@ -163,15 +165,22 @@ table {margin:0 20px; width:calc(100% - 40px)}
         status_1 += " guide"
         folder = "./guide"
       }
-      txt += `
-        <tr class="${status_1}">
-          <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
-          <td></td><td class="status">${status}</td>
-          <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
-            <td>${o.end}</td>
-          <td>${o.ment}</td>
-        </tr>\n`
-      
+      if(o.page !=''){
+        txt += `
+          <tr class="${status_1}">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+            <td></td>
+            <td class="status">${status}</td>
+            <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
+            <td class="date">${o.end}</td>
+            <td>${o.ment}</td>
+          </tr>\n`
+      }else{
+        txt += `
+          <tr class="depth_1">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+          </tr>\n`
+      }
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
         status = o2.status != true ? '-' : '완료' ;
@@ -182,7 +191,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
           <tr class="${o2.status}">
             <td >${o2.tit}</td><td class="status">${status}</td>
             <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
-            <td>${o2.end}</td>
+            <td class="date">${o2.end}</td>
             <td>${o2.ment}</td>
           </tr>\n`;
           
