@@ -62,18 +62,32 @@
               <th scope="row">
                 <label for="inpBizNum">희망 신청 금액</label>
               </th>
-              <td>
+              <td role="group" aria-labelledby="inpBizNum">
                 <div class="formRow hasError">
-                  <div class="formRow" role="group" aria-labelledby="inpBizNum">
-                    <input class="input" type="text" placeholder="000" value="" > 
-                    <span class="unit">억</span>
-                    <select title="희망 신청 금액" class="wid145">
+                  <input class="input" type="text" placeholder="000" value="" >
+                  <input class="input" type="text" placeholder="000" value="" >
+                  <span>억</span>
+                  <span class="select">
+                    <select title="">
                       <option>이상</option>
                       <option>이하</option>
                     </select>
-                  </div>
-                  <p class="errorTxt">법인회원 희망 신청 금액 중 <strong>최대 금액</strong> 기준입니다.</p>
+                  </span>
                 </div>
+                <p class="errorTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
+
+
+                <div class="formRow hasError" role="group" aria-labelledby="inpBizNum">
+                  <input class="input" type="text" placeholder="000" value="" > 
+                  <span>억</span>
+                  <span class="select">
+                    <select title="">
+                      <option>이상</option>
+                      <option>이하</option>
+                    </select>
+                  </span>
+                </div>
+                <p class="errorTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
               </td>
             </tr>
             <tr>
