@@ -447,7 +447,7 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .formRow { width: 578px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
-.formMdTable .input.wid400 { width: 400px; flex-shrink: 0;}
+.formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
 .formMdTable .formGrayBox .formRow { width: 100%;}
 
 .formGrayBox .input { width: 100%;}
