@@ -26,8 +26,8 @@
             <option>본부2</option>
           </select>
       </fieldset>
-      <div class="defaultTable">
-        <table>
+      <div class="table_wrap">
+        <table class="bbs_list">
           <caption>금융회사 감당자 제안내용</caption>
           <colgroup>
             <col />
@@ -63,41 +63,39 @@
       </div>
 
       <h2 class="c-h2">Fixed Table</h2>
-      <div class="fixedTableWrap">
+      <div class="">
         <p class="titH4 hasLine">상환방식</p>
-        <div class="fixedTable">
-          <div class="defaultTable" style="height: 300px">
-            <table>
-              <caption>금융회사 감당자 제안내용</caption>
-              <colgroup>
-                <col width="235px" />
-                <col width="503px" />
-                <col />
-              </colgroup>
-              <thead>
-                <tr class="top">
-                  <th colspan="3">원금 균등</th>
-                </tr>
-                <tr>
-                  <th>회차</th>
-                  <th>대출이자</th>
-                  <th>월 상환금</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>123,456</td>
-                  <td>2천만원<p class="sub">(20,000,000)</p></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>123,456</td>
-                  <td>2천만원<p class="sub">(20,000,000)</p></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="fixedTable" style="height: 300px">
+          <table class="bbs_list">
+            <caption>금융회사 감당자 제안내용</caption>
+            <colgroup>
+              <col width="235px" />
+              <col width="503px" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr class="top">
+                <th colspan="3">원금 균등</th>
+              </tr>
+              <tr>
+                <th>회차</th>
+                <th>대출이자</th>
+                <th>월 상환금</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>123,456</td>
+                <td>2천만원<p class="sub">(20,000,000)</p></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>123,456</td>
+                <td>2천만원<p class="sub">(20,000,000)</p></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="table_bt">
           <div class="btn_c">
@@ -339,11 +337,11 @@
               </th> 
               <td>
                 <div class="formRow">
-                  <span class="radio">
+                  <span class="radio ht64">
                     <input type="radio" id="formLabel1_1" name="formLabel1" value="" />
                     <label for="formLabel1_1"><span></span>미완료</label>
                   </span>
-                  <span class="radio">
+                  <span class="radio ht64">
                     <input type="radio" id="formLabel1_2" name="formLabel1" value="" />
                     <label for="formLabel1_2"><span></span>완료</label>
                   </span>
