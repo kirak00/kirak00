@@ -40,6 +40,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
         <th>경로</th>
         <th>상태</th>
         <th>파일</th>
+        <th>일정</th>
         <th>비고</th>
       </tr>
       <tbody id="ddd">
@@ -59,54 +60,54 @@ table {margin:0 20px; width:calc(100% - 40px)}
   
 
   var jsonList = [
-   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', },
-   {tit : '메인', folder : 'main', page : 'FIN_F1.html', status : false, ment : '', },
+   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', end : '' },
+   {tit : '메인', folder : 'main', page : 'FIN_F1.html', status : false, ment : '', end : '09/01' },
    {
-     tit : '로그인', folder : 'login', page : '', status : false, ment : '',
+     tit : '로그인', folder : 'login', page : '', status : false, ment : '', end : '09/01',
      sub : [
-       {tit : '로그인', folder : '', page : 'FIN_F03.html', status : true , ment : '',},
-       {tit : '아이디찾기', folder : '', page : 'FIN_F07.html', status : false , ment : '',},
-       {tit : '비밀번호 찾기', folder : '', page : 'FIN_F08.html', status : false, ment : '',},
-       {tit : '보안 프로그램 설치', folder : '', page : 'FIN_F1.html', status : true, ment : '', },
+       {tit : '로그인', folder : '', page : 'FIN_F03.html', status : true , ment : '', end : '09/01'},
+       {tit : '아이디찾기', folder : '', page : 'FIN_F07.html', status : false , ment : '', end : '09/01'},
+       {tit : '비밀번호 찾기', folder : '', page : 'FIN_F08.html', status : false, ment : '', end : '09/01'},
+       {tit : '보안 프로그램 설치', folder : '', page : 'FIN_F1.html', status : true, ment : '', end : '09/01' },
     ],
    },
    {
-    tit : '대출 신청 조회', folder : 'loan', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '대출 신청 조회', folder : 'loan', page : 'index.html', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '회원정보', folder : '', page : 'COP_F10.html', status : false, ment : '', },
-      {tit : '대출신청 업체목록', folder : '', page : 'FIN_F13_001.html', status : false, ment : '진희 ing', },
+      {tit : '회원정보', folder : '', page : 'COP_F10.html', status : false, ment : '', end : '09/08' },
+      {tit : '대출신청 업체목록', folder : '', page : 'FIN_F13_001.html', status : false, ment : '진희 ing', end : '09/08' },
     ],
    },
    {
-    tit : '제안서 등록', folder : 'proposal', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '제안서 등록', folder : 'proposal', page : 'index.html', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '제안서 제출 가능 대출 신청 목록', folder : '', page : 'FIN_F21.html', status : false, ment : '', },
-      {tit : '제안서 제출 가능 목록', folder : '', page : 'FIN_F21_001.html', status : true, ment : '진희 8/14', },
-      {tit : '제안서 제출', folder : '', page : 'FIN_F22_001.html', status : true, ment : '진희 8/17', },
+      {tit : '제안서 제출 가능 대출 신청 목록', folder : '', page : 'FIN_F21.html', status : false, ment : '', end : '09/15' },
+      {tit : '제안서 제출 가능 목록', folder : '', page : 'FIN_F21_001.html', status : true, ment : '진희 8/14', end : '09/15' },
+      {tit : '제안서 제출', folder : '', page : 'FIN_F22_001.html', status : true, ment : '진희 8/17', end : '09/15' },
      
     ],
    },
    {
-    tit : '마이페이지', folder : 'mypage', page : '', status : false, pop : false, ment : '',
+    tit : '마이페이지', folder : 'mypage', page : '', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '회원정보', folder : '', page : 'FIN_F25.html', status : false, ment : '', },
-      {tit : '제안서 관리- 목록', folder : '', page : 'FIN_F30.html', status : false, ment : '', },
-      {tit : '제안서 관리- 상세', folder : '', page : 'FIN_F31.html', status : false, ment : '', },
-      {tit : '실적 관리', folder : '', page : 'FIN_F33.html', status : false, ment : '', },
-      {tit : '메세지함-목록', folder : '', page : 'FIN_F34_001.html', status : true, ment : '', },
-      {tit : '메세지함-상세', folder : '', page : 'FIN_F35_001.html', status : true , ment : '', },
-      {tit : '희망 업체 기준 설정', folder : '', page : 'FIN_F361_001.html', status : true, ment : '', },
-      {tit : '제출 제안서 상세', folder : '', page : 'FIN_F23_002.html', status : true, ment : '진희 8/16', },
-      {tit : '제출 제안서 상세 팝업', folder : '', page : 'FIN_F23_003.html', status : true, ment : '진희 8/16', },
-      {tit : '회원정보', folder : '', page : 'FIN_F28_001.html', status : true, ment : '진희 8/16', },
+      {tit : '회원정보', folder : '', page : 'FIN_F25.html', status : false, ment : '', end : '09/08' },
+      {tit : '제안서 관리- 목록', folder : '', page : 'FIN_F30.html', status : false, ment : '', end : '09/08' },
+      {tit : '제안서 관리- 상세', folder : '', page : 'FIN_F31.html', status : false, ment : '', end : '09/08' },
+      {tit : '실적 관리', folder : '', page : 'FIN_F33.html', status : false, ment : '', end : '09/08' },
+      {tit : '메세지함-목록', folder : '', page : 'FIN_F34_001.html', status : true, ment : '', end : '09/08' },
+      {tit : '메세지함-상세', folder : '', page : 'FIN_F35_001.html', status : true , ment : '', end : '09/08' },
+      {tit : '희망 업체 기준 설정', folder : '', page : 'FIN_F361_001.html', status : true, ment : '', end : '09/08' },
+      {tit : '제출 제안서 상세', folder : '', page : 'FIN_F23_002.html', status : true, ment : '진희 8/16', end : '09/08'  },
+      {tit : '제출 제안서 상세 팝업', folder : '', page : 'FIN_F23_003.html', status : true, ment : '진희 8/16', end : '09/08'  },
+      {tit : '회원정보', folder : '', page : 'FIN_F28_001.html', status : true, ment : '진희 8/16', end : '09/08'  },
     ],
    },
    {
-    tit : '중안회 관리', folder : 'manage', page : '', status : false, pop : false, ment : '',
+    tit : '중안회 관리', folder : 'manage', page : '', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '금융사 대출 목록', folder : '', page : 'FIN_F37.html', status : false, ment : '', },
-      {tit : '대출 활동 관리 - 소속 금융사 검색', folder : '', page : 'FIN_F38.html', status : false, ment : '', },
-      {tit : '대출 활동 관리 - 소속 금융사 검색', folder : '', page : 'FIN_F38.html', status : false, ment : '', },
+      {tit : '금융사 대출 목록', folder : '', page : 'FIN_F37.html', status : false, ment : '', end : '09/15' },
+      {tit : '대출 활동 관리 - 소속 금융사 검색', folder : '', page : 'FIN_F38.html', status : false, ment : '', end : '09/15' },
+      {tit : '대출 활동 관리 - 소속 금융사 검색', folder : '', page : 'FIN_F38.html', status : false, ment : '', end : '09/15' },
      
     ],
    }
@@ -114,6 +115,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
 
 
   // console.log(jsonList)
+
 
 
   var txt = ""
@@ -134,14 +136,21 @@ table {margin:0 20px; width:calc(100% - 40px)}
           })
         }
       });
-      var folder = "./FIN/"
+      var folder = "./COP/"
       folder += o.folder;
       var status_1 = o.status;
       if(o.folder == "guide") {
         status_1 += " guide"
         folder = "./guide"
       }
-      txt += `<tr class="${status_1}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
+      txt += `
+        <tr class="${status_1}">
+          <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+          <td></td><td class="status">${status}</td>
+          <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
+            <td>${o.end}</td>
+          <td>${o.ment}</td>
+        </tr>\n`
       
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
@@ -149,7 +158,13 @@ table {margin:0 20px; width:calc(100% - 40px)}
         url = o2.page;
         // if(i2==0) txt += `<tr class="${status}"><td rowspan="${o.sub.length}">${o2.tit}</td><td class="${status}">${status}</td><td><a href="${folder + '/'+url}">${o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
         // else txt += `<tr class="${status}"><td>${status}</td><td><a href="${o2.page}">${o2.tit}</a></td><td>${o2.ment}</td></tr>\n`;
-        txt += `<tr class="${o2.status}"><td >${o2.tit}</td><td class="status">${status}</td><td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
+        txt += `
+          <tr class="${o2.status}">
+            <td >${o2.tit}</td><td class="status">${status}</td>
+            <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
+            <td>${o2.end}</td>
+            <td>${o2.ment}</td>
+          </tr>\n`;
           
         // if(o2.sub)
         // o2.sub.forEach((o3,i3)=>{

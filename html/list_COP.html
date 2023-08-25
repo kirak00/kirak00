@@ -40,6 +40,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
         <th>경로</th>
         <th>상태</th>
         <th>파일</th>
+        <th>일정</th>
         <th>비고</th>
       </tr>
       <tbody id="ddd">
@@ -59,76 +60,76 @@ table {margin:0 20px; width:calc(100% - 40px)}
   
 
   var jsonList = [
-   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', },
-   {tit : '메인', folder : 'main', page : 'COP_F1.html', status : false, ment : '', },
+   {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', end : '', },
+   {tit : '메인', folder : 'main', page : 'COP_F1.html', status : false, ment : '', end : '09/01', },
    {
-    tit : '로그인', folder : 'member', page : '', status : false, ment : '',
+    tit : '로그인', folder : 'member', page : '', status : false, ment : '', end : '08/29',
     sub : [
-      {tit : '로그인', folder : '', page : 'COP_F03.html', status : true , ment : '',},
-      {tit : '아이디찾기', folder : '', page : 'COP_F07.html', status : false , ment : '',},
-      {tit : '비밀번호 찾기', folder : '', page : 'COP_F08.html', status : false, ment : '',},
+      {tit : '로그인', folder : '', page : 'COP_F03.html', status : true , ment : '', end : '08/29',},
+      {tit : '아이디찾기', folder : '', page : 'COP_F07.html', status : false , ment : '', end : '08/29',},
+      {tit : '비밀번호 찾기', folder : '', page : 'COP_F08.html', status : false, ment : '', end : '08/29',},
     ],
    },
    {
-    tit : '회원가입', folder : 'member', page : '', status : false,  ment : '',
+    tit : '회원가입', folder : 'member', page : '', status : false,  ment : '', end : '08/29',
     sub : [
-      {tit : '약관동의1', folder : '', page : 'COP_F02.html', status : true, ment : '', },
-      {tit : '약관동의2', folder : '', page : 'COP_F020.html', status : false, ment : '', },
-      {tit : '회원가입', folder : '', page : 'COP_F023.html', status : true, ment : '진희 8/14', },
-      {tit : 'Nice 본인인증', folder : '', page : 'COP_F03.html', status : false, ment : '', },
+      {tit : '약관동의1', folder : '', page : 'COP_F02.html', status : true, ment : '', end : '08/29', },
+      {tit : '약관동의2', folder : '', page : 'COP_F020.html', status : false, ment : '', end : '08/29', },
+      {tit : '회원가입', folder : '', page : 'COP_F023.html', status : true, ment : '진희 8/14',end : '08/29',  },
+      {tit : 'Nice 본인인증', folder : '', page : 'COP_F03.html', status : false, ment : '', end : '08/29', },
     ],
    },
    {
-    tit : '마이페이지', folder : 'mypage', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '마이페이지', folder : 'mypage', page : 'index.html', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '회원정보', folder : '', page : 'COP_F10.html', status : true, ment : '진희 8/23', },
-      {tit : '회원정보', folder : '', page : 'COP_F11.html', status : true, ment : '진희 8/23', },
-      {tit : '회원정보', folder : '', page : 'COP_F12.html', status : true, ment : '진희 8/23', },
-      {tit : '회원정보', folder : '', page : 'COP_F12_edit.html', status : true, ment : '진희 8/23', },
-      {tit : '회원정보', folder : '', page : 'COP_F101.html', status : true, ment : '진희 8/23', },
-      {tit : '회원정보', folder : '', page : 'COP_F102.html', status : true, ment : '진희 8/24', },
-      {tit : '회원정보', folder : '', page : 'COP_F104.html', status : true, ment : '진희 8/24', },
-      {tit : '회원정보', folder : '', page : 'COP_F105.html', status : true, ment : '진희 8/24', },
-      {tit : '대출 신청 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '대출 신청 관리 - 대출 신청 목록', folder : '', page : 'COP_F14.html', status : false, ment : '', },
-      {tit : '추가 서류 요청 관리', folder : '', page : 'COP_F22.html', status : false, ment : '', },
-      {tit : '심사 요청 관리', folder : '', page : 'COP_F24.html', status : false, ment : '', },
-      {tit : '제안서 관리', folder : '', page : 'COP_F25.html', status : false, ment : '', },
-      {tit : '제안서 관리', folder : '', page : 'COP_F251.html', status : true, ment : '진희 8/21', },
-      {tit : '제안서 관리 - 상세', folder : '', page : 'COP_F27.html', status : true, ment : '진희 8/21', },
-      {tit : '대출 관리', folder : '', page : '', status : false, ment : '', },
-      {tit : '대출 관리 상세', folder : '', page : '', status : false, ment : '', },
+      {tit : '회원정보', folder : '', page : 'COP_F10.html', status : true, ment : '진희 8/23', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F11.html', status : true, ment : '진희 8/23', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F12.html', status : true, ment : '진희 8/23', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F12_edit.html', status : true, ment : '진희 8/23', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F101.html', status : true, ment : '진희 8/23', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F102.html', status : true, ment : '진희 8/24', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F104.html', status : true, ment : '진희 8/24', end : '09/08', },
+      {tit : '회원정보', folder : '', page : 'COP_F105.html', status : true, ment : '진희 8/24', end : '09/08', },
+      {tit : '대출 신청 관리', folder : '', page : '', status : false, ment : '',  end : '09/08', },
+      {tit : '대출 신청 관리 - 대출 신청 목록', folder : '', page : 'COP_F14.html', status : false, ment : '', end : '09/08', },
+      {tit : '추가 서류 요청 관리', folder : '', page : 'COP_F22.html', status : false, ment : '', end : '09/08', },
+      {tit : '심사 요청 관리', folder : '', page : 'COP_F24.html', status : false, ment : '', end : '09/08', },
+      {tit : '제안서 관리', folder : '', page : 'COP_F25.html', status : false, ment : '', end : '09/08', },
+      {tit : '제안서 관리', folder : '', page : 'COP_F251.html', status : true, ment : '진희 8/21', end : '09/08',},
+      {tit : '제안서 관리 - 상세', folder : '', page : 'COP_F27.html', status : true, ment : '진희 8/21',end : '09/08', },
+      {tit : '대출 관리', folder : '', page : '', status : false, ment : '', end : '09/08', },
+      {tit : '대출 관리 상세', folder : '', page : '', status : false, ment : '', end : '09/08', },
     ],
    },
    {
-    tit : '대출신청', folder : 'folder', page : 'index.html', status : false, pop : false, ment : '',
+    tit : '대출신청', folder : 'folder', page : 'index.html', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '대출신청절차 > 대출정보제공동의', folder : '', page : '', status : false, ment : '', },
+      {tit : '대출신청절차 > 대출정보제공동의', folder : '', page : '', status : false, ment : '', end : '09/15', },
     ],
    },
    {
-    tit : '서비스안내', folder : 'service', page : '', status : false, pop : false, ment : '',
+    tit : '서비스안내', folder : 'service', page : '', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '대출신청절차', folder : '', page : 'COP_F44.html', status : true, ment : '', },
-      {tit : '제출서류안내', folder : '', page : 'COP_F45.html', status : true, ment : '', },
-      {tit : '정부지원사업 - 리스트', folder : '', page : 'COP_F46.html', status : true, ment : '', },
-      {tit : '정부지원사업 - 상세', folder : '', page : 'COP_F47.html', status : true, ment : '', },
-      {tit : '홍보영상', folder : '', page : 'COP_F48.html', status : false, ment : '', },
-      {tit : '이벤트', folder : '', page : 'COP_F49.html', status : true, ment : '', },
-      {tit : '이벤트- 상세', folder : '', page : 'COP_F50.html', status : true, ment : '', },
+      {tit : '대출신청절차', folder : '', page : 'COP_F44.html', status : true, ment : '', end : '09/15', },
+      {tit : '제출서류안내', folder : '', page : 'COP_F45.html', status : true, ment : '', end : '09/15', },
+      {tit : '정부지원사업 - 리스트', folder : '', page : 'COP_F46.html', status : true, ment : '', end : '09/15', },
+      {tit : '정부지원사업 - 상세', folder : '', page : 'COP_F47.html', status : true, ment : '', end : '09/15', },
+      {tit : '홍보영상', folder : '', page : 'COP_F48.html', status : false, ment : '', end : '09/15', },
+      {tit : '이벤트', folder : '', page : 'COP_F49.html', status : true, ment : '', end : '09/15', },
+      {tit : '이벤트- 상세', folder : '', page : 'COP_F50.html', status : true, ment : '', end : '09/15', },
     ],
    },
    {
-    tit : '고객센터', folder : 'custom', page : '', status : false, pop : false, ment : '',
+    tit : '고객센터', folder : 'custom', page : '', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '고객센터번호', folder : '', page : 'cop_F53.html', status : false, ment : '', },
-      {tit : '1:1문의 - 리스트', folder : '', page : 'cop_F54.html', status : false, ment : '', },
-      {tit : '1:1문의 - 리스트', folder : '', page : 'cop_F55.html', status : true, ment : '진희 08/22', },
-      {tit : '1:1문의 - 상세', folder : '', page : 'cop_F56.html', status : true, ment : '진희 08/22', },
-      {tit : '1:1문의 - 상세', folder : '', page : 'cop_F562.html', status : true, ment : '진희 08/22', },
-      {tit : '1:1문의 - 상세-수정팝업', folder : '', page : 'cop_F57.html', status : true, ment : '진희 08/22', },
-      {tit : '1:1문의 - 작성', folder : '', page : 'cop_F58.html', status : true, ment : '진희 08/22', },
-      {tit : 'F&Q', folder : '', page : 'cop_F59.html', status : true, ment : '진희 08/22', },
+      {tit : '고객센터번호', folder : '', page : 'cop_F53.html', status : false, ment : '', end : '09/15', },
+      {tit : '1:1문의 - 리스트', folder : '', page : 'cop_F54.html', status : false, ment : '', end : '09/15', },
+      {tit : '1:1문의 - 리스트', folder : '', page : 'cop_F55.html', status : true, ment : '진희 08/22', end : '09/15', },
+      {tit : '1:1문의 - 상세', folder : '', page : 'cop_F56.html', status : true, ment : '진희 08/22', end : '09/15', },
+      {tit : '1:1문의 - 상세', folder : '', page : 'cop_F562.html', status : true, ment : '진희 08/22', end : '09/15', },
+      {tit : '1:1문의 - 상세-수정팝업', folder : '', page : 'cop_F57.html', status : true, ment : '진희 08/22', end : '09/15', },
+      {tit : '1:1문의 - 작성', folder : '', page : 'cop_F58.html', status : true, ment : '진희 08/22', end : '09/15', },
+      {tit : 'F&Q', folder : '', page : 'cop_F59.html', status : true, ment : '진희 08/22', end : '09/15', },
     ],
    }
   ]
@@ -162,7 +163,14 @@ table {margin:0 20px; width:calc(100% - 40px)}
         status_1 += " guide"
         folder = "./guide"
       }
-      txt += `<tr class="${status_1}"><td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td><td></td><td class="status">${status}</td><td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td><td>${o.ment}</td></tr>\n`
+      txt += `
+        <tr class="${status_1}">
+          <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+          <td></td><td class="status">${status}</td>
+          <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
+            <td>${o.end}</td>
+          <td>${o.ment}</td>
+        </tr>\n`
       
       if(o.sub)
       o.sub.forEach((o2,i2)=>{
@@ -170,7 +178,13 @@ table {margin:0 20px; width:calc(100% - 40px)}
         url = o2.page;
         // if(i2==0) txt += `<tr class="${status}"><td rowspan="${o.sub.length}">${o2.tit}</td><td class="${status}">${status}</td><td><a href="${folder + '/'+url}">${o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
         // else txt += `<tr class="${status}"><td>${status}</td><td><a href="${o2.page}">${o2.tit}</a></td><td>${o2.ment}</td></tr>\n`;
-        txt += `<tr class="${o2.status}"><td >${o2.tit}</td><td class="status">${status}</td><td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
+        txt += `
+          <tr class="${o2.status}">
+            <td >${o2.tit}</td><td class="status">${status}</td>
+            <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
+            <td>${o2.end}</td>
+            <td>${o2.ment}</td>
+          </tr>\n`;
           
         // if(o2.sub)
         // o2.sub.forEach((o3,i3)=>{
