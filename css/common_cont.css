@@ -410,7 +410,7 @@ select.wid145 { min-width: 145px !important;}
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 
 .formListTable th .checkbox { font-weight: 400; }
-.formListTable td { padding: 15px 0; text-align: left;}
+.formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 60px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
