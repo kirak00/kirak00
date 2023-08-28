@@ -43,6 +43,26 @@ ul.loginTab .hasError .errorTxt { display: block;}
 ul.loginTab li div.login_form p.info_txt  {position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
 
 /* 진희 */ 
+.loginWrap { position: relative;}
+.loginWrap .loginTit { text-align: center;}
+/* 탭이 있는 경우 */
+.tabpanel .info_txt { position: absolute; top: 68px; left: 50%; transform: translate(-50%, 0px);}
+.loginWrap .tabWrap { width: 530px; margin: 84px auto 0;}
+.loginWrap .input { width: 100%;}
+.loginWrap .tabpanel { display: flex; flex-direction: column; min-height: 318px; padding: 40px 0 0;}
+.loginWrap .tabpanel.wid400 .label { width: calc(100% - 400px); flex-shrink: 0;}
+.loginWrap .tabpanel.wid400 .errorTxt { margin-left: calc(100% - 400px + 8px); }
+.loginWrap .tabpanel.wid346 .label { width: calc(100% - 346px); flex-shrink: 0;}
+.loginWrap .tabpanel.wid346 .errorTxt { margin-left: calc(100% - 346px + 8px); }
+.loginWrap .loginBtn { margin-top: auto; }
+.loginWrap .loginBtn button { width: 100%;}
+
+/* 탭이 없는 경우 */
+.loginCon { width: 530px; margin: 60px auto 0;}
+.loginTit .info_txt { margin-top: 20px;}
+.loginCon.wid346 .label { width: calc(100% - 346px); flex-shrink: 0;}
+.loginCon.wid346 .errorTxt { margin-left: calc(100% - 346px + 8px); }
+.loginCon .loginBtn { margin-top: 60px;}
 
 
 /* content - page */
