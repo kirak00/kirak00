@@ -29,12 +29,12 @@
           <div class="loginTit">
             <h2 class="tit">아이디 찾기</h2>
           </div>
-          <ul class="loginTab">
+          <ul class="loginTab searchId">
             <li class="on">
               <button type="button" class="loginTabBtn">아이디 찾기</button>
               <div class="login_form" id="cont_id_login">
                 <p class="info_txt">가입시 등록한 사업자등록번호와 대표자 휴대전화번호를 입력해 주세요.</p>
-                <div class="row">
+                <div class="formBox">
                   <label id="findIdLabel1" class="label">사업자등록번호 </label>
                   <div class="formRow">
                     <div class="inputNumber" role="group" aria-labelledby="findIdLabel1">
@@ -45,8 +45,9 @@
                       <input class="input" type="text" name="login_input" title="사업자등록번호(3/3)" placeholder="">
                     </div>
                   </div>
+                  <p class="errorTxt"></p>
                 </div>
-                <div class="row">
+                <div class="formBox">
                   <label id="findIdLabel2" class="label">대표자 휴대전화</label>
                   <div class="formRow">
                     <div class="inputNumber" role="group" aria-labelledby="findIdLabel2">
@@ -57,6 +58,7 @@
                       <input class="input" type="text" name="login_input" title="대표자휴대전화(3/3)" placeholder="">
                     </div>
                   </div>
+                  <p class="errorTxt"></p>
                 </div>
                 <div class="loginBtn">
                   <button type="button" class="btnBlue">찾기</button>
@@ -67,14 +69,14 @@
               <button type="button" class="loginTabBtn">비밀번호 찾기</button>
               <div class="login_form">
                 <p class="info_txt">아이디와 사업자등록번호를 입력해 주세요. </p>
-                <div class="row">
+                <div class="formBox">
                   <label for="login_input_pw" class="label">아이디</label>
                   <div class="formRow">
                     <input class="input" type="text" name="login_input" id="login_input_pw" placeholder="아이디를 입력해 주세요.">
-                    <p class="errorTxt">다시 입력해주세요.</p>
                   </div>
+                  <p class="errorTxt"></p>
                 </div>
-                <div class="row">
+                <div class="formBox">
                   <label id="findPwLabel1" class="label">사업자등록번호 </label>
                   <div class="formRow">
                     <div class="inputNumber" role="group" aria-labelledby="findPwLabel1">
@@ -85,6 +87,7 @@
                       <input class="input" type="text" name="login_input" title="사업자등록번호(3/3)" placeholder="">
                     </div>
                   </div>
+                  <p class="errorTxt">다시 입력해주세요.</p>
                 </div>
                 <div class="loginBtn">
                   <button type="button" class="btnBlue">법인공동인증서 로그인</button>

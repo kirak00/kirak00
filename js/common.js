@@ -20,7 +20,23 @@ $(function(){
   tabScript();
   messageList()
 
+  //tooltip 자동생성
+  tooltip_q();
+
 });
+
+function tooltip_q(){
+  $(".tooltip_q").each(function(i,o){
+    var obj = $(o)
+    obj.hover(function(){
+      var layer = $("<span class='tooltipLayer'>");
+      layer.html(o.title)
+      obj.append(layer)
+    },function(){
+      $(".tooltipLayer" , o).remove()
+    })
+  })
+}
 
 function messageList(){
   var chk =  $(".messageList input[type=checkbox]");
@@ -192,7 +208,7 @@ function layer_alert(msg,focusObj,btnObj){
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
   let alertHTML = `
-    <div class="alertBody"  tabindex="0"  role="alert">
+    <div class="alertBody" tabindex="0"  role="alert">
       <div class="alertCont">
         <p>${ment}</p>
       </div>

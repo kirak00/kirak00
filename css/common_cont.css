@@ -209,6 +209,7 @@ button.sm       {height:50px; }
 .radio { display: inline-block; white-space: nowrap;}
 .radio + input[type="text"] { margin-left: 16px;}
 .radio + .radio { margin-left:30px; }
+.radio + em + .radio { margin-left:30px; }
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
@@ -512,6 +513,11 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginUtilBtn     {text-align: center; padding:40px 0 0; }
 .loginUtilBtn a  {color:#555; }
 .loginUtilBtn a + a::before {content:'·'; display:inline-block; margin:0 10px; }
+
+.login_form .formBox        {position:relative; padding-left:130px; padding-bottom:20px;   }
+.login_form .formBox label        {position:absolute; left:0; height:64px; line-height:64px; font-weight: 700;   }
+.login_form .formBox .input       {width:100%; }
+
 
 
 @media print { 
@@ -871,7 +877,8 @@ dl.faqCont            {border-top:2px solid #323C94; }
 dl.faqCont dt         {position:relative; padding:30px 40px; background:#F4F6F8; cursor: pointer; }
 dl.faqCont dt ~ dt    {border-top:1px solid #ddd; }
 dl.faqCont dt label   {font-size:24px; font-weight: 700 }
-dl.faqCont dt label em.required   {color:#323C94; margin-left:4px; vertical-align: 1px; }
+dl.faqCont dt label em   { margin-left:4px; vertical-align: 1px; }
+dl.faqCont dt label em.required   {color:#323C94; }
 dl.faqCont dt::after  {content:""; transition: .3s; position:absolute; right:40px; top:50%; width:24px; height:24px; transform: translateY(-50%); background:url(../images/common/ico_24_down.png) no-repeat  }
 dl.faqCont dd         {display:none; padding:30px 80px; font-size:20px; line-height:1.5  }
 dl.faqCont dt.on + dd {display:block; }
@@ -923,6 +930,10 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 
 .bnrInerCont      {margin:80px auto;}
 
-
+/* tooltip */
+.tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer;   }
+.tooltip_q.on     {}
+.tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-30px; background:#E5EDFB; border-radius: 16px; display:flex; white-space: nowrap; padding:30px;     }
+.tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:30px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
 
 /* 진 */
