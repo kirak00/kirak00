@@ -290,9 +290,8 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
 
 
-.inputNumber .input { text-align: center; }
-.inputNumber.type2 .input:nth-of-type(1) { width: 80px;}
-.inputNumber.type2 .input:nth-of-type(2) { width: 68px;}
+.textCenter .input { text-align: center; }
+.inputBizNumber .input { width: auto;}
 
 /* file */
 .fileForm {display: flex; padding-top:40px ; gap:8px;  }
@@ -665,9 +664,11 @@ td .formListTable { margin-top: 25px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
+.formMdTable .inputBizNumber .input { width: auto;}
 .formMdTable .formGrayBox .formRow { width: 100%;}
 
 .formGrayBox .input { width: 100%;}
+.formGrayBox .input.wid240 { width: 240px;}
 
 .formXsTable .input,
 .formXsTable select,
