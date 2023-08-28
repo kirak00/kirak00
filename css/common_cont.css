@@ -503,13 +503,11 @@ footer .copy .wa    {float:right; }
 
 section   {margin:0 auto; max-width: 1400px;}
 
-/* .loginWrap     {margin:0 auto;  }
-.loginWrap .loginTit        {width:100%; text-align: center;}
-.loginWrap .loginTit p      {padding-top:20px; white-space: nowrap;}
-.loginWrap ul.loginTab     {position:relative; width:530px; height:388px; margin:90px auto 0;  }
-.loginWrap .loginBtn button     {width:100%; } */
-
-.loginWrap .tabWrap {width: 530px; margin: 0 auto;} 
+.loginCont     {margin:0 auto;  }
+.loginCont .loginTit        {width:100%; text-align: center;}
+.loginCont .loginTit p      {padding-top:20px; white-space: nowrap;}
+.loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:90px auto 0;  }
+.loginCont .loginBtn button     {width:100%; }
 
 .loginUtilBtn     {text-align: center; padding:40px 0 0; }
 .loginUtilBtn a  {color:#555; }
@@ -841,9 +839,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 700;}
 .tabLine li.on button { border-bottom: 3px solid #323C94; color: #323C94; }
 .tabLine li button:focus { border: 2px dashed #5B7DDC; border-radius: 16px;}
-.tabLine.fullType { width: 100%;}
-.tabLine.fullType li { width: 100%;}
-.tabLine.fullType li button { width: 100%; text-align: center;}
+
 
 /* pager */
 .external-pager     {text-align: center; margin-top:40px; }
