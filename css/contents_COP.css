@@ -50,9 +50,6 @@ ul.loginTab.searchId  div.login_form .formBox  {padding-left:150px; }
 ul.loginTab li #cont_certificate_login .formBox { padding-left:150px; }
 ul.loginTab li #cont_certificate_login .formRow { width:100%; }
 
-/* 진희 */ 
-
-
 /* content - page */
 /* 제안서 관리 */
 .proposalManage .formListTable ~ .formListTable { margin-top: 65px; }
