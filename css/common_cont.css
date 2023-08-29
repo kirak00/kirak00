@@ -951,6 +951,7 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 .main_myInfo .msgBox .layer_msg strong  {display:block; }
 .main_myInfo .msgBox .layer_msg::after  {content:''; position:absolute; right:-15px; bottom:20px; width:18px; height:15px; background:url(../images/FIN/bul_polygon.png); transform: rotate(270deg); }
 .main_myInfo .msgBox.on .layer_msg  {animation:msgLayer 2s forwards }
+.main_myInfo + .btnBox    {margin-top:-100px; margin-bottom:60px; }
 
 @keyframes msgLayer {
   0% {
