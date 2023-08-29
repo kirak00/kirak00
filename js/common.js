@@ -23,7 +23,27 @@ $(function(){
   //tooltip 자동생성
   tooltip_q();
 
+  loginTab();
 });
+
+
+
+function loginTab(){
+  var tab = $(".loginTab .loginTabBtn").each(function(n){this.n=n});
+  var input = $(".loginTab input")
+  var cont = $(".loginTab li");
+  tab.click(function(){
+    cont.removeClass("on fast").eq(this.n).addClass("on")
+  });
+  // input.focus(function(){
+  //   cont.removeClass("on fast")
+  //   $(this).closest("li").addClass("on fast")
+  // })
+}
+
+
+
+
 
 function tooltip_q(){
   $(".tooltip_q").each(function(i,o){
