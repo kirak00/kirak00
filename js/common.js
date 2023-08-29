@@ -31,9 +31,12 @@ $(function(){
 function loginTab(){
   var tab = $(".loginTab .loginTabBtn").each(function(n){this.n=n});
   var input = $(".loginTab input")
+  var titBox = $(".loginTit")
   var cont = $(".loginTab li");
   tab.click(function(){
+    tab.attr({'aria-selected' : 'false'}).eq(this.n).attr({'aria-selected' : 'true'})
     cont.removeClass("on fast").eq(this.n).addClass("on")
+    titBox.hide().eq(this.n).show()
   });
   // input.focus(function(){
   //   cont.removeClass("on fast")

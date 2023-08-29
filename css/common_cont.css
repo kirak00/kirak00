@@ -512,7 +512,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont .loginTit        {width:100%; text-align: center;}
 .loginCont .loginTit .tit { font-size: 40px;}
 .loginCont .loginTit p      { color: #555; padding-top:20px; white-space: nowrap;}
-.loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:90px auto 0;  }
+.loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:40px auto 0;  }
 .loginCont .loginBtn button,
 .loginCont .loginBtn a     {width:100%; height: 70px; line-height: 70px; }
 
