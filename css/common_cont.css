@@ -510,9 +510,11 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .loginCont     {margin:0 auto;  }
 .loginCont .loginTit        {width:100%; text-align: center;}
-.loginCont .loginTit p      {padding-top:20px; white-space: nowrap;}
+.loginCont .loginTit .tit { font-size: 40px;}
+.loginCont .loginTit p      { color: #555; padding-top:20px; white-space: nowrap;}
 .loginCont ul.loginTab     {position:relative; width:530px; height:388px; margin:90px auto 0;  }
-.loginCont .loginBtn button     {width:100%; }
+.loginCont .loginBtn button,
+.loginCont .loginBtn a     {width:100%; height: 70px; line-height: 70px; }
 
 .loginUtilBtn     {text-align: center; padding:40px 0 0; }
 .loginUtilBtn a  {color:#555; }
@@ -982,38 +984,3 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 .tooltip_q.on     {}
 .tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-30px; background:#E5EDFB; border-radius: 16px; display:flex; white-space: nowrap; padding:30px;     }
 .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:30px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
-
-/****************************
-**********  로그인 페이지  **********
-*****************************/
-/* 진 */
-/* 공통 */
-.loginWrap { position: relative;}
-.loginWrap .loginBtn { width: 530px; margin: 60px auto 0; }
-.loginWrap .loginBtn button,
-.loginWrap .loginBtn a { width: 100%; height: 70px; line-height: 70px;}
-.loginWrap .label { font-weight: 700;}
-.loginWrap .formBox.wid346 .label { width: calc(100% - 346px); flex-shrink: 0;}
-.loginWrap .formBox.wid346 .errorTxt { margin-left: calc(100% - 346px + 8px); }
-.loginWrap .formBox.wid400 .label { width: calc(100% - 400px); flex-shrink: 0;}
-.loginWrap .formBox.wid400 .errorTxt { margin-left: calc(100% - 400px + 8px); }
-
-/* 탭이 있는 경우 */ 
-.tabpanel .pageTop { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); margin: 0;}
-.loginWrap .tabWrap { width: 530px; margin: 40px auto 0;}
-.loginWrap .input { width: 100%;}
-.loginWrap .inputBizNumber .input { width: auto;}
-.loginWrap .inputBizNumber .input:nth-of-type(1) { width: 80px;}
-.loginWrap .inputBizNumber .input:nth-of-type(2) { width: 68px;}
-.loginWrap .inputBizNumber .input:nth-of-type(3) { width: 100%;}
-.loginWrap .tabpanel { display: none; padding: 40px 0 0;}
-.loginWrap .tabpanel.isShow { display: block; }
-.loginWrap .formCont { display: flex; flex-direction: column; min-height: 254px; }
-.loginWrap .pageTop[data-tabTitle].isHidden { display: none;}
-.tabWrap.fixHeight .tabpanel{ position: relative; height: 318px;}
-.tabWrap.fixHeight .loginBtn { position: absolute; bottom: 0;}
-
-/* 탭이 없는 경우 */
-.loginCon { width: 530px; margin: 60px auto 0;}
-.loginTit .info_txt { margin-top: 20px;}
-

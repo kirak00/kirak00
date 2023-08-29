@@ -13,6 +13,7 @@
  
 
 </style>
+
 </head>
 <body>
 
@@ -20,34 +21,40 @@
     <!-- contents : start -->
     <!-- **************** -->
     <hr/>
-    <div class="container" id="skip_content"  aria-label="콘텐츠">
-      <h2 class="hide">콘텐츠 영역</h2> 
-      <section class="loginWrap" id="skip_login" aria-label="로그인">
-        <div class="pageTop textCenter">
-          <h2 class="pageTit">Loan&Biz 금융회원 로그인</h2>
-          <p class="pageSub">관리자를 통해 전달 받은 정보로 로그인 해주세요.</p>
-        </div>
-        <div class="loginCon wid400">
-          <div class="formRow hasError">
-            <label for="loginLabel1" class="label">아이디</label>
-            <input class="input" type="text" name="" id="loginLabel1" placeholder="아이디를 입력해 주세요.">
-          </div>
-          <p class="errorTxt">다시 입력해주세요.</p>
-          <div class="formRow">
-            <label for="loginLabel2" class="label">비밀번호</label>
-            <input class="input" type="text" name="" id="loginLabel2" placeholder="비밀번호를 입력해 주세요.">
-          </div>
-          <p class="errorTxt">다시 입력해주세요.</p>
+    <div class="container member" id="skip_content"  aria-label="콘텐츠">
 
-          <div class="loginBtn">
-            <a href="#;" class="btnBlue">로그인</a>
+      <h2 class="hide">콘텐츠 영역</h2> 
+      <section class="login" id="skip_login"  aria-label="로그인" >
+         <div class="loginCont">
+          <div class="loginTit">
+            <h2 class="tit">Loan&Biz 금융회원 로그인</h2>
+            <p class="info_txt">관리자를 통해 전달 받은 정보로 로그인 해주세요.</p>
           </div>
+
+          <div class="login_form change_pw">
+            <div class="formBox">
+              <label id="pwSetting_1" class="label">아이디</label>
+              <div class="formRow">
+                <input class="input" type="password" name="login_input" id="pwSetting_1"  placeholder="영문,숫자,특수문자 포함 8자 이상">
+              </div>
+              <p class="errorTxt"></p>
+            </div>
+            <div class="formBox">
+              <label id="pwSetting_2" class="label">비밀번호</label>
+              <div class="formRow">
+                <input class="input" type="password" name="login_input" id="pwSetting_1"  placeholder="영문,숫자,특수문자 포함 8자 이상">
+              </div>
+              <p class="errorTxt"></p>
+            </div>
+            <div class="loginBtn">
+              <a href="#;" class="btnBlue">로그인</a>
+            </div>
+          </div>
+
           <div class="loginUtilBtn">
-             <a href="#none">아이디 찾기</a>
-             <a href="#none">비밀번호 찾기</a>
-           </div>
-        </div>
-       </div>
+            <a href="#none">아이디 찾기</a>
+            <a href="#none">비밀번호 찾기</a>
+          </div>        
       </section>
 
 
