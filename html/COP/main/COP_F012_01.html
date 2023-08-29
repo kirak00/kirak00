@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <div class="skip_nav">
+    <a href="#skip_gnb">주메뉴 바로가기</a>
+    <a href="#skip_content">컨텐츠 바로가기</a>
+  </div>
+
+  <div class="wrap main">
+    <!-- **************** -->
+    <!-- header : start -->
+    <!-- **************** -->
+    <header class="" >
+      <div class="headerUtil">
+        <div class="utilCont">
+          <div class="zommBox">
+            <span class="tit">글자크기</span>
+            <button type="button" class="btn_zoom_plus"><span class="hide">화면확대</span></button>
+            <button type="button" class="btn_zoom_minus"><span class="hide">화면축소</span></button>
+          </div>
+        </div>
+      </div>
+      <nav class="headerCont ">
+        <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
+        <h2 class="hide">메뉴 영역</h2>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴">
+          <li class="depth_1 on" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_acc">대출 비교 요청</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">대출 비교</a></li>
+              <li class="depth_2 on"><a href="#none">시설자금 대출</a></li>
+              <li class="depth_2"><a href="#none">운전자금 대출</a></li>
+              <li class="depth_2"><a href="#none">법인리스</a></li>
+              <li class="depth_2"><a href="#none">장기 렌트</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">대출절차안내</a></li>
+              <li class="depth_2"><a href="#none">제출서류안내</a></li>
+              <li class="depth_2"><a href="#none">정보지원사업</a></li>
+              <li class="depth_2"><a href="#none">홍보영상</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" aria-haspopup="menu"><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">고객센터번호</a></li>
+              <li class="depth_2"><a href="#none">1:1 문의</a></li>
+              <li class="depth_2"><a href="#none">F&Q</a></li>
+            </ul>
+          </li>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">회원정보</a></li>
+              <li class="depth_2"><a href="#none">대출 신청 관리</a></li>
+              <li class="depth_2"><a href="#none">추가서류 요청 관리</a></li>
+              <li class="depth_2"><a href="#none">제안서 관리</a></li>
+              <li class="depth_2"><a href="#none">대출 관리</a></li>
+              <li class="depth_2"><a href="#none">알람</a></li>
+              <li class="depth_2"><a href="#none">메시지 함</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="headerLogin">
+          <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li>
+          <!-- <li><a href="#none" class="logout">로그아웃</a></li> -->
+        </ul>
+      </nav>
+      <div class="bg"></div>
+      <div class="line"></div>
+    </header>
+    <!-- **************** -->
+    <!-- header : end -->
+    <!-- **************** -->
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      <section>
+
+        <div class="mainTop">
+          <div class="main_myInfo">
+            <div class="welcomeBox">
+              <div class="welcometit">
+                <span>안녕하세요!</span>
+                <strong>길동중앙회(광교영업점)님😊</strong>
+              </div>
+            </div>
+            <div class="msgBox on">
+              <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
+              <div class="layer_msg " role="alert"> 
+                제안서 연장 요청이 <strong>승인되었습니다</strong>
+              </div>
+            </div>
+          </div>
+          <div class="btnBox">
+            <button type="button" class="btnSky">대출 비교하기</button>
+          </div>
+        </div>
+      </section>
+  
+      <section>
+        <div class="main_loan_progress">
+          <div class="loanSelct">
+            <select name="" id="">
+              <option value="">230401_S_001 시설자금대출</option>
+              <option value="">230401_S_001 시설자금대출</option>
+              <option value="">230401_S_001 시설자금대출</option>
+            </select>
+          </div>
+          <div class="step_info">
+            <div class="platform">
+              Loan&Biz 플랫폼
+              <ul class="hide">
+                <li>대출 정보 등록</li>
+                <li>금융기관 심사</li>
+                <li>제안서 확인 및 선택</li>
+              </ul>
+            </div>
+            <div class="offline">
+              오프라인
+              <ul class="hide">
+                <li>금융기관 진행</li>
+                <li>자금 조달 완료</li>
+              </ul>
+            </div>
+          </div>
+          <ol class="status_tab tabScript" role="tablist">
+            <li class="step_1 on">
+              <a href="#main_loan_cont_1" role="tab" id="main_loan_tab_1" aria-selected="true" >
+                <em>01.</em>
+                <strong>대출 정보 등록</strong>
+              </a>
+            </li> 
+            <li class="step_2 ">
+              <a href="#main_loan_cont_2" class="disabled" role="tab" id="main_loan_tab_2" >
+                <em>02.</em>
+                <strong>금융기관 심사</strong>
+              </a>
+            </li>
+            <li class="step_3 ">
+              <a href="#main_loan_cont_3" class="disabled" role="tab" id="main_loan_tab_3">
+                <em>03.</em>
+                <strong>제안서 확인 <br>및 선택</strong>
+              </a>
+            </li>
+            <li class="step_4 "> 
+              <a href="#main_loan_cont_4" class="disabled" role="tab" id="main_loan_tab_4">
+                <em>04.</em>
+              <strong>금융기관 진행</strong>
+              </a>
+            </li>         
+            <li class="step_5 ">
+              <a href="#main_loan_cont_5" class="disabled" role="tab" id="main_loan_tab_5">
+                <em>05.</em>
+                <strong>자금 조달 완료</strong>
+              </a>
+            </li>
+          </ol> 
+        </div>
+      </section>
+      
+      <div class="main_loan_cont step_1" id="main_loan_cont_1" aria-labelledby="main_loan_tab_1" role="tabpanel">
+        <section class=""> 
+          <div class="list">
+            <div class="btnWrap">
+              <button class="btnSky">대출 정보 수정</button>
+            </div>
+            <div class="status tabScript" id="main_loan_tab_5" role="tablist">
+              <button type="button" role="tab" aria-controls="main_loan_cont_5" >
+                <span>제안서 제출</span>
+                <em>5건</em>
+              </button>
+              <button type="button" role="tab" aria-controls="main_loan_cont_5" class="on" aria-selected="true">
+                <span>채택된 제안서</span>
+                <em>5건</em>
+              </button>
+              <button type="button" role="tab" aria-controls="main_loan_cont_5" >
+                <span>마감 기한 연장 요청</span>
+                <em>5건</em>
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="bgWrap">
+          <section class=""> 
+            <div class="no_data bg_regist">
+              <span>
+                회원님이 대출 정보를 입력 중에 있어요. <br>
+                정확하고 상세한 정보를 입력하시면 더욱 정확한 제안서를 받으실 수 있어요.
+                <span class="btn">
+                  <button type="button" class="btnBlue">대출 정보 수정</button>
+                </span>
+              </span>
+            </div>
+            
+            <div class="no_data bg_review">
+              <span>
+                현재 금융회사들이 회원님의 대출 신청 자료를 검토하고 있어요. <br>
+                 심사 참여까지 약간의 시간이 소요 될 수 있으며 변경된 정보가 있다면 정보를 수정해 주세요.
+                <span class="btn">
+                  <button type="button" class="btnBlue">대출 정보 수정</button>
+                </span>
+              </span>
+            </div>
+            
+            <div class="no_data bg_endtime">
+              <span>
+                아쉽게도 마감일까지 도착한 제안서가 없네요. <br>
+                 마감 기한 설정을 변경해 보시겠어요?
+                <span class="btn">
+                  <button type="button" class="btnBlue">대출 정보 수정</button>
+                </span>
+              </span>
+            </div>
+            
+            <div class="no_data bg_timeover">
+              <span>
+                제출된 제안서를 선택 할 수 있는 시간이 지났어요. <br>
+                아쉽지만 다시 대출을 신청하시거나 관심 있던 금융회사의 담당자에게 연락을 해보시겠어요?
+                <span class="btn">
+                  <button type="button" class="btnBlue">대출 정보 수정</button>
+                </span>
+              </span>
+            </div>
+
+            <div class="gridList">
+              <div class="titBox">
+                <strong>현재 심사중인 금융회사 목록이에요.</strong>
+                <p>심사가 완료되면 회원님에게 관심 있는 금융회사의 제안서를 받아 보실 수 있어요.</p>
+              </div>
+
+
+              <div class="table_top">
+                <div class="total">
+                  총 <strong>15</strong>건
+                </div>
+              </div>
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>금융회사 감당자 제안내용</caption>
+                  <colgroup>
+                    <col />
+                    <col width="820px" />
+                    <col width="320px" />
+                  </colgroup>
+                  <thead class="double">
+                    <tr>
+                      <th scope="col" rowspan="2">번호</th>
+                      <th scope="col" rowspan="2">문의 내용</th>
+                      <th scope="col" colspan="2">작성일</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">작성일</th>
+                      <th scope="col">작성일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><a href="#;">대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a></td>
+                      <td>2023-08-01</td>
+                      <td>2023-08-01</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                </table>
+              </div>
+              <div class="external-pager jsgrid-pager-container">
+                <div class="jsgrid-pager">
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;&lt;</a></span> 
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;</a></span> 
+                  <span class="jsgrid-pager-page jsgrid-pager-current-page">1</span>
+                  <span class="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span> 
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;</a></span> 
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;&gt;</a></span> 
+                </div>
+              </div>
+                  
+
+            </div>
+            
+          </section>
+        </div>
+      </div>
+      <div class="main_loan_cont step_2" id="main_loan_cont_2" aria-labelledby="main_loan_tab_2" role="tabpanel">
+      </div>
+      <div class="main_loan_cont step_3" id="main_loan_cont_3" aria-labelledby="main_loan_tab_3" role="tabpanel">
+      </div>
+      <div class="main_loan_cont step_4" id="main_loan_cont_4" aria-labelledby="main_loan_tab_4" role="tabpanel">
+      </div>
+      <div class="main_loan_cont step_5" id="main_loan_cont_5" aria-labelledby="main_loan_tab_5" role="tabpanel">
+      </div>
+
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- footer : start -->
+    <!-- **************** -->
+    <hr/>
+    <footer id="skip_footer"  aria-label="푸터">
+       <div class="footerWrap">
+        <ul class="footerLnk">
+          <li><a href="#none">고객센터</a></li>
+          <li><a href="#none">약관동의</a></li>
+          <li><a href="#none">대출신청 정보 제공 동의</a></li>
+          <li><a href="#none">자금 세탁 방지법</a></li>
+          <li><a href="#none">대출 서비스 안내</a></li>
+         </ul>
+         <div class="copy">
+          <p>
+            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
+            <span>Copyright Since 2023</span>
+          </p>
+          <div class="wa">
+            <img src="./images/common/wa-logo.png" alt="">
+          </div>
+         </div>
+       </div>
+    </footer>
+    <!-- **************** -->
+    <!-- footer : end -->
+    <!-- **************** -->
+  </div>
+
+
+</body>
+</html>

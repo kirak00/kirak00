@@ -94,14 +94,37 @@ function tabScript(){
     var tabCont = $(o);
     var menu = tabCont.children();
     var tab = tabCont.find("[role=tab]").each(function(n){this.n=n});
-
+    var lnk = false;
+    if(menu[0].tagName.toLowerCase() == "li"){
+      menu = tabCont.find("> li > a");
+      var menuWrap = tabCont.find(">li");
+      lnk = true;
+    }
     menu.on("click", function(){
-      menu.removeClass("on").attr({'aria-selected' : 'false'})
-      $(this).addClass("on").attr({'aria-selected' : 'true'})
+      if(lnk){
+        menuWrap.removeClass("on")
+        menu.attr({'aria-selected' : 'false'})
+        $(this).parent().addClass("on")
+        $(this).attr({'aria-selected' : 'true'})
+      }else{
+        menu.removeClass("on").attr({'aria-selected' : 'false'})
+        $(this).addClass("on").attr({'aria-selected' : 'true'})
+      }
       return false;
     });
     
     var tabCont = $(this).siblings("[role=tabpanel]");
+    if(lnk){
+      var conTxt = []
+      menu.each(function(i){
+        if(i != 0){
+          conTxt +=","
+        }
+        conTxt += this.getAttribute("href");
+      });
+      tabCont = $(conTxt);
+    }
+
     if(tabCont.length == tab.length ){
       tabCont.hide().eq(0).show()
       tab.click(function(){
