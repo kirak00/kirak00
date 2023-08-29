@@ -53,7 +53,7 @@
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel1">
-                    <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3" readonly> 
+                    <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3" readonly>
                     <span class="unit">-</span>
                     <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2" readonly>
                     <span class="unit">-</span>
@@ -67,7 +67,7 @@
                 </th>
                 <td>
                   <div class="formRow">
-                    <input id="formLabel2" class="input" type="text" placeholder="상호명을 입력해 주세요." value="(주)모션아이" readonly>
+                    <input id="formLabel2" class="input" type="text" placeholder="상호명을 입력해 주세요." value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -77,38 +77,17 @@
                 </th>
                 <td>
                   <div class="formRow">
-                    <input id="formLabel3" class="input" type="text" placeholder="" value="Lonbank" readonly>
-                  </div>
-                </td> 
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="formLabel4">현 비밀번호</label>
-                </th>
-                <td>
-                  <div class="formRow hasError">
-                    <input id="formLabel4" class="input" type="password" placeholder="" value="00000">
-                  </div>
-                  <p class="errorTxt">영문, 숫자, 특수문자 포함 8자리 이상 입력해 주세요.</p>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="formLabel4_1">새 비밀번호</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input id="formLabel4_1" class="input" type="text" placeholder="새로운 비밀번호를 입력해 주세요." value="">
+                    <input id="formLabel3" class="input" type="text" placeholder="" value="" readonly>
                   </div>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  <label for="formLabel4_2">새 비밀번호 확인</label>
+                  <label for="formLabel4">비밀번호</label>
                 </th>
                 <td>
                   <div class="formRow">
-                    <input id="formLabel4_2" class="input" type="text" placeholder="새로운 비밀번호를 확인해 주세요." value="">
+                    <input id="formLabel4" class="input" type="password" placeholder="" value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -118,23 +97,21 @@
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel5">
-                    <input class="input" type="text" title="회사 대표전화(1/3)" placeholder="000" value="010">
+                    <input class="input" type="text" title="회사 대표전화(1/3)" placeholder="000" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="회사 대표전화(2/3)" placeholder="00" value="1234">
+                    <input class="input" type="text" title="회사 대표전화(1/3)" placeholder="00" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="회사 대표전화(3/3)" placeholder="00000" value="5678">
+                    <input class="input" type="text" title="회사 대표전화(1/3)" placeholder="00000" value="" readonly>
                   </div>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  <label id="formLabel6">이메일</label>
+                  <label for="formLabel6">이메일</label>
                 </th>
                 <td>
-                  <div class="formRow" role="group" aria-labelledby="formLabel6">
-                    <input class="input" type="text" title="이메일 아이디" placeholder="" value="hong" maxlength="50">
-                    <span class="unit mail">@</span>
-                    <input class="input" type="text" title="도메인주소" placeholder="" value="naver.com"> 
+                  <div class="formRow">
+                    <input id="formLabel6" class="input" type="text" placeholder="lonlon@gmail.com" value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -144,41 +121,22 @@
                 </th>
                 <td role="group" aria-labelledby="formLabel7">
                   <div class="formRow">
-                    <input class="input" type="text" placeholder="" value="서울 중구 청계천로 54">
+                    <input class="input inputBoss" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
                     <button type="button" class="btnWhite" disabled>주소검색</button>
                   </div>
                   <div class="formRow">
-                    <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="">
+                    <input class="input" type="text" placeholder="상세 주소를 입력해 주세요." value="4층" readonly>
                   </div>
                 </td>
+              </tr>
               <tr>
                 <th scope="row">
                   <label for="formLabel8">대표자명</label>
                 </th>
                 <td>
                   <div class="formRow" role="group" aria-labelledby="formLabel8">
-                    <input class="input" type="text" placeholder="" value="홍길동">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label>대표자 유형</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <span class="radio">
-                      <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
-                      <label for="testRdoBoxA"><span></span>1인 대표</label>
-                    </span>
-                    <span class="radio">
-                      <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
-                      <label for="testRdoBoxB"><span></span>공동 대표</label>
-                    </span>
-                    <span class="radio"> 
-                      <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
-                      <label for="testRdoBoxC"><span></span>각자 대표</label>
-                    </span>
+                    <input class="input inputBoss" type="text" placeholder="" value="홍길동" readonly>
+                    <input class="input" type="text" placeholder="" value="1인 대표" readonly>
                   </div>
                 </td>
               </tr>
@@ -188,12 +146,11 @@
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel9">
-                    <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="">
+                    <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="00" value="">
+                    <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="00" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="00000" value="">
-                    <button type="button" class="btnWhite">본인확인</button>
+                    <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="00000" value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -203,7 +160,8 @@
       </section>
       <div class="table_bt">
         <div class="btn_c">
-          <button type="button" class="btnBlue">저장</button>
+          <button type="button" class="btnBlue">수정</button>
+          <button type="button" class="btnGray">회원 탈퇴</button>
         </div>
       </div>
     </div>
