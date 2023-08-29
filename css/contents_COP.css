@@ -21,6 +21,8 @@
 
 /* body  {background:rgba(244, 246, 248, 1)} */
 
+.headerCont ul.gnb li.depth_1        {margin-left:30px}
+.headerCont ul.gnb li a   {width:190px;}
 
 /* content - common */
  
