@@ -23,31 +23,29 @@
   <div class="container hasBg" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">법인 회원 정보</h2>
+      <h2 class="pageTit">대출 관리</h2>
+      <p class="pageSub">법인 기업 정보</p>
       <ul class="breadcrumb">
-         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-         <li><a href="#none"><span>마이페이지</span></a></li>
-         <li><a href="#none"><strong>법인 회원 정보</strong></a></li>
+        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+        <li><a href="#none"><span>마이페이지</span></a></li>
+        <li><a href="#none"><span>대출 관리</span></a></li>
+        <li><a href="#none"><strong>법인 기업 정보</strong></a></li>
       </ul>
     </section>
     <div class="tabLineWrap">
       <ul class="tabLine tabScript" role="tablist">
-        <li><button type="button" role="tab" aria-selected="false">법인</button></li>
-        <li><button type="button" role="tab" aria-selected="false">담당자</button></li>
-        <li class="on"><button type="button" role="tab" aria-selected="true">기업 정보</button></li>
+        <li class="on"><button type="button" role="tab" aria-selected="true"><span aria-hidden="true" class="required">*</span>업체개요</button></li>
+        <li><button type="button" role="tab" aria-selected="false"><span aria-hidden="true" class="required">*</span>경영진 인적 사항</button></li>
+        <li><button type="button" role="tab" aria-selected="false"><span aria-hidden="true" class="required">*</span>주주 인적 사항</button></li>
+        <li><button type="button" role="tab" aria-selected="false">노사 관계 및 연혁</button></li>
       </ul>
     </div>
     <div class="bgGray">
-      <section class="">
-        <ul class="innerTab tabScript" role="tablist">
-          <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true"><span aria-hidden="true" class="required">*</span>업체개요</button></li>
-          <li><button type="button" role="tab" id="innerTab_2" aria-selected="false"><span aria-hidden="true" class="required">*</span>경영진 인적 사항</button></li>
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false"><span aria-hidden="true" class="required">*</span>주주 인적 사항</button></li> 
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">노사 관계 및 연혁</button></li> 
-        </ul>
+      <section class="sectionBlock60">
+        <p class="tableLabel">대출 신청 번호  S_20230809-0001</p>
         <div class="textTable">
           <table>
-            <caption>유의사항</caption>
+            <caption>업체개요</caption>
             <colgroup>
               <col width="205px" />
               <col />
@@ -71,7 +69,7 @@
               </tr>
               <tr>
                 <th scope="row">개업일</th> 
-                <td>2009년 02년 17일</td>
+                <td>2009-02-17</td>
               </tr>
               <tr>
                 <th scope="row">본사 주소</th> 
@@ -99,18 +97,17 @@
               </tr>
               <tr>
                 <th scope="row">직원수</th> 
-                <td>123명 <span class="sub">(공공 AIP 날짜 : 2023-08-01)</span></td>
+                <td>123명 <span class="sub">(근로복지공단 API 정보 수집 : 2023-08-01)</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-      </section>
-      <div class="table_bt">
-        <div class="btn_c">
-          <button type="button" class="btnBlue">수정</button>
-          <button type="button" class="btnGray">회원 탈퇴</button>
+        <div class="table_bt">
+          <div class="btn_r">
+            <a href="#;" class="btnGray">다음</a>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
     
 
