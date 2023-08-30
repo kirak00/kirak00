@@ -24,6 +24,8 @@ $(function(){
   tooltip_q();
 
   loginTab();
+
+  if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
 });
 
 
@@ -483,3 +485,16 @@ function accordion() {
   });
 
 } 
+
+$.fn.fileAttach = function() {	  
+	$(this).each(function(i, item) {
+		$(item).on('change', function(){			
+			if(window.FileReader){
+				var filename = $(this)[0].files[0].name;
+			} else {
+				var filename = $(this).val().split('/').pop().split('\\').pop();
+			}
+			$(this).siblings('.input').val(filename);
+		});
+	});
+};

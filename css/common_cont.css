@@ -49,6 +49,8 @@
 .titBg ~ .textTable { margin-top: 40px;}
 .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; }
 
+.titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
+
 /****************************
 **********  noti  **********
 *****************************/
@@ -98,6 +100,8 @@ a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#323C94; border:1px solid #323C94; }
 a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 a.btnWhiteLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+
+label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; }
 
 table .btnBlue        {padding:0 32px; height:50px; line-height:50px; }
 table .btnSky         {padding:0 32px; height:50px; line-height:50px; }
@@ -197,6 +201,13 @@ a.download       {padding-left:32px; font-weight: 700; color:#323C94;  backgroun
 button.xl      {height:70px; }
 button.sm       {height:50px; }
 .wid530      {min-width:530px;}
+
+/****************************
+**********  아이콘  **********
+*****************************/
+/* grid 안 아이콘 */
+.icoFile::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_nonelist_g.png')  no-repeat center / 36px 36px; }
+.icoReview::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_search_g.png')  no-repeat center / 36px 36px; }
 
 
 /****************************
@@ -317,7 +328,7 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 /* file */
 .fileForm {display: flex; padding-top:40px ; gap:8px;  }
 .fileForm label {font-weight: 700; line-height: 64px; padding-right:12px; }
-p.txt_fileForm {padding-left:72px; margin-top:10px;  }
+.txt_fileForm {margin-left: 80px; margin-top:10px; color: #555; }
 
 /* */
 .btnTypeRadio   {}
@@ -355,6 +366,13 @@ select.wid145 { min-width: 145px !important;}
 
 .searchControlBox { position: relative; padding: 32px 228px 32px 40px; background: #E5EDFB; border-radius: 16px;}
 .main .searchControlBox { background: #fff; }
+.searchControlBox.fullType { padding-right: 40px;}
+.searchControlBox.fullType .searchControlItem,
+.searchControlBox.fullType .formRow,
+.searchControlBox.fullType .formRow select { flex: 1;}
+.searchControlBox.fullType .formRow { display: inline-flex; gap: 0;}
+.searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;}
+
 .searchControlBox .searchBtns .btnReset { position: absolute; top: 32px; right: 36px; padding: 4px;}
 .searchControlBox .searchBtns .btnBlue { position: absolute; bottom: 32px; right: 40px; width: auto; }
 .searchControlBox .searchBtns .btnBlue.sm { width: 188px;}
@@ -362,7 +380,7 @@ select.wid145 { min-width: 145px !important;}
 .searchControlGroup .btnCalendar { margin-left: -8px;}
 
 .searchControlItem {display: inline-flex; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding:17px 0; padding-left: 16px; padding-right: 30px; }
+.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap; }
 .searchControlItem .formRow { display: inline-block; height: 100%;}
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
 .searchControlItem .formRow .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
@@ -648,10 +666,10 @@ table { width: 100%;}
 .viewLineTable.noLastLine tr:last-child { border-bottom: none; }
 
 /* 폼 테이블 */
-.formListTable { margin-top: 45px;}
+.formListTable { margin-top: 40px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
-
+.formListTable + .tableFilterGroup { margin-top: 5px;}
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 60px; }
@@ -751,6 +769,10 @@ th{word-break: break-all;}
 .jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell.left { text-align: left; padding-left:30px;}
+
+.noTableData  { margin: 60px 0; padding: 40px 0;}
+.noTableData .txt { margin-top: 30px; color: #555;}  
+
 /****************************
 **********  Gauge  **********
 *****************************/
@@ -933,6 +955,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .noData      {height:430px; text-align: center; display:flex; background:#F4F6F8; border-radius: 16px; }
 .noData span {margin:auto; padding-top:220px; background:url(../images/common/no_data_1.png) no-repeat 50% 0; }
 
+
+
 /* bbs detail */
 .bbsDetailBox       {  overflow: hidden; }
 .bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#E5EDFB; border-radius:16px 16px 0 0; display:flex;  }
@@ -1017,3 +1041,12 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 .tooltip_q.on     {}
 .tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-30px; background:#E5EDFB; border-radius: 16px; display:flex; white-space: nowrap; padding:30px;     }
 .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:30px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
+
+
+/****************************
+**********  파일첨부  **********
+*****************************/
+.filebox .label { width: 72px; font-weight: 700;}
+.filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
+.filebox .input { flex: 1; }
+.filebox .input:disabled { color: #333; background-color: #fff;}

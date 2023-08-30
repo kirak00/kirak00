@@ -377,7 +377,17 @@
                     </div>
                   </div>
                 </div>
-
+                <script>
+                    $(function(){
+                      $(document).on("click", ".btnPlus", function() {
+                        var $serialblock = $('.list').eq(0).clone();
+                        $('.formGrayBox').append($serialblock);
+                      });
+                      $(document).on("click", ".btnMinus", function() {
+                        $(this).closest(".list").detach();
+                      });
+                    });
+                </script>
               </td>
             </tr>
             <tr>
