@@ -95,16 +95,23 @@ function tabScript(){
     var menu = tabCont.children();
     var tab = tabCont.find("[role=tab]").each(function(n){this.n=n});
     var lnk = false;
+    var menuWrap =[];
     if(menu[0].tagName.toLowerCase() == "li"){
       menu = tabCont.find("> li > a");
-      var menuWrap = tabCont.find(">li");
       lnk = true;
+      if(menu.length == 0){
+        menu = tabCont.find("> li > button");
+        lnk = false;
+      }
+      menuWrap = tabCont.find(">li");
     }
     menu.on("click", function(){
-      if(lnk){
+      if(menuWrap.length > 0){
         menuWrap.removeClass("on")
-        menu.attr({'aria-selected' : 'false'})
         $(this).parent().addClass("on")
+      }
+      if(lnk){
+        menu.attr({'aria-selected' : 'false'})
         $(this).attr({'aria-selected' : 'true'})
       }else{
         menu.removeClass("on").attr({'aria-selected' : 'false'})

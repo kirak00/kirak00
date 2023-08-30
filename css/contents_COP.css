@@ -151,7 +151,12 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_progress ol.status_tab li.step_5.disabled   {background-image:url(../images/COP/main/ico_80_log_process_05_off.png); }
 
 .main_loan_cont              { } 
+.main_loan_cont .bgWrap section {padding-bottom:60px;  } 
 .main_loan_cont .list           {position:relative; width:265px; padding-bottom:70px; } 
+.main_loan_cont.step_2 .list    {left:285px; }
+.main_loan_cont.step_3 .list    {left:570px; }
+.main_loan_cont.step_4 .list    {left:855px; }
+.main_loan_cont.step_5 .list    {left:1130px; }
 .main_loan_cont .list::before   {content:""; position:absolute; left:50%; bottom:-1px; width:40px; height:32px; transform: translateX(-50%) rotate(180deg); background: url(../images/common/bul_polygon.png) no-repeat 50% 0; background-size:cover; } 
 .main_loan_cont .list .btnWrap  {text-align: center; }  
 .main_loan_cont .list .status   {}  
@@ -161,41 +166,32 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_cont .list .status button em     {display:block; padding:0 14px; border:1px solid #323C94; flex:0; color:#323C94; border-radius: 14px;  }
 .main_loan_cont .list .status button.on span   {color:#323C94; font-weight: 700; text-decoration: underline;}
 .main_loan_cont .list .status button.on em     {background:#323C94; color:#fff; font-weight: 700;}
-.main_loan_cont .no_data        { display:none; background:transparent; padding:90px 0; font-size: 30px; height:auto; text-align: center;  }   
+.main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 30px; height:auto; text-align: center;  }   
 .main_loan_cont .no_data span     {display:block; padding-top:195px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
 .main_loan_cont .no_data span.btn {background:none !important; padding:0; display:block; text-align: center; padding:40px 0 0; }   
 .main_loan_cont .no_data.bg_regist span     {background-image:url(../images/COP/main/no_data_main_1.png); } 
 .main_loan_cont .no_data.bg_review span     {background-image:url(../images/COP/main/no_data_main_2.png); } 
 .main_loan_cont .no_data.bg_endtime span     {background-image:url(../images/COP/main/no_data_main_3.png); } 
 .main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/no_data_main_4.png); } 
-.main_loan_cont .gridList     {padding-bottom:60px; } 
-.main_loan_cont .gridList .table_top .total     {font-weight: 700;} 
-.main_loan_cont .gridList .titBox     {padding:60px 0 30px; text-align: center; }
-.main_loan_cont .gridList .titBox strong  {font-size: 30px; }
-.main_loan_cont .gridList .titBox p       {color:#555; font-weight: 400; margin-top:20px; }
-.main_loan_cont .gridList .jsgrid-selected-row > .jsgrid-cell   {background:#f6f8fc ;}
+.main_loan_cont .table_top .total     {font-weight: 700;} 
+.main_loan_cont .titBox     {padding:80px 0 30px; text-align: center; }
+.main_loan_cont .titBox strong  {font-size: 30px; }
+.main_loan_cont .titBox p       {color:#555; font-weight: 400; margin-top:20px; }
+.main_loan_cont .bbs_list td    {font-weight: 400;}
 
+.moneyTxt     {}
+.moneyTxt em     {}
+.moneyTxt span   {display:block; color:#999; }
 
-
+.main_survey      {margin-top:10px; background:#fff; padding:40px; border-radius: 16px;  }
+.main_survey dt   {height:74px; padding:24px 0 0;  }
+.main_survey dt ~ dt   {margin-top:30px; }
+.main_survey dd   {padding-left:40px; }
 
 /* 약관 */
 .content_terms    { margin-top:80px; }
 .content_terms .terms_type    { padding:40px 0 0;}
 .content_terms .terms_ment    { padding:40px 0 20px;}
-
-/* 이벤트 */
-ul.evtThumList        { width:100%; padding:0px 0 0;  }
-ul.evtThumList::after { content:""; display:block; width:100%; clear: both;}
-ul.evtThumList li     { position:relative; float:left; width:690px; margin:30px 20px 0px 0;   }
-ul.evtThumList li a   { display:block;   }
-ul.evtThumList li a:focus   { text-decoration: underline;}
-ul.evtThumList li:nth-child(2n)     { margin-right:0; }
-ul.evtThumList li:nth-child(-n+2)     { margin-top:0; }
-ul.evtThumList li img  { width:100%; height:300px; object-fit:cover; border-radius: 8px 8px 0 0; overflow: hidden; }
-ul.evtThumList li span.evtTit  { display:block; padding:30px 20px; border:1px solid #ddd; border-radius: 0 0 8px 8px ; }
-ul.evtThumList li span.evtTit strong  { display:block; font-size: 24px; }
-ul.evtThumList li span.evtTit span    { display:block; font-size: 18px; margin-top:20px; color:#999 }
-ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:30px; align-items: center; justify-content: center; }
 
 .evtWinner      { margin:60px 0 0;  }
 .bbsSearch      { margin-bottom:40px; }

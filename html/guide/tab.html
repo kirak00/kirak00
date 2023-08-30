@@ -22,9 +22,9 @@
       <h1 class="c-h1">Tab</h1>
       <!-- 탭 -->
       <ul class="tab tabScript" role="tablist">
-        <li class="on"><button type="button" role="tab" id="tab-1"  aria-selected="true">대출 신청 정보</button></li>
-        <li><button type="button" role="tab" id="tab-2" aria-selected="false">기업 일반 현황</button></li>
-        <li><button type="button" role="tab" id="tab-3" aria-selected="false">기업 재무 현황</button></li>
+        <li class="on"><button type="button" role="tab" id="tab-1"  aria-selected="true" aria-controls="main_loan_cont_1">대출 신청 정보</button></li>
+        <li><button type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="main_loan_cont_1">기업 일반 현황</button></li>
+        <li><button type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="main_loan_cont_1">기업 재무 현황</button></li>
       </ul>
     
 
@@ -34,27 +34,30 @@
       
       <!-- 이벤트 리스트 탭 -->
       <ul class="evtTab tabScript" role="tablist">
-        <li class="on"><button type="button" role="tab" id="tab-1" aria-selected="true">진행중인 이벤트</button></li>
-        <li><button type="button" role="tab" id="tab-2" aria-selected="false">당첨자 발표</button></li>
-        <li><button type="button" role="tab" id="tab-3" aria-selected="false">종료된 이벤트</button></li> 
+        <li class="on"><button type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="main_loan_cont_1">진행중인 이벤트</button></li>
+        <li><button type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="main_loan_cont_1">당첨자 발표</button></li>
+        <li><button type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="main_loan_cont_1">종료된 이벤트</button></li> 
       </ul>
+      <div id="main_loan_cont_1">
+
+      </div>
 
       <h1 class="c-h1">innerTab Tab</h1>
       
       <!-- 탭 안의 탭 -->
       <ul class="innerTab tabScript" role="tablist">
-        <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true">진행중인 이벤트</button></li>
-        <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">당첨자 발표</button></li>
-        <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">종료된 이벤트</button></li> 
+        <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true" aria-controls="main_loan_cont_1">진행중인 이벤트</button></li>
+        <li><button type="button" role="tab" id="innerTab_2" aria-selected="false" aria-controls="main_loan_cont_1">당첨자 발표</button></li>
+        <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">종료된 이벤트</button></li> 
       </ul>
   
       <h1 class="c-h1">Line Tab</h1>
 
       <div class="tabLineWrap">
         <ul class="tabLine tabScript" role="tablist">
-          <li class="on"><button type="button" role="tab" id="Linetab_1" aria-selected="true">법인</button></li>
-          <li><button type="button" role="tab" id="Linetab_2" aria-selected="false">담당자</button></li>
-          <li><button type="button" role="tab" id="Linetab_3" aria-selected="false">기업 정보</button></li>
+          <li class="on"><button type="button" role="tab" id="Linetab_1" aria-selected="true" aria-controls="main_loan_cont_1">법인</button></li>
+          <li><button type="button" role="tab" id="Linetab_2" aria-selected="false" aria-controls="main_loan_cont_1">담당자</button></li>
+          <li><button type="button" role="tab" id="Linetab_3" aria-selected="false" aria-controls="main_loan_cont_1">기업 정보</button></li>
         </ul>
       </div>
 

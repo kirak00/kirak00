@@ -207,8 +207,9 @@ button.sm       {height:50px; }
 /* .checkbox input[type=checkbox] + label.disable span {background:url("../images/COP/checkbox_disabled.png") no-repeat}
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
+
 /* radio */ 
-.radio { display: inline-block; white-space: nowrap;}
+.radio { display: inline-block; white-space: nowrap; height:64px; padding:20px 0 0;}
 .radio + input[type="text"] { margin-left: 16px;}
 .radio + .radio { margin-left:30px; }
 .radio + em + .radio { margin-left:30px; }
@@ -264,6 +265,7 @@ button.sm       {height:50px; }
 .formRow.wid673.mt30 { margin-top: 30px;}
 .formRow.wid673 .input { width: 100%;}
 .formRow .radio + input[type="text"] { margin-left: 6px;}
+
 .formRow .radio + .radio { margin-left: 20px;}
 .formRow .radioBtn + .radioBtn { margin-left: -2px;}
 
@@ -569,7 +571,7 @@ table.bbs_list th   {height:80px; background:#F4F6F8;  }
 table.bbs_list .double th   {height:40px; background:#F4F6F8;  }
 table.bbs_list .double tr + tr th   {border-top:1px solid #ddd;}
 table.bbs_list td   {height:100px; border-bottom:1px solid #ddd; background:#fff; }
-table.bbs_list td.tit   {text-align: left;}
+table.bbs_list td.tit   {text-align: left; padding-left:30px; }
 table.bbs_list thead tr.top th { background: #E5EDFB;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
 table.bbs_list thead tr:last-child { border-bottom: 1px solid #ddd;}
@@ -584,6 +586,23 @@ table.bbs_view td  {padding:30px 0; padding-left:20px; text-align: left; border-
 
 input[type=checkbox].star    {border:0; width:24px; height:24px; background:url(../images/common/ico_24_star_off.png) no-repeat 50% 50%; -webkit-appearance:none}
 input[type=checkbox].star:checked    {background:url(../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
+
+.starChkWrap    {overflow: hidden;}
+input[type=radio].starChk            {position:absolute; opacity:0; left:-30px; }
+input[type=radio].starChk:checked    {background:url(../images/common/ico_24_star_on.png) no-repeat 50% 50%; }
+input[type=radio].starChk ~ label     {display:inline-block; width:24px; height:64px; transition: .3s; background:url(../images/common/ico_24_star_off.png) no-repeat 50% 50%; cursor: pointer;}
+input[type=radio].starChk.starChk_1:checked ~ label               { background-image:url(../images/common/ico_24_star_off.png)}
+input[type=radio].starChk.starChk_1:checked ~ label.starChk_1     { background-image:url(../images/common/ico_24_star_on.png)}
+input[type=radio].starChk.starChk_2:checked ~ label               { background-image:url(../images/common/ico_24_star_off.png)}
+input[type=radio].starChk.starChk_2:checked ~ label.starChk_1     { background-image:url(../images/common/ico_24_star_on.png)}
+input[type=radio].starChk.starChk_2:checked ~ label.starChk_2     { background-image:url(../images/common/ico_24_star_on.png)}
+input[type=radio].starChk.starChk_3:checked ~ label               { background-image:url(../images/common/ico_24_star_on.png)}
+input[type=radio].starChk.starChk_3:checked ~ label.starChk_4     { background-image:url(../images/common/ico_24_star_off.png) }
+input[type=radio].starChk.starChk_3:checked ~ label.starChk_5     { background-image:url(../images/common/ico_24_star_off.png) }
+input[type=radio].starChk.starChk_4:checked ~ label               { background-image:url(../images/common/ico_24_star_on.png)}
+input[type=radio].starChk.starChk_4:checked ~ label.starChk_5     { background-image:url(../images/common/ico_24_star_off.png) }
+input[type=radio].starChk.starChk_5:checked ~ label               { background-image:url(../images/common/ico_24_star_on.png)}
+
 
 /****************************
 **********  table jin  **********
@@ -862,7 +881,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 700;}
 .tabLine li.on button { border-bottom: 3px solid #323C94; color: #323C94; }
-.tabLine li button:focus { border: 2px dashed #5B7DDC; border-radius: 16px;}
+.tabLine li button:focus { outline: 2px dashed #5B7DDC; border-radius: 16px 16px 0 0;}
 
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
@@ -907,6 +926,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 /* bbs detail */
 .bbsDetailBox       {  overflow: hidden; }
+.tabLine ~ .bbsDetailBox       {margin-top:60px; }
 .bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#E5EDFB; border-radius:16px 16px 0 0; display:flex;  }
 .bbsDetailBox .titBox *       {margin:auto 0; }
 .bbsDetailBox .titBox h3.tit  {font-size:24px; font-weight: 700; }
@@ -982,6 +1002,21 @@ ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin
 
 .bnrInerCont      {margin:80px auto;}
 
+
+
+/* 이벤트 */
+ul.evtThumList        { width:100%; padding:60px 0 0;  }
+ul.evtThumList::after { content:""; display:block; width:100%; clear: both;}
+ul.evtThumList li     { position:relative; float:left; width:690px; margin:30px 20px 0px 0; border-radius: 8px; border:1px solid #ddd;     }
+ul.evtThumList li a   { display:block;   }
+ul.evtThumList li a:focus   { text-decoration: underline;}
+ul.evtThumList li:nth-child(2n)     { margin-right:0; }
+ul.evtThumList li:nth-child(-n+2)     { margin-top:0; }
+ul.evtThumList li img  { width:100%; height:300px; object-fit:cover; overflow: hidden; }
+ul.evtThumList li span.evtTit  { display:block; padding:30px 20px; border-top:1px solid #ddd;  }
+ul.evtThumList li span.evtTit strong  { display:block; font-size: 24px; }
+ul.evtThumList li span.evtTit span    { display:block; font-size: 18px; margin-top:20px; color:#999 }
+ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:30px; align-items: center; justify-content: center; }
 
 
 /* tooltip */
