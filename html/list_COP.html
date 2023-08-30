@@ -63,7 +63,13 @@ table {margin:0 20px; width:calc(100% - 40px)}
 
   var jsonList = [
    {tit : '가이드', folder : 'guide', page : 'index.html', status : true, ment : '', end : '', },
-   {tit : '메인', folder : 'main', page : 'COP_F1.html', status : false, ment : '', end : '09/01', },
+   {tit : '메인', folder : 'main', page : '', status : false, ment : '', end : '09/01',
+    sub : [
+      {tit : '비로그인', folder : '', page : 'COP_F01.html', status : true , ment : 'v1.0 적용완료', end : '09/01',},
+      {tit : '대출없는경우', folder : '', page : 'COP_F011.html', status : true , ment : 'v1.0 적용완료', end : '09/01',},
+      {tit : '대출 정보 등록', folder : '', page : 'COP_F011.html', status : true , ment : 'v1.0 적용완료', end : '09/01',},
+    ]
+  },
    {
     tit : '로그인', folder : 'login', page : '', status : false, ment : '', end : '08/29',
     sub : [
