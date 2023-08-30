@@ -31,75 +31,78 @@
 
       <section class="">
         <!-- 검색 -->
-        <div class="searchControlBox">
-          <div class="searchControlGroup">
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">상태</label>
-              <div class="formRow">
-                <span class="line"></span>
-                <select id="selectLabelState">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label for="selectLabelState" class="label">상태</label>
+                <div class="formRow">
+                  <span class="line"></span>
+                  <select id="selectLabelState">
+                    <option>전체</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelArea" class="label">지역</label>
-              <div class="formRow">
-                <span class="line"></span>
-                <select id="selectLabelArea">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
+              <div class="searchControlItem">
+                <label for="selectLabelArea" class="label">지역</label>
+                <div class="formRow">
+                  <span class="line"></span>
+                  <select id="selectLabelArea">
+                    <option>전체</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="searchControlItem">
-              <label id="selectLabelPay" class="label">희망 신청 금액</label>
-              <div class="formRow" role="group" aria-labelledby="selectLabelPay">
-                <span class="line"></span>
-                <input class="input inputXs" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
-                <span class="unit">억</span>
-                <select title="범위">
-                  <option>이상</option>
-                  <option>이하</option>
-                </select>
+              <div class="searchControlItem">
+                <label id="selectLabelPay" class="label">희망 신청 금액</label>
+                <div class="formRow" role="group" aria-labelledby="selectLabelPay">
+                  <span class="line"></span>
+                  <input class="input inputXs" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">억</span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="searchControlItem">
-              <label id="selectLabelPay" class="label">CRETOP 등급</label>
-              <div class="formRow" role="group" aria-labelledby="selectLabelPay">
-                <span class="line"></span>
-                <select title="등급">
-                  <option>전체</option>
-                  <option>이하</option>
-                </select>
-                <span class="line"></span>
-                <select title="범위">
-                  <option>이상</option>
-                  <option>이하</option>
-                </select>
+              <div class="searchControlItem">
+                <label id="selectLabelPay" class="label">CRETOP 등급</label>
+                <div class="formRow" role="group" aria-labelledby="selectLabelPay">
+                  <span class="line"></span>
+                  <select title="등급">
+                    <option>전체</option>
+                    <option>이하</option>
+                  </select>
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPatent" class="label">특허 보유 여부</label>
-              <div class="formRow">
-                <span class="line"></span>
-                <select id="selectLabelPatent">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
+              <div class="searchControlItem">
+                <label for="selectLabelPatent" class="label">특허 보유 여부</label>
+                <div class="formRow">
+                  <span class="line"></span>
+                  <select id="selectLabelPatent">
+                    <option>전체</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
               </div>
+              <span class="checkbox">
+                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+              </span>
             </div>
-            <span class="checkbox">
-              <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-              <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
-            </span>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnBlue sm">조회</button>
+            </div>
           </div>
-          <div class="searchBtns">
-            <button type="button" class="btnReset">초기화</button>
-            <button type="button" class="btnBlue sm">조회</button>
-          </div>
-        </div>
+        </fieldset>
         <!-- 검색 -->
       </section>
       <section class="sectionBlock60">

@@ -51,13 +51,20 @@
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="fileForm">
-          
+        <!-- 부장님꺼 주석 -->
+        <!-- <div class="fileForm">
           <label for="inpFile" class="label">파일명</label>
           <div class="formRow">
             <input class="input" type="text" name="inpFile" id="inpFile" placeholder="파일을 선택해주세요.">
           </div>
           <button type="button" class="btnSky">파일선택</button>
+          <button type="button" class="btnBlue">등록</button>
+        </div> -->
+        <div class="formRow filebox">
+          <label class="label">파일명</label>
+          <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
+          <label for="exFilename" class="btnDkGray">파일 선택</label>
+          <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
           <button type="button" class="btnBlue">등록</button>
         </div>
         <p class="txt_fileForm">

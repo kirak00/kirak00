@@ -17,23 +17,17 @@
 <body class="c-body">
 
   <div class="c-container">
-
-    <div class="c-title">
-      <h1 class="c-h1">Grid List</h1>
-    </div>
     <div class="c-guide">
 
-
+      <h1 class="c-h1">Grid List</h1>
       <div id="jsGrid" class="bbs"></div>
-      
       <div class="table_bt">
         <div class="btn_r">
           <button type="button" class="btnBlue ico_down">엑셀 다운로드</button>
         </div>
       </div>
-
-      
       <div id="externalPager" class="external-pager"></div>
+    
       <!-- <div id="jsGrid2" class="long_data_table"></div>
       <div id="externalPager2" class="external-pager"></div> -->
           
@@ -86,6 +80,7 @@
             pageSize: 10,
 
             data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
             fields: [
               // { width: 70, name: "관심대출", type: "text", itemTemplate:grid_template_star },
@@ -105,6 +100,68 @@
             ],
             
             pagerContainer: "#externalPager",
+              // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
+              pagerFormat: "{first} {prev} {pages} {next} {last}",
+              pagePrevText: "이전",
+              pageNextText: "다음",
+              pageFirstText: "처음으로",
+              pageLastText: "맨끝으로",
+              pageNavigatorNextText: "&#8230;",
+              pageNavigatorPrevText: "&#8230;",
+
+          });
+        });
+      </script>
+      <h1 class="c-h1">No Data</h1>
+      <div id="jsGrid2" class="bbs"></div>    
+      <div id="externalPager2" class="external-pager"></div>
+
+      
+      <!-- <div id="jsGrid2" class="long_data_table"></div>
+      <div id="externalPager2" class="external-pager"></div> -->
+          
+      <script>
+        $(function() {
+          
+          function grid_template_star(value, item){
+            console.log(value)
+            if(value==true){
+                return "<input type='checkbox' class='star' checked></input>";
+            }else if(value==false){
+                return "<input type='checkbox' class='star'></input>";
+            }else{
+                return "-";
+            }
+          }
+
+          var clients = [
+            // { "Name1": "농협은행",
+            //   "Name2": "2023-08-10", 
+            // },
+            // { "Name1": "농협은행",
+            //   "Name2": "2023-08-10", 
+            // },
+          ];
+          
+
+
+          $("#jsGrid2").jsGrid({
+            width: "1400px",
+            // inserting: true,
+            // editing: true,
+            sorting: true,
+            paging: true,
+            pageSize: 10,
+
+            data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+
+            fields: [
+              { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto", validate: "required", sorting: false },
+              { name: "Name2", type: "text", title : "심사 요청일", width: 240, validate: "required" },
+            ],
+            
+            pagerContainer: "#externalPager2",
               // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
               pagerFormat: "{first} {prev} {pages} {next} {last}",
               pagePrevText: "이전",
