@@ -954,7 +954,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500;}
 .tabLine li.on button { border-bottom: 3px solid #323C94; color: #323C94; font-weight: 700; }
-.tabLine li button:focus { border: 2px dashed #5B7DDC; border-radius: 16px;}
+.tabLine li button:focus { outline: 2px dashed #5B7DDC; border-radius: 16px 16px 0 0; }
 
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}

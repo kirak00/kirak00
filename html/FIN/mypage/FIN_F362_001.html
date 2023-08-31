@@ -39,6 +39,11 @@
         <li><button type="button" role="tab" id="tab-3" aria-selected="false">종료된 이벤트</button></li> 
       </ul>
       <div role="tabpanel" aria-labelledby="tab-1">
+        
+        <div class="no-data event">
+          <span>진행중인 이벤트가 없습니다.</span>
+        </div>
+
         <ul class="evtThumList">
           <li class="">
              <a href="#">
@@ -82,6 +87,11 @@
 
       </div>
       <div role="tabpanel" aria-labelledby="tab-2" aria-hidden="true" >
+        
+        <div class="no-data event">
+          <span>당첨자 발표가 없습니다.</span>
+        </div>
+        
         <div class="evtWinner">
           
           <fieldset>
@@ -96,10 +106,11 @@
             </div>
           </fieldset>
           
+
           <div class="table_wrap">
             <table class="bbs_list">
               <caption>
-                제안서 제출 가능 목록
+                이벤트 목록
               </caption>
               <colgroup>
                 <col width="150"/>
@@ -159,6 +170,9 @@
 
       </div>
       <div role="tabpanel" aria-labelledby="tab-3" aria-hidden="true">
+        <div class="no-data event">
+          <span>종료된 이벤트가 없습니다.</span>
+        </div>
         <ul class="evtThumList">
           <li class="end">
              <a href="#">
