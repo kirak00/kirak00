@@ -54,7 +54,7 @@
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt { color: #5B7DDC;}
+.notiTxt { color: #323C94;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
 .notiBox { padding: 24px 40px; background: #E5EDFB; border-radius: 16px; color: #323C94; }
@@ -66,7 +66,7 @@
 
 .resultCont + .guideBox { margin-top: 80px; }
 .guideBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
-.guideBox .guideList { margin-top: 24px;}
+.guideBox .guideList { margin-top: 20px;}
 .guideBox .not + .guideList { margin-top: 20px;}
 .guideList { margin-top: 150px;}
 .guideList .list { display: flex; margin-top: 8px; color: #555; font-size: 18px; font-weight: 400;}

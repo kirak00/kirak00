@@ -185,34 +185,19 @@ var clients = [
 
 
 $("#jsGrid").jsGrid({
-width: "100%",
-// inserting: true,
-// editing: true,
-sorting: true,
-paging: true,
-pageSize: 10,
-pageButtonCount: 5,
 data: clients,
 
 fields: [
-  { name: "Name1",  type: "button", title : "금융회사", width: 165, validate: "required", sorting: false },
-  { name: "Name2", type: "text", title : "제안 금리", width: 154, validate: "required" },
-  { name: "Name3", type: "text", title : "금리 유형", width: 168, validate: "required" },
-  { name: "Name4", type: "text", title : "제안 대출 금액", width: 220, validate: "required" },
-  { name: "Name5", type: "text", title : "제안서 접수일", width: 194, validate: "required" },
-  { name: "Name6", type: "text", title : "제안서 상태", width: 194, validate: "required" },
-  { name: "Name7", type: "text", title : "상세보기", width: 220, validate: "required" },
+  { name: "Name1",  type: "button", title : "금융회사", width: 165 },
+  { name: "Name2", type: "text", title : "제안 금리", width: 154 },
+  { name: "Name3", type: "text", title : "금리 유형", width: 168 },
+  { name: "Name4", type: "text", title : "제안 대출 금액", width: 220 },
+  { name: "Name5", type: "text", title : "제안서 접수일", width: 194 },
+  { name: "Name6", type: "text", title : "제안서 상태", width: 194 },
+  { name: "Name7", type: "text", title : "상세보기", width: 220 },
 ],
     
 pagerContainer: "#externalPager",
-  // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
-  pagerFormat: "{first} {prev} {pages} {next} {last}",
-  pagePrevText: "<",
-  pageNextText: ">",
-  pageFirstText: "<<",
-  pageLastText: ">>",
-  pageNavigatorNextText: "&#8230;",
-  pageNavigatorPrevText: "&#8230;",
 
 });
 

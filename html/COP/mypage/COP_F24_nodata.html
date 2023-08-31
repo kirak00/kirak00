@@ -112,32 +112,17 @@
   
   
   $("#jsGrid").jsGrid({
-  width: "100%",
-  // inserting: true,
-  // editing: true,
-  sorting: true,
-  paging: true,
-  pageSize: 10,
-  pageButtonCount: 5,
-  data: clients,
-  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-  
-  fields: [
-    { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto", validate: "required", sorting: false },
-    { name: "Name2", type: "text", title : "심사 요청일", width: 240, validate: "required" },
-  ],
-      
-  pagerContainer: "#externalPager",
-    // pagerFormat: "current page: {pageIndex} &nbsp;&nbsp; {first} {prev} {pages} {next} {last} &nbsp;&nbsp; total pages: {pageCount} total items: {itemCount}",
-    pagerFormat: "{first} {prev} {pages} {next} {last}",
-    pagePrevText: "<",
-    pageNextText: ">",
-    pageFirstText: "<<",
-    pageLastText: ">>",
-    pageNavigatorNextText: "&#8230;",
-    pageNavigatorPrevText: "&#8230;",
-  
-  });
+    data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+    
+    fields: [
+      { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto" },
+      { name: "Name2", type: "text", title : "심사 요청일", width: 240 },
+    ],
+        
+    pagerContainer: "#externalPager",
+    
+    });
   
   });
   
