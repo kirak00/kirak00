@@ -130,7 +130,7 @@
         </div>
       </fieldset>
       <div class="jsGridWrap">
-        <div id="jsGrid" class="bbs"></div>
+        <div id="jsGrid" class="bbs" caption="금융사 대출 목록"></div>
         <div class="table_bt">
           <div class="btn_r">
             <button type="button" class="btnBlue ico_down">엑셀 다운로드</button>
@@ -145,6 +145,24 @@ $(function() {
 var clients = [
   { "Name1": "종로1가지점",
     "Name2": "5_230809_001", 
+    "Name3": "2023-07-23", 
+    "Name4": "12억 5000만원", 
+    "Name5": "유", 
+    "Name6": "8.65%", 
+    "Name7": "정산완료", 
+    "Name8": "(주)길동건설", 
+  },
+  { "Name1": "종로1가지점",
+    "Name2": "5_230809_001", 
+    "Name3": "2023-07-21", 
+    "Name4": "12억 5000만원", 
+    "Name5": "유", 
+    "Name6": "8.65%", 
+    "Name7": "정산완료", 
+    "Name8": "(주)길동건설", 
+  },
+  { "Name1": "종로1가지점",
+    "Name2": "5_230809_001", 
     "Name3": "2023-07-22", 
     "Name4": "12억 5000만원", 
     "Name5": "유", 
@@ -156,11 +174,6 @@ var clients = [
 
 
 $("#jsGrid").jsGrid({
-  width: "100%",
-  sorting: true,
-  paging: true,
-  pageSize: 10,
-  pageButtonCount: 5,
   data: clients,
 
   fields: [
@@ -173,9 +186,7 @@ $("#jsGrid").jsGrid({
     { name: "Name7", type: "text", title : "정산 여부", width: 70, validate: "required", sorting: false },
     { name: "Name8", type: "text", title : "법인명", width: 104, validate: "required", sorting: false },
   ],
-    
   pagerContainer: "#externalPager",
-  pagerFormat: "{first} {prev} {pages} {next} {last}",
 
 });
 

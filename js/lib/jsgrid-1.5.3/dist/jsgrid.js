@@ -384,8 +384,8 @@
 
             this._container.addClass(this.containerClass)
                 .css("position", "relative")
-                .append(this._createHeader())
-                .append(this._createBody());
+                .append(this._createBody())
+                .prepend(this._createHeader());
 
             this._pagerContainer = this._createPagerContainer();
             this._loadIndicator = this._createLoadIndicator();
@@ -418,14 +418,20 @@
         },
 
         _createHeader: function() {
-            var $headerRow = this._headerRow = this._createHeaderRow(),
-                $filterRow = this._filterRow = this._createFilterRow(),
+            var $filterRow = this._filterRow = this._createFilterRow(),
                 $insertRow = this._insertRow = this._createInsertRow();
+            var $headerTow2 = $("<thead>")
+            var $caption = $("<caption></caption>");
+            // $caption.html(this._container.attr("caption") + "");
+
+            $headerTow2 //.append($headerRow)
+            .append($filterRow)
+            .append($insertRow);
+
 
             var $headerGrid = this._headerGrid = $("<table>").addClass(this.tableClass)
-                .append($headerRow)
-                .append($filterRow)
-                .append($insertRow);
+                // .append($caption)
+                .append($headerTow2)
 
             var $header = this._header = $("<div>").addClass(this.gridHeaderClass)
                 .addClass(this._scrollBarWidth() ? "jsgrid-header-scrollbar" : "")
@@ -436,9 +442,24 @@
 
         _createBody: function() {
             var $content = this._content = $("<tbody>");
+            
+            var num = Math.ceil(Math.random()*1000)
+            $content.attr({id:'gridBody_'+num})
 
+
+            var $headerRow = this._headerRow = this._createHeaderRow('gridBody_'+num);
+            var $bodyRow2 = $("<thead>")
+            var $caption = $("<caption></caption>");
+            $caption.html(this._container.attr("caption") );
+            
+            $bodyRow2.append($headerRow)
+
+
+            // $bodyRow2.append($content);
             var $bodyGrid = this._bodyGrid = $("<table>").addClass(this.tableClass)
-                .append($content);
+                .append($caption)
+                .append($bodyRow2)
+                .append($content)
 
             var $body = this._body = $("<div>").addClass(this.gridBodyClass)
                 .append($bodyGrid)
@@ -463,7 +484,7 @@
             });
         },
 
-        _createHeaderRow: function() {
+        _createHeaderRow: function(bodyId) {
             if($.isFunction(this.headerRowRenderer))
                 return $(this.renderTemplate(this.headerRowRenderer, this));
 
@@ -478,9 +499,11 @@
                     $th.addClass(this.sortableClass)
                         .on("click", $.proxy(function() {
                             this.sort(index);
-                            $th.attr({"title" : this._sortOrder +" 정렬"})
+                            $th.attr({"title" : this._sortOrder +" 정렬 중"})
+                            $th.siblings().attr({title:""})
                         }, this));
-                    $th.attr({tabindex:0})
+                    $th.attr({tabindex:0 , role:'button', 'aria-label': $th.html()+'(으)로 정렬', 'aria-controls': bodyId})
+                    // $th.attr({tabindex:0 , role:'button', 'aria-label': $th.html()+'(으)로 정렬',})
                 }
             });
 
