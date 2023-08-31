@@ -156,10 +156,7 @@
               총 <strong>15</strong>건
             </div>
           </div>
-          <div id="jsGrid_1" class="bbs"></div>
-          <div class="no-data">
-            <span>등록된 대출 신청 업체 목록이 없습니다.</span>
-          </div>
+          <div id="jsGrid_1" class="bbs" caption="관심대출 목록"></div>
           <div id="externalPager_1" class="external-pager"></div>
 
           <script>
@@ -197,6 +194,7 @@
 
 
               $("#jsGrid_1").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
                 data: main_list_data_1,
                 fields: [
                   {name:"N1", width: 100, title: "관심<br>대출", type: "text", },
@@ -239,7 +237,7 @@
               총 <strong>15</strong>건
             </div>
           </div>
-          <div id="jsGrid_2" class="bbs"></div>
+          <div id="jsGrid_2" class="bbs" caption="심사 중인 대출 신청 목록"></div>
           <div id="externalPager_2" class="external-pager"></div>
 
           <script>
@@ -271,6 +269,7 @@
 
 
               $("#jsGrid_2").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
                 data: main_list_data_2,
                 fields: [
                   {name:"N1", width: 100, title: "관심 대출", type: "text", },
@@ -296,7 +295,7 @@
 
 
         <div role="tabpanel" class="main_list_contents" id="main_list_contents_3" aria-labelledby="tab-3" aria-hidden="true">
-          <h3 class="hide">제안서 제출 완료</h3>
+          <h3 class="hide">제안서 제출 완료 목록</h3>
 
           
           <div class="list_top_box">
@@ -312,7 +311,7 @@
               총 <strong>15</strong>건
             </div>
           </div>
-          <div id="jsGrid_3" class="bbs"></div>
+          <div id="jsGrid_3" class="bbs" caption="제안서 제출 완료 목록"></div>
           <div id="externalPager_3" class="external-pager"></div>
 
           <script>
@@ -333,6 +332,7 @@
 
 
               $("#jsGrid_3").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
                 data: main_list_data_3,
                 fields: [
                   {name:"N1", width: 100, title: "상태", type: "text", },
@@ -372,7 +372,7 @@
               총 <strong>15</strong>건
             </div>
           </div>
-          <div id="jsGrid_4" class="bbs"></div>
+          <div id="jsGrid_4" class="bbs" caption="채택 제안서 목록"></div>
           <div id="externalPager_4" class="external-pager"></div>
 
           <script>
@@ -416,6 +416,7 @@
 
 
               $("#jsGrid_4").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
                 data: main_list_data_4,
                 fields: [
                   {name:"N1", width: 100, title: "상태",  type: "text", },
