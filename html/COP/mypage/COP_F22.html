@@ -53,9 +53,9 @@
         <h4 class="titH4 hasLine">추가 서류 제출하기</h4>
         <div class="formList fullType">
           <div class="formRow">
-            <span class="label">추가 서류 제출</span>
+            <label class="label" for="inputLabelFile">추가 서류 제출</label>
             <div class="formRow filebox">
-              <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
+              <input type="text" id="inputLabelFile" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
               <button type="button" class="btnWhite">파일 첨부</button>
               <button type="button" class="btnBlue">제출하기</button>
             </div>
@@ -99,9 +99,9 @@
   noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>제출한 추가 제출 서류가 없어요</p></div>",
   
   fields: [
-    { name: "Name1",  type: "text", title : "신청 유형", width: "auto", validate: "required", sorting: false },
-    { name: "Name2", type: "text", title : "신청일", width: 220, validate: "required" },
-    { name: "Name3", type: "text", title : "진행 여부", width: 220, validate: "required" },
+    { name: "Name1",  type: "text", title : "신청 유형", width: "auto", sorting: false },
+    { name: "Name2", type: "text", title : "신청일", width: 220 },
+    { name: "Name3", type: "text", title : "진행 여부", width: 220 },
   ],
       
   pagerContainer: "#externalPager",
@@ -219,11 +219,11 @@
   noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>금융회사 추가 서류 요청이 없습니다.</p></div>",
   
   fields: [
-    { name: "Name1",  type: "text", title : "금융회사명", width: 220, validate: "required", sorting: false },
-    { name: "Name2", type: "text", title : "필요 서류 안내", width: "auto", validate: "required" },
-    { name: "Name3", type: "text", title : "요청일", width: 220, validate: "required" },
-    { name: "Name4", type: "text", title : "제출 완료일", width: 220, validate: "required" },
-    { name: "Name5", type: "text", title : "서류 제출 여부", width: 220, validate: "required" },
+    { name: "Name1",  type: "text", title : "금융회사명", width: 220, sorting: false },
+    { name: "Name2", type: "text", title : "필요 서류 안내", width: "auto" },
+    { name: "Name3", type: "text", title : "요청일", width: 220 },
+    { name: "Name4", type: "text", title : "제출 완료일", width: 220 },
+    { name: "Name5", type: "text", title : "서류 제출 여부", width: 220 },
   ],
       
   pagerContainer: "#externalPager2",
