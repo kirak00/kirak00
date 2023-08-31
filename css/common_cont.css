@@ -64,10 +64,15 @@
 
 .tabNoti { margin-top: 80px; color: #555; text-align: center;}
 
+.resultCont + .guideBox { margin-top: 80px; }
+.guideBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
+.guideBox .guideList { margin-top: 24px;}
+.guideBox .not + .guideList { margin-top: 20px;}
 .guideList { margin-top: 150px;}
-.guideList .list { color: #555; font-size: 18px; font-weight: 400;}
+.guideList .list { display: flex; margin-top: 8px; color: #555; font-size: 18px; font-weight: 400;}
+.guideList .list .tit { margin-right: 4px;}
 .guideList.dot .list { position: relative; padding-left: 20px; }
-.guideList.dot .list::before { content: ''; display: block; position: absolute; top: 50%; left: 0; width: 1px; height: 1px; border-radius: 50%; background: #555; }
+.guideList.dot .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
 /****************************
 **********  section  **********
 *****************************/
