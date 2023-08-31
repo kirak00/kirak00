@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js/juqery-3.7.0.min.js"></script>
+    
+    <link href="../../js/lib/rangeDatepicker.css" rel="stylesheet">
+    <script src="../../js/lib/fecha.js"></script>
+    <script src="../../js/lib/rangeDatepicker.js"></script>
+    <script src="../../js/jquery.ui.datepicker_koreaWA.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <link rel="stylesheet" href="./guide.css" />
+    <link rel="stylesheet" href="../../css/contents_COP.css" />
+    <title>SHINHAN</title>
+  </head>
+  <body class="c-body">
+    <div class="c-container">
+
+      <h2 class="c-h2">Search - 초기화 존재</h2>
+     <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">제안서 제출 유무</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelDone" class="label">심사 완료 유무</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelDone">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelPay" class="label srOnly">제출자</label>
+              <div class="formRow">
+                <input class="input wid400" type="text" name="" id="selectLabelPay" placeholder="제출자를 입력해 주세요" value="">
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelArea" class="label">지역</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelArea">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelPatent" class="label">자금 용도</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelPatent">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelPa" class="label">담보 유무</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelPa">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+              <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+            </span>
+          </div>
+          <div class="searchBtns">
+            <button type="button" class="btnReset">초기화</button>
+            <button type="button" class="btnBlue">조회</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <h2 class="c-h2">Search - 초기화 없음</h2>
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">날짜 선택</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <input type="text" class="input wid360" value="2023-07-01~2023-08-15" /> 
+              </div>
+            </div>
+            <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
+            <div class="searchControlItem">
+              <label for="selectLabelPa" class="label">담보 유무</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelPa">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelArea" class="label">지역</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelArea">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="searchBtns">
+            <button type="button" class="btnBlue auto">조회</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <h2 class="c-h2">Search - FullType(1개)</h2>
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox fullType">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">비교 신청 건</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>S_230401_0001 시설 자금 대출</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <h2 class="c-h2">Search - FullType(2개)</h2>
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox fullType">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">비교 신청 건</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>S_230401_0001 시설 자금 대출</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">보증기관 제안 건</label>
+              <div class="formRow">
+                <span class="line"></span>
+                <input type="text" class="input" value="3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+   
+    
+      
+
+    </div>
+  </body>
+</html>
