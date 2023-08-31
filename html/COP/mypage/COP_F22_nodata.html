@@ -83,7 +83,7 @@
           </div>
         </fieldset>
         <div class="jsGridWrap">
-          <div id="jsGrid" class="bbs"></div>
+          <div id="jsGrid" class="bbs" caption="추가서류 제출 목록"></div>
           <div id="externalPager" class="external-pager"></div>
           <script>
             
@@ -107,19 +107,18 @@
   
   
   $("#jsGrid").jsGrid({
-  data: clients,
-  noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>제출한 추가 제출 서류가 없어요</p></div>",
-  
-  fields: [
-    { name: "Name1",  type: "text", title : "신청 유형", width: "auto", validate: "required", sorting: false },
-    { name: "Name2", type: "text", title : "신청일", width: 220, validate: "required" },
-    { name: "Name3", type: "text", title : "진행 여부", width: 220, validate: "required" },
-  ],
-      
-  pagerContainer: "#externalPager",
+    data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>제출한 추가 제출 서류가 없어요</p></div>",
     
-  
-  });
+    fields: [
+      { name: "Name1",  type: "text", title : "신청 유형", width: "auto"},
+      { name: "Name2", type: "text", title : "신청일", width: 220 },
+      { name: "Name3", type: "text", title : "진행 여부", width: 220 },
+    ],
+        
+    pagerContainer: "#externalPager",
+    
+    });
   
   });
   
@@ -144,7 +143,7 @@
           </div>
         </fieldset>
         <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs"></div>
+          <div id="jsGrid2" class="bbs" caption="금융기관 요청서류 목록"></div>
           <div id="externalPager2" class="external-pager"></div>
           <script>
             
@@ -228,21 +227,20 @@
   
   
   $("#jsGrid2").jsGrid({
-  data: clients,
-  noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>금융회사 추가 서류 요청이 없습니다.</p></div>",
-  
-  fields: [
-    { name: "Name1",  type: "text", title : "금융회사명", width: 220, validate: "required", sorting: false },
-    { name: "Name2", type: "text", title : "필요 서류 안내", width: "auto", validate: "required" },
-    { name: "Name3", type: "text", title : "요청일", width: 220, validate: "required" },
-    { name: "Name4", type: "text", title : "제출 완료일", width: 220, validate: "required" },
-    { name: "Name5", type: "text", title : "서류 제출 여부", width: 220, validate: "required" },
-  ],
-      
-  pagerContainer: "#externalPager2",
+    data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>금융회사 추가 서류 요청이 없습니다.</p></div>",
     
-  
-  });
+    fields: [
+      { name: "Name1",  type: "text", title : "금융회사명", width: 220 },
+      { name: "Name2", type: "text", title : "필요 서류 안내", width: "auto" },
+      { name: "Name3", type: "text", title : "요청일", width: 220 },
+      { name: "Name4", type: "text", title : "제출 완료일", width: 220 },
+      { name: "Name5", type: "text", title : "서류 제출 여부", width: 220 },
+    ],
+        
+    pagerContainer: "#externalPager2",
+
+    });
   
   });
   
