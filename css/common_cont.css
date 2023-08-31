@@ -1103,3 +1103,8 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 .filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
 .filebox .input { flex: 1; }
 .filebox .input:disabled { color: #333; background-color: #fff;}
+
+
+
+.resultCont { padding-top: 54px; text-align: center;}
+.resultCont .desc { padding: 40px 0; font-size: 30px;}
