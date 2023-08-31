@@ -478,7 +478,9 @@
                     $th.addClass(this.sortableClass)
                         .on("click", $.proxy(function() {
                             this.sort(index);
+                            $th.attr({"title" : this._sortOrder +" 정렬"})
                         }, this));
+                    $th.attr({tabindex:0})
                 }
             });
 

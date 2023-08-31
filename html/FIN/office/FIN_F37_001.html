@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/jquery.ui.datepicker_koreaWA.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">금융사 대출 목록</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>중앙회(본점) 관리</span></a></li>
+          <li><a href="#none"><strong>금융사 대출 목록</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <!-- 검색 -->
+      <div class="searchControlBox">
+        <div class="searchControlGroup">
+          <div class="rangeControl">
+            <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
+            <button type="button"type="button" class="btnBlue rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabel_1" class="label">조직별</label>
+            <div class="formRow">
+              <span class="line"></span>
+              <select id="selectLabel_1" title="조직선택 > 지역본부">
+                <option>지역본부</option>
+                <option>셀렉트</option>
+              </select>
+              <span class="line"></span>
+              <select  title="조직선택 > 지점" class="wid300">
+                <option>지점</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="searchControlItem">
+            <label for="selectLabel_2" class="label">대출 신청 번호</label>
+            <div class="formRow">
+              <input class="input wid300" type="text" name="" id="selectLabel_2" placeholder="대출 신청 번호를 입력해 주세요" value="">
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabel_3" class="label">대출 금액</label>
+            <div class="formRow">
+              <span class="line"></span>
+              <input class="input wid100" type="text" name="" id="selectLabel_3" value="">
+              <span class="unit">억</span>
+              <select title="대출 금액 범위" >
+                <option>이상</option>
+                <option>이하</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabel_4" class="label">담보 유무</label>
+            <div class="formRow">
+              <span class="line"></span>
+              <select title="담보 유무" id="selectLabel_4" >
+                <option>전체</option>
+                <option>이하</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="searchControlItem">
+            <label for="selectLabelPatent" class="label">정산 여부</label>
+            <div class="formRow">
+              <span class="line"></span>
+              <select id="selectLabelPatent">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabel_6" class="label">법인명</label>
+            <div class="formRow">
+              <span class="line"></span>
+              <input class="input wid300" type="text" name="" id="selectLabel_6" placeholder="법인명을 입력해 주세요" value="">
+            </div>
+          </div>
+        </div>
+        <div class="searchBtns">
+          <button type="button" class="btnReset">초기화</button>
+          <button type="button" class="btnBlue">조회</button>
+        </div>
+      </div>
+      <!-- 검색 -->
+    </section>
+    <section class="sectionBlock60">
+      <fieldset class="tableFilterGroup">
+        <div class="total">
+          총 <strong>15</strong>건
+          <span class="count">2023-07-01 한국신용정보원 데이터 수집 기준</span>
+        </div>
+        
+        <div class="formRow" role="group">
+          <select title="보기갯수 선택">
+            <option>10개씩 보기</option>
+            <option>본부2</option>
+          </select>
+        </div>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid" class="bbs"></div>
+        <div class="table_bt">
+          <div class="btn_r">
+            <button type="button" class="btnBlue ico_down">엑셀 다운로드</button>
+          </div>
+        </div>
+        <div id="externalPager" class="external-pager"></div>
+        <script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { "Name1": "종로1가지점",
+    "Name2": "5_230809_001", 
+    "Name3": "2023-07-22", 
+    "Name4": "12억 5000만원", 
+    "Name5": "유", 
+    "Name6": "8.65%", 
+    "Name7": "정산완료", 
+    "Name8": "(주)길동건설", 
+  },
+];
+
+
+$("#jsGrid").jsGrid({
+  width: "100%",
+  sorting: true,
+  paging: true,
+  pageSize: 10,
+  pageButtonCount: 5,
+  data: clients,
+
+  fields: [
+    { name: "Name1",  type: "text", title : "조직명", width: 105, validate: "required", sorting: false },
+    { name: "Name2", type: "text", title : "대출 신청 번호", width: 105, validate: "required", sorting: false },
+    { name: "Name3", type: "text", title : "대출 발생일", width: 164, validate: "required" },
+    { name: "Name4", type: "text", title : "대출 금액", width: 100, validate: "required" },
+    { name: "Name5", type: "text", title : "담보 유무", width: 184, validate: "required", sorting: false },
+    { name: "Name6", type: "text", title : "금리", width: 120, validate: "required" },
+    { name: "Name7", type: "text", title : "정산 여부", width: 70, validate: "required", sorting: false },
+    { name: "Name8", type: "text", title : "법인명", width: 104, validate: "required", sorting: false },
+  ],
+    
+  pagerContainer: "#externalPager",
+  pagerFormat: "{first} {prev} {pages} {next} {last}",
+
+});
+
+});
+
+        </script>
+      </div>
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

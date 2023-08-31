@@ -107,20 +107,6 @@ function tabScript(){
       }
       menuWrap = tabCont.find(">li");
     }
-    menu.on("click", function(){
-      if(menuWrap.length > 0){
-        menuWrap.removeClass("on")
-        $(this).parent().addClass("on")
-      }
-      if(lnk){
-        menu.attr({'aria-selected' : 'false'})
-        $(this).attr({'aria-selected' : 'true'})
-      }else{
-        menu.removeClass("on").attr({'aria-selected' : 'false'})
-        $(this).addClass("on").attr({'aria-selected' : 'true'})
-      }
-      return false;
-    });
     
     var tabCont = $(this).siblings("[role=tabpanel]");
     if(lnk){
@@ -132,14 +118,35 @@ function tabScript(){
         conTxt += this.getAttribute("href");
       });
       tabCont = $(conTxt);
+    }else if(tabCont.length ==0){
+      var conTxt = []
+      menu.each(function(i){
+        if(i != 0){
+          conTxt +=","
+        }
+        conTxt += "#"+this.getAttribute("aria-controls");
+      });
+      tabCont = $(conTxt);
     }
 
     if(tabCont.length == tab.length ){
       tabCont.hide().eq(0).show()
+      if(menuWrap.length > 0){
+        menuWrap.removeClass("on").eq(0).addClass("on")
+      }
+      tab.removeClass("on").eq(0).addClass("on")
       tab.click(function(){
-        var cont = $("[aria-labelledby="+ this.id +"]");
-        tabCont.hide().attr("aria-hidden", "false"); ;
-        cont.show().attr("aria-hidden", "true"); ;
+        
+        if(menuWrap.length > 0){
+          menuWrap.removeClass("on")
+          $(this).parent().addClass("on")
+        }
+        tab.removeClass("on").attr({'aria-selected' : 'false'})
+        $(this).addClass("on").attr({'aria-selected' : 'true'})
+        
+        
+        tabCont.hide().eq(this.n).show().attr("aria-hidden", "false");
+        return false;
       })
     }
   })

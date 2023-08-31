@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../../js/juqery-3.7.0.min.js"></script>
-  <script src="../../js/jquery-ui.js"></script>
-  <script src="../../js/common.js"></script>
-  <script src="../../js/common_COP.js"></script>
-  <link rel="stylesheet" href="./guide.css" />
-  <link rel="stylesheet" href="../../css/contents_COP.css">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
 <style>
 
@@ -39,39 +43,31 @@
         <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
         <h2 class="hide">메뉴 영역</h2>
         <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
-          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 비교 하기</span></a>
+          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 신청 업체 목록</span></a>
             <ul>
-              <li class="depth_2"><a href="#none">대출 비교</a></li>
-              <li class="depth_2 on"><a href="#none">시설자금 대출</a></li>
-              <li class="depth_2"><a href="#none">운전자금 대출</a></li>
-              <li class="depth_2"><a href="#none">법인리스</a></li>
-              <li class="depth_2"><a href="#none">장기 렌트</a></li>
+              <li class="depth_2 on"><a href="#none">대출 신청 업체 목록</a></li>
             </ul>
           </li>
-          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">서비스 안내</span></a>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">제안서 등록</span></a>
             <ul>
-              <li class="depth_2"><a href="#none">대출절차안내</a></li>
-              <li class="depth_2"><a href="#none">제출서류안내</a></li>
-              <li class="depth_2"><a href="#none">정보지원사업</a></li>
-              <li class="depth_2"><a href="#none">홍보영상</a></li>
-            </ul>
-          </li>
-          <li class="depth_1" ><a href="#none"><span class="ico_gnb_cus">고객센터</span></a>
-            <ul>
-              <li class="depth_2"><a href="#none">고객센터번호</a></li>
-              <li class="depth_2"><a href="#none">1:1 문의</a></li>
-              <li class="depth_2"><a href="#none">F&Q</a></li>
+              <li class="depth_2"><a href="#none">제안서 제출 가능 목록</a></li>
             </ul>
           </li>
           <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
             <ul>
               <li class="depth_2"><a href="#none">회원정보</a></li>
-              <li class="depth_2"><a href="#none">대출 신청 관리</a></li>
-              <li class="depth_2"><a href="#none">추가서류 요청 관리</a></li>
               <li class="depth_2"><a href="#none">제안서 관리</a></li>
-              <li class="depth_2"><a href="#none">대출 관리</a></li>
-              <li class="depth_2"><a href="#none">알람</a></li>
-              <li class="depth_2"><a href="#none">메시지 함</a></li>
+              <li class="depth_2"><a href="#none">취급 대출 내역</a></li>
+              <li class="depth_2"><a href="#none">메시지함</a></li>
+              <li class="depth_2"><a href="#none">희망 업체 알림 설정</a></li>
+              <li class="depth_2"><a href="#none">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">중앙회(본점) 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">금융사 대출 목록</a></li>
+              <li class="depth_2"><a href="#none">대출 실적 관리</a></li>
+              <li class="depth_2"><a href="#none">소속 금융사 계정 관리</a></li>
             </ul>
           </li>
         </ul>
@@ -95,29 +91,10 @@
     <hr/>
     <div class="container" id="skip_content"  aria-label="콘텐츠">
 
-      <h1 class="c-h1">페이지 타이틀 - 왼쪽 정렬</h1>
-      <section class="pageTop">
-        <h2 class="pageTit">제안서 제출 가능 목록</h2>
-        <p class="pageSub">대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해 주세요.</p>
-        <ul class="breadcrumb">
-           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-           <li><a href="#none"><span>1뎁스</span></a></li>
-           <li><a href="#none"><span>2뎁스</span></a></li>
-           <li><a href="#none"><strong>3뎁스</strong></a></li>
-        </ul>
-      </section>
-      <h1 class="c-h1">페이지 타이틀 - 센터 정렬</h1>
-      <section class="pageTop textCenter">
-        <h2 class="pageTit">보안 프로그램 설치</h2>
-        <p class="pageSub">회원님의 안전한 서비스 이용을 위해 보안 프로그램을 설치합니다.<br/>
-          설치 이후에는 반드시 새로 고침을 하거나 다시 접속하시기 바랍니다.</p>
-      </section>
 
       <h2 class="hide">콘텐츠 영역</h2>
       <section>
         CONTENTS
-        <!-- <button type="button" onclick='layer_alert("ㅁㄴㅇㄹ", this , function(){alert(1)} )'>alert</button>
-        <button type="button" onclick='layer_confirm("ㅁㄴㅇㄹ", this , function(){alert(2)}, function(){alert(3)} )'>confirm</button> -->
       </section>
 
       <!-- 하단 풀 배너 : start -->
