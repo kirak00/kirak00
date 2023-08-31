@@ -28,7 +28,35 @@ $(function(){
   if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
 });
 
+jsGrid.setDefaults({
+  width: "100%",
+  filtering: false,
+  inserting: false,
+  editing: false,
+  sorting: true,
+  paging: true,
+  pageSize: 10,
+  pageButtonCount: 10,
+  pagerFormat: "{first} {prev} {pages} {next} {last}",
+  pagePrevText: "이전",
+  pageNextText: "다음",
+  pageFirstText: "처음으로",
+  pageLastText: "맨끝으로",
+  /*
+  
+                pageNavigatorNextText: "&#8230;",
+                pageNavigatorPrevText: "&#8230;",
 
+  */
+});
+
+/*
+
+$("#jsGrid").jsGrid({
+  pageButtonCount: 5,
+});
+
+*/
 
 function loginTab(){
   var tab = $(".loginTab .loginTabBtn").each(function(n){this.n=n});
