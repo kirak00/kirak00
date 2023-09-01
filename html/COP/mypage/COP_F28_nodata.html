@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 마감 기한 관리</h2>
+      <p class="pageSub">제안서에 표시된 금융기관에서 고객님께 더 적합한 제안을 하기 위해 마감 기한 연장을 신청했어요.<br/>
+        마감일 전까지 등록 하지 않으면 거절 될 수 있어요.</p>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>제안서 마감 기한 관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox fullType">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">비교 신청 건</label>
+              <div class="formRow">
+                
+                <select id="selectLabelState">
+                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>S_230401_0001 시설 자금 대출</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">제안서 마감일</label>
+              <div class="formRow">
+                
+                <input type="text" class="input" placeholder="" value="2023-07-01"/>
+                <button type="button" class="btnSuccess">마감일 변경</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      
+      <section class="">
+        <fieldset class="tableFilterGroup">
+          <span class="count">총 <strong>0</strong>건</span>
+         
+        </fieldset>
+        <div class="jsGridWrap">
+          <div id="jsGrid" class="bbs" caption="대출 관리 목록"></div>
+        
+          <div id="externalPager" class="external-pager"></div>
+          <script>
+            
+  /* jsgrid sample */
+  $(function() {
+  
+  var clients = [
+  ];
+  
+  
+  $("#jsGrid").jsGrid({
+    data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>금융 기관 마감 기한 연장 요청이 없어요.</p></div>",
+    fields: [
+      { name: "Name1",  type: "checkbox", title : "<input type='checkbox'/>", width: 140, 
+        itemTemplate: function(value, item) {
+          return $("<input>").attr("type", "checkbox")
+            .attr("checked", value || item.Checked)
+            .on("change", function() {
+              item.Checked = $(this).is(":checked");
+            });
+        } },
+      { name: "Name2",  type: "text", title : "연장 요청 금융회사", width: 290 },
+      { name: "Name3", type: "text", title : "요청사유", width: 470},
+      { name: "Name4", type: "text", title : "연장 요청일", width: 120},
+      { name: "Name5", type: "button", title : "승인", width: 360},
+    ],
+        
+    pagerContainer: "#externalPager",
+  });
+  
+  });
+  
+          </script>
+        </div>
+       
+      </section>
+
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

@@ -61,21 +61,17 @@
       
       <section class="">
         <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>0</strong>건</span>
-          <div class="formRow" role="group">
-            <select title="보기 유형 선택">
-              <option>금융기관 오름차순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기 유형 선택">
-              <option>최신순</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
-          </div>
+          <span class="count">총 <strong>20</strong>건</span>
+         
         </fieldset>
         <div class="jsGridWrap">
-          <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
+          <div id="jsGrid" class="bbs" caption="대출 관리 목록"></div>
+          <div class="table_bt mt20">
+            <div class="btn_l">
+              <button type="button" class="btnSuccess">승인</button>
+              <button type="button" class="btnWhite">거절</button>
+            </div>
+          </div>
           <div id="externalPager" class="external-pager"></div>
           <script>
             
@@ -83,62 +79,107 @@
   $(function() {
   
   var clients = [
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": false,
+      "Name2": "농협중앙회", 
+      "Name3": "부동산 담보 물건에 대한 확인이 지연되고 있습니다.", 
+      "Name4": "2023-07-11", 
+      "Name5": "<div class='btnSet'><button type='button' class='btnWhite'>승인</button><button type='button' class='btnGray'>거절</button></div>", 
     },
   ];
   
   
   $("#jsGrid").jsGrid({
     data: clients,
-    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>금융 기관 마감 기한 연장 요청이 없어요.</p></div>",
     fields: [
-      { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto" },
-      { name: "Name2", type: "text", title : "심사 요청일", width: 240},
+      { name: "Name1",  type: "checkbox", title : "<input type='checkbox'/>", width: 140, 
+        itemTemplate: function(value, item) {
+          return $("<input>").attr("type", "checkbox")
+            .attr("checked", value || item.Checked)
+            .on("change", function() {
+              item.Checked = $(this).is(":checked");
+            });
+        } },
+      { name: "Name2",  type: "text", title : "연장 요청 금융회사", width: 290 },
+      { name: "Name3", type: "text", title : "요청사유", width: 470},
+      { name: "Name4", type: "text", title : "연장 요청일", width: 120},
+      { name: "Name5", type: "button", title : "승인", width: 360},
     ],
         
     pagerContainer: "#externalPager",
-    
-    });
+  });
   
   });
   
-
           </script>
         </div>
+       
       </section>
 
     </section>
