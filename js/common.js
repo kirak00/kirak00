@@ -33,7 +33,7 @@ jsGrid.setDefaults({
   filtering: false,
   inserting: false,
   editing: false,
-  sorting: true,
+  sorting: false,
   paging: true,
   pageSize: 10,
   pageButtonCount: 10,
@@ -303,7 +303,7 @@ function layer_alert(msg,focusObj,btnObj){
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
-        <button class="alertConfirm btnBlue" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
       </div>
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
     </div>
@@ -317,7 +317,7 @@ function layer_alert(msg,focusObj,btnObj){
           <p>${ment}</p>
         </div>
         <div class="alertFooter">
-          <button class="alertConfirm btnBlue" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+          <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
         </div>
         <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
       </div>
@@ -360,7 +360,7 @@ function layer_confirm(msg,focusObj,btnObj){
       + `  <p>${ment}</p>
       </div>
       <div class="alertFooter">
-        <button class="alertConfirm btnBlue" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
         <button class="alertCancel btnWhite" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
       </div>
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
@@ -376,7 +376,7 @@ function layer_confirm(msg,focusObj,btnObj){
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
-        <button class="alertConfirm btnBlue" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
         <button class="alertCancel btnWhite " aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
       </div> 
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
