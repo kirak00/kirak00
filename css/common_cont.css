@@ -237,7 +237,7 @@ button.sm       {height:50px; }
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
-.radio.ht64 { height: 64px; line-height: 64px;}
+/* .radio.ht64 { height: 64px; line-height: 64px;} */
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
@@ -754,6 +754,7 @@ td .formListTable { margin-top: 25px;}
 
 
 .formMdTable .formRow { width: 578px;}
+.formMdTable .formRow:has(:only-child){ width: 100%;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
@@ -963,6 +964,8 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine li.on button { border-bottom: 3px solid #323C94; color: #323C94; font-weight: 700; }
 .tabLine li button:focus { outline: 2px dashed #5B7DDC; border-radius: 16px 16px 0 0; }
 
+.tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
+.tabLineWrap .update { position: absolute; top: 20px; right: 0; color: #888; font-size: 18px;}
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
 .tabLine.fullType li { width: 100%;}

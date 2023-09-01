@@ -108,11 +108,13 @@
               </tr>
               <tr>
                 <th scope="row">
-                  <label for="formLabel6">이메일</label>
+                  <label id="formLabel6">이메일</label>
                 </th>
                 <td>
-                  <div class="formRow">
-                    <input id="formLabel6" class="input" type="text" placeholder="lonlon@gmail.com" value="" readonly>
+                  <div class="formRow" role="group" aria-labelledby="formLabel6">
+                    <input class="input" type="text" title="이메일 아이디" placeholder="hong" value="" maxlength="50" readonly>
+                    <span class="unit mail">@</span>
+                    <input class="input" title="도메인주소" type="text" placeholder="gmail.com" value="" readonly>
                   </div>
                 </td>
               </tr>
