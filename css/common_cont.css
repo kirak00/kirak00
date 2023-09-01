@@ -42,9 +42,10 @@
 .titH3.hasLine ,
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
-.titBg {display: flex; align-items: center; justify-content: center;  height: 90px; padding: 0 60px; background: #EAFAEB; border-radius: 15px;}
+.titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #EAFAEB; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
 .titBg h3 { color: #069B66; font-size: 30px; font-weight: 700; }
+.titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { font-size: 18px;}
 .titBg ~ .textTable { margin-top: 40px;}
 .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; }
@@ -52,9 +53,17 @@
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
 
 /****************************
+**********  list  **********
+*****************************/
+
+.barList { display: flex;}
+.barList .list { position: relative; color: #555; font-size: 18px;}
+.barList .list + .list { margin-left: 8px; padding-left: 8px;}
+.barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #555; }
+/****************************
 **********  noti  **********
 *****************************/
-.notiTxt { color: #069B66; font-weight: 700;}
+.notiTxt { color: #069B66; font-weight: 500;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
 .notiBox { padding: 24px 40px; background: #E5EDFB; border-radius: 16px; color: #EAFAEB; }
@@ -388,21 +397,24 @@ select.wid145 { min-width: 145px !important;}
 .searchControlBox.fullType .formRow,
 .searchControlBox.fullType .formRow select,
 .searchControlBox.fullType .formRow input { flex: 1;}
-.searchControlBox.fullType .formRow { display: inline-flex; gap: 0;}
 .searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;}
 
 .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
-.searchControlBox .searchBtns .btnReset { }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
-.searchControlGroup .btnCalendar { margin-left: -8px;}
 
-.searchControlItem {display: inline-flex; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap; }
-.searchControlItem .formRow { display: inline-block; height: 100%;}
-.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .formRow .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem {display: inline-flex; height: 64px; border-radius: 8px; overflow: hidden;}
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
+  border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
+}
+.searchControlItem .label.srOnly  { display: none;}
+.searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
+.searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
+.searchControlItem .formRow .input, 
+.searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
+.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
+.searchControlItem .formRow .input { height: 100%; padding: 0 30px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .input.wid360 { width: 360px;}
 .searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
@@ -732,6 +744,7 @@ td .formListTable { margin-top: 25px;}
 /* 텍스트 테이블 */
 .tableBox .textTable { margin-top: 0;}
 .textTable { margin-top: 20px;}
+.textTable + .notiTxt { margin-top: 20px; }
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 20px 0; min-height: 58px; text-align: left; vertical-align: top;}
 .textTable tr:first-child th, .textTable tr:first-child td { padding-top: 14px; }
@@ -757,7 +770,6 @@ td .formListTable { margin-top: 25px;}
 
 .formMdTable .formRow { width: 578px;}
 .formMdTable .formRow.fullType { width: 100%;}
-/* .formMdTable .formRow:has(:only-child){ width: 100%;} */
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
