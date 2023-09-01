@@ -42,9 +42,10 @@
 .titH3.hasLine ,
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
-.titBg {display: flex; align-items: center; justify-content: center;  height: 90px; padding: 0 60px; background: #E5EDFB; border-radius: 15px;}
+.titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #EAFAEB; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
-.titBg h3 { color: #EAFAEB; font-size: 30px; font-weight: 700; }
+.titBg h3 { color: #069B66; font-size: 30px; font-weight: 700; }
+.titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { font-size: 18px;}
 .titBg ~ .textTable { margin-top: 40px;}
 .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; }
@@ -52,9 +53,17 @@
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
 
 /****************************
+**********  list  **********
+*****************************/
+
+.barList { display: flex;}
+.barList .list { position: relative; color: #555; font-size: 18px;}
+.barList .list + .list { margin-left: 8px; padding-left: 8px;}
+.barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #555; }
+/****************************
 **********  noti  **********
 *****************************/
-.notiTxt { color: #EAFAEB;}
+.notiTxt { color: #069B66; font-weight: 500;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
 .notiBox { padding: 24px 40px; background: #E5EDFB; border-radius: 16px; color: #EAFAEB; }
@@ -102,6 +111,7 @@ button.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-r
 button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
@@ -190,7 +200,7 @@ a.download       {padding-left:32px; font-weight: 700; color:#069B66;  backgroun
 .btnDown.white:focus,
 .btnDown.white:hover {border:1px solid #069B66; background-color:#069B66 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
-.btnCalendar          {width:64px; height:64px; border-radius: 8px; background:url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50% #069B66;  }
+.btnCalendar          {width:64px; height:64px; border: 1px solid #069B66; border-radius: 8px; background:url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff;  }
 .btnCalendar:focus,
 .btnCalendar:hover    {background-color:#148159 ;  }
 .btnCalendar.white      {border:1px solid #069B66; background-image:url(../images/common/ico_24_calendar_b.png); background-color:#fff ;  }
@@ -236,7 +246,7 @@ button.sm       {height:50px; }
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
-.radio.ht64 { height: 64px; line-height: 64px;}
+/* .radio.ht64 { height: 64px; line-height: 64px;} */
 /* checkbox */
 .checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
@@ -297,6 +307,7 @@ button.sm       {height:50px; }
 
 /* 폼 한줄 그룹  */
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
+.formRow.fullType { width: 100%;}
 .formRow > div { display: flex; align-items: center; gap: 8px;}
 .formRow ~ .formRow { margin-top: 10px;}
 .formRow.mt20 { margin-top: 20px; }
@@ -386,21 +397,24 @@ select.wid145 { min-width: 145px !important;}
 .searchControlBox.fullType .formRow,
 .searchControlBox.fullType .formRow select,
 .searchControlBox.fullType .formRow input { flex: 1;}
-.searchControlBox.fullType .formRow { display: inline-flex; gap: 0;}
 .searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;}
 
 .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
-.searchControlBox .searchBtns .btnReset { }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
-.searchControlGroup .btnCalendar { margin-left: -8px;}
 
-.searchControlItem {display: inline-flex; height: 64px; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;}
-.searchControlItem .label { display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap; }
-.searchControlItem .formRow { display: inline-block; height: 100%;}
-.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; border: none; color: #333; font-size: 20px; }
-.searchControlItem .formRow .input { height: 100%; border: none; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem {display: inline-flex; height: 64px; border-radius: 8px; overflow: hidden;}
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
+  border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
+}
+.searchControlItem .label.srOnly  { display: none;}
+.searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
+.searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
+.searchControlItem .formRow .input, 
+.searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
+.searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
+.searchControlItem .formRow .input { height: 100%; padding: 0 30px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .input.wid360 { width: 360px;}
 .searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .inputWrap { position: relative; display: inline-block; }
@@ -422,7 +436,7 @@ select.wid145 { min-width: 145px !important;}
 .formList.fullType .input { width: 100%;  }
 .formList.fullType .formRow { width: 100%;}
 .formList .formRow {display: flex; }
-.formList .formRow .label { margin-right: 22px; white-space: nowrap;}
+.formList .formRow .label { margin-right: 22px; font-weight: 700; white-space: nowrap;}
 
 /****************************
 **********  accordion  **********
@@ -552,8 +566,8 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
 .container.member {padding:160px 0 130px; }
 .container.hasBg { padding-bottom: 0;}
-.container.hasBg .bgGray { padding-bottom: 100px; overflow: hidden;}
-.bgGray { background: #FAFAFA;}
+.container.hasBg .bgGray { padding: 0 0 100px; overflow: hidden;}
+.bgGray { background: #FAFAFA; padding: 60px 0;}
 
 footer    {position:relative; z-index:1; background:rgba(244, 246, 248, 1) }
 footer::before    {content:""; position:absolute; width:100%; top:90px; border-top:1px solid #ddd}
@@ -603,9 +617,10 @@ section   {margin:0 auto; max-width: 1400px;}
 *****************************/
 .tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 20px; color: #555;}
-.tableFilterGroup .count strong { margin-left: 4px; color: #EAFAEB;}
+.tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
 .tableFilterGroup select { height: 50px; padding: 0 60px 0 15px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
+.tableFilterGroup .btnDkGreen { height: 50px; line-height: 50px;}
 
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
@@ -629,7 +644,7 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .table_wrap    { margin-top: 30px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden;}
-table.bbs_list th   {height:80px; background:#F4F6F8;  }
+table.bbs_list th   {height:80px; background:#F4FBF5;  }
 table.bbs_list .double th   {height:40px; background:#F4F6F8;  }
 table.bbs_list .double tr + tr th   {border-top:1px solid #ddd;}
 table.bbs_list td   {height:100px; padding: 0 20px; border-bottom:1px solid #ddd; background:#fff; }
@@ -669,7 +684,7 @@ input[type=radio].starChk.starChk_5:checked ~ label               { background-i
 /****************************
 **********  table jin  **********
 *****************************/
-.tableBox { margin-top: 30px; padding: 30px 40px; border: 1px solid #ddd; border-radius: 16px;}
+.tableBox { margin-top: 30px; padding: 30px 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 table { width: 100%;}
 .fixedTable { height: 600px; margin-top: 30px;  overflow: auto; border-radius: 16px; border: 1px solid #ddd;}
 .fixedTable thead {position: sticky; top: 0;} 
@@ -730,6 +745,7 @@ td .formListTable { margin-top: 25px;}
 /* 텍스트 테이블 */
 .tableBox .textTable { margin-top: 0;}
 .textTable { margin-top: 20px;}
+.textTable + .notiTxt { margin-top: 20px; }
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 20px 0; min-height: 58px; text-align: left; vertical-align: top;}
 .textTable tr:first-child th, .textTable tr:first-child td { padding-top: 14px; }
@@ -754,6 +770,7 @@ td .formListTable { margin-top: 25px;}
 
 
 .formMdTable .formRow { width: 578px;}
+.formMdTable .formRow.fullType { width: 100%;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
@@ -779,7 +796,7 @@ td .formListTable { margin-top: 25px;}
 .bbs { width:100% !important; border: 1px solid #ddd; border-radius: 16px;}
 .bbs .jsgrid-grid-header,
 .bbs .jsgrid-grid-body   {overflow: auto;}
-.jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#F9FCF9;}
+.jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#F4FBF5;}
 .jsgrid-cell    {height:100px; font-size:20px;  }
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
@@ -795,7 +812,7 @@ td .formListTable { margin-top: 25px;}
 .jsgrid-header-row:first-child .jsgrid-header-cell:first-child  {border-radius: 16px 0 0;}
 .jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {border-radius:  0 16px 0 0;}
 .jsgrid-grid-header {background:none}
-.jsgrid-selected-row > .jsgrid-cell   {background:#EAFAEB ;}
+.jsgrid-selected-row > .jsgrid-cell   {background:#F4FBF5 ;}
 
 th .checkbox     {vertical-align: 0;}
 
@@ -849,8 +866,8 @@ th{word-break: break-all;}
 .dateControl .btnSuccess,
 .btnCalendar { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 64px;  flex-shrink: 0;height: 64px; padding: 0;}
 .dateControl .btnSuccess::after,
-.btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
-
+.btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
+.btnCalendar:hover::after { background-image: url(../images/common/ico_24_calendar_w.png)} 
 
 
 /* lib override */
@@ -887,7 +904,7 @@ th{word-break: break-all;}
 .layerCont        { max-height: calc(100vh - 400px); overflow: auto; }
 
 .layerWrap .layerBody.wid870       {width:870px;  }
-.layerWrap .layerBody .layerHead    {padding:30px 0;  background:#E5EDFB;   }
+.layerWrap .layerBody .layerHead    {padding:30px 0;  background:#EAFAEB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
@@ -949,10 +966,10 @@ ul.evtTab li button:focus   {background:#5B7DDC; color:#fff;  }
 
 /* 탭 안의탭 */ 
 ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 60px auto 0; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
-ul.innerTab li button   {display:block; width:100%; height:64px; padding:0 32px; border-radius: 32px; text-align: center; font-size:20px; background:#fff; border:1px solid #EAFAEB; color: #EAFAEB; }
-ul.innerTab li.on button   {background:#EAFAEB; color:#fff; font-weight: 700; border:1px solid #EAFAEB;  }
+ul.innerTab li button   {display:block; width:100%; height:64px; padding:0 32px; border-radius: 32px; text-align: center; font-size:20px; background:#fff; border:1px solid #069B66; color: #069B66; }
+ul.innerTab li.on button   {background:#069B66; color:#fff; font-weight: 700; border:1px solid #069B66;  }
 ul.innerTab li:hover button,
-ul.innerTab li button:focus   {background:#5B7DDC; color:#fff;  }
+ul.innerTab li button:focus   {background:#36B688; color:#fff;  }
 ul.innerTab li.on .required { color: #fff; }
 ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
@@ -963,6 +980,8 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine li.on button { border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
 .tabLine li button:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
+.tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
+.tabLineWrap .update { position: absolute; top: 20px; right: 0; color: #888; font-size: 18px;}
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
 .tabLine.fullType li { width: 100%;}
