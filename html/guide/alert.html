@@ -26,7 +26,7 @@
         <div style="padding:10px 0;">
 
           <!-- 기본형 -->
-          <button type="button" class="btnBlue" onclick='sample_alert_1(this)'>alert 기본</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>alert 기본</button>
           <script>
             function sample_alert_1(obj){
               layer_alert("비밀번호 재설정이 필요합니다.", obj)
@@ -34,7 +34,7 @@
           </script>
 
           <!-- 옵션 변경 : 문구 타이틀, 버튼 문구변경, callback  -->
-          <button type="button" class="btnBlue" onclick='sample_alert_2(this)'>alert 버튼 문구변경</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_2(this)'>alert 버튼 문구변경</button>
           <script>
             function sample_alert_2(obj){
               layer_alert(
@@ -56,14 +56,14 @@
           <br>
           
           <!-- 강조글자 유형 -->
-          <button type="button" class="btnBlue" onclick='sample_alert_3(this)'>strong은 굵은 검정 글자</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_3(this)'>strong은 굵은 검정 글자</button>
           <script>
             function sample_alert_3(obj){
               layer_alert("로그인 <strong>5회</strong> 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", obj)
             }
           </script>
 
-          <button type="button" class="btnBlue" onclick='sample_alert_4(this)'>strong.red 는 굵은 빨강 글자</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_4(this)'>strong.red 는 굵은 빨강 글자</button>
           <script>
             function sample_alert_4(obj){
               layer_alert(
@@ -86,11 +86,11 @@
 
         <h2>confirm </h2>
         <div style="padding:10px 0;">
-          <button type="button" class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this )'>confirm 기본</button>
-          <button type="button" class="btnBlue" onclick='layer_confirm({tit:"회원탈퇴 하시겠습니까?", ment:"ㅁㄴㅇㄹ"}, this , {confirm:{txt:"확인1", callback:function(){alert(3)}}} )'>confirm 확인 문구변경</button>
+          <button type="button" class="btnSuccess" onclick='layer_confirm("ㅁㄴㅇㄹ", this )'>confirm 기본</button>
+          <button type="button" class="btnSuccess" onclick='layer_confirm({tit:"회원탈퇴 하시겠습니까?", ment:"ㅁㄴㅇㄹ"}, this , {confirm:{txt:"확인1", callback:function(){alert(3)}}} )'>confirm 확인 문구변경</button>
           <br>
-          <button type="button" class="btnBlue" onclick='layer_confirm("ㅁㄴㅇㄹ", this , {confirm:{txt:"확인1", callback:function(){alert(3)}},cancel:{txt:"취소1",callback:function(){alert(2)}}} )'>confirm 확인 취소 문구변경</button>
-          <button type="button" class="btnBlue" id="confirmClick">confirm 이벤트</button>
+          <button type="button" class="btnSuccess" onclick='layer_confirm("ㅁㄴㅇㄹ", this , {confirm:{txt:"확인1", callback:function(){alert(3)}},cancel:{txt:"취소1",callback:function(){alert(2)}}} )'>confirm 확인 취소 문구변경</button>
+          <button type="button" class="btnSuccess" id="confirmClick">confirm 이벤트</button>
         </div>
         <script>
           $("#confirmClick").on("click",function(){

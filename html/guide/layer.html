@@ -26,13 +26,13 @@
             class="open_layer"  // 팝업 호출
             aria-controls="레이어 ID" // 접근성 팝업 알림용
            -->
-          <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer">레이어 띄우기 class type </button>
-          <button type="button" class="btnBlue" onclick="layer_open('sampleLayer',this)" aria-controls="sampleLayer">레이어 띄우기 function 호출</button>
+          <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">레이어 띄우기 class type </button>
+          <button type="button" class="btnSuccess" onclick="layer_open('sampleLayer',this)" aria-controls="sampleLayer">레이어 띄우기 function 호출</button>
           
-          <button type="button" class="btnBlue" onclick="layer_close('sampleLayer')" >레이어 닫기 </button>
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')" >레이어 닫기 </button>
         </div>
         <div style="padding:10px 0;">
-          <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer_file">파일 레이어 </button>
+          <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer_file">파일 레이어 </button>
         </div>
 
     </div>
@@ -58,14 +58,14 @@
             <input class="input" type="text" name="inpFile" id="inpFile" placeholder="파일을 선택해주세요.">
           </div>
           <button type="button" class="btnSky">파일선택</button>
-          <button type="button" class="btnBlue">등록</button>
+          <button type="button" class="btnSuccess">등록</button>
         </div> -->
         <div class="formRow filebox">
           <label class="label">파일명</label>
           <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
           <label for="exFilename" class="btnDkGray">파일 선택</label>
           <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
-          <button type="button" class="btnBlue">등록</button>
+          <button type="button" class="btnSuccess">등록</button>
         </div>
         <p class="txt_fileForm">
           업로드 가능한 파일 포맷은 PPT, PDF,IMG 입니다. (최대 용량 50MB)
@@ -93,7 +93,7 @@
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <button type="button" class="btnBlue" onclick='layer_alert("로그인 5회 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", this )'>alert </button>
+        <button type="button" class="btnSuccess" onclick='layer_alert("로그인 5회 연속 오류로 인하여 <br>비밀번호 재설정이 필요합니다.", this )'>alert </button>
         asd<br>
         fa <br>
         s<br>
@@ -103,7 +103,7 @@
         s<br>
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnBlue xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">요청</button>
+        <button type="button" class="btnSuccess xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">요청</button>
       </div>
     </div>
     <div class="layerDimm"></div>

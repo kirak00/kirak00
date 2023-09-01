@@ -97,13 +97,13 @@
 button    {background:none; cursor: pointer; transition: background .2s; white-space: nowrap;}
 
 /* MAIN 버튼 */ 
-button.btnBlue        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
+button.btnSuccess        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 button.btnSky         {padding:0 50px; height:64px; background:#7793E2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
-a.btnBlue        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
+a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
 a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
@@ -111,15 +111,15 @@ a.btnWhiteLine       {display:inline-block; padding:0 50px; height:64px; line-he
 
 label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; }
 
-table .btnBlue        {padding:0 32px; height:50px; line-height:50px; }
+table .btnSuccess        {padding:0 32px; height:50px; line-height:50px; }
 table .btnSky         {padding:0 32px; height:50px; line-height:50px; }
 table .btnWhite       {padding:0 32px; height:50px; line-height:50px; }
 table .btnGray       {padding:0 32px; height:50px; line-height:50px; }
 table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 
-.btnBlue:focus,
-.btnBlue:hover        { background:#148159; text-decoration: none;  }
-.btnBlue:active        { background:#069B66; text-decoration: none;  }
+.btnSuccess:focus,
+.btnSuccess:hover        { background:#148159; text-decoration: none;  }
+.btnSuccess:active        { background:#069B66; text-decoration: none;  }
 .btnSky:focus,
 .btnSky:hover         { background:#36B688; text-decoration: none;  }
 .btnSky:active        { background:#02C37E; text-decoration: none;  }
@@ -130,14 +130,14 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
 .btnWhiteLine:active       { background:#ffffff; color:#069B66 }
 
-.btnBlue:disabled,
+.btnSuccess:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
 .btnWhiteLine:disabled       { background:#dddddd; color:#999; border:0; cursor:unset;  }
 
 .ico_down       {padding:0 32px;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
-.btnBlue.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
 .btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
 .btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnWhite:active.ico_down::after,
@@ -293,7 +293,7 @@ button.sm       {height:50px; }
 .row { display: flex; align-items: top; justify-content: space-between;}
 .row .label { display: inline-block; padding: 20px 0 0; color: #333; font-size: 20px; font-weight: 700; vertical-align: middle;}
 .row .unit { color: #333; font-size: 20px;}
-.row .btnBlue { display: inline-flex;  }
+.row .btnSuccess { display: inline-flex;  }
 
 /* 폼 한줄 그룹  */
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
@@ -391,8 +391,8 @@ select.wid145 { min-width: 145px !important;}
 
 .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
 .searchControlBox .searchBtns .btnReset { }
-.searchControlBox .searchBtns .btnBlue {  width: auto; }
-.searchControlBox .searchBtns .btnBlue.sm { width: 188px;}
+.searchControlBox .searchBtns .btnSuccess {  width: auto; }
+.searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 .searchControlGroup .btnCalendar { margin-left: -8px;}
 
@@ -409,7 +409,7 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .formRow .line  {display:inline-block; height:20px; width:1px; margin-right:-4px; background:url(../images/common/line_bar.png) no-repeat 0 50%;}
 
 .searchControlGroup .rangeControl .input {height:64px; }
-.searchControlGroup .rangeControl .btnBlue {width:64px; height:64px; }
+.searchControlGroup .rangeControl .btnSuccess {width:64px; height:64px; }
 
 /* form div table */
 /* .formListTable { margin-top: 60px;}
@@ -714,7 +714,7 @@ table { width: 100%;}
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite,
-.formListTable .btnBlue { height: 64px; padding: 0 50px; line-height: 64px;}
+.formListTable .btnSuccess { height: 64px; padding: 0 50px; line-height: 64px;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
 
@@ -836,8 +836,8 @@ th{word-break: break-all;}
 *****************************/
 .rangeControl { position: relative; display: flex; gap: 10px; }
 .rangeControl .input { min-height: 50px; padding: 0 16px;}
-.rangeControl .btnBlue { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
-.rangeControl .btnBlue::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
+.rangeControl .btnSuccess { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
+.rangeControl .btnSuccess::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
 
 
 /****************************
@@ -845,9 +845,9 @@ th{word-break: break-all;}
 *****************************/
 .dateControl { position: relative; display: flex; align-items: center; gap: 8px; }
 .dateControl .input { min-height: 64px; padding: 0 16px;}
-.dateControl .btnBlue,
+.dateControl .btnSuccess,
 .btnCalendar { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 64px;  flex-shrink: 0;height: 64px; padding: 0;}
-.dateControl .btnBlue::after,
+.dateControl .btnSuccess::after,
 .btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
 
 
