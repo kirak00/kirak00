@@ -901,7 +901,9 @@ th{word-break: break-all;}
 
 .layerWrap .layerBody.sizeM { width: 800px;}
 
-
+/* alert 스타일 layer */
+.layerWrap.typeAlert .layerBody       {width:610px;  }
+.layerWrap.typeAlert .layerBody .layerHead    {padding:30px 0;  background:none;   }
 
 
 
