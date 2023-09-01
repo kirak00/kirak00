@@ -21,8 +21,8 @@
 
 /* body  { background:rgba(244, 246, 248, 1)} */
 
-.headerCont ul.gnb li.depth_1        { margin-left:30px}
-.headerCont ul.gnb li a   { width:190px;}
+
+.on .headerCont ul.gnb li.depth_1 ul {display:block; width:100%; padding:25px 0 0 0px; }
 
 /* content - common */
  
@@ -139,7 +139,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #EAFAEB; }
 .main_loan_progress ol.status_tab li.disabled { }
 .main_loan_progress ol.status_tab li.disabled em,
-.main_loan_progress ol.status_tab li.disabled strong {color:#999}
+.main_loan_progress ol.status_tab li.disabled strong {color:#888}
 .main_loan_progress ol.status_tab li.step_1   {background-image:url(../images/COP/main/ico_80_log_process_01.png); }
 .main_loan_progress ol.status_tab li.step_2   {background-image:url(../images/COP/main/ico_80_log_process_02.png); }
 .main_loan_progress ol.status_tab li.step_3   {background-image:url(../images/COP/main/ico_80_log_process_03.png); }
@@ -181,7 +181,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 
 .moneyTxt     {}
 .moneyTxt em     {}
-.moneyTxt span   {display:block; color:#999; }
+.moneyTxt span   {display:block; color:#888; }
 
 .main_survey      {margin-top:10px; background:#fff; padding:40px; border-radius: 16px;  }
 .main_survey dt   {height:74px; padding:24px 0 0;  }
@@ -218,7 +218,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .joinStep li { position: relative; display: inline-block; width: 162px; margin-right: 26px;}
 .joinStep li:last-child { margin-right: 0px;}
 .joinStep li .circle { display: inline-block; width: 48px; height: 48px; line-height: 48px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 30px; font-weight: 700;}
-.joinStep li .name { margin-top: 8px; color: #999; font-size: 20px; }
+.joinStep li .name { margin-top: 8px; color: #888; font-size: 20px; }
 .joinStep li::before { content: ''; position: absolute; top: 23px; left: -50%; display: inline-block; width: 132px; height: 2px; background: #ddd;}
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #EAFAEB; }
