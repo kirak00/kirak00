@@ -22,7 +22,7 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section>
-      <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer_file">파일 찾기</button>
+      <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer">현장실사 여부 확인</button>
     </section>
   </div>
   <!-- **************** -->
@@ -33,28 +33,29 @@
   <!-- layer : start -->
   <!-- **************** -->
   <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-  <div class="layerWrap modal show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+  <div class="layerWrap modal typeAlert show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid870">
       <div class="layerHead">
-        <h3>파일 업로드</h3>
-        <p>업로드 파일을 선택해 주세요.</p>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+        <h3>현장실사 여부 확인</h3>
+        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
       </div>
       <div class="layerCont">
-        <div class="formRow filebox">
-          <label class="label">파일명</label>
-          <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
-          <label for="exFilename" class="btnDkGray">파일 선택</label>
-          <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
-          <button type="button" class="btnBlue">등록</button>
+        <div class="guideBox">
+          <strong>농협은행 금융회사</strong>에서<br/>현장실사를 진행하셨나요?
         </div>
-        <p class="txt_fileForm">
-          업로드 가능한 파일 포맷은 PPT, PDF,IMG 입니다. (최대 용량 50MB)
-        </p>
+
+        <p class="guidTxt">본 질문에 대한 답변은 제안서 제출 가능 여부와는 상관이 없습니다.</p>
+  
       </div>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnBlue" class="layerClose" popup-close="sampleLayer">네, 현장실사를 완료했습니다.</button>
+        <button type="button" class="btnWhite" class="layerClose" popup-close="sampleLayer">아니오, 현장실사는 하지 않았습니다.</button>
+      </div>
+
     </div>
     <div class="layerDimm"></div>
   </div>
+
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
