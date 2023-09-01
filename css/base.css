@@ -70,5 +70,5 @@ input	{-webkit-transition: all 300ms linear;-moz-transition: all 300ms linear;-o
 .skip_nav a:focus, 
 .skip_nav a:active{top: 0;}
 
-*:focus   {outline: 2px dashed #5B7DDC; border-radius: 5px;}
+*:focus   {outline: 2px dashed #069B66; border-radius: 5px;}
 button:focus   {outline: 0px; border-radius: 0;}

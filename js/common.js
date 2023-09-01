@@ -33,7 +33,7 @@ jsGrid.setDefaults({
   filtering: false,
   inserting: false,
   editing: false,
-  sorting: true,
+  sorting: false,
   paging: true,
   pageSize: 10,
   pageButtonCount: 10,
