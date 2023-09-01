@@ -301,7 +301,7 @@ h4 {
 .g-depth2::before {
   padding-left: 1em;
   content: '┗';
-  color: #999;
+  color: #888;
   font-size: 12px;
   margin-right: 7px;
 }

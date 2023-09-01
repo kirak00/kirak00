@@ -98,13 +98,13 @@ button    {background:none; cursor: pointer; transition: background .2s; white-s
 
 /* MAIN 버튼 */ 
 button.btnSuccess        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
-button.btnSky         {padding:0 50px; height:64px; background:#7793E2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
+button.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
-a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#5B7DDC; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
+a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
 a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 a.btnWhiteLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
@@ -121,19 +121,19 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
 .btnSuccess:active        { background:#069B66; text-decoration: none;  }
 .btnSky:focus,
-.btnSky:hover         { background:#36B688; text-decoration: none;  }
-.btnSky:active        { background:#02C37E; text-decoration: none;  }
+.btnSky:hover         { background:#24858A; text-decoration: none;  }
+.btnSky:active        { background:#4C9DA2; text-decoration: none;  }
 .btnWhite:focus,
 .btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
 .btnWhite:active       { background:#069B66; text-decoration: none; color:#fff }
 .btnWhiteLine:focus,
 .btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
 .btnWhiteLine:active       { background:#ffffff; color:#069B66 }
-
+ 
 .btnSuccess:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
-.btnWhiteLine:disabled       { background:#dddddd; color:#999; border:0; cursor:unset;  }
+.btnWhiteLine:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
 .ico_down       {padding:0 32px;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
@@ -274,7 +274,7 @@ button.sm       {height:50px; }
 .radioBtn input[type=radio]+label{ display: inline-block; height: 40px; padding: 0 16px; border-radius: 4px; line-height: 38px; text-align: center; cursor: pointer;}
 .radioBtn input[type=radio]+label{ background: #fff; border: 1px solid #ddd; color: #333;}
 .radioBtn input[type=radio]:checked+label{ background: #069B66; border: 1px solid #069B66; color: #fff; }
-.radioBtn input[type=radio]:disabled+label { background: #ddd; color: #999;}
+.radioBtn input[type=radio]:disabled+label { background: #ddd; color: #888;}
 /* toggle */
 .toggleGroup { display: flex; align-items: center; gap: 60px;}
 .switch { display: inline-flex; align-items: center; cursor: pointer; }
@@ -314,8 +314,8 @@ button.sm       {height:50px; }
 
 /* input */
 .input { min-height: 64px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 20px; vertical-align: middle;}
-.input::placeholder { color: #999; line-height: normal; }
-.input:disabled, .input:read-only { background: #f4f6f8; color: #999; }
+.input::placeholder { color: #888; line-height: normal; }
+.input:disabled, .input:read-only { background: #f4f6f8; color: #888; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 .input.wid400 { width: 400px;}
@@ -362,7 +362,7 @@ select.wid145 { min-width: 145px !important;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
-.textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
+.textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #888; }
 .layerCont .textarea { min-height: 180px;}
 
 /* form 정력 */
@@ -466,12 +466,12 @@ select.wid145 { min-width: 145px !important;}
 .headerUtil     {position:relative;  z-index:500; height:52px; background:#EAFAEB; }
 .headerUtil .utilCont     {width:1400px; margin:0 auto; overflow: hidden; }
 .headerUtil .utilCont .zommBox   {float:right; padding:12px 0 0; }
-.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 16px; color:#fff; }
+.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 16px; color:#888; }
 .btn_zoom_plus    {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_plus.png) }
 .btn_zoom_minus   {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_minus.png) }
 
 .on .headerUtil     { background:rgba(50, 60, 148, 0.10); }
-.on .headerUtil .utilCont .zommBox span.tit   {color:#999; }
+.on .headerUtil .utilCont .zommBox span.tit   {color:#888; }
 .on .btn_zoom_plus    {background:url(../images/common/ico_24_plus_on.png) }
 .on .btn_zoom_minus   {background:url(../images/common/ico_24_minus_on.png) }
 
@@ -498,8 +498,9 @@ select.wid145 { min-width: 145px !important;}
 
 header {}
 header::after {content:''; position:absolute; width:100%; height:740px; height:150px; top:0; lefT:0; z-index:0; background:#EAFAEB; }
-header.on::before {content:''; width:100%; left:0; top:0; z-index:499; position:fixed; height:100vh; background: rgba(0, 0, 0, 0.40); }
-header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#EAFAEB;  transition: .5s; opacity:0 ; }
+header::before {content:''; width:100%; height:100vh; left:0; top:0; z-index:499; position:fixed; opacity:0; z-index:-1; background: #EAFAEB; transition: .2s; }
+header.on::before {top:0; opacity:1; z-index:499; width:100%; height:100vh;  background: rgba(0, 0, 0, 0.40); }
+header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#EAFAEB;  transition: .5s; opacity:0.5 ; }
 header.on .bg  {height:608px; opacity: 1; background:#fff; top:0; }
 header .line  {content:''; position:absolute; width:100%; height:0; top:150px; left:0; z-index:599; background:#EAFAEB; border-bottom:1px solid #515BB7; }
 
@@ -513,7 +514,7 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .headerCont ul.gnb li         {}
 .headerCont ul.gnb li a       {display:block; width:220px; padding:7px 0; text-align: center; text-decoration: none; box-shadow:inset 0 0 0  0  #fff; transition: .3s; }
 .headerCont ul.gnb li.on > a {font-weight: 700;  }
-.headerCont ul.gnb li a:hover    {box-shadow:inset 0 -18px 0  0  ;}
+.headerCont ul.gnb li a:hover    {box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ;}
 .headerCont ul.gnb li.depth_1        {margin-left:70px}
 .headerCont ul.gnb li.depth_1:first-child        {margin-left:0px}
 .headerCont ul.gnb li.depth_1 > a    {font-size:24px; color:#333; transition: .3s;  }
@@ -526,7 +527,7 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .headerCont ul.gnb li li.depth_2.on > a {color:#069B66;}
 .headerCont ul.headerLogin {position:relative; float:right; z-index:10; padding:37px 0 0; }
 .headerCont ul.headerLogin li {float:left;}
-.headerCont ul.headerLogin li a {font-size:20px; font-weight: 500;  color:#fff; transition: .3s; ;}
+.headerCont ul.headerLogin li a {font-size:20px; font-weight: 500;   transition: .3s; ;}
 .headerCont ul.headerLogin li a.login {position:relative; margin-left:10px; padding-left:10px; }
 .headerCont ul.headerLogin li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#fff; border-radius: 50%; left:0; top:50%;}
 .headerCont ul.headerLogin li a.logout {position:relative; padding-right:34px; }
@@ -636,7 +637,7 @@ table.bbs_list td.tit   {text-align: left; padding-left:30px;}
 table.bbs_list thead tr.top th { background: #E5EDFB;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
 table.bbs_list thead tr:last-child { border-bottom: 1px solid #ddd;}
-table.bbs_list td .sub { color: #999;}
+table.bbs_list td .sub { color: #888;}
 table.bbs_list .widFix { display: inline-block; width: 785px; text-align: left;} 
 
 .bbsViewCont     {margin-top:40px; padding:60px; min-height:250xp; border:1px solid #ddd; border-radius: 16px; }
@@ -733,7 +734,7 @@ td .formListTable { margin-top: 25px;}
 .textTable th, .textTable td { padding: 20px 0; min-height: 58px; text-align: left; vertical-align: top;}
 .textTable tr:first-child th, .textTable tr:first-child td { padding-top: 14px; }
 .textTable tr:last-child th, .textTable tr:last-child td { padding-bottom: 14px; }
-.textTable .sub { color: #999; font-size: 18px; font-weight: 400;}
+.textTable .sub { color: #888; font-size: 18px; font-weight: 400;}
 
 /* 이중 테이블 */
 .textTable .bbs_list th,
@@ -808,7 +809,7 @@ th{word-break: break-all;}
 .jsgrid-header-sort-desc:before { border-color: #EAFAEB transparent transparent transparent}
 
 
-.jsgrid-cell .sub { color: #999;}
+.jsgrid-cell .sub { color: #888;}
 .jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell.left { text-align: left; padding-left:30px;}
@@ -959,8 +960,8 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLineWrap { border-bottom: 1px solid #ddd; }
 .tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500;}
-.tabLine li.on button { border-bottom: 3px solid #EAFAEB; color: #EAFAEB; font-weight: 700; }
-.tabLine li button:focus { outline: 2px dashed #5B7DDC; border-radius: 16px 16px 0 0; }
+.tabLine li.on button { border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
+.tabLine li button:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
@@ -1096,7 +1097,7 @@ ul.evtThumList li:nth-child(-n+2)     { margin-top:0; }
 ul.evtThumList li img  { width:100%; height:300px; object-fit:cover; overflow: hidden; }
 ul.evtThumList li span.evtTit  { display:block; padding:30px 20px; border-top:1px solid #ddd;  }
 ul.evtThumList li span.evtTit strong  { display:block; font-size: 24px; }
-ul.evtThumList li span.evtTit span    { display:block; font-size: 18px; margin-top:20px; color:#999 }
+ul.evtThumList li span.evtTit span    { display:block; font-size: 18px; margin-top:20px; color:#888 }
 ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:30px; align-items: center; justify-content: center; }
 
 
