@@ -22,8 +22,7 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section>
-      <!-- <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer_file">파일 찾기</button> -->
-      <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer">레이어 띄우기 class type </button>
+      <button type="button" class="btnBlue open_layer" aria-controls="sampleLayer">현장실사 여부 확인</button>
     </section>
   </div>
   <!-- **************** -->
@@ -41,19 +40,16 @@
         <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
       </div>
       <div class="layerCont">
-        <div>
+        <div class="guideBox">
           <strong>농협은행 금융회사</strong>에서<br/>현장실사를 진행하셨나요?
         </div>
 
-        <p>본 질문에 대한 답변은 제안서 제출 가능 여부와는 상관이 없습니다.</p>
-        <div class="">
-         
-        </div>
-        
+        <p class="guidTxt">본 질문에 대한 답변은 제안서 제출 가능 여부와는 상관이 없습니다.</p>
+  
       </div>
-      <div class="layerFoot">
-        <button type="button" class="btnBlue"></button>
-        <button type="button" class="btnWhite"></button>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnBlue" class="layerClose" popup-close="sampleLayer">네, 현장실사를 완료했습니다.</button>
+        <button type="button" class="btnWhite" class="layerClose" popup-close="sampleLayer">아니오, 현장실사는 하지 않았습니다.</button>
       </div>
 
     </div>

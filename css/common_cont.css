@@ -68,6 +68,8 @@
 .guideBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
 .guideBox .guideList { margin-top: 20px;}
 .guideBox .not + .guideList { margin-top: 20px;}
+.layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
+.layerCont .guidTxt { margin-top: 40px; font-size: 18px;}
 .guideList { margin-top: 150px;}
 .guideList .list { display: flex; margin-top: 8px; color: #555; font-size: 18px; font-weight: 400;}
 .guideList .list .tit { margin-right: 4px;}
@@ -893,6 +895,8 @@ th{word-break: break-all;}
 .layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
 .layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
 .layerWrap .layerBody .layerFoot button    {min-width:250px; }
+.layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
+.layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 16px;}
 .layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100%); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
 .layerWrap.show      {left:0; }
 .layerWrap.show .layerBody      {opacity:1; transform: translateY(0px); }
@@ -903,8 +907,9 @@ th{word-break: break-all;}
 
 /* alert 스타일 layer */
 .layerWrap.typeAlert .layerBody       {width:610px;  }
-.layerWrap.typeAlert .layerBody .layerHead    {padding:30px 0;  background:none;   }
-
+.layerWrap.typeAlert .layerBody .layerHead    {padding:60px 0 20px;  background:none;   }
+.layerWrap.typeAlert .layerBody .layerCont { text-align: center;}
+.layerWrap.typeAlert .layerBody .layerFoot { padding: 20px 40px;}
 
 
 /****************************
