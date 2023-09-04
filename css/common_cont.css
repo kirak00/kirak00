@@ -68,6 +68,8 @@
 .notiTxt { color: #069B66; font-weight: 500;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
+.tableNoti { margin-top: 20px; color: #888; }
+
 .notiBox { padding: 24px 40px; background: #F4F4F4; border-radius: 16px; color: #333; }
 .notiBox .notiTxt { color: #333;}
 .notiBox .notiTxt::before { margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px;}
@@ -343,7 +345,9 @@ button.sm       {height:50px; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 .input.wid400 { width: 400px;}
-.input.wid100 { width: 100px;}
+.input.wid82 { width: 82px;}
+.input.wid240 { width: 240px;}
+.input.wid300 { width: 300px;}
 
 /* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
@@ -367,7 +371,7 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 .errorTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; margin-top: -1px; background: url('../images/common/ico_24_error.png') center center no-repeat; vertical-align: top; }
 
 
-.textCenter .input { text-align: center; }
+.textCenter .input { width: 100%; text-align: center; }
 .inputBizNumber .input { width: auto;}
 
 /* file */
@@ -409,7 +413,7 @@ select.wid430 { min-width: 430px;}
 .bbsSearch .searchBtns { width:auto; }
 
 
-.searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 120px 32px 40px; background: #EAFAEB; border-radius: 16px;}
+.searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 115px 32px 40px; background: #EAFAEB; border-radius: 16px;}
 .main .searchControlBox { background: #fff; }
 .searchControlBox.fullType { padding-right: 40px;}
 .searchControlBox.fullType .searchControlItem,
@@ -429,13 +433,14 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
+.searchControlItem .rangeControl .input { width: 272px;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .formRow .input, 
 .searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
-.searchControlItem .formRow .input { height: 100%; padding: 0 30px; color: #333; font-size: 20px;}
+.searchControlItem .formRow .input { height: 100%; padding: 0 16px 0 30px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .input.inputXs { width: 100px;}
 .searchControlItem .formRow .input.wid360 { width: 360px;}
 .searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
@@ -447,7 +452,7 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .formRow.formGroup > *:last-child { border-width: 1px 1px 1px 0px;  border-radius: 0 8px 8px 0;} 
 
 .searchControlGroup .rangeControl .input {height:64px; }
-.searchControlGroup .rangeControl .btnSuccess {width:64px; height:64px; }
+.searchControlGroup .rangeControl .btnCalendar {width:64px; height:64px; }
 
 /* form div table */
 .divTable { border-radius: 16px; overflow: hidden;}
@@ -661,6 +666,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup select { height: 50px; padding: 0 60px 0 15px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
 .tableFilterGroup .btnDkGreen { height: 50px; line-height: 50px; padding:0 ; width:120px;  }
+.filterLabel { margin-bottom: 20px; color: #4C9DA2; text-align: right;}
 
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
@@ -695,6 +701,13 @@ table.bbs_list thead:has(.top) tr th { border-radius: 0;}
 table.bbs_list thead tr:last-child { border-bottom: 1px solid #ddd;}
 table.bbs_list td .sub { color: #888;}
 table.bbs_list .widFix { display: inline-block; width: 785px; text-align: left;} 
+table.bbs_list th:first-child,
+table.bbs_list td:first-child { padding-left: 30px;}
+table.bbs_list th:last-child,
+table.bbs_list td:last-child { padding-right: 30px;}
+
+.table_wrap.formFullType .input { width: 100%; }
+.table_wrap.formFullType .input.wid160 { width: 160px; }
 
 .bbsViewCont     {margin-top:40px; padding:60px; min-height:250xp; border:1px solid #ddd; border-radius: 16px; }
 table.bbs_view     {width:100%;}
@@ -726,6 +739,9 @@ input[type=radio].starChk.starChk_5:checked ~ label               { background-i
 **********  table jin  **********
 *****************************/
 .tableBox { margin-top: 30px; padding: 30px 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+.tableBox.pointTable { padding: 26px 60px; border: 1px solid #069B66}
+.pointTable .textTable th, 
+.pointTable .textTable td { padding: 0; height: 30px;}
 table { width: 100%;}
 .fixedTable { height: 600px; margin-top: 30px;  overflow: auto; border-radius: 16px; border: 1px solid #ddd;}
 .fixedTable thead {position: sticky; top: 0;} 
@@ -835,6 +851,7 @@ td .formListTable { margin-top: 25px;}
 **********  grid  **********
 *****************************/
 .jsGridWrap { margin-top: 20px;}
+.jsGridWrap .table_bt { margin-top: 20px;}
 .jsGridWrap .titH4.hasLine ~ .bbs_list { margin-top: 40px;}
 .jsgrid-table {table-layout: fixed;}
 .bbs { width:100% !important; border: 1px solid #ddd; border-radius: 16px;}
@@ -853,11 +870,15 @@ td .formListTable { margin-top: 25px;}
 .jsgrid-cell,
 .jsgrid-alt-row > .jsgrid-cell,
 .jsgrid-edit-row > .jsgrid-cell { background-color: #fff; border:0; border-bottom:1px solid #ddd;}
-.jsgrid-header-row:first-child .jsgrid-header-cell:first-child  {border-radius: 16px 0 0;}
-.jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {border-radius:  0 16px 0 0;}
+.jsgrid-header-row:first-child .jsgrid-header-cell:first-child  { padding-left: 30px; border-radius: 16px 0 0;}
+.jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {padding-right: 30px; border-radius:  0 16px 0 0;}
 .jsgrid-grid-header {background:none}
+/* .jsgrid-header-row:first-child .jsgrid-header-cell { padding: 0 10px;} */
 .jsgrid-selected-row > .jsgrid-cell   {background:#F4FBF5 ;}
 
+/* .jsgrid-row > .jsgrid-cell { padding: 0 10px;} */
+.jsgrid-row > .jsgrid-cell:first-child { padding-left: 30px}
+.jsgrid-row > .jsgrid-cell:last-child { padding-right: 30px}
 th .checkbox     {vertical-align: 0;}
 
 
@@ -898,9 +919,9 @@ th{word-break: break-all;}
 *****************************/
 .rangeControl { position: relative; display: flex; gap: 10px; }
 .rangeControl .input { min-height: 50px; padding: 0 16px;}
-.rangeControl .btnSuccess { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
-.rangeControl .btnSuccess::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_w.png) no-repeat 50% 50%; }
-
+.rangeControl .btnCalendar { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
+.rangeControl .btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
+.rangeControl .btnCalendar:hover::after{ background-image: url(../images/common/ico_24_calendar_w.png)} 
 
 /****************************
 **********  Date picker  **********
@@ -1078,10 +1099,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox       {  overflow: hidden; }
 .tabLine ~ .bbsDetailBox       {margin-top:60px; }
 .bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
-/* .bbsDetailBox .titBox *       {margin:auto 0; } */
+.bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
+.bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
 .bbsDetailBox .titBox h3.tit  { font-size:24px; font-weight: 700; }
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
-.bbsDetailBox .titBox .point { color: #069B66; }
+.bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
 
 /* 가이드 */
