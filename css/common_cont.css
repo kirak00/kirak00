@@ -98,7 +98,7 @@
 **********  badge  **********
 *****************************/
 .badgeBlue { background: #EAFAEB; color: #fff; text-align: center; }
-.badgeWhite { padding: 0 14px; background:#ffffff; border:1px solid #EAFAEB; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
+.badgeWhite { padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
 
 /****************************
 **********  button  **********
@@ -433,8 +433,8 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .formRow .input.inputXs { width: 100px;}
 .searchControlItem .formRow .input.wid360 { width: 360px;}
 .searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
-.searchControlItem .formRow .line  {display:inline-block; position: relative; width: 0px; height: 100%;}
-.searchControlItem .formRow .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background:url(../images/common/line_bar.png) no-repeat 0 50%;}
+.searchControlItem .formRow .line  {position: relative; width: 0px; height: 100%; }
+.searchControlItem .formRow .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background: #ddd}
 .searchControlItem .formRow.formGroup { gap: 0;}
 .searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; height: 100%; background-color: #fff;}
 .searchControlItem .formRow.formGroup > * { border-width: 1px 0px 1px; border-style: solid; border-color: #ddd; border-radius: 0;}
