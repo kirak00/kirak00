@@ -188,6 +188,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_survey dt ~ dt   {margin-top:30px; }
 .main_survey dd   {padding-left:40px; }
 
+.titH3 + .main_survey { margin-top: 20px;}
 .main_survey.bgGreen { background: #F6FBF7; padding: 40px 40px 60px; border: 1px solid #ddd;}
 
 /* 약관 */

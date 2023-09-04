@@ -33,10 +33,11 @@
 **********  title  **********
 *****************************/
 .titH2 { font-size: 40px; font-weight: 700;}
-.titH3 { font-size: 30px; font-weight: 700; margin-top:60px;}
+.titH3 { display: flex; justify-content: space-between; font-size: 30px; font-weight: 700; margin-top:60px;}
 .titH4 { font-size: 24px; font-weight: 700;}
 .titH5 { font-size: 18px; font-weight: 700;}
 .titH3:first-child {margin-top: 80px; }
+.titH3.hasLine:first-child {margin-top: 0px; }
 .tableTit { font-size: 34px; font-size: 700; }
 
 .tableTit { font-size: 34px; font-size: 700; }
@@ -235,6 +236,11 @@ button.sm       {height:50px; }
 .icoReview::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_search_g.png')  no-repeat center / 36px 36px; }
 .icoReceipt::after { content:""; display:inline-block; width: 111px; height:92px; background: url('../images/common/ico_suggest.png')  no-repeat center / 111px 92px; }
 
+
+.ico_edit { color: #555;}
+.ico_edit::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_edit.png) no-repeat center / 24px 24px; }
+.ico_delete { color: #555;}
+.ico_delete::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_trash_g.png) no-repeat center / 24px 24px; }
 /****************************
 **********  list  **********
 *****************************/
@@ -437,12 +443,22 @@ select.wid145 { min-width: 145px !important;}
 .searchControlGroup .rangeControl .btnSuccess {width:64px; height:64px; }
 
 /* form div table */
-/* .formListTable { margin-top: 60px;}
-.formListTable .titH3 { margin-top: 60px;}
-.formListTable .tr { display: table; width: 100%; min-height: 64px; margin-top: 30px;}
-.formListTable .tr:first-child { margin-top: 0}
-.formListTable .th { display: table-cell; width: 186px; font-weight: 700;}
-.formListTable .td {} */
+.divTable { border-radius: 16px; overflow: hidden;}
+.divTable .row { min-height: 100px; padding: 35px 0;}
+.divTable .row + .row { border-top: 1px solid #ddd;}
+.divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
+.divTable .head .row { min-height: 90px; padding: 30px 60px; background: #EFF5EF;}
+.divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
+
+
+.msgPg .divTable .head .cell:first-child { flex: 1; justify-content: center;}
+.msgPg .divTable .body .cell:first-child { flex: 1; justify-content: flex-start;}
+.msgPg .divTable .row .cell:nth-child(2) { width: 196px; padding-right: 60px; }
+.msgPg .divTable .row .cell:nth-child(2)::after { content: ''; position: absolute; top: 50%; right: 0; margin-top: -12px; display: block; width: 1px; height: 24px; background: #ddd;}
+.msgPg .divTable .row .cell:nth-child(3) { width: 214px; padding-left: 60px;}
+.msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
+.msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
+
 .formList { margin: 40px 0; }
 .formList.fullType .input { width: 100%;  }
 .formList.fullType .formRow { width: 100%;}
@@ -1046,14 +1062,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 /* bbs detail */
 .bbsDetailBox       {  overflow: hidden; }
 .tabLine ~ .bbsDetailBox       {margin-top:60px; }
-.bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex;  }
-.bbsDetailBox .titBox *       {margin:auto 0; }
-.bbsDetailBox .titBox h3.tit  {font-size:24px; font-weight: 700; }
-.bbsDetailBox .titBox p       {color:#555; font-weight: 500;  }
-.bbsDetailBox .titBox p.ment  {text-align: right; flex:1;  }
-.bbsDetailBox .titBox p.date  {color:#333; font-weight: 700; text-align: right; flex:1; }
-.bbsDetailBox .titBox p.date_l{color:#555; font-weight: 500; }
-.bbsDetailBox .titBox span.date { font-size: 18px; font-weight: 500; text-align: right; flex:1;}
+.bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
+/* .bbsDetailBox .titBox *       {margin:auto 0; } */
+.bbsDetailBox .titBox h3.tit  { font-size:24px; font-weight: 700; }
+.bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
+.bbsDetailBox .titBox .point { color: #069B66; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
 
 /* 가이드 */
