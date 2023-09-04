@@ -164,10 +164,7 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .dashboard_setting table tbody tr:active { cursor: move;cursor: -moz-grabbing;  cursor: -webkit-grabbing;}
 tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
-/* message */
-.messageList table tr.read td  {}
-.messageList table tr td  { font-weight: 400;}
-.messageList table tr.checked td  { font-weight: 700;}
+
 
 /* bbs_alert */
 .lineBox_table        {}
