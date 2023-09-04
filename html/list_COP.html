@@ -88,6 +88,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
       {tit : '약관동의2', folder : '', page : 'COP_F020.html', status : true, ment : 'v1.0 적용완료', end : '08/29', },
       {tit : '회원가입', folder : '', page : 'COP_F022.html', status : true, ment : '진희 v1.0 적용완료',end : '08/29',  },
       {tit : 'Nice 본인인증', folder : '', page : 'COP_F03.html', status : true, ment : '진희 v1.0 적용완료',end : '08/29',  },
+      {tit : 'Nice 본인인증 팝업', folder : '', page : 'COP_F031.html', status : false, ment : '작업중',end : '08/29',  },
     ],
    },
    {
@@ -191,6 +192,9 @@ table {margin:0 20px; width:calc(100% - 40px)}
       if(o.folder == "guide") {
         status_1 += " guide"
         folder = "./guide"
+      }
+      if(o.tit == "레이아웃") {
+        status_1 += " guide"
       }
       if(o.page !=''){
         txt += `
