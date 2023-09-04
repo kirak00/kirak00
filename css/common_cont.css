@@ -184,7 +184,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 
 /* 유틸 버튼 */
-.btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB;  overflow: hidden; text-indent: -200px; }
+.btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:62px; height:62px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50%; }
 .btnReset:focus,
 .btnReset:hover       { background:#069B66; text-decoration: none; color:#fff; border-radius: 8px;  }
@@ -421,7 +421,7 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
 .searchControlItem .formRow .input { height: 100%; padding: 0 30px; color: #333; font-size: 20px;}
-.searchControlItem .formRow .input.inputXs { width: 58px;}
+.searchControlItem .formRow .input.inputXs { width: 100px;}
 .searchControlItem .formRow .input.wid360 { width: 360px;}
 .searchControlItem .formRow .unit { padding: 0 30px 0 10px; color: #333; font-size: 20px;}
 .searchControlItem .formRow .line  {display:inline-block; position: relative; width: 0px; height: 100%;}
