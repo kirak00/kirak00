@@ -37,12 +37,29 @@
           <div class="searchControlBox">
             <div class="searchControlGroup">
               <div class="searchControlItem">
+                <label for="label_tit_1" class="label">대출 신청 번호 </label>
+                <div class="formRow">
+                  <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                </div>
+              </div>
+              <div class="searchControlItem">
                 <label for="selectLabelState" class="label">상태</label>
                 <div class="formRow">
-                  
                   <select id="selectLabelState">
                     <option>전체</option>
                     <option>셀렉트</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label id="selectLabelPay" class="label">희망 신청 금액</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                  
+                  <input class="input inputXs" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">억</span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
                   </select>
                 </div>
               </div>
@@ -57,29 +74,22 @@
                 </div>
               </div>
               <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">희망 신청 금액</label>
-                <div class="formRow" role="group" aria-labelledby="selectLabelPay">
+                <label for="selectLabelArea2" class="label">자금용도</label>
+                <div class="formRow">
                   
-                  <input class="input inputXs" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
-                  <span class="unit">억</span>
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
+                  <select id="selectLabelArea2">
+                    <option>전체</option>
+                    <option>셀렉트</option>
                   </select>
                 </div>
               </div>
               <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">CRETOP 등급</label>
-                <div class="formRow" role="group" aria-labelledby="selectLabelPay">
+                <label for="selectLabelArea3" class="label">담보 유무</label>
+                <div class="formRow">
                   
-                  <select title="등급">
+                  <select id="selectLabelArea3">
                     <option>전체</option>
-                    <option>이하</option>
-                  </select>
-                  
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
+                    <option>셀렉트</option>
                   </select>
                 </div>
               </div>
@@ -93,6 +103,22 @@
                   </select>
                 </div>
               </div>
+              <div class="searchControlItem">
+                <label id="selectLabelPay" class="label">CRETOP 등급</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                  
+                  <select title="등급">
+                    <option>전체</option>
+                    <option>이하</option>
+                  </select>
+                  <span class="line"></span>
+                  
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
+              </div>
               <span class="checkbox">
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
                 <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
@@ -100,6 +126,7 @@
             </div>
             <div class="searchBtns">
               <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnWhite">기본 노출 기준으로 설정</button>
               <button type="button" class="btnSuccess">조회</button>
             </div>
           </div>
@@ -110,22 +137,23 @@
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
-            <select title="신청금액 선택">
-              <option>신청 금액 높은순</option>
+            <select title="정렬 선택 (희망 신청 금액)">
+              <option>희망 신청 금액</option>
               <option>본부2</option>
             </select>
-            <select title="등급 선택">
-              <option>등급 높은순</option>
+            <select title="정렬 선택 (CRETOP 등급)">
+              <option>CRETOP 등급</option>
               <option>본부2</option>
             </select>
-            <select title="마감일 선택">
-              <option>등급 높은순</option>
+            <select title="정렬 선택 (제안서 마감일)">
+              <option>제안서 마감일</option>
               <option>본부2</option>
             </select>
             <select title="보기갯수 선택">
               <option>10개씩 보기</option>
               <option>본부2</option>
             </select>
+            <button type="button" class="btnDkGreen">적용</button>
           </div>
         </fieldset>
 
@@ -150,16 +178,19 @@
             }
 
             var clients = [
-              { "Name1": "S_230809_0001",
-                "Name2": "채택", 
+              { 
+                
+                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name1": "S_230809_0001",
+                "Name2": "심사전", 
                 "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
+                "Name4": "12억 5000만원", 
+                "Name5": "서울", 
+                "Name6": "농업.", 
+                "Name7": "시설자금", 
+                "Name8": "유", 
+                "Name9": "보유", 
+                "Name10": "AA+", 
                 "Name11": "2023-08-30", 
                 "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
@@ -172,18 +203,19 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
               fields: [
+                { name: "Name0",  type: "text", title : "관심<br>대출", width: "80", validate: "required", },
                 { name: "Name1",  type: "text", title : "대출 신청 번호", width: "auto", validate: "required", },
                 { name: "Name2", type: "text", title : "상태", width: 80, validate: "required" },
                 { name: "Name3", type: "text", title : "법인명", width: 130, validate: "required" },
-                { name: "Name4", type: "text", title : "제안<br> 형태", width: 80, validate: "required" },
-                { name: "Name5", type: "text", title : "제안 대출 금액", width: 150, validate: "required" },
-                { name: "Name6", type: "text", title : "제안<br> 자금 용도", width: 100, validate: "required" },
-                { name: "Name7", type: "text", title : "담보<br> 유무", width: 60, validate: "required" },
-                { name: "Name8", type: "text", title : "대출 기간", width: 100, validate: "required" },
-                { name: "Name9", type: "text", title : "제안 금리", width: 100, validate: "required" },
-                { name: "Name10", type: "text", title : "제출자", width: 80, validate: "required" },
+                { name: "Name4", type: "text", title : "희망 신청 금액", width: 130, validate: "required" },
+                { name: "Name5", type: "text", title : "지역", width: 80, validate: "required" },
+                { name: "Name6", type: "text", title : "업종", width: 80, validate: "required" },
+                { name: "Name7", type: "text", title : "자금 용도", width: 100, validate: "required" },
+                { name: "Name8", type: "text", title : "담보<br> 유무", width: 60, validate: "required" },
+                { name: "Name9", type: "text", title : "특허 보유<br>여부", width: 100, validate: "required" },
+                { name: "Name10", type: "text", title : "CRETOP <br>등급", width: 100, validate: "required" },
                 { name: "Name11", type: "text", title : "제안서 마감일", width: 120, validate: "required" },
-                { name: "Name12", type: "text", title : "상세보기", width: 190, validate: "required" },
+                { name: "Name12", type: "text", title : "상세보기", width: 160, validate: "required" },
               ],
               
               pagerContainer: "#externalPager2",

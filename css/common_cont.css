@@ -111,14 +111,14 @@ button.btnSuccess        {padding:0 50px; height:64px; background:#069B66; borde
 button.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-a.btnWhiteLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
+a.btnLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
 label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; }
 
@@ -153,9 +153,9 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnWhite:active.ico_down::after,
 .btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-.btnWhiteLine.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnWhiteLine.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnWhiteLine:hover.ico_down::after,
-.btnWhiteLine:active.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnWhiteLine:active.ico_down::after  { }
 
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
@@ -222,6 +222,8 @@ a.download       {padding-left:32px; font-weight: 700; color:#069B66;  backgroun
 
 .btnSet { display: inline-flex; gap: 8px;}
 
+.btnHelp { width:34px; height:34px; background:url(../images/common/ico_34_help_g.png) no-repeat 0 0;  }
+.btnHelp:focus { outline: 2px solid #069B66;}
 
 button.xl      {height:70px; }
 button.sm       {height:50px; }
@@ -345,6 +347,12 @@ input[type=text].innerTxt_1         { margin-right:-54px;  padding: 0 44px 0 20p
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:64px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1.wid114 {width:114px; }
 
+
+.inputTimer   {position:relative; width:100%; }
+.inputTimer input[type=text]         { padding: 0 80px 0 20px; }
+.inputTimer input[type=text] + .unit { position:absolute; margin-left:-70px; width:60px; line-height:64px; padding-right:20px; text-align: right; color:#5B7DDC; font-size: 20px;  }
+
+
 /* 에러 상태 */
 .hasError .input {  border: 1px solid #FE5050}
 .hasError + .errorTxt { display: block; }
@@ -408,6 +416,7 @@ select.wid145 { min-width: 145px !important;}
 .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
+.searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 188px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 
 .searchControlItem {display: inline-flex; height: 64px; border-radius: 8px; overflow: hidden;}
@@ -417,8 +426,6 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
-.searchControlItem .formRow span{height:100%; }
-.searchControlItem .formRow span.unit{height:auto; }
 .searchControlItem .formRow .input, 
 .searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
@@ -637,7 +644,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
 .tableFilterGroup select { height: 50px; padding: 0 60px 0 15px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
-.tableFilterGroup .btnDkGreen { height: 50px; line-height: 50px;}
+.tableFilterGroup .btnDkGreen { height: 50px; line-height: 50px; padding:0 ; width:120px;  }
 
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
@@ -804,6 +811,9 @@ td .formListTable { margin-top: 25px;}
 .formXsTable .dateControl .input { width: 100%;}
 
 
+.layerCont .formRow.full .input {width:100%; }
+.layerCont .formRow.full select {width:100%; }
+
 
 /****************************
 **********  grid  **********
@@ -919,9 +929,10 @@ th{word-break: break-all;}
   transition: .3s; opacity: 0; transform: translateY(-50px); 
 }
 
-.layerCont        { max-height: calc(100vh - 400px); overflow: auto; }
+.layerCont        { max-height: calc(100vh - 100px); overflow: auto; }
 
 .layerWrap .layerBody.wid870       {width:870px;  }
+.layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#EAFAEB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
@@ -946,6 +957,10 @@ th{word-break: break-all;}
 .layerWrap.typeAlert .layerBody .layerCont { text-align: center;}
 .layerWrap.typeAlert .layerBody .layerFoot { padding: 20px 40px;}
 
+
+.layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
+.layerWrap .txt_ment p    {color:#888; font-size: 18px;}
+.layerWrap .txt_ment button     {margin:auto 0;}
 
 /****************************
 **********  content  **********
