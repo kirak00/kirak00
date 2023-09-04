@@ -76,7 +76,7 @@
 .tabNoti { margin-top: 80px; color: #555; text-align: center;}
 
 .resultCont + .guideBox { margin-top: 80px; }
-.guideBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
+.guideBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
 .guideBox .guideList { margin-top: 20px;}
 .guideBox .not + .guideList { margin-top: 20px;}
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
@@ -388,7 +388,7 @@ select { display: inline-block; vertical-align: middle; min-width:140px; flex-sh
 select.selectSm { min-width: 206px;}
 select.wid300 { min-width: 300px;}
 select.wid145 { min-width: 145px !important;}
-
+select.wid430 { min-width: 430px;}
 
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 30px;}
@@ -457,7 +457,7 @@ select.wid145 { min-width: 145px !important;}
 .divTable .head .row { min-height: 90px; padding: 30px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
 
-
+.msgPg .divTable .head .cell { font-weight: 700;}
 .msgPg .divTable .head .cell:first-child { flex: 1; justify-content: center;}
 .msgPg .divTable .body .cell:first-child { flex: 1; justify-content: flex-start;}
 .msgPg .divTable .row .cell:nth-child(2) { width: 196px; padding-right: 60px; }
@@ -683,7 +683,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt a + a      {margin-left:6px; }
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 
-.table_wrap    { margin-top: 30px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
+.table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden;}
 table.bbs_list th   {height:80px; background:#F4FBF5;  }
 table.bbs_list .double th   {height:40px; background:#F4F6F8;  }
@@ -983,8 +983,8 @@ th{word-break: break-all;}
 *****************************/
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 60px;}
-.pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; }
-.pageTop ul.breadcrumb     { position: absolute; top: 10px; right: 0; }
+.pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; line-height: 1; }
+.pageTop ul.breadcrumb     { position: absolute; bottom: 0px; right: 0; }
 .pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
 .pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
 .pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:24px; height:24px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; vertical-align: middle; }
@@ -1085,8 +1085,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
 
 /* 가이드 */
-ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin-top:40px; }
-
+ul.guideBox       {padding:40px; background:#F6FBF7; border-radius: 16px; margin-top:40px; }
+ul.guideBox li { line-height: 1.5;}
 .bbsDetailBox .viewLineTable { margin-top: 20px; }
 .bbsDetailBox:has(.titBox) .viewLineTable { margin-top: 40px; }
 .bbsDetailBox .viewLineTable .table_bt { padding-top: 60px;}
@@ -1185,3 +1185,10 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 
 .resultCont { padding-top: 54px; text-align: center;}
 .resultCont .desc { padding: 40px 0; font-size: 30px;}
+
+
+
+/* message */
+.messageList table tr.read td  { color: #888;}
+.messageList table tr td  { font-weight: 400;}
+.messageList table tr.checked td  { font-weight: 700;}
