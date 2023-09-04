@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">메시지함</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>메시지함</strong></a></li>
+      </ul>
+    </section>
+
+    
+    <section class="">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>20</strong>건</span>
+        <button type="button" class="btnSuccess">메시지 알림 설정</button>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid" class="bbs" caption="대출 관리 목록"></div>
+        <div class="table_bt mt20">
+          <div class="btn_l">
+            <button type="button" class="btnGray">삭제</button>
+          </div>
+        </div>
+        <div id="externalPager" class="external-pager"></div>
+        <script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { "Name1": true,
+    "Name2": "<span class='textBold'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='textBold'>농협중앙회<span", 
+    "Name4": "<a href='#;' class='textBold'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": true,
+    "Name2": "<span class='textBold'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='textBold'>농협중앙회<span", 
+    "Name4": "<a href='#;' class='textBold'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span>2023-07-31  20:25</span>", 
+    "Name3": "<span>농협중앙회</span>", 
+    "Name4": "<a href='#;'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span>2023-07-31  20:25</span>", 
+    "Name3": "<span>농협중앙회</span>", 
+    "Name4": "<a href='#;'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span>2023-07-31  20:25</span>", 
+    "Name3": "<span>농협중앙회</span>", 
+    "Name4": "<a href='#;'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span>2023-07-31  20:25</span>", 
+    "Name3": "<span>농협중앙회</span>", 
+    "Name4": "<a href='#;'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+  { "Name1": false,
+    "Name2": "<span class='gray'>2023-07-31  20:25</span>", 
+    "Name3": "<span class='gray'>농협중앙회</span>", 
+    "Name4": "<a href='#;' class='gray'>제안서 접수가 되었습니다.</a>", 
+  },
+];
+
+
+$("#jsGrid").jsGrid({
+  data: clients,
+  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOO이 없어요.</p></div>",
+  fields: [
+    { name: "Name1",  type: "checkbox", title : "<input type='checkbox'/>", width: 140, 
+      itemTemplate: function(value, item) {
+        return $("<input>").attr("type", "checkbox")
+          .attr("checked", value || item.Checked)
+          .on("change", function() {
+            item.Checked = $(this).is(":checked");
+          });
+      } },
+    { name: "Name2",  type: "text", title : "일시", width: 240 },
+    { name: "Name3", type: "text", title : "금융기관", width: 200},
+    { name: "Name4", type: "text", title : "내용", width: 800, align: "left"},
+  ], 
+      
+  pagerContainer: "#externalPager",
+});
+
+});
+
+        </script>
+      </div>
+      
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
