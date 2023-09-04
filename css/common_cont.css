@@ -417,6 +417,8 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
+.searchControlItem .formRow span{height:100%; }
+.searchControlItem .formRow span.unit{height:auto; }
 .searchControlItem .formRow .input, 
 .searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
@@ -488,9 +490,10 @@ select.wid145 { min-width: 145px !important;}
 
 
 .headerUtil     {position:relative;  z-index:500; height:52px;  transition: 1s; }
-.headerUtil .utilCont     {width:1400px; margin:0 auto; overflow: hidden; }
-.headerUtil .utilCont .zommBox   {float:right; padding:12px 0 0; }
-.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 16px; color:#888; }
+.headerUtil .utilCont     {width:1400px; display:flex; justify-content: end; margin:0 auto; overflow: hidden;  padding:12px 0 0; gap:20px;  }
+.headerUtil .utilCont .timer     {padding:0 0 0 30px; height:28px; color:#888; font-size: 18px; background: url(../images/common/ico_24_clock.png) no-repeat 0 80% ;}
+.headerUtil .utilCont .zommBox   {}
+.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 18px; color:#888; }
 .btn_zoom_plus    {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_plus.png) }
 .btn_zoom_minus   {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_minus.png) }
 
