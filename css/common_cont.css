@@ -108,7 +108,7 @@ button    {background:none; cursor: pointer; transition: background .2s; white-s
 /* MAIN 버튼 */ 
 button.btnSuccess        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 button.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
-button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB; }
+button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
@@ -183,7 +183,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 
 /* 유틸 버튼 */
-.btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #EAFAEB;  overflow: hidden; text-indent: -200px; }
+.btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:62px; height:62px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50%; }
 .btnReset:focus,
 .btnReset:hover       { background:#069B66; text-decoration: none; color:#fff; border-radius: 8px;  }
@@ -415,6 +415,8 @@ select.wid145 { min-width: 145px !important;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
+.searchControlItem .formRow span{height:100%; }
+.searchControlItem .formRow span.unit{height:auto; }
 .searchControlItem .formRow .input, 
 .searchControlItem .formRow select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem .formRow select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
@@ -483,9 +485,10 @@ select.wid145 { min-width: 145px !important;}
 
 
 .headerUtil     {position:relative;  z-index:500; height:52px;  transition: 1s; }
-.headerUtil .utilCont     {width:1400px; margin:0 auto; overflow: hidden; }
-.headerUtil .utilCont .zommBox   {float:right; padding:12px 0 0; }
-.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 16px; color:#888; }
+.headerUtil .utilCont     {width:1400px; display:flex; justify-content: end; margin:0 auto; overflow: hidden;  padding:12px 0 0; gap:20px;  }
+.headerUtil .utilCont .timer     {padding:0 0 0 30px; height:28px; color:#888; font-size: 18px; background: url(../images/common/ico_24_clock.png) no-repeat 0 80% ;}
+.headerUtil .utilCont .zommBox   {}
+.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; font-size: 18px; color:#888; }
 .btn_zoom_plus    {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_plus.png) }
 .btn_zoom_minus   {width:24px; height:24px; vertical-align: middle; background:url(../images/common/ico_24_minus.png) }
 
