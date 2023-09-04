@@ -42,11 +42,11 @@
 .titH3.hasLine ,
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
-.titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #EAFAEB; border-radius: 15px;}
+.titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
-.titBg h3 { color: #069B66; font-size: 30px; font-weight: 700; }
+.titBg h3 { color: #fff; font-size: 30px; font-weight: 700; }
 .titBg h3 + .barList { margin-top: 8px;}
-.titBg .sub { font-size: 18px;}
+.titBg .sub { color: #EAFAEB; font-size: 18px;}
 .titBg ~ .textTable { margin-top: 40px;}
 .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; }
 
@@ -57,17 +57,17 @@
 *****************************/
 
 .barList { display: flex;}
-.barList .list { position: relative; color: #555; font-size: 18px;}
+.barList .list { position: relative; color: #fff; font-size: 18px;}
 .barList .list + .list { margin-left: 8px; padding-left: 8px;}
-.barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #555; }
+.barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #fff; }
 /****************************
 **********  noti  **********
 *****************************/
 .notiTxt { color: #069B66; font-weight: 500;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
-.notiBox { padding: 24px 40px; background: #E5EDFB; border-radius: 16px; color: #EAFAEB; }
-.notiBox .notiTxt { color: #EAFAEB;}
+.notiBox { padding: 24px 40px; background: #F4F4F4; border-radius: 16px; color: #333; }
+.notiBox .notiTxt { color: #333;}
 .notiBox .notiTxt::before { margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px;}
 .notiBox ~ .viewLineTable { margin-top: 20px; }
 
@@ -219,6 +219,8 @@ a.download       {padding-left:32px; font-weight: 700; color:#069B66;  backgroun
 
 .addBtnSet { display: flex; column-gap: 20px;}
 
+.btnSet { display: inline-flex; gap: 8px;}
+
 
 button.xl      {height:70px; }
 button.sm       {height:50px; }
@@ -242,6 +244,8 @@ button.sm       {height:50px; }
 **********  form  **********
 *****************************/
 /* checkbox, radio */
+
+.bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
 .radio input[type=radio],
@@ -372,8 +376,8 @@ select.wid145 { min-width: 145px !important;}
 
 
 /* textarea */
-.textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none;}
-.textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #888; }
+.textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 30px;}
+.textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 .layerCont .textarea { min-height: 180px;}
 
 /* form 정력 */
@@ -441,14 +445,15 @@ select.wid145 { min-width: 145px !important;}
 /****************************
 **********  accordion  **********
 *****************************/
-.accordion { }
-.accordion .accordionTitle {  border-bottom: 1px solid #ddd; font-weight: 700; }
-.accordion .accordionTitle .q { margin-right: 2px; color: #5B7DDC; vertical-align: top;}
-.accordionTrigger { position: relative; display: block; width: 100%; padding: 30px 40px; text-align: left; font-weight: inherit;}
+.faqPage .accordion { display: flex; flex-direction: column; gap: 30px;}
+.accordion .accordionItem {border: 1px solid #ddd; border-radius: 16px;  }
+.accordion .accordionTitle {  font-weight: 700; }
+.accordion .accordionTitle .q { display: inline-block; width: 30px; height: 30px; line-height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; vertical-align: middle; text-align: center;}
+.accordionTrigger { position: relative; display: block; width: 100%; padding: 32px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #5B7DDC; }
 .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg) translateY(50%); }
 .accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 40px; top: 50%; width: 24px; height: 24px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat;}
-.accordionPanel { padding: 30px 40px; line-height: 1.5;}
+.accordionPanel { margin: 0px 40px 40px; padding: 40px 20px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .accordionPanel[hidden] { display: none;}
 
 /****************************
@@ -636,6 +641,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox select { width: 100%; height: 50px; }
 
 .table_bt      {width:100%;  margin:60px 0 0px; box-sizing: content-box; min-height:64px; }
+.table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
@@ -715,7 +721,7 @@ table { width: 100%;}
 .viewLineTable tr { border-bottom: 1px solid #ddd; }
 .viewLineTable th, 
 .viewLineTable td { padding: 30px 0; }
-.viewLineTable th { font-weight: 700; text-align: left; vertical-align: middle;}
+.viewLineTable th { font-weight: 700; text-align: left; vertical-align: top;}
 .viewLineTable td { text-align: left;}
 .lineBox .viewLineTable th,
 .detailCont .viewLineTable th { padding-left: 20px; padding-right: 20px; }

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">대출 완료</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>제안서 관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox fullType">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState3" class="label">비교 신청 건</label>
+              <div class="formRow">
+                <select id="selectLabelState3">
+                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>S_230401_0001 시설 자금 대출</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState4" class="label">대출 진행 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState3">
+                  <option>실행</option>
+                  <option>실행</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>10</strong>건</span>
+        <div class="formRow" role="group">
+          <select title="보기 유형 선택">
+            <option>신청일 최신순</option>
+            <option>본부2</option>
+          </select>
+          <select title="보기 유형 선택">
+            <option>대출 실행일 최신순</option>
+            <option>본부2</option>
+          </select>
+          <select title="보기 유형 선택">
+            <option>최소 금액</option>
+            <option>본부2</option>
+          </select>
+          <select title="보기 유형 선택">
+            <option>최소 금리</option>
+            <option>본부2</option>
+          </select>
+          <select title="금융기관 오름차순">
+            <option>최소 금리</option>
+            <option>본부2</option>
+          </select>
+          <select title="진행 여부">
+            <option>최소 금리</option>
+            <option>본부2</option>
+          </select>
+          <button type="button" class="btnDkGreen">적용</button>
+        </div>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid2" class="bbs" caption="제안서 비교신청 목록"></div>
+        <div id="externalPager2" class="external-pager"></div>
+<script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+  { "Name1": "2023-07-10",
+    "Name2": "2023-08-10", 
+    "Name3": "4,970,000,000원 <p class='sub'>(금 사십 구억 칠천만원)</p>", 
+    "Name4": "변동 5.3%", 
+    "Name5": "농협중앙회", 
+    "Name6": "실행", 
+    "Name7": "<button type='button' class='btnWhite'>요약 정보 보기</button>", 
+  },
+];
+
+
+$("#jsGrid2").jsGrid({
+  data: clients,
+  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+  fields: [
+    { name: "Name1",  type: "text", title : "신청일", width: 160 },
+    { name: "Name2", type: "text", title : "대출 실행일", width: 180},
+    { name: "Name3", type: "text", title : "대출 실행 금액", width: 300},
+    { name: "Name4", type: "text", title : "실행 금리", width: 120},
+    { name: "Name5", type: "text", title : "금융기관", width: 140},
+    { name: "Name6", type: "text", title : "대출 진행 여부", width: 180},
+    { name: "Name7", type: "button", title : "요약정보", width: 200},
+  ],
+      
+  pagerContainer: "#externalPager2",
+  
+  });
+
+});
+
+</script>
+      </div>
+    </section>
+
+    
+  </div>
+  
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
