@@ -28,6 +28,9 @@ $(function(){
   if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
 });
 
+
+try {
+  
 jsGrid.setDefaults({
   width: "100%",
   filtering: false,
@@ -49,6 +52,11 @@ jsGrid.setDefaults({
 
   */
 });
+
+} catch (error) {
+  
+}
+
 
 /*
 
@@ -396,6 +404,7 @@ function layer_open_setting(){
   var btns = $(".open_layer");
   btns.on("click",function(){
     layer_open(this.getAttribute('aria-controls'),this);
+    return false;
   })
   
   $(document).on("click",".layerDimm" , function(){
@@ -403,12 +412,14 @@ function layer_open_setting(){
     if(layerwrap.hasClass("modal")) return false;
     layerwrap.removeClass("show")
     layerwrap[0].focusTarget.focus()
+    return false;
   })
 
   $(document).on("click", '.layerClose',function(){
     var layerwrap = $(this).closest(".layerWrap");
     layerwrap.removeClass("show");
     layerwrap[0].focusTarget.focus();
+    return false;
   })
 }
 

@@ -183,6 +183,16 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 
+
+.ico_print       {padding:0 32px;}
+.ico_print::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_printer_w.png) no-repeat 50% 50%; }
+.btnWhite.ico_print::after  {background:url(../images/common/ico_24_printer_primary.png) no-repeat 50% 50%; }
+.btnWhite:focus.ico_print::after,
+.btnWhite:active.ico_print::after,
+.btnWhite:hover.ico_print::after  {background:url(../images/common/ico_24_printer_w.png) no-repeat 50% 50%; }
+
+
+
 /* 유틸 버튼 */
 .btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:62px; height:62px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50%; }
@@ -395,6 +405,7 @@ select.wid145 { min-width: 145px !important;}
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
+.formRow.mt30 { margin-top: 30px; }
 
 /* control group */
 .bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #E5EDFB; border-radius: 16px; display:flex; gap:20px; }
@@ -1008,13 +1019,15 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
 /* 라인있는 탭 너비 auto */ 
 .tabLineWrap { border-bottom: 1px solid #ddd; }
-.tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; }
+.tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
+.tabLineWrap .tabLine { border-bottom: 0;  }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500;}
 .tabLine li.on button { border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
 .tabLine li button:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
 .tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
 .tabLineWrap .update { position: absolute; top: 20px; right: 0; color: #888; font-size: 18px;}
+
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
 .tabLine.fullType li { width: 100%;}
@@ -1070,6 +1083,17 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox p.date_l{color:#555; font-weight: 500; }
 .bbsDetailBox .titBox span.date { font-size: 18px; font-weight: 500; text-align: right; flex:1;}
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
+
+
+.detailTopBtn     {padding-bottom:20px; display:flex; justify-content: end; }
+
+.loadDetailBox          {}
+.loadDetailBox .topBox          {background:#069B66; display:flex; justify-content: space-between; padding:23px 60px;  border-radius: 16px 16px 0 0;}
+.loadDetailBox .topBox .status  {background:#fff; display:inline-block; height:46px; line-height: 46px; padding:0 40px; font-size: 24px; border-radius: 23px; font-weight: 700; color:#069B66; }
+.loadDetailBox .topBox .txt_idx { font-size: 18px; color:#fff; padding:12px 0 0;}
+.loadDetailBox .detailCont      {padding:60px; border:1px solid #ddd; border-top:0; border-radius:0 0 16px 16px; }
+
+
 
 /* 가이드 */
 ul.guideBox       {padding:40px; background:#F4F6F8; border-radius: 16px; margin-top:40px; }

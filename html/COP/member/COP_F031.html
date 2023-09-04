@@ -28,7 +28,7 @@
     <section>
       <div class="table_bt wide">
         <div class="btn_c">
-          <button type="button" class="btnSuccess">NICE 본인확인서비스</button>
+          <button type="button" class="btnSuccess open_layer" aria-controls="SMS_layerOpen" >NICE 본인확인서비스</button>
         </div>
       </div>
     </section>    
@@ -41,38 +41,38 @@
   <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show" id="sampleLayer_SMS" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+  <div class="layerWrap modal show" id="SMS_layerOpen" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid600">
       <div class="layerHead">
         <h3>휴대폰 인증</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class ="formRow full">
+        <div class="formRow full">
           <input type="text" class="input" placeholder="이름" title="이름">
         </div>
-        <div class ="formRow full">
+        <div class="formRow full">
           <input type="text" class="input" placeholder="주민번호 13자리" title="주민번호 13자리(1/2)">
           <span class="unit">-</span>
           <input type="password" class="input" placeholder="oooooo" title="주민번호 13자리(1/2)">
         </div>
-        <div class ="formRow full">
+        <div class="formRow full mt30">
           <select name=""  title="통신사">
             <option value="">SKT</option>
           </select>
         </div>
-        <div class ="formRow full">
+        <div class="formRow full">
           <input type="text" class="input" placeholder="휴대폰 번호" title="휴대폰 번호">
           <button type="button" class="btnSuccess" disabled>인증</button>
         </div>
-        <div class ="formRow full">
+        <div class="formRow full">
           <span class="inputTimer">
             <input type="text" class="input timer" placeholder="인증번호 입력" title="인증번호 입력">
             <span class="unit"></span>
           </span>
           <button type="button" class="btnSuccess" onclick='layer_alert("본인 확인이 완료되었습니다.", this, {confirm:{txt:"로그인", callback:function(){alert(3)}}})''>확인</button>
         </div>
-        <div class ="formRow full">
+        <div class="formRow full">
           <span class="inputTimer">
             <input type="text" class="input timer" placeholder="인증번호 입력" title="인증번호 입력">
             <span class="unit">03:00</span>
@@ -80,13 +80,6 @@
           <button type="button" class="btnSuccess" onclick='layer_alert("본인 확인이 완료되었습니다.", this, {confirm:{txt:"로그인", callback:function(){alert(3)}}})''>확인</button>
         </div>
         
-        <div class="txt_ment">
-          <p>
-            법인회선 혹은 알뜰폰을 사용하신다면 <br>
-            우측 도움말 버튼을 눌러 내용을 확인하세요
-          </p>
-          <button type="button" class="btnHelp"></button>
-        </div>
 
       </div>
     </div>
