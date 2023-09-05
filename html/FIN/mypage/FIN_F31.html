@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제출 제안서 상세</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><span>제출 제안서 목록</span></a></li>
+          <li><a href="#none"><strong>제출 제안서 상세</strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="suggestPg">
+      <div class="titBg flexBetween"><h3>(주)길동건설</h3><p class="sub">대출 신청 번호  S_230809_0001</p></div>
+      <div class="divideCon">
+        <div class="left">
+          <h4 class="titH4 hasLine">제안서 기본 정보</h4>
+          <div class="viewNolineTable">
+            <table>
+              <caption>제안서 기본 정보</caption>
+              <colgroup>
+                <col width="180px">
+                <col width="auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">현장실사 여부</th> 
+                  <td><span class="blue">완료</span></td>
+                </tr>
+                <tr> 
+                  <th scope="row">제출자</th> 
+                  <td>김길동</td>
+                </tr>
+                <tr> 
+                  <th scope="row">제출자 연락처</th> 
+                  <td>010-1234-5678</td>
+                </tr>
+                <tr> 
+                  <th scope="row">제안서 유효 기일</th> 
+                  <td><strong>2023-07-31</strong> 까지 유효</td>
+                </tr>
+                <tr> 
+                  <th scope="row">메모</th> 
+                  <td>고객님이 희망하시는 대출 금액은 단건의 대출로는 실행이 어렵습니다.<br/>
+                    단, 유선상으로 말씀드렸다시피 2건의 대출을 함께 받으시면 원하시는 금액을 받으실 수
+                    있을 것으로 판단되어 2건의 대출을 제안드립니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="accordionGroup" class="accordion" accordion-option="only">
+            <div class="accordionItem">
+              <h3 class="accordionTitle">
+                <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id">
+                  <strong class="label">제안 대출1</strong><span class="tit">길동바로론</span><span class="">S_230809_00011</span><span class="accordionIcon"></span>
+                </button>
+              </h3>
+              <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
+                <span class="srOnly">제안 대출1 상세보기</span>
+                <div class="viewNolineTable">
+                  <table>
+                    <caption>제안서 기본 정보</caption>
+                    <colgroup>
+                      <col width="240px">
+                      <col width="auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">제안 자금 용도</th> 
+                        <td><span class="blue">시설자금</span> (공장의 신설, 매입, 보수)<br/>
+                          - 자금 용도 변경 사유: 운전자금대출과 시설자금대출을 병행하여 대출받으시면 더
+                          높은 한도로 받으실 수 있어 시설자금으로도 제안드립니다.</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">대출 금액</th> 
+                        <td>300,000,000  <strong>삼억 원</strong></td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">가장 빠른 대출 취급 가능일</th> 
+                        <td>제안서 채택 후 5일 이후</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">대출 기간</th> 
+                        <td><strong>24</strong> 개월</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">상환 방식</th> 
+                        <td>만기일시상환</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">제안 금리</th> 
+                        <td>
+                          <div class="table_wrap">
+                            <table class="bbs_list">
+                              <caption>제안 금리</caption>
+                              <colgroup>
+                                <col width="120px" />
+                                <col width="140px" />
+                                <col width="100px" />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">금리 유형</th>
+                                  <th scope="col">기준 금리</th>
+                                  <th scope="col">가산금리</th>
+                                  <th scope="col">당일 기준 합산 금리</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>변동</td>
+                                  <td>금융채 1년<br/>(3.50%)</td>
+                                  <td>0.50%</td>
+                                  <td><strong>4.00%</strong></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">담보 정보</th> 
+                        <td>
+                          <div class="table_wrap">
+                            <table class="bbs_list">
+                              <caption>제안 금리</caption>
+                              <colgroup>
+                                <col width="120px" />
+                                <col width="160px" />
+                                <col width="160px" />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">담보 종류</th>
+                                  <th scope="col">부동산 종류</th>
+                                  <th scope="col">담보 상세정보</th>
+                                  <th scope="col">소유자</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>부동산</td>
+                                  <td>아파트</td>
+                                  <td>서울특별시 마포구
+                                    길동로 1길 89</td>
+                                  <td>법인대표자</td>
+                                </tr>
+                                <tr>
+                                  <td>부동산</td>
+                                  <td>건물</td>
+                                  <td>경기도 하남시 길순로 43길 55</td>
+                                  <td>대표자 가족</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">기타 조건</th> 
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="table_bt">
+                  <div class="btn_c">
+                    <button type="button" class="btnSuccess">대출 예상 상환 스케줄</button>
+                  </div>
+                </div>
+                <div class="guideBox">
+                  유의사항 입력
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="totalInfoBox">
+            <div class="head">제안 대출 정보 합계</div>
+            <div class="cont">
+              <span class="label">제안 대출 금액</span>
+              <p class="desc">500,000,000원(오억원)</p>
+              <span class="label">제안 대출 금리</span>
+              <p class="desc">연 6.00%</p>
+              <span class="label">제안 대출 수</span>
+              <p class="desc">2건</p>
+            </div>
+            <div class="foot">
+              <button type="button" class="btnWhite">수정하기</button>
+              <button type="button" class="btnSuccess">제출 회수하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 하단 풀 배너 : start -->
+    <div class="btFullBnr">
+      <div class="example"></div>
+    </div>
+    <!-- 하단 풀 배너 : end -->
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
