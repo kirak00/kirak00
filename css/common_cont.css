@@ -35,6 +35,7 @@
 .titH2 { font-size: 40px; font-weight: 700;}
 .titH3 { display: flex; justify-content: space-between; font-size: 30px; font-weight: 700; margin-top:60px;}
 .titH4 { font-size: 24px; font-weight: 700;}
+.titH42 { font-size:20px; font-weight: 700;}
 .titH5 { font-size: 18px; font-weight: 700;}
 .titH3:first-child {margin-top: 80px; }
 .titH3.hasLine:first-child {margin-top: 0px; }
@@ -114,12 +115,14 @@ button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-r
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
+button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #555; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
 a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 a.btnLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+a.btnBlack       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
 
 label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; }
 
@@ -141,6 +144,9 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhiteLine:focus,
 .btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
 .btnWhiteLine:active       { background:#ffffff; color:#069B66 }
+.btnBlack:focus,
+.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
+.btnBlack:active       { background:#555; color:#fff }
  
 .btnSuccess:disabled,
 .btnSky:disabled,
@@ -148,6 +154,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhiteLine:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
 .ico_down       {padding:0 32px;}
+a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
 .btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
@@ -183,6 +190,7 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
+a.download2       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 100% 50%; }
 
 
 .ico_print       {padding:0 32px;}
@@ -192,6 +200,19 @@ a.download       {padding-left:32px; font-weight: 700; color:#069B66;  backgroun
 .btnWhite:active.ico_print::after,
 .btnWhite:hover.ico_print::after  {background:url(../images/common/ico_24_printer_w.png) no-repeat 50% 50%; }
 
+@media print {
+  body  {min-width:1000px; }
+  .loadDetailBox    {}
+  .loadDetailBox .tabLine,
+  .loadDetailBox .table_bt,
+  .detailTopBtn   {display:none !important; }
+  .companytabContentPrint {display:block !important; border-bottom:1px solid #ddd; padding-bottom:50px;}
+  .companytabContentPrint .companytabContentPrint { border-bottom:0; padding-bottom:20px; }
+  .companytabContentPrint .companytabContentPrint h4 {margin-top:20px;}
+  .companytabContentPrint h3.hide {position: static; border-bottom:1px solid #ccc; width: auto;  height: auto;  padding: 0;  margin: -1px; margin-top:50px; border-bottom:2px solid #000; padding-bottom:10px; overflow: hidden; font-size:40px;  clip: rect(0, 0, 0, 0); }
+  .companytabContentPrint h4.hide {position: static; border-bottom:1px solid #ccc; width: auto;  height: auto;  padding: 0;  margin: -1px; margin-top:50px; border-bottom:1px solid #ddd; padding-bottom:10px; overflow: hidden; font-size:28px;  clip: rect(0, 0, 0, 0); }
+  .companytabContentPrint .innerTab  {display:none; }
+}
 
 
 /* 유틸 버튼 */
@@ -687,7 +708,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
-.table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; }
+.table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
 .table_bt .btn_c button,
 .table_bt .btn_c a {min-width:225px; }
 .table_bt button + button,
@@ -1035,7 +1056,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
 /* 라인있는 탭 너비 auto */ 
 .tabLineWrap { border-bottom: 1px solid #ddd; }
-.tabLine { display: flex; width: 1400px; height: 70px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
+.tabLine { display: flex; width:100%; max-width: 1400px; height: 70px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
 .tabLineWrap .tabLine { border-bottom: 0;  }
 .tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500;}
 .tabLine li.on button { border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
@@ -1105,7 +1126,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .loadDetailBox .topBox .status  {background:#fff; display:inline-block; height:46px; line-height: 46px; padding:0 40px; font-size: 24px; border-radius: 23px; font-weight: 700; color:#069B66; }
 .loadDetailBox .topBox .txt_idx { font-size: 18px; color:#fff; padding:12px 0 0;}
 .loadDetailBox .detailCont      {padding:60px; border:1px solid #ddd; border-top:0; border-radius:0 0 16px 16px; }
+.loadDetailBox .detailCont .titBox      { font-size:34px; font-weight: 700; padding-bottom:45px;   }
+.loadDetailBox .detailCont .titBox input.star   { width:30px; height:30px; background-size:cover; vertical-align: -3px; }
 
+.loadDetailBox .detailCont .companyInfo   { margin-top:60px; }
+.loadDetailBox .detailCont .companyInfo .titH4   { margin-bottom:20px; }
 
 
 /* 가이드 */

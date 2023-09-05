@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">대출 신청 내용 상세</h2>
+        <ul class="breadcrumb">
+           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+           <li><a href="#none">대출 신청 업체 목록</a></li>
+           <li><a href="#none"><strong>대출 신청 내용 상세 </strong></a></li>
+        </ul>
+      </section>
+
+      <section class="">
+        
+        <div class="detailTopBtn">
+          <button type="button" class="btnWhite ico_print">전체 화면 출력</button>
+        </div>
+        <div class="loadDetailBox">
+          
+          <div class="topBox">
+            <div class="status">심사전</div>
+            <p class="txt_idx">대출 신청 번호 S_230809_0001</p>
+          </div>
+          <div class="detailCont">
+            <div class="titBox">
+              <input type="checkbox" class="star" id="testCheckBoxB" name="testCheckBox" title="관심대출 여부" checked>
+              (주)길동건설
+            </div>
+            
+            <ul class="tabLine tabScript" role="tablist">
+              <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="loan_company_cont_1">대출 신청 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_2">기업 일반 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_3">기업 상세 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_4">고객 제출 서류</button></li>
+            </ul>
+
+             
+            <!-- 대출 신청 정보 -->
+            <div class="companytabContentPrint" id="loan_company_cont_1" role="tabpanel" tabindex="0">
+              <h3 class="hide">대출 신청 정보</h3>
+              <div class="textTable companyInfo">
+                <table>
+                  <caption>업체개요</caption>
+                  <colgroup>
+                    <col width="205px" />
+                    <col />
+                    <col width="205px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">자금 용도</th> 
+                      <td>시설자금 <br>
+                        · 공장의 신설, 매입, 보수</td>
+                      <th scope="row">희망 신청 금액</th> 
+                      <td>1억 2000만원~2억원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">담보 유무</th> 
+                      <td>담보 있음 <br>
+                        · 부동산(서울특별시 마포구 길동로 1길 89)</td>
+                      <th scope="row">희망 대출 금리 유형</th> 
+                      <td>고정금리</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">희망 대출 기간</th> 
+                      <td>24개월</td>
+                      <th scope="row">희망 대출 상환 방식</th> 
+                      <td>원리분할상환</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">희망 대출일</th> 
+                      <td>2023-07-25</td>
+                      <th scope="row">금융소비자 유형</th> 
+                      <td>전문금융소비자</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">메모</th> 
+                      <td colspan="3">
+                        대출 많이 해주세요. 힘들어요.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </div>
+
+            <!-- 기업 일반 정보 -->
+            <div class="companytabContentPrint" id="loan_company_cont_2" role="tabpanel" tabindex="0">
+              <h3 class="hide">기업 일반 정보</h3>
+              <ul class="innerTab tabScript" role="tablist">
+                <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="loan_company_cont_2_1">업체 개요</button></li>
+                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_2_2">경영진 인적 사항</button></li>
+                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_2_3">주주 인적 사항</button></li> 
+                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_2_4">권장 서류</button></li> 
+                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_2_5">노사 관계 및 연혁</button></li> 
+              </ul>
+
+              <!-- 업체 개요 -->
+              <div class="companytabContentPrint" id="loan_company_cont_2_1" role="tabpanel" tabindex="0">
+                <h4 class="hide">업체 개요</h4>
+                <div class="textTable companyInfo">
+                  <table>
+                    <caption>업체개요</caption>
+                    <colgroup>
+                      <col width="205px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사업자 번호</th> 
+                        <td>123-89-12345</td>
+                        <th scope="row">법인명</th> 
+                        <td>(주)신한은행</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">경영방식</th> 
+                        <td>창업 2세</td>
+                        <th scope="row">업종</th> 
+                        <td>정보통신</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개업일</th> 
+                        <td>2009-02-17</td>
+                        <th scope="row">본사 주소</th> 
+                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사업장(공장) 주소</th> 
+                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                        <th scope="row">대표자명</th> 
+                        <td>박충일</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">대표자 유형</th> 
+                        <td>단독 대표</td>
+                        <th scope="row">대표자 주민등록번호</th> 
+                        <td>701204-1****** <button type="button" class="btnWhite sm">전체노출</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">법인 담당자 전화번호</th> 
+                        <td>02-3210-1874</td>
+                        <th scope="row">동업계 종사년수</th> 
+                        <td>19년</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">직원수</th> 
+                        <td colspan="3">123명 </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+              </div>
+
+              <!-- 경영진 인적 사항 -->
+              <div class="companytabContentPrint" id="loan_company_cont_2_2" role="tabpanel" tabindex="0">
+                <h4 class="hide">업체 개요</h4>
+
+                <div class="companyInfo">
+                  <p class="titH42 ">대표자 인적 사항</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list"> 
+                      <caption>대표자 인적 사항</caption>
+                      <colgroup>
+                        <col width="205px" />
+                        <col />
+                        <col width="205px" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">성명</th> 
+                          <th scope="col">직함</th>
+                          <th scope="col">설립자와의 관계</th> 
+                          <th scope="col">동업계 종사년수</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>홍길동</td> 
+                          <td>회장</td>
+                          <td>창업 2세</td> 
+                          <td>19</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">경영진 현황</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>경영진 현황</caption>
+                      <colgroup>
+                        <col width="205px" />
+                        <col />
+                        <col width="205px" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">성명</th> 
+                          <th scope="col">직함</th>
+                          <th scope="col">회사와의 실질적 관계</th> 
+                          <th scope="col">근속년수</th>
+                          <th scope="col">주요 경력</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>홍길동</td> 
+                          <td>회장</td>
+                          <td>주주(단독 30% 이상)</td>
+                          <td>21</td>
+                          <td>한국은행 부행장</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+              </div>
+
+              
+              <!-- 주주 인적 사항 -->
+              <div class="companytabContentPrint" id="loan_company_cont_2_3" role="tabpanel" tabindex="0">
+                <h4 class="hide">주주 인적 사항</h4>
+                
+                <div class="textTable companyInfo">
+                  <table>
+                    <caption>주주 인적 사항</caption>
+                    <colgroup>
+                      <col width="205px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">상장 여부</th> 
+                        <td>상장 (2013-05-14)</td>
+                        <th scope="row">총 발행 주식</th> 
+                        <td>5,000주</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">주당 액면가</th> 
+                        <td colspan="3">20,000원</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">주주 정보</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>주주 정보</caption>
+                      <colgroup>
+                        <col width="25%" />
+                        <col width="25%" />
+                        <col width="25%" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">주주명</th> 
+                          <th scope="col">관계</th>
+                          <th scope="col">소유 주식수</th> 
+                          <th scope="col">지분율</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>홍길동</td> 
+                          <td>최대 주주</td>
+                          <td>2,500</td>
+                          <td>50%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+ 
+              </div>
+
+              
+              <!-- 권장 서류 -->
+              <div class="companytabContentPrint" id="loan_company_cont_2_4" role="tabpanel" tabindex="0">
+                <h4 class="hide">권장 서류 </h4>
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">증빙 서류</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>증빙 서류</caption>
+                      <colgroup>
+                        <col width="33%" />
+                        <col width="33%" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">증빙 서류</th> 
+                          <th scope="col">등록 일자</th>
+                          <th scope="col">다운로드</th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>주주명부</td> 
+                          <td>2023-08-10</td>
+                          <td><a href="#none" class="download2">다운로드</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">기술 인증 서류</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>기술 인증 서류</caption>
+                      <colgroup>
+                        <col width="15%" />
+                        <col />
+                        <col width="20%" />
+                        <col width="20%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">기술인증기관</th> 
+                          <th scope="col">증빙 서류</th>
+                          <th scope="col">등록 일자</th> 
+                          <th scope="col">다운로드</th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>이노버즈</td> 
+                          <td>기술혁신 중소기업 확인서</td> 
+                          <td>2023-08-10</td>
+                          <td><a href="#none" class="download2">다운로드</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+                
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">권장 서류</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>권장 서류</caption>
+                      <colgroup>
+                        <col width="33%" />
+                        <col />
+                        <col width="25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">서류명</th> 
+                          <th scope="col">파일명</th>
+                          <th scope="col">다운로드</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>사업장 부동산등기부등본</td> 
+                          <td>사업장 부동산등기부등본.PDF</td>
+                          <td><a href="#none" class="download2">다운로드</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+              </div>
+              
+              <!-- 노사 관계 및 연혁 -->
+              <div class="companytabContentPrint" id="loan_company_cont_2_5" role="tabpanel" tabindex="0">
+                <h4 class="hide">노사 관계 및 연혁</h4>
+                
+                <div class="textTable companyInfo">
+                  <table>
+                    <caption>노사 관계</caption>
+                    <colgroup>
+                      <col width="205px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">노사 관계 유무</th> 
+                        <td>유</td>
+                        <th scope="row">노사 설립일</th> 
+                        <td>2009-12-01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                
+                <div class="companyInfo">
+                  <p class="titH42 ">회사 연혁 정보</p>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>회사 연혁 정보</caption>
+                      <colgroup>
+                        <col width="25%" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">날짜</th> 
+                          <th scope="col">내용</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2020-04-10</td> 
+                          <td>법인 설립(대표이사 홍길동 취임)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+
+
+            <!-- 기업 상세 정보 -->
+            <div class="companytabContentPrint" id="loan_company_cont_3" role="tabpanel" tabindex="0">
+              <h3 class="hide">기업 상세 정보</h3>
+              
+            </div>
+
+            
+            <!-- 고객 제출 서류 -->
+            <div class="companytabContentPrint" id="loan_company_cont_4" role="tabpanel" tabindex="0">
+              <h3 class="hide">고객 제출 서류</h3>
+              
+            </div>
+            
+            <div class="table_bt">
+              <div class="btn_c">
+                <a href="#;" class="btnSuccess">심사하기</a>
+                <a href="#;" class="btnSky">심사 영업점 변경</a>
+              </div>
+            </div>
+            
+            <div class="table_bt">
+              <div class="btn_c">
+                <a href="#;" class="btnSuccess">추가 서류 요청</a>
+                <a href="#;" class="btnSuccess">마감 기한 연장 요청</a>
+                <a href="#;" class="btnSky">심사 영업점 변경</a>
+                <a href="#;" class="btnBlack">심사 취소하기</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="table_bt">
+            <div class="btn_l">
+              <a href="#;" class="btnWhite ico_prev">이전</a>
+            </div>
+            <div class="btn_c">
+              <a href="#;" class="btnWhite">목록</a>
+            </div>
+            <div class="btn_r">
+              <a href="#;" class="btnWhite ico_next">다음</a>
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+<script>
+</script>
+   
+
+</body>
+</html>

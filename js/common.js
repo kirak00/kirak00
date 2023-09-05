@@ -128,6 +128,7 @@ function messageList(){
 
 
 function tabScript(){
+  
   $(".tabScript").each(function(i,o){
     var tabCont = $(o);
     var menu = tabCont.children();
@@ -148,7 +149,7 @@ function tabScript(){
     if(lnk){
       var conTxt = []
       menu.each(function(i){
-        if(i != 0){
+        if(i != 0){ 
           conTxt +=","
         }
         conTxt += this.getAttribute("href");
@@ -171,6 +172,7 @@ function tabScript(){
         menuWrap.removeClass("on").eq(0).addClass("on")
       }
       tab.removeClass("on").eq(0).addClass("on")
+    }
       tab.click(function(){
         
         if(menuWrap.length > 0){
@@ -184,7 +186,6 @@ function tabScript(){
         tabCont.hide().eq(this.n).show().attr("aria-hidden", "false");
         return false;
       })
-    }
   })
 }
 
