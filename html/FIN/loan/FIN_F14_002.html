@@ -49,11 +49,13 @@
             </div>
             
             <ul class="tabLine tabScript" role="tablist">
-              <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="main_loan_cont_1">업체개요</button></li>
-              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_2">경영진 인적 사항</button></li>
-              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_3">주주 인적 사항</button></li>
-              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_4">노사 관계 및 연혁</button></li>
+              <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="main_loan_cont_1">대출 신청 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_2">기업 일반 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_3">기업 상세 정보</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="main_loan_cont_4">고객 제출 서류</button></li>
             </ul>
+
+             
             <div class="" id="main_loan_cont_1" role="tabpanel" tabindex="0">
               <div class="textTable">
                 <table>
@@ -100,15 +102,114 @@
                   </tbody>
                 </table>
               </div>
-              <div class="table_bt">
-                <div class="btn_r">
-                  <a href="#;" class="btnWhite ico_next">다음</a>
+              
+            </div>
+
+            <!-- 경영진 인적 사항 -->
+            <div class="" id="main_loan_cont_2" role="tabpanel" tabindex="0">
+              <ul class="innerTab tabScript" role="tablist">
+                <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true" aria-controls="main_loan_cont_1">업체 개요</button></li>
+                <li><button type="button" role="tab" id="innerTab_2" aria-selected="false" aria-controls="main_loan_cont_1">경영진 인적 사항</button></li>
+                <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">주주 인적 사항</button></li> 
+                <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">권장 서류</button></li> 
+                <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">노사 관계 및 연혁</button></li> 
+              </ul>
+
+              <div id="main_loan_cont_2_1" role="tabpanel" tabindex="0">
+                
+                <div class="textTable">
+                  <table>
+                    <caption>업체개요</caption>
+                    <colgroup>
+                      <col width="205px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사업자 번호</th> 
+                        <td>123-89-12345</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">법인명</th> 
+                        <td>(주)신한은행</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">경영방식</th> 
+                        <td>창업 2세</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">업종</th> 
+                        <td>정보통신</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개업일</th> 
+                        <td>2009-02-17</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">본사 주소</th> 
+                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사업장(공장) 주소</th> 
+                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">대표자명</th> 
+                        <td>박충일</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">대표자 유형</th> 
+                        <td>단독 대표</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">설립자와의 관계</th> 
+                        <td>본인</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">동업계 종사년수</th> 
+                        <td>19년</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">직원수</th> 
+                        <td>123명 <span class="sub">(근로복지공단 API 정보 수집 : 2023-08-01)</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              
             </div>
 
 
+            <!-- 주주 인적 사항 -->
+            <div class="" id="main_loan_cont_3" role="tabpanel" tabindex="0">
+              
+            </div>
+
+            
+            <!-- 노사 관계 및 연혁 -->
+            <div class="" id="main_loan_cont_4" role="tabpanel" tabindex="0">
+              
+            </div>
+            
+            <div class="table_bt">
+              <div class="btn_c">
+                <a href="#;" class="btnSuccess">추가 서류 요청</a>
+                <a href="#;" class="btnSuccess">마감 기한 연장 요청</a>
+                <a href="#;" class="btnSky">심사 영업점 변경</a>
+                <a href="#;" class="btnBlack">심사 취소하기</a>
+              </div>
+            </div>
           </div>
+          
+          <div class="table_bt">
+            <div class="btn_c">
+              <a href="#;" class="btnWhite">목록</a>
+            </div>
+          </div>
+          
+
+
         </div>
         
 
