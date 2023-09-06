@@ -10,6 +10,7 @@
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/fecha.js"></script>
   <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/echarts.min.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
@@ -158,33 +159,128 @@
 
               </div>
               <div class="searchBtns">
-                <button type="button" class="btnSky ico_print">대시보드 출력</button>
+                <button type="button" class="btnSky ico_print" onclick="print()" title="프린트">대시보드 출력</button>
                 <button type="button" class="btnSuccess">조회</button>
               </div>
             </div>
           </fieldset>
+          
         </div>
       </section>
 
       <section class="main_dashboard">
-        <div class="mng_btns">
-          <button type="button" class="btnSky ico_setting" id="dashboard_layer_btn" >대시보드 설정</button>
-          <button type="button" class="btnWhite ico_chart" title="프린트" onclick="print()">대시보드 출력</button>
+          
+        <ul role="tablist" class="tabLine fullType tabScript">
+          <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="mainDashboard_1">통계 Ⅰ</button></li>
+          <li><button type="button" role="tab" aria-selected="false" aria-controls="mainDashboard_2">통계 Ⅱ</button></li>
+        </ul>
+        <div id="mainDashboard_1" role="tabpanel" tabindex="0">
+            
+          <ul class="dashboardWrap">
+            <li class="box wid50">
+              <div style="width:100%; height:200px;" id="dashChart_1">
+                asdfasdf
+              </div>
+              <script>
+
+                var myChart = echarts.init(document.getElementById('dashChart_1'));
+                var option = {
+                    title: {
+                      text: 'Stacked Area Chart'
+                    },
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'cross',
+                        label: {
+                          backgroundColor: '#6a7985'
+                        }
+                      }
+                    },
+                    legend: {
+                      data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+                    },
+                    // toolbox: {
+                    //   feature: {
+                    //     saveAsImage: {}
+                    //   }
+                    // },
+                    grid: {
+                      left: '3%',
+                      right: '4%',
+                      bottom: '3%',
+                      containLabel: true
+                    },
+                    xAxis: [
+                      {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                      }
+                    ],
+                    yAxis: [
+                      {
+                        type: 'value'
+                      }
+                    ],
+                    series: [
+                      {
+                        name: 'Email',
+                        type: 'line',
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(58,77,233,0.8)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(58,77,233,0.3)'
+                            }
+                          ])
+        
+                        },
+                        emphasis: {
+                          focus: 'series'
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210]
+                      },
+                      {
+                        name: 'Union Ads',
+                        type: 'line',
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(213,72,120,0.8)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(213,72,120,0.3)'
+                            }
+                          ])
+
+                        },
+                        emphasis: {
+                          focus: 'series'
+                        },
+                        data: [120, 182, 91, 34, 290, 330, 310]
+                      },
+                    ]
+                  };
+                  myChart.setOption(option);
+
+              </script>
+            </li>
+            <li class="box wid50">
+              asdf
+            </li>
+          </ul>
         </div>
-        <script>
-          // var dashList_data = []
-          $("#dashboard_layer_btn").on("click",function(){
-            // var list = {};
-            // var getWrap = $(".dashboardWrap li");
-
-            // getWrap.each(function(i,o){
-            //   console.log(o.className.replace("items " ,""))
-            //   var obj = {};
-            // });
-
-            layer_open('dashboard_setting_Layer',this);
-          })
-        </script>
+        <div id="mainDashboard_2" role="tabpanel" tabindex="0">
+2
+        </div>
+        
 
         <ul class="dashboardWrap">
           <li class="items type_1">
@@ -225,72 +321,6 @@
                 <strong>5000</strong>
                 <span>만원</span> 
               </span>
-            </div>
-          </li>
-          <li class="items type_5">
-            <strong class="tit">최다 제안 지점</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_6">
-            <strong class="tit">최다 취급 지점</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_7">
-            <strong class="tit">최다 취급 지점</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_8">
-            <strong class="tit">최다 제안 지역본부</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_9">
-            <strong class="tit">최대 취급액 지점</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_10">
-            <strong class="tit">최대 취급액 지역본부</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <span>길동중앙회 <br>광화문금융센터</span> 
-              </span>
-            </div>
-          </li>
-          <li class="items type_11">
-            <strong class="tit">최다 취급 업종</strong>
-            <div class="dash_data">
-              <div class="barChart">
-                <span style="width:50%"><strong class="hide">50%</strong><em></em></span>
-              </div>
-              <span class="dataSize">
-                <span>정산 대상 수</span> 
-                <strong>10</strong>
-              </span>
-            </div> 
-          </li>
-          <li class="items type_12">
-            <strong class="tit">전체 제안 대출 비율</strong>
-            <div class="dash_data">
-              
             </div>
           </li>
         </ul>
