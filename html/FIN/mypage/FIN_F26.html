@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
   <script src="../../../js/common.js"></script>
-  <script src="../../../js/common_COP.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
 <style>
 
@@ -158,7 +164,7 @@
       </section>
       <section class="sectionBlock60">
         <h3 class="tit45">담당자 정보</h3> 
-        <div class="table_wrap formFullType">
+        <!-- <div class="table_wrap formFullType">
           <table class="bbs_list">
             <caption>담당자 정보</caption>
             <colgroup>
@@ -196,7 +202,52 @@
               </tr>
             </tbody>
           </table>
+        </div> -->
+
+        <div class="jsGridWrap">
+          <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
+          <div id="externalPager" class="external-pager"></div>
+          <script>
+            
+  /* jsgrid sample */
+  $(function() {
+  
+  var clients = [
+    { "Name1": "박둘리",
+      "Name2": "031-571-4725", 
+      "Name3": "king@shinhan.com", 
+    },
+    { "Name1": "박둘리",
+      "Name2": "031-571-4725", 
+      "Name3": "king@shinhan.com", 
+    },
+  ];
+  
+  $("#jsGrid").jsGrid({
+    data: clients,
+    editing: true,
+    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+    fields: [
+      { name: "Name1",  type: "text", title : "관리자", width: "33.3%" },
+      { name: "Name2", type: "text", title : "관리자 연락처", width: "33.3%"},
+      { name: "Name3", type: "text", title : "관리자 이메일", width: "33.3%"},
+    ],
+        
+    pagerContainer: "#externalPager",
+    
+    });
+  
+  });
+  
+
+          </script>
+          <div class="table_bt">
+            <div class="btn_r">
+              <button type="button" class="btnSuccess">담당자 정보 수정</button>
+            </div>
+          </div>
         </div>
+
       </section>
 
     </section>

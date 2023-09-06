@@ -54,7 +54,7 @@
 .titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { color: #EAFAEB; font-size: 18px;}
 .titBg ~ .textTable { margin-top: 40px;}
-.titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; }
+/* .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; } */
 
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
 
@@ -82,7 +82,7 @@
 .tabNoti { margin-top: 80px; color: #555; text-align: center;}
 
 .resultCont + .guideBox { margin-top: 80px; }
-.guideBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
+.guideBox { padding: 40px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .guideBox .guideList { margin-top: 20px;}
 .guideBox .not + .guideList { margin-top: 20px;}
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
@@ -271,6 +271,10 @@ button.sm       {height:50px; }
 .priceList li { display: flex; align-items: center; }
 .priceList li + li { margin-top: 35px}
 .priceList .badgeWhite { margin-right:8px;}
+
+
+
+.priceSet { display: flex;}
 /****************************
 **********  form  **********
 *****************************/
@@ -421,6 +425,10 @@ select.wid430 { min-width: 430px;}
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
+.formVertical { display: flex; flex-direction: column; gap: 20px;}
+.formSet { display: flex; gap: 10px;}
+.formVertical .radio { height: auto; padding-top: 0;}
+.formVertical .radio ~ .radio { margin-left: 0;}
 .formRow + .formAdd { margin-top: 10px; }
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
@@ -476,7 +484,8 @@ select.wid430 { min-width: 430px;}
 .searchControlGroup .rangeControl .input {height:64px; }
 .searchControlGroup .rangeControl .btnCalendar {width:64px; height:64px; }
 
-/* form div table */
+/*  div table */
+/* 메시지 알림 설정 */
 .divTable { border-radius: 16px; overflow: hidden;}
 .divTable .row { min-height: 100px; padding: 35px 0;}
 .divTable .row + .row { border-top: 1px solid #ddd;}
@@ -699,7 +708,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox select {margin-left:6px; }
 .table_top .sortBox select { width: 100%; height: 50px; }
 
-.table_bt      {width:100%;  margin:60px 0 0px; box-sizing: content-box; min-height:64px; }
+.table_bt      { position: relative; width:100%;  margin:60px 0 0px; box-sizing: content-box; min-height:64px; }
 .table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
@@ -775,18 +784,23 @@ table { width: 100%;}
 .fixedTable .bbs_list tbody tr:last-child { border-bottom: 0;}
 .fixedTableWrap .table_bt { padding-top: 60px;}
 
+.layerCont .tableLabel { margin-top: 0;}
 .tableLabel { margin-top: 30px; color: #555; font-size: 18px; text-align: right;}
+.tableLabel.pntCol_1 { color: #FE5050;}
 .tableLabel ~ .titH5 { margin-top: 20px;}
 
 
 /* 라인 NO */
+.viewNolineTable { padding-top: 20px}
 .viewNolineTable table { display: table; width: 100%;} 
 .viewNolineTable th, 
 .viewNolineTable td { padding: 22px 0; }
+.viewNolineTable tr:first-child th,
+.viewNolineTable tr:first-child td { padding-top: 0; }
 .viewNolineTable tr:last-child th,
 .viewNolineTable tr:last-child td { padding-bottom: 0; }
-.viewNolineTable th { padding-left: 20px; padding-right: 20px; font-weight: 700; text-align: left; vertical-align: top;}
-.viewNolineTable td { padding-right: 20px; text-align: left;}
+.viewNolineTable th { font-weight: 700; text-align: left; vertical-align: top;}
+.viewNolineTable td { text-align: left;}
 
 /* 라인 YES */
 .viewLineTable .tableTit { margin-top: 40px;}
@@ -802,6 +816,12 @@ table { width: 100%;}
 .detailCont .viewLineTable td { padding-right: 20px; }
 /* 마지막 라인 NO */
 .viewLineTable.noLastLine tr:last-child { border-bottom: none; }
+
+
+.detailCont .viewNolineTable { padding-top: 60px}
+.detailCont .viewNolineTable th, 
+.detailCont .viewNolineTable td { padding: 30px 0; }
+.detailCont .viewNolineTable th:first-child { padding-left: 60px; }
 
 /* 폼 테이블 */
 .formListTable { margin-top: 40px;}
@@ -893,9 +913,9 @@ td .formListTable { margin-top: 25px;}
 .jsgrid-grid-body {border:0; height: calc(100% - 80px) !important}
 .jsgrid-filter-row > .jsgrid-cell, 
 .jsgrid-insert-row > .jsgrid-cell, 
-.jsgrid-cell,
+.jsgrid-cell,.jsgrid-row > .jsgrid-cell
 .jsgrid-alt-row > .jsgrid-cell,
-.jsgrid-edit-row > .jsgrid-cell { background-color: #fff; border:0; border-bottom:1px solid #ddd;}
+.jsgrid-edit-row > .jsgrid-cell { padding: 0 20px; background-color: #fff; border:0; border-bottom:1px solid #ddd; word-break: break-all}
 .jsgrid-header-row:first-child .jsgrid-header-cell:first-child  { padding-left: 30px; border-radius: 16px 0 0;}
 .jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {padding-right: 30px; border-radius:  0 16px 0 0;}
 .jsgrid-grid-header {background:none}
@@ -903,10 +923,16 @@ td .formListTable { margin-top: 25px;}
 .jsgrid-selected-row > .jsgrid-cell   {background:#F4FBF5 ;}
 
 /* .jsgrid-row > .jsgrid-cell { padding: 0 10px;} */
+.jsgrid-alt-row > .jsgrid-cell:first-child,
+.jsgrid-edit-row > .jsgrid-cell:first-child,
 .jsgrid-row > .jsgrid-cell:first-child { padding-left: 30px}
+.jsgrid-alt-row > .jsgrid-cell:last-child,
+.jsgrid-edit-row > .jsgrid-cell:last-child,
 .jsgrid-row > .jsgrid-cell:last-child { padding-right: 30px}
 th .checkbox     {vertical-align: 0;}
 
+
+.jsgrid input, .jsgrid textarea, .jsgrid select { height: 64px; border: 1px solid #ddd; border-radius: 8px;}
 
 th{word-break: break-all;}
 .jsgrid-cell,
@@ -1133,7 +1159,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
-
+.bbsDetailBox .detailCont .titH4.hasLine { padding: 0 60px;}
+.bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
 
 .detailTopBtn     {padding-bottom:20px; display:flex; justify-content: end; }
 
@@ -1302,3 +1329,40 @@ ol.auditInfo      {}
 ol.auditInfo li      {position:relative; line-height:34px; margin:35px 0 0; padding-left:45px; }
 ol.auditInfo li strong  {color:#069B66; }
 ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34px; height:34px; font-size:24px; font-weight: 700; background:#069B66; color:#fff; text-align: center; border-radius: 50%;   }
+
+.suggestPg .divideCon { padding: 60px 0; border-bottom: 1px solid #ddd; overflow: hidden;}
+.suggestPg .left {width: 968px; float: left;}
+.suggestPg .right {width: 372px; float: right;}
+
+.suggestPg .titH4.hasLine { padding: 0 60px;}
+.suggestPg .titH4.hasLine + .viewNolineTable.wide { padding-top: 60px;}
+
+.suggestPg .viewNolineTable { padding-top: 60px}
+.suggestPg .viewNolineTable th, 
+.suggestPg .viewNolineTable td { padding: 30px 0; }
+.suggestPg .viewNolineTable th:first-child { padding-left: 60px; }
+
+.suggestPg .accordion { margin-top: 60px; }
+.suggestPg .accordion .accordionItem { border: 1px solid #069B66; }
+.suggestPg .accordionTrigger { display: flex; padding-right: 104px; padding-left: 60px;}
+.suggestPg .accordionTrigger .label { width: 180px; font-size: 24px;}
+.suggestPg .accordionTrigger .tit { font-size: 24px;; font-weight: 400; flex: 1;}
+.suggestPg .accordionPanel { margin: 0; padding: 40px 0; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
+.suggestPg .accordion .viewNolineTable { padding-top: 0;}
+.suggestPg .accordion .viewNolineTable th { padding-right: 60px;}
+.suggestPg .accordion .viewNolineTable td:last-child { padding-right: 60px;}
+.suggestPg .accordion .table_wrap { margin-top: 0;}
+.suggestPg .accordion .viewNolineTable .bbs_list th,
+.suggestPg .accordion .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
+.suggestPg .guideBox { margin: 60px 60px 0;}
+
+.totalInfoBox { padding: 40px 40px 60px; border: 3px solid #069B66; border-radius: 16px;}
+.totalInfoBox .head { height: 76px; border-bottom: 1px solid #ddd; font-size: 24px; font-weight: 700; line-height: 76px; text-align: center;}
+.totalInfoBox .cont { padding: 40px 0; }
+.totalInfoBox .label { display: inline-block;}
+.totalInfoBox .label ~ .label { margin-top: 30px; }
+.totalInfoBox .desc { margin-top: 20px; color: #069B66; font-size: 24px; font-weight: 700; }
+
+.totalInfoBox .foot {}
+.totalInfoBox .foot button { width: 100%; }
+.totalInfoBox .foot button + button { margin-top: 10px;}
