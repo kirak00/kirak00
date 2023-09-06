@@ -500,6 +500,7 @@ function accordion() {
           document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
             trigger.setAttribute('aria-expanded', 'false');
             this.buttonEl.setAttribute('aria-expanded', 'true');
+            this.buttonEl.closest('.accordionItem').classList.add('isOpen')
           })
           document.querySelectorAll('.accordionPanel').forEach((panel) => {
             panel.setAttribute('hidden', '');
@@ -508,6 +509,7 @@ function accordion() {
         } else { // open
           this.buttonEl.setAttribute('aria-expanded', 'false');
           this.contentEl.setAttribute('hidden', '');
+          this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
         }
       } else { //toggle type
         this.toggle(!this.open);

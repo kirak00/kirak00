@@ -94,7 +94,7 @@
             <div class="searchControlItem">
               <label for="selectLabelState" class="label">날짜 선택</label>
               <div class="formRow">
-                <input type="text" class="input wid360" value="2023-07-01~2023-08-15" /> 
+                <input type="text" class="input wid360" value="2023-07-01~2023-08-15" title="선택된 기간" /> 
                 <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
               </div>
             </div>
@@ -110,17 +110,17 @@
             <div class="searchControlItem">
               <label id="selectLabelGroup" class="label">조직 선택</label>
               <div class="formRow formGroup" role="group" aria-labelledby="selectLabelGroup">
-                <select>
+                <select title="본부 선택">
                   <option>지역본부</option>
                   <option>셀렉트</option>
                 </select>
                 <span class="line"></span>
-                <select>
+                <select title="지점 선택">
                   <option>금고본점</option>
                   <option>셀렉트</option>
                 </select>
                 <span class="line"></span>
-                <select>
+                <select title="지점 선택">
                   <option>지점</option>
                   <option>셀렉트</option>
                 </select>
@@ -193,8 +193,7 @@
             <div class="searchControlItem">
               <label for="selectLabelState" class="label">보증기관 제안 건</label>
               <div class="formRow">
-                
-                <input type="text" class="input" value="3" />
+                <input type="text" id="selectLabelState" class="input" value="3" />
               </div>
             </div>
           </div>
