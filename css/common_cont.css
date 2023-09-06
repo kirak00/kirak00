@@ -376,6 +376,7 @@ button.sm       {height:50px; }
 .input.wid82 { width: 82px;}
 .input.wid240 { width: 240px;}
 .input.wid300 { width: 300px;}
+.input.h50 { min-height: 50px;}
 
 /* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
@@ -430,10 +431,13 @@ select.wid430 { min-width: 430px;}
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
 .formVertical { display: flex; flex-direction: column; gap: 20px;}
+.formVertical.mt10 { margin-top: 10px;}
+.formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
 .formSet { display: flex; gap: 10px;}
 .formVertical .radio { height: auto; padding-top: 0;}
 .formVertical .radio ~ .radio { margin-left: 0;}
 .formVertical .checkbox ~ .checkbox { margin-left: 0;}
+.formVertical .checkbox + .formRow { margin-top: -10px;}
 .formRow + .formAdd { margin-top: 10px; }
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
@@ -843,6 +847,7 @@ table { width: 100%;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
 .formListTable .radio { padding-top: 15px;}
+.formListTable .radioBtn { padding-top: 12px;}
 
 td .formGrayBox { margin: 10px 0;}
 td .formListTable { margin-top: 25px;}
