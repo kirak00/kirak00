@@ -923,12 +923,8 @@ td .formListTable { margin-top: 25px;}
 .jsgrid-selected-row > .jsgrid-cell   {background:#F4FBF5 ;}
 
 /* .jsgrid-row > .jsgrid-cell { padding: 0 10px;} */
-.jsgrid-alt-row > .jsgrid-cell:first-child,
-.jsgrid-edit-row > .jsgrid-cell:first-child,
-.jsgrid-row > .jsgrid-cell:first-child { padding-left: 30px}
-.jsgrid-alt-row > .jsgrid-cell:last-child,
-.jsgrid-edit-row > .jsgrid-cell:last-child,
-.jsgrid-row > .jsgrid-cell:last-child { padding-right: 30px}
+.jsgrid-table tr td:first-child {padding-left: 30px}
+.jsgrid-table tr td:last-child {padding-right: 30px}
 th .checkbox     {vertical-align: 0;}
 
 
