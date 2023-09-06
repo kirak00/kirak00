@@ -129,43 +129,30 @@ function messageList(){
 
 function tabScript(){
   
+
   $(".tabScript").each(function(i,o){
-    var tabCont = $(o);
-    var menu = tabCont.children();
-    var tab = tabCont.find("[role=tab]").each(function(n){this.n=n});
-    var lnk = false;
-    var menuWrap =[];
-    if(menu[0].tagName.toLowerCase() == "li"){
-      menu = tabCont.find("> li > a");
-      lnk = true;
-      if(menu.length == 0){
-        menu = tabCont.find("> li > button");
-        lnk = false;
-      }
-      menuWrap = tabCont.find(">li");
-    }
-    
-    var tabCont = $(this).siblings("[role=tabpanel]");
-    if(lnk){
-      var conTxt = []
-      menu.each(function(i){
-        if(i != 0){ 
-          conTxt +=","
-        }
-        conTxt += this.getAttribute("href");
-      });
-      tabCont = $(conTxt);
-    }else if(tabCont.length ==0){
-      var conTxt = []
-      menu.each(function(i){
-        if(i != 0){
-          conTxt +=","
-        }
-        conTxt += "#"+this.getAttribute("aria-controls");
-      });
-      tabCont = $(conTxt);
+    var wrap = $(o);
+    var tab = wrap.find("[role=tab]").each(function(n){this.n=n});
+    var contArr = [];
+    var liArr = [];
+
+    if(tab[0].tagName.toLowerCase() == "button"){
+      tab.each(function(i,o){
+        var cont = document.querySelector("#"+o.getAttribute("aria-controls"));
+        liArr.push(o.parentNode)
+        if(cont) contArr.push(cont)
+      })
+    }else if(tab[0].tagName.toLowerCase() == "a"){
+      tab.each(function(i,o){
+        var cont = document.querySelector(o.getAttribute("href"));
+        liArr.push(o.parentNode)
+        if(cont) contArr.push(cont)
+      })
     }
 
+    var menuWrap = $(liArr)
+    var tabCont = $(contArr);
+    
     if(tabCont.length == tab.length ){
       tabCont.hide().eq(0).show()
       if(menuWrap.length > 0){
@@ -173,20 +160,26 @@ function tabScript(){
       }
       tab.removeClass("on").eq(0).addClass("on")
     }
-      tab.click(function(){
-        
-        if(menuWrap.length > 0){
-          menuWrap.removeClass("on")
-          $(this).parent().addClass("on")
-        }
-        tab.removeClass("on").attr({'aria-selected' : 'false'})
-        $(this).addClass("on").attr({'aria-selected' : 'true'})
-        
-        
-        tabCont.hide().eq(this.n).show().attr("aria-hidden", "false");
-        return false;
-      })
+
+    tab.click(function(){
+      
+      if(tabCont.length == tab.length ){
+        tabCont.hide().attr("aria-hidden", "true");
+        tabCont.eq(this.n).show().attr("aria-hidden", "false");
+      }
+      
+      if(menuWrap.length > 0){
+        menuWrap.removeClass("on");
+        $(this).parent().addClass("on");
+      }
+
+      tab.removeClass("on").attr({'aria-selected' : 'false'});
+      $(this).addClass("on").attr({'aria-selected' : 'true'});
+      
+      return false;
+    })
   })
+
 }
 
 
@@ -265,13 +258,13 @@ function alert_control(alertBody ,focusObj , btnObj){
   });
 
   alertBody.find(".alertConfirm").click(function(){
-    if(btnObj?.confirm?.callback) eval(btnObj.confirm.callback)();
     close(this);
+    if(btnObj?.confirm?.callback) eval(btnObj.confirm.callback)();
   });
 
   alertBody.find(".alertCancel").click(function(){
-    if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
     close(this);
+    if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
   });
 
   function close(obj){
@@ -437,7 +430,7 @@ function layer_close(id){
   var layer = $("#" +id )
   layer.removeClass("show");
   layer.find(".layerBody").attr({tabindex:-1});
-  layer[0].focusTarget.focus();
+  layer[0]?.focusTarget?.focus();
   $(".wrap").removeAttr("aria-hidden"); 
 }
 
@@ -453,6 +446,7 @@ function faq(){
     var dd = box.find("dd");
     dd.eq(0).addClass("on");
     var focusChk = false;
+    
     dt.on("focus",function(){
       $(this).addClass("on");
       $(this).siblings("dt").removeClass("on");
@@ -460,12 +454,12 @@ function faq(){
       console.log(2, focusChk)
       setTimeout(()=>{
         focusChk = false;
-      },100)
+      },1000)
     })
-    dt.on("click",function(){
-      console.log(1, focusChk)
-      if(!focusChk) $(this).toggleClass("on");
-    });
+    // dt.on("click",function(){
+    //   console.log(1, focusChk)
+    //   if(!focusChk) $(this).toggleClass("on");
+    // });
   })
 }
 

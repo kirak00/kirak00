@@ -20,8 +20,12 @@
     <!-- contents : start -->
     <!-- **************** -->
     <hr/>
-    <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <div class="container " id="skip_content"  aria-label="컨텐츠">
 
+      <section class="printTit">
+        <div class="logo"></div>
+        <p>본 화면은 Loan&Biz에서 관리 및 보호중인 중요 개인정보가 포함된 화면이므로 대출 정보 조회 용도 외 사용을 금합니다.</p>
+      </section>
       <section class="pageTop">
         <h2 class="pageTit">대출 신청 내용 상세</h2>
         <ul class="breadcrumb">
@@ -34,18 +38,26 @@
       <section class="">
         
         <div class="detailTopBtn">
-          <button type="button" class="btnWhite ico_print">전체 화면 출력</button>
+          <button type="button" class="btnWhite ico_print" onclick="print()">전체 화면 출력</button>
         </div>
         <div class="loadDetailBox">
           
           <div class="topBox">
             <div class="status">심사전</div>
+            <div class="printTit">(주)길동건설</div>
             <p class="txt_idx">대출 신청 번호 S_230809_0001</p>
           </div>
           <div class="detailCont">
             <div class="titBox">
-              <input type="checkbox" class="star" id="testCheckBoxB" name="testCheckBox" title="관심대출 여부" checked>
-              (주)길동건설
+              <div class="tit">
+                <input type="checkbox" class="star" id="testCheckBoxB" name="testCheckBox" title="관심대출 여부" checked>
+                (주)길동건설
+              </div>
+
+              <div class="txt">
+                <span>대출 신청일 2023-06-25</span>
+                <span>제안서 마감일 2023-07-10</span>
+              </div>
             </div>
             
             <ul class="tabLine tabScript" role="tablist">
@@ -177,10 +189,10 @@
 
               <!-- 경영진 인적 사항 -->
               <div class="companytabContentPrint" id="loan_company_cont_2_2" role="tabpanel" tabindex="0">
-                <h4 class="hide">업체 개요</h4>
+                <h4 class="hide">경영진 인적 사항</h4>
 
                 <div class="companyInfo">
-                  <p class="titH42 ">대표자 인적 사항</p>
+                  <h4 class="titH42 ">대표자 인적 사항</h4>
                   <div class="table_wrap">
                     <table class="bbs_list"> 
                       <caption>대표자 인적 사항</caption>
@@ -211,7 +223,7 @@
                 </div>
                 
                 <div class="companyInfo">
-                  <p class="titH42 ">경영진 현황</p>
+                  <h4 class="titH42 ">경영진 현황</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>경영진 현황</caption>
@@ -273,9 +285,8 @@
                   </table>
                 </div>
 
-                
                 <div class="companyInfo">
-                  <p class="titH42 ">주주 정보</p>
+                  <h4 class="titH42 ">주주 정보</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>주주 정보</caption>
@@ -304,8 +315,6 @@
                     </table>
                   </div>
                 </div>
-
-
  
               </div>
 
@@ -315,7 +324,7 @@
                 <h4 class="hide">권장 서류 </h4>
                 
                 <div class="companyInfo">
-                  <p class="titH42 ">증빙 서류</p>
+                  <h4 class="titH42 ">증빙 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>증빙 서류</caption>
@@ -342,9 +351,8 @@
                   </div>
                 </div>
 
-                
                 <div class="companyInfo">
-                  <p class="titH42 ">기술 인증 서류</p>
+                  <h4 class="titH42 ">기술 인증 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>기술 인증 서류</caption>
@@ -374,11 +382,8 @@
                   </div>
                 </div>
 
-
-                
-                
                 <div class="companyInfo">
-                  <p class="titH42 ">권장 서류</p>
+                  <h4 class="titH42 ">권장 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>권장 서류</caption>
@@ -404,7 +409,6 @@
                     </table>
                   </div>
                 </div>
-
                 
               </div>
               
@@ -429,10 +433,9 @@
                     </tbody>
                   </table>
                 </div>
-
                 
                 <div class="companyInfo">
-                  <p class="titH42 ">회사 연혁 정보</p>
+                  <h4 class="titH42 ">회사 연혁 정보</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
                       <caption>회사 연혁 정보</caption>
@@ -465,6 +468,456 @@
             <div class="companytabContentPrint" id="loan_company_cont_3" role="tabpanel" tabindex="0">
               <h3 class="hide">기업 상세 정보</h3>
               
+              <div class="textTable companyInfo">
+                <table>
+                  <caption>주주 인적 사항</caption>
+                  <colgroup>
+                    <col width="205px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">CRETOP 등급</th> 
+                      <td>AA+</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="companyInfo">
+                
+                <div class="stitBox">
+                  <h4 class="titH42">법인 회사 재무 현황</h4>
+                  <button type="button" class="btnSuccess sm ico_down">재무 현황 일괄 다운로드</button>
+                </div>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>법인 회사 재무 현황 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="16%" />
+                      <col width="16%" />
+                      <col width="16%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">재무 자료 명</th> 
+                        <th scope="col">수집 기준 년도</th>
+                        <th scope="col">업로드 방식</th> 
+                        <th scope="col">다운로드</th> 
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">재무상태표</td> 
+                        <td>2022,2021, 2023</td>
+                        <td>수집 자료</td>
+                        <td><a href="#none" class="download2">다운로드</a></td>
+                      </tr>
+                      <tr>
+                        <td class="tit">재무상태표</td> 
+                        <td>2022,2021, 2023</td>
+                        <td class="red">미등록</td>
+                        <td><a href="#none" class="download2">다운로드</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                
+              <div class="companyInfo">
+                <h4 class="titH41">특허 정보 조회</h4> 
+                <h5 class="titH51">특허청 조회 정보</h5>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>특허청 조회 정보 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="16%" />
+                      <col width="16%" />
+                      <col width="16%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">특허유형</th> 
+                        <th scope="col">출원 번호</th>
+                        <th scope="col">등록 상태</th> 
+                        <th scope="col">발명의 명칭</th> 
+                        <th scope="col">등록 일자</th> 
+                        <th scope="col">출원인</th> 
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">상표권</td> 
+                        <td>10-1234-1234567</td> 
+                        <td>등록</td> 
+                        <td>그래핀을 함유한 고강도 경량....</td> 
+                        <td>2023-10-14</td> 
+                        <td>(주)신한은행</td> 
+                      </tr>
+                      <tr>
+                        <td class="tit">상표권</td> 
+                        <td>10-1234-1234567</td> 
+                        <td>등록</td> 
+                        <td>그래핀을 함유한 고강도 경량....</td> 
+                        <td>2023-10-14</td> 
+                        <td>(주)신한은행</td> 
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                
+              <div class="companyInfo">
+                <h5 class="titH51">고객 직접 입력 정보</h5>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>특허청 조회 정보 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="16%" />
+                      <col width="16%" />
+                      <col width="16%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">특허유형</th> 
+                        <th scope="col">출원 번호</th>
+                        <th scope="col">등록 상태</th> 
+                        <th scope="col">발명의 명칭</th> 
+                        <th scope="col">등록 일자</th> 
+                        <th scope="col">출원인</th> 
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">상표권</td> 
+                        <td>10-1234-1234567</td> 
+                        <td>등록</td> 
+                        <td>그래핀을 함유한 고강도 경량....</td> 
+                        <td>2023-10-14</td> 
+                        <td>(주)신한은행</td> 
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+                
+              <div class="companyInfo">
+                <h4 class="titH42">재무상태표</h4>
+                <ul class="txtH42">
+                  <li>제4(당)기 2022년 1월 1일부터 2022년 12월 31까지</li>
+                  <li>제3(전)기 2021년 1월 1부터 2021년 12월 31까지</li>
+                  <li>제4(전전)기 2022년 1월 1일부터 2022년 12월 31까지</li>
+                </ul>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>재무상태표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead class="double2">
+                      <tr>
+                        <th scope="col" rowspan="2">계정과목</th> 
+                        <th scope="col">제4(당)기</th>
+                        <th scope="col">제3(당)기</th>
+                        <th scope="col">제2(당)기</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">금액</th>
+                        <th scope="col">금액</th>
+                        <th scope="col">금액</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">자산총계</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">부채총계</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">자본총계</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">매출채권</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">자본금</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">장기차입금</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">단기차입금</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">현금 및 현금성 자산</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">장기금융상품</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">단기금융상품</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="companyInfo">
+                <h4 class="titH42">손익계산서</h4>
+                <ul class="txtH42">
+                  <li>제3(당)기 2022년 1월 1일 부터 2022년 12월 31일 까지</li>
+                  <li>제2(전)기 2021년 1월 1일 부터 2021년 12월 31일 까지</li>
+                </ul>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>재무상태표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead class="double2">
+                      <tr>
+                        <th scope="col" rowspan="2">계정과목</th> 
+                        <th scope="col">제4(당)기</th>
+                        <th scope="col">제3(당)기</th>
+                        <th scope="col">제2(당)기</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">금액</th>
+                        <th scope="col">금액</th>
+                        <th scope="col">금액</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">매출액</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">영업이익</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">금융비용</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">이자비용</td> 
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                        <td class="num">140,000,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                
+              <div class="companyInfo">
+                <h4 class="titH42">매출처별 매출 세금계산서 합산표</h4>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>매출처별 매출 세금계산서 합산표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead >
+                      <tr>
+                        <th scope="col">자료명</th> 
+                        <th scope="col">등록 일자</th>
+                        <th scope="col">다운로드</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">매출 세금 계산서</td> 
+                        <td class="num">2023-08-10</td>
+                        <td class="num">
+                          <a href="#" class="download2">다운로드</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              
+              <div class="companyInfo">
+                <h4 class="titH42">매출처별 매입 세금계산서 합산표</h4>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>매출처별 매입 세금계산서 합산표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead >
+                      <tr>
+                        <th scope="col">자료명</th> 
+                        <th scope="col">등록 일자</th>
+                        <th scope="col">다운로드</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">매출 세금 계산서</td> 
+                        <td class="num">2023-08-10</td>
+                        <td class="num">
+                          <a href="#" class="download2">다운로드</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+                
+              <div class="companyInfo">
+                <h4 class="titH42">매출처별 매출 세금계산서 합산표</h4>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>매출처별 매출 세금계산서 합산표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead >
+                      <tr>
+                        <th scope="col">업체명</th> 
+                        <th scope="col">사업자등록번호</th>
+                        <th scope="col">거래 금액</th>
+                        <th scope="col">매출 비중</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">(주)신한은행</td> 
+                        <td>105-88-10201</td>
+                        <td>15,444,441</td>
+                        <td>35%</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">(주)신한은행</td> 
+                        <td>105-88-10201</td>
+                        <td>15,444,441</td>
+                        <td>35%</td>
+                      </tr>
+                      <tr>
+                        <td class="tit" colspan="2">기타</td> 
+                        <td>105-88-10201</td>
+                        <td>35%</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">합계</td> 
+                        <td>82,111,333</td>
+                        <td>100%</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+
+              
+              <div class="companyInfo">
+                <h4 class="titH42">매출처별 매입 세금계산서 합산표</h4>
+                <div class="table_wrap">
+                  <table class="bbs_list">
+                    <caption>매출처별 매입 세금계산서 합산표 </caption>
+                    <colgroup>
+                      <col />
+                      <col width="25%" />
+                      <col width="25%" />
+                    </colgroup>
+                    <thead >
+                      <tr>
+                        <th scope="col">업체명</th> 
+                        <th scope="col">사업자등록번호</th>
+                        <th scope="col">거래 금액</th>
+                        <th scope="col">매출 비중</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit">(주)신한은행</td> 
+                        <td>105-88-10201</td>
+                        <td>15,444,441</td>
+                        <td>35%</td>
+                      </tr>
+                      <tr>
+                        <td class="tit">(주)신한은행</td> 
+                        <td>105-88-10201</td>
+                        <td>15,444,441</td>
+                        <td>35%</td>
+                      </tr>
+                      <tr>
+                        <td class="tit" colspan="2">기타</td> 
+                        <td>105-88-10201</td>
+                        <td>35%</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">합계</td> 
+                        <td>82,111,333</td>
+                        <td>100%</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+
+
             </div>
 
             
@@ -472,6 +925,83 @@
             <div class="companytabContentPrint" id="loan_company_cont_4" role="tabpanel" tabindex="0">
               <h3 class="hide">고객 제출 서류</h3>
               
+              <ul class="innerTab tabScript" role="tablist">
+                <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="loan_company_cont_5_1">법인이 추가로 등록한 서류</button></li>
+                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_5_2">법인에게 요청한 추가 서류 </button></li>
+              </ul>
+              
+              <div class="companytabContentPrint" id="loan_company_cont_5_1" role="tabpanel" tabindex="0">
+                <h4 class="hide">법인이 추가로 등록한 서류</h4>
+                <div class="companyInfo">
+                  <h4 class="titH42">고객이 제출한 서류</h4>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>고객이 제출한 서류</caption>
+                      <colgroup>
+                        <col />
+                        <col width="25%" />
+                        <col width="25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">서류명</th> 
+                          <th scope="col">제풀일</th>
+                          <th scope="col">다운로드</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tit">(주)신한은행</td> 
+                          <td>105-88-10201</td>
+                          <td><a href="#" class="download2">다운로드</a></td>
+                        </tr>
+                        <tr>
+                          <td class="tit">(주)신한은행</td> 
+                          <td>105-88-10201</td>
+                          <td><a href="#" class="download2">다운로드</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="companytabContentPrint" id="loan_company_cont_5_2" role="tabpanel" tabindex="0">
+                <h4 class="hide">법인에게 요청한 추가 서류</h4>
+                <div class="companyInfo">
+                  <h4 class="titH42">추가 요청한 서류</h4>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>추가 요청한 서류</caption>
+                      <colgroup>
+                        <col />
+                        <col width="25%" />
+                        <col width="25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">서류명</th> 
+                          <th scope="col">제풀일</th>
+                          <th scope="col">다운로드</th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tit">(주)신한은행</td> 
+                          <td>105-88-10201</td>
+                          <td><a href="#" class="download2">다운로드</a></td>
+                        </tr>
+                        <tr>
+                          <td class="tit">(주)신한은행</td> 
+                          <td>105-88-10201</td>
+                          <td><a href="#" class="download2">다운로드</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
             </div>
             
             <div class="table_bt">

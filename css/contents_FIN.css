@@ -43,7 +43,7 @@ div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0; 
 div.login_form.change_pw .formBox  { padding-left:150px; }
 div.login_form.change_pw .loginBtn  { margin-top:40px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:70px; width:50%; top:0; font-size:24px; border-bottom:1px solid #ddd;   }
-ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #5B7DDC; border-radius: 5px;}
+ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:2px solid #EAFAEB; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
 ul.loginTab li div.login_form  { position:absolute; left:0; top:110px; width:530px;  display:none; margin:0px 0 0;   }
@@ -66,6 +66,21 @@ ul.loginTab li #cont_certificate_login .formRow { width:100%; }
 /* 메인 */
 .wrap.main      {}
 .main header::after { height:760px; }
+.center header::after { height:480px; }
+.center .container    {padding-top:0; }
+.center .container .main_myInfo {padding:60px 0; }
+.center .searchControlBox     {background:#fff; box-shadow: 0px 3px 8px 0px #ECF0F4; margin-bottom:40px; }
+
+
+.center .searchControlBox .searchBtns { width:190px; flex-direction: column; }
+.center .searchControlBox .searchBtns button { width:190px; padding:0 10px; text-align: center; }
+.center .searchControlBox .dateTab          {height:64px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row;}
+.center .searchControlBox .dateTab button    {border:0; width:130px; height:64px; border-radius: 8px; margin:-1px 0 0 -1px;}
+.center .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
+.center .searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
+.center .searchControlBox select {min-width:210px; }
+.center .center_organ label {min-width:130px; }
+.center .center_organ select {min-width:330px; }
 
 .main_visual_logout     { padding:40px 0 105px; width:1270px; margin:0 auto; }
 .main_visual_logout .txtBox   { padding:53px 0 23px; font-size:40px; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
@@ -123,7 +138,7 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 
 section.main_dashboard       {}
 .main_dashboard .mng_btns           { padding:140px 0 40px; text-align: right;}
-.main_dashboard ul.dashboardWrap    { display:flex; flex-wrap: wrap; gap:20px; }
+.main_dashboard ul.dashboardWrap    { display:flex; flex-wrap: wrap; gap:20px; padding-top:40px;  }
 .main_dashboard ul.dashboardWrap li.items    { width:335px; height:360px; border:1px solid #ddd; border-radius:16px; text-align: center; }
 .main_dashboard ul.dashboardWrap li.items strong.tit    { display:block; font-size:24px; color:#069B66; padding:20px 0 0;  }
 .main_dashboard ul.dashboardWrap li.items .dash_data    { display:flex; height:180px; flex-direction: column; align-items: center; }
@@ -131,6 +146,8 @@ section.main_dashboard       {}
 .main_dashboard ul.dashboardWrap li.items::before   { content:""; display:block; height:124px; background:url(../images/FIN/main/ico_84_01.png) no-repeat 50% 100%;  }
 .main_dashboard ul.dashboardWrap li.items .barChart   { width: 215px; margin: 25px 0 0; }
 .main_dashboard ul.dashboardWrap li.items .barChart + span.dataSize   { margin:20px 0 auto; }
+.main_dashboard ul.dashboardWrap li.box    { width:335px; height:360px; border:1px solid #ddd; border-radius:16px; text-align: center; }
+.main_dashboard ul.dashboardWrap li.wid50   {width:calc(50% - 10px); }
 
 .main_dashboard ul.dashboardWrap li.items.type_F04::before   {}
 
