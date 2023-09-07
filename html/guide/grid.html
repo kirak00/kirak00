@@ -144,6 +144,140 @@
           });
         });
       </script>
+
+      <h1 class="c-h1">Grid headerGroup (방법1)</h1>
+      <div id="jsGrid3" class="bbs"></div>
+      <div id="externalPager3" class="external-pager"></div>
+          
+      <script>
+        $(function() {
+          var clients = [
+            { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "Name2": "심사전", 
+              "Name3": "askldjfn", 
+              "Name4": "1억 2000만원 <br>~ 2억", 
+              "Name5": "서울", 
+              "Name6": "건설", 
+              "Name7": "AAA+", 
+            },
+            { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "Name2": "심사전", 
+              "Name3": "askldjfn", 
+              "Name4": "1억 2000만원 <br>~ 2억", 
+              "Name5": "서울", 
+              "Name6": "건설", 
+              "Name7": "AAA+", 
+            },
+          ];
+
+
+          $("#jsGrid3").jsGrid({
+            data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+            headerRowRenderer: function () { //
+              var $result = $("<tr>").height(0)
+                .append($("<th>").width(200))
+                .append($("<th>").width(80))
+                .append($("<th>").width(120))  
+                .append($("<th>").width(140))
+                .append($("<th>").width(200))
+                .append($("<th>").width(200))
+                .append($("<th>").width(120));
+              $result = $result.add($("<tr class='jsgrid-header-row'>")
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
+                var $tr = $("<tr class='jsgrid-header-row'>");   
+                var grid = this;
+                grid._eachField(function(field, index) {
+                    if (index>2 && index<7) {
+                      var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+                    } 
+                });
+                return $result.add($tr);
+            },
+            fields: [
+              { width: 200, name: "Name1", title: "관심대출", type: "text",  },
+              { width: 80, name: "Name2", title: "상태", type: "text",  },
+              { width: 120, name: "Name3", title: "법인명", type: "text",  },
+              { width: 140, name: "Name4", title: "희망 신청 금액", type: "text",  },
+              { width: 200, name: "Name5", title: "지역", type: "text",  },
+              { width: 200, name: "Name6", title: "업종", type: "text",  },
+              { width: 120, name: "Name7", title: "CRETOP 등급", type: "text",  },
+            ],
+            
+            pagerContainer: "#externalPager3",
+
+          });
+        });
+      </script>
+
+      <h1 class="c-h1">Grid headerGroup (방법2)</h1>
+      <div id="jsGrid3_1" class="bbs"></div>
+      <div id="externalPager3_1" class="external-pager"></div>
+          
+      <script>
+        $(function() {
+          var clients = [
+            { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "Name2": "심사전", 
+              "Name3": "askldjfn", 
+              "Name4": "1억 2000만원 <br>~ 2억", 
+              "Name5": "서울", 
+              "Name6": "건설", 
+              "Name7": "AAA+", 
+            },
+            { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+              "Name2": "심사전", 
+              "Name3": "askldjfn", 
+              "Name4": "1억 2000만원 <br>~ 2억", 
+              "Name5": "서울", 
+              "Name6": "건설", 
+              "Name7": "AAA+", 
+            },
+          ];
+
+
+          $("#jsGrid3_1").jsGrid({
+            data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+            headerRowRenderer: function () { //
+              var $result = $("<tr>").height(0)
+                .append($("<th>").width(200))
+                .append($("<th>").width(80))
+                .append($("<th>").width(120))  
+                .append($("<th>").width(140))
+                .append($("<th>").width(200))
+                .append($("<th>").width(200))
+                .append($("<th>").width(120));
+              $result = $result.add($("<tr class='jsgrid-header-row'>")
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
+                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
+              $result = $result.add($("<tr class='jsgrid-header-row'>")
+                .append($("<th class='jsgrid-header-cell'>").text("희망 신청 금액"))
+                .append($("<th class='jsgrid-header-cell'>").text("지역"))
+                .append($("<th class='jsgrid-header-cell'>").text("업종"))
+                .append($("<th class='jsgrid-header-cell'>").text("CRETOP 등급")));
+              return $result;
+            },
+            fields: [
+              { width: 200, name: "Name1", title: "관심대출", type: "text",  },
+              { width: 80, name: "Name2", title: "상태", type: "text",  },
+              { width: 120, name: "Name3", title: "법인명", type: "text",  },
+              { width: 140, name: "Name4", title: "희망 신청 금액", type: "text",  },
+              { width: 200, name: "Name5", title: "지역", type: "text",  },
+              { width: 200, name: "Name6", title: "업종", type: "text",  },
+              { width: 120, name: "Name7", title: "CRETOP 등급", type: "text",  },
+            ],
+            
+            pagerContainer: "#externalPager3_1",
+
+          });
+        });
+      </script>
 <style>
   
 
