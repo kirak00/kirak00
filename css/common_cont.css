@@ -449,7 +449,7 @@ select.wid430 { min-width: 430px;}
 .formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
 .formSet { display: flex; gap: 10px;}
 .formVertical .radio { height: auto; padding-top: 0;}
-.formVertical .radio ~ .radio { margin-left: 0;}
+.formVertical > .radio  { margin-left: 0;}
 .formVertical .checkbox ~ .checkbox { margin-left: 0;}
 .formVertical .checkbox + .formRow { margin-top: -10px;}
 .formRow + .formAdd { margin-top: 10px; }
@@ -457,6 +457,11 @@ select.wid430 { min-width: 430px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
 .formRow.mt30 { margin-top: 30px; }
+.formVertical .label + .formRow { margin-top: -10px;}
+
+.formSurvey { padding-top: 15px}
+.formSurvey .label { margin-bottom: 10px; font-weight: 700;}
+.formSurvey .formRow:not(:last-child) { margin-bottom: 30px;}
 
 /* control group */
 .bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #E5EDFB; border-radius: 16px; display:flex; gap:20px; }
@@ -859,6 +864,7 @@ table { width: 100%;}
 .detailCont .viewNolineTable th:first-child { padding-left: 60px; }
 
 /* 폼 테이블 */
+.bgGray .formListTable { margin-top: 60px}
 .formListTable { margin-top: 40px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
@@ -875,15 +881,14 @@ table { width: 100%;}
 .formListTable .btnSuccess { height: 64px; padding: 0 50px; line-height: 64px;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
-.formListTable .radio { padding-top: 15px;}
-.formListTable .radioBtn { padding-top: 12px;}
 
-td .formGrayBox { margin: 10px 0;}
+
+td .formGrayBox { margin: 20px 0 0;}
 td .formListTable { margin-top: 25px;}
-.formGrayBox { padding: 40px; background: #F4F6F8; border-radius: 16px;}
+.formGrayBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
-.formGrayBox .list:not(:first-child) { margin-top: 60px; padding-top: 60px; border-top: 1px solid #ddd;}
+.formGrayBox .list:not(:first-child) { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
 .addControl { display: flex; justify-content: space-between; align-items: center;}
 
 /* 텍스트 테이블 */
@@ -895,6 +900,8 @@ td .formListTable { margin-top: 25px;}
 .textTable tr:first-child th, .textTable tr:first-child td { padding-top: 0px; }
 .textTable tr:last-child th, .textTable tr:last-child td { padding-bottom: 0px; }
 .textTable .sub { color: #888; font-size: 18px; font-weight: 400;}
+
+.textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 
 /* 이중 테이블 */
 .textTable .bbs_list th,
@@ -914,9 +921,10 @@ td .formListTable { margin-top: 25px;}
 
 
 .formMdTable .formRow { width: 578px;}
-.formMdTable .formRow.fullType { width: 100%;}
+.formMdTable .formRow.fullType { width: 100%; max-width: 830px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
+.formMdTable .input.wid240 { width: 240px;}
 .formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
 .formMdTable .inputBizNumber .input { width: auto;}
 .formMdTable .formGrayBox .formRow { width: 100%;}
@@ -1093,7 +1101,7 @@ th{word-break: break-all;}
 **********  content  **********
 *****************************/
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
-.pageTop.textCenter { margin-top: 60px;}
+.pageTop.textCenter { margin-top: 80px;}
 .pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; bottom: 0px; right: 0; }
 .pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
@@ -1131,7 +1139,7 @@ ul.evtTab li:hover button,
 ul.evtTab li button:focus   {background:#069B66; color:#fff;  }
 
 /* 탭 안의탭 */ 
-ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 60px auto 0; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
+ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 40px auto 0; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
 ul.innerTab li button   {display:block; width:100%; height:64px; padding:0 32px; border-radius: 32px; text-align: center; font-size:20px; background:#fff; border:1px solid #069B66; color: #069B66; }
 ul.innerTab li.on button   {background:#069B66; color:#fff; font-weight: 700; border:1px solid #069B66;  }
 ul.innerTab li:hover button,
@@ -1408,7 +1416,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .accordion .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
 .suggestPg .guideBox { margin: 60px 60px 0; padding: 40px 60px 60px;}
 .suggestPg .accordion .viewNolineTable .tableNoti { margin-top: 8px;}
-
+.suggestPg .accordion .formListTable .radio { padding-top: 15px;}
+.suggestPg .accordion .formListTable .radioBtn { padding-top: 12px;}
 .suggestPg .textTable th, 
 .suggestPg .textTable td { vertical-align: middle;}
 .suggestPg .accordion .titH4.hasLine { padding: 0;}
