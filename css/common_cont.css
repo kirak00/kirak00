@@ -652,25 +652,26 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 
 
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
+.main .container {padding-bottom:0px }
 .container.member {padding:160px 0 130px; }
 .container.hasBg { padding-bottom: 0;}
 .container.hasBg .bgGray { padding: 0 0 100px; overflow: hidden;}
 .bgGray { background: #FAFAFA; padding: 60px 0;}
 
-footer    {position:relative; z-index:1; background:rgba(244, 246, 248, 1) }
-footer::before    {content:""; position:absolute; width:100%; top:90px; border-top:1px solid #ddd}
+footer    {position:relative; z-index:1; background:#333 }
+footer::before    {content:""; position:absolute; width:100%; top:99px; border-top:1px solid #ddd}
 .footerWrap {width:1400px; margin:0 auto;}
 ul.footerLnk  {padding:40px 0 30px; overflow: hidden; }
 ul.footerLnk li  {float:left; }
-ul.footerLnk li a  {font-size:18px; }
+ul.footerLnk li a  {font-size:18px; color:#fff; }
 ul.footerLnk li::before  {content:"ㆍ";padding:0 14px; }
 ul.footerLnk li:first-child:before  {content:"";padding:0; }
-footer .copy    {overflow:hidden; padding:40px 0 ; }
+footer .copy    {overflow:hidden; padding:40px 0 ; color:#fff;  }
 footer .copy p    {float:left; padding:10px 0 0; }
 footer .copy p span {display:block; line-height:28px; font-size:16px;  }
 footer .copy .wa    {float:right; }
 
-.bgWrap     {background:#E5EDFB}
+.bgWrap     {background:#FAFAFA}
 
 section   {margin:0 auto; max-width: 1400px;}
 
@@ -714,7 +715,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
 .table_top .total     {float:left; }
-.table_top .total strong{color:#069B66; font-size:24px; }
+.table_top .total strong{color:#069B66; font-size:24px; vertical-align: -1px; }
 .table_top .tipTxt    {float:left; padding-top:20px; color:#555;    }
 .table_top .sortBox   {float:right;  }
 .table_top .sortBox select {margin-left:6px; }
@@ -918,7 +919,7 @@ td .formListTable { margin-top: 25px;}
 .bbs { width:100% !important; border: 1px solid #ddd; border-radius: 16px;}
 .bbs .jsgrid-grid-header,
 .bbs .jsgrid-grid-body   {overflow: auto;}
-.jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#F4FBF5;}
+.jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#EFF5EF;}
 .jsgrid-cell    {height:100px; font-size:20px;  }
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
@@ -949,15 +950,18 @@ th{word-break: break-all;}
 .jsgrid-cell,
 .jsgrid-header-cell {padding:0; }
 
+.jsgrid-header-sortable     {}
+.jsgrid-header-sortable:before { border-color: transparent transparent #069B66 transparent}
+.jsgrid-header-sortable:after  { border-color: #069B66 transparent transparent transparent}
 .jsgrid-header-sort:before { display: inline-block; float: none; margin-right: 10px; vertical-align: middle;}
-.jsgrid-header-sort-asc:before { border-color: transparent transparent #EAFAEB transparent}
-.jsgrid-header-sort-desc:before { border-color: #EAFAEB transparent transparent transparent}
+.jsgrid-header-sort-asc:before { border-color: transparent transparent #069B66 transparent}
+.jsgrid-header-sort-desc:before { border-color: #069B66 transparent transparent transparent}
 
 
 .jsgrid-cell .sub { color: #888;}
 .jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
-.jsgrid-grid-body tbody tr:last-child > .jsgrid-cell.left { text-align: left; padding-left:30px;}
+.jsgrid-grid-body tbody tr > .jsgrid-cell.left { text-align: left; padding-left:30px;}
 
 .noTableData  { margin: 60px 0; padding: 40px 0;}
 .noTableData .txt { margin-top: 30px; color: #555;}  
@@ -1150,9 +1154,10 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
 
 /* faq */ 
-dl.faqCont            {border-top:2px solid #EAFAEB; }
-dl.faqCont dt         {position:relative; padding:30px 40px; background:#F4F6F8; cursor: pointer; }
+dl.faqCont            {border-top:2px solid #069B66; }
+dl.faqCont dt         {position:relative; padding:30px 40px; background:#F6FBF7; cursor: pointer; }
 dl.faqCont dt ~ dt    {border-top:1px solid #ddd; }
+dl.faqCont dt.on      { }
 dl.faqCont dt label   {font-size:24px; font-weight: 700 }
 dl.faqCont dt label em   { margin-left:4px; vertical-align: 1px; }
 dl.faqCont dt label em.required   {color:#069B66; }
@@ -1316,10 +1321,10 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 
 
 /* tooltip */
-.tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer;   }
+.tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer; vertical-align: -11px;  }
 .tooltip_q.on     {}
-.tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-30px; background:#E5EDFB; border-radius: 16px; display:flex; white-space: nowrap; padding:30px;     }
-.tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:30px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
+.tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-200px;  padding:20px 30px;  font-size: 18px; color:#333; font-weight: 500; background:#EAFAEB; border-radius: 50px; display:flex; white-space: nowrap;    }
+.tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:200px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
 
 
 /****************************

@@ -183,7 +183,7 @@
         <section class=""> 
           <div class="list">
             <div class="btnWrap">
-              <button class="btnSky">대출 정보 수정</button>
+              <button class="btnSuccess">대출 정보 수정</button>
             </div>
           </div>
         </section>
@@ -319,7 +319,7 @@
                   
                   $("#main_grid_2").jsGrid({
                     data: clients,
-                    
+                    sorting : true,
                     fields: [
                       { name: "Name1", width: 200,  type: "text", title : "금융기관 명",  validate: "required", sorting: false,},
                       { name: "Name2", width: 200, type: "text", title : "필요 서류 안내",  validate: "required", css:"left", sorting: false, },
