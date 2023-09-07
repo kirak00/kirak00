@@ -75,7 +75,7 @@
 .notiTxt { color: #4C9DA2; font-weight: 400;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
-.formListTable .notiTxt.dkGreen { margin-top: 8px; }
+.formListTable .notiTxt { margin-top: 8px; }
 
 .tableNoti { margin-top: 20px; color: #4C9DA2; }
 .tableNoti::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px;  vertical-align: text-top;}
@@ -826,7 +826,7 @@ table { width: 100%;}
 
 
 /* 라인 NO */
-.viewNolineTable { padding-top: 20px}
+.titH4.hasLine + .viewNolineTable { padding-top: 60px}
 .viewNolineTable table { display: table; width: 100%;} 
 .viewNolineTable th, 
 .viewNolineTable td { padding: 22px 0; }
@@ -1201,6 +1201,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
 .bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
 .bbsDetailBox .titBox h3.tit  { font-size:24px; font-weight: 700; }
+.bbsDetailBox .titBox .badgeWhite { margin-right: 20px; padding: 2px 14px; border-radius: 30px; font-size: 20px;}
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
