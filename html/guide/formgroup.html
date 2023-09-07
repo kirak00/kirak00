@@ -6,8 +6,10 @@
     <script src="../../js/juqery-3.7.0.min.js"></script>
     
     <link href="../../js/lib/rangeDatepicker.css" rel="stylesheet">
+    <link href="../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
     <script src="../../js/lib/fecha.js"></script>
     <script src="../../js/lib/rangeDatepicker.js"></script>
+    <script src="../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="../../js/common.js"></script>
 
     <link rel="stylesheet" href="./guide.css" />
@@ -164,6 +166,23 @@
         <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
         <button type="button" class="btnCalendar rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
       </div>
+
+      <div>
+
+        <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01), CTRL + 방향키로 날짜 선택">
+        <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01), ctr + 방향키로 날짜 선택">
+      </div>
+      <script>
+        $( function() {
+          $( ".calendar" ).datepicker({
+            showOn: "button",
+            buttonImage: "images/calendar.gif",
+            buttonText: "달력입력",
+            buttonImageOnly: false,
+            dateFormat: "yy-mm-dd"
+          });
+        });
+      </script>
       <br/>
       <!-- <div class="dateControl">
         <input type="text" class="input" id="datepicker" value="" aria-label="시작 및 종료기간 선택"/>

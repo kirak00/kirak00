@@ -138,12 +138,14 @@ function tabScript(){
 
     if(tab[0].tagName.toLowerCase() == "button"){
       tab.each(function(i,o){
+        this.parent = $(this.parentNode)
         var cont = document.querySelector("#"+o.getAttribute("aria-controls"));
         liArr.push(o.parentNode)
         if(cont) contArr.push(cont)
       })
     }else if(tab[0].tagName.toLowerCase() == "a"){
       tab.each(function(i,o){
+        this.parent = $(this.parentNode)
         var cont = document.querySelector(o.getAttribute("href"));
         liArr.push(o.parentNode)
         if(cont) contArr.push(cont)
@@ -162,6 +164,7 @@ function tabScript(){
     }
 
     tab.click(function(){
+      if(this.parent.hasClass("disabled")) return false;
       
       if(tabCont.length == tab.length ){
         tabCont.hide().attr("aria-hidden", "true");
@@ -276,6 +279,7 @@ function alert_control(alertBody ,focusObj , btnObj){
   $("body").one("keydown",function(e){
     if(e.keyCode == 27){
       close(alertBody);
+      if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
     }
   })
 }

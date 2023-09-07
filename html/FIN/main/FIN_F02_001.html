@@ -178,16 +178,23 @@
             
           <ul class="dashboardWrap">
             <li class="box wid50">
-              <div style="width:100%; height:200px;" id="dashChart_1">
-                asdfasdf
+              <div class="chart_lineBox size_2">
+                <div class="titBox">
+                  <strong>월 건수 실적 변동 추이</strong>
+                  <div class="legendBg"></div>
+                </div>
+                <div class="chartBox" style="width:100%; height:280px;" id="dashChart_1"></div>
               </div>
               <script>
 
                 var myChart = echarts.init(document.getElementById('dashChart_1'));
                 var option = {
-                    title: {
-                      text: 'Stacked Area Chart'
-                    },
+                    // title: {
+                    //   text: '월 건수 실적 변동 추이',
+                    //   textStyle : {
+                    //     fontSize: '24px'
+                    //   },
+                    // },
                     tooltip: {
                       trigger: 'axis',
                       axisPointer: {
@@ -197,25 +204,35 @@
                         }
                       }
                     },
+                    
                     legend: {
-                      data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+                      data: ['제안 건수', '실행 건수'],
+                      right:'20px',
+                      icon : 'circle',
+                      textStyle : {
+                        fontSize: '16px',
+                        color : '#555'
+                      },
+                      itemStyle : {
+                        shadowColor:'#ddd'
+                      },
+
                     },
-                    // toolbox: {
-                    //   feature: {
-                    //     saveAsImage: {}
-                    //   }
-                    // },
+
                     grid: {
-                      left: '3%',
-                      right: '4%',
-                      bottom: '3%',
+                      left: '1%',
+                      right: '3%',
+                      bottom: '0%',
                       containLabel: true
                     },
                     xAxis: [
                       {
                         type: 'category',
                         boundaryGap: false,
-                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        axisLabel: {
+                          fontSize:16
+                        }
                       }
                     ],
                     yAxis: [
@@ -225,46 +242,50 @@
                     ],
                     series: [
                       {
-                        name: 'Email',
+                        name: '실행 건수',
                         type: 'line',
+                        symbol : "none",
+                        color: "#FE5050",
+                        lineStyle : {
+                          width:3,
+                        },
                         areaStyle: {
                           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                             {
                               offset: 0,
-                              color: 'rgba(58,77,233,0.8)'
+                              color: 'rgba(254, 80, 80, 0.15)'
                             },
                             {
                               offset: 1,
-                              color: 'rgba(58,77,233,0.3)'
+                              color: 'rgba(255, 124, 68, 0.00)'
                             }
                           ])
         
                         },
-                        emphasis: {
-                          focus: 'series'
-                        },
-                        data: [120, 132, 101, 134, 90, 230, 210]
+                        data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
                       },
                       {
-                        name: 'Union Ads',
+                        name: '제안 건수',
                         type: 'line',
+                        symbol : "none",
+                        color: "#069B66",
+                        lineStyle : {
+                          width:3,
+                        },
                         areaStyle: {
                           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                             {
                               offset: 0,
-                              color: 'rgba(213,72,120,0.8)'
+                              color: 'rgba(6, 155, 102, 0.15)'
                             },
                             {
                               offset: 1,
-                              color: 'rgba(213,72,120,0.3)'
+                              color: 'rgba(6, 155, 102, 0.00)'
                             }
                           ])
 
                         },
-                        emphasis: {
-                          focus: 'series'
-                        },
-                        data: [120, 182, 91, 34, 290, 330, 310]
+                        data: [120, 182, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310]
                       },
                     ]
                   };
@@ -273,9 +294,148 @@
               </script>
             </li>
             <li class="box wid50">
-              asdf
+              <div class="chart_lineBox">
+                <div class="titBox">
+                  <strong>월 건수 실적 변동 추이</strong>
+                  <div class="legendBg size_1"></div>
+                </div>
+                <div class="chartBox" style="width:100%; height:280px;" id="dashChart_2">
+                  asdfasdf
+                </div>
+              </div>
+              <script>
+
+                var myChart = echarts.init(document.getElementById('dashChart_2'));
+                var option = {
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'cross',
+                        label: {
+                          backgroundColor: '#6a7985'
+                        }
+                      }
+                    },
+                    
+                    legend: {
+                      data: ['실행 금액'],
+                      right:'20px',
+                      icon : 'circle',
+                      textStyle : {
+                        fontSize: '16px',
+                        color : '#555'
+                      },
+                      itemStyle : {
+                        shadowColor:'#ddd'
+                      },
+
+                    },
+
+                    grid: {
+                      left: '1%',
+                      right: '3%',
+                      bottom: '0%',
+                      containLabel: true
+                    },
+                    xAxis: [
+                      {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        axisLabel: {
+                          fontSize:16
+                        }
+                      }
+                    ],
+                    yAxis: [
+                      {
+                        type: 'value'
+                      }
+                    ],
+                    series: [
+                      {
+                        name: '실행 금액',
+                        type: 'line',
+                        symbol : "none",
+                        color: "#3295CD",
+                        lineStyle : {
+                          width:3,
+                        },
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(50, 149, 205, 0.15)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(50, 149, 205, 0.00)'
+                            }
+                          ])
+        
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                      },
+                    ]
+                  };
+                  myChart.setOption(option);
+
+              </script>
             </li>
           </ul>
+
+          <ul class="dashboardWrap">
+            <li class="items type_1">
+              <strong class="tit">실행 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>238</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_2">
+              <strong class="tit">실행 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li> 
+            <li class="items type_3">
+              <strong class="tit">제안 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_4">
+              <strong class="tit">제안 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li>
+          </ul>
+
+          
+          <ul class="dashboardWrap">
+            <li class="rankItem">
+              asdfasdf 
+            </li>
+          </ul>
+
+
+
         </div>
         <div id="mainDashboard_2" role="tabpanel" tabindex="0">
 2

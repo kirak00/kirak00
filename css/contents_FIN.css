@@ -181,6 +181,13 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .dashboard_setting table tbody tr:active { cursor: move;cursor: -moz-grabbing;  cursor: -webkit-grabbing;}
 tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
+/* dashboard */
+.chart_lineBox        {position:relative; padding:40px; overflow: hidden; }
+.chart_lineBox .titBox         { position:absolute; width:100%; top:31px; left:0; padding-left:40px; display:block; font-size:24px; font-weight: 700; text-align: left; }
+.chart_lineBox .legendBg        {position:absolute; top:0; right:40px; width:240px; height:40px; background:#F6FBF7; border-radius: 20px; }
+.chart_lineBox .legendBg.size_1  {width:140px; }
+.chart_lineBox .legendBg.size_2  {width:240px; }
+.chart_lineBox .chartBox        {position:relative; z-index:10; }
 
 
 /* bbs_alert */
@@ -198,6 +205,15 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .setting_alert .formListTable   {}
 .setting_alert .formListTable select  { min-width:430px}
 .setting_alert .formListTable ~ .table_bt  { margin-top:45px; }
+
+
+/* 지점선택 팝업 */
+.office_select        {text-align: center; padding:40px 0 0; border-top:1px solid #ddd; margin-top:20px; }
+.office_select span        {color:#069B66; }
+.office_select strong      {display:block; padding:8px 0 0; font-size:24px; color:#069B66; font-weight: 700;        }
+.office_select p        {margin-top:40px; padding:40px 0 0; border-top:1px solid #ddd; }
+
+
 
 
 /* 진희 */

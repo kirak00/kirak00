@@ -120,7 +120,7 @@ button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-r
 button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
-button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #555; }
+button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
@@ -396,6 +396,8 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 
 
 .textCenter .input { width: 100%; text-align: center; }
+.fullFix  {width:100%; display:flex; gap:10px;}
+.fullFix select { flex:1 }
 .inputBizNumber .input { width: auto;}
 
 /* file */
@@ -453,13 +455,14 @@ select.wid430 { min-width: 430px;}
 
 
 .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
-.searchControlBox .searchBtns .btnSuccess {  width: auto; }
+.searchControlBox .searchBtns .btnSuccess {  width: auto; } 
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
-.searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 188px;}
+.searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 188px; }
+.searchControlBox .searchBtns .btnReset ~ .btnWhite { padding:0 30px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
 
-.searchControlItem {display: inline-flex; height: 64px; border-radius: 8px; overflow: hidden;}
+.searchControlItem {display: inline-flex; height: 64px; border-radius: 8px; overflow: hidden;} 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
@@ -1014,9 +1017,10 @@ th{word-break: break-all;}
   transition: .3s; opacity: 0; transform: translateY(-50px); 
 }
 
-.layerCont        { max-height: calc(100vh - 100px); overflow: auto; }
+.layerCont        { max-height: calc(100vh - 300px); overflow: auto; }
 
 .layerWrap .layerBody.wid870       {width:870px;  }
+.layerWrap .layerBody.wid800       {width:800px;  }
 .layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#EAFAEB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
@@ -1062,6 +1066,12 @@ th{word-break: break-all;}
 .pageTop ul.breadcrumb li a strong{color:#069B66; }
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
+
+
+
+.ui-datepicker button:focus {background:#fff}
+
+
 
 /****************************
 **********  tab  **********
