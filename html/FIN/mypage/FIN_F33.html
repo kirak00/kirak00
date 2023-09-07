@@ -43,18 +43,24 @@
             <div class="searchControlGroup">
               <div class="searchControlItem">
                 <label for="label_tit_1" class="label srOnly">기간선택</label>
-                <div class="rangeControl">
-                  <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
-                  <button type="button" class="btnCalendar rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
+                <div class="formRow">
+                  <div class="dateControl">
+                    <input type="text" class="input" value="" aria-label="시작 및 종료기간 선택"/>
+                    <button type="button" class="btnCalendar"><span class="srOnly">달력 팝업 열기</span></button>
+                  </div>
+                  <span class="bar">~</span>
+                  <div class="dateControl">
+                    <input type="text" class="input" value="" aria-label="시작 및 종료기간 선택"/>
+                    <button type="button" class="btnCalendar"><span class="srOnly">달력 팝업 열기</span></button>
+                  </div>
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="label_tit_1" class="label">대출 신청 번호 </label>
                 <div class="formRow">
-                  <input type="text" class="input wid300" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                  <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
                 </div>
               </div>
-
               <div class="searchControlItem">
                 <label id="selectLabelPay" class="label">대출 금액</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
@@ -67,18 +73,17 @@
                   </select>
                 </div>
               </div>
-
-              <div class="searchControlItem">
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem expand2">
                 <label for="selectLabelState" class="label">법인명</label>
                 <div class="formRow">
                   <input type="text" class="input wid240" id="selectLabelState" placeholder="법인명을 입력해 주세요">
                 </div>
               </div>
-             
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="selectLabelArea" class="label">용도</label>
                 <div class="formRow">
-                  
                   <select id="selectLabelArea">
                     <option>전체</option>
                     <option>셀렉트</option>
@@ -88,47 +93,45 @@
               <div class="searchControlItem">
                 <label for="selectLabelArea2" class="label">담보 유무</label>
                 <div class="formRow">
-                  
                   <select id="selectLabelArea2">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem expand">
                 <label for="selectLabelArea3" class="label">금리 유형</label>
                 <div class="formRow">
-                  
                   <select id="selectLabelArea3">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="selectLabelPatent" class="label">정산 여부</label>
                 <div class="formRow">
-                  
                   <select id="selectLabelPatent">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label id="selectLabelPay" class="label">지역</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
-                  
                   <select title="등급">
                     <option>전체</option>
                     <option>이하</option>
                   </select>
                 </div>
               </div>
-            </div>
-            <div class="searchBtns">
-              <button type="button" class="btnReset">초기화</button>
-              <button type="button" class="btnSuccess">조회</button>
+              <div class="searchBtns">
+                <button type="button" class="btnReset">초기화</button>
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
             </div>
           </div>
         </fieldset>

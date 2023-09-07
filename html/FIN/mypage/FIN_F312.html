@@ -41,7 +41,10 @@
       <div class="titBg flexBetween"><h3>(주)길동건설</h3><p class="sub">대출 신청 번호  S_230809_0001</p></div>
       <div class="divideCon">
         <div class="left">
-          <h4 class="titH3 hasLine">제안서 기본 정보 입력</h4>
+          <div class="titH3 hasLine">
+            <h4>제안서 기본 정보 입력</h4>
+            <p class="titLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p>
+          </div>
           <div class="formListTable">
             <table>
               <caption>제안서 기본 정보 입력</caption>
@@ -96,7 +99,7 @@
                   </th> 
                   <td>
                     <div class="dateControl">
-                      <input id="formLabel3" class="input" type="text" placeholder="" value="2023-10-24" title="선택된 날짜">
+                      <input id="formLabel4" class="input" type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
                       <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
                       까지 유효
                     </div>
@@ -138,7 +141,7 @@
                         </th> 
                         <td>
                           <div class="formRow">
-                            <select title="자금용도 선택">
+                            <select class="wid220" title="자금용도 선택">
                               <option>시설자금</option>
                               <option>셀렉트</option>
                             </select>
@@ -185,7 +188,7 @@
                         </th> 
                         <td>
                           <div class="formRow">
-                            <input class="input" type="text" name="" id="accLabel2" placeholder="" value="대출 금액을 입력해 주세요." />
+                            <input class="input wid400" type="text" name="" id="accLabel2" placeholder="" value="대출 금액을 입력해 주세요." />
                             <span class="unit">원</span>
                           </div>
                         </td>
@@ -197,7 +200,7 @@
                         <td>
                           <div class="formRow">
                             제안서 채택 후 약
-                            <select title="범위" id="accLabel3">
+                            <select class="wid100" title="범위" id="accLabel3">
                               <option>1</option>
                               <option>2</option>
                             </select>
@@ -222,11 +225,11 @@
                         </th> 
                         <td>
                           <div class="formRow" role="group" aria-labelledby="accLabel5">
-                            <select title="자금용도 선택">
-                              <option>시설자금</option>
+                            <select class="wid220" title="상환방식 선택">
+                              <option>기타</option>
                               <option>셀렉트</option>
                             </select>
-                            <input class="input" type="text" name="" id="accLabel1" placeholder="" value="공장의 신설, 매입 개보수" />
+                            <input class="input" type="text" name="" id="accLabel1" placeholder="기타 상환 방식을 입력해 주세요." value="" />
                           </div>
                         </td>
                       </tr>
@@ -235,28 +238,30 @@
                           <label for="" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리</label>
                         </th> 
                         <td>
-                          <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel"><label for="selectLabel1">변동</label></span>
+                          <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel" checked><label for="selectLabel1">변동</label></span>
                           <span class="radio radioBtn"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
-                          <div class="formRow" role="group" aria-labelledby="inpLabel6">
-                            <select title="기준금리 선택">
-                              <option value="기준금리">기준금리</option>
+                          <p class="notiTxt">대출 기간과 기준금리물 기간이 일치할 경우 고정으로 선택해 주세요.</p>
+                          <div class="formRow mt10" role="group" aria-labelledby="inpLabel6">
+                            <select class="wid 220" title="기준금리 선택">
+                              <option value="기준금리">금융채 1년</option>
                               <option value="옵션">옵션</option>
                             </select>
-                            <select title="금리기간 선택">
-                              <option value="금리기간">금리기간</option>
-                              <option value="옵션">옵션</option>
-                            </select>
-                            <input class="input innerTxt_1 wid114" type="text" placeholder="000" value="">
+                            <strong class="result mainGreen">3.50%</strong>
+                            <label for="inpLabelRate" class="label">가산금리</label>
+                            <input class="input innerTxt_1 wid114" id="inpLabelRate" type="text" placeholder="" value="0.50">
                             <span class="unit">%</span>
+                          </div>
+                          <div class="formRow">
+                            <input class="input wid340" type="text" name="" id="accLabel1" placeholder="" value="당일 기준 합산 금리 4.00%" readonly>
                           </div>
                         </td>
                       </tr>
                       <tr> 
                         <th scope="row">
-                          <label for="" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
                         </th> 
                         <td>
-                          <div class="formRow">
+                          <div class="formRow" >
                             <span class="radio">
                               <input type="radio" id="testRdoBank1" name="testRdoBank" value="">
                               <label for="testRdoBank1"><span></span>담보 없음</label>
@@ -266,19 +271,23 @@
                               <label for="testRdoBank2"><span></span>담보 있음</label>
                             </span>
                           </div>
-                          <div class="formAdd">
-                            <select title="담보종류 선택">
+                          <div class="formRow">
+                            <select class="wid180" title="담보종류 선택">
                               <option value="부동산">부동산</option>
                               <option value="옵션">옵션</option>
                             </select>
+                            <select class="wid240" title="담보종류 선택">
+                              <option value="부동산">부동산</option>
+                              <option value="옵션">옵션</option>
+                            </select>
+                          </div>
+                          <div class="formAdd">
                             <div class="formRow">
-                              <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
+                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
                               <button type="button" class="btnPlus"></button>
-                              <!-- <button type="button" class="btnMinus"></button> -->
                             </div>
                             <div class="formRow">
-                              <input id="inpRoute" class="input" type="text" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <!-- <button type="button" class="btnPlus"></button> -->
+                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
                               <button type="button" class="btnMinus"></button>
                             </div>
                           </div>
@@ -313,36 +322,45 @@
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row">사업자 번호</th> 
-                          <td>1개월 후취</td>
+                          <th scope="row">
+                            <label class="label" for="notiLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기<br/>및 방법</label>
+                          </th> 
+                          <td><textarea class="textarea autoHeight" id="notiLabel1">1개월 후 후취</textarea></td>
                         </tr>
                         <tr>
-                          <th scope="row">연체 금리</th> 
-                          <td>법정 최고 금리 20% 이율 적용</td>
+                          <th scope="row">
+                            <label class="label" for="notiLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>연체 금리</label>
+                          </th> 
+                          <td><textarea class="textarea autoHeight" id="notiLabel2">법정 최고 금리 20% 이율 적용</textarea></td>
                         </tr>
                         <tr>
-                          <th scope="row">중도 상환<br/>수수료</th> 
-                          <td>3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</td>
+                          <th scope="row">
+                            <label class="label" for="notiLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>중도 상환 수수료</label>
+                          </th> 
+                          <td><textarea class="textarea autoHeight" id="notiLabel3">3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</textarea></td>
                         </tr>
                         <tr>
-                          <th scope="row">대출시<br/>부대 비용</th> 
-                          <td>부대비용 대출금액 1% 부과 됩니다.</td>
+                          <th scope="row">
+                            <label class="label" for="notiLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 시 부대 비용</label>
+                          </th> 
+                          <td><textarea class="textarea autoHeight" id="notiLabel4">부대비용 대출금액 1% 부과 됩니다.</textarea></td>
                         </tr>
                         <tr>
-                          <th scope="row">금리 관련<br/>참고사항</th> 
-                          <td>2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+                          <th scope="row">
+                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>유의사항</label>
+                          </th> 
+                          <td><textarea class="textarea" id="notiLabel5">2023년 08월 자 기준으로 작성되었으며 예고 없이 변동될 수 있습니다.</textarea></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-                <div class="table_bt">
-                  <div class="btn_c">
-                    <button type="button" class="btnSuccess">대출 예상 상환 스케줄</button>
-                  </div>
-                </div>
+              
               </div>
             </div>
+          </div>
+          <div class="table_bt fullType">
+            <button type="button" class="btnGray">+제안 대출 추가</button>
           </div>
         </div>
         <div class="right">

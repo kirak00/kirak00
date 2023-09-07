@@ -26,6 +26,9 @@ $(function(){
   loginTab();
 
   if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
+
+  if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
+
 });
 
 
@@ -508,6 +511,7 @@ function accordion() {
       } else { //toggle type
         this.toggle(!this.open);
       }
+      if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
     }
     toggle(open) {
       if (open === this.open) {
@@ -548,3 +552,24 @@ $.fn.fileAttach = function() {
 		});
 	});
 };
+
+$.fn.calcTextareaHeight = function(e) {
+  console.log('!!')
+  $(".textarea.autoHeight").each(function (index, item) {
+    var _this = $(item);
+    _this.on({
+      keyup: function () {
+        if (_this.val().length > 0) {
+          let scrollHeight = _this.prop('scrollHeight');
+          _this.css("height", scrollHeight+4+"px");
+        } 
+      },
+    });
+    if (_this.val().length > 0) {
+      let scrollHeight = _this.prop('scrollHeight');
+      _this.css("height", scrollHeight+4+"px");
+    } 
+   
+  });
+
+}

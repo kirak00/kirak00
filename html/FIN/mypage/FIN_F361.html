@@ -28,11 +28,11 @@
   <div class="container mypage" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">희망 업체 기준 설정</h2>
+      <h2 class="pageTit">희망 업체 알림 설정</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><strong>희망 업체 기준 설정 </strong></a></li>
+          <li><a href="#none"><strong>희망 업체 알림 설정 </strong></a></li>
       </ul>
     </section> 
  
@@ -52,48 +52,66 @@
           <tbody>
             <tr>
               <th scope="row">
-                <label for="inpUsePurpose">자금 용도</label>
+                <label for="forLabel1">희망 신청 금액</label>
               </th>
-              <td>
+              <td role="group" aria-labelledby="forLabel1">
                 <div class="formRow">
-                  <select name="" id="inpUsePurpose" class="wid430">
-                    <option value="">자금 용도를 선택해 주세요.</option>
-                  </select>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label for="inpBizNum">희망 신청 금액</label>
-              </th>
-              <td role="group" aria-labelledby="inpBizNum">
-                <div class="formRow hasError">
-                  <input class="input wid82" type="text" placeholder="000" value="" >
+                  <input class="input wid82" type="text" placeholder="000" value="" title="금액을 억단위로 입력">
                   <span>억</span>
-                  <select title="" class="">
+                  <select title="정렬 선택" class="">
                     <option>이상</option>
                     <option>이하</option>
                   </select>
                 </div>
-                <p class="errorTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
+                <p class="notiTxt">법인회원 희망 신청 금액 중 최대 금액 기준입니다.</p>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="collateral_yn">담보 유무</label>
+                <label for="forLabel2">지역</label>
               </th>
               <td>
-                <select id="collateral_yn" class="wid430">
+                <select id="forLabel2" class="wid430">
+                  <option>지역을 선택해 주세요.</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="forLabel3">자금 용도</label>
+              </th>
+              <td>
+                <select id="forLabel3" class="wid430">
+                  <option>자금 용도를 선택해 주세요.</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="forLabel4">담보 유무</label>
+              </th>
+              <td>
+                <select id="forLabel4" class="wid430">
                   <option>담보 유무를 선택해 주세요.</option>
                 </select>
               </td>
             </tr>
             <tr>
               <th scope="row">
-                <label for="cretop_level">CRETOP 등급</label>
+                <label for="forLabel5">특허 보유 여부</label>
               </th>
               <td>
-                <div class="formRow" role="group" aria-labelledby="cretop_level">
+                <select id="forLabel5" class="wid430">
+                  <option>특허 보유 여부를 선택해 주세요.</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="forLabel6">CRETOP 등급</label>
+              </th>
+              <td>
+                <div class="formRow" role="group" aria-labelledby="forLabel6">
                   <select title="cretop 등급" class="wid430">
                     <option>CRETOP 등급을 선택해 주세요.</option>
                   </select>
@@ -102,6 +120,16 @@
                     <option>이하</option>
                   </select>
                 </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="forLabel7">알림 비희망 업체</label>
+              </th>
+              <td>
+                <select id="forLabel7" class="wid430">
+                  <option>체크 시 알림 받지 않음</option>
+                </select>
               </td>
             </tr>
           </tbody>

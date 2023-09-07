@@ -41,22 +41,22 @@
           <legend>게시물 검색</legend>
           <div class="searchControlBox">
             <div class="searchControlGroup">
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="label_tit_1" class="label">대출 신청 번호 </label>
                 <div class="formRow">
-                  <input type="text" class="input wid300" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                  <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="selectLabelState" class="label">법인명</label>
                 <div class="formRow">
-                  <input type="text" class="input wid240" id="selectLabelState" placeholder="법인명을 입력해 주세요">
+                  <input type="text" class="input" id="selectLabelState" placeholder="법인명을 입력해 주세요">
                 </div>
               </div>
-            </div>
-            <div class="searchBtns">
-              <button type="button" class="btnReset">초기화</button>
-              <button type="button" class="btnSuccess">조회</button>
+              <div class="searchBtns">
+                <button type="button" class="btnReset">초기화</button>
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -66,6 +66,10 @@
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
+            <select title="정렬 선택(등록일)">
+              <option>등록일 최신순</option>
+              <option>본부2</option>
+            </select>
             <select title="보기갯수 선택">
               <option>10개씩 보기</option>
               <option>본부2</option>
