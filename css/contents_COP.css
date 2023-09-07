@@ -90,7 +90,8 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .main header::after { height:760px; }
 
 .main_visual_logout     { padding:0px 0 60px; width:1270px; margin:0 auto; }
-.main_visual_logout .txtBox   { padding:0px 0 23px; font-size:40px; height:270px;   background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
+.main_visual_logout .txtBox   { padding:0px 0 23px; font-size:38px; font-weight: 700; height:270px;   background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
+.main_visual_logout .txtBox strong { font-size:52px; vertical-align: 0;  }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -138,9 +139,9 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_progress ol.status_tab { display:flex; gap:20px; margin-top:30px; margin-bottom:20px;  }
 .main_loan_progress ol.status_tab li { width:100%;  background:#fff; text-align: center; border:3px solid #fff; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius:16px; background:url(../images/COP/main/ico_80_log_process_01.png) no-repeat 50% 60px #fff; }
 .main_loan_progress ol.status_tab li a {display:block; padding-top:180px; height:350px; text-decoration: none;  }
-.main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 24px; font-weight: 700;  }
+.main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 24px; font-weight: 700;  } 
 .main_loan_progress ol.status_tab li strong {display:block; margin-top:10px; font-size: 30px; font-weight: 700;  }
-.main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #EAFAEB; }
+.main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
 .main_loan_progress ol.status_tab li.disabled { }
 .main_loan_progress ol.status_tab li.disabled em,
 .main_loan_progress ol.status_tab li.disabled strong {color:#888}
@@ -161,7 +162,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_cont.step_3 .list    {left:570px; }
 .main_loan_cont.step_4 .list    {left:855px; }
 .main_loan_cont.step_5 .list    {left:1130px; }
-.main_loan_cont .list::before   {content:""; position:absolute; left:50%; bottom:-1px; width:40px; height:32px; transform: translateX(-50%) rotate(180deg); background: url(../images/common/bul_polygon.png) no-repeat 50% 0; background-size:cover; } 
+.main_loan_cont .list::before   {content:""; position:absolute; left:50%; bottom:-1px; width:40px; height:32px; transform: translateX(-50%); background: url(../images/common/bul_polygon_main.png) no-repeat 50% 0; background-size:cover; } 
 .main_loan_cont .list .btnWrap  {text-align: center; }  
 .main_loan_cont .list .status   {}  
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:28px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
@@ -198,7 +199,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 /* 약관 */
 .content_terms    { margin-top:80px; }
 .content_terms .terms_type    { padding:40px 0 0;}
-.content_terms .terms_ment    { padding:40px 0 20px;}
+.content_terms .terms_ment    { padding:60px 0 20px;}
 
 .evtWinner      { margin:60px 0 0;  }
 .bbsSearch      { margin-bottom:40px; }
@@ -229,6 +230,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .joinStep li::before { content: ''; position: absolute; top: 23px; left: -50%; display: inline-block; width: 132px; height: 2px; background: #ddd;}
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #069B66; }
+.joinStep li.on .name { color:#333; font-weight: 700; }
 
 
 

@@ -115,9 +115,6 @@
               </div>
             </div>
           </div>
-          <div class="btnBox">
-            <button type="button" class="btnSky">대출 비교하기</button>
-          </div>
         </div>
       </section>
   
@@ -148,7 +145,7 @@
             </div>
           </div>
           <ol class="status_tab tabScript" role="tablist">
-            <li class="step_1 on">
+            <li class="step_1 on ">
               <a href="#main_loan_cont_1" role="tab" id="main_loan_tab_1" aria-selected="true" >
                 <em>01.</em>
                 <strong>대출 정보 등록</strong>
@@ -172,7 +169,7 @@
               <strong>금융기관 진행</strong>
               </a>
             </li>         
-            <li class="step_5 ">
+            <li class="step_5 disabled"><!-- disabled 추가하면 클릭 안됨 -->
               <a href="#main_loan_cont_5" class="disabled" role="tab" id="main_loan_tab_5">
                 <em>05.</em>
                 <strong>자금 조달 완료</strong>
@@ -186,7 +183,7 @@
         <section class=""> 
           <div class="list">
             <div class="btnWrap">
-              <button class="btnSky">대출 정보 수정</button>
+              <button class="btnSuccess">대출 정보 수정</button>
             </div>
           </div>
         </section>
@@ -322,7 +319,7 @@
                   
                   $("#main_grid_2").jsGrid({
                     data: clients,
-                    
+                    sorting : true,
                     fields: [
                       { name: "Name1", width: 200,  type: "text", title : "금융기관 명",  validate: "required", sorting: false,},
                       { name: "Name2", width: 200, type: "text", title : "필요 서류 안내",  validate: "required", css:"left", sorting: false, },
