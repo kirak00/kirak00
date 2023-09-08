@@ -204,6 +204,7 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 /* 약관 */
 .content_terms    { margin-top:80px; }
+.content_terms .titH3 { margin-top: 60px;}
 .content_terms .terms_type    { padding:10px 0 0;}
 .content_terms .terms_ment    { padding:30px 0 20px;}
 
