@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  
   
   <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+
   <script src="../../../js/juqery-3.7.0.min.js"></script>
-  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
   <script src="../../../js/lib/fecha.js"></script>
   <script src="../../../js/lib/rangeDatepicker.js"></script>
   <script src="../../../js/lib/echarts.min.js"></script>
@@ -136,8 +139,9 @@
                 </div>
 
                 <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
-                  <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
-                  <button type="button" class="btnCalendar rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
                 </div>
                 
 

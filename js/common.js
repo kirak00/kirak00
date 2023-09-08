@@ -30,6 +30,17 @@ $(function(){
   mainRankTab();
   if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
 
+
+  
+  $( ".calendar" ).datepicker({
+    showOn: "button",
+    buttonImage: "../../images/common/ico_24_calendar_primary.png",
+    buttonText: "달력입력",
+    buttonImageOnly: false,
+    dateFormat: "yy-mm-dd"
+  });
+
+  
 });
 
 
