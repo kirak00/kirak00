@@ -34,15 +34,16 @@
 **********  title  **********
 *****************************/
 .titH2 { font-size: 40px; font-weight: 700;}
-.titH3 { display: flex; justify-content: space-between; font-size: 30px; font-weight: 700; margin-top:60px;}
+.titH3 { display: flex; justify-content: space-between; align-items: center; min-height: 76px;font-size: 30px; font-weight: 700;}
+.titH3 h3 { font-size: inherit;}
 .titH4 { font-size: 24px; font-weight: 700;}
 .titH41 { font-size:24px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
 .titH42 { font-size:20px; font-weight: 700; }
 .titH43 { font-size:20px; margin-top:10px; }
 .titH5 { margin-bottom: 20px; font-size: 20px; font-weight: 700;}
 .titH51 { font-size: 20px; font-weight: 400; margin-top:40px; color:#333; }
-.titH3:first-child {margin-top: 80px; }
-.titH3.hasLine:first-child {margin-top: 0px; }
+
+
 .tableTit { font-size: 34px; font-size: 700; }
 
 .tableTit { font-size: 34px; font-size: 700; }
