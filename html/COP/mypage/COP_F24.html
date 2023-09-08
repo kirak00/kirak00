@@ -22,11 +22,11 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
-      <h2 class="pageTit">심사 요청 관리</h2>
+      <h2 class="pageTit">심사 중인 금융기관</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><strong>심사 요청 관리</strong></a></li>
+          <li><a href="#none"><strong>심사 중인 금융기관</strong></a></li>
       </ul>
     </section>
 
@@ -73,41 +73,25 @@
   $(function() {
   
   var clients = [
-    { "Name1": "농협은행",
+    { "Name1": "3건",
       "Name2": "2023-08-10", 
+      "Name3": "농협은행", 
+      "Name4": "2023-08-10", 
     },
-    { "Name1": "농협은행",
+    { "Name1": "3건",
       "Name2": "2023-08-10", 
+      "Name3": "농협은행", 
+      "Name4": "2023-08-10", 
     },
-    { "Name1": "농협은행",
+    { "Name1": "3건",
       "Name2": "2023-08-10", 
+      "Name3": "농협은행", 
+      "Name4": "2023-08-10", 
     },
-    { "Name1": "농협은행",
+    { "Name1": "3건",
       "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+      "Name3": "농협은행", 
+      "Name4": "2023-08-10", 
     },
   ];
   
@@ -116,8 +100,10 @@
     data: clients,
     noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
     fields: [
-      { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto" },
-      { name: "Name2", type: "text", title : "심사 요청일", width: 240},
+      { name: "Name1",  type: "text", title : "열람한 금융기간 건수", width: 400},
+      { name: "Name2", type: "text", title : "열람 날짜", width: 260},
+      { name: "Name2", type: "text", title : "심사 중인 금융기관명", width: 480},
+      { name: "Name2", type: "text", title : "심사 요청일", width: 200},
     ],
         
     pagerContainer: "#externalPager",
