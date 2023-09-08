@@ -39,7 +39,7 @@
 .titH41 { font-size:24px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
 .titH42 { font-size:20px; font-weight: 700; }
 .titH43 { font-size:20px; margin-top:10px; }
-.titH5 { font-size: 20px; font-weight: 700;}
+.titH5 { margin-bottom: 20px; font-size: 20px; font-weight: 700;}
 .titH51 { font-size: 20px; font-weight: 400; margin-top:40px; color:#333; }
 .titH3:first-child {margin-top: 80px; }
 .titH3.hasLine:first-child {margin-top: 0px; }
@@ -84,7 +84,7 @@
 .tableNoti { margin-top: 20px; color: #4C9DA2; }
 .tableNoti::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px;  vertical-align: text-top;}
 
-.notiBox { padding: 24px 40px; background: #F4F4F4; border-radius: 16px; color: #333; }
+.notiBox { padding: 24px 40px; background: #F6FBF7; border-radius: 16px; color: #333; }
 .notiBox .notiTxt { color: #333;}
 .notiBox .notiTxt::before { margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px;}
 .notiBox ~ .viewLineTable { margin-top: 20px; }
@@ -97,6 +97,9 @@
 .guideBox .notiTxt + .guideList { margin-top: 20px;}
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
 .layerCont .guidTxt { margin-top: 40px; font-size: 18px;}
+
+.guideBox .infoList { font-size: 18px;}
+.layerCont .guideBox .infoList { margin-top: 16px;}
 
 .guideBox .guideList { margin-top: 0;}
 .guideList { margin-top: 8px;}
@@ -783,9 +786,9 @@ table.bbs_list thead:has(.top) tr th { border-radius: 0;}
 table.bbs_list thead tr:last-child { border-bottom: 1px solid #ddd;}
 table.bbs_list td .sub { color: #888;}
 table.bbs_list .widFix { display: inline-block; width: 1000px; text-align: left;} 
-table.bbs_list th:first-child,
+table.bbs_list thead tr:only-child th:first-child,
 table.bbs_list td:first-child { padding-left: 30px;}
-table.bbs_list th:last-child,
+table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 30px;}
 table.bbs_list tfoot td {background:#EAFAEB; }
 
@@ -825,7 +828,6 @@ input[type=radio].starChk.starChk_5:checked ~ label               { background-i
 
 table .label { display: flex;}
 /* .tableBox { margin-top: 30px; padding: 30px 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;} */
-.textTable.boxType.pointTable { padding: 40px 60px; border: 1px solid #069B66}
 
 table { width: 100%;}
 .fixedTable { height: 600px; margin-top: 30px;  overflow: auto; border-radius: 16px; border: 1px solid #ddd;}
@@ -904,6 +906,8 @@ td .formListTable { margin-top: 25px;}
 
 /* 텍스트 테이블 */
 /* .tableBox .textTable { margin-top: 0;} */
+.textTable.boxType.pointTable { padding: 40px 60px; border: 1px solid #069B66}
+.textTable.hasLine { padding: 40px 60px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
 .textTable { margin-top: 20px;}
 .textTable + .notiTxt { margin-top: 20px; }
 .textTable table { table-layout: fixed;}
@@ -961,6 +965,8 @@ td .formListTable { margin-top: 25px;}
 .bbs .jsgrid-grid-body   {overflow: auto;}
 .jsgrid-header-row > .jsgrid-header-cell  {height:80px; font-size:20px; font-weight: 700; background:#EFF5EF;}
 .jsgrid-cell    {height:100px; font-size:20px;  }
+.jsgrid-cell .done { font-weight: 700;}
+.jsgrid-cell .deny { color: #888;}
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
 
@@ -1101,7 +1107,8 @@ th{word-break: break-all;}
 .layerWrap.typeAlert .layerBody       {width:610px;  }
 .layerWrap.typeAlert .layerBody .layerHead    {padding:60px 0 20px;  background:none;   }
 .layerWrap.typeAlert .layerBody .layerCont { text-align: center;}
-.layerWrap.typeAlert .layerBody .layerFoot { padding: 20px 40px;}
+.layerWrap.typeAlert .layerBody .layerFoot { padding: 20px 40px 0;}
+.layerWrap.typeAlert .layerBody .layerFoot.fullType { padding: 20px 40px;}
 
 
 .layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
@@ -1114,7 +1121,7 @@ th{word-break: break-all;}
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 80px;}
 .pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; line-height: 1; }
-.pageTop ul.breadcrumb     { position: absolute; bottom: 0px; right: 0; }
+.pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; }
 .pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
 .pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
 .pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:24px; height:24px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; vertical-align: middle; }
@@ -1399,7 +1406,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .left {width: 968px; float: left;}
 .suggestPg .right {width: 372px; float: right;}
 
-.suggestPg .titH3.hasLine { padding-left: 60px;}
+.suggestPg .titH3 { padding-left: 60px;}
 .suggestPg .titH3.hasLine + .viewNolineTable.wide { padding-top: 60px;}
 
 .suggestPg .viewNolineTable  { margin-top: 60px}
@@ -1415,23 +1422,27 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .accordionTrigger { display: flex; align-items: center; padding-right: 104px; padding-left: 60px; font-weight: 400; }
 .suggestPg .accordionTrigger .label { flex-shrink: 0; width: 200px; font-size: 24px; font-weight: 700;}
 .suggestPg .accordionTrigger .tit { font-size: 24px;; flex: 1;}
-.suggestPg .accordionPanel { margin: 0; padding: 40px 0 60px; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
+.suggestPg .accordionPanel { margin: 0; padding: 40px 60px 60px; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
 .suggestPg .accordion .viewNolineTable { margin-top: 0;}
 .suggestPg .accordion .formListTable { margin-top: 0;}
 .suggestPg .accordion .viewNolineTable th,
 .suggestPg .accordion .formListTable th { padding-right: 60px;}
-.suggestPg .accordion .viewNolineTable td:last-child,
-.suggestPg .accordion .formListTable td:last-child { padding-right: 60px;}
+.suggestPg .accordion .viewNolineTable th:first-child { padding-left: 0;}
+/* .suggestPg .accordion .viewNolineTable td:last-child,
+.suggestPg .accordion .formListTable td:last-child { padding-right: 60px;} */
 .suggestPg .accordion .table_wrap { margin-top: 0;}
 .suggestPg .accordion .viewNolineTable .bbs_list th,
 .suggestPg .accordion .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
-.suggestPg .guideBox { margin: 60px 60px 0; padding: 40px 60px 60px;}
+.suggestPg .notiBox { margin: 60px 0px 0; padding: 40px 60px 60px;}
 .suggestPg .accordion .viewNolineTable .tableNoti { margin-top: 8px;}
 .suggestPg .accordion .formListTable .radio { padding-top: 15px;}
 .suggestPg .accordion .formListTable .radioBtn { padding-top: 12px;}
 .suggestPg .textTable th, 
 .suggestPg .textTable td { vertical-align: middle;}
 .suggestPg .accordion .titH4.hasLine { padding: 0;}
+.suggestPg .titH5 { display: flex; align-items: center;}
+.suggestPg .titH5 .tit { margin-right: 60px;} 
+.suggestPg .titH5 .desc { font-weight: 400;} 
 
 .suggestBnr { display: flex; justify-content: center; margin: 0 0 50px;}
 .suggestBnr li { position: relative; padding: 0 45px 0 26px;} 
