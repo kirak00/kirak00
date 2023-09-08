@@ -20,7 +20,7 @@
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container hasBg" id="skip_content"  aria-label="콘텐츠">
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
       <h2 class="pageTit">회원 정보</h2>
@@ -247,6 +247,7 @@
           </table>
           <div class="addBtnSet">
             <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
+            <!-- <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button> -->
           </div>
         </div>
         <div class="formListTable formFullTable">
@@ -326,11 +327,22 @@
             <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
           </div>
         </div>
+        <script>
+          $(function(){
+            $(document).on("click", ".btnPlus", function() {
+              var $listblock = $('.formListTable').eq(0).clone();
+              $('.bizMemberInfo').append($listblock);
+            });
+            $(document).on("click", ".btnMinus", function() {
+              $(this).closest(".formListTable").detach();
+            });
+          });
+      </script>
       </section>
       <div class="table_bt">
         <div class="btn_c">
-          <button type="button" class="btnSuccess">수정</button>
-          <button type="button" class="btnGray">회원탈퇴</button>
+          <button type="button" class="btnSuccess">저장</button>
+          <button type="button" class="btnGray">취소</button>
         </div>
       </div>
     </div>

@@ -76,7 +76,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 /* 법인회원정보 */
 .bizMemberInfo .formListTable { position: relative}
 .bizMemberInfo .formListTable tr th ~ th { padding-left: 40px;}
-.bizMemberInfo .formListTable ~ .formListTable { margin-top: 25px; padding-top: 25px; border-top: 1px solid #ddd;}
+.bizMemberInfo .formListTable ~ .formListTable { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
 .bizMemberInfo .formListTable td { vertical-align: top;}
 .bizMemberInfo .formListTable .checkbox label { font-weight: 700;}
 .bizMemberInfo .addBtnSet { position: absolute; top: 15px; right: 0; column-gap: 10px;}
@@ -204,8 +204,8 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 /* 약관 */
 .content_terms    { margin-top:80px; }
-.content_terms .terms_type    { padding:40px 0 0;}
-.content_terms .terms_ment    { padding:60px 0 20px;}
+.content_terms .terms_type    { padding:10px 0 0;}
+.content_terms .terms_ment    { padding:30px 0 20px;}
 
 .evtWinner      { margin:60px 0 0;  }
 .bbsSearch      { margin-bottom:40px; }

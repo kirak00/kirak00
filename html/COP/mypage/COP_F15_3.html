@@ -20,7 +20,7 @@
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container hasBg" id="skip_content"  aria-label="콘텐츠">
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
       <h2 class="pageTit">대출 관리</h2>
@@ -33,112 +33,88 @@
       </ul>
     </section>
     <div class="tabLineWrap">
-      <ul class="tabLine tabScript" role="tablist">
-        <li><button type="button" role="tab" aria-selected="false">업체개요</button></li>
-        <li><button type="button" role="tab" aria-selected="false">경영진 인적 사항</button></li>
-        <li class="on"><button type="button" role="tab" aria-selected="true">주주 인적 사항</button></li>
-        <li><button type="button" role="tab" aria-selected="false">노사 관계 및 연혁</button></li>
-      </ul>
+      <div class="inner">
+        <ul class="tabLine tabScript" role="tablist">
+          <li class="on"><button type="button" role="tab" aria-selected="true">법인 기업 정보</button></li>
+          <li><button type="button" role="tab" aria-selected="false">희망 대출 정보</button></li>
+          <li><button type="button" role="tab" aria-selected="false">재무 현황</button></li>
+        </ul>
+      </div>
     </div>
     <div class="bgGray">
-      <section class="">
-        <p class="tableLabel">대출 신청 번호  S_20230809-0001</p>
-        <h3 class="titH5">업로드한 주주 명부</h3> 
-        <div class="table_wrap">
-          <table class="bbs_list">
-            <caption>주주 인적 사항</caption>
-            <colgroup>
-              <col width="280px">
-              <col />
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">등록일</th>
-                <th scope="col">주주 정보 파일명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2023-05-01</td>
-                <td>(주)모션아이 주주명부1.pdf</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="sectionBlock80">
-        <h3 class="titH5">직접 입력한 주주 정보</h3> 
-        <div class="tableBox">
-          <div class="textTable">
-            <table>
-              <caption>상장여부</caption>
+      <section>
+        <ul class="innerTab tabScript" role="tablist">
+          <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">업체개요</button></li>
+          <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">대표자 인적 사항</button></li>
+          <li class="on"><button type="button" role="tab" id="innerTab_3" aria-selected="true">경영진 인적 사항</button></li>
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 정보 인적 사항</button></li> 
+          <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 연혁</button></li> 
+          <li><button type="button" role="tab" id="innerTab_6" aria-selected="false">필요 서류 제출</button></li> 
+        </ul>  
+        <section class="sectionBlock80">
+          <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p>
+          <h3 class="titH5">경영진 인적 사항</h3> 
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>경영진 인적 사항</caption>
               <colgroup>
-                <col width="180px">
-                <col width="auto">
-                <col width="180px">
-                <col width="auto">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
               </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">성명</th>
+                  <th scope="col">직함</th>
+                  <th scope="col">회사와의 실질적 관계</th>
+                  <th scope="col">근속년수</th>
+                  <th scope="col">주요 경력</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <th scope="row">상장여부</th>
-                  <td>상장</td>
-                  <th scope="row">상장일</th>
-                  <td>2001-10-25</td>
+                  <td>홍길동</td>
+                  <td>회장</td>
+                  <td>주주(단독 30% 이상)</td>
+                  <td>21</td>
+                  <td>한국은행 부행장</td>
                 </tr>
                 <tr>
-                  <th scope="row">총 발행 주식</th>
-                  <td>5,000주</td>
-                  <th scope="row">주당 액면가</th>
-                  <td>20,000원</td>
+                  <td>홍길동</td>
+                  <td>회장</td>
+                  <td>주주(단독 30% 이상)</td>
+                  <td>21</td>
+                  <td>한국은행 부행장</td>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>회장</td>
+                  <td>주주(단독 30% 이상)</td>
+                  <td>21</td>
+                  <td>한국은행 부행장</td>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>회장</td>
+                  <td>주주(단독 30% 이상)</td>
+                  <td>21</td>
+                  <td>한국은행 부행장</td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
+        </section>
       </section>
-      <section class="sectionBlock80">
-        <h3 class="titH5">주주 정보</h3> 
-        <div class="table_wrap">
-          <table class="bbs_list">
-            <caption>주주 인적 사항</caption>
-            <colgroup>
-              <col width="280px">
-              <col width="310px">
-              <col width="360px">
-              <col />
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">주주명</th>
-                <th scope="col">관계</th>
-                <th scope="col">소유 주식수</th>
-                <th scope="col">지분율</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>홍길동</td>
-                <td>최대주주</td>
-                <td>2,500</td>
-                <td>50%</td>
-              </tr>
-              <tr>
-                <td>홍길동</td>
-                <td>최대주주</td>
-                <td>2,500</td>
-                <td>50%</td>
-              </tr>
-              <tr>
-                <td>홍길동</td>
-                <td>최대주주</td>
-                <td>2,500</td>
-                <td>50%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-        
+    </div>
+    <div class="table_bt">
+      <div class="btn_l">
+        <a href="#" class="btnWhite ico_prev">이전</a>
+      </div>
+      <div class="btn_r">
+        <a href="#" class="btnWhite ico_next">다음</a>
+      </div>
     </div>
     
 

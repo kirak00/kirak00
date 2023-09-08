@@ -26,7 +26,7 @@
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container hasBg" id="skip_content"  aria-label="콘텐츠">
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
       <h2 class="pageTit">회원 정보</h2>
@@ -40,32 +40,30 @@
     
     <section class="">
       <section class="">
-        <div class="tableBox pointTable">
-          <div class="textTable">
-            <table>
-              <caption>상장여부</caption>
-              <colgroup>
-                <col width="130px">
-                <col width="auto">
-                <col width="180px">
-                <col width="auto">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">아이디</th>
-                  <td>MG_0851013</td>
-                  <th scope="row">사업자등록번호</th>
-                  <td>123-45-67890</td>
-                </tr>
-                <tr>
-                  <th scope="row">대표번호</th>
-                  <td>02-355-7878</td>
-                  <th scope="row">희망 영업권 설정</th>
-                  <td>서울</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="textTable boxType pointTable">
+          <table>
+            <caption>상장여부</caption>
+            <colgroup>
+              <col width="130px">
+              <col width="auto">
+              <col width="180px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">아이디</th>
+                <td>MG_0851013</td>
+                <th scope="row">사업자등록번호</th>
+                <td>123-45-67890</td>
+              </tr>
+              <tr>
+                <th scope="row">대표번호</th>
+                <td>02-355-7878</td>
+                <th scope="row">희망 영업권 설정</th>
+                <td>서울</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
       <section class="sectionBlock60">
@@ -160,10 +158,10 @@
             </tbody>
           </table>
         </div>
-        <p class="tableNoti">※ 관리자 정보가 변경된 경우 중앙회 또는 본사로 문의 주시기 바랍니다</p>
+        <p class="tableNoti">관리자 정보가 변경된 경우 중앙회 또는 본사로 문의 주시기 바랍니다</p>
       </section>
       <section class="sectionBlock60">
-        <h3 class="tit45">담당자 정보</h3> 
+        <h3 class="tit45">금융 담당자 정보</h3> 
         <!-- <div class="table_wrap formFullType">
           <table class="bbs_list">
             <caption>담당자 정보</caption>
@@ -228,9 +226,9 @@
     editing: true,
     noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
     fields: [
-      { name: "Name1",  type: "text", title : "관리자", width: "33.3%" },
-      { name: "Name2", type: "text", title : "관리자 연락처", width: "33.3%"},
-      { name: "Name3", type: "text", title : "관리자 이메일", width: "33.3%"},
+      { name: "Name1",  type: "text", title : "금융 담당자", width: "33.3%" },
+      { name: "Name2", type: "text", title : "금융 담당자 연락처", width: "33.3%"},
+      { name: "Name3", type: "text", title : "금융 담당자 이메일", width: "33.3%"},
     ],
         
     pagerContainer: "#externalPager",
@@ -243,7 +241,7 @@
           </script>
           <div class="table_bt">
             <div class="btn_r">
-              <button type="button" class="btnSuccess">담당자 정보 수정</button>
+              <button type="button" class="btnSuccess">금융 담당자 정보 수정</button>
             </div>
           </div>
         </div>

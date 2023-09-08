@@ -20,7 +20,7 @@
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container hasBg" id="skip_content"  aria-label="콘텐츠">
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
       <h2 class="pageTit">회원 정보</h2>
@@ -38,29 +38,31 @@
           <li><button type="button" role="tab" aria-selected="false">담당자</button></li>
           <li class="on"><button type="button" role="tab" aria-selected="true">기업 정보</button></li>
         </ul>
-        <p class="update">업데이트   2023-08-10</p>
+        <p class="update">업데이트 &nbsp; 2023-08-10</p>
       </div>
     </div>
     <div class="bgGray">
       <section>
         <ul class="innerTab tabScript" role="tablist">
           <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">업체개요</button></li>
-          <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">경영진 인적 사항</button></li>
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">주주 인적 사항</button></li> 
-          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">특허정보 및 서류 등록</button></li> 
+          <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">대표자 인적 사항</button></li>
+          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">경영진 인적 사항</button></li>
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 정보 인적 사항</button></li> 
           <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 연혁</button></li> 
+          <li><button type="button" role="tab" id="innerTab_6" aria-selected="false">필요 서류 제출</button></li> 
         </ul>
-        <section class="">
-          <p class="tableLabel">대출 신청 번호  S_20230809-0001</p>
+        <section class="sectionBlock60">
+          <!-- <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p> -->
           <h3 class="titH5">대표자 인적 사항</h3> 
           <div class="table_wrap">
             <table class="bbs_list">
               <caption>대표자 인적 사항</caption>
               <colgroup>
-                <col width="25%">
-                <col width="25%">
-                <col width="25%">
-                <col width="25%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
               </colgroup>
               <thead>
                 <tr>
@@ -68,6 +70,7 @@
                   <th scope="col">직함</th>
                   <th scope="col">사업장 소유구분</th>
                   <th scope="col">동업계 종사년수</th>
+                  <th scope="col">자가 여부</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,77 +79,36 @@
                   <td>대표이사</td>
                   <td>본인</td>
                   <td>19</td>
+                  <td>있음</td>
+                </tr>
+                <tr>
+                  <td>고길동</td>
+                  <td>대표이사</td>
+                  <td>가족</td>
+                  <td>19</td>
+                  <td>있음</td>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>대표이사</td>
+                  <td>가족</td>
+                  <td>19</td>
+                  <td>있음</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
-        <section class="sectionBlock80">
-          <h3 class="titH5">경영진 현황</h3> 
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <caption>경영진 현황</caption>
-              <colgroup>
-                <col width="20%">
-                <col width="20%">
-                <col width="20%">
-                <col width="20%">
-                <col width="20%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">성명</th>
-                  <th scope="col">직함</th>
-                  <th scope="col">회사와의 실질적 관계</th>
-                  <th scope="col">근속년수</th>
-                  <th scope="col">주요 경력</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>홍길동</td>
-                  <td>회장</td>
-                  <td>주주(단독 30% 이상)</td>
-                  <td>21</td>
-                  <td>한국은행 부행장</td>
-                </tr>
-                <tr>
-                  <td>홍길동</td>
-                  <td>회장</td>
-                  <td>주주(단독 30% 이상)</td>
-                  <td>21</td>
-                  <td>한국은행 부행장</td>
-                </tr>
-                <tr>
-                  <td>홍길동</td>
-                  <td>회장</td>
-                  <td>주주(단독 30% 이상)</td>
-                  <td>21</td>
-                  <td>한국은행 부행장</td>
-                </tr>
-                <tr>
-                  <td>홍길동</td>
-                  <td>회장</td>
-                  <td>주주(단독 30% 이상)</td>
-                  <td>21</td>
-                  <td>한국은행 부행장</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-
         
-        <div class="table_bt">
-          <div class="btn_l">
-            <a href="#" class="btnWhite ico_prev">이전</a>
-          </div>
-          <div class="btn_r">
-            <a href="#" class="btnWhite ico_next">다음</a>
-          </div>
-        </div>
       </section>
+    </div>
+    <div class="table_bt">
+      <div class="btn_l">
+        <a href="#" class="btnWhite ico_prev">이전</a>
+      </div>
+      <div class="btn_r">
+        <a href="#" class="btnWhite ico_next">다음</a>
+      </div>
     </div>
     
 
