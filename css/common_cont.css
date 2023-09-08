@@ -492,7 +492,7 @@ select.wid430 { min-width: 430px;}
 .bbsSearch .searchBtns { width:auto; }
 
 
-.searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 115px 32px 40px; background: #EAFAEB; border-radius: 16px;}
+.searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 40px; background: #EAFAEB; border-radius: 16px;}
 .main .searchControlBox { background: #fff; }
 .searchControlBox.fullType { padding-right: 40px;}
 .searchControlBox.fullType .searchControlItem,
@@ -502,7 +502,7 @@ select.wid430 { min-width: 430px;}
 .searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;}
 
 
-.searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px; display:flex; gap:10px; }
+.searchControlBox .searchBtns { display:flex; gap:10px; }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
 .searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 188px; }
