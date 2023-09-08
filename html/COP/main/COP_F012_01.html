@@ -183,6 +183,7 @@
         <section class=""> 
           <div class="list">
             <div class="btnWrap">
+              <button class="btnWhite">대출 비교하기 추가</button>
               <button class="btnSuccess">대출 정보 수정</button>
             </div>
           </div>
@@ -253,7 +254,7 @@
               </div>
 
               <div id="main_grid_1" class="bbs"></div>
-              <div id="externalPager" class="external-pager"></div>
+              <div id="externalPager_1" class="external-pager"></div>
               <script>
                 /* jsgrid sample */
                 $(function() {
@@ -272,7 +273,7 @@
                       { name: "Name1",  type: "text", title : "심사중인 금융 회사", width: 280, validate: "required",  },
                       { name: "Name2", type: "text", title : "심사 요청일", width: 160, validate: "required",  },
                     ],
-                    pagerContainer: "#externalPager",
+                    pagerContainer: "#externalPager_1",
                     
                   });
                 });
@@ -295,7 +296,7 @@
               
               
               <div id="main_grid_2" class="bbs"></div>
-              <div id="externalPager" class="external-pager"></div>
+              <div id="externalPager_2" class="external-pager"></div>
               <script>
                 /* jsgrid sample */
                 $(function() {
@@ -303,14 +304,14 @@
                   var clients = [
                     { "Name1": '(주)신한은행',
                       "Name2": '종합소득세',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name3": '<div class="moneyTxt"><em>230,000,001원</em><span>(이억 삼천만원)</span></div>',
                       "Name4": '2023-07-25',
-                      "Name4": '2023-07-25',
+                      "Name4": '2023-07-24',
                       "Name6": '<strong>제출완료</strong>',
                     },
                     { "Name1": '(주)신한은행',
                       "Name2": '종합소득세',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name3": '<div class="moneyTxt"><em>230,000,002원</em><span>(이억 삼천만원)</span></div>',
                       "Name4": '2023-07-25',
                       "Name4": '2023-07-25',
                       "Name6": '<button type="button" class="btnWhite">제출하기</button>',
@@ -327,7 +328,7 @@
                       { name: "Name4", width: 200, type: "text", title : "제풀 완료일",  validate: "required",  },
                       { name: "Name6", width: 200, type: "text", title : "제안서 상세보기",  validate: "required", sorting: false, },
                     ],
-                    pagerContainer: "#externalPager",
+                    pagerContainer: "#externalPager_2",
                     
                   });
                 });
@@ -392,7 +393,7 @@
             <div class="tabContent" id="main_loan_list_3_1" role="tabpanel">
               <div class="titBox">
                 <strong>회원님에게 제안서를 제출한 금융회사 목록이에요.</strong>
-                <p>금융회사 제안서 정보 확인해보세요. </p>
+                <p>제안서 접구 마감일 이후 확인 할 수 있어요</p>
               </div>
               <div class="table_top">
                 <div class="total">
@@ -400,38 +401,77 @@
                 </div>
               </div>
 
+              <!-- 마스킹 있는경우 -->
               <div id="main_grid_3" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
-              <div id="externalPager" class="external-pager"></div>
+              <div id="externalPager_3" class="external-pager"></div>
               <script>
                 /* jsgrid sample */
                 $(function() {
-                  
                   var clients = [
-                    { "Name1": '(주)신한은행',
-                      "Name2": '7.1%',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '2023-07-25',
-                      "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
-                    },
-                    { "Name1": '(주)신한은행',
-                      "Name2": '7.1%',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '2023-07-25',
-                      "Name6": '<strong>승인 완료</strong>',
-                    },
+                    { "Name1": '(주)*********',
+                      "Name2": '*.*%',
+                      "Name3": '<div class="moneyTxt"><em>*********만원</em><span>(금 ******원)</span></div>',
+                      "Name4": '2023-07-24',
+                      "Name6": '공개 10일전',
+                    }, 
+                    { "Name1": '(주)*********',
+                      "Name2": '*.*%',
+                      "Name3": '<div class="moneyTxt"><em>*********만원</em><span>(금 ******원)</span></div>',
+                      "Name4": '2023-07-24',
+                      "Name6": '공개 10일전',
+                    }, 
                   ];
                   
                   $("#main_grid_3").jsGrid({
                     data: clients,
-                    
+                    sorting : true,
                     fields: [
                       { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
                       { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
                       { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
                       { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
-                      { name: "Name6", width: 200, type: "text", title : "제안서 상세보기",  validate: "required",  },
+                      { name: "Name6", width: 200, type: "text", title : "공개 유무",  validate: "required", sorting : false, },
                     ],
-                    pagerContainer: "#externalPager",
+                    pagerContainer: "#externalPager_3",
+                    
+                  });
+                });
+              </script>
+              
+
+              <!-- 마스킹 없는경우 -->
+              <div id="main_grid_3_1" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
+              <div id="externalPager3_1" class="external-pager"></div>
+              <script>
+                /* jsgrid sample */
+                $(function() {
+                  
+                  var clients = [
+                    { "Name1": '(주)신한은행1',
+                      "Name2": '7.1%',
+                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name4": '2023-07-24',
+                      "Name6": '<a href="#" class="lnk">제안서 보기</a>',
+                    }, 
+                    { "Name1": '(주)신한은행2',
+                      "Name2": '7.1%',
+                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name4": '2023-07-25',
+                      "Name6": '<a href="#" class="lnk">제안서 보기</a>',
+                    },
+                  ];
+                  
+                  $("#main_grid_3_1").jsGrid({
+                    data: clients,
+                    sorting : true,
+                    fields: [
+                      { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
+                      { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
+                      { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
+                      { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
+                      { name: "Name6", width: 200, type: "text", title : "공개 유무",  validate: "required", sorting : false, },
+                    ],
+                    pagerContainer: "#externalPager3_1",
                     
                   });
                 });
@@ -445,7 +485,7 @@
             <div class="tabContent" id="main_loan_list_3_2" role="tabpanel">
               <div class="titBox">
                 <strong>고객님이 선택한 제안서 목록이에요.</strong>
-                <p>선택된 금융회사와 연결되어 대출 심사가 진행중 입니다. </p>
+                <p>선택된 금융회사에서 연락을 못받으신 경우, 담당자와 통화해보세요. </p>
               </div>
               <div class="table_top">
                 <div class="total">
@@ -454,7 +494,7 @@
               </div>
 
               <div id="main_grid_44" class="bbs" caption="선택한 제안서 목록"></div>
-              <div id="externalPager" class="external-pager"></div>
+              <div id="externalPager_44" class="external-pager"></div>
               <script>
                 /* jsgrid sample */
                 $(function() {
@@ -464,27 +504,30 @@
                       "Name2": '7.1%',
                       "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
                       "Name4": '2023-07-25',
+                      "Name4": '2023-07-25',
                       "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
                     },
                     { "Name1": '(주)신한은행',
                       "Name2": '7.1%',
                       "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
                       "Name4": '2023-07-25',
-                      "Name6": '<strong>승인 완료</strong>',
+                      "Name4": '2023-07-25',
+                      "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
                     },
                   ];
                   
                   $("#main_grid_44").jsGrid({
                     data: clients,
-                    
+                    sorting : true,
                     fields: [
                       { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
                       { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                      { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
-                      { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
-                      { name: "Name6", width: 200, type: "text", title : "제안서 상세보기",  validate: "required",  },
+                      { name: "Name3", width: 200, type: "text", title : "제안 대출액 ",  validate: "required",  },
+                      { name: "Name4", width: 150, type: "text", title : "제안서 제출일",  validate: "required",  },
+                      { name: "Name4", width: 150, type: "text", title : "제안서 채택일",  validate: "required",  },
+                      { name: "Name6", width: 200, type: "text", title : "상세보기",  validate: "required", sorting : false,  },
                     ],
-                    pagerContainer: "#externalPager",
+                    pagerContainer: "#externalPager_44",
                     
                   });
                 });
@@ -515,31 +558,46 @@
                 </div>
               </div>
 
-              <div id="externalPager" class="external-pager"></div>
+              <div id="externalPager_4" class="external-pager"></div>
               <script>
                 /* jsgrid sample */
                 $(function() {
                   
                   var clients = [
-                    { "Name1": '(주)신한은행',
-                      "Name2": '7.1%',
+                    { 
+                      "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_1" name="CheckBox" title="선택" ><label for="chk_1_1"><span></span></label></span>',
+                      "Name2": '(주)신한은행',
                       "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
                       "Name4": '2023-07-25',
-                      "Name6": '<button type="button" class="btnWhite">승인</button> <button type="button" class="btnWhite">거절</button>',
-                      "Name6": '<span class="checkbox"><input type="checkbox" id="chk_1_1" name="CheckBox" title="선택" ><label for="chk_1_1"><span></span></label></span>',
+                      "Name5": '<button type="button" class="btnWhite">승인</button> <button type="button" class="btnLine">거절</button>',
+                    },
+                    { 
+                      "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_2" name="CheckBox" title="선택" ><label for="chk_1_2"><span></span></label></span>',
+                      "Name2": '(주)신한은행',
+                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name4": '2023-07-25',
+                      "Name5": '<span>거절</span>',
+                    },
+                    { 
+                      "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_3" name="CheckBox" title="선택" ><label for="chk_1_3"><span></span></label></span>',
+                      "Name2": '(주)신한은행',
+                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                      "Name4": '2023-07-25',
+                      "Name5": '<strong>승인완료</strong>',
                     },
                   ];
                   
                   $("#main_grid_4").jsGrid({
                     data: clients,
+                    sorting:true,
                     fields: [
-                      { name: "Name1", width: 200,  type: "text", title : '연장 요청 금융회사',  validate: "required",  },
-                      { name: "Name2", width: 200, type: "text", title : '요청 사유',  validate: "required",  },
-                      { name: "Name3", width: 200, type: "text", title : '연장 요청일',  validate: "required",  },
-                      { name: "Name4", width: 200, type: "text", title : '승인',  validate: "required",  },
-                      { name: "Name6", width: 200, type: "text", title : '전체선택 <span class="checkbox"><input type="checkbox" id="chk_all_1" name="CheckBox" title="전체선택" ><label for="chk_all_1"><span></span></label></span>' ,  validate: "required",  },
+                      { name: "Name1", width: 80, type: "text", title : '<span class="checkbox"><input type="checkbox" id="chk_all_1" name="CheckBox" title="전체선택" ><label for="chk_all_1"><span></span></label></span>' ,  validate: "required", sorting:false, },
+                      { name: "Name2", width: 300,  type: "text", title : '연장 요청 금융회사',  validate: "required", sorting:false, },
+                      { name: "Name3", width: 200, type: "text", title : '요청 사유',  validate: "required",  sorting:false,},
+                      { name: "Name4", width: 200, type: "text", title : '연장 요청일',  validate: "required",  },
+                      { name: "Name5", width: 200, type: "text", title : '승인',  validate: "required", css:"status",  sorting:false,},
                     ],
-                    pagerContainer: "#externalPager",
+                    pagerContainer: "#externalPager_4",
                     
                   });
                 });
@@ -573,7 +631,7 @@
               <!-- 채택된 제안서 -->
               <div class="titBox">
                 <strong>고객님이 선택한 제안서 목록이에요.</strong>
-                <p>선택된 금융회사와 연결되어 대출 심사가 진행중 입니다. </p>
+                <p>선택된 금융회사에서 연락을 못받으신 경우, 담당자와 통화해보세요. </p>
               </div>
               <div class="table_top">
                 <div class="total">
@@ -583,7 +641,7 @@
             </div>
 
             <div id="main_grid_5" class="bbs" caption="선택한 제안서 목록"></div>
-            <div id="externalPager" class="external-pager"></div>
+            <div id="externalPager_5" class="external-pager"></div>
             <script>
               /* jsgrid sample */
               $(function() {
@@ -593,13 +651,15 @@
                     "Name2": '7.1%',
                     "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
                     "Name4": '2023-07-25',
+                    "Name4": '2023-07-25',
                     "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
                   },
                   { "Name1": '(주)신한은행',
                     "Name2": '7.1%',
                     "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
                     "Name4": '2023-07-25',
-                    "Name6": '<strong>승인 완료</strong>',
+                    "Name4": '2023-07-25',
+                    "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
                   },
                 ];
                 
@@ -608,11 +668,12 @@
                   fields: [
                     { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
                     { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                    { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
+                    { name: "Name3", width: 200, type: "text", title : "제안 대출액",  validate: "required",  },
                     { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
-                    { name: "Name6", width: 200, type: "text", title : "제안서 상세보기",  validate: "required",  },
+                    { name: "Name4", width: 200, type: "text", title : "제안서 채택일",  validate: "required",  },
+                    { name: "Name6", width: 200, type: "text", title : "상세보기",  validate: "required",  },
                   ],
-                  pagerContainer: "#externalPager",
+                  pagerContainer: "#externalPager_5",
                   
                 });
               });

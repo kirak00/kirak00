@@ -26,32 +26,34 @@ $(function(){
   loginTab();
 
   if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
+
+
+  mainRankTab()
 });
 
 
 try {
-  
-jsGrid.setDefaults({
-  width: "100%",
-  filtering: false,
-  inserting: false,
-  editing: false,
-  sorting: false,
-  paging: true,
-  pageSize: 10,
-  pageButtonCount: 10,
-  pagerFormat: "{first} {prev} {pages} {next} {last}",
-  pagePrevText: "이전",
-  pageNextText: "다음",
-  pageFirstText: "처음으로",
-  pageLastText: "맨끝으로",
-  /*
-  
-                pageNavigatorNextText: "&#8230;",
-                pageNavigatorPrevText: "&#8230;",
+  jsGrid.setDefaults({
+    width: "100%",
+    filtering: false,
+    inserting: false,
+    editing: false,
+    sorting: false,
+    paging: true,
+    pageSize: 10,
+    pageButtonCount: 10,
+    pagerFormat: "{first} {prev} {pages} {next} {last}",
+    pagePrevText: "이전",
+    pageNextText: "다음",
+    pageFirstText: "처음으로",
+    pageLastText: "맨끝으로",
+    /*
+    
+                  pageNavigatorNextText: "&#8230;",
+                  pageNavigatorPrevText: "&#8230;",
 
-  */
-});
+    */
+  });
 
 } catch (error) {
   
@@ -65,6 +67,36 @@ $("#jsGrid").jsGrid({
 });
 
 */
+
+function mainRankTab(){
+  var mess =  $(".rankItem");
+  mess.each(function(i,o){
+    this.btns = $("button",this);
+    this.btnPrev = $("button.prev",this);
+    this.btnNext = $("button.next",this);
+    this.tit = $(".rankTitBox strong",this);
+    this.cont = $(".rankTabCont ol",this);
+    this.size = this.tit.length;
+    this.idx = this.size * 1000;
+    var This = this;
+    this.action = function(n){
+      This.cont.hide().removeClass("on").attr({"aria-hidden": 'true'});
+      This.cont.eq(n).addClass("on").show().attr({"aria-hidden": 'false'});
+      This.tit.hide().removeClass("on").attr({"aria-selected": 'false'});
+      This.tit.eq(n).addClass("on").show().attr({"aria-selected": 'true'});
+    }
+    this.btnPrev.on("click",function(){
+      This.idx--;
+      var n = This.idx%This.size;
+      This.action(n)
+    })
+    this.btnNext.on("click",function(){
+      This.idx++;
+      var n = This.idx%This.size;
+      This.action(n)
+    })
+  })
+}
 
 function loginTab(){
   var tab = $(".loginTab .loginTabBtn").each(function(n){this.n=n});
@@ -132,6 +164,8 @@ function tabScript(){
 
   $(".tabScript").each(function(i,o){
     var wrap = $(o);
+    var initChk = wrap.hasClass("noInit");
+    var initTab = $("#"+wrap.attr("initTab")); 
     var tab = wrap.find("[role=tab]").each(function(n){this.n=n});
     var contArr = [];
     var liArr = [];
@@ -155,17 +189,19 @@ function tabScript(){
     var menuWrap = $(liArr)
     var tabCont = $(contArr);
     
-    if(tabCont.length == tab.length ){
+    if(tabCont.length == tab.length && !initChk ){
       tabCont.hide().eq(0).show()
       if(menuWrap.length > 0){
         menuWrap.removeClass("on").eq(0).addClass("on")
       }
       tab.removeClass("on").eq(0).addClass("on")
+    }else if(initChk){
+      tabCont.hide()
     }
 
     tab.click(function(){
       if(this.parent.hasClass("disabled")) return false;
-      
+      initTab.hide()
       if(tabCont.length == tab.length ){
         tabCont.hide().attr("aria-hidden", "true");
         tabCont.eq(this.n).show().attr("aria-hidden", "false");

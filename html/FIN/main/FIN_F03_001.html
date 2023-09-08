@@ -112,8 +112,8 @@
             </div>
           </div>
         </div>
-        <div class="main_list_status tabScript noInit" initTab="main_list_contents_0">
-          <a href="#main_list_contents_1" class="item_1" role="tab" id="tab-1">
+        <div class="main_list_status tabScript">
+          <a href="#main_list_contents_1" class="item_1 on" role="tab" id="tab-1" aria-selected="true">
             <span class="icon"></span>
             <em class="tit">관심 대출 수</em>
             <span class="size">
@@ -131,15 +131,7 @@
           </a>
           <a href="#main_list_contents_3" class="item_3" role="tab" id="tab-3">
             <span class="icon"></span>
-            <em class="tit">제안서 제출 완료</em>
-            <span class="size">
-              <strong>238</strong>
-              <span>건</span>
-            </span>
-          </a>
-          <a href="#main_list_contents_4" class="item_4" role="tab" id="tab-4">
-            <span class="icon"></span>
-            <em class="tit">제안서 채택</em>
+            <em class="tit">예비 심사 완료</em>
             <span class="size">
               <strong>238</strong>
               <span>건</span>
@@ -147,90 +139,12 @@
           </a>
         </div>
  
-        <div class="main_list_contents" id="main_list_contents_0" aria-hidden="false">
-          <h3 class="hide">최근 한 달간 등록된 대출 신청 목록</h3>
-          <div class="list_top_box">
-            <div class="info_txt">
-              <strong> 최근 한 달간 등록된 대출 신청 목록입니다.</strong>
-                전체 목록은 대출 신청 업체 목록 페이지에서 확인할 수 있습니다.
-            </div>
-            <button type="button" class="btnSuccess">전체보기</button>
-          </div>
-
-          <div class="table_top">
-            <div class="total">
-              총 <strong>15</strong>건
-            </div>
-          </div>
-          <div id="jsGrid_0" class="bbs" caption="최근 한 달간 등록된 대출 신청 목록"></div>
-          <div id="externalPager_0" class="external-pager"></div>
-
-          <script>
-            $(function () {
-
-              var main_list_data_1 = [{
-                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "N2": '심사전',
-                  "N3": 'askldjfn',
-                  "N4": "1억 2000만원 <br>~ 2억",
-                  "N5": '서울',
-                  "N6": '건설',
-                  "N7": '운전자금',
-                  "N8": '유',
-                  "N9": '미보유',
-                  "N10": 'AAA+',
-                  "N11": '2023-08-15',
-                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
-                },
-                {
-                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-                  "N2": '심사전',
-                  "N3": '(주)****',
-                  "N4": "1억 2000만원 <br>~ 2억",
-                  "N5": '서울',
-                  "N6": '건설',
-                  "N7": '운전자금',
-                  "N8": '유',
-                  "N9": '미보유',
-                  "N10": 'AAA+',
-                  "N11": '2023-08-15',
-                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
-                },
-              ];
-
-
-              $("#jsGrid_0").jsGrid({
-                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
-                data: main_list_data_1,
-                fields: [
-                  {name:"N1", width: 100, title: "관심<br>대출", type: "text", },
-                  {name:"N2", width: 100, title: "상태", type: "text", },
-                  {name:"N3", width: 120, title: "법인명", type: "text", },
-                  {name:"N4", width: 140, title: "희망 신청 금액", type: "text", },
-                  {name:"N5", width: 70, title: "지역", type: "text",},
-                  {name:"N6", width: 70, title: "업종", type: "text",},
-                  {name:"N7", width: 70, title: "자금 용도", type: "text",},
-                  {name:"N8", width: 80, title: "담보<br>유무", type: "text",},
-                  {name:"N9", width: 120, title: "특허 보유 <br>여부", type: "text",},
-                  {name:"N10", width: 120, title: "CRETOP <br>등급", type: "text",},
-                  {name:"N11", width: 130, title: "제안서 마감일", type: "text",},
-                  {name:"N12", width: 200, title: "상세보기", type: "text", sorting: false}
-                ],
-
-                pagerContainer: "#externalPager_0",
-
-              });
-            });
-          </script>
-        </div>
-
-        
 
         <div role="tabpanel" class="main_list_contents" id="main_list_contents_1" aria-labelledby="tab-1" aria-hidden="false">
           <h3 class="hide">관심대출</h3>
           <div class="list_top_box">
             <div class="info_txt">
-              <strong> 관심 대출로 등록된 대출 신청 목록입니다.</strong>
+              <strong> 최근 한 달간 등록된 대출 신청 목록입니다.</strong>
               전체 목록은 대출 신청 업체 목록 페이지에서 확인할 수 있습니다.
             </div>
             <button type="button" class="btnSuccess">전체보기</button>
@@ -380,13 +294,13 @@
 
 
         <div role="tabpanel" class="main_list_contents" id="main_list_contents_3" aria-labelledby="tab-3" aria-hidden="true">
-          <h3 class="hide">제안서 제출 완료 목록</h3>
+          <h3 class="hide">예비 심사 완료</h3>
 
           
           <div class="list_top_box">
             <div class="info_txt">
-              <strong> 제안서 제출을 완료한 대출 목록입니다.</strong>
-              전체 목록은 제출 제안서 목록 페이지에서 확인할 수 있습니다.
+              <strong> 예비 심사를 완료한 대출 목록입니다.</strong>
+              전체 목록은 보증 예비 심사 목록 페이지에서 확인할 수 있습니다.
             </div>
             <button type="button" class="btnSuccess">전체보기</button>
           </div>
@@ -438,89 +352,6 @@
           </script>
 
 
-        </div>
-
-        
-        <div role="tabpanel" class="main_list_contents" id="main_list_contents_4" aria-labelledby="tab-4" aria-hidden="true">
-          <h3 class="hide">제안서 채택</h3>
-          
-          <div class="list_top_box">
-            <div class="info_txt">
-              <strong> 법인회사에게 채택된 제안서 목록입니다.</strong>
-              전체 목록은 제출 제안서 목록 페이지에서 확인할 수 있습니다.
-            </div>
-            <button type="button" class="btnSuccess">전체보기</button>
-          </div>
-
-          <div class="table_top">
-            <div class="total">
-              총 <strong>15</strong>건
-            </div>
-          </div>
-          <div id="jsGrid_4" class="bbs" caption="채택 제안서 목록"></div>
-          <div id="externalPager_4" class="external-pager"></div>
-
-          <script>
-            $(function () {
-
-              var main_list_data_4 = [
-                {
-                  "N1": '채택',
-                  "N2": 'askldjfn',
-                  "N3": "1억 2000만원 <br>~ 2억",
-                  "N4": '유',
-                  "N5": '24개월',
-                  "N6": '연 8.65%',
-                  "N7": '2023-06-25',
-                  "N8": '홍길동',
-                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
-                },
-                {
-                  "N1": '채택',
-                  "N2": 'askldjfn',
-                  "N3": "1억 2000만원 <br>~ 2억",
-                  "N4": '유',
-                  "N5": '24개월',
-                  "N6": '연 8.65%',
-                  "N7": '2023-06-25',
-                  "N8": '홍길동',
-                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
-                },
-                {
-                  "N1": '채택',
-                  "N2": 'askldjfn',
-                  "N3": "1억 2000만원 <br>~ 2억",
-                  "N4": '유',
-                  "N5": '24개월',
-                  "N6": '연 8.65%',
-                  "N7": '2023-06-25',
-                  "N8": '홍길동',
-                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
-                },
-              ];
-
-
-              $("#jsGrid_4").jsGrid({
-                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
-                data: main_list_data_4,
-                fields: [
-                  {name:"N1", width: 100, title: "상태",  type: "text", },
-                  {name:"N2", width: 120, title: "법인명", type: "text", },
-                  {name:"N3", width: 200, title: "대출 금액", type: "text", },
-                  {name:"N4", width: 80,  title: "담보 유무", type: "text",},
-                  {name:"N5", width: 120, title: "대출기간", type: "text",},
-                  {name:"N6", width: 120, title: "제안 금리<br>(평균)", type: "text",},
-                  {name:"N7", width: 120, title: "제출일", type: "text",},
-                  {name:"N8", width: 120, title: "제출자", type: "text",},
-                  {name:"N9", width: 200, title: "상세보기", type: "text", sorting: false}
-                ],
-
-                pagerContainer: "#externalPager_4",
-                
-
-              });
-            });
-          </script>
         </div>
 
 

@@ -89,8 +89,8 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 .main header::after { height:760px; }
 
-.main_visual_logout     { padding:0px 0 60px; width:1270px; margin:0 auto; }
-.main_visual_logout .txtBox   { padding:0px 0 23px; font-size:38px; font-weight: 700; height:270px;   background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 100%;      }
+.main_visual_logout     { padding:0px 0 0 40px ; width:100%; margin:0 auto; }
+.main_visual_logout .txtBox   { padding:0px 0 3px; font-size:38px; font-weight: 700; height:335px; background:url(../images/COP/banner_main.png) no-repeat right 40px top 0; }
 .main_visual_logout .txtBox strong { font-size:52px; vertical-align: 0;  }
 .main_visual_logout button   { margin-top:20px; }
 
@@ -103,7 +103,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .bnr_associate .tit strong    { display:block; font-size:34px; font-weight: 700;}
 .bnr_associate .tit p    {}
 
-.main_bnr_list          { display:flex; justify-content: space-between; margin-top:60px; }
+.main_bnr_list          { display:flex; justify-content: space-between; margin-top:60px; margin-bottom:100px;  }
 .main_bnr_list span.btnItem        { width:200px; height:70px; display:flex; border:1px solid #ddd; border-radius:8px; margin:auto 0;   }
 .main_bnr_list span.btnItem img    { margin:auto; }
 
@@ -111,6 +111,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 
 /*  메인 대출없는경우 */
+.main_loan_box      {height:730px;}
 ol.main_loan_info      {display:flex; gap:20px;   }
 ol.main_loan_info li   {width:100%; height:650px; padding-top:180px; font-size:24px; text-align: center; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 16px; background:url(../images/COP/main/ico_80_log2_process_01.png) no-repeat 50% 60px #fff;  }
 ol.main_loan_info li.step_1   {background-image: url(../images/COP/main/ico_80_log2_process_01.png);}
@@ -120,13 +121,16 @@ ol.main_loan_info li.step_4   {background-image: url(../images/COP/main/ico_80_l
 ol.main_loan_info li em   {color:#069B66; font-weight: 700;  }
 ol.main_loan_info li strong   {display:block; margin-top:10px; font-size:30px; }
 ol.main_loan_info li p   {margin-top:20px; }
-ol.main_loan_info li div   {position:relative; margin-top:40px; padding-top:40px }
-ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top:0; width:180px; border-top:1px solid #ddd; transform: translateX(-50%);}
+ol.main_loan_info li div.txt   {position:relative; margin-top:40px; padding-top:40px }
+ol.main_loan_info li div.txt::before   {content:""; position:absolute; left:50%; top:0; width:180px; border-top:1px solid #ddd; transform: translateX(-50%);}
+ol.main_loan_btn  {display:flex; gap:20px; }
+ol.main_loan_btn li   {width:335px; }
+ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
  
 
 
 /*  메인 대출 진행 */
-.main_loan_progress     {}
+.main_loan_progress     {padding:60px 0 0;}
 .main_loan_progress .loanSelct select       { width:100%; text-align: center; color:#fff; font-size:30px; border:1px solid #1EA885; background:url(../images/common/ico_24_down_w.png) no-repeat top 50% right 16px #1EA885;  }
 .main_loan_progress .loanSelct select option  {background:#fff; color:#333;  }
 
@@ -156,7 +160,7 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_progress ol.status_tab li.step_5.disabled   {background-image:url(../images/COP/main/ico_80_log_process_05_off.png); }
 
 .main_loan_cont              { } 
-.main_loan_cont .bgWrap section {padding-bottom:60px;  } 
+.main_loan_cont .bgWrap section {padding-bottom:100px;  } 
 .main_loan_cont .list           {position:relative; width:265px; padding-bottom:70px; } 
 .main_loan_cont.step_2 .list    {left:285px; }
 .main_loan_cont.step_3 .list    {left:570px; }
@@ -164,12 +168,14 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 .main_loan_cont.step_5 .list    {left:1130px; }
 .main_loan_cont .list::before   {content:""; position:absolute; left:50%; bottom:-1px; width:40px; height:32px; transform: translateX(-50%); background: url(../images/common/bul_polygon_main.png) no-repeat 50% 0; background-size:cover; } 
 .main_loan_cont .list .btnWrap  {text-align: center; }  
+.main_loan_cont .list .btnWrap button  {width:100%;}
+.main_loan_cont .list .btnWrap button + button  {margin-top:8px; }
 .main_loan_cont .list .status   {}  
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:28px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
 .main_loan_cont .list .status button:focus {outline: 2px dashed #069B66;} 
-.main_loan_cont .list .status button span   {}
+.main_loan_cont .list .status button span   {margin:auto 0;}
 .main_loan_cont .list .status button em     {display:block; padding:0 14px; border:1px solid #EAFAEB; flex:0; color:#069B66; border-radius: 14px;  }
-.main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline;}
+.main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline; }
 .main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
 .main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 30px; height:auto; text-align: center;  }   
 .main_loan_cont .no_data span     {display:block; padding-top:195px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
@@ -210,13 +216,18 @@ ol.main_loan_info li div::before   {content:""; position:absolute; left:50%; top
 
 
 /* 서비스 - 대출절차 */
-.serviceInfo_visual         { width:1240px; height:431px; margin:0 auto; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
+.serviceInfo_visual         { width:1240px; height:431px; margin:0 auto 100px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
 .serviceInfo_visual.login   { width:1400px; height:442px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
 .serviceInfo_txt            { padding:60px 0 0;}
 .serviceInfo_txt dl         { position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
 .serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
 .serviceInfo_txt dl dd      { padding-left:200px; }
 
+/*  약관  */
+.tremsWrap      {}
+.tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
+.tremsWrap .searchControlBox      {margin-top:40px; }
+.tremsWrap .terms_cont      {margin-top:60px; }
 
 
 /* 진희 */

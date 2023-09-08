@@ -123,6 +123,7 @@ button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-ra
 button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
+button.btnLine       {padding:0 50px; height:64px; background:#fff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#fff }
@@ -138,6 +139,7 @@ table .btnSky         {padding:0 32px; height:50px; line-height:50px; }
 table .btnWhite       {padding:0 32px; height:50px; line-height:50px; }
 table .btnGray       {padding:0 32px; height:50px; line-height:50px; }
 table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
+table .btnLine       {padding:0 32px; height:50px; line-height:50px; }
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -152,8 +154,13 @@ table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
 .btnWhiteLine:active       { background:#ffffff; color:#069B66 }
 .btnBlack:focus,
-.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
+.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
 .btnBlack:active       { background:#555; color:#fff }
+
+.btnLine:focus,
+.btnLine:hover       { color:#069B66; border:1px solid #069B66;}
+.btnLine:active       { color:#069B66 }
+
  
 .btnSuccess:disabled,
 .btnSky:disabled,
@@ -198,6 +205,8 @@ a.ico_down       {color:#069B66; }
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 a.download2       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 100% 50%; }
+
+a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50%; }
 
 
 .ico_print       {padding:0 32px;}
@@ -447,7 +456,7 @@ select.wid430 { min-width: 430px;}
 .formRow.mt30 { margin-top: 30px; }
 
 /* control group */
-.bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #E5EDFB; border-radius: 16px; display:flex; gap:20px; }
+.bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #F6FBF7; border-radius: 16px; display:flex; gap:20px; }
 .bbsSearch .formRow { width:100%; }
 .bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
@@ -595,12 +604,14 @@ select.wid430 { min-width: 430px;}
 }
 
 header {}
-header::after {content:''; position:absolute; width:100%; height:740px; height:150px; top:0; lefT:0; z-index:0; background:#EAFAEB; }
-header::before {content:''; width:100%; height:100vh; left:0; top:0; z-index:499; position:fixed; opacity:0; z-index:-1; background: #EAFAEB; transition: .2s; }
+.main header::after {content:''; position:absolute; width:100%; height:740px; height:150px; top:0; lefT:0; z-index:0; background:#EAFAEB; }
+header::before {content:''; width:100%; height:100vh; left:0; top:0; z-index:499; position:fixed; opacity:0; z-index:-1; background: #fff; transition: .5s; }
+header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#fff; transition: .3s; opacity:0 ; }
+header .line  {content:''; position:absolute; width:100%; height:0; top:150px; left:0; z-index:599;  border-bottom:1px solid #069B66; display:none; }
+
 header.on::before {top:0; opacity:1; z-index:499; width:100%; height:100vh;  background: rgba(0, 0, 0, 0.40); }
-header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:150px; background:#EAFAEB;  transition: .5s; opacity:0.5 ; }
 header.on .bg  {height:608px; opacity: 1; background:#fff; top:0; }
-header .line  {content:''; position:absolute; width:100%; height:0; top:150px; left:0; z-index:599; background:#EAFAEB; border-bottom:1px solid #515BB7; display:none; }
+header.on .line  {display:block; }
 
 
 .headerCont {position:relative; z-index:500; width:1400px; margin:0 auto; height:98px; }
@@ -631,7 +642,8 @@ header .line  {content:''; position:absolute; width:100%; height:0; top:150px; l
 .headerCont ul.headerLogin li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#fff; border-radius: 50%; left:0; top:50%;}
 .headerCont ul.headerLogin li a.logout {position:relative; padding-right:34px; }
 .headerCont ul.headerLogin li a.logout::before {content:''; position: absolute; width:24px; height:24px; background:#fff; right:0; top:0%; background:url(../images/COP/ico_logout_off.png) no-repeat 0 0 / 100%;}
-.on .headerCont ul.headerLogin li a {color:#069B66; }
+.on .headerCont ul.headerLogin li a {}
+.on .headerCont ul.headerLogin li a:hover {color:#069B66; }
 .on .headerCont ul.headerLogin li a.login::before {background:#EAFAEB; }
 .headerCont ul.headerLogin li a.logout::before {background-image:url(../images/common/ico_24_logout_w.png)}
 .headerCont ul.headerLogin li a.logout:hover::before {background-image:url(../images/common/ico_24_logout_hover.png)}
@@ -714,12 +726,12 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .table_top     {position:relative; margin-bottom:20px;  }
 .table_top::after     {display:block; content: ""; clear: both;}
-.table_top .total     {float:left; }
+.table_top .total     {float:left; padding:13px 0 0; }
 .table_top .total strong{color:#069B66; font-size:24px; vertical-align: -1px; }
 .table_top .tipTxt    {float:left; padding-top:20px; color:#555;    }
-.table_top .sortBox   {float:right;  }
-.table_top .sortBox select {margin-left:6px; }
-.table_top .sortBox select { width: 100%; height: 50px; }
+.table_top .sortBox   {float:right; display:flex; gap:10px;    }
+.table_top .sortBox select { width: 100%; height: 50px; flex-shrink:unset;  }
+.table_top .sortBox button.btnSky { min-width:120px; padding:0 10px; }
 
 .table_bt      { position: relative; width:100%;  margin:60px 0 0px; box-sizing: content-box; min-height:64px; }
 .table_bt.mt20 { margin-top: 20px;}
@@ -951,17 +963,19 @@ th{word-break: break-all;}
 .jsgrid-header-cell {padding:0; }
 
 .jsgrid-header-sortable     {}
-.jsgrid-header-sortable:before { border-color: transparent transparent #069B66 transparent}
-.jsgrid-header-sortable:after  { border-color: #069B66 transparent transparent transparent}
-.jsgrid-header-sort:before { display: inline-block; float: none; margin-right: 10px; vertical-align: middle;}
-.jsgrid-header-sort-asc:before { border-color: transparent transparent #069B66 transparent}
-.jsgrid-header-sort-desc:before { border-color: #069B66 transparent transparent transparent}
+.jsgrid-header-sortable::after {content:""; width:16px; height:28px;  margin-left:8px; vertical-align: -8px; display:inline-block; background:url(../images/common/bul_sorting.png) no-repeat 0 0; }
+.jsgrid-header-sort:before { display:none;}
+.jsgrid-header-sort-asc::after {background: url(../images/common/sorting_up.png) no-repeat 0 20%; }
+.jsgrid-header-sort-desc::after  {background: url(../images/common/sorting_down.png) no-repeat 0 80%; }
 
 
 .jsgrid-cell .sub { color: #888;}
 .jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
 .jsgrid-grid-body tbody tr > .jsgrid-cell.left { text-align: left; padding-left:30px;}
+.jsgrid-grid-body tbody tr > .jsgrid-cell.status { }
+.jsgrid-grid-body tbody tr > .jsgrid-cell.status span {color:#888; }
+.jsgrid-grid-body tbody tr > .jsgrid-cell.status strong {color:#333;  }
 
 .noTableData  { margin: 60px 0; padding: 40px 0;}
 .noTableData .txt { margin-top: 30px; color: #555;}  
@@ -990,6 +1004,15 @@ th{word-break: break-all;}
 .rangeControl .btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
 .rangeControl .btnCalendar:hover::after{ background-image: url(../images/common/ico_24_calendar_w.png)} 
 
+
+
+.rangeControl .input { min-height: 50px; padding: 0 16px; width:140px; letter-spacing: -1px; }
+.rangeControl span.uit { line-height:50px; }
+.rangeControl .ui-datepicker-trigger      { align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
+.rangeControl .ui-datepicker-trigger img  {opacity:0; }
+.rangeControl .ui-datepicker-trigger:hover {background-image: url(../images/common/ico_24_calendar_w.png); background-color:#148159}
+
+
 /****************************
 **********  Date picker  **********
 *****************************/
@@ -1006,6 +1029,7 @@ th{word-break: break-all;}
 .datepicker { top: 50px;}
 .searchControlBox .datepicker { top: 64px;}
 .datepicker__topbar { display: none;}
+
 
 
 
@@ -1086,6 +1110,8 @@ th{word-break: break-all;}
 
 
 .ui-datepicker button:focus {background:#fff}
+
+
 
 
 
@@ -1215,6 +1241,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .printTit p   {text-align: center; color:#4C9DA2; font-size:18px; margin-top:20px;   }
 
 @media print{
+  *   {-webkit-print-color-adjust:exact;}
   .loadDetailBox .detailCont .titBox .tit   {display:none;   }
   .loadDetailBox .topBox .status  {display:none; }
   .loadDetailBox .topBox .printTit  {display:inline-block; }
@@ -1266,7 +1293,7 @@ ul.guideBox li { line-height: 1.5;}
 
 /* main */
 
-.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 60px; }
+.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 0px; }
 .main_myInfo .welcomeBox        {display:flex;  gap:40px; align-items: end;}
 .main_myInfo .welcomeBox .welcometit        { }
 .main_myInfo .welcomeBox .welcometit span   {}
@@ -1279,7 +1306,7 @@ ul.guideBox li { line-height: 1.5;}
 .main_myInfo .msgBox .layer_msg strong  {display:block; }
 .main_myInfo .msgBox .layer_msg::after  {content:''; position:absolute; right:-15px; bottom:20px; width:18px; height:15px; background:url(../images/FIN/bul_polygon.png); transform: rotate(270deg); }
 .main_myInfo .msgBox.on .layer_msg  {animation:msgLayer 2s forwards }
-.main_myInfo + .btnBox    {margin-top:-40px; margin-bottom:60px; }
+.main_myInfo + .btnBox    {margin-top:20px; margin-bottom:60px; }
 
 @keyframes msgLayer {
   0% {

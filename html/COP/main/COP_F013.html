@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="../../../css/contents_COP.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_COP.js"></script>
   <title>SHINHAN</title>
@@ -20,7 +23,7 @@
     <a href="#skip_content">컨텐츠 바로가기</a>
   </div>
 
-  <div class="wrap main">
+  <div class="wrap ">
     <!-- **************** -->
     <!-- header : start -->
     <!-- **************** -->
@@ -96,116 +99,48 @@
 
       <h2 class="hide">콘텐츠 영역</h2>
       <section>
-
-        <div class="mainTop">
-          <div class="main_myInfo">
-            <div class="welcomeBox">
-              <div class="welcometit">
-                <span>안녕하세요!</span>
-                <strong>길동중앙회(광교영업점)님😊</strong>
-              </div>
-            </div>
-            <div class="msgBox on">
-              <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
-              <div class="layer_msg " role="alert"> 
-                제안서 연장 요청이 <strong>승인되었습니다</strong>
-              </div>
-            </div>
-          </div>
-          <div class="btnBox">
-            <button type="button" class="btnSuccess">대출 비교하기</button>
-          </div>
+       <div class="tremsWrap">
+        
+        <div class="titBox">
+          약관동의 및 대출 비교 정보 제공 동의
         </div>
+
+          
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox fullType">
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label for="selectLabelState" class="label">약관</label>
+                <div class="formRow">
+                  
+                  <select id="selectLabelState">
+                    <option>서비스 이용 약관</option>
+                    <option>서비스 이용 약관</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label for="selectLabelState" class="label">시행 날짜</label>
+                <div class="formRow">
+                  <select id="selectLabelState">
+                    <option>2023-12-31</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+
+        <div class="terms_cont">
+
+        </div>
+       </div>
+
+        
       </section>
   
-      <section class="main_loan_box">
-        <ol class="main_loan_info">
-          <li class="step_1">
-            <em>01.</em>
-            <strong>시설자금 <br>대출이란?</strong>
-            <p>공장 구입, 생산 설비 등의 <br>도입에 소요되는 자금</p>
-            <div class="txt">
-              시설자금 대출은 <br>
-              ‘제안서 선택후’ 평균적으로<br>
-              3일 정도 소요됩니다.
-            </div>
-          </li>
-          <li class="step_2">
-            <em>02.</em>
-            <strong>운전자금<br>대출이란?</strong>
-            <p>원부자재 구입 비용 등<br>기업경영에 소요되는 자금</p>
-            <div class="txt">
-              운전자금대출은<br>
-              ‘제안서 선택 후’ 평균적으로<br>
-              3일 정도 소요됩니다.
-            </div>
-          </li>
-          <li class="step_3">
-            <em>03.</em>
-            <strong>법인리스<br>대출이란?</strong>
-            <p>차량 리스를 위해 발생되는<br>금융 비용 대출</p>
-            <div class="txt">
-              법인리스대출은<br>
-              ‘제안서 선택 후’ 평균적으로<br>
-              5일 정도 소요됩니다. 
-            </div>
-          </li>
-          <li class="step_4">
-            <em>04.</em>
-            <strong>장기렌트<br>대출이란?</strong>
-            <p>1년 이상 장기렌트를 이용하기<br>위해 발생되는 금융 비용 대출</p>
-            <div class="txt">
-              장기렌트대출은 <br>
-              ‘제안서 선택 후’ 평균적으로<br>
-              6일 정도 소요됩니다.
-            </div>
-          </li>
-        </ol>
-        <ol class="main_loan_btn">
-          <li>
-            <a href="#" class="btnSuccess">진행중</a>
-          </li>
-          <li>
-            <a href="#" class="btnSuccess">진행중</a>
-          </li>
-        </ol>
-      </section>
-
-      <!-- center 배너 : start -->
-      <section class="bnrInerCont">
-        <img src="../../../images/FIN/img_bnr.png" alt="가입 후 첫 대출 완료 시 수수료 0.2% 인하 이벤트! ">
-      </section>
-      <!-- center  배너 : end -->
-
-      <section class="">
-
-        <div class="serviceInfo_tit">
-          대출은 이렇게 진행 돼요 🗂️
-        </div>
-        
-        <div class="serviceInfo_visual login">
-          <div class="hide">
-            <strong>법인회원 </strong>
-            <ol>
-              <li>회원가입(Loan&Biz 플랫폼)</li>
-              <li>대출신청(Loan&Biz 플랫폼)</li>
-              <li>제안서 선택(Loan&Biz 플랫폼)</li>
-              <li>대출 약정(오프라인)</li>
-              <li>대출 실행(오프라인)</li>
-            </ol>
-            <strong>금융 회원</strong>
-            <ol>
-              <li>회원가입(Loan&Biz 플랫폼)</li>
-              <li>대출신청(Loan&Biz 플랫폼)</li>
-              <li>제안서 제출(Loan&Biz 플랫폼)</li>
-              <li>제안서 선택(Loan&Biz 플랫폼)</li>
-              <li>대출 약정 (오프라인)</li> 
-              <li>대출 실행 (오프라인)</li>
-            </ol>
-          </div>
-        </div>
-
-      </section>
 
 
 

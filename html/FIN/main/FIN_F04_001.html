@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/echarts.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  
+
+
+
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <div class="skip_nav">
+    <a href="#skip_gnb">주메뉴 바로가기</a>
+    <a href="#skip_content">컨텐츠 바로가기</a>
+  </div>
+
+  <div class="wrap main center">
+    <!-- **************** -->
+    <!-- header : start -->
+    <!-- **************** -->
+    <header class="" >
+      <div class="headerUtil">
+        <div class="utilCont">
+          <div class="zommBox">
+            <span class="tit">글자크기</span>
+            <button type="button" class="btn_zoom_plus"><span class="hide">화면확대</span></button>
+            <button type="button" class="btn_zoom_minus"><span class="hide">화면축소</span></button>
+          </div>
+        </div>
+      </div>
+      <nav class="headerCont ">
+        <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
+        <h2 class="hide">메뉴 영역</h2>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
+          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 신청 업체 목록</span></a>
+            <ul>
+              <li class="depth_2 on"><a href="#none">대출 신청 업체 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">제안서 등록</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">제안서 제출 가능 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">회원정보</a></li>
+              <li class="depth_2"><a href="#none">제안서 관리</a></li>
+              <li class="depth_2"><a href="#none">취급 대출 내역</a></li>
+              <li class="depth_2"><a href="#none">메시지함</a></li>
+              <li class="depth_2"><a href="#none">희망 업체 알림 설정</a></li>
+              <li class="depth_2"><a href="#none">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_office">중앙회(본점) 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">금융사 대출 목록</a></li>
+              <li class="depth_2"><a href="#none">대출 실적 관리</a></li>
+              <li class="depth_2"><a href="#none">소속 금융사 계정 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="headerLogin">
+          <!-- <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li> -->
+          <li><a href="#none" class="logout">로그아웃</a></li>
+        </ul>
+      </nav> 
+      <div class="bg"></div>
+      <div class="line"></div>
+    </header>
+    <!-- **************** -->
+    <!-- header : end -->
+    <!-- **************** -->
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+ 
+      <h2 class="hide">콘텐츠 영역</h2>
+      <section>
+        <div class="mainTop">
+
+          <div class="main_myInfo">
+            <div class="welcomeBox">
+              <div class="welcometit">
+                <span>안녕하세요!</span>
+                <strong>길동중앙회(광교영업점)님😊</strong>
+              </div>
+              <button type="button" class="btnWhiteLine ico_down sm">금융회원 매뉴얼 다운로드</button>
+            </div>
+            <div class="msgBox on">
+              <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span> 
+              <div class="layer_msg " role="alert">
+                제안서 연장 요청이 <strong>승인되었습니다</strong>
+              </div>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>검색</legend>
+            
+            <div class="searchControlBox">
+              <div class="searchControlGroup">
+                <div class="dateTab tabScript" role="tablist">
+                  <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
+                </div>
+
+                <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+                  <select id="selectLabelState">
+                    <option>2023년</option>
+                  </select>
+                
+                  <select id="selectLabelState">
+                    <option>7월</option>
+                  </select> 
+                </div>
+
+                <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+                  <input type="text" class="input rangePicker" value="" aria-label="시작 및 종료기간 선택"/>
+                  <button type="button" class="btnCalendar rangePickerBtn"><span class="srOnly">달력 팝업 열기</span></button>
+                </div>
+                
+
+              </div>
+              <div class="searchControlGroup">
+                
+                <div class="searchControlItem center_organ">
+                  <label for="selectLabelState" class="label">조직 선택</label>
+                  <div class="formRow formGroup">
+                    <select id="selectLabelState">
+                      <option>지역본부</option>
+                    </select>
+                    <span class="line"></span>
+                    <select id="selectLabelState">
+                      <option>금고본점</option>
+                    </select>
+                    <span class="line"></span>
+                    <select id="selectLabelState">
+                      <option>지점</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+              
+      
+              <script>
+                function printSetting(){
+                 
+                
+                 $("body").addClass("printSetting");
+                 myChart1.resize()
+                 myChart2.resize();
+                //  return false;
+                 setTimeout(function(){
+                   print()
+                 },30)
+                 setTimeout(function(){
+                   $("body").removeClass("printSetting");
+                   myChart1.resize()
+                   myChart2.resize();
+                 },30)
+                }
+               
+               </script>  
+                
+              <div class="searchBtns">
+                <button type="button" class="btnSky ico_print" onclick="printSetting()" title="프린트" >대시보드 출력</button>
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
+          </fieldset>
+    
+
+          
+        </div>
+      </section>
+
+      <section class="printTit">
+        <div class="logo"></div>
+        <p>본 화면은 Loan&Biz에서 관리 및 보호중인 중요 개인정보가 포함된 화면이므로 대출 정보 조회 용도 외 사용을 금합니다.</p>
+      </section>
+      <section class="main_dashboard">
+          
+        <div >
+          <ul class="dashboardWrap">
+            <li class="items type_1">
+              <strong class="tit">실행 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>238</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_2">
+              <strong class="tit">실행 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li> 
+            <li class="items type_3">
+              <strong class="tit">제안 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_4">
+              <strong class="tit">제안 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li>
+          </ul>
+
+          
+          <ul class="dashboardWrap rank">
+            <li class="rankItem long" id="rankTabCont_1">
+              <div class="rankTitBox">
+                <button type="button" class="prev" aria-controls="rankTabCont_1"><span class="hide">이전</span></button>
+                <strong class="on" aria-selected="true">최다 제안 지점</strong>
+                <strong class="" aria-selected="false">최다다 제안 지점</strong>
+                <button type="button" class="next" aria-controls="rankTabCont_1"><span class="hide">다음</span></button>
+              </div> 
+              <div class="rankTabCont">
+                <ol class="on" aria-hidden="false">
+                  <li><em class="num_1"></em> <span>광화문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>서초지점</span></li>
+                  <li><em class="num">3</em>  <span>홍대지점</span></li>
+                  <li><em class="num">4</em>  <span>판교지점</span></li>
+                  <li><em class="num">5</em>  <span>잠실지점</span></li>
+                </ol>
+                <ol class="" aria-hidden="true">
+                  <li><em class="num_1"></em> <span>서대문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>강남지점</span></li>
+                  <li><em class="num">3</em>  <span>여의도지점</span></li>
+                  <li><em class="num">4</em>  <span>홍대지점</span></li>
+                  <li><em class="num">5</em>  <span>서초지점</span></li>
+                </ol>
+              </div>
+            </li>
+            <li class="rankItem long">
+              <div class="rankTitBox">
+                <button type="button" class="prev" aria-controls="rankTabCont_1"><span class="hide">이전</span></button>
+                <strong class="on" aria-selected="true">최다 실행 지점</strong>
+                <strong class="" aria-selected="false">최다다 실행 지점</strong>
+                <button type="button" class="next" aria-controls="rankTabCont_1"><span class="hide">다음</span></button>
+              </div> 
+              <div class="rankTabCont">
+                <ol class="on" aria-hidden="false">
+                  <li><em class="num_1"></em> <span>광화문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>서초지점</span></li>
+                  <li><em class="num">3</em>  <span>홍대지점</span></li>
+                  <li><em class="num">4</em>  <span>판교지점</span></li>
+                  <li><em class="num">5</em>  <span>잠실지점</span></li>
+                </ol>
+                <ol class="" aria-hidden="true">
+                  <li><em class="num_1"></em> <span>서대문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>강남지점</span></li>
+                  <li><em class="num">3</em>  <span>여의도지점</span></li>
+                  <li><em class="num">4</em>  <span>홍대지점</span></li>
+                  <li><em class="num">5</em>  <span>서초지점</span></li>
+                </ol>
+              </div>
+            </li>
+            <li class="chart_pie">
+              <strong class="tit">전체 제안 대출 비율</strong>
+              <div class="pie" id="pieChart_1"></div>
+              <script>
+                var chartDom = document.getElementById('pieChart_1');
+                var myChart_pie1 = echarts.init(chartDom);
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '대출 비율',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+                <li> <em style="background:#5066B6"></em> 시설</li>
+                <li> <em style="background:#46B9B2"></em> 운전</li>
+                <li> <em style="background:#55D6B6"></em> 리스</li>
+                <li> <em style="background:#89E3CD"></em> 렌탈</li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+        </div>
+        
+
+
+      </section>
+      
+
+    </div>
+
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- footer : start -->
+    <!-- **************** -->
+    <hr/>
+    <footer id="skip_footer"  aria-label="푸터">
+       <div class="footerWrap">
+        <ul class="footerLnk">
+          <li><a href="#none">고객센터</a></li>
+          <li><a href="#none">약관동의</a></li>
+          <li><a href="#none">대출신청 정보 제공 동의</a></li>
+          <li><a href="#none">자금 세탁 방지법</a></li>
+          <li><a href="#none">대출 서비스 안내</a></li>
+         </ul>
+         <div class="copy">
+          <p>
+            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
+            <span>Copyright Since 2023</span>
+          </p>
+          <div class="wa">
+            <img src="./images/common/wa-logo.png" alt="">
+          </div>
+         </div>
+       </div>
+    </footer>
+    <!-- **************** -->
+    <!-- footer : end -->
+    <!-- **************** -->
+  </div>
+
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** show -->
+  <div class="layerWrap " id="dashboard_setting_Layer" role="dialog" aria-modal="true" >
+    <div class="layerBody">
+      <div class="layerHead">
+        <h3>대시보드 설정</h3>
+        <p>대시보드에 노출할 항목을 설정하고 순서를 변경할 수 있습니다. <br>
+          최소 8개 이상의 노출 항목을 설정해 주세요.</p>
+        <button type="button" class="layerClose" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="dashboard_setting">
+           <table>
+            <caption>대시보드 화면 설정</caption>
+            <colgroup>
+              <col width="130px" />
+              <col width="140px" />
+              <col width="" />
+              <col width="100px"   />
+            </colgroup>
+            <thead>
+              <th class="chk">노출</th>
+              <th class="num">번호</th>
+              <th class="tit">항목명</th>
+              <th class="idx">순서</th>
+            </thead>
+            <tbody id="sortable">
+              <tr>
+                <td class="chk">고정</td>
+                <td class="num">1</td>
+                <td class="tit">취급건수</td>
+                <td class="move"><span></span></td>
+              </tr>
+              <tr class="moveable">
+                <td class="chk">
+                  <span class="checkbox">
+                    <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                    <label for="searchCheckBox"><span></span></label>
+                  </span></td>
+                <td class="num">5</td>
+                <td class="tit">취급액</td>
+                <td class="move"><span></span></td>
+              </tr>
+            </tbody>
+           </table>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess xl" onclick="layer_close('dashboard_setting_Layer')"  aria-label="레이어 닫기">적용</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+<script>
+
+  
+$(function() {
+  // $("tr").draggable({ helper: "clone" , axis: "y" });
+  $( "#sortable" ).sortable({
+      axis: "y" ,cursor: "move",
+      update : function(){
+        
+      }
+    },{ cancel: "tr.tr_fix" },{
+      items: "tr.moveable"
+    });
+
+    // $( "tr.moveable" ).draggable({ helper: "clone"});
+ 
+});
+
+</script>
+
+
+
+</body>
+</html>

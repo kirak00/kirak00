@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sheetjs create xlsx excel example(html table)</title>
+
+<script src="../../js/lib/html2pdf.js" ></script>
+
+
+</head>
+<body>
+  
+  <button type="button" class="btnSky ico_print" onclick="html2pdf().set(opt).from(element).save();" title="프린트" >대시보드 출력</button>
+
+<table id="skip_content" style="border:1px solid #dddddd">
+<thead>
+<tr>
+    <th background=red>이름</th>
+    <th>CP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>망나뇽</td>
+    <td>4000</td>
+</tr>
+<tr>
+    <td>마기라스</td>
+    <td>3900</td>
+</tr>
+<tr>
+    <td>해피너스</td>
+    <td>3800</td>
+</tr>
+</tbody>
+</table>
+
+
+<script>
+  var element = document.getElementById('skip_content');
+  var opt = {
+    margin:       1,
+    filename:     'myfile.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 1 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'Landscape' }
+  };
+
+  // New Promise-based usage:
+
+</script>  
+
+
+파일 내보내기(HTML TABLE) : <input type="button" id="excelFileExport" value="엑셀 파일 다운로드(TABLE)" />
+</body>
+</html>
