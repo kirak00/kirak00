@@ -94,6 +94,14 @@
                   <th scope="row">이의 신청 기일</th> 
                   <td>2023-09-06</td>
                 </tr>
+                <tr> 
+                  <th scope="row">세금계선서 발행 여부</th> 
+                  <td>발행</td>
+                </tr>
+                <tr> 
+                  <th scope="row">정산 여부</th> 
+                  <td>정산</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -104,13 +112,53 @@
               <div class="titH4 hasLine">청구 내역 이의 신청</div>
               <!-- Comment 1 -->
               <div class="comment">
-                <label class="label" for="labelExtraOpi1_1">이의 신청 내용을 입력해 주세요.</label>
-                <textarea id="labelExtraOpi1_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
+                <label class="label" for="labelExtraOpi1">이의 신청 내용<span class="date">2023-09-13</span></label>
+                <div class="commentBody">
+                  <textarea class="textarea autoHeight" id="labelExtraOpi1" placeholder="내용을 입력해 주세요." readonly>수수료가 너무 높습니다. 프로모션으로 적용 부탁드립니다.</textarea>
+                  <!-- Reply -->
+                  <form method="POST" class="reply isHide">
+                    <label class="label" for="labelExtraOpi1_1">추가 문의 내용을 입력해 주세요.</label>
+                    <textarea id="labelExtraOpi1_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
+                  </form>
+                  <!-- Reply -->
+                </div>
+                <div class="replies">
+                  <!-- Comment 2 -->
+                  <div class="comment">
+                    <label class="label" for="labelExtraOpi1_12"><span class="blue">Loan&Biz 답변</span><span class="date">2023-09-13</span></label>
+                    <div class="commentBody">
+                      <textarea class="textarea autoHeight" id="labelExtraOpi2" placeholder="내용을 입력해 주세요." readonly>알겠습니다. 프로모션 적용하여 0.2%로 진행하겠습니다.</textarea>
+                      <!-- Reply -->
+                      <form method="POST" class="reply isHide">
+                        <label class="label" for="labelExtraOpi2_1">추가 문의 내용을 입력해 주세요.</label>
+                        <textarea id="labelExtraOpi2_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
+                      </form>
+                      <!-- Reply -->
+                    </div>
+                    <div class="replies">
+                      <!-- Comment 3 -->
+                      <div class="comment">
+                        <label class="label" for="labelExtraOpi1_12"><span class="blue">Loan&Biz 답변</span><span class="date">2023-09-13</span></label>
+                        <div class="commentBody">
+                          <textarea class="textarea autoHeight" id="labelExtraOpi3" placeholder="내용을 입력해 주세요." readonly>알겠습니다. 프로모션 적용하여 0.2%로 진행하겠습니다.</textarea>
+                          <!-- Reply -->
+                          <form method="POST" class="reply">
+                            <label class="label" for="labelExtraOpi3_1">추가 문의 내용을 입력해 주세요.</label>
+                            <textarea id="labelExtraOpi3_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
+                          </form>
+                          <!-- Reply -->
+                        </div>
+                      </div>
+                      <!-- Comment 3 -->
+                    </div>
+                  </div>
+                  <!-- Comment 2 -->
+                </div>
               </div>
               <!-- Comment 1 -->
               <div class="table_bt">
                 <div class="btn_c">
-                  <button type="button" class="btnSuccess">이의 신청 등록</button>
+                  <button type="button" class="btnSuccess">등록</button>
                 </div>
               </div>
             </div>

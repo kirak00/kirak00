@@ -50,7 +50,7 @@
 .titH3.hasLine ,
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; margin-bottom: 40px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
-
+.titH4.hasPadding { padding: 0 60px;}
 .titLabel { font-size: 20px; font-weight: 400;}
 
 .titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
@@ -62,6 +62,8 @@
 /* .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; } */
 
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
+
+.resultTxt { padding: 60px 0; text-align: center;}
 
 /****************************
 **********  list  **********
@@ -110,15 +112,17 @@
 .guideList .list .tit { margin-right: 4px;}
 .guideList.dot .list { position: relative; padding-left: 20px; }
 .guideList.dot .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
+
 /****************************
 **********  section  **********
 *****************************/
 .formListBlock { margin-top: 0;}
+.sectionBlock20 { margin-top: 20px;}
 .sectionBlock40 { margin-top: 40px;}
 .sectionBlock60 { margin-top: 60px;}
 .sectionBlock80 { margin-top: 80px;}
 .sectionBar { width: 100%; height: 1px; margin: 60px 0; background: #ddd;}
-
+.lineBlock { margin-top: 60px; border-top: 1px solid #ddd; }
 /****************************
 **********  badge  **********
 *****************************/
@@ -356,8 +360,8 @@ button.sm       {height:50px; }
 /* toggle */
 .toggleGroup { display: flex; align-items: center; gap: 60px;}
 .switch { display: inline-flex; align-items: center; cursor: pointer; }
-.switch [type="checkbox"] { appearance: none; position: relative; border: 2px solid #069B66; border-radius: 14px; width: 52px; height: 28px;}
-.switch [type="checkbox"]::before { content: ""; position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background-color: #069B66; transition: left 250ms linear;}
+.switch [type="checkbox"] { appearance: none; position: relative; border: 2px solid #888; background: #888; border-radius: 14px; width: 52px; height: 28px;}
+.switch [type="checkbox"]::before { content: ""; position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background-color: #fff; transition: left 250ms linear;}
 .switch [type="checkbox"]:checked { background-color: #069B66; border-color: #069B66;}
 .switch [type="checkbox"]:checked::before { background-color: white; left: 25px;}
 .switch [type="checkbox"]:disabled { border-color: lightgray; opacity: 0.7; cursor: not-allowed;}
@@ -462,7 +466,7 @@ select.wid430 { min-width: 430px;}
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 30px;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-.textarea.autoHeight { min-height: 64px; padding: 14px 20px;}
+.textarea.autoHeight { min-height: 64px; height: 64px; padding: 14px 20px;}
 .layerCont .textarea { min-height: 180px;}
 
 /* form 정력 */
@@ -471,6 +475,7 @@ select.wid430 { min-width: 430px;}
 .formVertical.mt10 { margin-top: 10px;}
 .formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
 .formSet { display: flex; gap: 10px;}
+.formVertical .label { font-weight: 700;}
 .formVertical .radio { height: auto; padding-top: 0;}
 .formVertical > .radio  { margin-left: 0;}
 .formVertical .checkbox ~ .checkbox { margin-left: 0;}
@@ -557,9 +562,10 @@ select.wid430 { min-width: 430px;}
 .msgPg .divTable .head .cell { font-weight: 700;}
 .msgPg .divTable .head .cell:first-child { flex: 1; justify-content: center;}
 .msgPg .divTable .body .cell:first-child { flex: 1; justify-content: flex-start;}
-.msgPg .divTable .row .cell:nth-child(2) { width: 196px; padding-right: 60px; }
+/* .msgPg .divTable .row .cell:nth-child(2) { width: 196px; padding-right: 60px; }
 .msgPg .divTable .row .cell:nth-child(2)::after { content: ''; position: absolute; top: 50%; right: 0; margin-top: -12px; display: block; width: 1px; height: 24px; background: #ddd;}
-.msgPg .divTable .row .cell:nth-child(3) { width: 214px; padding-left: 60px;}
+.msgPg .divTable .row .cell:nth-child(3) { width: 214px; padding-left: 60px;} */
+.msgPg .divTable .row .cell:nth-child(2) { width: 120px; padding: 0 }
 .msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
 .msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
 
@@ -580,6 +586,13 @@ select.wid430 { min-width: 430px;}
 .accordionPanel { margin: 0px 40px 40px; padding: 40px 20px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .accordionPanel[hidden] { display: none;}
 
+.agreeAccordion .accordionTrigger { height: 92px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
+.agreeAccordion { border-top: 2px solid #069B66}
+.agreeAccordion .accordionTitle.list:not(:first-child) { border-top: 1px solid #ddd;}
+.agreeAccordion .accordionTitle .checkbox { height: 92px;}
+.agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center;}
+.agreeAccordion .accordionTitle .required { margin-left: 8px; color: #069B66;}
+.agreeAccordion .accordionPanel { margin: 0 ; padding: 30px 40px; background: #fff;}
 /****************************
 **********  paging  **********
 *****************************/
@@ -913,6 +926,7 @@ table { width: 100%;}
 td .formGrayBox { margin: 20px 0 0;}
 td .formListTable { margin-top: 25px;}
 .formGrayBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
+.formGrayBox.type2 { padding: 40px 60px 60px;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
 .formGrayBox .list:not(:first-child) { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
@@ -1251,17 +1265,19 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 
 /* bbs detail */
+.badgeWhite { display: inline-block; padding: 2px 14px; border-radius: 30px; font-size: 20px;}
+.badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
 .bbsDetailBox       {  overflow: hidden; }
 .tabLine ~ .bbsDetailBox       {margin-top:60px; }
 .bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
 .bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
 .bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
 .bbsDetailBox .titBox h3.tit  { font-size:24px; font-weight: 700; }
-.bbsDetailBox .titBox .badgeWhite { margin-right: 20px; padding: 2px 14px; border-radius: 30px; font-size: 20px;}
+.bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
+.bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
-.bbsDetailBox .detailCont .titH4.hasLine { padding: 0 60px;}
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
 
 .detailTopBtn     {padding-bottom:20px; display:flex; justify-content: end; }
@@ -1467,11 +1483,11 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .notiBox { margin: 60px 0px 0; padding: 40px 60px 60px;}
 .suggestPg .accordion .viewNolineTable .tableNoti { margin-top: 8px;}
 .suggestPg .accordion .formListTable .radio { padding-top: 15px;}
-.suggestPg .accordion .formListTable .radioBtn { padding-top: 12px;}
+.suggestPg .accordion .formListTable .radioBtn { height: auto; padding-top: 12px;}
 .suggestPg .textTable th, 
 .suggestPg .textTable td { vertical-align: middle;}
 .suggestPg .accordion .titH4.hasLine { padding: 0;}
-.suggestPg .titH5 { display: flex; align-items: center;}
+.suggestPg .titH5 { display: flex; align-items: center; margin-bottom: 10px;}
 .suggestPg .titH5 .tit { margin-right: 60px;} 
 .suggestPg .titH5 .desc { font-weight: 400;} 
 
@@ -1490,3 +1506,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .totalInfoBox .foot {}
 .totalInfoBox .foot button { width: 100%; }
 .totalInfoBox .foot button + button { margin-top: 10px;}
+
+
+.comment .label { display: block; margin-top: 40px; font-weight: 700;}
+.comment .textarea { margin-top: 20px;}
+.comment .label .date { margin-left:  20px; color: #888; font-weight: 400;}
+.comment .replies { margin-left: 60px;}
+.comment .reply .label::before ,
+.comment .replies .label::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
+.comment .reply.isHide { display: none;}
