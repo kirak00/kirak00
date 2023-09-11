@@ -37,11 +37,11 @@
         <div class="searchControlBox">
           <div class="searchControlGroup">
             <div class="searchControlItem">
-              <label for="selectLabelState" class="label">날짜 선택</label>
-              <div class="formRow">
-                <input type="text" id="selectLabelState" class="input wid360" value="2023-07-01~2023-08-15" /> 
-                <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
-              </div>
+              <div class="rangeControl">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>              
             </div>
             <div class="searchBtns right">
               <button type="button" class="btnSuccess auto">조회</button>

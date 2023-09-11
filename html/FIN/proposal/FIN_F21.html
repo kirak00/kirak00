@@ -37,67 +37,66 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">제안서 제출 유무</label>
-              <div class="formRow">
-                
-                <select id="selectLabelState">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </div>
+          <div class="searchControlItem expand">
+            <label for="label_tit_1" class="label">대출 신청 번호 </label>
+            <div class="formRow">
+              <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelDone" class="label">심사 완료 유무</label>
-              <div class="formRow">
-                
-                <select id="selectLabelDone">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPay" class="label srOnly">제출자</label>
-              <div class="formRow">
-                <input class="input wid400" type="text" name="" id="selectLabelPay" placeholder="제출자를 입력해 주세요" value="">
-              </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelArea" class="label">지역</label>
-              <div class="formRow">
-                
-                <select id="selectLabelArea">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPatent" class="label">자금 용도</label>
-              <div class="formRow">
-                
-                <select id="selectLabelPatent">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </div>
-            </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPa" class="label">담보 유무</label>
-              <div class="formRow">
-                
-                <select id="selectLabelPa">
-                  <option>전체</option>
-                  <option>셀렉트</option>
-                </select>
-              </div>
-            </div>
-            <span class="checkbox">
-              <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-              <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
-            </span>
           </div>
+          <div class="searchControlItem">
+            <label for="selectLabelState" class="label">제안 상태</label>
+            <div class="formRow">
+              <select id="selectLabelState">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label id="selectLabelPay" class="label">희망 신청 금액</label>
+            <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+              <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+              <span class="unit">억</span>
+              <span class="line"></span>
+              <select title="범위">
+                <option>이상</option>
+                <option>이하</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="searchControlGroup">
+          <div class="searchControlItem">
+            <label for="selectLabelArea" class="label">지역</label>
+            <div class="formRow">
+              <select id="selectLabelArea">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem expand">
+            <label for="selectLabelPatent" class="label">자금 용도</label>
+            <div class="formRow">
+              <select id="selectLabelPatent">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelPa" class="label">담보 유무</label>
+            <div class="formRow">
+              <select id="selectLabelPa">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+            <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+          </span>
           <div class="searchBtns">
             <button type="button" class="btnReset">초기화</button>
             <button type="button" class="btnSuccess">조회</button>

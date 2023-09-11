@@ -48,23 +48,23 @@
             <span class="uit">~</span>
             <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
           </div>
-          <div class="searchControlItem">
+          <div class="searchControlItem expand">
             <label for="selectLabel_1" class="label">조직별</label>
-            <div class="formRow">
-              
+            <div class="formRow formGroup">
               <select id="selectLabel_1" title="조직선택 > 지역본부">
                 <option>지역본부</option>
                 <option>셀렉트</option>
               </select>
-              
-              <select  title="조직선택 > 지점" class="wid300">
+              <span class="line"></span>
+              <select  title="조직선택 > 지점">
                 <option>지점</option>
                 <option>셀렉트</option>
               </select>
             </div>
           </div>
-
-          <div class="searchControlItem">
+        </div>
+        <div class="searchControlGroup">
+          <div class="searchControlItem expand">
             <label for="selectLabel_2" class="label">대출 신청 번호</label>
             <div class="formRow">
               <input class="input" type="text" name="" id="selectLabel_2" placeholder="대출 신청 번호를 입력해 주세요" value="">
@@ -72,10 +72,10 @@
           </div>
           <div class="searchControlItem">
             <label for="selectLabel_3" class="label">대출 금액</label>
-            <div class="formRow">
-              
-              <input class="input wid100" type="text" name="" id="selectLabel_3" value="">
+            <div class="formRow formGroup">
+              <input class="input wid82" type="text" name="" id="selectLabel_3" value="">
               <span class="unit">억</span>
+              <span class="line"></span>
               <select title="대출 금액 범위" >
                 <option>이상</option>
                 <option>이하</option>
@@ -85,36 +85,33 @@
           <div class="searchControlItem">
             <label for="selectLabel_4" class="label">담보 유무</label>
             <div class="formRow">
-              
               <select title="담보 유무" id="selectLabel_4" >
                 <option>전체</option>
                 <option>이하</option>
               </select>
             </div>
           </div>
-
-
+        </div>
+        <div class="searchControlGroup">
           <div class="searchControlItem">
             <label for="selectLabelPatent" class="label">정산 여부</label>
             <div class="formRow">
-              
               <select id="selectLabelPatent">
                 <option>전체</option>
                 <option>셀렉트</option>
               </select>
             </div>
           </div>
-          <div class="searchControlItem">
+          <div class="searchControlItem expand">
             <label for="selectLabel_6" class="label">법인명</label>
             <div class="formRow">
-              
               <input class="input" type="text" name="" id="selectLabel_6" placeholder="법인명을 입력해 주세요" value="">
             </div>
           </div>
-        </div>
-        <div class="searchBtns">
-          <button type="button" class="btnReset">초기화</button>
-          <button type="button" class="btnSuccess">조회</button>
+          <div class="searchBtns">
+            <button type="button" class="btnReset">초기화</button>
+            <button type="button" class="btnSuccess">조회</button>
+          </div>
         </div>
       </div>
       <!-- 검색 -->
@@ -125,7 +122,6 @@
           총 <strong>15</strong>건
           <span class="count">2023-07-01 한국신용정보원 데이터 수집 기준</span>
         </div>
-        
         <div class="formRow" role="group">
           <select title="보기갯수 선택">
             <option>10개씩 보기</option>

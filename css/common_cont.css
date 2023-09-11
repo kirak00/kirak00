@@ -495,15 +495,15 @@ select.wid430 { min-width: 430px;}
 
 .searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 40px  32px 40px; background: #EAFAEB; border-radius: 16px;}
 .main .searchControlBox { background: #fff;  padding: 32px 115px 32px 40px; } 
-.searchControlBox.fullType { padding-right: 40px;}
+/* .searchControlBox.fullType { padding-right: 40px;}
 .searchControlBox.fullType .searchControlItem,
 .searchControlBox.fullType .formRow,
 .searchControlBox.fullType .formRow select,
 .searchControlBox.fullType .formRow input { flex: 1;}
-.searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;}
+.searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;} */
 
 
-.searchControlBox .searchBtns { display:flex; gap:10px; }
+.searchControlBox .searchBtns { display:flex; gap:10px; margin-left: auto; }
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
@@ -516,11 +516,11 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 20px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
-.searchControlItem .rangeControl .input { width: 272px;}
+.searchControlItem .rangeControl .input { width: 142px;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
-.searchControlItem .input, 
+.searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 30px) center no-repeat; color: #333; font-size: 20px; }
 .searchControlItem .input { height: 100%; padding: 0 16px 0 30px; color: #333; font-size: 20px;}
@@ -533,16 +533,16 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; height: 100%; background-color: #fff;}
 .searchControlItem .formRow.formGroup > * { border-width: 1px 0px 1px; border-style: solid; border-color: #ddd; border-radius: 0;}
 .searchControlItem .formRow.formGroup > *:last-child { border-width: 1px 1px 1px 0px;  border-radius: 0 8px 8px 0;} 
+/* 버튼을 제외한 폼 확장 */
 .searchControlItem.expand,
 .searchControlItem.expand .formRow,
-.searchControlItem.expand .formRow > * { flex: 1}
+.searchControlItem.expand .formRow > *:not(button):not(.line) { flex: 1} 
 .searchControlItem.expand2,
 .searchControlItem.expand2 .formRow,
-.searchControlItem.expand2 .formRow > * { flex: 2}
+.searchControlItem.expand2 .formRow > *:not(button):not(.line) { flex: 2} 
 .searchControlItem .dateControl .input { width: 140px; }
+.searchControlItem.wid560 { max-width: 560px;}
 
-.searchControlGroup .rangeControl .input {height:64px; }
-.searchControlGroup .rangeControl .btnCalendar {width:64px; height:64px; }
 
 .searchBtns.right { margin-left: auto;}
 /*  div table */
