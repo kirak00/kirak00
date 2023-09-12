@@ -554,32 +554,23 @@ function accordion() {
     }
     onButtonClick(e) {
       const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
-      var $exceptTarget = this.buttonEl.querySelector(" button, .checxkbox, label, input[type=checkbox]");
-     
       if (accordionOption === 'only') { //only type
         if (this.buttonEl.ariaExpanded === 'false') { //close 
           document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
-            if (!($(e.target).is($exceptTarget))) {
-              return;
-            }
             trigger.setAttribute('aria-expanded', 'false');
             this.buttonEl.setAttribute('aria-expanded', 'true');
             // this.buttonEl.closest('.accordionItem').classList.add('isOpen')
-            console.log('close')
-            
           })
           document.querySelectorAll('.accordionPanel').forEach((panel) => {
             panel.setAttribute('hidden', '');
             this.contentEl.removeAttribute('hidden');
-            console.log('open')
           })
-          return;
-        } else { // open
-          this.buttonEl.setAttribute('aria-expanded', 'false');
-          this.contentEl.setAttribute('hidden', '');
-          // this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
-          return;
-        }
+        } 
+        // else { // open
+        //   this.buttonEl.setAttribute('aria-expanded', 'false');
+        //   this.contentEl.setAttribute('hidden', '');
+        //   // this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
+        // }
       } else { //toggle type
         this.toggle(!this.open);
       }

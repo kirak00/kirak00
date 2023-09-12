@@ -576,8 +576,8 @@ select.wid430 { min-width: 430px;}
 **********  accordion  **********
 *****************************/
 .faqPage .accordion { display: flex; flex-direction: column; gap: 30px;}
-.accordion .accordionItem {border: 1px solid #ddd; border-radius: 16px;  }
-.accordion .accordionTitle {  font-weight: 700; }
+.accordion .accordionItem { border: 1px solid #ddd; border-radius: 16px;  }
+.accordion .accordionTitle { position:relative; font-weight: 700; }
 .accordion .accordionTitle .q { display: inline-block; width: 30px; height: 30px; line-height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; vertical-align: middle; text-align: center;}
 .accordionTrigger { position: relative; display: block; width: 100%; padding: 32px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #069B66; }
@@ -588,9 +588,9 @@ select.wid430 { min-width: 430px;}
 
 .agreeAccordion .accordionTrigger { height: 92px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
 .agreeAccordion { border-top: 2px solid #069B66}
-.agreeAccordion .accordionTitle.list:not(:first-child) { border-top: 1px solid #ddd;}
-.agreeAccordion .accordionTitle .checkbox { height: 92px;}
-.agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center;}
+.agreeAccordion .accordionTitle:not(:first-child) { border-top: 1px solid #ddd;}
+.agreeAccordion .accordionTitle .checkbox {position: absolute;  top: 0; height: 100%; display: flex; align-items: center; padding: 0 40px;}
+.agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center; height: 100%;}
 .agreeAccordion .accordionTitle .required { margin-left: 8px; color: #069B66;}
 .agreeAccordion .accordionPanel { margin: 0 ; padding: 30px 40px; background: #fff;}
 /****************************
