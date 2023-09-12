@@ -1383,7 +1383,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 
 /* 가이드 */
-ul.guideBox       {padding:40px; background:#F6FBF7; border-radius: 16px; margin-top:40px; }
+ul.guideBox       {padding:40px; background:#F6FBF7; color: #555; border-radius: 16px; margin-top:40px; }
 ul.guideBox li { line-height: 1.5;}
 .bbsDetailBox .viewLineTable { margin-top: 20px; }
 .bbsDetailBox:has(.titBox) .viewLineTable { margin-top: 40px; }
