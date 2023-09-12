@@ -282,12 +282,17 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 .btnHelp:focus { outline: 2px solid #069B66;}
 
 button.xl      {height:70px; }
-button.sm       {height:50px; }
+button.sm       {height:50px; padding:0 30px; }
 .wid530      {min-width:530px;}
 
 /****************************
 **********  아이콘  **********
 *****************************/
+
+em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-radius: 15px; border:1px solid #069B66; color:#069B66; }
+.companyInfo em.greenLine     {margin-left:30px;}
+.companyInfo button.btnBlack     {margin-left:30px;}
+
 /* grid 안 아이콘 */
 .icoFile::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_nonelist_g.png')  no-repeat center / 36px 36px; }
 .icoReview::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_search_g.png')  no-repeat center / 36px 36px; }
