@@ -518,8 +518,8 @@ function faq(){
         $(this).next("dd").attr({'aria-hidden' : false});
         this.status = false;
       }else{
-        $(this).addClass("on");
-        $(this).siblings("dt").removeClass("on");
+        $(this).addClass("on").attr({'aria-expanded':"true"});
+        $(this).siblings("dt").removeClass("on").attr({'aria-expanded':"false"});;
         $(this).siblings("dd").attr({'aria-hidden' : false});
         $(this).next("dd").attr({'aria-hidden' : true});
         this.status = true;
