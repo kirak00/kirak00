@@ -512,19 +512,19 @@ function faq(){
     dd.eq(0).addClass("on");
     var focusChk = false;
     
-    dt.on("focus",function(){
-      $(this).addClass("on");
-      $(this).siblings("dt").removeClass("on");
-      focusChk = true;
-      console.log(2, focusChk)
-      setTimeout(()=>{
-        focusChk = false;
-      },1000)
+    dt.on("click",function(){
+      if(this.status){
+        $(this).removeClass("on");
+        $(this).next("dd").attr({'aria-hidden' : false});
+        this.status = false;
+      }else{
+        $(this).addClass("on");
+        $(this).siblings("dt").removeClass("on");
+        $(this).siblings("dd").attr({'aria-hidden' : false});
+        $(this).next("dd").attr({'aria-hidden' : true});
+        this.status = true;
+      }
     })
-    // dt.on("click",function(){
-    //   console.log(1, focusChk)
-    //   if(!focusChk) $(this).toggleClass("on");
-    // });
   })
 }
 
