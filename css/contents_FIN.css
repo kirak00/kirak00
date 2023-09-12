@@ -183,13 +183,14 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 
 
 
-.main_dashboard ul.dashboardWrap.rank          {overflow: hidden; display:block; display:flex; gap:20px; }
-.main_dashboard ul.dashboardWrap li.rankItem   {margin-left:00px; width:calc(25% - 15px); padding:40px 40px 0; border:1px solid #ddd; border-radius:16px;  }
+.main_dashboard ul.dashboardWrap.rank          {overflow: hidden; display:block; gap:20px; }
+.main_dashboard ul.dashboardWrap li.rankItem   {float:left; margin-left:20px; width:calc(25% - 15px); padding:40px 20px 0; border:1px solid #ddd; border-radius:16px;  }
 .main_dashboard ul.dashboardWrap li.rankItem:nth-child(4n+1)   {margin-left:0px; }
 .main_dashboard ul.dashboardWrap li.rankItem.right   {float:right; }
 .main_dashboard ul.dashboardWrap li.rankItem.long     { height: 520px;  }
 .main_dashboard ul.dashboardWrap li.rankItem.short    { height:160px;  }
 .main_dashboard ul.dashboardWrap li.rankItem.short + .short    { margin-top:20px; }
+.main_dashboard ul.dashboardWrap.rank li.chart_pie  {float:left; margin-left:20px; height:520px; }
 
 .main_dashboard ul li.rankItem .rankTitBox    { text-align: center; font-size:24px;   }
 .main_dashboard ul li.rankItem .rankTitBox strong    {display:none; }
@@ -198,7 +199,7 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .main_dashboard ul li.rankItem .rankTitBox button.prev  {background:url(../images/FIN/main/ico_24_left_g.png) no-repeat 50% 50%; }
 .main_dashboard ul li.rankItem .rankTitBox button.next  {background:url(../images/FIN/main/ico_24_right_g.png) no-repeat 50% 50%; }
 .main_dashboard ul li.rankItem .rankTabCont    { }
-.main_dashboard ul li.rankItem .rankTabCont ol   {display:none; padding:40px 0 0;  }
+.main_dashboard ul li.rankItem .rankTabCont ol   {display:none; padding:40px 20px 0;  }
 .main_dashboard ul li.rankItem .rankTabCont ol.on   {display:block;  }
 .main_dashboard ul li.rankItem .rankTabCont ol li  {height:58px; font-size:18px; padding:16px 0 0 30px; background:#F6FBF7;    }
 .main_dashboard ul li.rankItem .rankTabCont ol li + li  {margin-top:20px; }

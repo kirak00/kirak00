@@ -172,7 +172,6 @@
                  $("body").addClass("printSetting");
                  myChart1.resize()
                  myChart2.resize();
-                //  return false;
                  setTimeout(function(){
                    print()
                  },30)
@@ -180,7 +179,7 @@
                    $("body").removeClass("printSetting");
                    myChart1.resize()
                    myChart2.resize();
-                 },30)
+                 },50)
                 }
                
                </script>  
@@ -338,80 +337,80 @@
               </div>
               <script>
 
-                // var myChart2 = echarts.init(document.getElementById('dashChart_2'));
-                // var option = {
-                //     tooltip: {
-                //       trigger: 'axis',
-                //       axisPointer: {
-                //         type: 'cross',
-                //         label: {
-                //           backgroundColor: '#6a7985'
-                //         }
-                //       }
-                //     },
+                var myChart2 = echarts.init(document.getElementById('dashChart_2'));
+                var option = {
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'cross',
+                        label: {
+                          backgroundColor: '#6a7985'
+                        }
+                      }
+                    },
                     
-                //     legend: {
-                //       data: ['실행 금액'],
-                //       right:'20px',
-                //       icon : 'circle',
-                //       textStyle : {
-                //         fontSize: '16px',
-                //         color : '#555'
-                //       },
-                //       itemStyle : {
-                //         shadowColor:'#ddd'
-                //       },
+                    legend: {
+                      data: ['실행 금액'],
+                      right:'20px',
+                      icon : 'circle',
+                      textStyle : {
+                        fontSize: '16px',
+                        color : '#555'
+                      },
+                      itemStyle : {
+                        shadowColor:'#ddd'
+                      },
 
-                //     },
+                    },
 
-                //     grid: {
-                //       left: '1%',
-                //       right: '3%',
-                //       bottom: '0%',
-                //       containLabel: true
-                //     },
-                //     xAxis: [
-                //       {
-                //         type: 'category',
-                //         boundaryGap: false,
-                //         data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-                //         axisLabel: {
-                //           fontSize:16
-                //         }
-                //       }
-                //     ],
-                //     yAxis: [
-                //       {
-                //         type: 'value'
-                //       }
-                //     ],
-                //     series: [
-                //       {
-                //         name: '실행 금액',
-                //         type: 'line',
-                //         symbol : "none",
-                //         color: "#3295CD",
-                //         lineStyle : {
-                //           width:3,
-                //         },
-                //         areaStyle: {
-                //           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                //             {
-                //               offset: 0,
-                //               color: 'rgba(50, 149, 205, 0.15)'
-                //             },
-                //             {
-                //               offset: 1,
-                //               color: 'rgba(50, 149, 205, 0.00)'
-                //             }
-                //           ])
+                    grid: {
+                      left: '1%',
+                      right: '3%',
+                      bottom: '0%',
+                      containLabel: true
+                    },
+                    xAxis: [
+                      {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        axisLabel: {
+                          fontSize:16
+                        }
+                      }
+                    ],
+                    yAxis: [
+                      {
+                        type: 'value'
+                      }
+                    ],
+                    series: [
+                      {
+                        name: '실행 금액',
+                        type: 'line',
+                        symbol : "none",
+                        color: "#3295CD",
+                        lineStyle : {
+                          width:3,
+                        },
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(50, 149, 205, 0.15)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(50, 149, 205, 0.00)'
+                            }
+                          ])
         
-                //         },
-                //         data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
-                //       },
-                //     ]
-                //   };
-                //   myChart2.setOption(option);
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                      },
+                    ]
+                  };
+                  myChart2.setOption(option);
 
               </script>
             </li>
@@ -897,84 +896,6 @@
 
 
   
-
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** show -->
-  <div class="layerWrap " id="dashboard_setting_Layer" role="dialog" aria-modal="true" >
-    <div class="layerBody">
-      <div class="layerHead">
-        <h3>대시보드 설정</h3>
-        <p>대시보드에 노출할 항목을 설정하고 순서를 변경할 수 있습니다. <br>
-          최소 8개 이상의 노출 항목을 설정해 주세요.</p>
-        <button type="button" class="layerClose" aria-label="레이어 닫기"></button>
-      </div>
-      <div class="layerCont">
-        <div class="dashboard_setting">
-           <table>
-            <caption>대시보드 화면 설정</caption>
-            <colgroup>
-              <col width="130px" />
-              <col width="140px" />
-              <col width="" />
-              <col width="100px"   />
-            </colgroup>
-            <thead>
-              <th class="chk">노출</th>
-              <th class="num">번호</th>
-              <th class="tit">항목명</th>
-              <th class="idx">순서</th>
-            </thead>
-            <tbody id="sortable">
-              <tr>
-                <td class="chk">고정</td>
-                <td class="num">1</td>
-                <td class="tit">취급건수</td>
-                <td class="move"><span></span></td>
-              </tr>
-              <tr class="moveable">
-                <td class="chk">
-                  <span class="checkbox">
-                    <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-                    <label for="searchCheckBox"><span></span></label>
-                  </span></td>
-                <td class="num">5</td>
-                <td class="tit">취급액</td>
-                <td class="move"><span></span></td>
-              </tr>
-            </tbody>
-           </table>
-        </div>
-      </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" onclick="layer_close('dashboard_setting_Layer')"  aria-label="레이어 닫기">적용</button>
-      </div>
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
-
-<script>
-
-  
-$(function() {
-  // $("tr").draggable({ helper: "clone" , axis: "y" });
-  $( "#sortable" ).sortable({
-      axis: "y" ,cursor: "move",
-      update : function(){
-        
-      }
-    },{ cancel: "tr.tr_fix" },{
-      items: "tr.moveable"
-    });
-
-    // $( "tr.moveable" ).draggable({ helper: "clone"});
- 
-});
-
-</script>
 
 
 
