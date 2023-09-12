@@ -98,6 +98,7 @@
 .resultCont + .guideBox { margin-top: 80px; }
 
 .guideBox { padding: 40px; background: #F6FBF7; color: #069B66; border-radius: 16px; line-height: 1.5;}
+.guideBox.gray { color: #555; }
 .guideBox .notiTxt + .guideList { margin-top: 20px;}
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
 .layerCont .guidTxt { margin-top: 40px; font-size: 18px;}
@@ -1578,14 +1579,33 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
 .processStepWrap .left .tit { line-height: 55px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 
 .processStepWrap .left ol { display: flex; gap: 30px; margin-top: 20px;}
-.processStepWrap .left .step { position: relative; width: 227px; height: 330px; background: #FAFAFA;}
+.processStepWrap .left .step { position: relative; width: 227px; height: 330px; background: #FAFAFA; border-radius: 16px; text-align: center;}
 .processStepWrap .left .step::after { content: ''; display: block; width: 46px; height: 46px; background: #fff; border-radius: 50%; border: 1px solid #ddd; position: absolute; top: 113px; right: -38px; z-index: 1;}
 
 .processStepWrap .right .tit { line-height: 55px; background: #4C9DA2; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; }
-.processStepWrap .right .step { position: relative; width: 372px; height: 330px; margin-top: 20px; background: #FAFAFA; text-align: center;}
-.processStepWrap .right .ballon { margin-top: 20px;}
-/* .processStepWrap .right li */
-.processStepWrap .ballon { display: inline-block; line-height: 36px; padding: 0 18px; background: #A9C7DF; border-radius: 36px; }
+.processStepWrap .right .step { position: relative; width: 372px; height: 330px; border-radius: 16px; margin-top: 20px; background: #FAFAFA; text-align: center;}
+.processStepWrap .right ol { display: flex;}
+.processStepWrap .right ol li { flex: 1;}
+
+
+.processStepWrap .ballon { display: inline-block; margin-top: 20px; line-height: 36px; padding: 0 18px; background: #A9C7DF; border-radius: 36px; }
+.processStepWrap .ballon.yellow { background: #FFE074; }
+
+.processStepWrap .ico1 { display: block;}
+.processStepWrap .ico1::before { content: ''; display: inline-block; width: 105px; height: 96px; background: url('../images/common/ico_loan1.png')  no-repeat center / cover;}
+.processStepWrap .ico2 { display: block;}
+.processStepWrap .ico2::before { content: ''; display: inline-block; width: 100px; height: 100px; background: url('../images/common/ico_loan2.png')  no-repeat center / cover;}
+.processStepWrap .ico3 { display: block;}
+.processStepWrap .ico3::before { content: ''; display: inline-block; width: 105px; height: 100px; background: url('../images/common/ico_loan3.png')  no-repeat center / cover;}
+.processStepWrap .ico4 { display: block;}
+.processStepWrap .ico4::before { content: ''; display: inline-block; width: 105px; height: 100px; background: url('../images/common/ico_loan4.png')  no-repeat center / cover;}
+.processStepWrap .ico5 { display: block;}
+.processStepWrap .ico5::before { content: ''; display: inline-block; width: 105px; height: 100px; background: url('../images/common/ico_loan5.png')  no-repeat center / cover;}
+.processStepWrap .ico6 { display: block;}
+.processStepWrap .ico6::before { content: ''; display: inline-block; width: 105px; height: 100px; background: url('../images/common/ico_loan6.png')  no-repeat center / cover;}
+
+.processStepWrap .number {color: #4C9DA2; font-size: 16px; font-weight: 500; }
+.processStepWrap .name { font-size: 18px; font-weight: 700; }
 
 .boxWrap { display: flex; gap: 20px;}
 .boxWrap.flatform { height: 340px;}
