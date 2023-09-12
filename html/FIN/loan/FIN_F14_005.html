@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="../../../css/contents_FIN.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
@@ -1013,11 +1015,8 @@
 
             <script>
               $("#btn_confirm_loan_company").on("click",function(){
+                console.log(this)
                 layer_open('layer_loan_company',this)
-              })
-
-              $("#btn_confirm_loan_change").on("click",function(){
-                layer_open('btn_confirm_loan_change_office',this)
               })
             </script>
             
@@ -1049,49 +1048,79 @@
     <!-- **************** -->
 
 
-    
-
-  <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show" id="btn_confirm_loan_change_office" role="dialog" aria-modal="true" ><!-- show class 삭제 하면 숨김처리 -->
+  <div class="layerWrap modal show" id="layer_load_addFile" role="dialog" aria-modal="true" ><!-- show class 삭제 하면 숨김처리 -->
     <!-- 너비 800px 경우 .sizeM 추가 -->
     <div class="layerBody wid800">
       <div class="layerHead ">
-        <h3>심사 영업점/부서 변경</h3>
-        <button type="button" class="layerClose" popup-close="btn_confirm_loan_change_office" aria-label="레이어 닫기"></button>
+        <h3>추가 서류 요청</h3>
+        <button type="button" class="layerClose" popup-close="layer_load_addFile" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
         <div class="guideBox">
           <ul class="guideList dot">
-            <li class="list">심사 영업점 변경 후에는 해당 업체의 정보를 열람할 수 없습니다.</li>
-            <li class="list">심사 진행 시 고객님과 연락한 이력이 있는 경우, 담당 영업점이 변경되었음을 반드시 안내 부탁드립니다.</li>
+            <li class="list">추가 서류가 필요한 경우 고객님께 요청할 수 있습니다.</li>
+            <li class="list">서류명은 1개씩 입력 부탁드리며, 최대 5개까지 요청할 수 있습니다.</li>
           </ul>
         </div>
-        <div class="formListTable change_office_form">
+        <div class="required rightTxt">
+          <em>*</em> 표시는 필수 입력 항목입니다.
+        </div>
+        <div class="formListTable formAdd ">
           <table>
-            <caption>심사 영업점/부서 변경</caption>
+            <caption>추가 서류 요청</caption>
               <col width="186px">
             <colgroup>
               <col width="auto">
             </colgroup>
             <tbody>
               <tr>
-                <th scope="row">
-                  <label id="inpBizNum">영업점 선택 </label>
-                </th>
+                <th scope="row">법인명</th>
+                <td>(주)길동건설</td>
+              </tr>
+              <tr class="sm">
+                <th scope="row"><label for="input_addFile_1"><em class="required">*</em>서류명1</label></th>
                 <td>
-                  <div class="formRow " role="group" aria-labelledby="inpBizNum">
-                    <input class="input" type="text" title="사업자등록번호(1/3)" maxlength="3" placeholder="000" value="새마을금고중앙회" readonly>
+                  <div class="formRow full">
+                    <input type="text" class="input" id="input_addFile_1" placeholder="서류명을 입력해 주세요.">
+                    <button type="button" class="btnPlus"><span class="hide">입력 라인 추가</span></button>
                   </div>
-                  <div class="formRow full" role="group" aria-labelledby="inpBizNum">
-                    <select name="" id="">
-                      <option value="">지점</option>
-                    </select>
-                    <select name="" id="">
-                      <option value="">영업점</option>
-                    </select>
-                    <button type="button" class="btnBlack">지점 선택</button>
+                </td>
+              </tr>
+              <tr class="sm">
+                <th scope="row"><label for="input_addFile_2"><em class="required">*</em>서류명2</label></th>
+                <td>
+                  <div class="formRow full">
+                    <input type="text" class="input" id="input_addFile_2" placeholder="서류명을 입력해 주세요.">
+                    <button type="button" class="btnMinus"><span class="hide">입력 라인 삭제</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="sm">
+                <th scope="row"><label for="input_addFile_3"><em class="required">*</em>서류명3</label></th>
+                <td>
+                  <div class="formRow full">
+                    <input type="text" class="input" id="input_addFile_3" placeholder="서류명을 입력해 주세요.">
+                    <button type="button" class="btnMinus"><span class="hide">입력 라인 삭제</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="sm">
+                <th scope="row"><label for="input_addFile_4"><em class="required">*</em>서류명4</label></th>
+                <td>
+                  <div class="formRow full">
+                    <input type="text" class="input" id="input_addFile_4" placeholder="서류명을 입력해 주세요."  id="">
+                    <button type="button" class="btnMinus"><span class="hide">입력 라인 삭제</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="sm">
+                <th scope="row"><label for="input_addFile_5"><em class="required">*</em>서류명4</label></th>
+                <td>
+                  <div class="formRow full">
+                    <input type="text" class="input" id="input_addFile_5" placeholder="서류명을 입력해 주세요."  id="">
+                    <button type="button" class="btnMinus"><span class="hide">입력 라인 삭제</span></button>
                   </div>
                 </td>
               </tr>
@@ -1099,15 +1128,10 @@
           </table>
         </div>
 
-        <div class="office_select">
-          <span>선택 영업점</span>
-          <strong>새마을 금고 중구 영업점</strong>
-          <p>해당 영업점으로 심사 영업점을 변경합니다.</p>
-        </div>
 
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" >심사 영업점/부서 변경하기</button>
+        <button type="button" class="btnSuccess xl" >등록</button>
       </div>
     </div>
     <div class="layerDimm"></div>

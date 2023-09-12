@@ -284,6 +284,10 @@
                             </select>
                           </div>
                           <div class="formAdd">
+                            <div class="formRow none">
+                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
+                              <button type="button" class="btnMinus"></button>
+                            </div>
                             <div class="formRow">
                               <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
                               <button type="button" class="btnPlus"></button>
@@ -296,7 +300,7 @@
                           <script>
                             $(function(){
                               $(document).on("click", ".btnPlus", function() {
-                                var $listblock = $('.formAdd .formRow').eq(0).clone();
+                                var $listblock = $('.formAdd .formRow').eq(0).clone().removeClass("none");
                                 $('.formAdd').append($listblock);
                               });
                               $(document).on("click", ".btnMinus", function() {

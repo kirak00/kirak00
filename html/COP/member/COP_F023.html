@@ -61,16 +61,11 @@
             <option value="">SKT</option>
           </select>
         </div>
-        <div class="formRow full">
-          <input type="text" class="input" placeholder="휴대폰 번호" title="휴대폰 번호">
+        <div class ="formRow full">
+          <input type="text" class="input" value="010" title="휴대폰 번호 (1/3)">
+          <input type="text" class="input" title="휴대폰 번호(2/3)">
+          <input type="text" class="input" title="휴대폰 번호(3/3)">
           <button type="button" class="btnSuccess" disabled>인증</button>
-        </div>
-        <div class="formRow full">
-          <span class="inputTimer">
-            <input type="text" class="input timer" placeholder="인증번호 입력" title="인증번호 입력">
-            <span class="unit"></span>
-          </span>
-          <button type="button" class="btnSuccess" onclick='layer_alert("본인 확인이 완료되었습니다.", this, {confirm:{txt:"로그인", callback:function(){alert(3)}}})''>확인</button>
         </div>
         <div class="formRow full">
           <span class="inputTimer">
