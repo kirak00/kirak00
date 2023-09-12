@@ -31,22 +31,24 @@
   <!-- layer : start -->
   <!-- **************** -->
   <script>
-    function sample_alert_2(obj){
-      layer_alert(
+      layer_confirm(
+        "1:1 문의를 이용하기 위해서<br/> 로그인이 필요해요.<br/> 로그인 또는 회원 가입 후 이용할 수 있어요.", //  confirm 문구
+        this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
         {
-          ment:"Loan&Biz 플랫폼 이용과 관련한 궁금증을 해결해드려요. 대출 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해 주세요."
-        }, 
-        obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
-        {
-          confirm:{
-            txt:"문의하기",  // 버튼 문구 변경
-            callback:function(){   // 버튼 callback func
+          confirm:{ //  확인 
+            txt : "로그인", 
+            callback : function(){ 
               alert(3)
             }
+          },
+          cancel:{ //  취소 
+            txt : "회원가입",
+            callback : function(){
+              alert(2)
+            }
           }
-        })
-    }
-    sample_alert_2();
+        }
+      )
   </script>
 
   <!-- **************** -->

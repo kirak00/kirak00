@@ -578,11 +578,11 @@ function accordion() {
             this.contentEl.removeAttribute('hidden');
           })
         } 
-        // else { // open
-        //   this.buttonEl.setAttribute('aria-expanded', 'false');
-        //   this.contentEl.setAttribute('hidden', '');
-        //   // this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
-        // }
+        else { // open
+          this.buttonEl.setAttribute('aria-expanded', 'false');
+          this.contentEl.setAttribute('hidden', '');
+          // this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
+        }
       } else { //toggle type
         this.toggle(!this.open);
       }
