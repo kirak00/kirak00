@@ -1,4 +1,23 @@
 
+$.datepicker.setDefaults({
+  dateFormat: 'yymmdd',
+  prevText: '이전 달',
+  nextText: '다음 달',
+  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+  showMonthAfterYear: true,
+  yearSuffix: '년',
+  buttonImage: "../../images/common/ico_24_calendar_primary.png",
+  buttonText: "달력입력",
+  buttonImageOnly: false,
+  showOn: "button",
+dateFormat: "yy-mm-dd"
+});
+
+
 /* init action */
 $(function(){
 
@@ -32,19 +51,8 @@ $(function(){
 
 
   
-  $( ".calendar" ).datepicker({
-    showOn: "button",
-    buttonImage: "../../images/common/ico_24_calendar_primary.png",
-    buttonText: "달력입력",
-    buttonImageOnly: false,
-    dateFormat: "yy-mm-dd",
-    nextText: '다음 달',
-    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-    dayNames: ['일','월','화','수','목','금','토'],
-    dayNamesShort: ['일','월','화','수','목','금','토'],
-    yearSuffix: '년'
 
+  $( ".calendar" ).datepicker({
   });
 
   
@@ -127,7 +135,7 @@ function loginTab(){
   var tab = $(".loginTab .loginTabBtn").each(function(n){this.n=n});
   var input = $(".loginTab input")
   var titBox = $(".loginTit")
-  var cont = $(".loginTab li");
+  var cont = $(".loginTab > li");
   tab.click(function(){
     tab.attr({'aria-selected' : 'false'}).eq(this.n).attr({'aria-selected' : 'true'})
     cont.removeClass("on fast").eq(this.n).addClass("on")
@@ -416,15 +424,19 @@ function layer_confirm(msg,focusObj,btnObj){
   });
   var confirmTxt = '확인';
   var cancelTxt = '취소';
-  if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
-  if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt
+  var confirmClass = '';
+  var cancelClass = '';
+  if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt;
+  if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt;
+  if(btnObj?.confirm?.class) confirmClass = btnObj.confirm.class;
+  if(btnObj?.cancel?.class) cancelClass = btnObj.cancel.class;
   // let alertHTML = ''
   // alertHTML += ''
 
   let alertHTML = `
     <div class="alertBody"  tabindex="0"  role="alert">
-      <div class="confirmCont">`
-      + `  <p>${ment}</p>
+      <div class="confirmCont">
+        <p>${ment}</p>
       </div>
       <div class="alertFooter">
         <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
@@ -443,8 +455,8 @@ function layer_confirm(msg,focusObj,btnObj){
         <p>${ment}</p>
       </div>
       <div class="alertFooter">
-        <button class="alertConfirm btnSuccess" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
-        <button class="alertCancel btnWhite " aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
+        <button class="alertConfirm btnSuccess ${confirmClass}" aria-label="레이어 닫기" popup-confirm="alert">${confirmTxt}</button>
+        <button class="alertCancel btnWhite ${cancelClass}" aria-label="레이어 닫기" popup-cancel="alert">${cancelTxt}</button>
       </div> 
       <button class="alertClose" aria-label="레이어 닫기"><span class="hidden">팝업 닫기</span></button>
     </div>
