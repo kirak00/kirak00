@@ -546,30 +546,31 @@ function accordion() {
   class Accordion {
     constructor(domNode) {
       this.rootEl = domNode;
-      this.buttonEl = this.rootEl.querySelector('button[aria-expanded]');
+      this.buttonEl = this.rootEl.querySelector('[aria-expanded]');
       const controlsId = this.buttonEl.getAttribute('aria-controls');
       this.contentEl = document.getElementById(controlsId);
       this.open = this.buttonEl.getAttribute('aria-expanded') === 'true';
       this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
     }
-    onButtonClick() {
+    onButtonClick(e) {
       const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
       if (accordionOption === 'only') { //only type
         if (this.buttonEl.ariaExpanded === 'false') { //close 
           document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
             trigger.setAttribute('aria-expanded', 'false');
             this.buttonEl.setAttribute('aria-expanded', 'true');
-            this.buttonEl.closest('.accordionItem').classList.add('isOpen')
+            // this.buttonEl.closest('.accordionItem').classList.add('isOpen')
           })
           document.querySelectorAll('.accordionPanel').forEach((panel) => {
             panel.setAttribute('hidden', '');
             this.contentEl.removeAttribute('hidden');
           })
-        } else { // open
-          this.buttonEl.setAttribute('aria-expanded', 'false');
-          this.contentEl.setAttribute('hidden', '');
-          this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
-        }
+        } 
+        // else { // open
+        //   this.buttonEl.setAttribute('aria-expanded', 'false');
+        //   this.contentEl.setAttribute('hidden', '');
+        //   // this.buttonEl.closest('.accordionItem').classList.remove('isOpen')
+        // }
       } else { //toggle type
         this.toggle(!this.open);
       }
@@ -628,6 +629,7 @@ $.fn.calcTextareaHeight = function(e) {
     });
     if (_this.val().length > 0) {
       let scrollHeight = _this.prop('scrollHeight');
+      console.log('scrollHeight',scrollHeight)
       _this.css("height", scrollHeight+4+"px");
     } 
    

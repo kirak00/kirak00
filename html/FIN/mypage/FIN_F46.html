@@ -22,30 +22,62 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
-      <h2 class="pageTit">심사 요청 관리</h2>
+      <h2 class="pageTit">청구 관리</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><strong>심사 요청 관리</strong></a></li>
+          <li><a href="#none"><strong>청구 관리</strong></a></li>
       </ul>
     </section>
 
     <section class="">
       <fieldset>
         <legend>게시물 검색</legend>
-        <div class="searchControlBox fullType">
+        <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">비교 신청 건</label>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">청구 상태</label>
               <div class="formRow">
-                
                 <select id="selectLabelState">
-                  <option>S_230401_0001 시설 자금 대출</option>
-                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>전체</option>
+                  <option>옵션</option>
                 </select>
               </div>
             </div>
+            <div class="searchControlItem expand2">
+              <label for="labelLoan" class="label">대출 신청 번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
           </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">세금계산서발행 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>옵션</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">정산 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>옵션</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+          <!-- <div class="searchControlGroup">
+           
+          </div> -->
         </div>
       </fieldset>
       
@@ -53,12 +85,8 @@
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>0</strong>건</span>
           <div class="formRow" role="group">
-            <select title="보기 유형 선택">
-              <option>금융기관 오름차순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기 유형 선택">
-              <option>최신순</option>
+            <select title="정렬 선택(보기갯수)">
+              <option>10개씩 보기</option>
               <option>본부2</option>
             </select>
             <button type="button" class="btnDkGreen">적용</button>
@@ -73,41 +101,59 @@
   $(function() {
   
   var clients = [
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
-    },
-    { "Name1": "농협은행",
-      "Name2": "2023-08-10", 
+    { "Name1": "청구중",
+      "Name2": "S_230809_0010", 
+      "Name3": "1,350,000", 
+      "Name4": "2023-07-31", 
+      "Name5": "2023-08-05", 
+      "Name6": "미발행", 
+      "Name7": "미정산", 
+      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
     },
   ];
   
@@ -116,8 +162,14 @@
     data: clients,
     noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
     fields: [
-      { name: "Name1",  type: "text", title : "심사 중인 금융기관", width: "auto" },
-      { name: "Name2", type: "text", title : "심사 요청일", width: 240},
+      { name: "Name1",  type: "text", title : "청구 상태", width: 150 },
+      { name: "Name2", type: "text", title : "대출 신청 번호", width: 180},
+      { name: "Name3", type: "text", title : "청구 금액", width: 180},
+      { name: "Name4", type: "text", title : "청구일", width: 160},
+      { name: "Name5", type: "text", title : "이의신청 기일", width: 160},
+      { name: "Name6", type: "text", title : "세금계산서발행 여부", width: 180},
+      { name: "Name7", type: "text", title : "정산 여부", width: 150},
+      { name: "Name8", type: "button", title : "청구 내역서 보기", width: 180},
     ],
         
     pagerContainer: "#externalPager",

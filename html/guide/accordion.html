@@ -6,7 +6,7 @@
   <script src="../../js/juqery-3.7.0.min.js"></script>
    <script src="../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
   <script src="../../js/common.js"></script>
-  <script src="../../js/common_COP.js"></script>
+  <!-- <script src="../../js/common_COP.js"></script> -->
   <link rel="stylesheet" href="./guide.css" />
   <link rel="stylesheet" href="../../css/contents_COP.css">
   <title>SHINHAN</title>
@@ -54,9 +54,73 @@
 
 
     <h2 class="c-h2">Accordion - single open</h2>
+    <div class="accordion agreeAccordion" accordion-option="only">
+      <h3 class="accordionTitle">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_1" id="accordion1id">
+          <span class="accordionIcon"></span>
+        </button>
+        <span class="checkbox">
+          <input type="checkbox" id="agreeLabel1" name="agreeLabel1" >
+          <label for="agreeLabel1"><span></span>이용약관 동의 <em class="required">(필수)</em></label>
+        </span>
+      </h3>
+      <div id="acc1_1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
+        <span class="srOnly">답변</span>
+        ex) 제 1조 (목적)<br/>
+        법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
+        대출 분리하게 적용할
+      </div>
+      <h3 class="accordionTitle">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_2" id="accordion2id">
+          <span class="accordionIcon"></span>
+        </button>
+        <span class="checkbox">
+          <input type="checkbox" id="agreeLabel2" name="agreeLabel2" >
+          <label for="agreeLabel2"><span></span>개인정보 수집 및 이용 동의 <em class="required">(필수)</em></label>
+        </span>
+      </h3>
+      <div id="acc1_2" role="region" aria-labelledby="accordion2id" class="accordionPanel" hidden="">
+        <span class="srOnly">답변</span>
+        ex) 제 1조 (목적)<br/>
+        법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
+        대출 분리하게 적용할
+      </div>
+      <h3 class="accordionTitle">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_3" id="accordion3id">
+          <span class="accordionIcon"></span>
+        </button>
+        <span class="checkbox">
+          <input type="checkbox" id="agreeLabel3" name="agreeLabel3" >
+          <label for="agreeLabel3"><span></span>제3자 제공 동의 <em class="required">(필수)</em></label>
+        </span>
+      </h3>
+      <div id="acc1_3" role="region" aria-labelledby="accordion3id" class="accordionPanel" hidden="">
+        <span class="srOnly">답변</span>
+        ex) 제 1조 (목적)<br/>
+        법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
+        대출 분리하게 적용할
+      </div>
+      <h3 class="accordionTitle">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_4" id="accordion4id">
+          <span class="accordionIcon"></span>
+        </button>
+        <span class="checkbox">
+          <input type="checkbox" id="agreeLabel4" name="agreeLabel4" >
+          <label for="agreeLabel4"><span></span>마케팅 동의 <em class="">(선택)</em></label>
+        </span>
+      </h3>
+      <div id="acc1_4" role="region" aria-labelledby="accordion4id" class="accordionPanel" hidden="">
+        <span class="srOnly">답변</span>
+        ex) 제 1조 (목적)<br/>
+        법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
+        대출 분리하게 적용할
+      </div>
+    </div>
+
+    <h2 class="c-h2">Accordion - single open</h2>
     <div class="accordion" accordion-option="only">
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_1" id="accordion1id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_1" id="accordion1id">
           <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 제안서 마감일이 무엇인가요?<span class="accordionIcon"></span>
         </button>
       </h3>
@@ -67,7 +131,7 @@
         대출 분리하게 적용할
       </div>
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_2" id="accordion2id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_2" id="accordion2id">
           <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 대출 희망 날짜와 실제 대출 발생일은 얼마나 차이가 날까요?<span class="accordionIcon"></span>
         </button>
       </h3>
@@ -78,7 +142,7 @@
         대출 분리하게 적용할
       </div>
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_3" id="accordion3id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1_3" id="accordion3id">
         <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 대출 심사를 위해 필요한 서류는 무엇인가요?<span class="accordionIcon"></span>
         </button>
       </h3>
@@ -93,7 +157,7 @@
     <h2 class="c-h2">Accordion - toggle open</h2>
     <div class="accordion" accordion-option="toggle">
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_1" id="accordion1id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_1" id="accordion1id">
           <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 제안서 마감일이 무엇인가요?<span class="accordionIcon"></span>
         </button>
       </h3>
@@ -104,7 +168,7 @@
         대출 분리하게 적용할
       </div>
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_2" id="accordion2id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_2" id="accordion2id">
           <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 대출 희망 날짜와 실제 대출 발생일은 얼마나 차이가 날까요?<span class="accordionIcon"></span>
         </button>
       </h3>
@@ -115,7 +179,7 @@
         대출 분리하게 적용할
       </div>
       <h3 class="accordionTitle">
-        <button type="button" type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_3" id="accordion3id">
+        <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2_3" id="accordion3id">
         <span class="srOnly">질문</span><span class="q" aria-hidden="true">Q.</span> 대출 심사를 위해 필요한 서류는 무엇인가요?<span class="accordionIcon"></span>
         </button>
       </h3>
