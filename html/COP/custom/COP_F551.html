@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+ 
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">1:1문의</h2>
+      <p class="pageSub">대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해 주세요.</p>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>1:1 문의</span></a></li>
+          <li><a href="#none"><span>상세</span></a></li>
+          <li><a href="#none"><strong>재문의</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>15</strong>건</span>
+        <div class="formRow" role="group">
+          <select title="보기갯수 선택">
+            <option>10개씩 보기</option>
+            <option>본부2</option>
+          </select>
+          <button type="button" class="btnDkGreen">적용</button>
+        </div>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid2" class="bbs"></div>    
+        <div class="table_bt">
+          <div class="btn_r">
+            <button type="button" class="btnGray">문의하기</button>
+          </div>
+        </div>
+        <div id="externalPager2" class="external-pager"></div>
+      </div>
+
+              
+      <script>
+        $(function() {
+
+          var clients = [
+            { 
+              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+          ]; 
+
+          $("#jsGrid2").jsGrid({
+            data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+
+            fields: [
+              { name: "Name1",  type: "text", title : "문의 내용", width: 1000, align: "left"},
+              { name: "Name2",  type: "text", title : "작성일", width: 320},
+            ],
+            
+            pagerContainer: "#externalPager2",
+
+          });
+        });
+      </script>
+
+
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
