@@ -1573,3 +1573,36 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .inqueryTit a { padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .inqueryTit .icoReply{ display: none; flex-shrink: 0; align-self: center; margin-left: 14px;}
 .inqueryTit.hasReply .icoReply{ display: inline-flex;}
+
+
+.processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
+.processStepWrap .left .tit { line-height: 55px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 
+.processStepWrap .left ol { display: flex; gap: 30px; margin-top: 20px;}
+.processStepWrap .left .step { position: relative; width: 227px; height: 330px; background: #FAFAFA;}
+.processStepWrap .left .step::after { content: ''; display: block; width: 46px; height: 46px; background: #fff; border-radius: 50%; border: 1px solid #ddd; position: absolute; top: 113px; right: -38px; z-index: 1;}
+
+.processStepWrap .right .tit { line-height: 55px; background: #4C9DA2; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; }
+.processStepWrap .right .step { position: relative; width: 372px; height: 330px; margin-top: 20px; background: #FAFAFA; text-align: center;}
+.processStepWrap .right .ballon { margin-top: 20px;}
+/* .processStepWrap .right li */
+.processStepWrap .ballon { display: inline-block; line-height: 36px; padding: 0 18px; background: #A9C7DF; border-radius: 36px; }
+
+.boxWrap { display: flex; gap: 20px;}
+.boxWrap.flatform { height: 340px;}
+.boxWrap.flatform .box { position: relative; display: flex; justify-content: center; padding-top: 220px; text-align: center;} 
+.boxWrap.flatform .ico1 {position: absolute; top: 70px;}
+.boxWrap.flatform .ico1::before { content: ''; display: inline-block; width: 86px; height: 99px; background: url('../images/common/ico_flatform1.png')  no-repeat center / cover;}
+.boxWrap.flatform .ico2 {position: absolute; top: 74px;}
+.boxWrap.flatform .ico2::before { content: ''; display: inline-block; width: 92px; height: 93px; background: url('../images/common/ico_flatform2.png')  no-repeat center / cover;}
+.boxWrap.flatform .ico3 {position: absolute; top: 74px;}
+.boxWrap.flatform .ico3::before { content: ''; display: inline-block; width: 112px; height: 92px; background: url('../images/common/ico_flatform3.png')  no-repeat center / cover;}
+
+.boxWrap.offline { height: 300px;}
+.boxWrap.offline .box{ position: relative; display: flex; align-items: center; padding-left: 256px;}
+.boxWrap.offline .ico1 {position: absolute; left: 75px;}
+.boxWrap.offline .ico1::before { content: ''; display: inline-block; width: 90px; height: 84px; background: url('../images/common/ico_offline1.png')  no-repeat center / cover;}
+.boxWrap.offline .ico2 {position: absolute; left: 50px;}
+.boxWrap.offline .ico2::before { content: ''; display: inline-block; width: 125px; height: 126px; background: url('../images/common/ico_offline2.png')  no-repeat center / cover;}
+.boxWrap .box { border: 1px solid #ddd; border-radius: 16px; flex: 1 }
+
+
