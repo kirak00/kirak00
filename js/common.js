@@ -586,7 +586,7 @@ function accordion() {
       } else { //toggle type
         this.toggle(!this.open);
       }
-      if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
+      // if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
     }
     toggle(open) {
       if (open === this.open) {
@@ -635,14 +635,14 @@ $.fn.calcTextareaHeight = function(e) {
       keyup: function () {
         if (_this.val().length > 0) {
           let scrollHeight = _this.prop('scrollHeight');
-          _this.css("height", scrollHeight+4+"px");
+          _this.css("height", scrollHeight+"px");
         } 
       },
     });
     if (_this.val().length > 0) {
       let scrollHeight = _this.prop('scrollHeight');
       console.log('scrollHeight',scrollHeight)
-      _this.css("height", scrollHeight+4+"px");
+      _this.css("height", scrollHeight+"px");
     } 
    
   });

@@ -22,6 +22,10 @@
 .srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
 
 .ellips1 { white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+
+.nodata { margin: 240px 0 200px; text-align: center; font-size: 18px; color: #555;}
+
+
 /****************************
 **********  align  **********
 *****************************/
@@ -56,11 +60,13 @@
 
 .titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
-.titBg h3 { color: #fff; font-size: 30px; font-weight: 700; }
+.titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 30px; font-weight: 700; }
+.titBg .info { display: inline-block; vertical-align: middle; margin-left: 56px; color: #fff;}
 .titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { color: #EAFAEB; font-size: 18px;}
 .titBg ~ .textTable { margin-top: 40px;}
 /* .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; } */
+.titBg ~ fieldset { margin-top: 20px; }
 
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
 
@@ -83,6 +89,8 @@
 .notiTxt.blue { color: #069B66}
 .notiTxt.blue::before { background-image: url('../images/common/ico_24_notice_primary.png') }
 
+.formRow + .notiTxt { margin-top :10px; }
+
 .formListTable .notiTxt { margin-top: 8px; }
 
 .tableNoti { margin-top: 20px; color: #4C9DA2; }
@@ -97,8 +105,8 @@
 
 .resultCont + .guideBox { margin-top: 80px; }
 
-.guideBox { padding: 40px; background: #F6FBF7; color: #069B66; border-radius: 16px; line-height: 1.5;}
-.guideBox.gray { color: #555; }
+.guideBox { padding: 40px; background: #F6FBF7; color: #555; border-radius: 16px; line-height: 1.5;}
+.guideBox.point { color: #069B66; }
 .guideBox .notiTxt + .guideList { margin-top: 20px;}
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
 .layerCont .guidTxt { margin-top: 40px; font-size: 18px;}
@@ -427,6 +435,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .input.wid240 { width: 240px;}
 .input.wid300 { width: 300px;}
 .input.wid340 { width: 340px;}
+.input.wid770 { width: 770px;}
 .input.h50 { min-height: 50px;}
 
 /* 단위가 존재하는 input ex.개월, 원 */
@@ -483,7 +492,7 @@ select.wid430 { min-width: 430px;}
 /* textarea */
 .textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 30px;}
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-.textarea.autoHeight { min-height: 64px; height: 64px; padding: 14px 20px;}
+.textarea.autoHeight { min-height: 64px; height: 64px; padding: 16px 20px;}
 .layerCont .textarea { min-height: 180px;}
 
 /* form 정력 */
@@ -540,7 +549,8 @@ select.wid430 { min-width: 430px;}
 }
 .searchControlItem .rangeControl .input { width: 142px;}
 .searchControlItem .label.srOnly  { display: none;}
-.searchControlItem .label.srOnly + .formRow .input { border-width: 1px 1px 1px 1px; border-radius: 8px;}
+.searchControlItem .label.srOnly + .formRow .input,
+.searchControlItem .label.srOnly + .formRow select { border-width: 1px 1px 1px 1px; border-radius: 8px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 

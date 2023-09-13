@@ -27,15 +27,20 @@
     <div class="container" id="skip_content"  aria-label="컨텐츠">
 
       <section class="pageTop">
-        <h2 class="pageTit">취급 대출 내역</h2>
+        <h2 class="pageTit">보증 실적 상세</h2>
         <ul class="breadcrumb">
            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-           <li><a href="#none"><span>마이페이지</span></a></li>
-           <li><a href="#none"><strong>취급 대출 내역</strong></a></li>
+           <li><a href="#none"><span>중앙회 관리</span></a></li>
+           <li><a href="#none"><span>보증 실적 관리</span></a></li>
+           <li><a href="#none"><strong>보증 실적 상세</strong></a></li>
         </ul>
       </section>
 
       <section class="">
+        <div class="titBg flexBetween">
+          <h3>신용보증기금 남대문지점</h3>
+          <p class="sub">금융 담당자 <strong>고길동</strong> (02-123-4567)</p>
+        </div>
         <!-- 검색 -->
         <fieldset>
           <legend>게시물 검색</legend>
@@ -55,18 +60,6 @@
                   <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
                 </div>
               </div>
-              <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">대출 금액</label>
-                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
-                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
-                  <span class="unit">억</span>
-                  <span class="line"></span>
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
-                  </select>
-                </div>
-              </div>
             </div>
             <div class="searchControlGroup">
               <div class="searchControlItem expand2">
@@ -75,49 +68,14 @@
                   <input type="text" class="input wid240" id="selectLabelState" placeholder="법인명을 입력해 주세요">
                 </div>
               </div>
-              <div class="searchControlItem expand">
-                <label for="selectLabelArea" class="label">용도</label>
-                <div class="formRow">
-                  <select id="selectLabelArea">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
               <div class="searchControlItem">
-                <label for="selectLabelArea2" class="label">담보 유무</label>
-                <div class="formRow">
-                  <select id="selectLabelArea2">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="searchControlGroup">
-              <div class="searchControlItem expand">
-                <label for="selectLabelArea3" class="label">금리 유형</label>
-                <div class="formRow">
-                  <select id="selectLabelArea3">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-              <div class="searchControlItem expand">
-                <label for="selectLabelPatent" class="label">정산 여부</label>
-                <div class="formRow">
-                  <select id="selectLabelPatent">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-              <div class="searchControlItem expand">
-                <label id="selectLabelPay" class="label">지역</label>
+                <label id="selectLabelPay" class="label">보증 금액</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
-                  <select title="등급">
-                    <option>전체</option>
+                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">억</span>
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
                     <option>이하</option>
                   </select>
                 </div>
@@ -136,20 +94,12 @@
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
-            <select title="정렬 선택 (대출 발생일)">
-              <option>대출 발생일 높은순</option>
+            <select title="정렬 선택 (보증 금액)">
+              <option>보증 금액 높은순</option>
               <option>본부2</option>
             </select>
-            <select title="정렬 선택 (CRET대출)">
-              <option>CRET대출 금액 높은순</option>
-              <option>본부2</option>
-            </select>
-            <select title="정렬 선택 (금리)">
-              <option>금리 높은순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기갯수 선택">
-              <option>10개씩 보기</option>
+            <select title="정렬 선택 (대출 실행일)">
+              <option>대출 실행일 최신순</option>
               <option>본부2</option>
             </select>
             <button type="button" class="btnDkGreen">적용</button>
@@ -158,11 +108,6 @@
 
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs"></div>    
-          <div class="table_bt">
-            <div class="btn_r">
-              <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
-            </div>
-          </div>
           <div id="externalPager2" class="external-pager"></div>
         </div>
 
@@ -172,88 +117,46 @@
 
             var clients = [
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
               { 
-                "Name1": "2023-07-22",
-                "Name2": "S_203809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "2억 5000만원", 
-                "Name5": "시설자금", 
-                "Name6": "유", 
-                "Name7": "변동.", 
-                "Name8": "8.65%", 
-                "Name9": "청구 완료", 
-                "Name10": "서울", 
+                "Name1": "S_203809_0001",
+                "Name2": "(주)길동건설", 
+                "Name3": "2억 5000만원", 
+                "Name4": "2023-07-22", 
               },
             ]; 
             
@@ -264,16 +167,10 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
               fields: [
-                { name: "Name1",  type: "text", title : "대출 발생일", width: 160},
-                { name: "Name2",  type: "text", title : "대출 신청 번호", width: 150},
-                { name: "Name3", type: "text", title : "법인명", width: 170 },
-                { name: "Name4", type: "text", title : "대출 금액", width: 170 },
-                { name: "Name5", type: "text", title : "용도", width: 110 },
-                { name: "Name6", type: "text", title : "담보 유무", width: 110 },
-                { name: "Name7", type: "text", title : "금리 유형", width: 100 },
-                { name: "Name8", type: "text", title : "금리", width: 105 },
-                { name: "Name9", type: "text", title : "청구 여부", width: 100 },
-                { name: "Name10", type: "text", title : "지역", width: 90 },
+                { name: "Name1",  type: "text", title : "대출 신청 번호", width: 340},
+                { name: "Name2",  type: "text", title : "법인명", width: 340},
+                { name: "Name3", type: "text", title : "보증 금액", width: 340 },
+                { name: "Name4", type: "text", title : "대출 실행일", width: 340 },
               ],
               
               pagerContainer: "#externalPager2",
