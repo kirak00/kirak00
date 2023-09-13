@@ -228,7 +228,11 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .tremsWrap      {}
 .tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
 .tremsWrap .searchControlBox      {margin-top:40px; }
-.tremsWrap .terms_cont      {margin-top:60px; }
+.tremsWrap .terms_cont      {margin-top:0px; border:1px solid #ddd; background:#FAFAFA; padding:60px; border-radius: 16px; }
+.tremsWrap .terms_style_1      {font-size:18px; }
+.tremsWrap .terms_style_1 strong  {display:block;  }
+.tremsWrap .terms_style_1 p     {margin-top:20px;}
+.tremsWrap .terms_style_1 p + strong     {margin-top:40px;}
 
 
 /* 진희 */
