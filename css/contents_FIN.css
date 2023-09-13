@@ -82,11 +82,11 @@ ul.loginTab li ul.login_info li + li   {margin-top:20px;  }
 
 
 .center .searchControlBox .searchBtns { width:190px; flex-direction: column; }
-.center .searchControlBox .searchBtns button { width:190px; padding:0 10px; text-align: center; }
-.center .searchControlBox .dateTab          {height:64px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row;}
-.center .searchControlBox .dateTab button    {border:0; width:130px; height:64px; border-radius: 8px; margin:-1px 0 0 -1px;}
-.center .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
-.center .searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
+.searchControlBox .searchBtns button { min-width:190px; padding:0 10px; text-align: center; }
+.searchControlBox .dateTab          {height:64px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
+.searchControlBox .dateTab button    {border:0; width:130px; height:64px; border-radius: 8px; margin:-1px 0 0 -1px; }
+.searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
+.searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
 .center .searchControlBox select {min-width:210px; }
 .center .center_organ label {min-width:130px; }
 .center .center_organ select {min-width:330px; }
@@ -151,7 +151,8 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 
 section.main_dashboard       {}
 .main_dashboard .mng_btns           { padding:140px 0 40px; text-align: right;}
-.main_dashboard ul.dashboardWrap:first-child    {padding-top:40px; } 
+.main_dashboard ul.dashboardWrap:first-child    {padding-top:20px; } 
+.center .main_dashboard ul.dashboardWrap:first-child    {padding-top:40px; } 
 .main_dashboard ul.dashboardWrap    {  display:flex; flex-wrap: wrap; gap:20px; padding-top:20px;  } 
 .main_dashboard ul.dashboardWrap li.items    { width:calc(25% - 15px); height:255px; border:1px solid #ddd; border-radius:16px; text-align: center; }
 .main_dashboard ul.dashboardWrap li strong.tit    { display:block; font-size:24px; color:#333; padding:20px 0 0; text-align: center;  }
