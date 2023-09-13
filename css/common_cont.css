@@ -129,8 +129,9 @@
 **********  badge  **********
 *****************************/
 .badgeBlue { background: #EAFAEB; color: #fff; text-align: center; }
-.badgeWhite { padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
-
+.badgeWhite { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
+.badgeOrange { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  }
+.badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
 /****************************
 **********  button  **********
 *****************************/
@@ -508,7 +509,7 @@ select.wid430 { min-width: 430px;}
 .formSurvey .formRow:not(:last-child) { margin-bottom: 30px;}
 
 /* control group */
-.bbsSearch { position: relative; padding: 32px 40px 32px 40px; background: #F6FBF7; border-radius: 16px; display:flex; gap:20px; }
+.bbsSearch { position: relative; margin-bottom: 60px; padding: 32px 40px 32px 40px; background: #F6FBF7; border-radius: 16px; display:flex; gap:20px; }
 .bbsSearch .formRow { width:100%; }
 .bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
@@ -827,7 +828,11 @@ table.bbs_list .double2.wideType th   {height:60px;  }
 table.bbs_list th { padding: 0 10px;}
 table.bbs_list .double2 tr + tr th   {border-top:1px solid #ddd;}
 table.bbs_list td   {height:100px; padding: 0 10px; border-bottom:1px solid #ddd; background:#fff; overflow: hidden; }
-table.bbs_list td.tit   {text-align: left; padding-left:30px;}
+table.bbs_list td.tit   {text-align: left; padding-left:30px;
+overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
+table.bbs_list .tit { padding: 20px 0; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+table.bbs_list .tit a { padding: 20px 0;}
+table.bbs_list .tit [class^='badge'] { width: 95px; margin: 0 20px 0 40px; font-size: 18px; vertical-align: middle; }
 table.bbs_list td.num   {text-align: right; padding-right:30px;}
 table.bbs_list thead tr.top th { background: #EFF5EF;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
@@ -1313,14 +1318,13 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 
 /* bbs detail */
-.badgeWhite { display: inline-block; padding: 2px 14px; border-radius: 30px; font-size: 20px;}
-.badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
+
 .bbsDetailBox       {  overflow: hidden; }
 .tabLine ~ .bbsDetailBox       {margin-top:60px; }
 .bbsDetailBox .titBox     {width:100%; padding:33px 60px; gap:25px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
 .bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
 .bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
-.bbsDetailBox .titBox h3.tit  { font-size:24px; font-weight: 700; }
+.bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:24px; font-weight: 700; }
 .bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
 .bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
