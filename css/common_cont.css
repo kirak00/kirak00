@@ -1289,9 +1289,12 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLineWrap { border-bottom: 1px solid #ddd; }
 .tabLine { display: flex; width:100%; max-width: 1400px; height: 70px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
 .tabLineWrap .tabLine { border-bottom: 0;  }
-.tabLine button { height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500;}
-.tabLine li.on button { border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
-.tabLine li button:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
+.tabLine button,
+.tabLine a { display: inline-block; height: 100%; padding: 0 32px; font-size: 24px; font-weight: 500; line-height: 68px;}
+.tabLine li.on button,
+.tabLine li.on a {  border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
+.tabLine li button:focus,
+.tabLine li a:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
 .tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
 .tabLineWrap .update { position: absolute; top: 20px; right: 0; color: #888; font-size: 18px;}
@@ -1299,8 +1302,10 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
 .tabLine.fullType li { width: 100%;}
-.tabLine.fullType li button { width: 100%; text-align: center; font-weight: 400;} 
-.tabLine.fullType li.on button { width: 100%; text-align: center; font-weight: 700;} 
+.tabLine.fullType li button,
+.tabLine.fullType li a { width: 100%; text-align: center; font-weight: 400;} 
+.tabLine.fullType li.on button,
+.tabLine.fullType li.on a { width: 100%; text-align: center; font-weight: 700;} 
 
 /* pager */
 .external-pager     {text-align: center; margin-top:40px; }
