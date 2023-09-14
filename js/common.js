@@ -156,7 +156,7 @@ function tooltip_q(){
     var obj = $(o)
     obj.hover(function(){
       var layer = $("<span class='tooltipLayer'>");
-      layer.html(o.title)
+      layer.html(o.title.replace(/\\n/g,"<br>"))
       obj.append(layer)
     },function(){
       $(".tooltipLayer" , o).remove()

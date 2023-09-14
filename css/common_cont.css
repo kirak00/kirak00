@@ -250,7 +250,7 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 
 
 /* 유틸 버튼 */
-.btnReset     {display:inline-block; padding:0 0px; width:64px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
+.btnReset     {display:inline-block; padding:0 0px; width:64px !important; min-width: 64px !important; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 20px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:62px; height:62px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50%; }
 .btnReset:focus,
 .btnReset:hover       { background:#069B66; text-decoration: none; color:#fff; border-radius: 8px;  }
@@ -1487,8 +1487,16 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 /* tooltip */
 .tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer; vertical-align: -11px;  }
 .tooltip_q.on     {}
-.tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-200px;  padding:20px 30px;  font-size: 18px; color:#333; font-weight: 500; background:#EAFAEB; border-radius: 50px; display:flex; white-space: nowrap;    }
+.tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-200px;  padding:20px 30px; font-size: 18px; text-align: left; color:#333; font-weight: 500; background:#EAFAEB; border-radius: 50px; display:flex; white-space: nowrap;    }
 .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:200px; height:21px;  bottom:-20px; width:20px; background: url(../images/common/bul_polygon.png) no-repeat 0 0; background-size: contain;}
+
+
+button .tooltip_q        {position:relative; display:inline-block; width:24px; height:24px;  background:url(../images/common/ico_q2.png) no-repeat 0 0; cursor: pointer; vertical-align: -6px;  }
+button .tooltip_q span.txt   {display:block; overflow: hidden; text-indent: -100px; }
+button .tooltip_q.on     {}
+button .tooltip_q .tooltipLayer     {position:absolute; top:50px; bottom:auto; left:-200px;  padding:20px 30px;  font-size: 18px; color:#333; font-weight: 500; background:#FFD43C; border-radius: 16px; display:flex; white-space: nowrap;    }
+button .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:200px; height:21px;  top:-15px; width:20px; background: url(../images/common/bul_polygon2.png) no-repeat 0 0; background-size: contain;}
+
 
 
 /* 동영상리스트 */
