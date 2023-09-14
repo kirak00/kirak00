@@ -344,6 +344,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
 .checkbox + .checkbox { margin-left:26px; }
+.formGroup .checkbox { margin-left:0; padding-left:20px; }
 .checkbox input[type=checkbox] + label span { position: relative; display: inline-block; vertical-align: text-top; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); cursor: pointer}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
@@ -574,6 +575,9 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.expand2 .formRow > *:not(button):not(.line) { flex: 2} 
 .searchControlItem .dateControl .input { width: 140px; }
 .searchControlItem.wid560 { max-width: 560px;}
+.searchControlItem.fullChk { width: 100%;}
+.searchControlItem.fullChk .formRow { flex:1}
+.searchControlItem.fullChk .formRow .checkbox:last-child  { flex:1}
 
 
 .searchBtns.right { margin-left: auto;}
