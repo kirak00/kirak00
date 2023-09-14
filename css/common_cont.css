@@ -758,6 +758,7 @@ header.on .line  {display:block; }
 
 
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
+.container.bgGray { padding: 80px 0 100px;}
 .main .container {padding-bottom:0px }
 .container.member {padding:160px 0 130px; }
 /* .container.hasBg { padding-bottom: 0;}
@@ -1701,3 +1702,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .boxWrap .box { border: 1px solid #ddd; border-radius: 16px; flex: 1 }
 
 
+.doneWrap { margin: 60px auto 0; text-align: center;}
+.doneWrap .ico.icoPerson { display: inline-block; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
+.doneWrap .ico + .subTit { margin-top: 60px;}
+.doneWrap .subTit { color: #555; font-size: 26px;}

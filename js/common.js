@@ -573,7 +573,7 @@ function accordion() {
       this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
     }
     onButtonClick(e) {
-      const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
+      const accordionOption = this.buttonEl.closest('[accordion-option]');
       if (accordionOption === 'only') { //only type
         if (this.buttonEl.ariaExpanded === 'false') { //close 
           document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
