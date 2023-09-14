@@ -31,81 +31,171 @@
       <h2 class="pageTit">보증 예비 심사 목록</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
           <li><a href="#none"><strong>보증 예비 심사 목록</strong></a></li>
       </ul>
     </section> 
  
     <section class="">
-      <div class="bbsDetailBox">
-        <div class="titBox typeDark">
-          <span class="mainTit">(주)길동건설</span>
-          <span class="sub">대출 신청 번호 S_230809_000</span>
+      <div class="titBg flexBetween">
+        <div>
+          <span class="badgeWhite">심사전</span><h3>(주)길동건설</h3><span class="info">마포지부</span>
         </div>
-        <div class="detailCont">
-          <!-- <div class="guideBox">
-            <strong class="blue">법인회원에게 해당 안내가 제공됩니다.</strong>
-            <p>보증 관련 내부 검토 결과 보증서 발급대상으로 예상되나 실제 보증서 발급 여부는 상단에 표시된 담당자와 상담해 주세요.</p>
-          </div> -->
+        <p class="sub">대출 신청 번호  S_230809_0001</p>
+      </div>
+      <!-- <div class="required rightTxt">
+        * 표시는 필수 입력 항목입니다.
+      </div> -->
+      <section class="sectionBlock60">
+        <p class="tableLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p>
+        <div class="formListTable hasPadding">
+        <table>
+          <caption>제안서 기본 정보</caption>
+          <colgroup>
+            <col width="260px">
+            <col width="auto">
+          </colgroup>
+          <tbody>
+            <tr> 
+              <th scope="row">
+                <label for="accLabel1" class="label">보증 예상 금액</label>
+              </th> 
+              <td>
+                <div class="formRow">
+                  <input class="input wid400" type="text" name="" id="accLabel1" placeholder="보증 예상 금액을 입력해 주세요." value="" />
+                  <span class="unit">원</span>
+                </div>
+              </td>
+            </tr>
+            <tr> 
+              <th scope="row">
+                <label for="accLabel2" class="label">제안 자금 용도</label>
+              </th> 
+              <td>
+                <div class="formRow">
+                  <input id="accLabel2" class="input wid82" type="text" placeholder="0.0" value="">
+                  <span class="unit">%</span>
+                </div>
+              </td>
+            </tr>
+            <tr> 
+              <th scope="row">
+                <label for="accLabel3" class="label">메모</label>
+              </th> 
+              <td>
+                <div class="formRow">
+                  <textarea class="textarea" id="accLabel3" title="메모 내용을 입력해 주세요.(500자 이내)" placeholder="메모 내용을 입력해 주세요.(500자 이내)"></textarea>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+      <section class="sectionBlock60">
+        <h4 class="titH4 hasLine hasPadding">심사 영업점</h4>
+        <div class="formListTable hasPadding">
+          <table>
+            <caption>제안서 기본 정보</caption>
+            <colgroup>
+              <col width="260px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr> 
+                <th scope="row">
+                  <label for="accLabel2_1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>영업점 선택</label>
+                </th> 
+                <td>
+                  <div class="formRow wid425" id="accLabel2_1">
+                    <select title="신용보증기금 마포지점">
+                      <option>신용보증기금 마포지점</option>
+                      <option>셀렉트</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <th scope="row">
+                  <label for="accLabel2_2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>금융 담당자</label>
+                </th> 
+                <td>
+                  <div class="formRow wid425">
+                    <input class="input" type="text" name="" id="accLabel2_2" placeholder="마길동" value="" />
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <th scope="row">
+                  <label id="accLabel2_3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>금융 담당자 연락처</label>
+                </th> 
+                <td>
+                  <div class="formRow wid425" role="group" aria-labelledby="accLabel2_3">
+                    <input class="input" type="text" title="유선번호(1/3)" placeholder="" value="">
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="유선번호(2/3)" placeholder="" value="">
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="유선번호(3/3)" placeholder="" value="">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+        <!-- <div class="viewNolineTable">
+          <table>
+            <caption>보증 예비 심사 목록</caption>
+            <colgroup>
+              <col width="268px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증 예상 금액</th> 
+                <td>300,000,000<strong class="priceKr">삼억 원</strong></td>
+              </tr>
+              <tr> 
+                <th scope="row">보증 비율</th> 
+                <td>82%</td>
+              </tr>
+              <tr> 
+                <th scope="row">메모</th> 
+                <td>고객님의 보증 예상 금액은 3억원이나, 자세한 사항은 아래의 보증기관에 방문하셔서 상담 진행 부탁드립니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sectionBlock60">
+          <h4 class="titH4 hasLine hasPadding">심사 지점</h4>
           <div class="viewNolineTable">
             <table>
-              <caption>보증 예비 심사 목록</caption>
+              <caption>심사 지점</caption>
               <colgroup>
                 <col width="268px">
                 <col width="auto">
               </colgroup>
               <tbody>
                 <tr>
-                  <th scope="row">보증 예상 금액</th> 
-                  <td>300,000,000<strong class="priceKr">삼억 원</strong></td>
+                  <th scope="row">지점명</th> 
+                  <td>서울신용보증재단 종로지점</td>
                 </tr>
                 <tr> 
-                  <th scope="row">보증 비율</th> 
-                  <td>82%</td>
+                  <th scope="row">금융 담당자</th> 
+                  <td>홍길동</td>
                 </tr>
                 <tr> 
-                  <th scope="row">메모</th> 
-                  <td>고객님의 보증 예상 금액은 3억원이나, 자세한 사항은 아래의 보증기관에 방문하셔서 상담 진행 부탁드립니다.</td>
+                  <th scope="row">금융 담당자 연락처</th> 
+                  <td>02-123-4567</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="sectionBlock60">
-            <h4 class="titH4 hasLine hasPadding">심사 지점</h4>
-            <div class="viewNolineTable">
-              <table>
-                <caption>심사 지점</caption>
-                <colgroup>
-                  <col width="268px">
-                  <col width="auto">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">지점명</th> 
-                    <td>서울신용보증재단 종로지점</td>
-                  </tr>
-                  <tr> 
-                    <th scope="row">금융 담당자</th> 
-                    <td>홍길동</td>
-                  </tr>
-                  <tr> 
-                    <th scope="row">금융 담당자 연락처</th> 
-                    <td>02-123-4567</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="table_bt">
-            <div class="btn_c">
-              <button type="button" class="btnSuccess">수정하기</button>
-            </div>
-          </div>
-        </div>
-        <div class="table_bt">
-          <div class="btn_c">
-            <button type="button" class="btnWhite">목록</button>
-          </div>
+        </div> -->
+      <!-- </div> -->
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnSuccess">등록하기</button>
         </div>
       </div>
 
