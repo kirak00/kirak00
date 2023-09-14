@@ -88,98 +88,98 @@
           </div>
         </fieldset>
         <!-- 검색 -->
-      </section>
-      <section class="">
-        <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
-        <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
-          <div class="formRow" role="group">
-            <select title="정렬 선택 (보증 금액)">
-              <option>보증 금액 높은순</option>
-              <option>본부2</option>
-            </select>
-            <select title="정렬 선택 (대출 실행일)">
-              <option>대출 실행일 최신순</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
+      
+        <section class="">
+          <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
+          <fieldset class="tableFilterGroup">
+            <span class="count">총 <strong>15</strong>건</span>
+            <div class="formRow" role="group">
+              <select title="정렬 선택 (보증 금액)">
+                <option>보증 금액 높은순</option>
+                <option>본부2</option>
+              </select>
+              <select title="정렬 선택 (대출 실행일)">
+                <option>대출 실행일 최신순</option>
+                <option>본부2</option>
+              </select>
+              <button type="button" class="btnDkGreen">적용</button>
+            </div>
+          </fieldset>
+
+          <div class="jsGridWrap">
+            <div id="jsGrid2" class="bbs"></div>    
+            <div id="externalPager2" class="external-pager"></div>
           </div>
-        </fieldset>
 
-        <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs"></div>    
-          <div id="externalPager2" class="external-pager"></div>
-        </div>
+                  
+          <script>
+            $(function() {
 
-                
-        <script>
-          $(function() {
-
-            var clients = [
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2억 5000만원", 
-                "Name4": "2023-07-22", 
-              },
-            ]; 
-            
-
-
-            $("#jsGrid2").jsGrid({
-              data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-
-              fields: [
-                { name: "Name1",  type: "text", title : "대출 신청 번호", width: 340},
-                { name: "Name2",  type: "text", title : "법인명", width: 340},
-                { name: "Name3", type: "text", title : "보증 금액", width: 340 },
-                { name: "Name4", type: "text", title : "대출 실행일", width: 340 },
-              ],
+              var clients = [
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+                { 
+                  "Name1": "S_203809_0001",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2억 5000만원", 
+                  "Name4": "2023-07-22", 
+                },
+              ]; 
               
-              pagerContainer: "#externalPager2",
 
+
+              $("#jsGrid2").jsGrid({
+                data: clients,
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+
+                fields: [
+                  { name: "Name1",  type: "text", title : "대출 신청 번호", width: 340},
+                  { name: "Name2",  type: "text", title : "법인명", width: 340},
+                  { name: "Name3", type: "text", title : "보증 금액", width: 340 },
+                  { name: "Name4", type: "text", title : "대출 실행일", width: 340 },
+                ],
+                
+                pagerContainer: "#externalPager2",
+
+              });
             });
-          });
-        </script>
+          </script>
+        </section>
       </section>
-
 
     </div>
     <!-- **************** -->

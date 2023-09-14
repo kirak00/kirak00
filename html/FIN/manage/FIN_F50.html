@@ -58,79 +58,79 @@
           </div>
         </fieldset>
         <!-- 검색 -->
-      </section>
-      <section class="">
-        <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
-          
-        </fieldset>
+        
+        <section class="">
+          <fieldset class="tableFilterGroup">
+            <span class="count">총 <strong>15</strong>건</span>
+            
+          </fieldset>
 
-        <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs"></div>    
-          <div id="externalPager2" class="external-pager"></div>
-        </div>
+          <div class="jsGridWrap">
+            <div id="jsGrid2" class="bbs"></div>    
+            <div id="externalPager2" class="external-pager"></div>
+          </div>
 
+                  
+          <script>
+            $(function() {
+
+              var clients = [
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "5건", 
+                  "Name3": "5건", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "5건", 
+                  "Name3": "5건", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "5건", 
+                  "Name3": "5건", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "5건", 
+                  "Name3": "5건", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "5건", 
+                  "Name3": "5건", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+                { 
+                  "Name1": "남대문지점",
+                  "Name2": "(주)길동건설", 
+                  "Name3": "2023-07-22", 
+                  "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
+                },
+              ]; 
+
+              $("#jsGrid2").jsGrid({
+                data: clients,
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
+
+                fields: [
+                  { name: "Name1",  type: "text", title : "영업점", width: 340},
+                  { name: "Name2",  type: "text", title : "예비 심사", width: 340},
+                  { name: "Name3", type: "text", title : "보증서 발급", width: 340 },
+                  { name: "Name4", type: "button", title : "실적 보기", width: 340 },
+                ],
                 
-        <script>
-          $(function() {
+                pagerContainer: "#externalPager2",
 
-            var clients = [
-              { 
-                "Name1": "남대문지점",
-                "Name2": "5건", 
-                "Name3": "5건", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-              { 
-                "Name1": "남대문지점",
-                "Name2": "5건", 
-                "Name3": "5건", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-              { 
-                "Name1": "남대문지점",
-                "Name2": "5건", 
-                "Name3": "5건", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-              { 
-                "Name1": "남대문지점",
-                "Name2": "5건", 
-                "Name3": "5건", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-              { 
-                "Name1": "남대문지점",
-                "Name2": "5건", 
-                "Name3": "5건", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-              { 
-                "Name1": "남대문지점",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>실적보기</button>", 
-              },
-            ]; 
-
-            $("#jsGrid2").jsGrid({
-              data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
-
-              fields: [
-                { name: "Name1",  type: "text", title : "영업점", width: 340},
-                { name: "Name2",  type: "text", title : "예비 심사", width: 340},
-                { name: "Name3", type: "text", title : "보증서 발급", width: 340 },
-                { name: "Name4", type: "button", title : "실적 보기", width: 340 },
-              ],
-              
-              pagerContainer: "#externalPager2",
-
+              });
             });
-          });
-        </script>
+          </script>
+        </section>
       </section>
-
 
     </div>
     <!-- **************** -->

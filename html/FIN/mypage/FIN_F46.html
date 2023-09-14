@@ -95,94 +95,94 @@
         <div class="jsGridWrap">
           <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
           <div id="externalPager" class="external-pager"></div>
-          <script>
-            
-  /* jsgrid sample */
-  $(function() {
-  
-  var clients = [
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-    { "Name1": "청구중",
-      "Name2": "S_230809_0010", 
-      "Name3": "1,350,000", 
-      "Name4": "2023-07-31", 
-      "Name5": "2023-08-05", 
-      "Name6": "미발행", 
-      "Name7": "미정산", 
-      "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-    },
-  ];
-  
-  
-  $("#jsGrid").jsGrid({
-    data: clients,
-    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-    fields: [
-      { name: "Name1",  type: "text", title : "청구 상태", width: 150 },
-      { name: "Name2", type: "text", title : "대출 신청 번호", width: 180},
-      { name: "Name3", type: "text", title : "청구 금액", width: 180},
-      { name: "Name4", type: "text", title : "청구일", width: 160},
-      { name: "Name5", type: "text", title : "이의신청 기일", width: 160},
-      { name: "Name6", type: "text", title : "세금계산서발행 여부", width: 180},
-      { name: "Name7", type: "text", title : "정산 여부", width: 150},
-      { name: "Name8", type: "button", title : "청구 내역서 보기", width: 180},
-    ],
-        
-    pagerContainer: "#externalPager",
-    
-    });
+        </div>
+        <script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+  { "Name1": "청구중",
+    "Name2": "S_230809_0010", 
+    "Name3": "1,350,000", 
+    "Name4": "2023-07-31", 
+    "Name5": "2023-08-05", 
+    "Name6": "미발행", 
+    "Name7": "미정산", 
+    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+  },
+];
+
+
+$("#jsGrid").jsGrid({
+  data: clients,
+  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+  fields: [
+    { name: "Name1",  type: "text", title : "청구 상태", width: 150 },
+    { name: "Name2", type: "text", title : "대출 신청 번호", width: 180},
+    { name: "Name3", type: "text", title : "청구 금액", width: 180},
+    { name: "Name4", type: "text", title : "청구일", width: 160},
+    { name: "Name5", type: "text", title : "이의신청 기일", width: 160},
+    { name: "Name6", type: "text", title : "세금계산서발행 여부", width: 180},
+    { name: "Name7", type: "text", title : "정산 여부", width: 150},
+    { name: "Name8", type: "button", title : "청구 내역서 보기", width: 180},
+  ],
+      
+  pagerContainer: "#externalPager",
   
   });
-  
 
-          </script>
-        </div>
+});
+
+
+        </script>
+       
       </section>
-
     </section>
 
 

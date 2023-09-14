@@ -572,6 +572,7 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.expand2,
 .searchControlItem.expand2 .formRow,
 .searchControlItem.expand2 .formRow > *:not(button):not(.line) { flex: 2} 
+
 .searchControlItem .dateControl .input { width: 140px; }
 .searchControlItem.wid560 { max-width: 560px;}
 
