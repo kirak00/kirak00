@@ -156,6 +156,8 @@ $.contrastAll = function( options ){
         This.css("color");
         var a = This.css("color").replace(/ /g,"");
         var b = This.css("background-color").replace(/ /g,"");
+        var c = This.css("display").replace(/ /g,"");
+        console.log(c)
         if(b.indexOf("rgba") >=0) return true;
         var d = getContrastRatio(a,b);
         if(d < 3.5){
