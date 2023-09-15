@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">대출 비교하기</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><strong>대출 비교</strong></a></li>
+      </ul>
+    </section>
+    <div>
+      <div class="titH3 hasLine"><h3 class="inner">(주)신한은행 고객님이 진행하신 대출 비교 진행 내용 입니다.<button type="button" class="btnSuccess">대출 비교하기</button></h3></div>
+     
+      <section class="sectionBlock40">
+        <div class="jsGridWrap">
+          <div id="jsGrid2" class="bbs"></div>   
+          <div id="externalPager2" class="external-pager"></div>
+        </div>
+        <script>
+          $(function() {
+  
+            var clients = [
+              { 
+                "Name1": "<strong>진행중</strong>",
+                "Name2": "w_230809_0001", 
+                "Name3": "2023-08-01", 
+                "Name4": "시설자금", 
+                "Name5": "고정", 
+                "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
+                "Name7": "2023-08-01", 
+                "Name8": "심사중", 
+                "Name9": "0건", 
+                "Name10": "<button type='button' class='btnWhite'>제안서 보기</button>", 
+              },
+              { 
+                "Name1": "<strong>진행중</strong>",
+                "Name2": "w_230809_0001", 
+                "Name3": "2023-08-01", 
+                "Name4": "시설자금", 
+                "Name5": "고정", 
+                "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
+                "Name7": "2023-08-01", 
+                "Name8": "심사중", 
+                "Name9": "0건", 
+                "Name10": "<button type='button' class='btnWhite'>제안서 보기</button>", 
+              },
+              { 
+                "Name1": "종료",
+                "Name2": "w_230809_0001", 
+                "Name3": "2023-08-01", 
+                "Name4": "시설자금", 
+                "Name5": "고정", 
+                "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
+                "Name7": "2023-08-01", 
+                "Name8": "심사중", 
+                "Name9": "0건", 
+                "Name10": "<button type='button' class='btnWhite'>제안서 보기</button>", 
+              },
+              { 
+                "Name1": "종료",
+                "Name2": "w_230809_0001", 
+                "Name3": "2023-08-01", 
+                "Name4": "시설자금", 
+                "Name5": "고정", 
+                "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
+                "Name7": "2023-08-01", 
+                "Name8": "심사중", 
+                "Name9": "0건", 
+                "Name10": "<button type='button' class='btnWhite'>제안서 보기</button>", 
+              },
+              { 
+                "Name1": "종료",
+                "Name2": "w_230809_0001", 
+                "Name3": "2023-08-01", 
+                "Name4": "시설자금", 
+                "Name5": "고정", 
+                "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
+                "Name7": "2023-08-01", 
+                "Name8": "심사중", 
+                "Name9": "0건", 
+                "Name10": "<button type='button' class='btnWhite'>제안서 보기</button>", 
+              },
+            ]; 
+  
+            $("#jsGrid2").jsGrid({
+              data: clients,
+              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+  
+              fields: [
+                { name: "Name1",  type: "text", title : "상태", width: 90},
+                { name: "Name2",  type: "text", title : "대출 신청 번호", width: 160},
+                { name: "Name3",  type: "text", title : "대출 비교 신청일", width: 140},
+                { name: "Name4",  type: "text", title : "대출<br/>유형", width: 90},
+                { name: "Name5",  type: "text", title : "희망 금리<br/>유형", width: 90},
+                { name: "Name6",  type: "text", title : "대출 희망 신청 금액<br/>(최대금액)", width: 180},
+                { name: "Name7",  type: "text", title : "제안서 마감일", width: 140},
+                { name: "Name8",  type: "text", title : "상세 상태", width: 100},
+                { name: "Name9",  type: "text", title : "제안서 접수건", width: 140},
+                { name: "Name10",  type: "text", title : "제안서 상세보기", width: 180},
+              ],
+              
+              pagerContainer: "#externalPager2",
+  
+            });
+          });
+        </script>
+      </section>
+    </div>
+  </section>
+  
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

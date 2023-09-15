@@ -56,8 +56,11 @@
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; margin-bottom: 40px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
 .titH4.hasPadding { padding: 0 60px;}
+.titH3.mb0 { margin-bottom: 0;}
 .titLabel { font-size: 18px; font-weight: 400;}
-.hasLine .inner { max-width: 1400px; width: 100%; margin: 0 auto;}
+.hasLine .inner { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; width: 100%; margin: 0 auto;}
+.hasLine .inner .btnSuccess,
+.hasLine .inner .btnDkGreen { height: 48px; padding: 0 32px;}
 
 .titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
@@ -86,6 +89,7 @@
 **********  noti  **********
 *****************************/
 .notiTxt { color: #4C9DA2; font-weight: 400;}
+.notiTxt.mt60 { margin-top: 60px;}
 .notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
 
 .notiTxt.blue { color: #069B66}
@@ -375,6 +379,7 @@ display: inline-flex; align-items: center;}
 
 
 /* radio */ 
+.textTable .radio { padding-top: 0; height: auto;}
 .radio { display: inline-block; white-space: nowrap; height:64px; padding:20px 0 0;}
 .radio.sm { height:28px; padding:0px 0 0;}
 .radio + input[type="text"] { margin-left: 16px;}
@@ -870,6 +875,7 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.sectionBlock60 { margin-top: 60px;}
+.table_wrap.mt60 { margin-top: 60px;}
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden; table-layout: fixed;}
 table.bbs_list th   {height:60px; background:#EFF5EF;  }
 table.bbs_list .double th   {height:40px; background:#EFF5EF;  }
@@ -895,7 +901,12 @@ table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 30px;}
 table.bbs_list tfoot td {background:#EAFAEB; }
 
-.table_wrap.formFullType .input { width: 100%; }
+table.bbs_list .addBtnSet { justify-content: center; gap: 10px;}
+table.bbs_list .input, 
+table.bbs_list select { height: 50px; min-height: 50px;}
+
+.table_wrap.formFullType .input,
+.table_wrap.formFullType select { width: 100%; }
 .table_wrap.formFullType .input.wid160 { width: 160px; }
 
 .bbsViewCont     {margin-top:40px; padding:60px; min-height:250xp; border:1px solid #ddd; border-radius: 16px; }
@@ -997,13 +1008,19 @@ table { width: 100%;}
 
 /* 폼 테이블 */
 .bgGray .formListTable { margin-top: 20px}
+.formGrayBox.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+
 /* .formListTable { margin-top: 40px;} */
+.formListTable.fullType select { width: 100%; }
+.formListTable.mt40 { margin-top: 40px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formListTable tr:first-child th{ padding-top: 15px;}
 .formListTable tr:first-child td { padding-top: 0;}
+.formListTable tr:first-child td.pt15{ padding-top: 15px;}
+.formListTable tr:first-child td .radio { padding-top: 15px;}
 .formListTable tr:last-child th,
 .formListTable tr:last-child td { padding-bottom: 0;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
@@ -1014,6 +1031,10 @@ table { width: 100%;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
 
+.formListTable.wid365 .formRow { width: 365px;}
+.formListTable.wid365 .formRow .input,
+.formListTable.wid365 .formRow select,
+.formListTable.wid365 .formRow .rangeControl { width: 100%;}
 
 .formListTable .sm th { padding: 24px 0 15px; }
 .formListTable .sm td { padding: 4px 0; ;}
@@ -1158,7 +1179,9 @@ th{word-break: break-all;}
 *****************************/
 .rangeControl { position: relative; display: flex; gap: 10px; }
 .rangeControl .input { min-height: 50px; padding: 0 16px;}
+.rangeControl.lg .input { min-height: 64px; padding: 0 16px;}
 .rangeControl .btnCalendar { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
+.rangeControl.lg .inpbtnCalendar { width: 64px; height: 64px; }
 .rangeControl .btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
 .rangeControl .btnCalendar:hover::after{ background-image: url(../images/common/ico_24_calendar_w.png)} 
 
@@ -1167,6 +1190,7 @@ th{word-break: break-all;}
 .rangeControl .input { min-height: 50px; padding: 0 16px; width:140px; letter-spacing: -1px; }
 .rangeControl span.uit { line-height:50px; }
 .rangeControl .ui-datepicker-trigger      { align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff; }
+.rangeControl.lg .ui-datepicker-trigger { width: 64px; height: 64px;}
 .rangeControl .ui-datepicker-trigger img  {opacity:0; }
 .rangeControl .ui-datepicker-trigger:hover {background-image: url(../images/common/ico_24_calendar_w.png); background-color:#148159}
 
@@ -1221,7 +1245,7 @@ th{word-break: break-all;}
 }
 
 .layerCont        { max-height: calc(100vh - 300px); overflow: auto; }
-.layerCont .msg { }
+.layerCont .msg + .guideBox { margin-top: 40px;}
 
 
 .alertCont p { font-size: 18px;}
@@ -1254,7 +1278,8 @@ th{word-break: break-all;}
 .layerWrap.typeAlert .layerBody       {width:610px;  }
 .layerWrap.typeAlert.wid500 .layerBody       {width:500px;  }
 .layerWrap.typeAlert.wid500 .layerBody .layerCont { padding-top: 0;}
-.layerWrap.typeAlert .layerBody .layerHead    {padding:60px 0 20px;  background:none;   }
+.layerWrap.typeAlert .layerBody .layerHead    {padding:40px 0 20px;  background:none;   }
+.layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 44px;}
 .layerWrap.typeAlert .layerBody .layerCont { text-align: center;}
 .layerWrap.typeAlert .layerBody .layerFoot { display: flex; padding: 20px 40px 0; gap: 16px;}
 .layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding: 20px 40px;}
@@ -1281,7 +1306,8 @@ th{word-break: break-all;}
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 
-.pageTxt { display: flex; align-items: center; margin-bottom: 60px; font-weight: 700;}
+.pageTxt { display: flex; align-items: center; font-weight: 700;}
+.pageTxt + .textTable.boxType { margin-top: 40px;}
 
 .ui-datepicker      {z-index:9999 !important;}
 .ui-datepicker button:focus {background:#fff}
@@ -1691,7 +1717,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .inqueryTit.hasReply .icoReply{ display: inline-flex;}
 
 
-.processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
+/* .processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
 .processStepWrap .left .tit { line-height: 55px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 
 .processStepWrap .left ol { display: flex; gap: 30px; margin-top: 20px;}
 .processStepWrap .left .step { position: relative; width: 227px; height: 330px; background: #FAFAFA; border-radius: 16px; text-align: center;}
@@ -1720,7 +1746,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .processStepWrap .ico6::before { content: ''; display: inline-block; width: 105px; height: 100px; background: url('../images/common/ico_loan6.png')  no-repeat center / cover;}
 
 .processStepWrap .number {color: #4C9DA2; font-size: 16px; font-weight: 500; }
-.processStepWrap .name { font-size: 18px; font-weight: 700; }
+.processStepWrap .name { font-size: 18px; font-weight: 700; } */
 
 .boxWrap { display: flex; gap: 20px;}
 .boxWrap.flatform { height: 340px;}
@@ -1752,3 +1778,34 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .scrapGif1 { width: 155px; height: 138px;}
 .scrapGif2 { width: 110px; height: 110px;}
 .scrapGif3 { width: 150px; height: 118px;}
+
+
+
+/* 대출 비교하기 */
+.barStepWrap { position: relative; max-width: 1400px; margin: 0 auto 60px; padding: 54px 0;}
+/* .barStepWrap::after { content: ''; display: block; height: 16px; background: #069B66; border-radius: 16px; } */
+.barStep { display: flex; }
+.barStep li { position: relative; display: block; width: calc( (100% + 104px) / 17 ); height: 16px;}
+.barStep li:first-child { width: 52px;}
+.barStep li:last-child { width: 52px;}
+.barStep li .circle { display: none; position: absolute; top: -10px; right: -20px; width: 40px; height: 40px; line-height: 40px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 18px; font-weight: 700; text-align: center; background: #069B66; z-index: 1;}
+.barStep li .name { display: none; margin-top: 8px; font-size: 18px; color:#333; font-weight: 700; white-space: nowrap;}
+.barStep li .name.top { color: #069B66; font-weight: 500; }
+.barStep li:first-child .name { left: 32px;}
+.barStep li .name { left: 100%; }
+.barStep li .name.top { position: absolute; top: -48px;}
+.barStep li .name span {position: absolute; display: block; transform: translate(-50%);}
+.barStep li .name { position: absolute; top: 28px;}
+.barStep li::before { content: ''; position: absolute; display: block; width: 100%; height: 16px; background: #069B66;}
+.barStep li::after { content: ''; position: absolute; left: -5px; top: 3px; display: block; width: 10px; height:10px; border-radius: 50%; background: #0C8258;}
+.barStep li:first-child::before { border-radius: 16px 0 0 16px;}
+.barStep li:last-child::before { border-radius:  0 16px 16px 0;}
+.barStep li:first-child:after { display: none;}
+.barStep li.on ~ li::before { background: #def2ea;}
+.barStep li.on ~ li::after { background: #fff;}
+.barStep li.on .circle { display: block; background: #069B66; z-index: 1;}
+.barStep li.on .name { display: block; }
+
+
+/* table */
+.pt15 { padding-top: 15px !important}

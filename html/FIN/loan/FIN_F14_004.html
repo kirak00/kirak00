@@ -1068,7 +1068,7 @@
         <div class="required rightTxt">
           * 표시는 필수 입력 항목입니다.
         </div>
-        <div class="formListTable ">
+        <div class="viewNolineTable">
           <table>
             <caption>마감 기한 연장 요청</caption>
               <col width="186px">
@@ -1086,7 +1086,7 @@
               </tr>
               <tr>
                 <th scope="row">
-                  <label id="inpBizNum">연장 요청일</label>
+                  <label id="inpBizNum" class="label pt15">연장 요청일</label>
                 </th>
                 <td>
                   <div class="rangeControl">
@@ -1099,27 +1099,22 @@
                   <label id="inpBizNum"><em class="required">*</em>연장 사유</label>
                 </th>
                 <td>
-                  
-                  <div class="formRow ver">
-                    <span class="radio sm">
+                  <div class="formVertical">
+                    <span class="radio">
                       <input type="radio" id="radio_001" name="radio_00" value="A" />
                       <label for="radio_001"><span></span>금리 산정 중</label>
                     </span>
-                  </div>
-                  <div class="formRow ver">
-                    <span class="radio sm">
+                    <span class="radio">
                       <input type="radio" id="radio_002" name="radio_00" value="A" />
                       <label for="radio_002"><span></span>대출 한도 산정 중</label>
                     </span>
-                  </div>
-                  <div class="formRow ver">
-                    <span class="radio sm">
-                      <input type="radio" id="radio_003" name="radio_00" value="A" />
-                      <label for="radio_003"><span></span>기타</label>
-                    </span>
-                  </div>
-                  <div class="formRow ">
-                    <textarea id="textareaVal" class="textarea" placeholder="기타 사유를 입력해주세요.(500자 이내)"></textarea>
+                    <div class="formVertical formSet">
+                      <span class="radio">
+                        <input type="radio" id="radio_003" name="radio_00" value="A" />
+                        <label for="radio_003"><span></span>기타</label>
+                      </span>
+                      <textarea id="textareaVal" class="textarea" placeholder="기타 사유를 입력해주세요.(500자 이내)"></textarea>
+                    </div>
                   </div>
                   
                 </td>
