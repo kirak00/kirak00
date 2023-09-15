@@ -1054,8 +1054,7 @@
     <!-- 너비 800px 경우 .sizeM 추가 -->
     <div class="layerBody wid800">
       <div class="layerHead ">
-        <h3>심사 취소하기
-          추가로 요청할 서류 정보를 입력해주세요.</h3>
+        <h3>심사 취소하기</h3>
         <button type="button" class="layerClose" popup-close="layer_load_chk_cancel" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
@@ -1068,11 +1067,11 @@
         <div class="required rightTxt">
           <em>*</em> 표시는 필수 입력 항목입니다.
         </div>
-        <div class="formListTable formAdd ">
+        <div class="viewNolineTable ">
           <table>
             <caption>추가 서류 요청</caption>
-              <col width="186px">
             <colgroup>
+              <col width="186px">
               <col width="auto">
             </colgroup>
             <tbody>
@@ -1083,27 +1082,22 @@
               <tr class="">
                 <th scope="row"><label for="input_addFile_1"><em class="required">*</em>심사 취소 사유</label></th>
                 <td>
-                  
-                  <div class="formRow ver">
-                    <span class="radio sm">
+                  <div class="formVertical">
+                    <span class="radio">
                       <input type="radio" id="radio_001" name="radio_00" value="A" />
                       <label for="radio_001"><span></span>당사 기준에 부적합</label>
                     </span>
-                  </div>
-                  <div class="formRow ver">
-                    <span class="radio sm">
+                    <span class="radio">
                       <input type="radio" id="radio_002" name="radio_00" value="A" />
                       <label for="radio_002"><span></span>타 지점으로 심사 이관</label>
                     </span>
-                  </div>
-                  <div class="formRow ver">
-                    <span class="radio sm">
-                      <input type="radio" id="radio_003" name="radio_00" value="A" />
-                      <label for="radio_003"><span></span>기타</label>
-                    </span>
-                  </div>
-                  <div class="formRow ">
-                    <textarea id="textareaVal" title="기타 사유 입력" class="textarea" placeholder="기타 사유를 입력해주세요.(500자 이내)"></textarea>
+                    <div class="formSet formVertical">
+                      <span class="radio">
+                        <input type="radio" id="radio_003" name="radio_00" value="A" />
+                        <label for="radio_003"><span></span>기타</label>
+                      </span>
+                      <textarea id="textareaVal" title="기타 사유 입력" class="textarea" placeholder="기타 사유를 입력해주세요.(500자 이내)"></textarea>
+                    </div>
                   </div>
                   
                 </td>
@@ -1115,7 +1109,7 @@
 
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" onclick="chk_cancel_confirm(this)" >심사 취소</button>
+        <button type="button" class="btnSuccess xl" onclick="chk_cancel_confirm(this)" >요청</button>
       </div>
       <script>
         function chk_cancel_confirm(obj){

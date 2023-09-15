@@ -132,161 +132,161 @@
           </div>
         </fieldset>
         <!-- 검색 -->
-      </section>
-      <section class="">
-        <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
-          <div class="formRow" role="group">
-            <select title="정렬 선택 (대출 금액)">
-              <option>대출 금액 높은순</option>
-              <option>본부2</option>
-            </select>
-            <select title="정렬 선택 (금리)">
-              <option>금리 높은순</option>
-              <option>본부2</option>
-            </select>
-            <select title="정렬 선택 (제출일)">
-              <option>제출일 최신순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기갯수 선택">
-              <option>10개씩 보기</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
-          </div>
-        </fieldset>
-
-        <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs"></div>    
-          <div class="table_bt">
-            <div class="btn_r">
-              <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
+      
+        <section class="">
+          <fieldset class="tableFilterGroup">
+            <span class="count">총 <strong>15</strong>건</span>
+            <div class="formRow" role="group">
+              <select title="정렬 선택 (대출 금액)">
+                <option>대출 금액 높은순</option>
+                <option>본부2</option>
+              </select>
+              <select title="정렬 선택 (금리)">
+                <option>금리 높은순</option>
+                <option>본부2</option>
+              </select>
+              <select title="정렬 선택 (제출일)">
+                <option>제출일 최신순</option>
+                <option>본부2</option>
+              </select>
+              <select title="보기갯수 선택">
+                <option>10개씩 보기</option>
+                <option>본부2</option>
+              </select>
+              <button type="button" class="btnDkGreen">적용</button>
             </div>
+          </fieldset>
+
+          <div class="jsGridWrap">
+            <div id="jsGrid2" class="bbs"></div>    
+            <div class="table_bt">
+              <div class="btn_r">
+                <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
+              </div>
+            </div>
+            <div id="externalPager2" class="external-pager"></div>
           </div>
-          <div id="externalPager2" class="external-pager"></div>
-        </div>
 
-                
-        <script>
-          $(function() {
+                  
+          <script>
+            $(function() {
 
-            var clients = [
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-                "Name9": "연 8.65%", 
-                "Name10": "홍길동", 
-                "Name11": "2023-08-30", 
-                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-             
-            ]; 
-            
-
-
-            $("#jsGrid2").jsGrid({
-              data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-
-              fields: [
-                { name: "Name1",  type: "text", title : "대출<br/>신청 번호", width: 110},
-                { name: "Name2",  type: "text", title : "상태", width: 90},
-                { name: "Name3", type: "text", title : "법인명", width: 120 },
-                { name: "Name4", type: "text", title : "제안<br/>형태", width: 70 },
-                { name: "Name5", type: "text", title : "제안 대출 금액", width: 158 },
-                { name: "Name6", type: "text", title : "제안<br/>자금 용도", width: 90 },
-                { name: "Name7", type: "text", title : "딤보<br/>유무", width: 50 },
-                { name: "Name8", type: "text", title : "대출 기간", width: 110 },
-                { name: "Name9", type: "text", title : "제안 금리", width: 110 },
-                { name: "Name10", type: "text", title : "제출자", width: 110 },
-                { name: "Name11", type: "text", title : "제안서 마감일", width: 134 },
-                { name: "Name12", type: "button", title : "상세보기", width: 160 },
-              ],
+              var clients = [
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
+                { 
+                  "Name1": "S_230809_0001",
+                  "Name2": "채택",
+                  "Name3": "(주)길동건설", 
+                  "Name4": "단일", 
+                  "Name5": "12억 5000만원", 
+                  "Name6": "시설자금", 
+                  "Name7": "유", 
+                  "Name8": "24개월", 
+                  "Name9": "연 8.65%", 
+                  "Name10": "홍길동", 
+                  "Name11": "2023-08-30", 
+                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                },
               
-              pagerContainer: "#externalPager2",
+              ]; 
+              
 
+
+              $("#jsGrid2").jsGrid({
+                data: clients,
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+
+                fields: [
+                  { name: "Name1",  type: "text", title : "대출<br/>신청 번호", width: 110},
+                  { name: "Name2",  type: "text", title : "상태", width: 90},
+                  { name: "Name3", type: "text", title : "법인명", width: 120 },
+                  { name: "Name4", type: "text", title : "제안<br/>형태", width: 70 },
+                  { name: "Name5", type: "text", title : "제안 대출 금액", width: 158 },
+                  { name: "Name6", type: "text", title : "제안<br/>자금 용도", width: 90 },
+                  { name: "Name7", type: "text", title : "딤보<br/>유무", width: 50 },
+                  { name: "Name8", type: "text", title : "대출 기간", width: 110 },
+                  { name: "Name9", type: "text", title : "제안 금리", width: 110 },
+                  { name: "Name10", type: "text", title : "제출자", width: 110 },
+                  { name: "Name11", type: "text", title : "제안서 마감일", width: 134 },
+                  { name: "Name12", type: "button", title : "상세보기", width: 160 },
+                ],
+                
+                pagerContainer: "#externalPager2",
+
+              });
             });
-          });
-        </script>
+          </script>
+        </section>
       </section>
-
 
     </div>
     <!-- **************** -->
