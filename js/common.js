@@ -573,15 +573,15 @@ function accordion() {
       this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
     }
     onButtonClick(e) {
-      const accordionOption = this.buttonEl.closest('[accordion-option]');
+      const accordionOption = this.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
       if (accordionOption === 'only') { //only type
         if (this.buttonEl.ariaExpanded === 'false') { //close 
-          document.querySelectorAll('.accordionTrigger').forEach((trigger) => {
+          this.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionTrigger').forEach((trigger) => {
             trigger.setAttribute('aria-expanded', 'false');
             this.buttonEl.setAttribute('aria-expanded', 'true');
             // this.buttonEl.closest('.accordionItem').classList.add('isOpen')
           })
-          document.querySelectorAll('.accordionPanel').forEach((panel) => {
+          this.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionPanel').forEach((panel) => {
             panel.setAttribute('hidden', '');
             this.contentEl.removeAttribute('hidden');
           })

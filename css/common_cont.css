@@ -57,6 +57,7 @@
 .titH3 strong.blue { margin-left: 10px;}
 .titH4.hasPadding { padding: 0 60px;}
 .titLabel { font-size: 20px; font-weight: 400;}
+.hasLine .inner { max-width: 1400px; width: 100%; margin: 0 auto;}
 
 .titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
@@ -109,6 +110,8 @@
 .guideBox { padding: 40px; background: #F6FBF7; color: #555; border-radius: 16px; line-height: 1.5;}
 .guideBox.point { color: #069B66; }
 .guideBox .notiTxt + .guideList { margin-top: 20px;}
+.guideBox .desc { margin-top: 20px; color: #555; font-size: 18px;}
+.guideBox .desc + .guideList { margin-top: 8px; }
 .layerCont .guideBox { padding: 32px 40px; background: #EAFAEB;}
 .layerCont .guidTxt { margin-top: 40px; font-size: 18px;}
 
@@ -123,6 +126,19 @@
 .guideList .list .tit { margin-right: 4px;}
 .guideList.dot .list { position: relative; padding-left: 20px; }
 .guideList.dot .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
+
+.guideList.circle { margin-top: 0;}
+.guideList.circle .list { position: relative; padding-left: 20px; }
+.guideList.circle .list + .list { margin-top: 0;}
+.guideList.circle .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #555; }
+
+
+.guideList.num { counter-reset: list-number;}
+.guideList.num .list { position: relative; padding-left: 20px; }
+.guideList.num .list + .list { margin-top: 0;}
+.guideList.num .list::before {  counter-increment: list-number; content: counter(list-number) '. '; display: block; position: absolute; left: 0; }
+
+
 
 /****************************
 **********  section  **********
@@ -338,7 +354,9 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 .radio input[type=radio] + label , 
-.checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 20px;} 
+.checkbox input[type=checkbox] + label { /*display: inline-block; vertical-align: middle;*/ color: #333; font-size: 20px;
+display: inline-flex; align-items: center;} 
+.checkbox.checkAll { padding: 24px 0;}
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 /* .radio.ht64 { height: 64px; line-height: 64px;} */
@@ -621,6 +639,8 @@ select.wid430 { min-width: 430px;}
 .accordionPanel { margin: 0px 40px 40px; padding: 40px 20px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .accordionPanel[hidden] { display: none;}
 
+.layerCont .accordionPanel { padding: 20px;}
+.layerCont .accordionItem  { margin-top: 20px;}
 
 .formAccordion .accordionTitle  { display: flex; align-items: center;  padding: 32px 42px 32px 60px}
 .formAccordion .accordionTitle .accordionTrigger { width: 60px; height: 60px; margin-left: 2px; padding: 0; flex-shrink: 0; }
@@ -630,8 +650,9 @@ select.wid430 { min-width: 430px;}
 .formAccordion .accordionTitle .btnDelete + .label { width: 146px;}
 .formAccordion .accordionTitle .btnDelete::after { content:""; display:inline-block; width:34px; height:34px; margin-right: 20px; background: url('../images/common/ico_34_close.png')  no-repeat center / cover; }
 
-.agreeAccordion .accordionTrigger { height: 92px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
 .agreeAccordion { border-top: 2px solid #069B66}
+.agreeAccordion.noLine { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.agreeAccordion .accordionTrigger { height: 92px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
 .agreeAccordion .accordionTitle:not(:first-child) { border-top: 1px solid #ddd;}
 .agreeAccordion .accordionTitle .checkbox {position: absolute;  top: 0; height: 100%; display: flex; align-items: center; }
 .agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center; height: 100%; padding: 0 40px;}
@@ -982,7 +1003,7 @@ table { width: 100%;}
 .formListTable tr:first-child td { padding-top: 0;}
 .formListTable tr:last-child th,
 .formListTable tr:last-child td { padding-bottom: 0;}
-.formGrayBox .formListTable th { padding: 30px 0 15px 60px; }
+.formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite,
@@ -995,8 +1016,8 @@ table { width: 100%;}
 .formListTable .sm td { padding: 4px 0; ;}
 
 
-td .formGrayBox { margin: 20px 0 0;}
-td .formListTable { margin-top: 25px;}
+.formGrayBox { margin: 20px 0 0;}
+.formGrayBox .formListTable { margin-top: 25px;}
 .formGrayBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
 .formGrayBox.type2 { padding: 40px 60px 60px;}
 .formGrayBox th { padding-left: 60px;}
@@ -1197,9 +1218,16 @@ th{word-break: break-all;}
 }
 
 .layerCont        { max-height: calc(100vh - 300px); overflow: auto; }
+.layerCont .msg { }
+
+
+.alertCont p { font-size: 18px;}
+.alertCont .status { font-size: 20px; font-weight: 700;}
+
 
 .layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody.wid800       {width:800px;  }
+.layerWrap .layerBody.wid720       {width:720px;  }
 .layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#EAFAEB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 30px; font-weight: 700;}
@@ -1250,6 +1278,7 @@ th{word-break: break-all;}
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 
+.pageTxt { display: flex; align-items: center; margin-bottom: 60px; font-weight: 700;}
 
 .ui-datepicker      {z-index:9999 !important;}
 .ui-datepicker button:focus {background:#fff}
@@ -1706,3 +1735,10 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .doneWrap .ico.icoPerson { display: inline-block; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
 .doneWrap .ico + .subTit { margin-top: 60px;}
 .doneWrap .subTit { color: #555; font-size: 26px;}
+
+
+/* 스크래핑 */
+.loadImg { display: flex; align-items: center; justify-content:center; gap: 26px;  margin: 40px auto;}
+.scrapGif1 { width: 155px; height: 138px;}
+.scrapGif2 { width: 110px; height: 110px;}
+.scrapGif3 { width: 150px; height: 118px;}
