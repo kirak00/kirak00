@@ -445,6 +445,7 @@ display: inline-flex; align-items: center;}
 .formRow .radio + .radio { margin-left: 20px;}
 .formRow .radioBtn + .radioBtn { margin-left: -2px;}
 
+.tipTxt     {color:#4C9DA2; margin-top:10px;  }
 
 /* input */
 .input { width: 100%; min-height: 64px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 18px; vertical-align: middle;}
