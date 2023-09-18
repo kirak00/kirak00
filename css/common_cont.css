@@ -32,6 +32,7 @@
 *****************************/
 .textLeft { text-align: left !important; }
 .textCenter { text-align: center;}
+.textRight { text-align: right;}
 .required { margin-right: 4px;; color: #FE5050;}
 .textBold { font-weight: 700;}
 .required.rightTxt { text-align: right; padding:20px 0; }
@@ -909,6 +910,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt a + a      {margin-left:6px; }
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 .table_bt.fullType button { width: 100%;}
+.layerCont .table_bt { margin-top: 30px;}
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.sectionBlock60 { margin-top: 60px;}
@@ -1873,3 +1875,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 
 /* table */
 .pt15 { padding-top: 15px !important}
+
+.scrapTable { padding: 40px 80px; border: 1px solid #ddd; border-radius: 16px;}
+.scrapTable .status { display: block; font-weight: 700; text-align: center;}
+.scrapTable .status.fail { color: #FE5050;}
+.scrapTable .status.nothing { color: #888;}
