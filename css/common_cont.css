@@ -57,12 +57,14 @@
 .titH3 strong.blue { margin-left: 10px;}
 .titH4.hasPadding { padding: 0 60px;}
 .titH3.mb0 { margin-bottom: 0;}
+.titH3.mt60 { margin-top: 60px;}
+.titH3.mt80 { margin-top: 80px;}
 .titLabel { font-size: 18px; font-weight: 400;}
 .hasLine .inner { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; width: 100%; margin: 0 auto;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 48px; padding: 0 32px;}
 
-.titBg {display: flex; align-items: center; justify-content: center;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
+.titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.flexBetween { justify-content: space-between;}
 .titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 30px; font-weight: 700; }
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
@@ -358,8 +360,8 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 .radio input[type=radio] + label , 
-.checkbox input[type=checkbox] + label { /*display: inline-block; vertical-align: middle;*/ color: #333; font-size: 18px;
-display: inline-flex; align-items: center;} 
+.checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 18px;
+} 
 .checkbox.checkAll { padding: 24px 0;}
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
@@ -377,7 +379,9 @@ display: inline-flex; align-items: center;}
 /* .checkbox input[type=checkbox] + label.disable span {background:url("../images/COP/checkbox_disabled.png") no-repeat}
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
-
+.checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 25px 65px; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
+.checkBoxScroll .checkbox { width: calc(20% - 4px); margin: 0; padding: 15px;}
+/* .checkBoxScroll .checkbox:nth-child(5n) { margin-right: 0;} */
 /* radio */ 
 .textTable .radio { padding-top: 0; height: auto;}
 .radio { display: inline-block; white-space: nowrap; height:64px; padding:20px 0 0;}
@@ -1769,9 +1773,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 
 
 .doneWrap { margin: 60px auto 0; text-align: center;}
-.doneWrap .ico.icoPerson { display: inline-block; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoPerson { display: inline-b lock; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoCall { display: inline-block; width: 120px; height: 110px; background: url(../images/common/ico_call.png) no-repeat center 0 / contain}
 .doneWrap .ico + .subTit { margin-top: 60px;}
+.doneWrap .ico + .subTxt { margin-top: 60px;}
 .doneWrap .subTit { color: #555; font-size: 26px;}
+.doneWrap .subTxt { color: #555; font-size: 20px;}
 
 
 /* 스크래핑 */
