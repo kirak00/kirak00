@@ -7,6 +7,7 @@
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/lib/calendar_min.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_COP.js"></script>
   <title>SHINHAN</title>
@@ -21,11 +22,12 @@
   <!-- **************** -->
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
+
     <section class="pageTop">
       <h2 class="pageTit">대출 비교하기</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><strong>대출 비교</strong></a></li>
+          <li><a href="#none"><strong>대출 비교하기</strong></a></li>
       </ul>
     </section>
     <div class="barStepWrap">
@@ -38,7 +40,7 @@
           <span class="circle">2</span>
           <p class="name"><span>스크래핑 정보 제공 및 약관 동의</span></p>
         </li>
-        <li class="on">
+        <li>
           <span class="circle">3</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>업체개요</span></p>
@@ -78,7 +80,7 @@
           <p class="name top"><span>재무현황</span></p>
           <p class="name"><span>수집 자료</span></p>
         </li>
-        <li>
+        <li class="on">
           <span class="circle">11</span>
           <p class="name top"><span>재무현황</span></p>
           <p class="name"><span>재무상태표</span></p>
@@ -90,7 +92,6 @@
         </li>
         <li>
           <span class="circle">13</span>
-          <p class="name top"><span>재무현황</span></p>
           <p class="name"><span>판매처별 매입/매출처별 매입 세금계산서 합산표 </span></p>
         </li>
         <li>
@@ -111,16 +112,118 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine"><h3 class="inner">업체 개요<button type="button" class="btnDkGreen">내 정보 불러오기</button></h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner">재무상태표 <span class="blue">(필수)</span></h3></div>
     <div class="bgGray">
-      
+      <section class="guideBox">
+        <ul class="guideList dot">
+          <li class="list blue">제4(당)기 2022년 1월 1일부터 2022년 12월 31까지</li>
+          <li class="list blue">제3(전)기 2021년 1월 1부터 2021년 12월 31까지</li>
+          <li class="list blue">제2(전전)기 2020년 1월 1일부터 2020년 12월 31까지</li>
+        </ul>
+      </section>
+      <section class="sectionBlock40">
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col">제4(당)기</th>
+                <th scope="col">제3(전)기</th>
+                <th scope="col">제2(전전)기</th>
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>자산총계</td>
+                <td>40,000,000</td>
+                <td>66,000,000</td>
+                <td>140,000,000</td>
+              </tr>
+              <tr>
+                <td>부채총계</td>
+                <td>21,000,000</td>
+                <td>11,000,000</td>
+                <td>21,000,000</td>
+              </tr>
+              <tr>
+                <td>자본총계</td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
+              </tr>
+              <tr>
+                <td>매출채권</td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
+              </tr>
+              <tr>
+                <td>자본금</td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
+              </tr>
+              <tr>
+                <td>장기차입금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>단기차입금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>현금및현금성자산</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>장기(성)예금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>단기(성)예금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+     
     </div>
-  </section>
-  
+    <div class="table_bt">
+      <div class="btn_l">
+        <a href="#" class="btnWhite ico_prev">이전</a>
+      </div>
+      <div class="btn_r">
+        <a href="#" class="btnWhite ico_next">다음</a>
+      </div>
+    </div>
+
+
+  </div>
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
-
-
 </body>
 </html>
