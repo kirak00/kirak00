@@ -230,7 +230,7 @@ table .btnLine       {padding:0 32px; height:50px; line-height:50px; }
 .btnBlack:disabled,
 .btnWhiteLine:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
-.ico_down       {padding:0 32px;}
+.ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
