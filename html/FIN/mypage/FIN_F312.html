@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="../../../css/contents_FIN.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
@@ -86,11 +88,11 @@
                   </th> 
                   <td>
                     <div class="formRow wid425" role="group" aria-labelledby="formLabel3">
-                      <input class="input" type="text" title="유선번호(1/3)" placeholder="" value="">
+                      <input class="input" type="text" title="제출자 연락처(1/3)" placeholder="" value="">
                       <span class="unit">-</span>
-                      <input class="input" type="text" title="유선번호(2/3)" placeholder="" value="">
+                      <input class="input" type="text" title="제출자 연락처(2/3)" placeholder="" value="">
                       <span class="unit">-</span>
-                      <input class="input" type="text" title="유선번호(3/3)" placeholder="" value="">
+                      <input class="input" type="text" title="제출자 연락처(3/3)" placeholder="" value="">
                     </div>
                 </tr>
                 <tr> 
@@ -98,9 +100,8 @@
                     <label for="formLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
                   </th> 
                   <td>
-                    <div class="dateControl">
-                      <input id="formLabel4" class="input" type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
-                      <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
+                    <div class="dateControl lg">
+                      <input id="formLabel4" class="input calendar " type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
                       까지 유효
                     </div>
                   </td>
@@ -144,9 +145,9 @@
                               <option>시설자금</option>
                               <option>셀렉트</option>
                             </select>
-                            <input class="input" type="text" name="" id="accLabel1" placeholder="" value="공장의 신설, 매입 개보수" />
+                            <button type="button" class="btnSuccess" aria-controls="tabpanel_1" >선택 </button>
                           </div>
-                          <div class="formVertical hasLine mt10">
+                          <div class="formVertical hasLine mt10" id="tabpanel_1">
                             <p class="titH5">자금 상세 용도</p>
                             <span class="checkbox">
                               <input type="checkbox" id="CheckBox1" name="CheckBox" checked><label for="CheckBox1"><span></span>공장의 신설, 매입 개보수</label>
@@ -172,12 +173,16 @@
                             <span class="checkbox">
                               <input type="checkbox" id="CheckBox8" name="CheckBox"><label for="CheckBox8"><span></span>다른 은행 운전자금 상환</label>
                             </span>
-                            <div class="formRow">
+                            <div class="formRow ">
                               <span class="checkbox">
-                                <input type="checkbox" id="CheckBox8" name="CheckBox"><label for="CheckBox8"><span></span>기타</label>
+                                <input type="checkbox" id="searchCheckBox_10" name="searchCheckBox" onchange="$('#searchCheckBox_10_1')[0].disabled = !this.checked" />
+                                <label for="searchCheckBox_10"><span></span>기타</label>
                               </span>
-                              <input class="input h50" type="text" name="" id="accLabel1" placeholder="정보를 입력해 주세요." value="" />
+                              <input type="text" class="input" id="searchCheckBox_10_1" title="기타 내용 입력" disabled>
                             </div>
+                          </div>
+                          <div class="formVertical mt10">
+                            <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="자금 용도 변경 사유를 입력해 주세요.(자금 용도 변경 사유 변경 시 필수/500자 이내)" disabled></textarea>
                           </div>
                         </td>
                       </tr>
@@ -283,24 +288,28 @@
                             </select>
                           </div>
                           <div class="formAdd">
-                            <div class="formRow none">
+                            <div class="formRow">
                               <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnMinus"></button>
+                              <button type="button" class="btnBlack p30">주소검색</button>
+                              <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
                             </div>
                             <div class="formRow">
                               <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnPlus"></button>
-                            </div>
-                            <div class="formRow">
-                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnMinus"></button>
+                              <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
                             </div>
                           </div>
                           <script>
                             $(function(){
+                              var damboListIdx = 100;
                               $(document).on("click", ".btnPlus", function() {
-                                var $listblock = $('.formAdd .formRow').eq(0).clone().removeClass("none");
-                                $('.formAdd').append($listblock);
+                                var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                                damboListIdx++
+                                $listblock.attr({id: "damboList_"+ damboListIdx})
+                                $listblock.find(".btnPlus")[0].className = "btnMinus";
+                                $listblock.find(".btnMinus")[0].value = "";
+                                $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
+                                $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
+                                $(this).closest('.formAdd').append($listblock);
                               });
                               $(document).on("click", ".btnMinus", function() {
                                 $(this).closest(".formAdd .formRow").detach();

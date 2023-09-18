@@ -39,7 +39,7 @@
 **********  title  **********
 *****************************/
 .titH2 { font-size: 40px; font-weight: 700;}
-.titH3 { display: flex; justify-content: space-between; align-items: center; min-height: 76px;font-size: 30px; font-weight: 700;}
+.titH3 { display: flex; justify-content: space-between; align-items: center; min-height: 76px;font-size: 26px; font-weight: 700;}
 .titH3 h3 { font-size: inherit;}
 .titH4 { font-size: 24px; font-weight: 700;}
 .titH41 { font-size:24px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
@@ -175,6 +175,7 @@ button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; 
 button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
 button.btnLine       {padding:0 50px; height:64px; background:#fff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+button.btnBlack.p30  {padding:0 30px; }
 
 a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff  }
 a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff }
@@ -186,13 +187,13 @@ a.btnBlack       {display:inline-block; padding:0 50px; height:64px; line-height
 label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess        {padding:0 32px; height:50px; line-height:50px; }
-table .btnSky         {padding:0 32px; height:50px; line-height:50px; }
-table .btnWhite       {padding:0 32px; height:50px; line-height:50px; }
-table .btnGray       {padding:0 32px; height:50px; line-height:50px; }
-table .btnWhiteLine       {padding:0 32px; height:50px; line-height:50px; }
-table .btnDkGreen       {padding:0 32px; height:50px; line-height:50px; }
-table .btnLine       {padding:0 32px; height:50px; line-height:50px; }
+table .btnSuccess        {padding:0 30px; height:50px; line-height:50px; }
+table .btnSky         {padding:0 30px; height:50px; line-height:50px; }
+table .btnWhite       {padding:0 30px; height:50px; line-height:50px; }
+table .btnGray       {padding:0 30px; height:50px; line-height:50px; }
+table .btnWhiteLine       {padding:0 30px; height:50px; line-height:50px; }
+table .btnDkGreen       {padding:0 30px; height:50px; line-height:50px; }
+table .btnLine       {padding:0 30px; height:50px; line-height:50px; }
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -299,12 +300,17 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 
 .btnPlus { width: 50px; height: 50px; flex-shrink: 0; background: #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnPlus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
+.btnPlus:focus,
 .btnPlus:hover    {background-color:#148159;}
+.btnPlus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
+
+select:disabled       { background-color:#dddddd; color:#555; border:0; cursor:unset;  }
 
 .btnMinus { width: 50px; height: 50px; flex-shrink: 0; background: #fff; border: 1px solid #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnMinus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_minus_w.png) no-repeat 50% 50%; vertical-align: top;}
 .btnMinus:focus,
 .btnMinus:hover    {background-color:#148159; }
+.btnMinus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
 .addBtnSet { display: flex; column-gap: 20px;}
 
@@ -373,7 +379,7 @@ display: inline-flex; align-items: center;}
 .checkbox input[type=checkbox] + label.on span,
 .checkbox input[type=checkbox]:checked  + label span { background-image: url("../images/COP/checkbox_active.png")}
 .checkbox input[type=checkbox]:focus + label span::before,
-.checkbox input[type=checkbox]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid red; border-radius: 5px;}
+.checkbox input[type=checkbox]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 5px;}
 /* .checkbox input[type=checkbox] + label.disable span {background:url("../images/COP/checkbox_disabled.png") no-repeat}
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
@@ -389,7 +395,7 @@ display: inline-flex; align-items: center;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
 .radio input[type=radio]:focus + label span::before,
-.radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid red; border-radius: 50%;}
+.radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 50%;}
 
 /* .radio input[type=radio] + label.disable span,
 .radio input[type=radio]:disabled + label span { background: url("../images/COP/radio_disabled_inactive.png") no-repeat}
@@ -426,6 +432,7 @@ display: inline-flex; align-items: center;}
 .row .btnSuccess { display: inline-flex;  }
 
 /* 폼 한줄 그룹  */
+.formRowWrap { margin-top:10px; }
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow.fullType { width: 100%;}
 /* .formRow > div { display: flex; align-items: center; gap: 8px;} */
@@ -436,6 +443,10 @@ display: inline-flex; align-items: center;}
 .formRow .unit.mail { margin: 0 8px;}
 /* .formRow .input { width: 100%;} */
 .formRow .result { margin: 0 22px;}
+
+
+.formRow.wid470 { width:470px; }
+.formRow.wid470 select { flex:1}
 
 .formRow.ver {}
 .formRow.ver + .ver {padding:10px 0 0;}
@@ -450,7 +461,11 @@ display: inline-flex; align-items: center;}
 .formRow .radio + .radio { margin-left: 20px;}
 .formRow .radioBtn + .radioBtn { margin-left: -2px;}
 
-.tipTxt     {color:#4C9DA2; margin-top:10px;  }
+.tipTxt     {color:#4C9DA2; margin-top:10px; padding-left:32px; background:url(../images/common/ico_24_notice_secondary.png) no-repeat 0 0; background-size: 24px 24px;  }
+
+.bbsTip     {overflow: hidden; padding-bottom:24px; }
+.bbsTip p.tipTxt     {float:right;  }
+
 
 /* input */
 .input { width: 100%; min-height: 64px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 18px; vertical-align: middle;}
@@ -470,7 +485,7 @@ display: inline-flex; align-items: center;}
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
 input[type=text].innerTxt_2.wid135  { width:135px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:64px;padding-right:20px; text-align: right;  }
-input[type=text].innerTxt_1         { margin-right:-54px;  padding: 0 44px 0 20px; }
+input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:64px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1.wid114 {width:114px; }
 
@@ -534,6 +549,7 @@ select.wid430 { min-width: 430px;}
 .formVertical > .radio  { margin-left: 0;}
 .formVertical .checkbox ~ .checkbox { margin-left: 0;}
 .formVertical .checkbox + .formRow { margin-top: -10px;}
+.formVertical.lineBox  { margin-top:10px; padding:40px; border:1px solid #ddd; border-radius:16px;  }
 .formRow + .formAdd { margin-top: 10px; }
 .formAdd select { width: 186px;}
 .formAdd .btnPlus,
@@ -652,6 +668,7 @@ select.wid430 { min-width: 430px;}
 .formAccordion .accordionTitle .accordionTrigger { width: 60px; height: 60px; margin-left: 2px; padding: 0; flex-shrink: 0; }
 .formAccordion .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg);}
 .formAccordion .accordionTitle .label { width: 200px; flex-shrink: 0;}
+.formAccordion .accordionTitle select { flex:1}
 .formAccordion .accordionIcon { position: relative; top: 0; right: 0; width: 60px; height: 60px; flex-shrink: 0; transform: none;}
 .formAccordion .accordionTitle .btnDelete + .label { width: 146px;}
 .formAccordion .accordionTitle .btnDelete::after { content:""; display:inline-block; width:34px; height:34px; margin-right: 20px; background: url('../images/common/ico_34_close.png')  no-repeat center / cover; }
@@ -1063,6 +1080,10 @@ table { width: 100%;}
 .textTable .sub { color: #888; font-size: 18px; font-weight: 400;}
 
 .textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+.textTable.boxType tr.tit { }
+.textTable.boxType tr.tit th,
+.textTable.boxType tr.tit td {border-bottom:1px solid #ddd;  }
+.textTable.boxType tr.tit td {font-weight: 700; color:#069B66; }
 
 /* 이중 테이블 */
 .textTable .bbs_list th,
@@ -1188,10 +1209,13 @@ th{word-break: break-all;}
 
 
 
+button.ui-datepicker-trigger      { align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff; }
+button.ui-datepicker-trigger img  {opacity:0; }
+button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_24_calendar_w.png); background-color:#148159}
+.lg button.ui-datepicker-trigger { width: 64px; height: 64px;}
+
 .rangeControl .input { min-height: 50px; padding: 0 16px; width:140px; letter-spacing: -1px; }
 .rangeControl span.uit { line-height:50px; }
-.rangeControl .ui-datepicker-trigger      { align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff; }
-.rangeControl.lg .ui-datepicker-trigger { width: 64px; height: 64px;}
 .rangeControl .ui-datepicker-trigger img  {opacity:0; }
 .rangeControl .ui-datepicker-trigger:hover {background-image: url(../images/common/ico_24_calendar_w.png); background-color:#148159}
 
@@ -1259,10 +1283,13 @@ th{word-break: break-all;}
 .layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody .layerHead    {padding:30px 0;  background:#EAFAEB;   }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 26px; font-weight: 700;}
+.layerWrap .layerBody .layerHead.bgChk h3    {padding:90px 0 0px; background: url(../images/common/ico_80_alert.png) no-repeat 50% 0; }
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:24px; height:24px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
 .layerWrap .layerBody .layerCont    {padding:20px 40px 0;  }
+.layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
+.layerWrap .layerBody .layerCont .btnBox button    {min-width:250px; height:64px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:40px 40px 0; text-align: center; }
 .layerWrap .layerBody .layerFoot button    {min-width:250px; }
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
@@ -1290,6 +1317,8 @@ th{word-break: break-all;}
 .layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
 .layerWrap .txt_ment p    {color:#888; font-size: 18px;}
 .layerWrap .txt_ment button     {margin:auto 0;}
+
+.layerWrap .center_ment     {text-align: center; padding-top:40px; }
 
 /****************************
 **********  content  **********
@@ -1579,14 +1608,12 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
   border-right: 15px solid transparent; }
 
 
-button .tooltip_q        {position:relative; display:inline-block; width:24px; height:24px;  background:url(../images/common/ico_q2.png) no-repeat 0 0; cursor: pointer; vertical-align: -4px;  }
+button .tooltip_q        {position:relative; display:inline-block; z-index: 100; width:24px; height:24px;  background:url(../images/common/ico_q2.png) no-repeat 0 0; cursor: pointer; vertical-align: -4px;  }
 button .tooltip_q span.txt   {display:block; overflow: hidden; text-indent: -100px; }
 button .tooltip_q.on     {}
 button .tooltip_q .tooltipLayer     {position:absolute; top:50px; bottom:auto; left:-200px;  padding:20px 30px;  font-size: 18px; color:#fff; font-weight: 500; background:#148159; border-radius: 16px; display:flex; white-space: nowrap;    }
 button .tooltip_q .tooltipLayer::before     {  top:-38px;  }
 
-.bbsTip     {overflow: hidden; padding-bottom:24px; }
-.bbsTip p.tip     {float:right; padding-left:32px; background:url(../images/common/ico_24_notice_secondary.png) no-repeat 0 0; background-size:24px;  color:#4C9DA2;   }
 
 /* 동영상리스트 */
 ul.youtubeList        {display:flex; flex-wrap: wrap; gap:20px; }
@@ -1620,9 +1647,9 @@ ul.youtubeList li .titBox p   {margin-top:20px; }
 
 /* 심사안내 */
 ol.auditInfo      {}
-ol.auditInfo li      {position:relative; line-height:34px; margin:35px 0 0; padding-left:45px; }
-ol.auditInfo li strong  {color:#069B66; }
-ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34px; height:34px; font-size:24px; font-weight: 700; background:#069B66; color:#fff; text-align: center; border-radius: 50%;   }
+ol.auditInfo li      {position:relative; line-height:34px; margin:20px 0 0; padding-left:45px; }
+ol.auditInfo li strong  {color:#069B66; vertical-align: 0; }
+ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34px; height:34px; font-size:20px; font-weight: 700; background:#069B66; color:#fff; text-align: center; border-radius: 50%;   }
 
 .suggestPg .divideCon { padding: 60px 0; border-bottom: 1px solid #ddd; overflow: hidden;}
 .suggestPg .left {width: 968px; float: left;}
@@ -1649,6 +1676,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .accordionTrigger .label { flex-shrink: 0; width: 200px; font-size: 24px; font-weight: 700;}
 .suggestPg .accordionTrigger .tit { font-size: 24px;; flex: 1;}
 .suggestPg .accordionPanel { margin: 0; padding: 40px 60px 60px; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
+.suggestPg  .accordionItem.isOpen .accordionPanel { border-top: 1px solid #069B66;  }
 .suggestPg .accordion .viewNolineTable { margin-top: 0;}
 .suggestPg .accordion .formListTable { margin-top: 0;}
 .suggestPg .accordion .viewNolineTable th,
@@ -1661,7 +1689,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestPg .accordion .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
 .suggestPg .notiBox { margin: 60px 0px 0; padding: 40px 60px 60px;}
 .suggestPg .accordion .viewNolineTable .tableNoti { margin-top: 8px;}
-.suggestPg .accordion .formListTable .radio { padding-top: 15px;}
+.suggestPg .radio { padding-top: 15px; height:auto; }
 .suggestPg .accordion .formListTable .radioBtn { height: auto; padding-top: 12px;}
 .suggestPg .textTable th, 
 .suggestPg .textTable td { vertical-align: middle;}

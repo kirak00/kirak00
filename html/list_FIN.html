@@ -19,6 +19,7 @@ tr.guide td,
 tr.guide td a  {color:#fff; background:#919ae9;  }
 tr th   {background:#639c67; height:50px; color:#fff; } 
 tr td.date   {text-align: center; } 
+tr:hover td {background:#ebfced}
 
 h1  {text-align: center; font-size:24px;}
 
@@ -67,11 +68,11 @@ table {margin:0 20px; width:calc(100% - 40px)}
  
    {tit : '메인', folder : 'main', page : '', status : false, ment : '', end : '09/01',
     sub : [
-       {tit : '메인 로그인 전', folder : '', page : 'FIN_F01_001.html', status : true , ment : 'v1.1 적용완료', end : '09/01'},
-       {tit : '메인 로그인 후 ', folder : '', page : 'FIN_F011_001.html', status : true , ment : 'v1.1 적용완료', end : '09/01'},
-       {tit : '메인 중앙회', folder : '', page : 'FIN_F02_001.html', status : true, ment : 'v1.1 적용완료', end : '09/01'},
-       {tit : '메인 보증기관 일반', folder : '', page : 'FIN_F03_001.html', status : true, ment : 'v1.1 적용완료', end : '09/01'},
-       {tit : '메인 보증기관 중앙회', folder : '', page : 'FIN_F04_001.html', status : true, ment : 'v1.1 적용완료', end : '09/01'},
+       {tit : '메인 로그인 전', folder : '', page : 'FIN_F01_001.html', status : true , ment : 'v1.2 적용완료', end : '09/01'},
+       {tit : '메인 로그인 후 ', folder : '', page : 'FIN_F011_001.html', status : true , ment : 'v1.2 적용완료', end : '09/01'},
+       {tit : '메인 중앙회', folder : '', page : 'FIN_F02_001.html', status : true, ment : 'v1.2 적용완료', end : '09/01'},
+       {tit : '메인 보증기관 일반', folder : '', page : 'FIN_F03_001.html', status : true, ment : 'v1.2 적용완료', end : '09/01'},
+       {tit : '메인 보증기관 중앙회', folder : '', page : 'FIN_F04_001.html', status : true, ment : 'v1.2 적용완료', end : '09/01'},
     ],
    },
    {
@@ -88,34 +89,37 @@ table {margin:0 20px; width:calc(100% - 40px)}
    {
     tit : '대출 신청 조회', folder : 'loan', page : '', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '대출신청 업체 목록', folder : '', page : 'FIN_F13_001.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '대출신청 업체 목록(보증기관)', folder : '', page : 'FIN_F13_002.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '대출신청 업체 상세', folder : '', page : 'FIN_F14_001.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '팝업 - 심사 진행 전 안내사항', folder : '', page : 'FIN_F14_002.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '팝업 - 심사 영업점  변경', folder : '', page : 'FIN_F14_003.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '팝업 - 마감 기한 연장 요청', folder : '', page : 'FIN_F14_004.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '팝업 - 추가 서류 요청', folder : '', page : 'FIN_F14_005.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
-      {tit : '팝업 - 심사 취소하기', folder : '', page : 'FIN_F14_006.html', status : true, ment : 'v1.1 적용완료', end : '09/08' },
+      {tit : '대출신청 업체 목록', folder : '', page : 'FIN_F13_001.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '대출신청 업체 목록(보증기관)', folder : '', page : 'FIN_F13_002.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '대출신청 업체 상세', folder : '', page : 'FIN_F14_001.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '팝업 - 심사 진행 전 안내사항', folder : '', page : 'FIN_F14_002.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '팝업 - 심사 영업점  변경', folder : '', page : 'FIN_F14_003.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '팝업 - 마감 기한 연장 요청', folder : '', page : 'FIN_F14_004.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '팝업 - 추가 서류 요청', folder : '', page : 'FIN_F14_005.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
+      {tit : '팝업 - 심사 취소하기', folder : '', page : 'FIN_F14_006.html', status : true, ment : 'v1.2 적용완료', end : '09/08' },
     ],
    },
    {
     tit : '제안서 등록', folder : 'proposal', page : '', status : false, pop : false, ment : '', end : '09/15',
     sub : [
-      {tit : '제안서 제출 가능 목록', folder : '', page : 'FIN_F21.html', status : true, ment : '.v1.1 적용완료', end : '09/15' },
-      {tit : '제안서 제출', folder : '', page : 'FIN_F22.html', status : true, ment : '.v1.1 적용완료 FIN_312와 유사', end : '09/15' },
+      {tit : '제안서 제출 가능 목록', folder : '', page : 'FIN_F21.html', status : true, ment : '.v1.2 적용완료', end : '09/15' },
+      {tit : '제안서 제출', folder : '', page : 'FIN_F22.html', status : true, ment : '.v1.2 적용완료 FIN_312와 유사', end : '09/15' },
+      {tit : '제안서 제출 확인 팝업', folder : '', page : 'FIN_F22_001.html', status : true, ment : '.v1.2 적용완료 ', end : '09/15' },
       {tit : '현장실사 여부확인', folder : '', page : 'FIN_F23.html', status : true, ment : '<a target="_blank" href="COP/mypage/COP_F26.html">COP_F26 확인</a>', end : '09/15' },
-      {tit : '보증 예비 심사 등록', folder : '', page : 'FIN_F24.html', status : true, ment : '.v1.1 적용완료', end : '09/15' },
+      {tit : '보증 예비 심사 가능  목록', folder : '', page : 'FIN_F241.html', status : true, ment : '.v1.2 적용완료', end : '09/15' }, 
+      {tit : '보증 예비 심사 등록', folder : '', page : 'FIN_F24.html', status : true, ment : '.v1.2 적용완료', end : '09/15' },
      
     ],
    },
    {
     tit : '마이페이지', folder : 'mypage', page : '', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '대시보드', folder : '', page : 'FIN_F251.html', status : true, ment : '', end : '09/08' },
+      {tit : '대시보드', folder : '', page : 'FIN_F251.html', status : true, ment : '.v1.2 적용완료', end : '09/08' },
       // {tit : '대시보드 출력', folder : '', page : 'FIN_F252.html', status : true, ment : '', end : '09/08' },
       {tit : '회원정보', folder : '', page : 'FIN_F26.html', status : true, ment : '.v1.1 적용완료, edit 확인', end : '09/08' },
       {tit : '제안서 관리 - 목록', folder : '', page : 'FIN_F30.html', status : true, ment : '.v1.1 적용완료, button 크기', end : '09/08' },
       {tit : '제안서 관리 - 상세', folder : '', page : 'FIN_F31.html', status : true, ment : '.v1.1 적용완료', end : '09/08' },
+      {tit : '제안서 관리 - 상세 (대출예상 상환 스케줄 팝업)', folder : '', page : 'FIN_F31_001.html', status : true, ment : '.v1.1 적용완료', end : '09/08' },
       {tit : '제안서 관리 - 수정', folder : '', page : 'FIN_F312.html', status : true, ment : '.v1.1 적용완료', end : '09/08' },
       {tit : '재언소 관리 - 회수', folder : '', page : 'FIN_F32.html', status : true, ment : '.v1.1 적용완료', end : '09/08' },
       {tit : '보증 예비 심사 목록', folder : '', page : 'FIN_F301.html', status : true, ment : '.v1.1 적용완료', end : '09/08' },
