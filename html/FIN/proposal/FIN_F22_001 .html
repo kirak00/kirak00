@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
+          <li><a href="#none"><span>제안서 제출 가능 목록</span></a></li>
+          <li><a href="#none"><strong>제안서 제출</strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="suggestPg">
+      <div class="titBg flexBetween">
+        <div>
+           <h3>(주)길동건설</h3><span class="info">마포지부</span>
+        </div>
+        <p class="sub">대출 신청 번호  S_230809_0001</p>
+      </div>
+      <div class="divideCon">
+        <div class="left">
+        </div>
+        <div class="right">
+          <div class="totalInfoBox">
+            <div class="head">제안 대출 정보 합계</div>
+            <div class="cont">
+              <span class="label">제안 대출 금액</span>
+              <p class="desc">500,000,000원(오억원)</p>
+              <span class="label">제안 대출 금리</span>
+              <p class="desc">연 6.00%</p>
+              <span class="label">제안 대출 수</span>
+              <p class="desc">2건</p>
+            </div>
+            <div class="foot">
+              <button type="button" class="btnWhite">중간저장</button>
+              <button type="button" class="btnSuccess">제출하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid720">
+      <div class="layerHead">
+        <h3>작성된 내용을 다시 확인해 주세요.</h3>
+        <button type="butt on" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="proposal_preview">
+          <div class="textTable boxType">
+             <table>
+               <caption>상품명 1</caption>
+               <colgroup>
+                 <col width="200" />
+                 <col width="" />
+               </colgroup>
+               <tbody>
+                 <tr class="tit">
+                   <th scope="row">상품명 1</th>
+                   <td>길동바로론</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">제안 자금 용도</th>
+                   <td>시설자금</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">대출 금액</th>
+                   <td>300,000,000 (삼억원)</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">제안 금리</th>
+                   <td>연 4.00%</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">담보 유무</th>
+                   <td>담보 있음 (부동산)</td>
+                 </tr>
+               </tbody>
+             </table>
+          </div>
+          <div class="textTable boxType">
+             <table>
+               <caption>상품명 1</caption>
+               <colgroup>
+                 <col width="200" />
+                 <col width="" />
+               </colgroup>
+               <tbody>
+                 <tr class="tit">
+                   <th scope="row">상품명 1</th>
+                   <td>길동바로론</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">제안 자금 용도</th>
+                   <td>시설자금</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">대출 금액</th>
+                   <td>300,000,000 (삼억원)</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">제안 금리</th>
+                   <td>연 4.00%</td>
+                 </tr>
+                 <tr>
+                   <th scope="row">담보 유무</th>
+                   <td>담보 있음 (부동산)</td>
+                 </tr>
+               </tbody>
+             </table>
+          </div>
+
+          <div class="center_ment">
+            제안서를 제출하시겠습니까? <br>
+            제출 이후에는 수정이 불가합니다.
+          </div>
+
+
+        </div>
+        <div class="btnBox">
+          
+          <button type="button" class="btnSuccess " onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">요청</button>
+          <button type="button" class="btnWhite " onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">요청</button>
+
+
+        </div>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
+
+</body>
+</html>

@@ -176,18 +176,18 @@
             noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
             headerRowRenderer: function () { //
               var $result = $("<tr>").height(0)
-                .append($("<th>").width(200))
-                .append($("<th>").width(80))
-                .append($("<th>").width(120))  
-                .append($("<th>").width(140))
-                .append($("<th>").width(200))
-                .append($("<th>").width(200))
-                .append($("<th>").width(120));
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(80))
+                .append($("<th scope='col'>").width(120))  
+                .append($("<th scope='col'>").width(140))
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(120));
               $result = $result.add($("<tr class='jsgrid-header-row'>")
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
-                .append($("<th class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
                 var $tr = $("<tr class='jsgrid-header-row'>");   
                 var grid = this;
                 grid._eachField(function(field, index) {
@@ -244,23 +244,23 @@
             noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
             headerRowRenderer: function () { //
               var $result = $("<tr>").height(0)
-                .append($("<th>").width(200))
-                .append($("<th>").width(80))
-                .append($("<th>").width(120))  
-                .append($("<th>").width(140))
-                .append($("<th>").width(200))
-                .append($("<th>").width(200))
-                .append($("<th>").width(120));
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(80))
+                .append($("<th scope='col'>").width(120))  
+                .append($("<th scope='col'>").width(140))
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(200))
+                .append($("<th scope='col'>").width(120));
               $result = $result.add($("<tr class='jsgrid-header-row'>")
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
-                .append($("<th class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
-                .append($("<th class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
               $result = $result.add($("<tr class='jsgrid-header-row'>")
-                .append($("<th class='jsgrid-header-cell'>").text("희망 신청 금액"))
-                .append($("<th class='jsgrid-header-cell'>").text("지역"))
-                .append($("<th class='jsgrid-header-cell'>").text("업종"))
-                .append($("<th class='jsgrid-header-cell'>").text("CRETOP 등급")));
+                .append($("<th  scope='col' class='jsgrid-header-cell'>").text("희망 신청 금액"))
+                .append($("<th  scope='col' class='jsgrid-header-cell'>").text("지역"))
+                .append($("<th  scope='col' class='jsgrid-header-cell'>").text("업종"))
+                .append($("<th  scope='col' class='jsgrid-header-cell'>").text("CRETOP 등급")));
               return $result;
             },
             fields: [
