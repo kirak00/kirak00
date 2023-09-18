@@ -14,6 +14,7 @@
 
 /* color */
 .black	{color:#000} 
+.black3	{color:#333} 
 .brown	{color:#7f6c66} 
 .green	{color:#537a7c}
 .blue { color: #069B66;}
@@ -45,6 +46,10 @@
 .titH41 { font-size:24px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
 .titH42 { font-size:20px; font-weight: 700; }
 .titH43 { font-size:20px; margin-top:10px; }
+
+.pageTxt { display: flex; align-items: center; margin-bottom: 40px; font-weight: 700;}
+/* .pageTxt + .textTable.boxType { margin-top: 40px;} */
+
 .titH5 { margin-bottom: 20px; font-size: 18px; font-weight: 700;}
 .titH51 { font-size: 18px; font-weight: 400; margin-top:40px; color:#333; }
 
@@ -60,11 +65,12 @@
 .titH3.mt60 { margin-top: 60px;}
 .titH3.mt80 { margin-top: 80px;}
 .titLabel { font-size: 18px; font-weight: 400;}
-.hasLine .inner { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; width: 100%; margin: 0 auto;}
+.hasLine .inner { display: flex; align-items: center; max-width: 1400px; width: 100%; margin: 0 auto;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 48px; padding: 0 32px;}
 
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
+.titBg.lightGreen { background: #EFF5EF;}
 .titBg.flexBetween { justify-content: space-between;}
 .titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 30px; font-weight: 700; }
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
@@ -90,9 +96,9 @@
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt { color: #4C9DA2; font-weight: 400;}
+.notiTxt { display: flex; color: #4C9DA2; font-weight: 400;}
 .notiTxt.mt60 { margin-top: 60px;}
-.notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px; vertical-align: text-top; }
+.notiTxt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px; vertical-align: text-top; flex-shrink: 0;}
 
 .notiTxt.blue { color: #069B66}
 .notiTxt.blue::before { background-image: url('../images/common/ico_24_notice_primary.png') }
@@ -131,6 +137,7 @@
 .guideList .list .tit { margin-right: 4px;}
 .guideList.dot .list { position: relative; padding-left: 20px; }
 .guideList.dot .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
+.guideList.dot .list.blue::before {background: #069B66}
 
 .guideList.circle { margin-top: 0;}
 .guideList.circle .list { position: relative; padding-left: 20px; }
@@ -384,7 +391,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 /* .checkBoxScroll .checkbox:nth-child(5n) { margin-right: 0;} */
 /* radio */ 
 .textTable .radio { padding-top: 0; height: auto;}
-.radio { display: inline-block; white-space: nowrap; height:64px; padding:20px 0 0;}
+.radio { display: inline-block; white-space: nowrap; /* height:64px; padding:20px 0 0; */}
 .radio.sm { height:28px; padding:0px 0 0;}
 .radio + input[type="text"] { margin-left: 16px;}
 .radio + .radio { margin-left:30px; }
@@ -395,6 +402,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid red; border-radius: 50%;}
 
+.radioTxt { margin: 8px 0 0 32px; font-size: 18px; color: #888;}
 /* .radio input[type=radio] + label.disable span,
 .radio input[type=radio]:disabled + label span { background: url("../images/COP/radio_disabled_inactive.png") no-repeat}
 .radio input[type=radio] + label.disable span,
@@ -424,7 +432,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .switch span { display: inline-block; margin-left: 8px;}
 /* fieldset { border: none; display: flex; flex-direction: column; gap: 0.5rem;} */
 
-.row { display: flex; align-items: top; justify-content: space-between;}
+.row { display: flex; align-items: center; justify-content: space-between;}
 .row .label { display: inline-block; padding: 20px 0 0; color: #333; font-size: 18px; font-weight: 700; vertical-align: middle;}
 .row .unit { color: #333; font-size: 18px;}
 .row .btnSuccess { display: inline-flex;  }
@@ -463,6 +471,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 .input.wid400 { width: 400px;}
+.input.wid32 { width: 32px; padding: 0;}
 .input.wid82 { width: 82px;}
 .input.wid240 { width: 240px;}
 .input.wid300 { width: 300px;}
@@ -621,6 +630,12 @@ select.wid430 { min-width: 430px;}
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
 .divTable .head .row { min-height: 90px; padding: 30px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
+
+.periodInfo { border: 1px solid #ddd;}
+.periodInfo .input{ height: 42px; min-height: 42px; padding: 0; text-align: center;}
+.periodInfo .row { height: 60px; min-height: 60px; padding: 0; justify-content: space-between; background: #EFF5EF;}
+.periodInfo .cell { width: 50%; align-items: center; gap: 8px; font-weight: 700; font-size: 18px}
+.periodInfo .cell.textLeft { justify-content: flex-start;}
 
 .msgPg .divTable .head .cell { font-weight: 700;}
 .msgPg .divTable .head .cell:first-child { flex: 1; justify-content: center;}
@@ -880,11 +895,13 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.sectionBlock60 { margin-top: 60px;}
+.table_wrap.mt40 { margin-top: 40px;}
 .table_wrap.mt60 { margin-top: 60px;}
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden; table-layout: fixed;}
 table.bbs_list th   {height:60px; background:#EFF5EF;  }
 table.bbs_list .double th   {height:40px; background:#EFF5EF;  }
 table.bbs_list .double2 th   {height:40px;  }
+table.bbs_list .double2 th .input { height: 32px; min-height: 32px;}
 table.bbs_list .double2.wideType th   {height:60px;  }
 table.bbs_list th { padding: 0 10px;}
 table.bbs_list .double2 tr + tr th   {border-top:1px solid #ddd;}
@@ -906,6 +923,9 @@ table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 30px;}
 table.bbs_list tfoot td {background:#EAFAEB; }
 
+
+
+.bbs_list .formRow { justify-content: center;}
 table.bbs_list .addBtnSet { justify-content: center; gap: 10px;}
 table.bbs_list .input, 
 table.bbs_list select { height: 50px; min-height: 50px;}
@@ -993,17 +1013,18 @@ table { width: 100%;}
 .viewLineTable table { display: table; width: 100%; } 
 .viewLineTable tr { border-bottom: 1px solid #ddd; }
 .viewLineTable th, 
-.viewLineTable td { padding: 30px 0; }
-.viewLineTable th { font-weight: 700; text-align: left; vertical-align: top;}
+.viewLineTable td { padding: 8px 0; height: 80px; vertical-align: middle; }
+.viewLineTable th { font-weight: 700; text-align: left;}
 .viewLineTable td { text-align: left;}
-.viewLineTable tr:last-child th,
-.viewLineTable tr:last-child td { padding-bottom: 0; }
+
 .lineBox .viewLineTable th,
 .detailCont .viewLineTable th { padding-left: 20px; padding-right: 20px; }
 .lineBox .viewLineTable td,
 .detailCont .viewLineTable td { padding-right: 20px; }
 /* 마지막 라인 NO */
 .viewLineTable.noLastLine tr:last-child { border-bottom: none; }
+.viewLineTable.noLastLine tr:last-child th,
+.viewLineTable.noLastLine tr:last-child td { padding-bottom: 0; }
 
 
 /* .detailCont .viewNolineTable { padding-top: 60px} */
@@ -1311,8 +1332,7 @@ th{word-break: break-all;}
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 
-.pageTxt { display: flex; align-items: center; font-weight: 700;}
-.pageTxt + .textTable.boxType { margin-top: 40px;}
+
 
 .ui-datepicker      {z-index:9999 !important;}
 .ui-datepicker button:focus {background:#fff}
@@ -1503,8 +1523,8 @@ ul.guideBox li { line-height: 1.5;}
 
 
 
-.lineBox { border: 1px solid #ddd; border-radius: 16px;}
-.lineBox .viewLineTable { padding: 40px 60px;}
+.lineBox { padding: 40px; border: 1px solid #ddd; border-radius: 16px;}
+.agreeBox .row + .row { margin-top: 30px; }
 
 /* 보안프로그램 */
 .programDown      {}
