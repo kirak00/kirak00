@@ -330,6 +330,14 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
 .change_office_form     {margin-top:40px; }
 
+/* 엑셀 업로드 */
+.uploadResult         {border:1px solid #069B66; padding:40px; border-radius:16px;  }
+.uploadResult .resutlBox         {margin-bottom:20px; }
+.uploadResult .resutlBox strong  {font-size: 26px; vertical-align: 0; }
+.uploadResult .resutlBox em {font-size:20px; margin-left:20px;  }
+.uploadResult .resutlBox em strong {font-size:20px;  color:#069B66 }
+.uploadResult .resutlBox em.total  {color:#069B66 }
+.uploadResult .resutlBox em.total  {}
 
 
 /* 진희 */
