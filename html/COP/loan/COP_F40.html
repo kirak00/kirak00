@@ -38,7 +38,7 @@
           <span class="circle">2</span>
           <p class="name"><span>스크래핑 정보 제공 및 약관 동의</span></p>
         </li>
-        <li class="on">
+        <li>
           <span class="circle">3</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>업체개요</span></p>
@@ -68,7 +68,7 @@
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>필요서류 제출</span></p>
         </li>
-        <li>
+        <li class="on">
           <span class="circle">9</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>대출정보 등록</span></p>
@@ -111,9 +111,341 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine"><h3 class="inner">업체 개요<button type="button" class="btnDkGreen">내 정보 불러오기</button></h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner">대출정보등록<span class="pointDesc">금융기관의 심사를 통해 희망하는 자금 용도 이외의 다른 용도의 제안이 추가 발생 할 수 있습니다.</span></h3></div>
     <div class="bgGray">
+      <section>
+        <div class="formListTable">
+          <table>
+            <caption>대출정보등록</caption>
+            <colgroup>
+              <col width="210px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel1_1" class="label">제안 용도</label>
+                </th> 
+                <td>
+                  <div class="formRow">
+                    <select class="wid220" title="자금용도 선택" id="accLabel1_1">
+                      <option>시설자금</option>
+                      <option>운영자금</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <label for="accLabel1_2" class="label">상세 용도</label>
+                  <div class="checkBoxScroll number4" role="group" aria-labelledby="accLabel1_2">
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox" />
+                      <label for="searchCheckBox_1"><span></span>공장의 신설, 매입 개보수</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_2" name="searchCheckBox" />
+                      <label for="searchCheckBox_2"><span></span>기계기구 등의 신, 증설 개보수</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_3" name="searchCheckBox" />
+                      <label for="searchCheckBox_3"><span></span>공장 등 건설 목적의 토지 매입 자금</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_4" name="searchCheckBox" />
+                      <label for="searchCheckBox_4"><span></span>다른회사 인수자금(지분 50% 초과)</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_5" name="searchCheckBox" />
+                      <label for="searchCheckBox_5"><span></span>업무용 부동산 임차보증금</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_6" name="searchCheckBox" />
+                      <label for="searchCheckBox_6"><span></span>업무용 건물 신, 증설 매입 자금</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_7" name="searchCheckBox" />
+                      <label for="searchCheckBox_7"><span></span>다른 은행 시설자금 상환</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="searchCheckBox_8" name="searchCheckBox" />
+                      <label for="searchCheckBox_8"><span></span>SOC사업 자금</label>
+                    </span>
+                    <div class="formSet">
+                      <span class="checkbox">
+                        <input type="checkbox" id="searchCheckBox_9" name="searchCheckBox" />
+                        <label for="searchCheckBox_9"><span></span>기타</label>
+                      </span>
+                      <input class="input wid400" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요." >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="sectionBlock60">
+        <h4 class="titH4 hasLine">희망 신청 금액<span class="pointDesc">금융기관에서 제안되는 금액은 희망하신 금액과 차이가 있을 수 있습니다.</span></h4>
+        <div class="formListTable">
+          <table>
+            <caption>희망 신청 금액</caption>
+            <colgroup>
+              <col width="210px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_1" class="label">희망 신청 최소 금액</label>
+                </th> 
+                <td>
+                  <div class="formRow">
+                    <input class="input wid240" type="text" id="accLabel2_1" placeholder="숫자로 입력해 주세요." value="" >
+                    <span class="unit">원</span>
+                    <span class="unit gray">(원)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_2" class="label">희망 신청 최대 금액</label>
+                </th> 
+                <td>
+                  <div class="formRow">
+                    <input class="input wid240" type="text" id="accLabel2_2" placeholder="숫자로 입력해 주세요." value="" >
+                    <span class="unit">원</span>
+                    <span class="unit gray">(원)</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
       
+      <section class="sectionBlock60">
+        <h4 class="titH4 hasLine">희망 대출 정보 상세</h4>
+        <div class="formListTable">
+          <table>
+            <caption>희망 대출 정보 상세</caption>
+            <colgroup>
+              <col width="210px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label id="accLabel3_1" class="label">담보 제공 유무</label>
+                </th> 
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="accLabel3_1">
+                    <span class="radio">
+                      <input type="radio" id="chkLabel1_1" name="chkLabel1" title="담보유무 선택" checked value="">
+                      <label for="chkLabel1_1"><span></span>있음</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel1_1" name="chkLabel1" title="담보유무 선택" value="">
+                      <label for="chkLabel1_1"><span></span>없음</label>
+                    </span>
+                  </div>
+                  <div id="damboHasChkCont" class="formRowWrap">
+                    <div class="formAdd">
+                      <div class="formRow">
+                        <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel" checked><label for="selectLabel1">부동산</label></span>
+                          <span class="radio radioBtn"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">아파트</label></span>
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="ㅇㅇㅇ" disabled>
+                        <button type="button" class="btnBlack">주소검색</button>
+                        <button type="button" class="btnMinus"><span class="hide">담보상세 입력 폼 삭제</span></button>
+                        <!-- <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button> -->
+                      </div>
+                      <div class="formRow">
+                        <select title="담보종류 선택">
+                          <option value="담보 종류">담보 종류</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                        <select title="소유자 선택">
+                          <option value="소유자">소유자</option>
+                          <option value="옵션">옵션</option>
+                        </select>
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                        <button type="button" class="btnMinus"><span class="hide">담보상세 입력 폼 삭제</span></button>
+                        <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    $(function(){
+                      
+                      $("[name=testRdoBank]").on("click", function(){
+                        if(this.id =="testRdoBank2"){
+                          $("#damboHasChkCont").find("input,select,button").each(function(){
+                            this.disabled = false;
+                          })
+                        }else{
+                          $("#damboHasChkCont").find("input,select,button").each(function(){
+                            this.disabled = true;
+                          })
+                        }
+                      })
+                      
+                      var damboListIdx = 100;
+                      $(document).on("click", ".btnPlus", function() {
+                        var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                        damboListIdx++
+                        $listblock.attr({id: "damboList_"+ damboListIdx})
+                        $listblock.find(".btnMinus")[0].value = "";
+                        $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
+                        $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
+                        $(this).closest('.formAdd').append($listblock);
+                      });
+                      $(document).on("click", ".btnMinus", function() {
+                        $(this).closest(".formAdd .formRow").detach();
+                      });
+                    });
+                  </script>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_2" class="label">희망 대출 금리 유형</label>
+                </th> 
+                <td>
+                  <div class="formRow py15">
+                    <span class="radio">
+                      <input type="radio" id="chkLabel2_1" name="chkLabel2" title="금리 선택" checked value="">
+                      <label for="chkLabel2_1"><span></span>고정 금리</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel2_2" name="chkLabel2" title="금리 선택" value="">
+                      <label for="chkLabel2_2"><span></span>변동 금리</label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label id="accLabel2_3" class="label">희망 대출 기간</label>
+                </th> 
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="accLabel2_3">
+                    <span class="radio">
+                      <input type="radio" id="chkLabel3_1" name="chkLabel3" title="희망 대출 기간 선택" checked value="">
+                      <label for="chkLabel3_1"><span></span>12개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel3_2" name="chkLabel3" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel3_2"><span></span>24개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel3_3" name="chkLabel3" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel3_3"><span></span>36개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel3_4" name="chkLabel3" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel3_4"><span></span>48개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel3_5" name="chkLabel3" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel3_5"><span></span>60개월</label>
+                    </span>
+                    <div class="formSet">
+                      <span class="radio">
+                        <input type="radio" id="chkLabel3_6" name="chkLabel3" title="희망 대출 기간 선택" value="">
+                        <label for="chkLabel3_6"><span></span>기타</label>
+                      </span>
+                      <input class="input innerTxt_2 wid135" type="text" placeholder="000" value="" title="희망 대출 기간을 직접 입력해주세요">
+                      <span class="unit">개월</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label id="accLabel2_4" class="label">희망 대출 상환 방식</label>
+                </th> 
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="accLabel2_4">
+                    <span class="radio">
+                      <input type="radio" id="chkLabel4_1" name="chkLabel4" title="희망 대출 상환 방식 선택" checked value="">
+                      <label for="chkLabel4_1"><span></span>만기일시상환</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel4_2" name="chkLabel4" title="희망 대출 상환 방식 선택" value="">
+                      <label for="chkLabel4_2"><span></span>유동성한도(마이너스통장)</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel4_3" name="chkLabel4" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel4_3"><span></span>원금분할상환</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="chkLabel4_4" name="chkLabel4" title="희망 대출 기간 선택" value="">
+                      <label for="chkLabel4_4"><span></span>원리금분할상환</label>
+                    </span>
+                    <div class="formSet">
+                      <span class="radio">
+                        <input type="radio" id="chkLabel4_5" name="chkLabel4" title="희망 대출 기간 선택" value="">
+                        <label for="chkLabel4_5"><span></span>기타</label>
+                      </span>
+                      <input class="input wid300" type="text" placeholder="정보를 입력해 주세요." value="" title="희망 대출 상환 방식을 직접 입력해주세요">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_5" class="label">희망 대출일</label>
+                </th> 
+                <td>
+                  <div class="formRow pt15">금융기관 심사,제안 결과에  따라 실제 개출 실행은 다를 수 있습니다. <span class="blue">희망 대출일은 최소 영업일 5일 이후 부터 선택 가능합니다.</span></div>
+                  <div class="formRow">
+                    <div class="dateControl lg">
+                      <input type="text" class="input wid240 calendar" id="accLabel2_5" value="2023-07-01" title="날짜선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                      (미 선택 시, 신청일로부터 15일 후로 자동 설정 됩니다.)
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_6" class="label">제안서 마감일</label>
+                </th> 
+                <td>
+                  <div class="formRow pt15">금융기관이 제안서를 제출할 마감 기한을 선택해주세요. <span class="blue">마감 기한은 최소 영업일 5일 이후 부터 최대 30일 입니다.</span></div>
+                  <div class="formRow">
+                    <div class="dateControl lg">
+                      <input type="text" class="input wid240 calendar" id="accLabel2_6" value="2023-07-01" title="날짜선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                      (미 선택 시, 신청일로부터 30일 후로 자동 설정 됩니다.)
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="accLabel2_7" class="label">메모(선택)</label>
+                </th> 
+                <td>
+                  <div class="formRow pt15">금융기관에 추가적으로 전달할 내용이 있다면 입력해 주세요.</div>
+                  <div class="formRow">
+                    <textarea class="textarea" id="accLabel2_7" placeholder="추가 내용을 입력해주세요.(최대 500자 이내)"></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <div class="table_bt">
+      <div class="btn_l">
+        <button type="button" class="btnWhite ico_prev">이전</button>
+      </div>
+      <div class="btn_c">
+        <button type="button" class="btnSuccess">중간 저장</button>
+      </div>
+      <div class="btn_r">
+        <button type="button" class="btnWhite ico_next">다음</button>
+      </div>
     </div>
   </section>
   

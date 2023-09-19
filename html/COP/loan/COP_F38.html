@@ -23,7 +23,7 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="콘텐츠">
     <section>
-      
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">스크래핑 서비스 </button>
     </section>    
   </div>
   <!-- **************** -->
@@ -34,11 +34,16 @@
   <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show" id="SMS_layerOpen" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+  <div class="layerWrap modal show" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid720">
       <div class="layerHead">
         <h3>스크래핑 서비스</h3>
         <p>스크래핑서비스를 통해 공공기관에서 정보를 수집이 완료 되었습니다.</p>
+        <!-- 상태값에 따라 주석 해제하여 사용 -->
+        <!-- <p>일부 기관의 스크래핑에서 오류가 발생되었습니다.<br/>
+          재시도 버튼을 통해 스크래핑을 재시도 할 수 있습니다.</p>
+        <p>공공기관에 고객님의 자료가 존재하지 않습니다.<br/>
+          예)결산보고서 신고 누락 법인 또는 복식부기를 사용하지 않는 법인등.</p> -->
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
@@ -68,7 +73,7 @@
               </tr>
               <tr>
                 <th scope="row">현금흐름표</th> 
-                <td><span class="status fail">재시도</span></td>
+                <td><span class="status">[수집완료]</span></td>
               </tr>
               <tr>
                 <th scope="row">자본변동표</th> 
@@ -88,6 +93,9 @@
         <div class="table_bt">
           <div class="btn_c">
             <button type="button" class="btnSuccess">확인</button>
+            <!-- 상태값에 따라 주석 해제하여 사용 -->
+            <!-- <button type="button" class="btnSuccess">재시도 없이 직접 등록</button>
+            <button type="button" class="btnSuccess">직접 등록</button> -->
           </div>
         </div>
       </div>
