@@ -51,6 +51,7 @@
 .titH43 { font-size:20px; margin-top:10px; }
 
 .pageTxt { display: flex; align-items: center; margin-bottom: 40px; font-weight: 700;}
+.pointDesc { margin-left: 30px; color: #069B66; font-size: 18px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
 
 .titH5 { margin-bottom: 20px; font-size: 18px; font-weight: 700;}
@@ -64,11 +65,13 @@
 .titH4.hasLine { display: flex; align-items: center; min-height: 76px; margin-bottom: 40px; border-bottom: 1px solid #ddd; }
 .titH3 strong.blue { margin-left: 10px;}
 .titH4.hasPadding { padding: 0 60px;}
+
 .titH3.mb0 { margin-bottom: 0;}
 .titH3.mt60 { margin-top: 60px;}
 .titH3.mt80 { margin-top: 80px;}
 .titLabel { font-size: 18px; font-weight: 400;}
 .hasLine .inner { display: flex; align-items: center; max-width: 1400px; width: 100%; margin: 0 auto;}
+.hasLine .inner.flexBetween { justify-content: space-between;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 48px; padding: 0 32px;}
 
@@ -214,6 +217,7 @@ table .btnGray       {padding:0 30px; height:50px; line-height:50px; }
 table .btnWhiteLine       {padding:0 30px; height:50px; line-height:50px; }
 table .btnDkGreen       {padding:0 30px; height:50px; line-height:50px; }
 table .btnLine       {padding:0 30px; height:50px; line-height:50px; }
+table button.full { width: 100%;}
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -383,7 +387,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 **********  form  **********
 *****************************/
 /* checkbox, radio */
-
+.radio + .formSet { margin-left: 30px;}
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 18px;
@@ -405,8 +409,14 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 /* .checkbox input[type=checkbox] + label.disable span {background:url("../images/COP/checkbox_disabled.png") no-repeat}
 .checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
 
-.checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 25px 65px; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
-.checkBoxScroll .checkbox { width: calc(20% - 4px); margin: 0; padding: 15px;}
+.checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 25px 65px; background: #fff; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
+.checkBoxScroll > .checkbox { margin: 0; padding: 15px;}
+.checkBoxScroll > .formSet { margin: 0; padding: 15px;}
+.checkBoxScroll.number5 > .checkbox { width: calc(20% - 4px);}
+.checkBoxScroll.number4 > .checkbox { width: calc(25% - 4px);}
+
+/* .checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 25px 65px; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
+.checkBoxScroll .checkbox { width: calc(20% - 4px); margin: 0; padding: 15px;} */
 /* .checkBoxScroll .checkbox:nth-child(5n) { margin-right: 0;} */
 /* radio */ 
 .textTable .radio { padding-top: 0; height: auto;}
@@ -463,6 +473,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 /* .formRow > div { display: flex; align-items: center; gap: 8px;} */
 .formRow ~ .formRow { margin-top: 10px;}
 .formRow.mt10 { margin-top: 10px; }
+.formRow.mt15 { margin-top: 15px; }
 .formRow.mt20 { margin-top: 20px; }
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
 .formRow .unit.mail { margin: 0 8px;}
@@ -478,6 +489,8 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 
 .formRow.wid425 { width: 425px;}
 .formRow.wid425 select { width: 100%;}
+.formRow.wid600 { width: 600px;}
+.formRow.wid640 { width: 640px;}
 .formRow.wid673 { width: 673px;}
 .formRow.wid673.mt30 { margin-top: 30px;}
 .formRow.wid673 .input { width: 100%;}
@@ -501,9 +514,12 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .input.wid400 { width: 400px;}
 .input.wid32 { width: 32px; padding: 0;}
 .input.wid82 { width: 82px;}
+.input.wid160 { width: 160px;}
+.input.wid200 { width: 200px;}
 .input.wid240 { width: 240px;}
 .input.wid300 { width: 300px;}
-.input.wid340 { width: 340px;}
+.input.wid380 { width: 380px;}
+.input.wid600 { width: 600px;}
 .input.wid770 { width: 770px;}
 .input.h50 { min-height: 50px;}
 
@@ -555,6 +571,7 @@ select.wid220 { min-width: 220px;}
 select.wid180 { min-width: 180px;}
 select.wid240 { min-width: 240px;}
 select.wid300 { min-width: 300px;}
+select.wid380 { min-width: 380px;}
 select.wid145 { min-width: 145px !important;}
 select.wid430 { min-width: 430px;}
 
@@ -569,7 +586,8 @@ select.wid430 { min-width: 430px;}
 .formVertical { display: flex; flex-direction: column; gap: 20px;}
 .formVertical.mt10 { margin-top: 10px;}
 .formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
-.formSet { display: flex; gap: 10px;}
+.formSet { display: flex; align-items: center; gap: 10px;}
+.formSet.wid600 { width: 600px;}
 .formVertical .label { font-weight: 700;}
 .formVertical .radio { height: auto; padding-top: 0;}
 .formVertical > .radio  { margin-left: 0;}
@@ -581,6 +599,8 @@ select.wid430 { min-width: 430px;}
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 64px; height: 64px; }
 .formRow.mt30 { margin-top: 30px; }
+.formRow.py15 { padding-top: 15px; padding-bottom: 15px; }
+
 .formVertical .label + .formRow { margin-top: -10px;}
 
 .formSurvey { padding-top: 15px}
@@ -1018,7 +1038,7 @@ input[type=radio].starChk.starChk_5:checked ~ label               { background-i
 *****************************/
 .priceKr {display: inline-block; margin-left:8px; vertical-align: top;}
 
-table .label { display: flex;}
+table .label { display: flex; font-weight: 700;}
 /* .tableBox { margin-top: 30px; padding: 30px 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;} */
 
 table { width: 100%;}
@@ -1286,6 +1306,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .dateControl { position: relative; display: flex; align-items: center; gap: 8px; }
 .dateControl .input { width: 150px; min-height: 64px; padding: 0 16px;}
 .dateControl .input:read-only { background: #fff; color: #888;}
+.dateControl .input.wid240 { width: 240px;}
+.rangeControl .input.wid240 { width: 240px;}
 .dateControl .btnSuccess,
 .btnCalendar { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 64px;  flex-shrink: 0;height: 64px; padding: 0;}
 .dateControl .btnSuccess::after,
@@ -1654,7 +1676,7 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 
 
 /* tooltip */
-.tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer; vertical-align: -11px;  }
+.tooltip_q        {position:relative; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_q.png) no-repeat 0 0; cursor: pointer;  }
 .tooltip_q.on     {}
 .tooltip_q .tooltipLayer     {position:absolute; bottom:50px; left:-200px;  padding:20px 30px; font-size: 18px; text-align: left; color:#fff; font-weight: 500; background:#148159; border-radius: 50px; display:flex; white-space: nowrap;    }
 .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:198px; height:0px;  bottom:-20px; width:0px; 
@@ -1666,8 +1688,8 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
   border-right: 15px solid transparent; }
 
 
-button .tooltip_q        {position:relative; display:inline-block; z-index: 100; width:24px; height:24px;  background:url(../images/common/ico_q2.png) no-repeat 0 0; cursor: pointer; vertical-align: -4px;  }
-button .tooltip_q span.txt   {display:block; overflow: hidden; text-indent: -100px; }
+button .tooltip_q        {position:relative; display:inline-block; z-index: 100; width:24px; height:24px;  background:url(../images/common/ico_q2.png) no-repeat 0 0; cursor: pointer; }
+button .tooltip_q span.txt   {display:block; overflow: hidden; text-indent: -100px; line-height: 1;}
 button .tooltip_q.on     {}
 button .tooltip_q .tooltipLayer     {position:absolute; top:50px; bottom:auto; left:-200px;  padding:20px 30px;  font-size: 18px; color:#fff; font-weight: 500; background:#148159; border-radius: 16px; display:flex; white-space: nowrap;    }
 button .tooltip_q .tooltipLayer::before     {  top:-38px;  }

@@ -25,7 +25,7 @@
       <h2 class="pageTit">대출 비교하기</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><strong>대출 비교</strong></a></li>
+          <li><a href="#none"><strong>대출 비교하기</strong></a></li>
       </ul>
     </section>
     <div class="barStepWrap">
@@ -53,7 +53,7 @@
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>경영진 인적사항</span></p>
         </li>
-        <li class="on">
+        <li>
           <span class="circle">6</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>주주정보 인적사항</span></p>
@@ -63,7 +63,7 @@
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>노사관계 및 연혁</span></p>
         </li>
-        <li>
+        <li class="on">
           <span class="circle">8</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>필요서류 제출</span></p>
@@ -110,140 +110,267 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">주주 정보 인적 사항</h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner">필요 서류 제출</h3></div>
     <div class="bgGray">
       <section class="sectionBlock20">
-        <p class="pageTxt">주주 정보를 입력해 주세요 (선택)</p>
-        <div class="formListTable wid365 mt40">
-          <table>
-            <caption>주주 정보입력</caption>
+        <p class="pageTxt">증빙 서류를 등록해 주세요. <span class="blue">(필수)</span><span class="pointDesc">대출 비교 신청을 위해서는 반드시 필요한 자료에요.</span></p>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>기타 추가서류</caption>
+            <colgroup>
+              <col />
+              <col width="210px">
+              <col width="320px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">증빙 서류</th>
+                <th scope="col">상태</th>
+                <th scope="col">등록 일자</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>주주명부.pdf</td>
+                <td><strong>제출 완료</strong></td>
+                <td>2023-08-15</td>
+              </tr>
+              <tr>
+                <td>법인등기부등본.pdf</td>
+                <td><button type="button" class="btnSuccess full">업로드</button></td>
+                <td>2023-08-15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="sectionBlock60">
+        <p class="pageTxt">특허 정보 등록 해주세요. (선택)<span class="pointDesc"> 보유하신 특허나 상표권을 제출해주세요.</span></p>
+        <div class="formList">
+          <label class="label" for="inputLabelCusNum">특허 고객 번호</label>
+          <div class="formRow fullType">
+            <input type="text" id="inputLabelCusNum" class="input" placeholder="특허 번호를 입력해 주세요." title="">
+            <button type="button" class="btnSuccess">특허청 조회 <em class="tooltip_q" title="해당 정보는 특허청의 공공 API를 통해 제공합니다."><span class="txt">?</span></em></button>
+          </div>
+        </div>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>특허 정보</caption>
             <colgroup>
               <col width="150px">
-              <col width="auto">
+              <col width="220px">
+              <col width="140px">
+              <col>
+              <col width="160px">
+              <col width="160px">
+              <col width="130px">
             </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">특허유형</th>
+                <th scope="col">출원번호</th>
+                <th scope="col">등록상태</th>
+                <th scope="col">발명의 명칭</th>
+                <th scope="col">등록일자</th>
+                <th scope="col">출원인</th>
+                <th scope="col">관리</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr class="sm">
-                <th scope="row">
-                  <label class="label" for="inpIdBox1">상장 여부</label>
-                </th>
+              <tr>
+                <td>상표권</td>
+                <td>10-1234-1234567</td>
+                <td>등록</td>
+                <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의 고강도 경량과 복합소재 및 이의</p></td>
+                <td>2022-10-14</td>
+                <td>(주)신한은행</td>
                 <td>
-                  <div class="formRow">
-                    <select title="상장 여부를 선택해 주세요." id="inpIdBox1">
-                      <option>최대 주주</option>
-                      <option>셀렉트</option>
-                    </select>
+                  <div class="addBtnSet">
+                    <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
+                    <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
                   </div>
                 </td>
               </tr>
-              <tr class="sm">
-                <th scope="row">
-                  <label class="label" for="inpIdBox2">상장일</label>
-                </th>
+              <tr>
+                <td>상표권</td>
+                <td>10-1234-1234567</td>
+                <td>등록</td>
+                <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의 고강도 경량과 복합소재 및 이의</p></td>
+                <td>2022-10-14</td>
+                <td>(주)신한은행</td>
                 <td>
-                  <div class="formRow">
-                    <div class="rangeControl lg">
-                      <input type="text" class="input calendar" id="inpIdBox2" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                    </div>
+                  <div class="addBtnSet">
+                    <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
+                    <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
                   </div>
                 </td>
               </tr>
-              <tr class="sm">
-                <th scope="row">
-                  <label class="label" for="inpIdBox3">총 발행 주식</label>
-                </th>
+              <tr>
+                <td>상표권</td>
+                <td>10-1234-1234567</td>
+                <td>등록</td>
+                <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의 고강도 경량과 복합소재 및 이의</p></td>
+                <td>2022-10-14</td>
+                <td>(주)신한은행</td>
                 <td>
-                  <div class="formRow">
-                    <input type="text" class="input" id="inpIdBox3" value="5,000">
-                    <span class="unit">주</span>
-                  </div>
-                </td>
-              </tr>
-              <tr class="sm">
-                <th scope="row">
-                  <label class="label" for="inpIdBox4">주당 액면가</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input type="text" class="input" id="inpIdBox4" value="20,000">
-                    <span class="unit">원</span>
+                  <div class="addBtnSet">
+                    <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
+                    <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="table_wrap formFullType mt60">
+      </section>
+      <section class="sectionBlock60">
+        <p class="pageTxt">추가로 입력을 희망하는 특허 정보를 입력해 주세요.</p> <div class="table_wrap">
           <table class="bbs_list">
-            <caption>주주 인적 사항</caption>
+            <caption>특허 정보</caption>
             <colgroup>
-              <col width="280px">
-              <col width="260px">
-              <col width="300px">
-              <col width="260px">
+              <col width="150px">
+              <col width="220px">
+              <col width="140px">
               <col>
+              <col width="160px">
+              <col width="160px">
+              <col width="130px">
             </colgroup>
             <thead>
               <tr>
-                <th scope="col">주주명</th>
-                <th scope="col">관계</th>
-                <th scope="col">소유 주식수</th>
-                <th scope="col">지분율</th>
+                <th scope="col">특허유형</th>
+                <th scope="col">출원번호</th>
+                <th scope="col">등록상태</th>
+                <th scope="col">발명의 명칭</th>
+                <th scope="col">등록일자</th>
+                <th scope="col">출원인</th>
                 <th scope="col">관리</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>홍길동</td>
-                <td>
-                  <select title="주주와의 관계선택">
-                    <option>최대 주주</option>
-                    <option>셀렉트</option>
-                  </select>
-                </td>
-                <td><input type="text" class="input" value="500"/></td>
-                <td><input type="text" class="input" value="50%"/></td>
+                <td><input type="text" class="input" placeholder="" value="상표권" title="특허유형"></td>
+                <td><input type="text" class="input" placeholder="" value="10-1234-1234567" title="출원번호"></td>
+                <td><input type="text" class="input" placeholder="" value="등록" title="등록상태"></td>
+                <td><input type="text" class="input" placeholder="" value="그래핀을 함유한 고강도 경량과 복합소재 및 이의 고강도 경량과 복합소재 및 이의" title="발명의 명칭"></td>
+                <td><input type="text" class="input" placeholder="" value="2022-10-14" title="등록일자"></td>
+                <td><input type="text" class="input" placeholder="" value="(주)신한은행" title="출원인"></td>
                 <td>
                   <div class="addBtnSet">
                     <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
                     <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
                   </div>
                 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="sectionBlock60">
+        <p class="pageTxt">기술 인증 서류를 제출해주세요 (선택)<span class="pointDesc">기술 정보는 금융기관들이 중요하게 생각하는 자료에요. 기술관련 자료가 있다면 제출해 주세요.</span></p>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>기술 인증 서류</caption>
+            <colgroup>
+              <col width="210px">
+              <col />
+              <col width="220px">
+              <col width="240px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">기술인증기관</th>
+                <th scope="col">증빙서류</th>
+                <th scope="col">제출 여부</th>
+                <th scope="col">등록 일자</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>이노비즈</td>
+                <td>기술혁신 중소기업 확인서.jpg</td>
+                <td><strong>제출 완료</strong></td>
+                <td>2023-08-15</td>
               </tr>
               <tr>
-                <td>홍길동</td>
-                <td>
-                  <select title="주주와의 관계선택">
-                    <option>최대 주주</option>
-                    <option>셀렉트</option>
-                  </select>
-                </td>
-                <td><input type="text" class="input" value="500"/></td>
-                <td><input type="text" class="input" value="50%"/></td>
-                <td>
-                  <div class="addBtnSet">
-                    <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
-                    <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
-                  </div>
-                </td>
+                <td>벤처 기업</td>
+                <td>-</td>
+                <td><button type="button" class="btnSuccess full">업로드</button></td>
+                <td>2023-08-15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="sectionBlock60">
+        <p class="pageTxt">기타 추가서류 (선택)<span class="pointDesc">보다 좋은 조건의 대출을 받기 위해서는 아래의 서류가 필요해요.  보유하신 자료가 있으시면 제출해주세요.</span></p>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>기타 추가서류</caption>
+            <colgroup>
+              <col width="420px">
+              <col />
+              <col width="240px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">서류 명</th>
+                <th scope="col">제출 서류 명</th>
+                <th scope="col">제출 여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>법인감증명서</td>
+                <td>법인감증명서.PDF</td>
+                <td><strong>제출완료</strong></td>
               </tr>
               <tr>
-                <td>홍길동</td>
-                <td>
-                  <select title="주주와의 관계선택">
-                    <option>최대 주주</option>
-                    <option>셀렉트</option>
-                  </select>
-                </td>
-                <td><input type="text" class="input" value="500"/></td>
-                <td><input type="text" class="input" value="50%"/></td>
-                <td>
-                  <div class="addBtnSet">
-                    <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
-                    <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
-                  </div>
-                </td>
+                <td>법인감증명서</td>
+                <td>-</td>
+                <td><button type="button" class="btnSuccess full">업로드</button></td>
               </tr>
-              
+              <tr>
+                <td>본사 임대차계약서</td>
+                <td>본사 임대차계약서.jpg</td>
+                <td><button type="button" class="btnSuccess full">업로드</button></td>
+              </tr>
+              <tr>
+                <td>사업장 임대차계약서</td>
+                <td>사업장 임대차계약서.jpg</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>수상자료</td>
+                <td>수상자료.PDF</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>기업소개자료</td>
+                <td>기업소개자료(R).PDF</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>당해년도 사업계획서</td>
+                <td>사업계획서.PDF</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>조직도</td>
+                <td>사내조직도.JPG</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>국민연금 보험료 납부 영수증</td>
+                <td>국민연금 보험료 납부.PDF</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
+              <tr>
+                <td>고용보험료 납부 영수증</td>
+                <td>고용보험료 납부 영.PDF</td>
+                <td><strong>제출완료</strong></td>
+              </tr>
             </tbody>
           </table>
         </div>

@@ -25,7 +25,7 @@
       <h2 class="pageTit">대출 비교하기</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><strong>대출 비교</strong></a></li>
+          <li><a href="#none"><strong>대출 비교하기</strong></a></li>
       </ul>
     </section>
     <div class="barStepWrap">
@@ -111,9 +111,225 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine"><h3 class="inner">업체 개요<button type="button" class="btnDkGreen">내 정보 불러오기</button></h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner flexBetween">업체 개요<button type="button" class="btnDkGreen">내 정보 불러오기</button></h3></div>
     <div class="bgGray">
-      
+      <section class="sectionBlock20">
+        <div class="titH5"><h3>법인 회사 정보를 입력해주세요.  <strong class="blue">(필수)</strong></h3></div> 
+        <div class="formListTable mt40">
+          <table>
+            <caption>법인회사정보</caption>
+            <colgroup>
+              <col width="186px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inpBizNum">사업자등록번호</label>
+                </th>
+                <td>
+                  <div class="formRow textCenter inputBizNumber" role="group" aria-labelledby="inpBizNum">
+                    <input class="input" type="text" title="사업자등록번호(1/3)" maxlength="3" size="3" placeholder="000" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="사업자등록번호(2/3)" maxlength="2" size="2" placeholder="00" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="사업자등록번호(3/3)" maxlength="5" size="5" placeholder="00000" value="" readonly>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inpBrdName">법인명</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inpBrdName" class="input wid380" type="text" placeholder="상(주)모션아이" value="" readonly>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel3">경영방식</label>
+                </th>
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="inputLabel3">
+                    <span class="radio">
+                      <input type="radio" id="radioLabel1_1" name="radioLabel1" value="" checked/>
+                      <label class="label" for="radioLabel1_1"><span></span>창업자(소유자)</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="radioLabel1_2" name="radioLabel1" value="" />
+                      <label class="label" for="radioLabel1_2"><span></span>창업 2세</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="radioLabel1_3" name="radioLabel1" value="" />
+                      <label class="label" for="radioLabel1_3"><span></span>전문경영인</label>
+                    </span>
+                    <div class="formSet">
+                      <span class="radio"> 
+                        <input type="radio" id="radioLabel1_4" name="radioLabel1" value="" />
+                        <label class="label" for="radioLabel1_4"><span></span>기타</label>
+                      </span>
+                      <input class="input wid300" type="text" placeholder="정보를 입력해 주세요." value="">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inputLabel4">업종</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <select title="업종 선택" id="inputLabel4" class="wid380">
+                      <option>업종 선택</option>
+                      <option>셀렉트</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel5">개업일</label>
+                </th>
+                <td>
+                  <div class="rangeControl lg">
+                    <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                    <span class="uit">~</span>
+                    <input type="text" class="input calendar" value="2023-07-31" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                  </div> 
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel6">본사주소</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input class="input wid600" type="text" placeholder="" value="서울 마포구 양화로 10길 50, 마이빌딩 5층" readonly>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel7">본사 사업장의<br/>임대 형태</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <span class="radio">
+                      <input type="radio" id="radioLabel2_1" name="radioLabel2" value="" />
+                      <label class="label" for="radioLabel2_1"><span></span>창업 2세</label>
+                    </span>
+                    <div class="formSet">
+                      <span class="radio"> 
+                        <input type="radio" id="radioLabel2_2" name="radioLabel2" value="" />
+                        <label class="label" for="radioLabel2_2"><span></span>전문경영인</label>
+                      </span>
+                      <input class="input wid240" type="text" placeholder="전세금을 입력해 주세요." value="" >
+                      <span class="unit">원</span>
+                    </div>
+                  </div>
+                  <div class="formRow">
+                    <div class="formSet">
+                      <span class="radio"> 
+                        <input type="radio" id="radioLabel2_2" name="radioLabel2" value="" />
+                        <label class="label" for="radioLabel2_2"><span></span>월세보증금</label>
+                      </span>
+                      <input class="input wid240" type="text" placeholder="보증금을 입력해주세요." value="" >
+                      <span class="unit">원</span>
+                      <span class="unit">/</span>
+                      <span class="unit">월세</span>
+                      <input class="input wid240" type="text" placeholder="월세를 입력해 주세요." value="" >
+                      <span class="unit">원</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel8">본사 주소</label>
+                </th>
+                <td>
+                  <div role="group" aria-labelledby="inputLabel8">
+                    <div class="formRow">
+                      <div class="formSet wid600">
+                        <input class="input" type="text" title="주소" placeholder="주소를 검색해 주세요." value="서울 중구 청계천로 54">
+                        <button type="button" class="btnBlack">주소검색</button>
+                      </div>
+                      <span class="checkbox">
+                        <input type="checkbox" id="ckbMember1_1" name="ckbMember" />
+                        <label class="label" for="ckbMember1_1"><span></span>본사 주소와 동일</label>
+                      </span>
+                    </div>
+                  
+                    <div class="formRow">
+                      <input class="input wid600" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="4층">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inputLabel9">대표자명</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input class="input wid600" type="text" id="inputLabel9" title="" placeholder="" value="박충일" readonly>
+                    <span class="radio">
+                      <input type="radio" id="radioLabel9_1" name="radioLabel9" value="" checked/>
+                      <label class="label" for="radioLabel9_1"><span></span>단독 대표</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="radioLabel9_2" name="radioLabel9" value="" />
+                      <label class="label" for="radioLabel9_2"><span></span>공동 대표</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="radioLabel9_3" name="radioLabel9" value="" />
+                      <label class="label" for="radioLabel9_3"><span></span>각자 대표</label>
+                    </span>
+                  </div>
+                  <p class="notiTxt">대표자 정보와 법인등기상 정보가 다르면 대출 비교 접수가 불가합니다. 대표자 정보가 다를 경우 마이페이지에서 수정 후 진행해 주세요.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" id="inputLabel10">법인 담당자<br/>전화번호</label>
+                </th>
+                <td>
+                  <div class="formRow wid600 textCenter" role="group" aria-labelledby="inputLabel10">
+                    <input class="input" type="text" title="법인 담당자 전화번호(1/3)" placeholder="" value="010" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="법인 담당자 전화번호(2/3)" placeholder="" value="1234" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" readonly>
+                    <button type="button" class="btnWhite" disabled>본인확인</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inputLabel11">직원수</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inputLabel11" class="input wid160 innerTxt_1" type="text" placeholder="" value="21">
+                    <span class="unit">명</span>
+                    <button type="button" class="btnWhite">상시 직원수 조회 <em class="tooltip_q" title="asdfdfdfdfdfsdfdfdfdf."><span class="txt">?</span></em></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <div class="table_bt">
+      <div class="btn_c">
+        <button type="button" class="btnSuccess">중간 저장</button>
+      </div>
+      <div class="btn_r">
+        <button type="button" class="btnWhite ico_next">다음</button>
+      </div>
     </div>
   </section>
   
