@@ -34,6 +34,7 @@
 *****************************/
 .textLeft { text-align: left !important; }
 .textCenter { text-align: center;}
+.textRight { text-align: right;}
 .required { margin-right: 4px;; color: #FE5050;}
 .textBold { font-weight: 700;}
 .required.rightTxt { text-align: right; padding:20px 0; }
@@ -241,7 +242,7 @@ table .btnLine       {padding:0 30px; height:50px; line-height:50px; }
 .btnBlack:disabled,
 .btnWhiteLine:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  }
 
-.ico_down       {padding:0 32px;}
+.ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
@@ -929,6 +930,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt a + a      {margin-left:6px; }
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 .table_bt.fullType button { width: 100%;}
+.layerCont .table_bt { margin-top: 30px;}
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.sectionBlock60 { margin-top: 60px;}
@@ -1905,3 +1907,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 
 /* table */
 .pt15 { padding-top: 15px !important}
+
+.scrapTable { padding: 40px 80px; border: 1px solid #ddd; border-radius: 16px;}
+.scrapTable .status { display: block; font-weight: 700; text-align: center;}
+.scrapTable .status.fail { color: #FE5050;}
+.scrapTable .status.nothing { color: #888;}
