@@ -1105,7 +1105,7 @@ table { width: 100%;}
 .formListTable tr:first-child th{ padding-top: 15px;}
 .formListTable tr:first-child td { padding-top: 0;}
 .formListTable tr:first-child td.pt15{ padding-top: 15px;}
-.formListTable tr:first-child td .radio { padding-top: 15px;}
+/* .formListTable tr:first-child td .radio { padding-top: 15px;} */
 .formListTable tr:last-child th,
 .formListTable tr:last-child td { padding-bottom: 0;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
