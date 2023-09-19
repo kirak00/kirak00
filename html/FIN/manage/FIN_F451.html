@@ -39,22 +39,22 @@
         <!-- 검색 -->
         <fieldset>
           <legend>게시물 검색</legend>
-          <div class="searchControlBox">
+          <div class="searchControlBox disabled">
             <div class="searchControlGroup">
-              <div class="searchControlItem expand">
+              <div class="searchControlItem expand  ">
                 <label for="" class="label">소속 지점 조회</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
-                  <select title="지역본부">
+                  <select title="지역본부" disabled>
                     <option>지역본부</option>
                     <option>지역본부</option>
                   </select>
                   <span class="line"></span>
-                  <select title="금고본점">
+                  <select title="금고본점"  disabled>
                     <option>금고본점</option>
                     <option>금고본점</option>
                   </select>
                   <span class="line"></span>
-                  <select title="지점">
+                  <select title="지점" disabled>
                     <option>지점</option>
                     <option>지점</option>
                   </select>
@@ -65,17 +65,17 @@
               <div class="searchControlItem">
                 <label for="" class="label srOnly">소속 지점 조회</label>
                 <div class="formRow">
-                  <select title="지점코드">
+                  <select title="지점코드" disabled>
                     <option>지점코드</option>
                     <option>이하</option>
                   </select>
-                  <input type="text" class="input wid770" id="" placeholder="">
+                  <input type="text" class="input wid770" id="" placeholder="" disabled>
                 </div>
               </div>
               <div class="searchBtns">
-                <button type="button" class="btnSuccess">조회</button>
+                <button type="button" class="btnSuccess" disabled>조회</button>
               </div>
-            </div>
+            </div> 
           </div>
         </fieldset>
         <!-- 검색 -->
@@ -93,24 +93,59 @@
           </fieldset>
 
           <div class="jsGridWrap">
-            <div id="jsGrid2" class="bbs"></div>    
+            <div id="jsGrid2" class="bbs"></div> 
+            <div id="externalPager2" class="external-pager"></div>
+            
             <div class="table_bt">
               <div class="btn_r">
-                <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
-                <button type="button" class="btnWhite">소속 금융사 계정 관리</button>
+                <button type="button" class="btnSuccess ico_down" disabled>엑셀 다운로드</button>
+                <button type="button" class="btnWhite" disabled>소속 금융사 계정 관리</button>
               </div>
             </div>
-            <div id="externalPager2" class="external-pager"></div>
+
+            <div class="uploadResult">
+              <div class="resutlBox">
+                <strong>검토 결과</strong>
+                <em class="total">총 <strong>123</strong>건 </em>
+                <em>업데이트 <strong>4</strong>건 </em>
+                <em>신규 <strong>4</strong>건 </em>
+                <em>오류 <strong>2</strong>건 </em>
+              </div>
+              <p class="tipTxt">오류가 있는 경우 해당 건을 조치 후에 저장해 주세요.</p>
+              <p class="tipTxt">해당 항목 또는 [수정]버튼을 클릭하면 직접 수정이 가능합니다.</p>
+            </div>
+
+            <div class="table_bt">
+              <div class="btn_c">
+                <button type="button" class="btnSuccess">저장</button>
+                <button type="button" class="btnWhite">취소</button>
+              </div>
+            </div>
           </div>
 
                   
           <script>
-            $(function() {
+            $(function() { 
 
               var clients = [
                 { 
-                  "Name1": "새마을금고<br/>중앙회",
-                  "Name2": "서울지역<br/>본부", 
+                  "status": "", 
+                  "Name1": "새마을금고 중앙회",
+                  "Name2": "서울지역 본부", 
+                  "Name3": "강남금고", 
+                  "Name4": "역삼지점", 
+                  "Name5": "123-45-67890", 
+                  "Name6": "0851013", 
+                  "Name7": "MG_0851013", 
+                  "Name8": "MG_0851013", 
+                  "Name9": "서울", 
+                  "Name10": "강남구", 
+                  "Name11": "도곡로 173",
+                },
+                { 
+                  "status": "", 
+                  "Name1": "새마을금고 중앙회",
+                  "Name2": "서울지역 본부", 
                   "Name3": "강남금고", 
                   "Name4": "역삼지점", 
                   "Name5": "123-45-67890", 
@@ -122,21 +157,9 @@
                   "Name11": "도곡로 173", 
                 },
                 { 
-                  "Name1": "새마을금고<br/>중앙회",
-                  "Name2": "서울지역<br/>본부", 
-                  "Name3": "강남금고", 
-                  "Name4": "역삼지점", 
-                  "Name5": "123-45-67890", 
-                  "Name6": "0851013", 
-                  "Name7": "MG_0851013", 
-                  "Name8": "MG_0851013", 
-                  "Name9": "서울", 
-                  "Name10": "강남구", 
-                  "Name11": "도곡로 173", 
-                },
-                { 
-                  "Name1": "새마을금고<br/>중앙회",
-                  "Name2": "서울지역<br/>본부", 
+                  "status": "error", 
+                  "Name1": "새마을금고 중앙회",
+                  "Name2": "서울지역 본부", 
                   "Name3": "강남금고", 
                   "Name4": "역삼지점", 
                   "Name5": "123-45-67890", 
@@ -151,20 +174,22 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
+                editing: true,
                 noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
                 fields: [
-                  { name: "Name1",  type: "text", title : "중앙회", width: 140},
-                  { name: "Name2",  type: "text", title : "지역본부", width: 120},
-                  { name: "Name3",  type: "text", title : "금고본점", width: 85},
-                  { name: "Name4",  type: "text", title : "지점", width: 120},
-                  { name: "Name5",  type: "text", title : "사업자 등록번호", width: 160},
-                  { name: "Name6",  type: "text", title : "지점코드", width: 110},
-                  { name: "Name7", type: "text", title : "아이디", width: 150 },
-                  { name: "Name8", type: "button", title : "비밀번호", width: 150 },
-                  { name: "Name9", type: "button", title : "주소1", width: 85 },
-                  { name: "Name10", type: "button", title : "주소2", width: 70 },
-                  { name: "Name11", type: "button", title : "주소3", width: 130 },
+                  { width:"170", name: "Name1",  type: "text", title : "중앙회",  },
+                  { width:"130", name: "Name2",  type: "text", title : "지역본부", },
+                  { width:"110", name: "Name3",  type: "text", title : "금고본점", },
+                  { width:"100", name: "Name4",  type: "text", title : "지점", },
+                  { width:"140", name: "Name5",  type: "text", title : "사업자 등록번호", },
+                  { width:"120", name: "Name6",  type: "text", title : "지점코드", },
+                  { width:"130", name: "Name7", type: "text", title : "아이디", },
+                  { width:"130", name: "Name8", type: "text", title : "비밀번호",  },
+                  { width:"100", name: "Name9", type: "text", title : "주소1",   },
+                  { width:"100", name: "Name10", type: "text", title : "주소2",  },
+                  { width:"120", name: "Name11", type: "text", title : "주소3",  },
+                  { type: "control" }
                 ],
                 
                 pagerContainer: "#externalPager2",

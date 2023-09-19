@@ -636,8 +636,13 @@
             } else {
                 $result = $("<tr>");
                 this._renderCells($result, item);
+                if(item.status == "error"){
+                    $result.addClass("error")    
+                }
+
             }
 
+            
             $result.addClass(this._getRowClasses(item, itemIndex))
                 .data(JSGRID_ROW_DATA_KEY, item)
                 .on("click", $.proxy(function(e) {
@@ -1274,15 +1279,21 @@
             this._editingRow = $row;
             $row.hide();
             $editRow.insertBefore($row);
+            $editRow.focus()
             $row.data(JSGRID_EDIT_ROW_DATA_KEY, $editRow);
         },
 
         _createEditRow: function(item) {
+            
             if($.isFunction(this.editRowRenderer)) {
                 return $(this.renderTemplate(this.editRowRenderer, this, { item: item, itemIndex: this._itemIndex(item) }));
             }
 
-            var $result = $("<tr>").addClass(this.editRowClass);
+            var $result = $("<tr tabindex='0'>").addClass(this.editRowClass);
+
+            if(item.status == "error"){
+                $result.addClass("error")    
+            }
 
             this._eachField(function(field) {
                 var fieldValue = this._getItemFieldValue(item, field);
@@ -1291,7 +1302,7 @@
                     .append(this.renderTemplate(field.editTemplate || "", field, { value: fieldValue, item: item }))
                     .appendTo($result);
             });
-
+            
             return $result;
         },
 
@@ -2328,7 +2339,7 @@
     ControlField.prototype = new Field({
         css: "jsgrid-control-field",
         align: "center",
-        width: 50,
+        width: 140,
         filtering: false,
         inserting: false,
         editing: false,

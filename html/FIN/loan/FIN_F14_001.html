@@ -64,7 +64,7 @@
               <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="loan_company_cont_1">대출 신청 정보</button></li>
               <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_2">기업 일반 정보</button></li>
               <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_3">기업 상세 정보</button></li>
-              <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_4">고객 제출 서류</button></li>
+              <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_4">추가  제출 서류</button></li>
             </ul>
 
              
@@ -216,10 +216,6 @@
                         <td>단독 대표</td>
                       </tr>
                       <tr>
-                        <th scope="row">대표자 주민등록번호</th> 
-                        <td>701204-1******  <button type="button" class="btnBlack sm">전체노출</button></td>
-                      </tr>
-                      <tr>
                         <th scope="row">법인 담당자 전화번호</th> 
                         <td>02-3210-1874</td>
                       </tr>
@@ -229,7 +225,7 @@
                       </tr>
                       <tr>
                         <th scope="row">직원수</th> 
-                        <td>123명 <em class="greenLine">근로복지</em></td>
+                        <td>123명 <em class="greenLine">근로복지공단 정보</em></td>
                       </tr>
                     </tbody>
                   </table>
@@ -250,7 +246,9 @@
                         <col width="205px" />
                         <col />
                         <col width="205px" />
-                        <col />
+                        <col width="150px" />
+                        <col width="105px" />
+                        <col width="335px" />
                       </colgroup>
                       <thead>
                         <tr>
@@ -258,6 +256,8 @@
                           <th scope="col">직함</th>
                           <th scope="col">설립자와의 관계</th> 
                           <th scope="col">동업계 종사년수</th>
+                          <th scope="col">자가 여부</th>
+                          <th scope="col">대표자 주민등록번호</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -266,6 +266,8 @@
                           <td>회장</td>
                           <td>창업 2세</td> 
                           <td>19</td>
+                          <td>있음</td>
+                          <td><span>701204-1******</span> <button type="button" class="btnBlack sm">전체노출</button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -531,11 +533,15 @@
                   <colgroup>
                     <col width="205px" />
                     <col />
+                    <col width="205px" />
+                    <col />
                   </colgroup>
                   <tbody>
                     <tr>
                       <th scope="row">CRETOP 등급</th> 
                       <td>AA+</td>
+                      <th scope="row">CRT 정보</th> 
+                      <td>1,400(단위: 백만원)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -545,7 +551,7 @@
                 
                 <div class="stitBox">
                   <h4 class="titH5">법인 회사 재무 현황</h4>
-                  <button type="button" class="btnSuccess sm ico_down">재무 현황 일괄 다운로드</button>
+                  <!-- <button type="button" class="btnSuccess sm ico_down">재무 현황 일괄 다운로드</button> -->
                 </div>
                 <div class="table_wrap">
                   <table class="bbs_list">
@@ -938,22 +944,21 @@
             </div>
 
             
-            <!-- 고객 제출 서류 -->
+            <!-- 추가 제출 서류 -->
             <div class="companytabContentPrint" id="loan_company_cont_4" role="tabpanel" tabindex="0">
-              <h3 class="hide">고객 제출 서류</h3>
+              <h3 class="hide">추가 제출 서류</h3>
               
-              <ul class="innerTab tabScript" role="tablist">
-                <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="loan_company_cont_5_1">법인이 추가로 등록한 서류</button></li>
-                <li><button type="button" role="tab" aria-selected="false" aria-controls="loan_company_cont_5_2">법인에게 요청한 추가 서류 </button></li>
-              </ul>
+
               
-              <div class="companytabContentPrint" id="loan_company_cont_5_1" role="tabpanel" tabindex="0">
+
+              
+              <div class="companytabContentPrint">
                 <h4 class="hide">법인이 추가로 등록한 서류</h4>
                 <div class="companyInfo">
-                  <h4 class="titH5">고객이 제출한 서류</h4>
+                  <h4 class="titH5">법인 회원이 직접 추가한 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>고객이 제출한 서류</caption>
+                      <caption>법인 회원이 직접 추가한 서류</caption>
                       <colgroup>
                         <col />
                         <col width="25%" />
@@ -983,13 +988,13 @@
                 </div>
               </div>
               
-              <div class="companytabContentPrint" id="loan_company_cont_5_2" role="tabpanel" tabindex="0">
+              <div class="companytabContentPrint">
                 <h4 class="hide">법인에게 요청한 추가 서류</h4>
                 <div class="companyInfo">
-                  <h4 class="titH5">추가 요청한 서류</h4>
+                  <h4 class="titH5">법인 회원에게 추가 요청한 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>추가 요청한 서류</caption>
+                      <caption>법인 회원에게 추가 요청한 서류</caption>
                       <colgroup>
                         <col />
                         <col width="25%" />
@@ -998,7 +1003,7 @@
                       <thead>
                         <tr>
                           <th scope="col">서류명</th> 
-                          <th scope="col">제풀일</th>
+                          <th scope="col">제출일</th>
                           <th scope="col">다운로드</th> 
                         </tr>
                       </thead>

@@ -27,6 +27,8 @@
 .nodata { margin: 240px 0 200px; text-align: center; font-size: 18px; color: #555;}
 
 
+.scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../images/common/top.png) no-repeat 0 0;  }
+
 /****************************
 **********  align  **********
 *****************************/
@@ -83,7 +85,15 @@
 
 .titH4.hasLine + .tableFilterGroup { margin-top: 40px;}
 
-.resultTxt { padding: 60px 0; text-align: center;}
+.resultTxt { margin: 60px 0; text-align: center;}
+
+
+ul.commissionItem     {}
+ul.commissionItem li     {margin-top:16px; }
+ul.commissionItem li em     {display:inline-block; padding:0 16px; margin-right:16px;  border:1px solid #069B66; color:#069B66; font-weight: 700; font-size: 16px; line-height:26px; border-radius:13px;  }
+ul.commissionItem li em.discount     {border:1px solid #FF8D4D; color:#FF8D4D; }
+ul.commissionItem li span     {display:inline-block;  line-height:26px; }
+
 
 /****************************
 **********  list  **********
@@ -229,12 +239,13 @@ table .btnLine       {padding:0 30px; height:50px; line-height:50px; }
 .btnSky:disabled,
 .btnWhite:disabled,
 .btnBlack:disabled,
-.btnWhiteLine:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
+.btnWhiteLine:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  }
 
 .ico_down       {padding:0 32px;}
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
 .btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
 .btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 .btnWhite:active.ico_down::after,
@@ -306,7 +317,7 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 .btnCalendar.white:focus,
 .btnCalendar.white:hover {border:1px solid #069B66; background-color:#069B66 ; background-image:url(../images/common/ico_24_calendar_w.png);  }
 .btnCalendar.sm          {width:50px; height:50px;}
-
+ 
 .btnPlus { width: 50px; height: 50px; flex-shrink: 0; background: #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnPlus::after { content:""; display:inline-block; width:24px; height:24px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
 .btnPlus:focus,
@@ -339,6 +350,7 @@ button.sm       {height:50px; padding:0 30px; }
 em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-radius: 15px; border:1px solid #069B66; color:#069B66; }
 .companyInfo em.greenLine     {margin-left:30px;}
 .companyInfo button.btnBlack     {margin-left:30px;}
+.companyInfo  span + button.btnBlack     {margin-left:10px;}
 
 /* grid 안 아이콘 */
 .icoFile::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_nonelist_g.png')  no-repeat center / 36px 36px; }
@@ -482,7 +494,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 /* input */
 .input { width: 100%; min-height: 64px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 18px; vertical-align: middle;}
 .input::placeholder { color: #888; line-height: normal; }
-.input:disabled, .input:read-only { background: #f4f6f8; color: #888; }
+.input:disabled, .input:read-only { background: #EEF0F1; color: #888; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 .input.wid400 { width: 400px;}
@@ -635,6 +647,14 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.fullChk { width: 100%;}
 .searchControlItem.fullChk .formRow { flex:1}
 .searchControlItem.fullChk .formRow .checkbox:last-child  { flex:1}
+
+
+.searchControlBox     {background:#FAFAFA; }
+.disabled .searchControlItem .label,
+.disabled .searchControlItem select,
+.disabled .searchControlItem .formRow.formGroup > *   {background-color:#EEF0F1; opacity:1;  }
+.disabled .searchBtns button   { border:1px solid #ddd;}
+
 
 
 .searchBtns.right { margin-left: auto;}
@@ -1170,6 +1190,7 @@ table { width: 100%;}
 .jsgrid-cell,.jsgrid-row > .jsgrid-cell
 .jsgrid-alt-row > .jsgrid-cell,
 .jsgrid-edit-row > .jsgrid-cell { padding: 0 20px; background-color: #fff; border:0; border-bottom:1px solid #ddd; word-break: break-all}
+.jsgrid-edit-row > .jsgrid-cell { padding: 0 10px; }
 .jsgrid-header-row:first-child .jsgrid-header-cell:first-child  { padding-left: 30px; border-radius: 16px 0 0;}
 .jsgrid-header-row:first-child .jsgrid-header-cell:last-child  {padding-right: 30px; border-radius:  0 16px 0 0;}
 .jsgrid-grid-header {background:none}
@@ -1202,9 +1223,19 @@ th{word-break: break-all;}
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status { }
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status span {color:#888; }
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status strong {color:#333;  }
+.jsgrid-grid-body tbody tr.error  > .jsgrid-cell {background: rgba(254, 80, 80, 0.20); }
 
 .noTableData  { margin: 60px 0; padding: 40px 0;}
 .noTableData .txt { margin-top: 30px; color: #555;}  
+
+.jsgrid-control-field   {padding:0 10px; }
+.jsgrid-control-field .jsgrid-cancel-edit-button,
+.jsgrid-control-field .jsgrid-delete-button     {display:none; }
+.jsgrid-control-field .jsgrid-edit-button       {width:100px; height:50px; background:url(../images/common/grid_btn_edit.png) no-repeat 50% 50%;   }
+.jsgrid-control-field .jsgrid-update-button     {width:100px; height:50px; background:url(../images/common/grid_btn_ok.png) no-repeat 50% 50%;   }
+
+
+
 
 /****************************
 **********  Gauge  **********
@@ -1284,7 +1315,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .alertWrap .alertBody .confirmCont strong.red     {color:#FE5050;}
 .alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
 .alertWrap .alertBody .alertFooter button    {width:100%; height:60px; margin:0;  }
-.alertWrap .alertBody .alertFooter button.long    {padding:0 30px; }
+.alertWrap .alertBody .alertFooter button.long    {padding:0 20px; }
+.alertWrap .alertBody .alertFooter button.short    {padding:0 30px; }
 .alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
 .alertWrap .alertDimm     {position:absolute;  z-index:1; width:100%; height:100%; left:0; top:0; background:rgba(0, 0, 0, .4)}
 
@@ -1325,7 +1357,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap.show .layerDimm      {opacity:1; left:0; }
 
 
-.layerWrap .layerBody.sizeM { width: 800px;}
+.layerWrap .layerBody.sizeM { width: 720px;}
 
 /* alert 스타일 layer */
 .layerWrap.typeAlert .layerBody       {width:610px;  }
