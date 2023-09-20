@@ -287,15 +287,15 @@
                               <option value="옵션">옵션</option>
                             </select>
                           </div>
-                          <div class="formAdd">
+                          <div class="formAdd" id="damboListWrap">
                             <div class="formRow">
                               <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
                               <button type="button" class="btnBlack p30">주소검색</button>
-                              <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
+                              <button type="button" class="btnPlus" aria-controls="damboListWrap"><span class="hide">담보상세 입력 폼 추가</span></button>
                             </div>
                             <div class="formRow">
                               <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
+                              <button type="button" class="btnPlus" aria-controls="damboListWrap"><span class="hide">담보상세 입력 폼 추가</span></button>
                             </div>
                           </div>
                           <script>
@@ -308,7 +308,6 @@
                                 $listblock.find(".btnPlus")[0].className = "btnMinus";
                                 $listblock.find(".btnMinus")[0].value = "";
                                 $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
-                                $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
                                 $(this).closest('.formAdd').append($listblock);
                               });
                               $(document).on("click", ".btnMinus", function() {
