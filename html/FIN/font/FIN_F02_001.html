@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../test/contents_FIN.css">
+  
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/echarts.min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  
+
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <div class="skip_nav">
+    <a href="#skip_gnb">주메뉴 바로가기</a>
+    <a href="#skip_content">컨텐츠 바로가기</a>
+  </div>
+
+  <div class="wrap main center">
+    <!-- **************** -->
+    <!-- header : start -->
+    <!-- **************** -->
+    <header class="" >
+      <div class="headerUtil">
+        <div class="utilCont">
+          <div class="zommBox">
+            <span class="tit">글자크기</span>
+            <button type="button" class="btn_zoom_plus"><span class="hide">화면확대</span></button>
+            <button type="button" class="btn_zoom_minus"><span class="hide">화면축소</span></button>
+          </div>
+        </div>
+      </div>
+      <nav class="headerCont ">
+        <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
+        <h2 class="hide">메뉴 영역</h2>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
+          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 신청 업체 목록</span></a>
+            <ul>
+              <li class="depth_2 on"><a href="#none">대출 신청 업체 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">제안서 등록</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">제안서 제출 가능 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">회원정보</a></li>
+              <li class="depth_2"><a href="#none">제안서 관리</a></li>
+              <li class="depth_2"><a href="#none">취급 대출 내역</a></li>
+              <li class="depth_2"><a href="#none">메시지함</a></li>
+              <li class="depth_2"><a href="#none">희망 업체 알림 설정</a></li>
+              <li class="depth_2"><a href="#none">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_office">중앙회(본점) 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">금융사 대출 목록</a></li>
+              <li class="depth_2"><a href="#none">대출 실적 관리</a></li>
+              <li class="depth_2"><a href="#none">소속 금융사 계정 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="headerLogin">
+          <!-- <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li> -->
+          <li><a href="#none" class="logout">로그아웃</a></li>
+        </ul>
+      </nav> 
+      <div class="bg"></div>
+      <div class="line"></div>
+    </header>
+    <!-- **************** -->
+    <!-- header : end -->
+    <!-- **************** -->
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+ 
+      <h2 class="hide">콘텐츠 영역</h2>
+      <section>
+        <div class="mainTop">
+
+          <div class="main_myInfo">
+            <div class="welcomeBox">
+              <div class="welcometit">
+                <span>안녕하세요!</span>
+                <strong>길동중앙회(광교영업점)님😊</strong>
+              </div>
+              <button type="button" class="btnWhite ico_down sm">금융회원 매뉴얼 다운로드</button>
+            </div>
+            <div class="msgBox on">
+              <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span> 
+              <div class="layer_msg " role="alert">
+                제안서 연장 요청이 <strong>승인되었습니다</strong>
+              </div>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>검색</legend>
+            
+            <div class="searchControlBox">
+              <div class="searchControlGroup">
+                <div class="dateTab tabScript" role="tablist">
+                  <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
+                </div>
+
+                <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+                  <select id="selectLabelState">
+                    <option>2023년</option>
+                  </select>
+                
+                  <select id="selectLabelState">
+                    <option>7월</option>
+                  </select> 
+                </div>
+
+                <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>
+                
+
+              </div>
+              <div class="searchControlGroup">
+                
+                <div class="searchControlItem center_organ">
+                  <label for="selectLabelState" class="label">조직 선택</label>
+                  <div class="formRow formGroup">
+                    <select id="selectLabelState">
+                      <option>지역본부</option>
+                    </select>
+                    <span class="line"></span>
+                    <select id="selectLabelState">
+                      <option>금고본점</option>
+                    </select>
+                    <span class="line"></span>
+                    <select id="selectLabelState">
+                      <option>지점</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+              
+      
+              <script>
+                function printSetting(){
+                 
+                
+                 $("body").addClass("printSetting");
+                 myChart1.resize()
+                 myChart2.resize();
+                 setTimeout(function(){
+                   print()
+                 },30)
+                 setTimeout(function(){
+                   $("body").removeClass("printSetting");
+                   myChart1.resize()
+                   myChart2.resize();
+                 },50)
+                }
+               
+               </script>  
+                
+              <div class="searchBtns">
+                <button type="button" class="btnSky ico_print" onclick="printSetting()" title="프린트" >대시보드 출력</button>
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
+          </fieldset>
+    
+
+          
+        </div>
+      </section>
+
+      <section class="printTit">
+        <div class="logo"></div>
+        <p>본 화면은 Loan&Biz에서 관리 및 보호중인 중요 개인정보가 포함된 화면이므로 대출 정보 조회 용도 외 사용을 금합니다.</p>
+      </section>
+      <section class="main_dashboard">
+          
+        <ul role="tablist" class="tabLine fullType tabScript">
+          <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="mainDashboard_1">통계 Ⅰ</button></li>
+          <li><button type="button" role="tab" aria-selected="false" aria-controls="mainDashboard_2">통계 Ⅱ</button></li>
+        </ul>
+        <div id="mainDashboard_1" role="tabpanel" tabindex="0">
+            
+          <ul class="dashboardWrap">
+            <li class="box wid50">
+              <div class="chart_lineBox size_2">
+                <div class="titBox">
+                  <strong>월 건수 실적 변동 추이</strong>
+                  <div class="legendBg"></div>
+                </div>
+                <div class="chartBox" style="width:100%; height:220px;" id="dashChart_1"></div>
+              </div>
+              <script>
+
+                var myChart1 = echarts.init(document.getElementById('dashChart_1'));
+                var option = {
+                    // title: {
+                    //   text: '월 건수 실적 변동 추이',
+                    //   textStyle : {
+                    //     fontSize: '24px'
+                    //   },
+                    // },
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'cross',
+                        label: {
+                          backgroundColor: '#6a7985'
+                        }
+                      }
+                    },
+                    
+                    legend: {
+                      data: ['제안 건수', '실행 건수'],
+                      right:'20px',
+                      icon : 'circle',
+                      textStyle : {
+                        fontSize: '14px',
+                        color : '#555'
+                      },
+                      itemStyle : {
+                        shadowColor:'#ddd'
+                      },
+
+                    },
+
+                    grid: {
+                      left: '1%',
+                      right: '3%',
+                      bottom: '0%',
+                      containLabel: true
+                    },
+                    xAxis: [
+                      {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        axisLabel: {
+                          fontSize:14
+                        }
+                      }
+                    ],
+                    yAxis: [
+                      {
+                        type: 'value'
+                      }
+                    ],
+                    series: [
+                      {
+                        name: '실행 건수',
+                        type: 'line',
+                        symbol : "none",
+                        color: "#FE5050",
+                        lineStyle : {
+                          width:3,
+                        },
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(254, 80, 80, 0.15)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(255, 124, 68, 0.00)'
+                            }
+                          ])
+        
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                      },
+                      {
+                        name: '제안 건수',
+                        type: 'line',
+                        symbol : "none",
+                        color: "#069B66",
+                        lineStyle : {
+                          width:3,
+                        },
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(6, 155, 102, 0.15)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(6, 155, 102, 0.00)'
+                            }
+                          ])
+
+                        },
+                        data: [120, 182, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310]
+                      },
+                    ]
+                  };
+                  myChart1.setOption(option);
+
+              </script>
+            </li>
+            <li class="box wid50">
+              <div class="chart_lineBox">
+                <div class="titBox">
+                  <strong>월 건수 실적 변동 추이</strong>
+                  <div class="legendBg size_1"></div>
+                </div>
+                <div class="chartBox" style="width:100%; height:220px;" id="dashChart_2">
+                  <div class="noData"><span>아직은 조회할 데이터가 없어요</span></div>
+                </div>
+              </div>
+              <script>
+
+                var myChart2 = echarts.init(document.getElementById('dashChart_2'));
+                var option = {
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'cross',
+                        label: {
+                          backgroundColor: '#6a7985'
+                        }
+                      }
+                    },
+                    
+                    legend: {
+                      data: ['실행 금액'],
+                      right:'20px',
+                      icon : 'circle',
+                      textStyle : {
+                        fontSize: '14px',
+                        color : '#555'
+                      },
+                      itemStyle : {
+                        shadowColor:'#ddd'
+                      },
+
+                    },
+
+                    grid: {
+                      left: '1%',
+                      right: '3%',
+                      bottom: '0%',
+                      containLabel: true
+                    },
+                    xAxis: [
+                      {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        axisLabel: {
+                          fontSize:14
+                        }
+                      }
+                    ],
+                    yAxis: [
+                      {
+                        type: 'value'
+                      }
+                    ],
+                    series: [
+                      {
+                        name: '실행 금액',
+                        type: 'line',
+                        symbol : "none",
+                        color: "#3295CD",
+                        lineStyle : {
+                          width:3,
+                        },
+                        areaStyle: {
+                          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                              offset: 0,
+                              color: 'rgba(50, 149, 205, 0.15)'
+                            },
+                            {
+                              offset: 1,
+                              color: 'rgba(50, 149, 205, 0.00)'
+                            }
+                          ])
+        
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                      },
+                    ]
+                  };
+                  myChart2.setOption(option);
+              </script>
+            </li>
+          </ul>
+
+          <ul class="dashboardWrap">
+            <li class="items type_1">
+              <strong class="tit">실행 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>238</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_2">
+              <strong class="tit">실행 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li> 
+            <li class="items type_3">
+              <strong class="tit">제안 건수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="items type_4">
+              <strong class="tit">제안 금액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>억</span> 
+                  <strong>5000</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li>
+          </ul>
+
+          
+          <ul class="dashboardWrap rank">
+            <li class="rankItem long" id="rankTabCont_1">
+              <div class="rankTitBox">
+                <button type="button" class="prev" aria-controls="rankTabCont_1"><span class="hide">이전</span></button>
+                <strong class="on" aria-selected="true">최다 제안 지점</strong>
+                <strong class="" aria-selected="false">최다다 제안 지점</strong>
+                <button type="button" class="next" aria-controls="rankTabCont_1"><span class="hide">다음</span></button>
+              </div> 
+              <div class="rankTabCont">
+                <ol class="on" aria-hidden="false">
+                  <li><em class="num_1"></em> <span>광화문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>서초지점</span></li>
+                  <li><em class="num">3</em>  <span>홍대지점</span></li>
+                  <li><em class="num">4</em>  <span>판교지점</span></li>
+                  <li><em class="num">5</em>  <span>잠실지점</span></li>
+                </ol>
+                <ol class="" aria-hidden="true">
+                  <li><em class="num_1"></em> <span>서대문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>강남지점</span></li>
+                  <li><em class="num">3</em>  <span>여의도지점</span></li>
+                  <li><em class="num">4</em>  <span>홍대지점</span></li>
+                  <li><em class="num">5</em>  <span>서초지점</span></li>
+                </ol>
+              </div>
+            </li>
+            <li class="rankItem long">
+              <div class="rankTitBox">
+                <button type="button" class="prev" aria-controls="rankTabCont_1"><span class="hide">이전</span></button>
+                <strong class="on" aria-selected="true">최다 실행 지점</strong>
+                <strong class="" aria-selected="false">최다다 실행 지점</strong>
+                <button type="button" class="next" aria-controls="rankTabCont_1"><span class="hide">다음</span></button>
+              </div> 
+              <div class="rankTabCont">
+                <ol class="on" aria-hidden="false">
+                  <li><em class="num_1"></em> <span>광화문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>서초지점</span></li>
+                  <li><em class="num">3</em>  <span>홍대지점</span></li>
+                  <li><em class="num">4</em>  <span>판교지점</span></li>
+                  <li><em class="num">5</em>  <span>잠실지점</span></li>
+                </ol>
+                <ol class="" aria-hidden="true">
+                  <li><em class="num_1"></em> <span>서대문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>강남지점</span></li>
+                  <li><em class="num">3</em>  <span>여의도지점</span></li>
+                  <li><em class="num">4</em>  <span>홍대지점</span></li>
+                  <li><em class="num">5</em>  <span>서초지점</span></li>
+                </ol>
+              </div>
+            </li>
+            <li class="rankItem long">
+              <div class="rankTitBox">
+                <button type="button" class="prev" aria-controls="rankTabCont_1"><span class="hide">이전</span></button>
+                <strong class="on" aria-selected="true">최다 실행 금액 지점</strong>
+                <strong class="" aria-selected="false">최다다 실행 금액 지점 </strong>
+                <button type="button" class="next" aria-controls="rankTabCont_1"><span class="hide">다음</span></button>
+              </div> 
+              <div class="rankTabCont">
+                <ol class="on" aria-hidden="false">
+                  <li><em class="num_1"></em> <span>광화문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>서초지점</span></li>
+                  <li><em class="num">3</em>  <span>홍대지점</span></li>
+                  <li><em class="num">4</em>  <span>판교지점</span></li>
+                  <li><em class="num">5</em>  <span>잠실지점</span></li>
+                </ol>
+                <ol class="" aria-hidden="true">
+                  <li><em class="num_1"></em> <span>서대문중앙금융센터지점</span></li>
+                  <li><em class="num">2</em>  <span>강남지점</span></li>
+                  <li><em class="num">3</em>  <span>여의도지점</span></li>
+                  <li><em class="num">4</em>  <span>홍대지점</span></li>
+                  <li><em class="num">5</em>  <span>서초지점</span></li>
+                </ol>
+              </div>
+            </li>
+            <li class="rankItem short right">
+              <div class="avrData">
+                <strong>금융회원 평균 대비 실행 건수</strong>
+                <em class="up"><span>높음</span></em>
+              </div> 
+            </li>
+            <li class="rankItem short right">
+              <div class="avrData">
+                <strong>금융회원 평균 대비 실행 금액</strong>
+                <em class="up"><span>높음</span></em>
+              </div>
+            </li>
+            <li class="rankItem short right">
+              <div class="avrData">
+                <strong>금융회원 평균 대비 성사율</strong>
+                <em class="down"><span>낮음</span></em>
+              </div>
+            </li>
+          </ul>
+
+
+
+        </div>
+        <div id="mainDashboard_2" role="tabpanel" tabindex="0">
+
+          <ul class="dashboardWrap">
+            <li class="chart_pie">
+              <strong class="tit">전체 제안 대출 비율</strong>
+              <div class="pie" id="pieChart_1"></div>
+              <script>
+                var chartDom = document.getElementById('pieChart_1');
+                var myChart_pie1 = echarts.init(chartDom);
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '대출 비율',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+                <li> <em style="background:#5066B6"></em> 시설</li>
+                <li> <em style="background:#46B9B2"></em> 운전</li>
+                <li> <em style="background:#55D6B6"></em> 리스</li>
+                <li> <em style="background:#89E3CD"></em> 렌탈</li>
+              </ul>
+            </li>
+            <li class="chart_pie">
+              <strong class="tit">최다 실행 업종</strong>
+              <div class="pie" id="pieChart_2"></div>
+              <script>
+                var myChart_pie2 = echarts.init(document.getElementById('pieChart_2'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '건설업' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '농업,임업'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '제조업'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '농업,임업'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 484, name: '제조업'  , itemStyle : {color:'#BEE2A2'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie2.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> 건설업</li>
+                <li> <em style="background:#46B9B2"></em> 농업,임업</li>
+                <li> <em style="background:#55C6D6"></em> 제조업</li>
+                <li> <em style="background:#8BDCE7"></em> 농업,임업</li>
+                <li> <em style="background:#BEE2A2"></em> 제조업</li>
+              </ul>
+            </li>
+            <li class="chart_pie">
+              <strong class="tit">제안한 고정/변동 비율</strong>
+              <div class="pie" id="pieChart_3"></div>
+              <script>
+                var myChart_pie3 = echarts.init(document.getElementById('pieChart_3'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '고정/변동 비율',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '고정' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '변동'  , itemStyle : {color:'#46B9B2'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie3.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> 고정</li>
+                <li> <em style="background:#46B9B2"></em> 변동</li>
+              </ul>
+            </li>
+            <li class="chart_pie">
+              <strong class="tit">제안한 담보/신용 비율</strong>
+              <div class="pie" id="pieChart_4"></div>
+              <script>
+                var myChart_pie4 = echarts.init(document.getElementById('pieChart_4'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '담보/신용 비율',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '담보' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '신용'  , itemStyle : {color:'#46B9B2'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie4.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> 담보</li>
+                <li> <em style="background:#46B9B2"></em> 신용</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="dashboardWrap">
+            <li class="itemTxt">
+              <strong class="tit">청구 비율</strong>
+              <div class="dash_data">
+                <div class="barChart">
+                  <span style="width:50%"><strong class="hide">50%</strong><em></em></span>
+                  <em class="l">청구</em>
+                  <em class="r">미청구</em>
+                </div>
+                <span class="dataSize">
+                  <span>정산 대상 수</span> 
+                  <strong>10</strong>
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">평균 실행 수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>125</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">평균 실행액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>10</strong>
+                  <span>억</span> 
+                  <strong>4800</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">평균 제안 수</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>6</strong>
+                  <span>건</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">평균 제안액</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>10</strong>
+                  <span>억</span> 
+                  <strong>4800</strong>
+                  <span>만원</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">평균 성사율</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>67.8</strong>
+                  <span>%</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">제안한 평균 금리</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>67.8</strong>
+                  <span>%</span> 
+                </span>
+              </div>
+            </li>
+            <li class="itemTxt">
+              <strong class="tit">제안서와 실제 조건 일치율</strong>
+              <div class="dash_data">
+                <span class="dataSize">
+                  <strong>67.8</strong>
+                  <span>%</span> 
+                </span>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        
+
+
+      </section>
+      
+
+    </div>
+
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- footer : start -->
+    <!-- **************** -->
+    <hr/>
+    <footer id="skip_footer"  aria-label="푸터">
+       <div class="footerWrap">
+        <ul class="footerLnk">
+          <li><a href="#none">고객센터</a></li>
+          <li><a href="#none">약관동의</a></li>
+          <li><a href="#none">대출신청 정보 제공 동의</a></li>
+          <li><a href="#none">자금 세탁 방지법</a></li>
+          <li><a href="#none">대출 서비스 안내</a></li>
+         </ul>
+         <div class="copy">
+          <p>
+            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
+            <span>Copyright Since 2023</span>
+          </p>
+          <div class="wa">
+            <img src="./images/common/wa-logo.png" alt="">
+          </div>
+         </div>
+       </div>
+    </footer>
+    <!-- **************** -->
+    <!-- footer : end -->
+    <!-- **************** -->
+  </div>
+
+
+
+  
+
+
+
+</body>
+</html>

@@ -277,41 +277,76 @@
                               <label for="testRdoBank2"><span></span>담보 있음</label>
                             </span>
                           </div>
-                          <div class="formRow">
-                            <select class="wid180" title="담보종류 선택">
-                              <option value="부동산">부동산</option>
-                              <option value="옵션">옵션</option>
-                            </select>
-                            <select class="wid240" title="담보종류 선택">
-                              <option value="부동산">부동산</option>
-                              <option value="옵션">옵션</option>
-                            </select>
-                          </div>
-                          <div class="formAdd" id="damboListWrap">
+
+                          <div class="damboSet">
                             <div class="formRow">
-                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnBlack p30">주소검색</button>
-                              <button type="button" class="btnPlus" aria-controls="damboListWrap"><span class="hide">담보상세 입력 폼 추가</span></button>
+                              <select class="wid180" title="담보종류 선택">
+                                <option value="">선택</option>
+                                <option value="부동산">부동산</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                              <select class="wid240" title="담보종류 선택">
+                                <option value="">선택</option>
+                                <option value="부동산2">부동산2</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                              <button type="button" class="btnSuccess" aria-controls="damboSet_1">선택</button>
                             </div>
-                            <div class="formRow">
-                              <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
-                              <button type="button" class="btnPlus" aria-controls="damboListWrap"><span class="hide">담보상세 입력 폼 추가</span></button>
+                            <div class="formRow"  id="damboSet_1"  style="display:none" >
+                              
+                              <!-- 부동산 경우 -->
+                              <div class="is_estate" style="display:none">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
+                                <button type="button" class="btnBlack">주소검색</button>
+                              </div>
+                              
+                              <!-- 부동산이 아닐경우 -->
+                              <div class="is_estate not" style="display:none">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="">
+                              </div>
                             </div>
+                            <button type="button" class="btnPlus" aria-controls="damboListWrap"><span class="hide">담보입력 폼 추가</span></button>
+                            <button type="button" class="btnMinus" aria-controls="damboListWrap" style="display:none"><span class="hide">담보입력 폼 삭제</span></button>
                           </div>
+
                           <script>
                             $(function(){
+
+                              $(document).on("click", ".damboSet .btnSuccess", function() {
+
+                                var This = $(this)
+                                var parent = This.closest(".formRow");
+                                var selectVal = parent.find("select:eq(0)").val();
+                                if(selectVal == "") return false;
+
+                                var next = parent.next(".formRow").show();
+                                var is_estate =  selectVal== "부동산";
+
+                                next.find(".is_estate").hide();
+                                if(is_estate){
+                                  next.find(".is_estate").eq(0).show();
+                                }else{
+                                  next.find(".is_estate").eq(1).show();
+                                }
+                              });
+
                               var damboListIdx = 100;
                               $(document).on("click", ".btnPlus", function() {
-                                var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                                var wrap = $(this).closest("td")
+                                var now = $(this).closest(".damboSet")
+                                var $listblock = now.clone().removeClass("none");
                                 damboListIdx++
-                                $listblock.attr({id: "damboList_"+ damboListIdx})
-                                $listblock.find(".btnPlus")[0].className = "btnMinus";
-                                $listblock.find(".btnMinus")[0].value = "";
+                                $listblock.attr({id: "damboList_"+ damboListIdx , tabindex:0})
+                                now.find(".btnSuccess").detach();
+                                now.find(".btnBlack").detach();
+                                now.find(".btnPlus").hide();
+                                now.find(".btnMinus").show();
+                                now.find("input,select").attr({disabled:true});
+                                $listblock.find(".is_estate").hide();
+                                $listblock.find(".formRow:eq(1)").hide();
                                 $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
-                                $(this).closest('.formAdd').append($listblock);
-                              });
-                              $(document).on("click", ".btnMinus", function() {
-                                $(this).closest(".formAdd .formRow").detach();
+                                wrap.append($listblock);
+                                $listblock.focus()
                               });
                             });
                           </script>

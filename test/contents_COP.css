@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+@import url('./font/Pretendard-1.3.8/web/static/pretendard.css');
+@import url('../js/lib/jsgrid-1.5.3/dist/jsgrid.css');
+@import url('../js/lib/jsgrid-1.5.3/dist/jsgrid-theme.css');
+@import url('./base.css');
+@import url('./common_cont.css');
+
+/* layout */
+/*
+ * z-index 정의
+ *
+  header : none
+  headerCont : 500 
+  container : 2
+  footer : 2
+  layer  : 1000
+  alert : 5000
+
+*/
+
+/* body  { background:rgba(244, 246, 248, 1)} */
+
+
+.on .headerCont ul.gnb li.depth_1 ul {display:block; width:100%; padding:25px 0 0 0px; }
+
+/* content - common */
+ 
+
+/* 락 */
+div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0;  }
+div.login_form.change_pw .formBox  { padding-left:150px; }
+div.login_form.change_pw .loginBtn  { margin-top:60px; }
+ul.loginTab li button.loginTabBtn  { position:absolute; height:70px; width:50%; top:0; font-size:24px; border-bottom:1px solid #ddd;   }
+ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
+ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:2px solid #EAFAEB; }
+ul.loginTab li + li button.loginTabBtn  { left:50%;  }
+ul.loginTab li div.login_form  { position:absolute; left:0; top:110px; width:530px;  display:none; margin:0px 0 0;   }
+ul.loginTab li.on div.login_form    { display:block;}
+ul.loginTab li.on.fast div.login_form    { transition:none;}
+ul.loginTab li .row + .row  { margin-top:20px; }
+ul.loginTab li .row .formRow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; width: 400px;}
+ul.loginTab li .row label   { min-width:130px; padding-left:0;padding-right:0;  }
+ul.loginTab li .row input   { width: 100%; }
+ul.loginTab li div.loginBtn   { position:absolute; top:214px; width:100%; }
+ul.loginTab .hasError .errorTxt { display: block;}   
+ul.loginTab li div.login_form p.info_txt  { position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
+
+ul.loginTab.searchId  div.login_form .formBox  { padding-left:150px; }
+ul.loginTab li #cont_certificate_login .formBox { padding-left:150px; }
+ul.loginTab li #cont_certificate_login .formRow { width:100%; }
+ul.loginTab li .formRow .textCenter  { display:flex;  }
+ul.loginTab li .formRow .textCenter input  { width:100%; }
+
+/* content - page */
+/* 제안서 관리 */
+.proposalManage .formListTable ~ .formListTable { margin-top: 65px; }
+.proposalManage .fixedTableWrap { margin-top: 65px;}
+.proposalManage .fixedTable { margin-top: 40px;}
+.proposalManage .fixedTable .table_wrap { height: 660px;}
+.proposalManage .formFullTable .formRow { min-height: 0;}
+.proposalManage .formFullTable tr th ~ th { padding-left: 76px;}
+
+/* faq */ 
+.faqPage .accordion { margin-top: 60px;}
+
+/* 일대일 문의 */
+.oneOnone .bbs_list td:nth-child(2) { text-align: left;}
+.bbs_list .reply td:nth-child(2) { color: #EAFAEB; font-weight: 700;}
+.bbs_list .re_1 td:nth-child(2) {}
+.bbs_list .re_2 td:nth-child(2) { padding-left: 40px;}
+.bbs_list .re_3 td:nth-child(2) { padding-left: 80px;}
+.bbs_list .reply td:nth-child(2)::before,
+.bbs_list .quest td:nth-child(2)::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 5px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
+
+/* 법인회원정보 */
+.bizMemberInfo .formListTable { position: relative}
+.bizMemberInfo .formListTable tr th ~ th { padding-left: 40px;}
+.bizMemberInfo .formListTable ~ .formListTable { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
+.bizMemberInfo .formListTable td { vertical-align: top;}
+.bizMemberInfo .formListTable .checkbox label { font-weight: 700;}
+.bizMemberInfo .addBtnSet { position: absolute; top: 15px; right: 0; column-gap: 10px;}
+.bizMemberInfo .addBtnSet .btnMinus,
+.bizMemberInfo .addBtnSet .btnPlus { width: 64px; height: 64px;}
+.bizMemberInfo .formListTable ~ .formListTable .addBtnSet { top: 40px;}
+
+/* 락 */
+/* 메인 */
+
+.main header::after { height:760px; }
+
+.main_visual_logout     { padding:0px 0 0 40px ; width:100%; margin:0 auto; }
+.main_visual_logout .txtBox   { padding:40px 0 3px; font-size:38px; font-weight: 700; height:325px; background:url(../images/COP/banner_main.png) no-repeat right 40px top 0; }
+.main_visual_logout .txtBox strong { font-size:52px; vertical-align: 0;  }
+.main_visual_logout button   { margin-top:20px; }
+
+
+.main .serviceInfo_tit      { padding:100px 0 60px; font-size:32px; font-weight: 700; text-align: center;}
+
+
+.bnr_associate    { margin-top:100px; }
+.bnr_associate .tit    { text-align: center;}
+.bnr_associate .tit strong    { display:block; font-size:32px; font-weight: 700;}
+.bnr_associate .tit p    {margin-top:20px; }
+
+.main_bnr_list               { display:flex; justify-content: space-between; margin-top:60px; margin-bottom:100px;  gap:40px; flex-wrap: wrap; }
+.main_bnr_list span.btnItem        { width:200px; height:70px; display:flex; border:1px solid #ddd; border-radius:8px; margin:auto 0;   }
+.main_bnr_list span.btnItem img    { margin:auto; }
+
+.main section.bgBox   { background:#fff; padding-bottom:60px; border-radius: 16px 16px; box-shadow: 0px 3px 8px 0px #ECF0F4; }
+
+
+/*  메인 대출없는경우 */
+.main_loan_box      {}
+ol.main_loan_info      {display:flex; gap:20px;   }
+ol.main_loan_info li   {width:100%;  padding:180px 50px 0; font-size:20px; text-align: center; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 16px; background:url(../images/COP/main/ico_80_log2_process_01.png) no-repeat 50% 60px #fff;  }
+ol.main_loan_info li.step_1   {background-image: url(../images/COP/main/ico_80_log2_process_01.png);}
+ol.main_loan_info li.step_2   {background-image: url(../images/COP/main/ico_80_log2_process_02.png);}
+ol.main_loan_info li.step_3   {background-image: url(../images/COP/main/ico_80_log2_process_03.png);}
+ol.main_loan_info li.step_4   {background-image: url(../images/COP/main/ico_80_log2_process_04.png);}
+ol.main_loan_info li em   {color:#069B66; font-weight: 700;  }
+ol.main_loan_info li strong   {display:block; margin-top:10px; font-size:26px; padding:0 20px; }
+ol.main_loan_info li p   {margin-top:20px; }
+ol.main_loan_info li div.txt   {position:relative; margin-top:40px; padding-top:40px }
+ol.main_loan_info li div.txt::before   {content:""; position:absolute; left:50%; top:0; width:180px; border-top:1px solid #ddd; transform: translateX(-50%);}
+ol.main_loan_info li span   {display:inline-block; white-space: nowrap;}
+ol.main_loan_info li .main_btn   {padding-bottom:60px; }
+ol.main_loan_btn  {display:flex; gap:20px; }
+ol.main_loan_btn li   {width:335px; }
+ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
+ 
+
+
+/*  메인 대출 진행 */
+.mainLoanSelct     {position:relative; width:100%; height:80px; padding-left:40px; color:#fff; font-size:26px; border-radius: 16px; background:#1EA885; }
+.mainLoanSelct select       { height:78px; text-align: center; color:#fff; font-size:26px; border:0;  background:url(../images/common/ico_24_down_w.png) no-repeat top 50% right 16px #1EA885; }
+.mainLoanSelct select option  {background:#fff; color:#333;  }
+.mainLoanSelct button.search      {position:absolute; right:40px; top:16px; padding:0 50px; border:1px solid #ddd; color:#fff; height:50px; border-radius:25px; font-weight: 700;  }
+.mainLoanSelct button:focus     {background:#fff; color:#1EA885}
+.mainLoanSelct button.prev      {left:0;  width:80px; height:80px; background:url(../images/COP/main/ico_34_left_w.png) no-repeat 50% 50%;  }
+.mainLoanSelct button.next      {right:0; width:80px; height:80px; background:url(../images/COP/main/ico_34_right_w.png) no-repeat 50% 50%;   }
+
+.main_loan_progress .step_info {display:flex; margin-top:20px; height:70px; gap:20px; }
+.main_loan_progress .step_info > div { width:100%; text-align: center; font-size:24px; font-weight: 700; background-color: #4C9DA2; border-radius: 35px; padding:21px 0 0; color:#fff; }
+.main_loan_progress .step_info > div.platform {min-width:830px;}
+.main_loan_progress .step_info > div.offline {  background:#6197C5; border-radius: 35px ; color:#fff;  }
+
+
+.main_loan_progress ol.status_tab { display:flex; gap:20px; margin-top:30px; margin-bottom:20px;  }
+.main_loan_progress ol.status_tab li { width:100%;  background:#fff; text-align: center; border:3px solid #fff; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius:16px; background:url(../images/COP/main/ico_80_log_process_01.png) no-repeat 50% 60px #fff; background-size:105px auto; }
+.main_loan_progress ol.status_tab li a {display:block; padding-top:170px; height:330px; text-decoration: none;  }
+.main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 24px; font-weight: 700;  } 
+.main_loan_progress ol.status_tab li strong {display:block; margin-top:10px; font-size: 26px; font-weight: 700;  }
+.main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
+.main_loan_progress ol.status_tab li.disabled { }
+.main_loan_progress ol.status_tab li.disabled em,
+.main_loan_progress ol.status_tab li.disabled strong {color:#888}
+.main_loan_progress ol.status_tab li.step_1   {background-image:url(../images/COP/main/no_data_main_1.png); }
+.main_loan_progress ol.status_tab li.step_2   {background-image:url(../images/COP/main/no_data_main_2.png); }
+.main_loan_progress ol.status_tab li.step_3   {background-image:url(../images/COP/main/no_data_main_3.png); }
+.main_loan_progress ol.status_tab li.step_4   {background-image:url(../images/COP/main/no_data_main_4.png); }
+.main_loan_progress ol.status_tab li.step_5   {background-image:url(../images/COP/main/no_data_main_5.png); }
+.main_loan_progress ol.status_tab li.step_1.disabled   {background-image:url(../images/COP/main/no_data_main_1_off.png); }
+.main_loan_progress ol.status_tab li.step_2.disabled   {background-image:url(../images/COP/main/no_data_main_2_off.png); }
+.main_loan_progress ol.status_tab li.step_3.disabled   {background-image:url(../images/COP/main/no_data_main_3_off.png); }
+.main_loan_progress ol.status_tab li.step_4.disabled   {background-image:url(../images/COP/main/no_data_main_4_off.png); }
+.main_loan_progress ol.status_tab li.step_5.disabled   {background-image:url(../images/COP/main/no_data_main_5_off.png); }
+
+.main_loan_cont              { } 
+.main_loan_cont .bgWrap section {padding-bottom:100px;  } 
+.main_loan_cont .list           {position:relative; width:265px; padding-bottom:70px; } 
+.main_loan_cont.step_2 .list    {left:285px; }
+.main_loan_cont.step_3 .list    {left:570px; }
+.main_loan_cont.step_4 .list    {left:855px; }
+.main_loan_cont.step_5 .list    {left:1130px; }
+.main_loan_cont .list::before   {content:""; position:absolute; left:50%; bottom:-1px; width:40px; height:32px; transform: translateX(-50%); background: url(../images/common/bul_polygon_main.png) no-repeat 50% 0; background-size:cover; } 
+.main_loan_cont .list .btnWrap  {text-align: center; }  
+.main_loan_cont .list .btnWrap button  {width:100%;}
+.main_loan_cont .list .btnWrap button + button  {margin-top:8px; }
+.main_loan_cont .list .status   {}  
+.main_loan_cont .list .status button   {display:flex; width:100%; padding:28px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
+.main_loan_cont .list .status button:focus {outline: 2px dashed #069B66;} 
+.main_loan_cont .list .status button span   {margin:auto 0;}
+.main_loan_cont .list .status button em     {display:block; padding:0 14px; border:1px solid #EAFAEB; flex:0; color:#069B66; border-radius: 14px;  }
+.main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline; }
+.main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
+.main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 30px; height:auto; text-align: center;  }   
+.main_loan_cont .no_data span     {display:block; padding-top:130px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
+.main_loan_cont .no_data span.btn {background:none !important; padding:0; display:block; text-align: center; padding:40px 0 0; }   
+.main_loan_cont .no_data span.btn button.btnSuccess {width:210px; } 
+.main_loan_cont .no_data.bg_regist span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_01.png); }  
+.main_loan_cont .no_data.bg_review span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02.png); } 
+.main_loan_cont .no_data.bg_endtime span      {background-image:url(../images/COP/main/ico_80_log_process_nodata_03.png); } 
+.main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); } 
+.main_loan_cont .table_top .total     {font-weight: 700;} 
+.main_loan_cont .titBox     {padding:60px 0 40px; text-align: center; }
+.main_loan_cont .titBox strong  {font-size: 26px; }
+.main_loan_cont .titBox p       {color:#555; font-weight: 400; margin-top:20px; }
+.main_loan_cont .bbs_list td    {font-weight: 400;}
+
+.moneyTxt     {}
+.moneyTxt em     {}
+.moneyTxt span   {display:block; color:#888; }
+
+.main_survey      {margin-top:10px; background:#fff; padding:40px; border-radius: 16px;  }
+.main_survey dt   { padding:24px 0 20px;  }
+.main_survey dt ~ dt   {margin-top:30px; }
+.main_survey dd   {padding-left:8px; }
+.main_survey dd input[type=radio].starChk ~ label   {height:24px; }
+
+
+.titH3 + .main_survey { margin-top: 20px;}
+.main_survey.bgGreen { background: #F6FBF7; padding: 40px 40px 60px; border: 1px solid #ddd;}
+
+/* 약관 */
+.content_terms    { margin-top:80px; }
+.content_terms .titH3 { margin-top: 60px;}
+.content_terms .terms_type    { padding:10px 0 0;}
+.content_terms .terms_ment    { padding:30px 0 20px;}
+
+.evtWinner      { margin:60px 0 0;  }
+
+.detailCont.evt     {}
+.detailCont.evt .evtImg     {}
+.detailCont.evt .evtImg img { max-width:100%; }
+.detailCont.evt .evtTxt     { margin-top:40px; font-weight: 500; }
+
+
+/* 서비스 - 대출절차 */
+.serviceInfo_visual         { width:1400px; height:410px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; background-size:contain}
+.serviceInfo_visual.login   { width:1400px; height:442px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
+.serviceInfo_visual.loan   { width:1400px; height:440px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
+/* .serviceInfo_txt            { padding:60px 0 0;} */
+.serviceInfo_txt dl         { position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
+.serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
+.serviceInfo_txt dl dd      { padding-left:200px; }
+
+.main_btn     {padding:60px 0 30px; text-align: center;}
+.main_btn button     {width:400px; }
+
+/*  약관  */
+.tremsWrap      {}
+.tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
+.tremsWrap .searchControlBox      {margin-top:40px; }
+.tremsWrap .terms_cont      {margin-top:0px; border:1px solid #ddd; background:#FAFAFA; padding:60px; border-radius: 16px; }
+.tremsWrap .terms_style_1      {font-size:18px; }
+.tremsWrap .terms_style_1 strong  {display:block;  }
+.tremsWrap .terms_style_1 p     {margin-top:20px;}
+.tremsWrap .terms_style_1 p + strong     {margin-top:40px;}
+
+
+/* 진희 */
+
+/* 회원가입 */
+.joinStep { margin-top: 60px; text-align: center; }
+.joinStep li { position: relative; display: inline-block; width: 162px; margin-right: 26px;}
+.joinStep li:last-child { margin-right: 0px;}
+.joinStep li .circle { display: inline-block; width: 48px; height: 48px; line-height: 48px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 30px; font-weight: 700;}
+.joinStep li .name { margin-top: 8px; color: #888; font-size: 18px; }
+.joinStep li::before { content: ''; position: absolute; top: 23px; left: -50%; display: inline-block; width: 132px; height: 2px; background: #ddd;}
+.joinStep li:first-child::before { display: none;}
+.joinStep li.on .circle { background: #069B66; }
+.joinStep li.on .name { color:#333; font-weight: 700; }
+
+
+
+
+
+/* 메인 */
+.container.main { padding-bottom: 100px;}
+.container.main::before { content: ''; position: absolute; top: 0; display: block; width: 100%; height: 620px;  background: #EAFAEB; z-index: -1;}
+.container.main section { width: 1400px; margin: 0 auto;}
+
+.bannerLoansMain { height: 620px; padding-left: 40px; background: url(../images/common/banner_main.png) 436px 255px center / contain no-repeat }
+.bannerLoansMain h2 { padding-top: 80px; color: #fff; font-size: 38px; line-height: 2; }
+.bannerLoansMain h2 strong { font-size: 52px; }
+
+.stepLoans { display: flex; gap: 20px; margin-top: -238px;  }
+.stepLoans .step { display: flex; flex-direction: column; width: 25%;}
+.stepLoans .step .box { height: 368px; padding: 60px 0; background-color: #fff; border-radius: 15px; text-align: center;}
+.stepLoans .step .box::before { content: ''; display: block; width: 80px; height: 80px; margin: 0 auto;}
+.stepLoans .step:nth-child(1) .box::before { background: url(../images/common/ico_loanstep_1.png) center / contain no-repeat}
+.stepLoans .step:nth-child(2) .box::before { background: url(../images/common/ico_loanstep_2.png) center / contain no-repeat}
+.stepLoans .step:nth-child(3) .box::before { background: url(../images/common/ico_loanstep_3.png) center / contain no-repeat}
+.stepLoans .step:nth-child(4) .box::before { background: url(../images/common/ico_loanstep_4.png) center / contain no-repeat}
+.stepLoans .step .box h3 { margin-top: 60px; color: #069B66; font-size: 24px;}
+.stepLoans .step .box p { margin-top: 10px;}
+.stepLoans ul { display: block;}
+
+.stepLoans.is_logined {}
+.stepLoans.is_logined .step {}
+
+.bannerLoans { height: 120px; display: flex; align-items: center; margin-top: 80px; background: #71F4E4; border-radius: 15px; color: #fff; font-size: 30px; }
+.bannerLoans .inner { width: 768px; margin: 0 auto;}
+
+.userInfoMain { }
+.userInfoMain .greeting_msg { color: #fff; font-size: 20px; }
+.userInfoMain .user { font-size: 40px; }
+.userInfoMain .user strong { font-weight: 700;}
+.userInfoMain .user .icon { }
+.userInfoMain .tooltip_wrap {}
+.userInfoMain .tooltip_wrap .icon {}
+.userInfoMain .tooltip_wrap .tooltip_con {}
+
+.bannerWithUs { margin-top: 80px; }
+.bannerWithUs h2 { color: #333; font-size: 32px; text-align: center;}
+.bannerWithUs p { margin-top: 20px; color: #555; text-align: center;}
+.bannerWithUs ul { display: flex; gap: 40px; margin-top: 60px;}
+.bannerWithUs ul li { width: 200px; height: 70px; border-radius: 8px; border: 1px solid #DDD; line-height: 70px; text-align: center;}
+
+.tableInfo.suggest { margin: 40px 0;}
+.tableInfo.suggest table {}
+.tableInfo.suggest tr {}
+.tableInfo.suggest td { padding: 20px 0;}
+
+.tableInfo.suggest .status {}
+.tableInfo.suggest .opt {}
+
+
+.suggestLoanList { background: #d9d9d9; border-radius: 15px; }

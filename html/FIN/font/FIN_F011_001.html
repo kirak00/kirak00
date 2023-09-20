@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../../test/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <div class="skip_nav">
+    <a href="#skip_gnb">주메뉴 바로가기</a>
+    <a href="#skip_content">컨텐츠 바로가기</a>
+  </div>
+
+  <div class="wrap main login">
+    <!-- **************** -->
+    <!-- header : start -->
+    <!-- **************** -->
+    <header class="">
+      <div class="headerUtil">
+        <div class="utilCont">
+          <div class="zommBox">
+            <span class="tit">글자크기</span>
+            <button type="button" class="btn_zoom_plus"><span class="hide">화면확대</span></button>
+            <button type="button" class="btn_zoom_minus"><span class="hide">화면축소</span></button>
+          </div>
+        </div>
+      </div>
+      <nav class="headerCont ">
+        <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
+        <h2 class="hide">메뉴 영역</h2>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
+          <li class="depth_1 on" ><a href="#none"><span class="ico_gnb_acc">대출 신청 업체 목록</span></a>
+            <ul>
+              <li class="depth_2 on"><a href="#none">대출 신청 업체 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1"><a href="#none"><span class="ico_gnb_info">제안서 등록</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">제안서 제출 가능 목록</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">마이페이지</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">회원정보</a></li>
+              <li class="depth_2"><a href="#none">제안서 관리</a></li>
+              <li class="depth_2"><a href="#none">취급 대출 내역</a></li>
+              <li class="depth_2"><a href="#none">메시지함</a></li>
+              <li class="depth_2"><a href="#none">희망 업체 알림 설정</a></li>
+              <li class="depth_2"><a href="#none">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_office">중앙회(본점) 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">금융사 대출 목록</a></li>
+              <li class="depth_2"><a href="#none">대출 실적 관리</a></li>
+              <li class="depth_2"><a href="#none">소속 금융사 계정 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="headerLogin">
+          <!-- <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li> -->
+          <li><a href="#none" class="logout">로그아웃</a></li>
+        </ul>
+      </nav>
+      <div class="bg"></div>
+      <div class="line"></div>
+    </header>
+    <!-- **************** -->
+    <!-- header : end -->
+    <!-- **************** -->
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr />
+    <div class="container" id="skip_content" aria-label="콘텐츠">
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      <section>
+        <div class="mainTop">
+          <div class="main_myInfo">
+            <div class="welcomeBox">
+              <div class="welcometit">
+                <span>안녕하세요!</span>
+                <strong>길동중앙회(광교영업점)님😊</strong>
+              </div>
+              <button type="button" class="btnWhite ico_down sm">금융회원 매뉴얼 다운로드</button>
+            </div>
+            <div class="msgBox on">
+              <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
+              <div class="layer_msg " role="alert">
+                제안서 연장 요청이 <strong>승인되었습니다</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_list_status tabScript noInit" initTab="main_list_contents_0">
+          <a href="#main_list_contents_1" class="item_1" role="tab" id="tab-1">
+            <span class="icon"></span>
+            <em class="tit">관심 대출 수</em>
+            <span class="size">
+              <strong>238</strong>
+              <span>건</span>
+            </span>
+          </a>
+          <a href="#main_list_contents_2" class="item_2" role="tab" id="tab-2">
+            <span class="icon"></span>
+            <em class="tit">심사 중</em>
+            <span class="size">
+              <strong>238</strong>
+              <span>건</span>
+            </span>
+          </a>
+          <a href="#main_list_contents_3" class="item_3" role="tab" id="tab-3">
+            <span class="icon"></span>
+            <em class="tit">제안서 제출 완료</em>
+            <span class="size">
+              <strong>238</strong>
+              <span>건</span>
+            </span>
+          </a>
+          <a href="#main_list_contents_4" class="item_4" role="tab" id="tab-4">
+            <span class="icon"></span>
+            <em class="tit">제안서 채택</em>
+            <span class="size">
+              <strong>238</strong>
+              <span>건</span>
+            </span>
+          </a>
+        </div>
+ 
+        <div class="main_list_contents" id="main_list_contents_0" aria-hidden="false">
+          <h3 class="hide">최근 한 달간 등록된 대출 신청 목록</h3>
+          <div class="list_top_box">
+            <div class="info_txt">
+              <strong> 최근 한 달간 등록된 대출 신청 목록입니다.</strong>
+                전체 목록은 대출 신청 업체 목록 페이지에서 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btnSuccess">전체보기</button>
+          </div>
+
+          <!-- <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
+          </div> -->
+          <div id="jsGrid_0" class="bbs" caption="최근 한 달간 등록된 대출 신청 목록"></div>
+          <div id="externalPager_0" class="external-pager"></div>
+
+          <script>
+            $(function () {
+
+              var main_list_data_1 = [{
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": 'askldjfn',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+                {
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": '(주)****',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+              ];
+
+
+              $("#jsGrid_0").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
+                data: main_list_data_1,
+                fields: [
+                  {name:"N1", width: 100, title: "관심", type: "text", },
+                  {name:"N2", width: 100, title: "상태", type: "text", },
+                  {name:"N3", width: 120, title: "법인명", type: "text", },
+                  {name:"N4", width: 140, title: "희망 신청 금액", type: "text", },
+                  {name:"N5", width: 70, title: "지역", type: "text",},
+                  {name:"N6", width: 70, title: "업종", type: "text",},
+                  {name:"N7", width: 70, title: "자금 용도", type: "text",},
+                  {name:"N8", width: 80, title: "담보", type: "text",},
+                  {name:"N9", width: 120, title: "특허 보유 ", type: "text",},
+                  {name:"N10", width: 120, title: "CRETOP ", type: "text",},
+                  {name:"N11", width: 130, title: "제안서 마감일", type: "text",},
+                  {name:"N12", width: 200, title: "상세보기", type: "text", sorting: false}
+                ],
+
+                pagerContainer: "#externalPager_0",
+
+              });
+            });
+          </script>
+        </div>
+
+        
+
+        <div role="tabpanel" class="main_list_contents" id="main_list_contents_1" aria-labelledby="tab-1" aria-hidden="false">
+          <h3 class="hide">관심대출</h3>
+          <div class="list_top_box">
+            <div class="info_txt">
+              <strong> 관심 대출로 등록된 대출 신청 목록입니다.</strong>
+              전체 목록은 대출 신청 업체 목록 페이지에서 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btnSuccess">전체보기</button>
+          </div>
+
+          <!-- <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
+          </div> -->
+          <div id="jsGrid_1" class="bbs" caption="관심대출 목록"></div>
+          <div id="externalPager_1" class="external-pager"></div>
+
+          <script>
+            $(function () {
+
+              var main_list_data_1 = [{
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": 'askldjfn',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+                {
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '심사전',
+                  "N3": '(주)****',
+                  "N4": "1억 2000만원 <br>~ 2억",
+                  "N5": '서울',
+                  "N6": '건설',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '미보유',
+                  "N10": 'AAA+',
+                  "N11": '2023-08-15',
+                  "N12": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+              ];
+
+
+              $("#jsGrid_1").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
+                data: main_list_data_1,
+                fields: [
+                  {name:"N1", width: 100, title: "관심<br>대출", type: "text", },
+                  {name:"N2", width: 100, title: "상태", type: "text", },
+                  {name:"N3", width: 120, title: "법인명", type: "text", },
+                  {name:"N4", width: 140, title: "희망 신청 금액", type: "text", },
+                  {name:"N5", width: 70, title: "지역", type: "text",},
+                  {name:"N6", width: 70, title: "업종", type: "text",},
+                  {name:"N7", width: 70, title: "자금 용도", type: "text",},
+                  {name:"N8", width: 80, title: "담보<br>유무", type: "text",},
+                  {name:"N9", width: 120, title: "특허 보유 <br>여부", type: "text",},
+                  {name:"N10", width: 120, title: "CRETOP <br>등급", type: "text",},
+                  {name:"N11", width: 130, title: "제안서 마감일", type: "text",},
+                  {name:"N12", width: 200, title: "상세보기", type: "text", sorting: false}
+                ],
+
+                pagerContainer: "#externalPager_1",
+
+              });
+            });
+          </script>
+        </div>
+
+
+        <div role="tabpanel" class="main_list_contents" id="main_list_contents_2" aria-labelledby="tab-2" aria-hidden="true">
+          <h3 class="hide">심사 중</h3>
+
+          
+          
+          <div class="list_top_box">
+            <div class="info_txt">
+              <strong> 심사 중인 대출 신청 목록입니다.</strong>
+              전체 목록은 제안서 제출 가능 목록 페이지에서 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btnSuccess">전체보기</button>
+          </div>
+
+          <!-- <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
+          </div> -->
+          <div id="jsGrid_2" class="bbs" caption="심사 중인 대출 신청 목록"></div>
+          <div id="externalPager_2" class="external-pager"></div>
+
+          <script>
+            $(function () {
+
+              var main_list_data_2 = [{
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
+                  "N3": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
+                  "N4": '(주)길동건설',
+                  "N5": "1억 2000만원 <br>~ 2억",
+                  "N6": '서울',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '2023-08-30',
+                },
+                {
+                  "N1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                  "N2": '<button type="button" class="btnWhite" onclick="alert(1)">작성하기</button>',
+                  "N3": '<button type="button" class="btnWhite" onclick="alert(1)">마감 기한 연장 요청</button>',
+                  "N4": '(주)길동건설',
+                  "N5": "1억 2000만원 <br>~ 2억",
+                  "N6": '서울',
+                  "N7": '운전자금',
+                  "N8": '유',
+                  "N9": '2023-08-30',
+                },
+              ];
+
+
+              $("#jsGrid_2").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
+                data: main_list_data_2,
+                fields: [
+                  {name:"N1", width: 100, title: "관심 대출", type: "text", },
+                  {name:"N2", width: 120, title: "제안서", type: "text", },
+                  {name:"N3", width: 300, title: "마감 기한 연장 요청", type: "text",},
+                  {name:"N4", width: 120, title: "법인명", type: "text",},
+                  {name:"N5", width: 200, title: "희망 신청 금액", type: "text", },
+                  {name:"N6", width: 80,  title: "지역", type: "text",},
+                  {name:"N7", width: 130, title: "자금 용도", type: "text",},
+                  {name:"N8", width: 100, title: "담보 유무", type: "text",},
+                  {name:"N9", width: 150, title: "제안서 마감일", type: "text",},
+                ],
+
+                pagerContainer: "#externalPager_2",
+
+              });
+            });
+          </script>
+
+
+
+        </div>
+
+
+        <div role="tabpanel" class="main_list_contents" id="main_list_contents_3" aria-labelledby="tab-3" aria-hidden="true">
+          <h3 class="hide">제안서 제출 완료 목록</h3>
+
+          
+          <div class="list_top_box">
+            <div class="info_txt">
+              <strong> 제안서 제출을 완료한 대출 목록입니다.</strong>
+              전체 목록은 제출 제안서 목록 페이지에서 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btnSuccess">전체보기</button>
+          </div>
+
+          <!-- <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
+          </div> -->
+          <div id="jsGrid_3" class="bbs" caption="제안서 제출 완료 목록"></div>
+          <div id="externalPager_3" class="external-pager"></div>
+
+          <script>
+            $(function () {
+
+              var main_list_data_3 = [{
+                  "N1": '미채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+              ];
+
+
+              $("#jsGrid_3").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
+                data: main_list_data_3,
+                fields: [
+                  {name:"N1", width: 100, title: "상태", type: "text", },
+                  {name:"N2", width: 120, title: "법인명", type: "text", },
+                  {name:"N3", width: 200, title: "대출 금액", type: "text", },
+                  {name:"N4", width: 80,  title: "담보 유무", type: "text",},
+                  {name:"N5", width: 120, title: "대출기간", type: "text",},
+                  {name:"N6", width: 120, title: "제안 금리<br>(평균)", type: "text",},
+                  {name:"N7", width: 120, title: "제출일", type: "text",},
+                  {name:"N8", width: 120, title: "제출자", type: "text",},
+                  {name:"N9", width: 200, title: "상세보기", type: "text", sorting: false}
+                ],
+
+                pagerContainer: "#externalPager_3",
+
+              });
+            });
+          </script>
+
+
+        </div>
+
+        
+        <div role="tabpanel" class="main_list_contents" id="main_list_contents_4" aria-labelledby="tab-4" aria-hidden="true">
+          <h3 class="hide">제안서 채택</h3>
+          
+          <div class="list_top_box">
+            <div class="info_txt">
+              <strong> 법인회사에게 채택된 제안서 목록입니다.</strong>
+              전체 목록은 제출 제안서 목록 페이지에서 확인할 수 있습니다.
+            </div>
+            <button type="button" class="btnSuccess">전체보기</button>
+          </div>
+
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
+            </div>
+          </div>
+          <div id="jsGrid_4" class="bbs" caption="채택 제안서 목록"></div>
+          <div id="externalPager_4" class="external-pager"></div>
+
+          <script>
+            $(function () {
+
+              var main_list_data_4 = [
+                {
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+                {
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+                {
+                  "N1": '채택',
+                  "N2": 'askldjfn',
+                  "N3": "1억 2000만원 <br>~ 2억",
+                  "N4": '유',
+                  "N5": '24개월',
+                  "N6": '연 8.65%',
+                  "N7": '2023-06-25',
+                  "N8": '홍길동',
+                  "N9": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>'
+                },
+              ];
+
+
+              $("#jsGrid_4").jsGrid({
+                noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>등록된 대출 신청 업체 목록이 없습니다.</p></div>",
+                data: main_list_data_4,
+                fields: [
+                  {name:"N1", width: 100, title: "상태",  type: "text", },
+                  {name:"N2", width: 120, title: "법인명", type: "text", },
+                  {name:"N3", width: 200, title: "대출 금액", type: "text", },
+                  {name:"N4", width: 80,  title: "담보 유무", type: "text",},
+                  {name:"N5", width: 120, title: "대출기간", type: "text",},
+                  {name:"N6", width: 120, title: "제안 금리<br>(평균)", type: "text",},
+                  {name:"N7", width: 120, title: "제출일", type: "text",},
+                  {name:"N8", width: 120, title: "제출자", type: "text",},
+                  {name:"N9", width: 200, title: "상세보기", type: "text", sorting: false}
+                ],
+
+                pagerContainer: "#externalPager_4",
+                
+
+              });
+            });
+          </script>
+        </div>
+
+
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- footer : start -->
+    <!-- **************** -->
+    <hr />
+    <footer id="skip_footer" aria-label="푸터">
+      <div class="footerWrap">
+        <ul class="footerLnk">
+          <li><a href="#none">고객센터</a></li>
+          <li><a href="#none">약관동의</a></li>
+          <li><a href="#none">대출신청 정보 제공 동의</a></li>
+          <li><a href="#none">자금 세탁 방지법</a></li>
+          <li><a href="#none">대출 서비스 안내</a></li>
+        </ul>
+        <div class="copy">
+          <p>
+            <span>과도한 대출 고통에 시작입니다. 대출시 귀사의 신용등급이 하락 할 수 있습니다. 진행 상품은 P2P 상품으로 자사가 직접 대출을 하지 않습니다.</span>
+            <span>Copyright Since 2023</span>
+          </p>
+          <div class="wa">
+            <img src="./images/common/wa-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- **************** -->
+    <!-- footer : end -->
+    <!-- **************** -->
+  </div>
+
+
+</body>
+
+</html>
