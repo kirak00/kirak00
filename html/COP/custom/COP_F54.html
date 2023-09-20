@@ -32,17 +32,18 @@
   <!-- **************** -->
   <script>
       layer_confirm(
-        "1:1 문의를 이용하기 위해서<br/> 로그인이 필요해요.<br/> 로그인 또는 회원 가입 후 이용할 수 있어요.", //  confirm 문구
+         // 비로그인
+        "1:1 문의를 이용하기 위해서<br/>로그인이 필요해요.<br/><br/>로그인 또는 회원 가입 후 이용할 수 있어요.",
         this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
         {
           confirm:{ //  확인 
-            txt : "로그인", 
+            txt : "심사취소", 
             callback : function(){ 
               alert(3)
             }
           },
           cancel:{ //  취소 
-            txt : "회원가입",
+            txt : "취소",
             callback : function(){
               alert(2)
             }
