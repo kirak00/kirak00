@@ -78,7 +78,7 @@
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 90px; padding: 26px 60px; background: #069B66; border-radius: 15px;}
 .titBg.lightGreen { background: #EFF5EF;}
 .titBg.flexBetween { justify-content: space-between;}
-.titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 30px; font-weight: 700; }
+.titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 26px; font-weight: 700; }
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
 .titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { color: #EAFAEB; font-size: 18px;}
@@ -714,7 +714,7 @@ select.wid430 { min-width: 430px;}
 .accordion .accordionItem { border: 1px solid #ddd; border-radius: 16px;  }
 .accordion .accordionTitle { position:relative; font-weight: 700; }
 .accordion .accordionTitle .q { display: inline-block; width: 30px; height: 30px; line-height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; vertical-align: middle; text-align: center;}
-.accordionTrigger { position: relative; display: flex; align-items: center; width: 100%; padding: 32px 40px; text-align: left; font-weight: inherit;}
+.accordionTrigger { position: relative; display: flex; align-items: center; width: 100%; padding: 22px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #069B66; }
 .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg) translateY(50%); }
 .accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 32px; top: 50%; width: 40px; height: 40px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat center/24px 24px;}
@@ -1008,7 +1008,7 @@ table.bbs_view td  {padding:30px 0; padding-left:20px; text-align: left; border-
 .detailCont table.bbs_view td   {padding-right:30px; }
 
 .detailCont dl.attechFile   {display:flex; padding:20px 0 0; margin-top:100px;  }
-.detailCont dl.attechFile dt  {min-width:120px; }
+.detailCont dl.attechFile dt  {min-width:120px; font-weight: 700; }
 .detailCont dl.attechFile dd  {flex:1; }
 
 
@@ -1338,7 +1338,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .alertWrap .alertBody .alertCont strong.red,
 .alertWrap .alertBody .confirmCont strong.red     {color:#FE5050;}
 .alertWrap .alertBody .alertFooter    {display:flex; gap:16px; }
-.alertWrap .alertBody .alertFooter button    {width:100%; height:60px; margin:0;  }
+.alertWrap .alertBody .alertFooter button    {width:100%; height:60px; margin:0; padding: 0; }
 .alertWrap .alertBody .alertFooter button.long    {padding:0 20px; }
 .alertWrap .alertBody .alertFooter button.short    {padding:0 30px; }
 .alertWrap .alertBody button.alertClose    {position:absolute; right:40px; top:40px; width:24px; height:24px; background:url(../images/common/ico_24_close_b.png) no-repeat 0 0; }
@@ -1540,9 +1540,9 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:24px; font-weight: 700; }
 .bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
 .bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
-.bbsDetailBox .titBox .date { margin-top: 8px; color: #888; }
+.bbsDetailBox .titBox .date { margin-top: 16px; color: #555; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
-.bbsDetailBox .detailCont     {border:1px solid #ddd; padding:60px;  border-top:0; border-radius:0 0 16px 16px;  }
+.bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 50px 60px 60px;  border-top:0; border-radius:0 0 16px 16px;  }
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
 
 .detailTopBtn     {padding-bottom:20px; display:flex; justify-content: end; }
@@ -1696,11 +1696,11 @@ button .tooltip_q .tooltipLayer::before     {  top:-38px;  }
 
 
 /* 동영상리스트 */
-ul.youtubeList        {display:flex; flex-wrap: wrap; gap:20px; }
-ul.youtubeList li     {width:453px; height:380px; border:1px solid #ddd; border-radius:8px; margin-top:10px;    }
+ul.youtubeList        {display:flex; flex-wrap: wrap; row-gap: 30px; column-gap: 20px;}
+ul.youtubeList li     {width:453px; height:380px; border:1px solid #ddd; border-radius:8px;   }
 ul.youtubeList li:nth-child(-n+3)     {margin-top:0; }
-ul.youtubeList li .movie  {background:url(../images/common/play.png) no-repeat 50% 50% #EAFAEB}
-ul.youtubeList li iframe  {width:100%; height:250px;  }
+ul.youtubeList li .movie  {background:url(../images/common/play.png) no-repeat 50% 50% #EAFAEB; border-radius: 8px 8px 0 0;}
+ul.youtubeList li iframe  {width:100%; height:250px;}
 ul.youtubeList li .titBox  {width:100%; padding:30px 20px;  }
 ul.youtubeList li .titBox strong  {display:block; }
 ul.youtubeList li .titBox p   {margin-top:20px; }
