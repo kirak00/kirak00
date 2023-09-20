@@ -1411,7 +1411,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 *****************************/
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 80px;}
-.pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; line-height: 1; }
+.pageTop h2.pageTit        {font-size:36px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; }
 .pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
 .pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
@@ -1745,9 +1745,9 @@ ol.auditInfo li      {position:relative; line-height:34px; margin:20px 0 0; padd
 ol.auditInfo li strong  {color:#069B66; vertical-align: 0; }
 ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34px; height:34px; font-size:20px; font-weight: 700; background:#069B66; color:#fff; text-align: center; border-radius: 50%;   }
 
-.suggestPg .divideCon { padding: 60px 0; border-bottom: 1px solid #ddd; overflow: hidden;}
-.suggestPg .left {width: 968px; float: left;}
-.suggestPg .right {width: 372px; float: right;}
+.suggestPg .divideCon { padding: 60px 0; border-bottom: 1px solid #ddd; display: flex; gap: 60px;}
+.suggestPg .left {width: 968px;}
+.suggestPg .right {width: 372px;}
 
 .suggestPg .titH3 { padding-left: 60px;}
 .suggestPg .titH3.hasLine + .viewNolineTable.wide { padding-top: 60px;}
@@ -1797,7 +1797,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 .suggestBnr li + li::before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -16px; display: block; width: 1px; height: 32px; background: #ddd; }
 .suggestBnr li .txt { font-weight: 700;}
 
-.totalInfoBox { padding: 40px 40px 60px; border: 3px solid #069B66; border-radius: 16px;}
+.totalInfoBox { position: sticky; top: 30px; padding: 40px 40px 60px; border: 3px solid #069B66; border-radius: 16px;}
 .totalInfoBox .head { height: 76px; border-bottom: 1px solid #ddd; font-size: 24px; font-weight: 700; line-height: 76px; text-align: center;}
 .totalInfoBox .cont { padding: 40px 0; }
 .totalInfoBox .label { display: inline-block;}
