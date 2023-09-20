@@ -1877,7 +1877,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34p
 
 
 .doneWrap { margin: 60px auto 0; text-align: center;}
-.doneWrap .ico.icoPerson { display: inline-b lock; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoPerson { display: inline-block; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
 .doneWrap .ico.icoCall { display: inline-block; width: 120px; height: 110px; background: url(../images/common/ico_call.png) no-repeat center 0 / contain}
 .doneWrap .ico + .subTit { margin-top: 60px;}
 .doneWrap .ico + .subTxt { margin-top: 60px;}
