@@ -1406,7 +1406,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 *****************************/
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 80px;}
-.pageTop h2.pageTit        {font-size:40px; color:#333; font-weight: 700; line-height: 1; }
+.pageTop h2.pageTit        {font-size:36px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; }
 .pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
 .pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
