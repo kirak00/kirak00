@@ -266,13 +266,17 @@ a.ico_down       {color:#069B66; }
 .btnWhite:active.ico_chart::after,
 .btnWhite:hover.ico_chart::after  {background:url(../images/common/ico_24_chart_w.png) no-repeat 50% 50%; }
 
-.ico_setting       {padding:0 32px;}
+.ico_end       {padding:0 32px;  color:#555; font-weight: 700;}
+.ico_end::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50%; }
+
+.ico_setting       {padding:0 32px;  color:#333}
 .ico_setting::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 .btnWhite.ico_setting::after  {background:url(../images/common/ico_24_setting_primary.png) no-repeat 50% 50%; }
 .btnWhite:focus.ico_chart::after,
 .btnWhite:active.ico_setting::after,
 .btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
-.ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important; }
+.ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important;   }
+.btnSky.ico_setting:disabled::after  {color:#555 }
 
 .btnWhite.ico_prev         {padding:0 32px;}
 .btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50%; }
@@ -388,6 +392,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 *****************************/
 /* checkbox, radio */
 .radio + .formSet { margin-left: 30px;}
+.radio + .formSet.formVertical { margin-left: 0px; align-items:flex-start;}
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 18px;
@@ -1621,13 +1626,13 @@ ul.guideBox li { line-height: 1.5;}
 
 /* main */
 
-.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 0px; }
+.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 60px; }
 .main_myInfo .welcomeBox        {display:flex;  gap:40px; align-items: end;}
-.main_myInfo .welcomeBox .welcometit        { }
-.main_myInfo .welcomeBox .welcometit span   {font-size:20px; }
-.main_myInfo .welcomeBox .welcometit strong {display:block; font-size:40px; margin-top:13px;  }
+.main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
+.main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
+.main_myInfo .welcomeBox .welcometit strong {display:block; font-size:36px; margin-top:13px;  }
 .main_myInfo .welcomeBox button        {margin-bottom:5px;}
-.main_myInfo .msgBox        {position:relative; width:48px; height:48px; top:55px;  }
+.main_myInfo .msgBox        {position:relative; width:48px; height:48px; top:55px; right:30px;  }
 .main_myInfo .msgBox span.ico_msg        {display:block; width:48px; height:48px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0; }
 .main_myInfo .msgBox span.ico_msg em     {position:absolute; width:22px; height:22px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:14px; line-height:22px; font-weight: 700; text-align: center; border-radius:50%;  }
 .main_myInfo .msgBox .layer_msg         {position:absolute; opacity:0;  padding:20px 30px; right:70px; bottom:0px; text-align: right; min-width:200px; background:#FFD43C; border-radius: 8px; white-space: nowrap;  }

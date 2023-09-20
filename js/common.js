@@ -613,7 +613,7 @@ function accordion() {
             this.buttonEl.setAttribute('aria-expanded', 'true');
           })
           this.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionPanel').forEach((panel) => {
-            panel.closest('.accordionItem').classList.remove("isOpen")
+            panel.closest('.accordionItem')?.classList.remove("isOpen")
             panel.setAttribute('hidden', '');
             this.contentEl.removeAttribute('hidden');
           });
