@@ -337,11 +337,11 @@
                                 var $listblock = now.clone().removeClass("none");
                                 damboListIdx++
                                 $listblock.attr({id: "damboList_"+ damboListIdx , tabindex:0})
-                                now.find(".btnSuccess").detach();
-                                now.find(".btnBlack").detach();
+                                // now.find(".btnSuccess").detach();
+                                // now.find(".btnBlack").detach();
                                 now.find(".btnPlus").hide();
                                 now.find(".btnMinus").show();
-                                now.find("input,select").attr({disabled:true});
+                                // now.find("input,select").attr({disabled:true});
                                 $listblock.find(".is_estate").hide();
                                 $listblock.find(".formRow:eq(1)").hide();
                                 $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";

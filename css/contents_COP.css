@@ -86,12 +86,12 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 /* 락 */
 /* 메인 */
-
+.main .container    {padding:40px 0 0px ; }
 .main header::after { height:760px; }
 
-.main_visual_logout     { padding:0px 0 0 40px ; width:100%; margin:0 auto; }
-.main_visual_logout .txtBox   { padding:40px 0 3px; font-size:38px; font-weight: 700; height:325px; background:url(../images/COP/banner_main.png) no-repeat right 40px top 0; }
-.main_visual_logout .txtBox strong { font-size:52px; vertical-align: 0;  }
+.main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
+.main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:0px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
+.main_visual_logout .txtBox strong { color:#069B66;  vertical-align: 0;  }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -227,7 +227,7 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 
 /* 서비스 - 대출절차 */
-.serviceInfo_visual         { width:1400px; height:410px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; background-size:contain}
+.serviceInfo_visual         { width:1400px; height:340px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; background-size:contain}
 .serviceInfo_visual.login   { width:1400px; height:442px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
 .serviceInfo_visual.loan   { width:1400px; height:440px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
 /* .serviceInfo_txt            { padding:60px 0 0;} */

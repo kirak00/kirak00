@@ -359,14 +359,17 @@ function skip_navi(){
   nav.html(txt);
 }
 
+var alertArr = []
 function alert_control(alertBody ,focusObj , btnObj){
 
   $("body").append(alertBody);
   $(".wrap").attr("aria-hidden", "true"); 
+  alertArr.push(alertBody);
 
   alertBody.find(".alertBody").focus();
   alertBody.find(".alertClose").click(function(){
     close(this);
+    if(btnObj?.cancel?.callback) eval(btnObj.cancel.callback)();
   });
 
   alertBody.find(".alertConfirm").click(function(){
@@ -383,6 +386,7 @@ function alert_control(alertBody ,focusObj , btnObj){
     $(obj).closest(".alertWrap").remove();
     if(focusObj) focusObj.focus();
     $(".wrap").removeAttr("aria-hidden"); 
+    alertArr.pop();
   }
 
   $("body").one("keydown",function(e){
@@ -393,6 +397,13 @@ function alert_control(alertBody ,focusObj , btnObj){
   })
 }
 
+function close_alert(){
+  if(alertArr.length > 0 ){
+    alertArr[alertArr.length-1].remove();
+    alertArr.pop();
+  }
+  $(".wrap").removeAttr("aria-hidden"); 
+}
 function layer_alert(msg,focusObj,btnObj){
   //  aria-haspopup="dialog" data-popup="alert";
   var alertBody = $("<div>")

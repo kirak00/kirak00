@@ -386,6 +386,7 @@
                 .css("position", "relative")
                 .append(this._createBody())
                 .prepend(this._createHeader());
+                
 
             this._pagerContainer = this._createPagerContainer();
             this._loadIndicator = this._createLoadIndicator();
@@ -466,7 +467,6 @@
                 .on("scroll", $.proxy(function(e) {
                     this._header.scrollLeft(e.target.scrollLeft);
                 }, this));
-
             return $body;
         },
 
@@ -983,6 +983,7 @@
             container.height(height);
 
             if(height !== "auto") {
+                container.addClass("heightFix")
                 height = container.height();
 
                 nonBodyHeight = this._header.outerHeight(true);
@@ -992,6 +993,7 @@
 
                 this._body.outerHeight(height - nonBodyHeight);
             }
+            
         },
 
         showPrevPages: function() {

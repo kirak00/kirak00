@@ -22,6 +22,7 @@
   <div class="c-container">
     <h1 class="c-h1">Button</h1>
     <style>button {margin:5px 0; }</style>
+    <h2>alert 지우기  : close_alert() </h2>
     <h2>alert </h2>
         <div style="padding:10px 0;">
 
@@ -29,7 +30,17 @@
           <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>alert 기본</button>
           <script>
             function sample_alert_1(obj){
-              layer_alert("비밀번호 재설정이 필요합니다.", obj)
+              layer_alert(
+                "비밀번호 재설정이 필요합니다.", 
+                obj, 
+                {
+                  cancel:{
+                    callback:function(){   // x 버튼 callback func
+                      alert('취소')
+                    }
+                  }
+                }
+              )
             }
           </script>
 
@@ -48,6 +59,11 @@
                     txt:"비밀번호 변경",  // 버튼 문구 변경
                     callback:function(){   // 버튼 callback func
                       alert(3)
+                    }
+                  },
+                  cancel:{
+                    callback:function(){   // 버튼 callback func
+                      alert('취소')
                     }
                   }
                 })
