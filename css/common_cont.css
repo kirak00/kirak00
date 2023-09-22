@@ -190,34 +190,42 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 button    {background:none; cursor: pointer; transition: background .2s; white-space: nowrap;}
 
 /* MAIN 버튼 */ 
-button.btnSuccess        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff  }
-button.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff }
-button.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-button.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-button.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-button.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
-button.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
-button.btnLine       {padding:0 50px; height:64px; background:#fff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-button.btnBlack.p30  {padding:0 30px; }
+.btnSuccess        {padding:0 50px; height:64px; background:#069B66; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff  }
+.btnSky         {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff }
+.btnWhite       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+.btnGray       {padding:0 50px; height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnWhiteLine       {padding:0 50px; height:64px; background:transparent; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+.btnDkGreen       {padding:0 50px; height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
+.btnBlack       {padding:0 50px; height:64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
+.btnLine       {padding:0 50px; height:64px; background:#fff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnBlack.p30  {padding:0 30px; }
 
-a.btnSuccess        {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#069B66; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff  }
-a.btnSky         {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff }
-a.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-a.btnGray       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-a.btnLine       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:transparent; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-a.btnBlack       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
+a.btnSuccess        {display:inline-block; line-height:64px; white-space: nowrap;}
+a.btnSky         {display:inline-block; line-height:64px; white-space: nowrap;}
+a.btnWhite       {display:inline-block; line-height:64px; white-space: nowrap;}
+a.btnGray       {display:inline-block; line-height:64px; white-space: nowrap;}
+a.btnLine       {display:inline-block; line-height:64px; white-space: nowrap; }
+a.btnBlack       {display:inline-block; line-height:64px; white-space: nowrap;}
 
 label.btnDkGray   {padding:0 50px; height:64px; line-height: 64px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:64px; line-height:64px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess        {padding:0 30px; height:50px; line-height:50px; }
-table .btnSky         {padding:0 30px; height:50px; line-height:50px; }
-table .btnWhite       {padding:0 30px; height:50px; line-height:50px; }
-table .btnGray       {padding:0 30px; height:50px; line-height:50px; }
-table .btnWhiteLine       {padding:0 30px; height:50px; line-height:50px; }
-table .btnDkGreen       {padding:0 30px; height:50px; line-height:50px; }
-table .btnLine       {padding:0 30px; height:50px; line-height:50px; }
+table .btnSuccess        {padding:0 30px; height:50px;}
+table .btnSky         {padding:0 30px; height:50px;}
+table .btnWhite       {padding:0 30px; height:50px;}
+table .btnGray       {padding:0 30px; height:50px;}
+table .btnWhiteLine       {padding:0 30px; height:50px;}
+table .btnDkGreen       {padding:0 30px; height:50px;}
+table .btnLine       {padding:0 30px; height:50px;}
 table button.full { width: 100%;}
+
+table a.btnSuccess        { line-height: 50px;}
+table a.btnSky         { line-height: 50px;}
+table a.btnWhite       { line-height: 50px;}
+table a.btnGray       { line-height: 50px;}
+table a.btnWhiteLine       { line-height: 50px;}
+table a.btnDkGreen       { line-height: 50px;}
+table a.btnLine       { line-height: 50px;}
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -582,15 +590,18 @@ select.wid145 { min-width: 145px !important;}
 select.wid430 { min-width: 430px;}
 
 /* textarea */
-.textarea { width: 100%; min-height: 220px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 30px;}
+.textarea { width: 100%; min-height: 64px; height: 220px; padding: 18px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-.textarea.autoHeight { min-height: 64px; height: 64px; padding: 16px 20px;}
-.layerCont .textarea { min-height: 180px;}
+/* .textarea.autoHeight { padding: 18px 20px; } */
+.layerCont .textarea { min-height: 64px; height: 180px;}
+.layerCont .textarea.h64 { height: 64px; }
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
+.layerCont .formVertical { align-items: flex-start; width: 100%;}
 .formVertical { display: flex; flex-direction: column; gap: 20px;}
 .formVertical.mt10 { margin-top: 10px;}
+.formVertical.mt20 { margin-top: 20px;}
 .formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
 .formSet { display: flex; align-items: center; gap: 10px;}
 .formSet.wid600 { width: 600px;}
@@ -1342,6 +1353,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .alertWrap .alertBody      {position:absolute; left:50%; top:50%; transform: translateX(-50%) translateY(-50%); z-index:10; width:400px; padding:40px 40px 40px; border-radius: 16px; background:#fff }
 .alertWrap .alertBody .alertCont,
 .alertWrap .alertBody .confirmCont    {padding-bottom:40px; padding-top:40px; text-align: center; font-size:18px; line-height:1.5;}
+.layerWrap.typeAlert .layerCont .tit,
 .alertWrap .alertBody .alertCont .tit,
 .alertWrap .alertBody .confirmCont .tit      {font-size:30px; font-weight: 700; padding-bottom:20px;  }
 .alertWrap .alertBody .alertCont strong,
@@ -1396,12 +1408,14 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 
 /* alert 스타일 layer */
 .layerWrap.typeAlert .layerBody       {width:610px;  }
-.layerWrap.typeAlert.wid500 .layerBody       {width:500px;  }
-.layerWrap.typeAlert.wid500 .layerBody .layerCont { padding-top: 0;}
-.layerWrap.typeAlert .layerBody .layerHead    {padding:40px 0 20px;  background:none;   }
-.layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 44px;}
-.layerWrap.typeAlert .layerBody .layerCont { text-align: center;}
-.layerWrap.typeAlert .layerBody .layerFoot { display: flex; padding: 20px 40px 0; gap: 16px;}
+.layerWrap.typeAlert .layerBody.wid400 { width: 400px;}
+.layerWrap.typeAlert .layerBody.wid400 .layerCont { padding-top: 0;}
+.layerWrap.typeAlert .layerBody.wid500       {width:500px;  }
+.layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 0;}
+.layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  background:none;   }
+.layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
+.layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px; text-align: center;}
+.layerWrap.typeAlert .layerBody .layerFoot { display: flex; gap: 16px;}
 .layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding: 20px 40px;}
 .layerWrap.typeAlert .layerBody .layerFoot button    {min-width:0; flex: 1 }
 
