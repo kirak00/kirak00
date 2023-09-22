@@ -641,6 +641,7 @@ select.wid430 { min-width: 430px;}
 
 
 .searchControlBox .searchBtns { display:flex; gap:10px; margin-left: auto; }
+.searchControlBox .searchBtns.fl { margin-left: 0;}
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
 .searchControlBox .searchBtns .btnSuccess {  width: auto; }
 .searchControlBox .searchBtns .btnSuccess.sm { width: 188px;}
@@ -975,6 +976,10 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_wrap.mt40 { margin-top: 40px;}
 .table_wrap.mt60 { margin-top: 60px;}
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden; table-layout: fixed;}
+table.bbs_list.hasBorder tbody th,
+table.bbs_list.hasBorder tbody td { border: 1px solid #ddd; }
+table.bbs_list.hasBorder tr.require th,
+table.bbs_list.hasBorder tr.require td { background: #fafafa;}
 table.bbs_list th   {height:60px; background:#EFF5EF;  }
 table.bbs_list .double th   {height:40px; background:#EFF5EF;  }
 table.bbs_list .double2 th   {height:40px;  }
