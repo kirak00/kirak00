@@ -84,7 +84,7 @@ ul.loginTab li ul.login_info li + li   {margin-top:20px;  }
 
 
 .center .searchControlBox .searchBtns { width:190px; flex-direction: column; }
-.searchControlBox .searchBtns button { min-width:190px; padding:0 10px; text-align: center; }
+.searchControlBox .searchBtns button { min-width:120px; padding:0 10px; text-align: center; }
 .searchControlBox .dateTab          {height:64px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
 .searchControlBox .dateTab button    {border:0; width:130px; height:64px; border-radius: 8px; margin:-1px 0 0 -1px; }
 .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
@@ -94,7 +94,7 @@ ul.loginTab li ul.login_info li + li   {margin-top:20px;  }
 .center .center_organ select {min-width:330px; }
 
 .main_visual_logout     { padding:10px 0 60px 40px ; width:100%; margin:0 auto; }
-.main_visual_logout .txtBox   { height:220px; padding:53px 0 0px; font-size:30px; line-height:1.5; font-weight: 700; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 0;      }
+.main_visual_logout .txtBox   {width:1220px; height:220px; padding:53px 0 0px; margin:0 auto; font-size:30px; line-height:1.5; font-weight: 700; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 0;      }
 .main_visual_logout .txtBox em{color:#02C37E; vertical-align: 0; }
 
 .main_progress        {height:308px; background:url(../images/FIN/main_process.png) no-repeat 0 0; }

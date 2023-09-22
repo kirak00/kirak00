@@ -194,14 +194,14 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 button    {background:none; cursor: pointer; transition: background .2s; white-space: nowrap;}
 
 /* MAIN 버튼 */ 
-.btnSuccess        {padding:0 50px; height:50px; background:#069B66; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff  }
-.btnSky         {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff }
-.btnWhite       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-.btnGray       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-.btnWhiteLine       {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
-.btnDkGreen       {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
-.btnBlack       {padding:0 50px; height:50px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
-.btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff  }
+.btnSky        {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff }
+.btnWhite      {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+.btnGray       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnWhiteLine  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+.btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
+.btnBlack      {padding:0 50px; height:50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
+.btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 .btnBlack.p30  {padding:0 30px; }
 
 a.btnSuccess        {display:inline-block; line-height:50px; white-space: nowrap;}
@@ -214,13 +214,13 @@ a.btnBlack       {display:inline-block; line-height:50px; white-space: nowrap;}
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess       {padding:0 20px; height:36px;}
-table .btnSky           {padding:0 20px; height:36px;}
-table .btnWhite         {padding:0 20px; height:36px;}
-table .btnGray          {padding:0 20px; height:36px;}
-table .btnWhiteLine     {padding:0 20px; height:36px;}
-table .btnDkGreen       {padding:0 20px; height:36px;}
-table .btnLine          {padding:0 20px; height:36px;}
+table .btnSuccess,
+table .btnSky,
+table .btnWhite,
+table .btnGray,
+table .btnWhiteLine,
+table .btnDkGreen,
+table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
 table button.full { width: 100%;}
 
 table a.btnSuccess        { line-height: 50px;}
@@ -291,7 +291,7 @@ a.ico_down       {color:#069B66; }
 .btnSky.ico_setting:disabled::after  {color:#555 }
 
 .btnWhite.ico_prev         {padding:0 24px;}
-.btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50%; }
+.btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50% / contain; }
 .btnWhite.ico_prev:focus::before ,
 .btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
 .btnWhite.ico_next         {padding:0 32px;}
@@ -583,7 +583,7 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 /* select */
 select::-ms-expand { display: none; } /* select 기본 스타일 제거 */
 select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;} /* select 기본 스타일 제거 */
-select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0; height: 50px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 18px; }
+select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0; height: 50px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 16px; }
 select.selectSm { min-width: 206px;}
 select.wid100 { min-width: 100px;}
 select.wid220 { min-width: 220px;}
@@ -635,8 +635,9 @@ select.wid430 { min-width: 430px;}
 .bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
 
+fieldset + .table_wrap    {margin-top:40px; }
 
-.searchControlBox { position: relative; margin-bottom: 60px; padding: 32px 40px  32px 40px; background: #EAFAEB; border-radius: 16px;}
+.searchControlBox { position: relative; padding: 32px 40px  32px 40px; background: #EAFAEB; border-radius: 16px;}
 .main .searchControlBox { background: #fff;  padding: 32px 115px 32px 40px; } 
 /* .searchControlBox.fullType { padding-right: 40px;}
 .searchControlBox.fullType .searchControlItem,
@@ -657,7 +658,7 @@ select.wid430 { min-width: 430px;}
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
-.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 18px; padding-left: 16px; padding-right: 30px; line-height: 60px; white-space: nowrap;
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 18px; padding-left: 16px; padding-right: 30px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
 .searchControlItem .rangeControl .input { width: 142px;}
@@ -693,7 +694,6 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.fullChk .formRow .checkbox:last-child  { flex:1}
 
 
-.searchControlBox     {background:#FAFAFA; }
 .disabled .searchControlItem .label,
 .disabled .searchControlItem select,
 .disabled .searchControlItem .formRow.formGroup > *   {background-color:#EEF0F1; opacity:1;  }
@@ -740,7 +740,7 @@ select.wid430 { min-width: 430px;}
 .accordionTrigger { position: relative; display: flex; align-items: center; width: 100%; padding: 22px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #069B66; }
 .accordionTrigger[aria-expanded="true"] .accordionIcon { transform: rotate(180deg) translateY(50%); }
-.accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 32px; top: 50%; width: 40px; height: 40px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat center/24px 24px;}
+.accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 32px; top: 50%; width: 40px; height: 40px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat center / 24px 24px;}
 .accordionPanel { margin: 0px 40px 40px; padding: 40px 20px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .accordionPanel[hidden] { display: none;}
 
@@ -758,7 +758,7 @@ select.wid430 { min-width: 430px;}
 
 .agreeAccordion { border-top: 2px solid #069B66}
 .agreeAccordion.noLine { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-.agreeAccordion .accordionTrigger { height: 92px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
+.agreeAccordion .accordionTrigger { height:80px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
 .agreeAccordion .accordionTitle:not(:first-child) { border-top: 1px solid #ddd;}
 .agreeAccordion .accordionTitle .checkbox {position: absolute;  top: 0; height: 100%; display: flex; align-items: center; }
 .agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center; height: 100%; padding: 0 40px;}
@@ -794,7 +794,7 @@ select.wid430 { min-width: 430px;}
 .headerUtil .utilCont     {width:1400px; display:flex; justify-content: end; margin:0 auto; overflow: hidden;  padding:10px 0 0; gap:20px;  }
 .headerUtil .utilCont .timer     {padding:0 0 0 30px; height:28px; color:#888; font-size: 18px; background: url(../images/common/ico_24_clock.png) no-repeat 0 80% ;}
 .headerUtil .utilCont .zommBox   {}
-.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; padding:1px 0 0; font-size: 14px; color:#888; font-weight: 500; }
+.headerUtil .utilCont .zommBox span.tit   {display:inline-block; vertical-align: middle; padding:2px 6px 0; font-size: 14px; color:#888; font-weight: 500; }
 .btn_zoom_plus    {width:18px; height:18px; vertical-align: middle; background:url(../images/common/ico_24_plus.png) no-repeat 0 0 / contain }
 .btn_zoom_minus   {width:18px; height:18px; vertical-align: middle; background:url(../images/common/ico_24_minus.png) no-repeat 0 0 / contain }
 
@@ -848,7 +848,7 @@ header.on .line  {display:block; }
 .headerCont ul.gnb li a:hover    {box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ;}
 .headerCont ul.gnb li.depth_1        {margin-left:60px}
 .headerCont ul.gnb li.depth_1:first-child        {margin-left:0px}
-.headerCont ul.gnb li.depth_1 > a    {font-size:18px; color:#333; transition: .3s; white-space: nowrap; margin:0 14px;  }
+.headerCont ul.gnb li.depth_1 > a    {font-size:18px; color:#333; transition: .3s; font-weight: 500; white-space: nowrap; margin:0 14px;  }
 .on .headerCont ul.gnb li.depth_1 > a    {color:#333; }
 /* .on .headerCont ul.gnb li.depth_1 > a:hover    {color:#069B66; } */
 .headerCont ul.gnb li.depth_1 ul     {display:none; position:absolute; top:60px;  margin-left:10px; }
@@ -857,11 +857,11 @@ header.on .line  {display:block; }
 .headerCont ul.gnb li li.depth_2 > a {display:inline-block; width:auto; padding:5px 10px; font-size: 16px; line-height:24px; color:#333; margin:0 auto; }
 .headerCont ul.gnb li li.depth_2 > a:hover {box-shadow:inset 0 -14px 0  0  rgba(24, 167, 116, 0.15); }
 .headerCont ul.gnb li li.depth_2.on > a {color:#069B66;}
-.headerCont ul.headerLogin {position:relative; float:right; z-index:10; padding:24px 0 0; }
+.headerCont ul.headerLogin {position:relative; float:right; z-index:10; padding:18px 0 0; }
 .headerCont ul.headerLogin li {float:left;}
-.headerCont ul.headerLogin li a  {font-size:18px; font-weight: 500;   transition: .3s; ;}
+.headerCont ul.headerLogin li a  {font-size:16px; font-weight: 500; transition: .3s; ;}
 .headerCont ul.headerLogin li a.login {position:relative; margin-left:10px; padding-left:10px; }
-.headerCont ul.headerLogin li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#fff; border-radius: 50%; left:0; top:50%;}
+.headerCont ul.headerLogin li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#555; border-radius: 50%; left:0; top:50%; }
 .headerCont ul.headerLogin li a.logout {position:relative; padding-right:34px; }
 .headerCont ul.headerLogin li a.logout::before {content:''; position: absolute; width:24px; height:24px; background:#fff; right:0; top:0%; background:url(../images/COP/ico_logout_off.png) no-repeat 0 0 / 100%;}
 .on .headerCont ul.headerLogin li a {}
@@ -915,12 +915,12 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont .loginTit        {width:100%; text-align: center;}
 .loginCont .loginTit .tit { font-size:30px;}
 .loginCont .loginTit p      { color: #555; padding-top:20px; white-space: nowrap;}
-.loginCont ul.loginTab     {position:relative; width:530px; height:300px; margin:60px auto 0;  }
+.loginCont ul.loginTab     {position:relative; width:530px; height:280px; margin:60px auto 0;  }
 .loginCont .loginBtn button,
-.loginCont .loginBtn a     {width:100%; height: 70px; line-height: 70px; }
+.loginCont .loginBtn a     {width:100%; height: 50px; line-height: 50px; font-size: 16px; }
 
 .loginUtilBtn     {text-align: center; padding:20px 0 0; }
-.loginUtilBtn a  {color:#555; }
+.loginUtilBtn a  {color:#555; font-size: 14px; }
 .loginUtilBtn a + a::before {content:'·'; display:inline-block; margin:0 10px; }
 
 .login_form .formBox        {position:relative; padding-left:130px; padding-bottom:16px;   }
@@ -963,7 +963,8 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox select { width: 100%; height: 50px; flex-shrink:unset;  }
 .table_top .sortBox button.btnSky { min-width:120px; padding:0 10px; }
 
-.table_bt      { position: relative; width:100%; max-width: 1400px;  margin:60px auto 0px; box-sizing: content-box; min-height:50px; }
+.table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
+.bgGray + .table_bt      { margin-top:20px; }
 .table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
@@ -1441,15 +1442,15 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 /****************************
 **********  content  **********
 *****************************/
-.pageTop        { position: relative; margin-bottom:60px; overflow: hidden; }
+.pageTop        { position: relative; margin-bottom:24px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 0px;}
 .pageTop h2.pageTit        {font-size:30px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; bottom: 0; right: 0; overflow: hidden; }
 .pageTop ul.breadcrumb li  { float:left; }
-.pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
-.pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:24px; height:24px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; vertical-align: top; }
+.pageTop ul.breadcrumb li a.home {display:inline-block;  width:18px; height:18px; background:url(../images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
+.pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:18px; height:18px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0 / 18px auto; vertical-align: top; }
 .pageTop ul.breadcrumb li:first-child:before  {display:none;}
-.pageTop ul.breadcrumb li a  {display:inline-block; line-height:23px; font-size:14px; color:#555; vertical-align: top }
+.pageTop ul.breadcrumb li a  {display:inline-block; line-height:16px; font-size:14px; color:#555; vertical-align: top }
 .pageTop ul.breadcrumb li a strong{color:#069B66; }
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
@@ -1659,7 +1660,7 @@ ul.guideBox li { line-height: 1.5;}
 /* main */
 
 .main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 40px; }
-.main_myInfo .welcomeBox        {display:flex;  gap:40px; align-items: end;}
+.main_myInfo .welcomeBox        {display:flex;  gap:20px; align-items: end;}
 .main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
 .main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
 .main_myInfo .welcomeBox .welcometit strong {display:block; font-size:30px; margin-top:3px;  }
