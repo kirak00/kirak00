@@ -210,13 +210,13 @@ a.btnBlack       {display:inline-block; line-height:50px; white-space: nowrap;}
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess        {padding:0 30px; height:50px;}
-table .btnSky         {padding:0 30px; height:50px;}
-table .btnWhite       {padding:0 30px; height:50px;}
-table .btnGray       {padding:0 30px; height:50px;}
-table .btnWhiteLine       {padding:0 30px; height:50px;}
-table .btnDkGreen       {padding:0 30px; height:50px;}
-table .btnLine       {padding:0 30px; height:50px;}
+table .btnSuccess       {padding:0 20px; height:36px;}
+table .btnSky           {padding:0 20px; height:36px;}
+table .btnWhite         {padding:0 20px; height:36px;}
+table .btnGray          {padding:0 20px; height:36px;}
+table .btnWhiteLine     {padding:0 20px; height:36px;}
+table .btnDkGreen       {padding:0 20px; height:36px;}
+table .btnLine          {padding:0 20px; height:36px;}
 table button.full { width: 100%;}
 
 table a.btnSuccess        { line-height: 50px;}
@@ -256,14 +256,14 @@ table a.btnLine       { line-height: 50px;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
-.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
-.btnSuccess.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
+.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
-.btnSky.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-.btnWhite.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnSky.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
+.btnWhite.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
 .btnWhite:active.ico_down::after,
-.btnWhite:hover.ico_down::after  {background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50%; }
-.btnWhiteLine.ico_down::after  {background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnWhite:hover.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
+.btnWhiteLine.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
 .btnWhiteLine:hover.ico_down::after,
 .btnWhiteLine:active.ico_down::after  { }
 
@@ -286,7 +286,7 @@ a.ico_down       {color:#069B66; }
 .ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important;   }
 .btnSky.ico_setting:disabled::after  {color:#555 }
 
-.btnWhite.ico_prev         {padding:0 32px;}
+.btnWhite.ico_prev         {padding:0 24px;}
 .btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50%; }
 .btnWhite.ico_prev:focus::before ,
 .btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
@@ -893,7 +893,7 @@ footer::before    {content:""; position:absolute; width:100%; top:67px; border-t
 ul.footerLnk  {padding:24px 0; overflow: hidden; }
 ul.footerLnk li  {float:left; }
 ul.footerLnk li a  {font-size:16px; color:#fff; }
-ul.footerLnk li::before  {content:"ㆍ";padding:0 14px; }
+ul.footerLnk li::before  {content:"ㆍ";padding:0 14px; color:#fff; }
 ul.footerLnk li:first-child:before  {content:"";padding:0; }
 footer .copy    {overflow:hidden; padding:30px 0 ; color:#fff; font-size:14px;  }
 footer .copy p    {float:left;  }
@@ -1216,8 +1216,8 @@ table { width: 100%;}
 .bbs { width:100% !important; border: 1px solid #ddd; border-radius: 16px;}
 .bbs .jsgrid-grid-header,
 .bbs .jsgrid-grid-body   {overflow: auto;}
-.jsgrid-header-row > .jsgrid-header-cell  {height:60px; padding:14px 0 15px; font-weight: 700; background:#EFF5EF;}
-.jsgrid-cell    {height:80px;  }
+.jsgrid-header-row > .jsgrid-header-cell  {height:60px; padding:10px 0 10px; font-weight: 700; background:#EFF5EF;}
+.jsgrid-cell    {height:60px;  }
 .jsgrid-cell .done { font-weight: 700;}
 .jsgrid-cell .deny { color: #888;}
 
@@ -1433,12 +1433,12 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .pageTop        { position: relative; margin-bottom:60px; overflow: hidden; }
 .pageTop.textCenter { margin-top: 0px;}
 .pageTop h2.pageTit        {font-size:30px; color:#333; font-weight: 700; line-height: 1; }
-.pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; }
-.pageTop ul.breadcrumb li  { display: inline-block; vertical-align: text-bottom; }
-.pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0;  }
-.pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:24px; height:24px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; vertical-align: middle; }
+.pageTop ul.breadcrumb     { position: absolute; bottom: 0; right: 0; overflow: hidden; }
+.pageTop ul.breadcrumb li  { float:left; }
+.pageTop ul.breadcrumb li a.home {display:inline-block;  width:24px; height:24px; background:url(../images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
+.pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:24px; height:24px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0; vertical-align: top; }
 .pageTop ul.breadcrumb li:first-child:before  {display:none;}
-.pageTop ul.breadcrumb li a  {line-height:24px; font-size:16px; color:#555; }
+.pageTop ul.breadcrumb li a  {display:inline-block; line-height:23px; font-size:14px; color:#555; vertical-align: top }
 .pageTop ul.breadcrumb li a strong{color:#069B66; }
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
@@ -1489,7 +1489,7 @@ ul.evtTab li button:focus   {background:#069B66; color:#fff;  }
 
 /* 탭 안의탭 */ 
 ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 0 auto; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
-ul.innerTab li button   {display:block; width:100%; height:50px; padding:0 32px; border-radius: 32px; text-align: center; font-size:20px; background:#fff; border:1px solid #069B66; color: #069B66; }
+ul.innerTab li button   {display:block; width:100%; height:44px; padding:0 32px; border-radius: 32px; text-align: center; font-size:16px; background:#fff; border:1px solid #069B66; color: #069B66; }
 ul.innerTab li.on button   {background:#069B66; color:#fff; font-weight: 700; border:1px solid #069B66;  }
 ul.innerTab li:hover button,
 ul.innerTab li button:focus   {background:#36B688; color:#fff;  }
@@ -1508,7 +1508,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine li a:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
 .tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
-.tabLineWrap .update { position: absolute; top: 20px; right: 0; color: #888; font-size: 18px;}
+.tabLineWrap .update { position: absolute; bottom: 18px; right: 0; color: #888; font-size: 14px;}
 
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
@@ -1647,12 +1647,12 @@ ul.guideBox li { line-height: 1.5;}
 
 /* main */
 
-.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 44px; }
+.main_myInfo        {display:flex; justify-content: space-between; padding:0px 0 40px; }
 .main_myInfo .welcomeBox        {display:flex;  gap:40px; align-items: end;}
 .main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
 .main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
 .main_myInfo .welcomeBox .welcometit strong {display:block; font-size:30px; margin-top:3px;  }
-.main_myInfo .welcomeBox button        {margin-bottom:5px;}
+.main_myInfo .welcomeBox button        {margin-bottom:2px; height:36px; font-size:14px; }
 .main_myInfo .msgBox        {position:relative; width:40px; height:40px; top:31px; right:30px;  }
 .main_myInfo .msgBox span.ico_msg        {display:block; width:40px; height:40px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0 / 26px auto ; }
 .main_myInfo .msgBox span.ico_msg em     {position:absolute; width:18px; height:18px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:12px; line-height:18px; font-weight: 700; text-align: center; border-radius:50%;  }

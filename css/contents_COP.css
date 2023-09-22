@@ -99,7 +99,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .main .serviceInfo_tit      { padding:100px 0 60px; font-size:24px; font-weight: 700; text-align: center;}
 
 
-.bnr_associate    { margin-top:40px; }
+.bnr_associate    { margin-top:80px; }
 .bnr_associate .tit    { text-align: center;}
 .bnr_associate .tit strong    { display:block; font-size:24px; font-weight: 700;}
 .bnr_associate .tit p    {margin-top:10px; }
@@ -229,7 +229,7 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 
 /* 서비스 - 대출절차 */
-.serviceInfo_visual         { width:1400px; height:340px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; background-size:contain}
+.serviceInfo_visual         { width:1415px; height:356px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
 .serviceInfo_visual.login   { width:1400px; height:442px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
 .serviceInfo_visual.loan   { width:1400px; height:440px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
 /* .serviceInfo_txt            { padding:60px 0 0;} */
@@ -238,7 +238,7 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .serviceInfo_txt dl dd      { padding-left:200px; }
 
 .main_btn     {padding:60px 0 0px; text-align: center;}
-.main_btn button     {width:400px; }
+.main_btn button     {width:220px; }
 
 /*  약관  */
 .tremsWrap      {}
