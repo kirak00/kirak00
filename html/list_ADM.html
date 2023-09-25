@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+table {width:100%; }
+td  {border:1px solid #ddd; padding:10px; }
+tr.false    {background:#ddd; color:#888}
+tr.false a    {color:#888;}
+tr td.td_1    {background:#fff; color:#000}
+tr td.status    {text-align: center;}
+tr.guide     {background:#EAFAEB; }
+tr.guide td.td_1 ,
+tr.guide td,
+tr.guide td a  {color:#fff; background:#919ae9;  }
+tr th   {background:#639c67; height:50px; color:#fff; } 
+tr td.date   {text-align: center; } 
+tr:hover td {background:#ebfced}
+
+h1  {text-align: center; font-size:24px;}
+
+table {margin:0 20px; width:calc(100% - 40px)}
+
+</style>
+
+  <div>
+    <h1>관리자(AMD)</h1>
+    <table>
+      <colgroup>
+        <col width="150"/>
+        <col width=""/>
+        <col width="150"/>
+        <col width="300"/>
+        <col width="100"/>
+        <col width="200"/>
+      </colgroup>
+      <tr>
+        <th>메뉴</th>
+        <th>경로</th>
+        <th>상태</th>
+        <th>파일</th>
+        <th>완료계획</th>
+        <th>비고</th>
+      </tr>
+      <tbody id="ddd">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<script>
+
+  
+
+  var jsonList = [
+   {tit : '가이드', folder : 'guide', page : 'index.html', status : false, ment : '', end : '' },
+   {tit : '레이아웃', folder : 'main', page : 'layout.html', status : false, ment : '', end : '',},
+ 
+   {
+     tit : '로그인', folder : 'login', page : '', status : false, ment : '', end : '',
+     sub : [
+       {tit : '로그인', folder : '', page : 'ADM_A01.html', status : false , ment : 'v0.4', end : ''},
+       {tit : '아이디찾기/비밀번호 찾기', folder : '', page : 'ADM_A02.html', status : false , ment : 'v0.4', end : ''},
+       {tit : '비밀번호 재설정', folder : '', page : 'ADM_A03.html', status : false, ment : 'v0.4', end : ''},
+    ],
+   },
+   {
+    tit : '대시보드', folder : 'main', page : '', status : false, pop : false, ment : '', end : '09/08',
+    sub : [
+      {tit : '대시보드', folder : '', page : 'ADM_A05.html', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '회원관리', folder : 'member', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '법인회원 > 회원목록', folder : '', page : 'ADM_A06', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 법인정보', folder : '', page : 'ADM_A06_01', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 담당자정보', folder : '', page : 'ADM_A06_02', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보', folder : '', page : 'ADM_A06_03', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 엄체개요', folder : '', page : 'ADM_A06_03_1', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 경영진인적사항', folder : '', page : 'ADM_A06_03_2', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 주주인적사항', folder : '', page : 'ADM_A06_03_3', status : false, ment : 'v0.4 디자인 없음', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 노사관계 및 연혁', folder : '', page : 'ADM_A06_03_4', status : false, ment : 'v0.4 디자인 없음', end : '' },
+      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 필요서류제출', folder : '', page : 'ADM_A06_03_5', status : false, ment : 'v0.4 디자인 없음', end : '' },
+      {tit : '금융회원 > 회원목록', folder : '', page : 'ADM_A07', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원 > 회원상세(일반)', folder : '', page : 'ADM_A07_01', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원 > 회원상세(보증기금)', folder : '', page : 'ADM_A07_02', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원 > 회원상세(중앙회)', folder : '', page : 'ADM_A07_03', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원 > 정보조회이력관리', folder : '', page : 'ADM_A08', status : false, ment : 'v0.4', end : '' },
+     
+    ],
+   },
+   {
+    tit : '통계', folder : 'statistics', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '법인회원통계 > 대시보드', folder : '', page : 'ADM_A10.html', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원통계 > 상세통계(일반현황)', folder : '', page : 'ADM_A10_01.html', status : false, ment : 'v0.4', end : '' },
+      {tit : '법인회원통계 > 상세통계(대출현황)', folder : '', page : 'ADM_A10_02.html', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원통계 > 대시보드1', folder : '', page : 'ADM_A11_01.html', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원통계 > 대시보드2', folder : '', page : 'ADM_A11_02.html', status : false, ment : 'v0.4', end : '' },
+      {tit : '금융회원통계 > 상세통계(일반현황)', folder : '', page : 'ADM_A11_03.html', status : false, ment : 'v0.4 디자인 없음', end : '' },
+      {tit : '금융회원통계 > 상세통계(금융기관현황)', folder : '', page : 'ADM_A11_04.html', status : false, ment : 'v0.4 디자인 없음', end : '' },
+    ],
+   },   {
+    tit : '정산 현황', folder : 'calculate', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '정산현황', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '정산현황 > 청구내역서(확인용)팝업', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '정산현황 > 이의제기관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '정산현황 > 이의제기상세', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '이용자 현황', folder : 'user', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '방문현황(법인회원)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '방문현황(금융회원)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '사용환경', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '사용환경 > User Agent 항목', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '이벤트관리', folder : 'event', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '이벤트 목록', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '이벤트 등록(입력전)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '이벤트 등록(입력후 미리보기)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '이벤트 등록(입력후)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '이벤트 상세(이벤트 시작전 - 등록중)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '이벤트 상세(이벤트 진행중 - 등록완료)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '당첨자관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '당첨자관리 > 당첨자 발표작성', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '당첨자관리 > 당첨자 발표작성(입력후 미리보기)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '당첨자관리 > 당첨자 발표작성(입력후)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '당첨자관리 > 당첨자 발표상세(이벤트 시작전 - 등록중)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '정책 관리', folder : 'policy', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '수수료 관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '수수료 변경(팝업)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '일정관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '금칙어관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 이용약관동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 개인정보수집 및 이용동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 제3자 제공동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 마케팅동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 법인정보제공 및 제3자정보제공 전체동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 대표자정보제공 및 제3자정보제공 전체동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '약관관리 > 스크래핑 서비스 동의', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '게시판 관리', folder : 'board', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '1:1 문의관리 > 목록', folder : '', page : 'ADM_A60.html', status : false, ment : 'v0.4 <a target="_blank" href="COP/custom/COP_F56.html">COP_F56</a>와 유사', end : '' },
+      {tit : '1:1 문의관리 > 상세(최초문의/입력중)', folder : '', page : 'ADM_A601', status : false, ment : 'v0.4 <a target="_blank" href="COP/custom/COP_F561.html">COP_F561</a>와 유사', end : '' },
+      {tit : '1:1 문의관리 > 상세(답변작성완료)', folder : '', page : 'ADM_A602', status : false, ment : 'v0.4 <a target="_blank" href="COP/custom/COP_F562.html">COP_F562</a>와 유사', end : '' },
+      {tit : '1:1 문의관리 > 상세(답변종료화면 진입)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '1:1 문의관리 > 상세(답변종료화면 진입 > 추가답변작성)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '1:1 문의관리 > 상세(중복답변등록)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '게시판 관리 > FAQ관리 > 목록', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '게시판 관리 > FAQ관리 > 상세팝업(수정/삭제)', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '게시판 관리 > FAQ관리 > 신규등록팝업', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '게시판 관리 > 리뷰관리', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ],
+   },
+   {
+    tit : '운영자 관리', folder : 'operator', page : '', status : false, pop : false, ment : '', end : '',
+    sub : [
+      {tit : '목록', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '등록', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+      {tit : '수정', folder : '', page : '', status : false, ment : 'v0.4', end : '' },
+    ], 
+   }
+  ]
+
+
+  // console.log(jsonList)
+
+
+
+  var txt = ""
+  jsonList.forEach((o,i)=>{
+      // console.log(o,i);
+      // one
+      var status = !o.status ? '-' : '완료' ;
+      var row1=0;
+      var row2=0;
+      var row3=0;
+      if(o.sub)
+      o.sub.forEach((o2,i2)=>{
+        status = !o.status ? '-' : '완료' ;
+        row1++;
+        if(o2.sub){
+          o2.sub.forEach((o3,i3)=>{
+            row2++;
+          })
+        }
+      });
+      var folder = "./ADM/"
+      folder += o.folder;
+      var status_1 = o.status;
+      if(o.folder == "guide") {
+        status_1 += " guide"
+        folder = "./guide"
+      }
+      if(o.tit == "레이아웃") {
+        status_1 += " guide"
+      }
+      if(o.page !=''){
+        txt += `
+          <tr class="${status_1}">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+            <td></td>
+            <td class="status">${status}</td>
+            <td><a target="_blank" href="${folder +"/" +o.page}">${folder +"/" +o.page}</a></td>
+            <td class="date">${o.end}</td>
+            <td>${o.ment}</td>
+          </tr>\n`
+      }else{
+        txt += `
+          <tr class="depth_1">
+            <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
+          </tr>\n`
+      }
+      if(o.sub)
+      o.sub.forEach((o2,i2)=>{
+        status = o2.status != true ? '-' : '완료' ;
+        url = o2.page;
+        // if(i2==0) txt += `<tr class="${status}"><td rowspan="${o.sub.length}">${o2.tit}</td><td class="${status}">${status}</td><td><a href="${folder + '/'+url}">${o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
+        // else txt += `<tr class="${status}"><td>${status}</td><td><a href="${o2.page}">${o2.tit}</a></td><td>${o2.ment}</td></tr>\n`;
+        txt += `
+          <tr class="${o2.status}">
+            <td >${o2.tit}</td><td class="status">${status}</td>
+            <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
+            <td class="date">${o2.end}</td>
+            <td>${o2.ment}</td>
+          </tr>\n`;
+          
+        // if(o2.sub)
+        // o2.sub.forEach((o3,i3)=>{
+        // status = !o.status ? '-' : '완료' ;
+        // txt += `<tr class="${status}"><td>22${status}</td><td><a href="${o3.page}">${o3.tit}</a></td><td></td></tr>\n`
+        //   // o3.sub.forEach((o3,i3)=>{
+        //   //   txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td>${o3.folder}</td><td><a href="${o3.page}">${o3.tit}</a></td><tr>\n`
+        //   // })
+        // })
+      })
+  })
+
+  document.querySelector("#ddd").innerHTML = txt
+  // console.log(txt)
+
+</script>
+  
+</body>
+</html>
