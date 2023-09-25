@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_ADM.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_ADM.js"></script>
+  <title>SHINHAN</title>
+<style>
+ 
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">FAQ 관리</h2>
+    </section>
+
+    <section class="">
+      <div class="table_wrap">
+        <table class="bbs_list">
+          <caption>특허 정보</caption>
+          <colgroup>
+            <col width="130px">
+            <col width="150px">
+            <col width="140px">
+            <col width="150px">
+            <col>
+            <col width="160px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">순서</th>
+              <th scope="col">작성일</th>
+              <th scope="col">작성자</th>
+              <th scope="col">유형</th>
+              <th scope="col">내용</th>
+              <th scope="col">관리</th>
+            </tr>
+          </thead>
+          <tbody id="target">
+            <tr class="ui-sortable-handle" data-multiple="true">
+              <td class="move"><i class="icoDrag"></i></td>
+              <td>2023-08-12</td>
+              <td>김신한</td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td>Q</td></tr>
+                  <tr><td>A</td></tr>
+                </table>
+              </td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td><p class="ellips1">개인사업자도 회원 가입이 가능하나요111111?</p></td></tr>
+                  <tr><td><p class="ellips1">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다11111.</p></td></tr>
+                </table>
+              </td>
+              <td><button type="button" class="btnWhite">상세보기</button></td>
+            </tr>
+            <tr class="ui-sortable-handle" data-multiple="true">
+              <td class="move"><i class="icoDrag"></i></td>
+              <td>2023-08-12</td>
+              <td>김신한</td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td>Q</td></tr>
+                  <tr><td>A</td></tr>
+                </table>
+              </td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td><p class="ellips1">개인사업자도 회원 가입이 가능하나요2222222?</p></td></tr>
+                  <tr><td><p class="ellips1">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다2222.</p></td></tr>
+                </table>
+              </td>
+              <td><button type="button" class="btnWhite">상세보기</button></td>
+            </tr>
+            <tr class="ui-sortable-handle" data-multiple="true">
+              <td class="move"><i class="icoDrag"></i></td>
+              <td>2023-08-12</td>
+              <td>김신한</td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td>Q</td></tr>
+                  <tr><td>A</td></tr>
+                </table>
+              </td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td><p class="ellips1">개인사업자도 회원 가입이 가능하나요3333333?</p></td></tr>
+                  <tr><td><p class="ellips1">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다333333.</p></td></tr>
+                </table>
+              </td>
+              <td><button type="button" class="btnWhite">상세보기</button></td>
+            </tr>
+            <tr class="ui-sortable-handle" data-multiple="true">
+              <td class="move"><i class="icoDrag"></i></td>
+              <td>2023-08-12</td>
+              <td>김신한</td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td>Q</td></tr>
+                  <tr><td>A</td></tr>
+                </table>
+              </td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td><p class="ellips1">개인사업자도 회원 가입이 가능하나요44444?</p></td></tr>
+                  <tr><td><p class="ellips1">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다44444.</p></td></tr>
+                </table>
+              </td>
+              <td><button type="button" class="btnWhite">상세보기</button></td>
+            </tr>
+            <tr class="ui-sortable-handle" data-multiple="true">
+              <td class="move"><i class="icoDrag"></i></td>
+              <td>2023-08-12</td>
+              <td>김신한</td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td>Q</td></tr>
+                  <tr><td>A</td></tr>
+                </table>
+              </td>
+              <td>
+                <table class="multipleRows">
+                  <tr><td><p class="ellips1">개인사업자도 회원 가입이 가능하나요55555?</p></td></tr>
+                  <tr><td><p class="ellips1">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다5555.</p></td></tr>
+                </table>
+              </td>
+              <td><button type="button" class="btnWhite">상세보기</button></td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    
+      <script>
+        $("tbody").sortable({
+  cursor: 'row-resize',
+  placeholder: 'ui-state-highlight',
+  opacity: '0.55',
+  items: '.ui-sortable-handle'
+}).disableSelection();
+
+
+      </script>
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

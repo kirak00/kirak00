@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_ADM.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_ADM.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container mypage" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">리뷰 관리</h2>
+    </section> 
+ 
+    <section class="">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>20</strong>건</span>
+        <!-- <button type="button" class="btnSuccess">메시지 알림 설정</button> -->
+      </fieldset>
+
+
+      
+      <div class="table_wrap messageList">
+        <table class="bbs_list">
+          <caption>리뷰관리</caption>
+          <colgroup>
+            <col width="100px"/>
+            <col width="140px"/>
+            <col width="220px"/>
+            <col width="140px"/>
+            <col width="270px"/>
+            <col width="270px"/>
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">법인명</th>
+              <th scope="col">등록일</th>
+              <th scope="col">제안과 실행 일치 여부</th>
+              <th scope="col">만족도</th>
+              <th scope="col">금융 상품 만족 순위</th>
+              <th scope="col">Loan&Biz 만족 순위</th>
+              <th scope="col">개선사항 순위</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>(주)평가</td>
+              <td>2023-08-12</td>
+              <td>Y</td>
+              <td>100</td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_1" name="chk1" />
+                    <label for="chk1_1"><span></span>대출액</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_2" name="chk1" />
+                    <label for="chk1_2"><span></span>금리</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_3" name="chk1" />
+                    <label for="chk1_3"><span></span>대출 기간</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_4" name="chk1" />
+                    <label for="chk1_4"><span></span>상환 방식</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_5" name="chk1" />
+                    <label for="chk1_5"><span></span>기타:</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk2_1" name="chk2" />
+                    <label for="chk2_1"><span></span>편리함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk2_2" name="chk2" />
+                    <label for="chk2_2"><span></span>신속함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk2_3" name="chk2" />
+                    <label for="chk2_3"><span></span>다양한 금융기관의 참여</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk2_4" name="chk2" />
+                    <label for="chk2_4"><span></span>다양한 대출 제안</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk2_5" name="chk2" />
+                    <label for="chk2_5"><span></span>기타:친절한 응대</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <div class="formVertical">
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk3_1" name="chk3" />
+                      <label for="chk3_1"><span></span>편리성</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk3_2" name="chk3" />
+                      <label for="chk3_2"><span></span>신속함</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk3_3" name="chk3" />
+                      <label for="chk3_3"><span></span>다양한 금융기관의 참여</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk3_4" name="chk3" />
+                      <label for="chk3_4"><span></span>다양하 정보</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk3_5" name="chk3" />
+                      <label for="chk3_5"><span></span>기타:</label>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>(주)평가</td>
+              <td>2023-08-12</td>
+              <td>Y</td>
+              <td>100</td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk10_1" name="chk10" />
+                    <label for="chk10_1"><span></span>대출액</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk10_2" name="chk10" />
+                    <label for="chk10_2"><span></span>금리</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk10_3" name="chk10" />
+                    <label for="chk10_3"><span></span>대출 기간</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk10_4" name="chk10" />
+                    <label for="chk10_4"><span></span>상환 방식</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk10_5" name="chk10" />
+                    <label for="chk10_5"><span></span>기타:</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk11_1" name="chk11" />
+                    <label for="chk11_1"><span></span>편리함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk11_2" name="chk11" />
+                    <label for="chk11_2"><span></span>신속함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk11_3" name="chk11" />
+                    <label for="chk11_3"><span></span>다양한 금융기관의 참여</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk11_4" name="chk11" />
+                    <label for="chk11_4"><span></span>다양한 대출 제안</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk11_5" name="chk11" />
+                    <label for="chk11_5"><span></span>기타:친절한 응대</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <div class="formVertical">
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk12_1" name="chk12" />
+                      <label for="chk12_1"><span></span>편리성</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk12_2" name="chk12" />
+                      <label for="chk12_2"><span></span>신속함</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk12_3" name="chk12" />
+                      <label for="chk12_3"><span></span>다양한 금융기관의 참여</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk12_4" name="chk12" />
+                      <label for="chk12_4"><span></span>다양하 정보</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk12_5" name="chk12" />
+                      <label for="chk12_5"><span></span>기타:</label>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>(주)평가</td>
+              <td>2023-08-12</td>
+              <td>Y</td>
+              <td>100</td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk20_1" name="chk20" />
+                    <label for="chk20_1"><span></span>대출액</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk20_2" name="chk20" />
+                    <label for="chk20_2"><span></span>금리</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk20_3" name="chk20" />
+                    <label for="chk20_3"><span></span>대출 기간</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk20_4" name="chk20" />
+                    <label for="chk20_4"><span></span>상환 방식</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk20_5" name="chk20" />
+                    <label for="chk20_5"><span></span>기타:</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk21_1" name="chk21" />
+                    <label for="chk21_1"><span></span>편리함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk21_2" name="chk21" />
+                    <label for="chk21_2"><span></span>신속함</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk21_3" name="chk21" />
+                    <label for="chk21_3"><span></span>다양한 금융기관의 참여</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk21_4" name="chk21" />
+                    <label for="chk21_4"><span></span>다양한 대출 제안</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk21_5" name="chk21" />
+                    <label for="chk21_5"><span></span>기타:친절한 응대</label>
+                  </span>
+                </div>
+              </td>
+              <td class="textLeft">
+                <div class="formVertical">
+                  <div class="formVertical">
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk22_1" name="chk22" />
+                      <label for="chk22_1"><span></span>편리성</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk22_2" name="chk22" />
+                      <label for="chk22_2"><span></span>신속함</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk22_3" name="chk22" />
+                      <label for="chk22_3"><span></span>다양한 금융기관의 참여</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk22_4" name="chk22" />
+                      <label for="chk22_4"><span></span>다양하 정보</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="chk22_5" name="chk22" />
+                      <label for="chk22_5"><span></span>기타:</label>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table_bt mt20">
+        <div class="external-pager jsgrid-pager-container">
+          <div class="jsgrid-pager">
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;&lt;</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;</a></span> 
+            <span class="jsgrid-pager-page jsgrid-pager-current-page">1</span>
+            <span class="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;&gt;</a></span> 
+          </div>
+        </div>
+        <div class="btn_r">
+          <button type="button" class="btnWhite">엑셀 다운로드</button>
+        </div>
+      </div>
+      
+
+
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
