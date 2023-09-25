@@ -173,16 +173,11 @@
                  
                 
                  $("body").addClass("printSetting");
-                 myChart1.resize()
-                 myChart2.resize();
-                //  return false;
                  setTimeout(function(){
                    print()
                  },30)
                  setTimeout(function(){
                    $("body").removeClass("printSetting");
-                   myChart1.resize()
-                   myChart2.resize();
                  },30)
                 }
                
@@ -464,20 +459,6 @@
 <script>
 
   
-$(function() {
-  // $("tr").draggable({ helper: "clone" , axis: "y" });
-  $( "#sortable" ).sortable({
-      axis: "y" ,cursor: "move",
-      update : function(){
-        
-      }
-    },{ cancel: "tr.tr_fix" },{
-      items: "tr.moveable"
-    });
-
-    // $( "tr.moveable" ).draggable({ helper: "clone"});
- 
-});
 
 </script>
 

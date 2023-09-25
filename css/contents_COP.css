@@ -88,7 +88,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 /* 락 */
 /* 메인 */
 .main .container    {padding:40px 0 0px ; }
-.main header::after { height:600px; }
+.main header::after { height:380px; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
@@ -96,7 +96,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .main_visual_logout button   { margin-top:20px; }
 
 
-.main .serviceInfo_tit      { padding:100px 0 60px; font-size:24px; font-weight: 700; text-align: center;}
+.main .serviceInfo_tit      { padding:80px 0 30px; font-size:24px; font-weight: 700; text-align: center;}
 
 
 .bnr_associate    { margin-top:80px; }
@@ -113,22 +113,24 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 /*  메인 대출없는경우 */
 .main_loan_box      {}
-ol.main_loan_info      {display:flex; gap:20px;   }
-ol.main_loan_info li   {width:100%;  padding:180px 50px 0; font-size:20px; text-align: center; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 16px; background:url(../images/COP/main/ico_80_log2_process_01.png) no-repeat 50% 60px #fff;  }
-ol.main_loan_info li.step_1   {background-image: url(../images/COP/main/ico_80_log2_process_01.png);}
-ol.main_loan_info li.step_2   {background-image: url(../images/COP/main/ico_80_log2_process_02.png);}
-ol.main_loan_info li.step_3   {background-image: url(../images/COP/main/ico_80_log2_process_03.png);}
-ol.main_loan_info li.step_4   {background-image: url(../images/COP/main/ico_80_log2_process_04.png);}
-ol.main_loan_info li em   {color:#069B66; font-weight: 700;  }
-ol.main_loan_info li strong   {display:block; margin-top:10px; font-size:26px; padding:0 20px; }
-ol.main_loan_info li p   {margin-top:20px; }
-ol.main_loan_info li div.txt   {position:relative; margin-top:40px; padding-top:40px }
-ol.main_loan_info li div.txt::before   {content:""; position:absolute; left:50%; top:0; width:180px; border-top:1px solid #ddd; transform: translateX(-50%);}
-ol.main_loan_info li span   {display:inline-block; white-space: nowrap;}
-ol.main_loan_info li .main_btn   {padding-bottom:60px; }
-ol.main_loan_btn  {display:flex; gap:20px; }
-ol.main_loan_btn li   {width:335px; }
-ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
+ul.main_loan_info      {display:flex; gap:20px;   }
+ul.main_loan_info li   {position:relative; width:100%; padding:40px 330px 40px 60px; font-size:20px; text-align: left; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 16px; background: #fff;  }
+ul.main_loan_info li::before  {content:""; position:absolute; top:50%; right:60px; width:125px; height:125px; border-radius:50%; transform: translateY(-50%); background: url(../images/COP/main/ico_80_log2_process_01.png) no-repeat 50% 50% #FAFAFA;    }
+ul.main_loan_info li.step_1::before   {background-image: url(../images/COP/main/ico_80_log2_process_01.png);}
+ul.main_loan_info li.step_2::before   {background-image: url(../images/COP/main/ico_80_log2_process_02.png);}
+ul.main_loan_info li.step_3::before   {background-image: url(../images/COP/main/ico_80_log2_process_03.png);}
+ul.main_loan_info li.step_4::before   {background-image: url(../images/COP/main/ico_80_log2_process_04.png);}
+ul.main_loan_info li em   {color:#069B66; font-weight: 700;  }
+ul.main_loan_info li strong   {display:block; margin-top:0px; font-size:20px; padding:0 0; }
+ul.main_loan_info li strong em {color:#069B66; }
+ul.main_loan_info li p   {margin-top:8px; font-size: 16px; }
+ul.main_loan_info li div.txt   {position:relative; margin-top:20px; padding-top:20px; font-size: 14px; border-top:1px solid #ddd; }
+/* ul.main_loan_info li div.txt::before   {content:""; position:absolute; left:50%; top:0; width:180px;  transform: translateX(-50%);} */
+ul.main_loan_info li span   {display:inline-block; white-space: nowrap;}
+ul.main_loan_info li .main_btn   {padding-bottom:0px; text-align: left; padding-top:20px; }
+ul.main_loan_btn  {display:flex; gap:20px; }
+ul.main_loan_btn li   {width:335px; }
+ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
  
 
 
@@ -230,7 +232,7 @@ ol.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 /* 서비스 - 대출절차 */
 .serviceInfo_visual         { width:1415px; height:356px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
-.serviceInfo_visual.login   { width:1400px; height:442px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
+.serviceInfo_visual.login   { width:1400px; height:322px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
 .serviceInfo_visual.loan   { width:1400px; height:440px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
 /* .serviceInfo_txt            { padding:60px 0 0;} */
 .serviceInfo_txt dl         { position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
