@@ -694,7 +694,7 @@ $.fn.calcTextareaHeight = function(e) {
     if (_this.val().length > 0) {
       let scrollHeight = _this.prop('scrollHeight');
       // console.log('scrollHeight',scrollHeight)
-      _this.css("height",64 +  scrollHeight+"px");
+      _this.css("height",50 +  scrollHeight+"px");
     } 
    
   });

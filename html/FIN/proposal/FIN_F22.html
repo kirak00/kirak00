@@ -58,7 +58,7 @@
             <table>
               <caption>제안서 기본 정보 입력</caption>
               <colgroup>
-                <col width="260px">
+                <col width="240px">
                 <col width="auto">
               </colgroup>
               <tbody>
@@ -267,8 +267,9 @@
                           <div class="formRow">
                             <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel" checked><label for="selectLabel1">변동</label></span>
                             <span class="radio radioBtn"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
+                            <p class="notiTxt">대출 기간과 기준금리물 기간이 일치할 경우 고정으로 선택해 주세요.</p>
                           </div>
-                          <p class="notiTxt">대출 기간과 기준금리물 기간이 일치할 경우 고정으로 선택해 주세요.</p>
+                          
                           <div class="formRow wid470" role="group" aria-labelledby="inpLabel6">
                             <select class="wid220" title="기준금리 선택">
                               <option value="">기준금리</option>
@@ -280,7 +281,9 @@
                             <span class="unit">%</span>
                           </div>
                           <div class="formRow wid470">
-                            <input class="input" type="text" name="" id="accLabel1" placeholder="" value="당일 기준 합산 금리 4.00%" readonly>
+                            <div class="readonlyForm">
+                              당일 기준 합산 금리 <strong>4.00%</strong>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -374,7 +377,7 @@
                       <tbody>
                         <tr>
                           <th scope="row">
-                            <label class="label" for="notiLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기<br/>및 방법</label>
+                            <label class="label" for="notiLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기 및 방법</label>
                           </th> 
                           <td><textarea class="textarea autoHeight" id="notiLabel1">1개월 후 후취</textarea></td>
                         </tr>
