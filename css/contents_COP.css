@@ -77,12 +77,10 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 /* 법인회원정보 */
 .bizMemberInfo .formListTable { position: relative}
 .bizMemberInfo .formListTable tr th ~ th { padding-left: 40px;}
-.bizMemberInfo .formListTable ~ .formListTable { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
+.bizMemberInfo .formListTable ~ .formListTable { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
 .bizMemberInfo .formListTable td { vertical-align: top;}
 .bizMemberInfo .formListTable .checkbox label { font-weight: 700;}
-.bizMemberInfo .addBtnSet { position: absolute; top: 15px; right: 0; column-gap: 10px;}
-.bizMemberInfo .addBtnSet .btnMinus,
-.bizMemberInfo .addBtnSet .btnPlus { width: 50px; height: 50px;}
+.bizMemberInfo .addBtnSet { position: absolute; top: 15px; right: 0;  }
 .bizMemberInfo .formListTable ~ .formListTable .addBtnSet { top: 40px;}
 
 /* 락 */

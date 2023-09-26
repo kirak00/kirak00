@@ -327,15 +327,15 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
 
 /* 지점선택 팝업 */
-.office_select        {text-align: center; padding:40px 0 0; border-top:1px solid #ddd; margin-top:40px; }
+.office_select        {text-align: center; padding:20px 0 0; border-top:1px solid #ddd; margin-top:20px; }
 .office_select span        {color:#069B66; display:block; }
-.office_select strong      {display:inline-block; padding:8px 10px 0; font-size:26px; color:#069B66; font-weight: 700;  box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ;       }
-.office_select p        {margin-top:40px; padding:40px 0 ; border-top:1px solid #ddd; }
+.office_select strong      {display:inline-block; padding:8px 10px 0; font-size:20px; color:#069B66; font-weight: 700;  box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ;       }
+.office_select p        {margin-top:20px; padding:20px 0 ; border-top:1px solid #ddd; }
 
-.change_office_form     {margin-top:40px; }
+.change_office_form     {margin-top:20px; }
 
 /* 엑셀 업로드 */
-.uploadResult         {border:1px solid #069B66; padding:40px; border-radius:16px; margin-top:40px;  }
+.uploadResult         {border:1px solid #069B66; padding:20px; border-radius:16px; margin-top:20px;  }
 .uploadResult .resutlBox         {margin-bottom:20px; }
 .uploadResult .resutlBox strong  {font-size: 26px; vertical-align: 0; }
 .uploadResult .resutlBox em {font-size:20px; margin-left:20px;  }
