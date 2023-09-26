@@ -389,6 +389,8 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .ico_delete { color: #555;}
 .ico_delete::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_trash_g.png) no-repeat center / 24px 24px; }
 
+/* .ico_drag { color: #555;} */
+.icoDrag::before{ content:""; display:inline-block; width:32px; height:40px; background: url('../images/common/ico_drag.png')  no-repeat center / 32px 40px; }
 
 /****************************
 **********  list  **********
@@ -404,6 +406,7 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 **********  form  **********
 *****************************/
 /* checkbox, radio */
+
 .radio + .formSet { margin-left: 30px;}
 .radio + .formSet.formVertical { margin-left: 0px; align-items:flex-start;}
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
@@ -414,7 +417,6 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 /* .radio.ht64 { height: 64px; line-height: 64px;} */
 /* checkbox */
-.checkboxGroup { display: flex; align-items: center; }
 .checkbox { display: inline-block; white-space: nowrap;}
 .checkbox + .checkbox { margin-left:26px; }
 .formGroup .checkbox { margin-left:0; padding-left:20px; }
@@ -1989,3 +1991,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .scrapTable .status { display: block; font-weight: 700; text-align: center;}
 .scrapTable .status.fail { color: #FE5050;}
 .scrapTable .status.nothing { color: #888;}
+
+
+.multipleRows tr > td {
+  border: none;
+  padding-left: 0px;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+.multipleRows tr:last-child > td {
+  border-bottom: 0;
+}
