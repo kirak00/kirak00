@@ -30,14 +30,18 @@
           <li><a href="#none"><strong>이벤트</strong></a></li>
       </ul>
     </section>
+     <!-- 디자인 수정 .tabLineWrap 추가 및 위치이동 -->
+     <div class="tabLineWrap">
+      <div class="inner">
+        <ul class="tabLine tabScript" role="tablist">
+          <li class="on"><button type="button" role="tab" aria-controls="tab-1" aria-selected="true">진행중인 이벤트</button></li>
+          <li><button type="button" role="tab" aria-controls="tab-2" aria-selected="false">종료된 이벤트</button></li> 
+          <li><button type="button" role="tab" aria-controls="tab-3" aria-selected="false">당첨자 발표</button></li>
+        </ul>
+      </div>
+    </div>
 
     <section class="">
-      
-      <ul class="tabLine tabScript" role="tablist">
-        <li class="on"><button type="button" role="tab" aria-controls="tab-1" aria-selected="true">진행중인 이벤트</button></li>
-        <li><button type="button" role="tab" aria-controls="tab-2" aria-selected="false">종료된 이벤트</button></li> 
-        <li><button type="button" role="tab" aria-controls="tab-3" aria-selected="false">당첨자 발표</button></li>
-      </ul>
       <div role="tabpanel" id="tab-1" tabindex="0">
         <ul class="evtThumList">
           <li class="">

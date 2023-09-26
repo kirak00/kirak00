@@ -63,7 +63,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .proposalManage .formFullTable tr th ~ th { padding-left: 76px;}
 
 /* faq */ 
-.faqPage .accordion { margin-top: 60px;}
+.faqPage .accordion { margin-top: 20px;}
 
 /* 일대일 문의 */
 .oneOnone .bbs_list td:nth-child(2) { text-align: left;}
@@ -223,15 +223,15 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .evtWinner      { margin:60px 0 0;  }
 
 .detailCont.evt     {}
-.detailCont.evt .evtImg     {}
+.detailCont.evt .evtImg:first-child     { margin-top: -20px;}
 .detailCont.evt .evtImg img { max-width:100%; }
-.detailCont.evt .evtTxt     { margin-top:40px; font-weight: 500; }
+.detailCont.evt .evtTxt     { margin-top:20px; font-weight: 500; }
 
 
 /* 서비스 - 대출절차 */
 .serviceInfo_visual         { width:1415px; height:356px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
 .serviceInfo_visual.login   { width:1400px; height:322px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
-.serviceInfo_visual.loan   { width:1400px; height:440px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
+.serviceInfo_visual.loan   { width:1400px; height:388px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
 /* .serviceInfo_txt            { padding:60px 0 0;} */
 .serviceInfo_txt dl         { position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
 .serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
