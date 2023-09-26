@@ -220,7 +220,7 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .main_dashboard ul li.chart_pie         {width:calc(25% - 15px); padding:30px; border:1px solid #ddd; border-radius:16px; }
 .main_dashboard ul li.chart_pie strong.tit      {display:block; padding:0; }
 .main_dashboard ul li.chart_pie div.pie      {width:160px; height:160px; margin:0 auto; }
-.main_dashboard ul li.chart_pie ul.legend      { background:#F6FBF7; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap;     }
+.main_dashboard ul li.chart_pie ul.legend      { background:#F6FBF7; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap; border-radius:8px;     }
 .main_dashboard ul li.chart_pie ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
 .main_dashboard ul li.chart_pie ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;  }
 
@@ -233,9 +233,9 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .barChart span em::before { content: ""; display:block; width:18px; height:18px; background:#5066B6; border-radius: 50%;; } 
 .barChart em.l         {position:absolute; left:0;  bottom:-20px; font-size: 14px; color:#555;  }
 .barChart em.r         {position:absolute; right:0; bottom:-20px; font-size: 14px; color:#555;  }
+ 
 
-
-
+fieldset + section   {margin-top:40px; }
 
 /* 
  대쉬보드 프린트 셋팅
