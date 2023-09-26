@@ -222,7 +222,7 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 .evtWinner      { margin:60px 0 0;  }
 
-.detailCont.evt     {}
+.detailCont.evt     { padding: 40px 60px;}
 .detailCont.evt .evtImg:first-child     { margin-top: -20px;}
 .detailCont.evt .evtImg img { max-width:100%; }
 .detailCont.evt .evtTxt     { margin-top:20px; font-weight: 500; }

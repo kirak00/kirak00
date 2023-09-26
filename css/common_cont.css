@@ -395,6 +395,9 @@ em.greenLine        {display:inline-block; height:30px; padding:0 16px; border-r
 
 .ico_edit { color: #555;}
 .ico_edit::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_edit.png) no-repeat center / 24px 24px; }
+
+.ico_detail { color: #555; font-weight: 700;}
+.ico_detail::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_18_blank_w.png) no-repeat center / 24px 24px; }
 .ico_delete { color: #555; font-weight: 700;}
 .ico_delete::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_trash_g.png) no-repeat center / 24px 24px; }
 
@@ -600,6 +603,7 @@ select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; a
 select { display: inline-block; vertical-align: middle; min-width:140px; flex-shrink: 0; height: 50px; padding: 0px 40px 0px 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; border: 1px solid #ddd; background-size: 24px; border-radius: 8px; color: #333; font-size: 16px; }
 select.selectSm { min-width: 206px;}
 select.wid100 { min-width: 100px;}
+select.wid200 { min-width: 200px;}
 select.wid220 { min-width: 220px;}
 select.wid180 { min-width: 180px;}
 select.wid240 { min-width: 240px;}
@@ -960,6 +964,7 @@ section   {margin:0 auto; max-width: 1400px;}
 **********  table  **********
 *****************************/
 .tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
+.tableFilterGroup.mt20 { margin-top: 20px;}
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 16px; color: #333; font-weight: 700;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
 .tableFilterGroup select { height: 40px; padding: 0 64px 0 16px }
@@ -983,6 +988,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
+.btnBox.btn_r      { text-align: right; }
 .table_bt .btn_r button,
 .table_bt .btn_r a { padding: 0 30px;}
 .table_bt .external-pager   {position:absolute; margin-top:0; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
@@ -1606,8 +1612,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
 .bbsDetailBox .titBox .date { margin-top: 8px; color: #555; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
-.bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px 60px;  border-top:0; border-radius:0 0 16px 16px;  }
+.bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px;  border-top:0; border-radius:0 0 16px 16px;  }
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
+.bbsDetailBox .titBox .btnSet { gap: 0;}
+.bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
+.bbsDetailBox .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
 
 .faqPage .bbsDetailBox .detailCont { padding: 80px 60px}
 
