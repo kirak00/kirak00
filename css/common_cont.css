@@ -1905,7 +1905,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .comment .textarea { margin-top: 20px;}
 .comment .label .date { margin-left:  20px; color: #888; font-weight: 400;}
 .comment .replies { margin-left: 60px;}
-.comment .reply .label::before ,
+.comment .reply .label::before,
 .comment .replies .label::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 .comment .reply.isHide { display: none;}
 
