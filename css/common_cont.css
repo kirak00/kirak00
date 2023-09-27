@@ -125,10 +125,11 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiTxt {  color: #4C9DA2; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
-.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 16px; margin-top: -2px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: text-top; flex-shrink: 0;}
+.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
 
-.notiTxt.blue { color: #069B66; font-weight: 700;}
+.notiTxt.blue { color: #069B66; font-weight: 700; }
 .notiTxt.blue::before { background-image: url('../images/common/ico_24_notice_primary.png') }
+.notiTxt.blue span { vertical-align: top;}
 
 .formRow + .notiTxt { margin-top :10px; }
 
