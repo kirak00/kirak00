@@ -32,12 +32,18 @@
     </section> 
  
     <section class="">
-      <fieldset class="tableFilterGroup">
-        <span class="count">총 <strong>20</strong>건</span>
-        <button type="button" class="btnSuccess">메시지 알림 설정</button>
+      <!-- 디자인 수정 .btnBox btn_r 추가 -->
+      <div class="btnBox btn_r"><button type="button" class="btnSuccess">메시지 알림 설정</button></div>
+      <fieldset class="tableFilterGroup mt20">
+        <span class="count">총 <strong>3</strong>건</span>
+        <div class="formRow" role="group">
+          <select title="정렬" class="wid200">
+            <option>정렬</option>
+            <option>옵션</option> 
+          </select>
+          <button type="button" class="btnDkGreen">적용</button>
+        </div>
       </fieldset>
-
-
       
       <div class="table_wrap messageList">
         <table class="bbs_list">
@@ -75,17 +81,6 @@
               <td>(주)길동건설</td>
               <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
             </tr>
-            <tr>
-              <td>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1" name="messageChk" title="메세지 선택" />
-                  <label for="chk_1"><span></span></label>
-                </span>
-              </td>
-              <td>2023-07-31  20:25</td>
-              <td>(주)길동건설</td>
-              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
-            </tr>
             <tr class="">
               <td>
                 <span class="checkbox">
@@ -97,7 +92,7 @@
               <td>(주)길동건설</td>
               <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
             </tr>
-            <tr class="read">
+            <tr>
               <td>
                 <span class="checkbox">
                   <input type="checkbox" id="chk_3" name="messageChk" title="메세지 선택" />
@@ -108,13 +103,26 @@
               <td>(주)길동건설</td>
               <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
             </tr>
+            <tr class="read">
+              <td>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_4" name="messageChk" title="메세지 선택" />
+                  <label for="chk_4"><span></span></label>
+                </span>
+              </td>
+              <td>2023-07-31  20:25</td>
+              <td>(주)길동건설</td>
+              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
+            </tr>
           </tbody>
         </table>
       </div>
       
+      <!-- 디자인 수정 -->
       <div class="table_bt mt20">
         <div class="btn_l">
-          <button type="button" class="btnWhite">읽음처리</button>
+          <button type="button" class="btnGray">삭제</button>
+          <!-- <button type="button" class="btnWhite">읽음처리</button> -->
         </div>
         <div class="external-pager jsgrid-pager-container">
           <div class="jsgrid-pager">
@@ -126,9 +134,9 @@
             <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;&gt;</a></span> 
           </div>
         </div>
-        <div class="btn_r">
+        <!-- <div class="btn_r">
           <button type="button" class="btnGray">삭제</button>
-        </div>
+        </div> -->
       </div>
       
 
