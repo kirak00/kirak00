@@ -49,82 +49,24 @@
       </fieldset>
       
       <section class="">
-        <h4 class="titH4 hasLine">추가 서류 제출하기</h4>
+       <!-- 디자인 수정 추가 -->
+       <h4 class="titH4 hasLine">금융기관 요청 서류<span class="desc">금융기관에서 요청한 서류에요</span></h4>
         <div class="formList">
-          <label class="label" for="inputLabelFile">추가 서류 제출</label>
-          <div class="formRow fullType">
-            <input type="text" id="inputLabelFile" class="input" placeholder="파일을 첨부해 주세요." title="선택된 파일">
-            <button type="button" class="btnWhite">파일 첨부</button>
+          <label class="label" for="inputLabelFile">서류 제출</label>
+          <div class="formRow filebox">
+            <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
+            <label for="exFilename" class="btnWhite">파일 첨부</label>
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
             <button type="button" class="btnSuccess">제출하기</button>
           </div>
         </div>
-        <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>0</strong>건</span>
-          <div class="formRow" role="group">
-            <select title="보기 유형 선택">
-              <option>제출 완료일 최신순</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
-          </div>
-        </fieldset>
-        <div class="jsGridWrap">
-          <div id="jsGrid" class="bbs" caption="추가서류 제출 목록"></div>
-          <div id="externalPager" class="external-pager"></div>
-          <script>
-            
-  /* jsgrid sample */
-  $(function() {
-  
-  var clients = [
-    // { "Name1": "사업자등록증",
-    //   "Name2": "2023-08-10", 
-    //   "Name3": "<span class='textBold'>제출 완료</span>",
-    // },
-    // { "Name1": "사업자등록증",
-    //   "Name2": "2023-08-10", 
-    //   "Name3": "<span class='textBold'>제출 완료</span>",
-    // },
-    // { "Name1": "사업자등록증",
-    //   "Name2": "2023-08-10", 
-    //   "Name3": "<span class='textBold'>제출 완료</span>",
-    // },
-  ];
-  
-  
-  $("#jsGrid").jsGrid({
-    data: clients,
-    noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>제출한 추가 제출 서류가 없어요</p></div>",
-    
-    fields: [
-      { name: "Name1",  type: "text", title : "신청 유형", width: "auto"},
-      { name: "Name2", type: "text", title : "신청일", width: 220 },
-      { name: "Name3", type: "text", title : "진행 여부", width: 220 },
-    ],
-        
-    pagerContainer: "#externalPager",
-    
-    });
-  
-  });
-  
-
-          </script>
-        </div>
-      </section>
-      
-      <section class="sectionBlock80">
-        <h4 class="titH4 hasLine">금융기관 요청 서류</h4>
-        <fieldset class="tableFilterGroup">
+         <!-- 디자인 수정 mt40 추가 -->
+        <fieldset class="tableFilterGroup mt40">
           <span class="count">총 <strong>10</strong>건</span>
           <div class="formRow" role="group">
-            <select title="보기 유형 선택">
-              <option>요청일 최신순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기 유형 선택">
-              <option>제출 완료일 최신순</option>
-              <option>본부2</option>
+            <select title="정렬" class="wid200">
+              <option>정렬</option>
+              <option>옵션</option> 
             </select>
             <button type="button" class="btnDkGreen">적용</button>
           </div>
@@ -142,13 +84,13 @@
     //   "Name2": "종합소득세", 
     //   "Name3": "2023-07-11", 
     //   "Name4": "2023-07-11", 
-    //   "Name5": "<span class='textBold'>제출 완료</span>", 
+    //   "Name5": "<button type='button' class='ico_down'>다운로드</button>", 
     // },
     // { "Name1": "롯데캐피탈",
     //   "Name2": "종합소득세", 
     //   "Name3": "2023-07-11", 
     //   "Name4": "2023-07-11", 
-    //   "Name5": "<span class='textBold'>제출 완료</span>", 
+    //   "Name5": "<span class='textBold'>미제출</span>", 
     // },
     // { "Name1": "롯데캐피탈",
     //   "Name2": "종합소득세", 
@@ -218,7 +160,7 @@
     noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>금융회사 추가 서류 요청이 없습니다.</p></div>",
     
     fields: [
-      { name: "Name1",  type: "text", title : "금융회사명", width: 220 },
+      { name: "Name1",  type: "text", title : "금융기관명", width: 220},
       { name: "Name2", type: "text", title : "필요 서류 안내", width: "auto" },
       { name: "Name3", type: "text", title : "요청일", width: 220 },
       { name: "Name4", type: "text", title : "제출 완료일", width: 220 },
@@ -226,7 +168,7 @@
     ],
         
     pagerContainer: "#externalPager2",
-
+    
     });
   
   });
@@ -235,6 +177,75 @@
         </div>
       </section>
 
+      <!-- 디자인 수정 sectionBlock40 추가 -->
+      <section class="sectionBlock40">
+        <!-- 디자인 수정 추가 -->
+        <h4 class="titH4 hasLine">추가 제출 서류<span class="desc">금융기관에서 추가로 제출 할 서류가 있으시면 제출 해주세요</span></h4>
+        <div class="formList">
+          <label class="label" for="inputLabelFile">서류 제출</label>
+          <div class="formRow filebox">
+            <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
+            <label for="exFilename" class="btnWhite">파일 첨부</label>
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            <button type="button" class="btnSuccess">제출하기</button>
+          </div>
+        </div>
+        <!-- 디자인 수정 .mt40 추가 -->
+        <fieldset class="tableFilterGroup mt40">
+          <span class="count">총 <strong>0</strong>건</span>
+          <div class="formRow" role="group">
+            <select title="정렬" class="wid200">
+              <option>정렬</option>
+              <option>옵션</option> 
+            </select>
+            <button type="button" class="btnDkGreen">적용</button>
+          </div>
+        </fieldset>
+        <div class="jsGridWrap">
+          <div id="jsGrid" class="bbs" caption="추가서류 제출 목록"></div>
+          <div id="externalPager" class="external-pager"></div>
+          <script>
+            
+  /* jsgrid sample */
+  $(function() {
+  
+  var clients = [
+    // { "Name1": "사업자등록증",
+    //   "Name2": "2023-08-10", 
+    //   "Name3": "<span class='textBold'>제출 완료</span>",
+    // },
+    // { "Name1": "사업자등록증",
+    //   "Name2": "2023-08-10", 
+    //   "Name3": "<span class='textBold'>제출 완료</span>",
+    // },
+    // { "Name1": "사업자등록증",
+    //   "Name2": "2023-08-10", 
+    //   "Name3": "<span class='textBold'>제출 완료</span>",
+    // },
+  ];
+  
+  
+  $("#jsGrid").jsGrid({
+    data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoFile'></i><p class='txt'>제출한 추가 제출 서류가 없어요</p></div>",
+    
+    fields: [
+      { name: "Name1",  type: "text", title : "추가 서류명", width: "auto"},
+      { name: "Name2", type: "text", title : "제출일", width: 220 },
+      { name: "Name3", type: "text", title : "서류 제출 여부", width: 220 },
+    ],
+        
+    pagerContainer: "#externalPager",
+    
+    });
+  
+  });
+  
+
+          </script>
+        </div>
+      </section>
+    
     </section>
 
 

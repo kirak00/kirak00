@@ -54,6 +54,7 @@
 .titH41 { font-size:18px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
 .titH42 { font-size:18px; font-weight: 700; }
 .titH43 { font-size:18px; margin-top:10px; }
+.titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
 
 .pageTxt { display: flex; align-items: center; margin-bottom: 20px; font-weight: 700;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
@@ -65,9 +66,7 @@
 
 /* .titH5 + .formListTable { margin-top: 40px;} */
 .tableTit { font-size: 34px; font-size: 700; }
-
-.tableTit { font-size: 34px; font-size: 700; }
-.titH3.hasLine ,
+.titH3.hasLine,
 .titH4.hasLine { display: flex; align-items: center; border-bottom: 1px solid #ddd; }
 .titH3.hasLine {min-height: 60px; margin-bottom: 30px; }
 .titH4.hasLine {min-height: 56px; margin-bottom: 40px; }
@@ -123,12 +122,12 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt { display: flex; color: #4C9DA2; align-items: center;}
+.notiTxt {  color: #4C9DA2; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
-.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 16px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: text-top; flex-shrink: 0;}
+.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 16px; margin-top: -2px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: text-top; flex-shrink: 0;}
 
-.notiTxt.blue { color: #069B66}
+.notiTxt.blue { color: #069B66; font-weight: 700;}
 .notiTxt.blue::before { background-image: url('../images/common/ico_24_notice_primary.png') }
 
 .formRow + .notiTxt { margin-top :10px; }
@@ -139,14 +138,16 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .tableNoti::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px;  vertical-align: text-top;}
 
 .notiBox { padding: 24px 30px; background: #F6FBF7; border-radius: 16px; color: #333; }
-.notiBox .titH4.hasLine
+.notiBox.lineType { background: #fff; text-align: center; border: 1px solid #ddd; }
+.notiBox.lineType .notiTxt { justify-content: center;}
+.notiBox .titH4.hasLine,
 .notiBox.grayType { background: #F4F4F4;}
 .notiBox .notiTxt { color: #333;}
-.notiBox .notiTxt::before { margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / 24px 24px;}
+.notiBox .notiTxt::before { width: 20px; height: 20px; margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / contain;}
 .notiBox ~ .viewLineTable { margin-top: 20px; }
 
 
-.resultCont + .guideBox { margin-top: 80px; }
+.resultCont + .guideBox { max-width: 920px; margin: 40px auto 0; padding: 40px 30px;}
 
 .guideBox { margin-top: 20px; padding: 24px 30px; background: #F6FBF7; color: #555; border-radius: 16px; line-height: 1.5;}
 .guideBox.point { color: #069B66; }
@@ -511,6 +512,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formVertical .label ~ .label { margin-top: 10px;}
 .formVertical .label + .formRow,
 .formVertical .formRow + .formRow { margin-top: -10px;}
+.formVertical .formRow { width: 100%;}
+
 .formRow ~ .formRow { margin-top: 10px;}
 .formRow.mt10 { margin-top: 10px; }
 .formRow.mt15 { margin-top: 15px; }
@@ -597,7 +600,7 @@ input[type=text].innerTxt_1.wid114 {width:114px; }
 /* file */
 .fileForm {display: flex; padding-top:40px ; gap:8px;  }
 .fileForm label {font-weight: 700; line-height: 64px; padding-right:12px; }
-.txt_fileForm {margin-left: 80px; margin-top:10px; color: #555; }
+.txt_fileForm { margin-top:10px; color: #555; }
 
 /* */
 .btnTypeRadio   {}
@@ -756,7 +759,8 @@ select.wid430 { min-width: 430px;}
 
 .formList { display: flex; align-items: center; margin: 40px 0 20px; }
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
-.formList .btnSuccess { padding: 0 32px;}
+.formList .btnSuccess.px32 { padding: 0 32px;}
+.formList .formRow { width: 100%;}
  
 /****************************
 **********  accordion  **********
@@ -1813,15 +1817,16 @@ ul.youtubeList li .titBox p   {margin-top:8px; }
 /****************************
 **********  파일첨부  **********
 *****************************/
-.filebox .label { width: 72px; font-weight: 700;}
+.layerCont .filebox .label { width: 72px; font-weight: 700;}
 .filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
 .filebox .input { flex: 1; }
 .filebox .input:disabled { color: #333; background-color: #fff;}
-
+.layerCont .filebox .btnWhite, 
+.layerCont .filebox .btnSuccess { width: 116px; padding: 0;} 
 
 
 .resultCont { padding-top: 54px; text-align: center;}
-.resultCont .desc { padding: 40px 0; font-size: 30px;}
+.resultCont .desc { padding: 40px 0; font-size: 18px;}
 
 
 
