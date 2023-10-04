@@ -115,12 +115,12 @@ ol.main_step_guide li.step_3::before      { background-image:url(../images/FIN/i
 ol.main_step_guide li.step_4::before      { background-image:url(../images/FIN/ico_80_main_04.png)}
 ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/ico_80_main_05.png)}
  
-.main_strength      {margin-top:80px;}
+.main_strength      {margin-top:60px;}
 .main_strength .titBox      { text-align: center;}
 .main_strength .titBox h3   { font-size:24px; font-weight: 700;}
 .main_strength .titBox p    { margin-top:16px; }
-.main_strength ul.info      { margin-top:30px; display:flex; justify-content: space-between; }
-.main_strength ul.info li   { width:440px; height:315px; background:#F8F8F8; border-radius:16px; text-align: center; }
+.main_strength ul.info      { margin-top:30px; display:flex; gap:20px; justify-content: space-between; }
+.main_strength ul.info li   { width:100%; height:315px; background:#F8F8F8; border-radius:16px; text-align: center; }
 .main_strength ul.info li strong    { display:block; font-size:18px; font-weight: 700; }
 .main_strength ul.info li p         { color:#555; margin-top:16px; }
 .main_strength ul.info li::before   { content:"icon"; display:block; height:200px; background:url(../images/FIN/main_strength_1.png) no-repeat 50% 38px / 129px; overflow: hidden; text-indent: -1000px;; }
@@ -132,7 +132,7 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 
 
 .main_list_status       { display:flex; justify-content: space-between; gap:20px;  }
-.main_list_status a       { width:100%; height:220px; padding:30px 0 0; border:3px solid #fff; color:#069B66; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 15px; background:#fff; text-align: center;  }
+.main_list_status a       { width:100%; height:215px; padding:30px 0 0; border:3px solid #fff; color:#069B66; box-shadow: 0px 3px 8px 0px #ECF0F4; border-radius: 15px; background:#fff; text-align: center;  }
 .main_list_status a.on    { box-shadow: none; border:3px solid #069B66;  }
 .main_list_status a span.icon     { display:block; margin:0 auto; width:56px; height:56px; border-radius: 50%; background:url(../images/FIN/main_status_1.png) no-repeat 50% 50% #069B66 ; background-size:30px auto }
 .main_list_status a em.tit        { display:block; margin:16px 0 0; font-size:16px; font-weight: 700; color:#069B66; }
