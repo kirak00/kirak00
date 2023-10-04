@@ -48,13 +48,16 @@
           <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">재무자료 수집</button></li>
           <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">재무상태표</button></li>
           <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li>
-          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">매출처별 / 매입처별</button></li> 
+          <!-- 디자인 수정 : 세금계산서 합산표 -->
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">세금계산서 합산표</button></li> 
         </ul>  
-        <section class="sectionBlock40">
+        <!-- 디자인 수정 : sectionBlock40 -> sectionBlock20 -->
+        <section class="sectionBlock20">
           <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p>
-          <h3 class="titH3 hasLine">재무상태표</h3>
-          <!-- 디자인 수정 .sectionBlock40 삭제 -->
-          <div class="guideBox">
+          <!-- 디자인 수정 : hasLine 삭제, titH3 -> titH5 -->
+          <h3 class="titH5">재무상태표</h3>
+          <!-- 디자인 수정 .sectionBlock40 삭제, type2 추가 -->
+          <div class="guideBox type2">
             <ul class="guideList dot">
               <li class="list blue">제4(당)기 2022년 1월 1일 부터 2022년 12월 31까지</li>
               <li class="list blue">제3(전)기 2021년 1월 1일 부터 2021년 12월 31까지</li>
@@ -70,7 +73,8 @@
                 <col width="380px" />
                 <col width="380px" />
               </colgroup>
-              <thead class="double2 wideType">
+              <!-- 디자인 수정 .wideType 삭제 -->
+              <thead class="double2">
                 <tr>
                   <th scope="col" rowspan="2">계정과목</th>
                   <th scope="col">제4(당)기</th>
@@ -117,10 +121,12 @@
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-        
+        <!-- 디자인 수정 : 추가 -->
+        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
       <div class="btn_c">
-        <button type="button" class="btnGray">대출 비교 신청 취소</button>
+        <!-- 디자인 수정 -->
+        <button type="button" class="btnWhite">목록</button>
       </div>
       <div class="btn_r">
         <a href="#" class="btnWhite ico_next">다음</a>

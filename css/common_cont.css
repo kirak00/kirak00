@@ -240,13 +240,13 @@ table .btnDkGreen,
 table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
 table button.full { width: 100%;}
 
-table a.btnSuccess        { line-height: 50px;}
-table a.btnSky         { line-height: 50px;}
-table a.btnWhite       { line-height: 50px;}
-table a.btnGray       { line-height: 50px;}
-table a.btnWhiteLine       { line-height: 50px;}
-table a.btnDkGreen       { line-height: 50px;}
-table a.btnLine       { line-height: 50px;}
+table a.btnSuccess        { line-height: 36px;}
+table a.btnSky         { line-height: 36px;}
+table a.btnWhite       { line-height: 36px;}
+table a.btnGray       { line-height: 36px;}
+table a.btnWhiteLine       { line-height: 36px;}
+table a.btnDkGreen       { line-height: 36px;}
+table a.btnLine       { line-height: 36px;}
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -274,6 +274,7 @@ table a.btnLine       { line-height: 50px;}
 .btnWhite:disabled,
 .btnBlack:disabled,
 .btnWhiteLine:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  }
+.btnBlack:disabled {border:1px solid #ddd;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
@@ -311,7 +312,7 @@ a.ico_down       {color:#069B66; }
 .btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50% / contain; }
 .btnWhite.ico_prev:focus::before ,
 .btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
-.btnWhite.ico_next         {padding:0 32px;}
+.btnWhite.ico_next         {padding:0 24px;}
 .btnWhite.ico_next::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_next.png) no-repeat 50% 50%; }
 .btnWhite.ico_next:focus::after ,
 .btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
@@ -415,7 +416,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 **********  list  **********
 *****************************/
 .priceList li { display: flex; align-items: center; }
-.priceList li + li { margin-top: 35px}
+.priceList li + li { margin-top: 20px}
 .priceList .badgeWhite { margin-right:8px;}
 
 
@@ -520,7 +521,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow.mt15 { margin-top: 15px; }
 .formRow.mt20 { margin-top: 20px; }
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
-.formRow .unit.mail { margin: 0 8px;}
+/* .formRow .unit.mail { margin: 0 8px;} */
 /* .formRow .input { width: 100%;} */
 .formRow .result { margin: 0 22px;}
 
@@ -633,7 +634,7 @@ select.wid430 { min-width: 430px;}
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
-.layerCont .formVertical { align-items: flex-start; width: 100%;}
+.layerCont .formVertical { align-items: flex-start; width: 100%; gap: 10px}
 .formVertical { display: flex; flex-direction: column; gap: 20px;}
 .formVertical.mt10 { margin-top: 10px;}
 .formVertical.mt20 { margin-top: 20px;}
@@ -1006,8 +1007,9 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
 .table_bt .btn_r      {float:right; }
-.table_bt .btn_r button,
-.table_bt .btn_r a { height:40px; padding: 0 30px;}
+.table_bt .btn_l * + * { margin-left: 7px;}
+/* .table_bt .btn_r button,
+.table_bt .btn_r a { height:40px; padding: 0 30px;} */
 .table_bt .external-pager   {position:absolute; margin-top:0; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
 .table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
 .table_bt .btn_c button,
@@ -1045,15 +1047,15 @@ table.bbs_list .tit [class^='badge'] { width: 95px; margin: 0 20px 0 40px; font-
 table.bbs_list td.num   {text-align: right; padding-right:30px;}
 table.bbs_list thead tr.top th { background: #EFF5EF;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
-table.bbs_list thead tr:last-child { border-bottom: 1px solid #ddd;}
+table.bbs_list thead tr { border: 1px solid #ddd;}
 table.bbs_list td .sub { color: #888;}
 table.bbs_list .widFix { display: inline-block; width: 1000px; text-align: left;} 
 table.bbs_list thead tr:only-child th:first-child,
 table.bbs_list td:first-child { padding-left: 30px;}
 table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 30px;}
-table.bbs_list tfoot td {background:#EAFAEB; font-weight: 700; }
-
+table.bbs_list tfoot tr {background:#fff; border: 1px solid #ddd; }
+table.bbs_list tfoot th { border: 1px solid #ddd; font-weight: 700;}
 
 
 .bbs_list .formRow { justify-content: center;}
@@ -1187,7 +1189,9 @@ table { width: 100%;}
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite,
-.formListTable .btnSuccess { height: 50px; padding: 0 50px; line-height: 50px;}
+.formListTable .btnSuccess { height: 50px; padding: 0 50px;}
+.formListTable a.btnWhite,
+.formListTable a.btnSuccess { line-height: 50px; }
 .formListTable .btnWhite.px32,
 .formListTable .btnSuccess.px32 { padding-left: 32px; padding-right: 32px;}
 .formListTable .table_bt { padding-top: 45px;}
@@ -1222,9 +1226,9 @@ table { width: 100%;}
 .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;}
 .textTable tr:first-child th, .textTable tr:first-child td { padding-top: 0px; }
 .textTable tr:last-child th, .textTable tr:last-child td { padding-bottom: 0px; }
-.textTable .sub { color: #888; font-size: 18px; font-weight: 400;}
+.textTable .sub { color: #888; font-size: 16px; font-weight: 400;}
 
-.textTable.boxType { padding: 30px 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+.textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 .textTable.boxType tr.tit { }
 .textTable.boxType tr.tit th,
 .textTable.boxType tr.tit td {border-bottom:1px solid #ddd;  }
@@ -1251,8 +1255,11 @@ table { width: 100%;}
 .formMdTable .formRow.fullType { width: 100%; max-width: 830px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
+.formMdTable .input.wid100 { width: 100px;}
+.formMdTable .input.wid180 { width: 180px;}
+.formMdTable .input.wid210 { width: 210px;}
 .formMdTable .input.wid240 { width: 240px;}
-.formMdTable .input.inputBoss { width: 400px; flex-shrink: 0;}
+.formMdTable .input.inputBoss { width: 418px; flex-shrink: 0;}
 .formMdTable .inputBizNumber .input { width: auto;}
 .formMdTable .formGrayBox .formRow { width: 100%;}
 
@@ -1416,7 +1423,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .alertWrap .alertBody .confirmCont    {padding-bottom:40px; padding-top:40px; text-align: center; font-size:16px; line-height:1.5;}
 .layerWrap.typeAlert .layerCont .tit,
 .alertWrap .alertBody .alertCont .tit,
-.alertWrap .alertBody .confirmCont .tit      {font-size:30px; font-weight: 700; padding-bottom:20px;  }
+.alertWrap .alertBody .confirmCont .tit      {font-size:20px; font-weight: 700; padding-bottom:16px;  }
+.layerWrap.typeAlert .layerCont .tit { margin-top: -16px; font-size: 24px;}
 .alertWrap .alertBody .alertCont strong,
 .alertWrap .alertBody .confirmCont strong    {font-weight: 700; vertical-align: top;}
 .alertWrap .alertBody .alertCont strong.red,
@@ -1479,8 +1487,10 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  font-size: 24px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
 .layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px;  text-align: center;}
-.layerWrap.typeAlert .layerBody .layerFoot { display: flex; gap: 16px; padding-left: 90px; padding-right: 90px; padding-top: 20px;}
-.layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding: 20px 40px 0;}
+.layerWrap.typeAlert .layerBody .layerFoot { display: flex; gap: 8px; padding-left: 90px; padding-right: 90px; padding-top: 20px;}
+.layerWrap.typeAlert .layerBody .layerFoot.pt32 { padding-top: 32px;}
+.layerWrap.typeAlert .layerBody .layerFoot.pt40 { padding-top: 40px;}
+.layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding-left: 40px; padding-right: 40px;}
 .layerWrap.typeAlert .layerBody .layerFoot button    {min-width:0; flex: 1 }
 
 

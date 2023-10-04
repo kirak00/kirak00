@@ -38,10 +38,19 @@
           <div class="searchControlGroup">
             <div class="searchControlItem">
               <div class="rangeControl">
-                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
                 <span class="uit">~</span>
-                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
               </div>              
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelOption1" class="label">신청 유형</label>
+              <div class="formRow">
+                <select id="selectLabelOption1">
+                  <option>선택해주세요</option>
+                  <option>선택해주세요</option>
+                </select>
+              </div>
             </div>
             <div class="searchBtns right">
               <button type="button" class="btnSuccess auto">조회</button>
@@ -49,25 +58,15 @@
           </div>
         </div>
       </fieldset>
-      <section class="">
+      <!-- 디자인 수정 : sectionBlock40 -->
+      <section class="sectionBlock40">
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
-            <select title="신청 유형 선택">
-              <option>신청 유형</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기방식 선택">
-              <option>최신순</option>
-              <option>본부2</option>
-            </select>
-            <select title="진행 여부 선택">
-              <option>진행 여부</option>
-              <option>본부2</option>
-            </select>
-            <select title="최소 금액 선택">
-              <option>최소 금액</option>
-              <option>본부2</option>
+            <!-- 디자인 수정 -->
+            <select title="정렬" class="wid200">
+              <option>정렬</option>
+              <option>옵션</option> 
             </select>
             <button type="button" class="btnDkGreen">적용</button>
           </div>
@@ -83,7 +82,6 @@
   var clients = [
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -92,7 +90,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -101,7 +98,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -110,7 +106,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -119,7 +114,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -128,7 +122,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -137,7 +130,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -146,7 +138,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -155,7 +146,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -164,7 +154,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -173,7 +162,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -182,7 +170,6 @@
     },
     { "Name1": "시설 자금",
       "Name2": "2023-08-10", 
-      "Name3": "진행중", 
       "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
       "Name5": "<a href='#'>3건</a>", 
       "Name6": "<a href='#'>2건</a>", 
@@ -195,14 +182,15 @@
   $("#jsGrid").jsGrid({
     data: clients,
     fields: [
+      //디자인 수정 : 워딩 수정
       { name: "Name1",  type: "button", title : "신청 유형", width: 120 },
       { name: "Name2", type: "text", title : "신청일", width: 160},
-      { name: "Name3", type: "text", title : "진행 여부", width: 120},
+      // { name: "Name3", type: "text", title : "진행 여부", width: 120},
       { name: "Name4", type: "text", title : "희망 신청 금액", width: 280},
-      { name: "Name5", type: "text", title : "대출 심사중", width: 140},
-      { name: "Name6", type: "text", title : "제안서 접수", width: 140},
-      { name: "Name7", type: "text", title : "선택한 제안서", width: 140},
-      { name: "Name8", type: "text", title : "상세보기", width: 200},
+      { name: "Name5", type: "text", title : "심사건", width: 140},
+      { name: "Name6", type: "text", title : "제안서 제출 건", width: 140},
+      { name: "Name7", type: "text", title : "제안서 채택 건", width: 140},
+      { name: "Name8", type: "text", title : "상세", width: 200},
     ],
         
     pagerContainer: "#externalPager",

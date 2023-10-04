@@ -39,7 +39,8 @@
           <li><button type="button" role="tab" aria-selected="false">희망 대출 정보</button></li>
           <li class="on"><button type="button" role="tab" aria-selected="true">재무 현황</button></li>
         </ul>
-        <p class="update">업데이트 &nbsp; 2023-08-10</p>
+        <!-- 디자인 수정 : 업데이트 삭제  -->
+        <!-- <p class="update">업데이트 &nbsp; 2023-08-10</p> -->
       </div> 
     </div>
     <div class="bgGray">
@@ -48,11 +49,14 @@
           <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true">재무자료 수집</button></li>
           <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">재무상태표</button></li>
           <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li>
-          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">매출처별 / 매입처별</button></li> 
+          <!-- 디자인 수정 : 세금계산서 합산표 -->
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">세금계산서 합산표</button></li> 
         </ul>  
-        <section class="sectionBlock40">
+        <!-- 디자인 수정 : sectionBlock40 -> sectionBlock20 -->
+        <section class="sectionBlock20">
           <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p>
-          <h3 class="titH3 hasLine">재무현황 자료 수집 정보</h3>
+          <!-- 디자인 수정 : hasLine 삭제, titH3 -> titH5 -->
+          <h3 class="titH5">재무현황 자료 수집 정보</h3>
           <div class="table_wrap">
             <table class="bbs_list">
               <caption>재무 현황 자료 수집 정보</caption>
@@ -64,7 +68,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">재무 자료명</th>
+                  <th scope="col">재무 자료 명</th>
                   <th scope="col">수집 기준 년도</th>
                   <th scope="col">수집상태</th>
                   <th scope="col">자료</th>
@@ -74,62 +78,72 @@
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>재무상태표표(최근 3년)</td>
                   <td>2021,2022,2023</td>
-                  <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <td><span class="textBold pntCol_1">미수집</span></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>손익계산서(최근 3년)</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>제조(공사) 원가명세서</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>이익잉여금처분계산서</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>현금흐름표</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>자본변동표</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>사업자등록증명원</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>국세청 납세증명서</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft"><span aria-hidden="true" class="required">*</span>지방세 납세증명원</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
                 <tr>
                   <td class="textLeft">부가가치세표준증명원(최근년도 또는 최근 분기)</td>
                   <td>2021,2022,2023</td>
                   <td><span class="textBold">수집 완료</span></td>
-                  <td><button type="button" class="btnWhite ico_down">다운로드</button></td>
+                  <!-- 디자인 수정 : btnWhite 삭제 -->
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                 </tr>
               </tbody>
             </table>
@@ -140,10 +154,12 @@
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-        
+        <!-- 디자인 수정 : 추가 -->
+        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
       <div class="btn_c">
-        <button type="button" class="btnGray">대출 비교 신청 취소</button>
+        <!-- 디자인 수정 -->
+        <button type="button" class="btnWhite">목록</button>
       </div>
       <div class="btn_r">
         <a href="#" class="btnWhite ico_next">다음</a>

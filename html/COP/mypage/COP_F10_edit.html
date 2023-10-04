@@ -25,20 +25,21 @@
     <section class="pageTop">
       <h2 class="pageTit">회원 정보</h2>
       <ul class="breadcrumb">
-        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-        <li><a href="#none"><span>마이페이지</span></a></li>
-        <li><a href="#none"><span>회원정보</span></a></li>
-        <li><a href="#none"><strong>법인 정보</strong></a></li>
-     </ul>
+         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+         <li><a href="#none"><span>마이페이지</span></a></li>
+         <li><a href="#none"><strong>회원정보</strong></a></li>
+      </ul>
     </section>
     <div class="tabLineWrap">
       <div class="inner">
         <ul class="tabLine tabScript" role="tablist">
           <li class="on"><button type="button" role="tab" aria-selected="true">법인</button></li>
-          <li><button type="button" role="tab" aria-selected="false">담당자</button></li>
-          <li><button type="button" role="tab" aria-selected="false">기업 정보</button></li>
+          <!-- 디자인 수정 : 탭 수정 -->
+          <li><button type="button" role="tab" aria-selected="false">비밀번호 변경</button></li>
+          <!-- <li><button type="button" role="tab" aria-selected="false">기업 정보</button></li> -->
         </ul>
-        <p class="update">업데이트 &nbsp; 2023-08-10</p>
+        <!-- 디자인 수정 : 삭제 -->
+        <!-- <p class="update">업데이트 &nbsp; 2023-08-10</p> -->
       </div>
     </div>
     <div class="bgGray">
@@ -57,11 +58,12 @@
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel1">
-                    <input class="input" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3" readonly> 
+                    <!-- 디자인 수정 : wid100 -->
+                    <input class="input wid100" type="text" title="사업자등록번호(1/3)" placeholder="000" value="" maxlength="3" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2" readonly>
+                    <input class="input wid100" type="text" title="사업자등록번호(2/3)" placeholder="00" value="" maxlength="2" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5" readonly>
+                    <input class="input wid100" type="text" title="사업자등록번호(3/3)" placeholder="00000" value="" maxlength="5" readonly>
                   </div>
                 </td>
               </tr>
@@ -81,64 +83,49 @@
                 </th>
                 <td>
                   <div class="formRow fullType">
-                    <input id="formLabel3" class="input" type="text" placeholder="" value="Lonbank" readonly>
+                    <input id="formLabel3" class="input" type="text" placeholder="" value="lonbank" readonly>
                   </div>
-                </td> 
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label for="formLabel4">현 비밀번호</label>
-                </th>
-                <td>
-                  <div class="formRow fullType hasError">
-                    <input id="formLabel4" class="input" type="password" placeholder="" value="00000">
-                  </div>
-                  <p class="errorTxt">영문, 숫자, 특수문자 포함 8자리 이상 입력해 주세요.</p>
                 </td>
               </tr>
-              <tr>
+              <!-- 디자인 수정 : 삭제 -->
+              <!-- <tr>
                 <th scope="row">
-                  <label for="formLabel4_1">새 비밀번호</label>
+                  <label for="formLabel4">비밀번호</label>
                 </th>
                 <td>
                   <div class="formRow fullType">
-                    <input id="formLabel4_1" class="input" type="text" placeholder="새로운 비밀번호를 입력해 주세요." value="">
+                    <input id="formLabel4" class="input" type="password" placeholder="" value="" readonly>
                   </div>
                 </td>
-              </tr>
+              </tr> -->
               <tr>
                 <th scope="row">
-                  <label for="formLabel4_2">새 비밀번호 확인</label>
-                </th>
-                <td>
-                  <div class="formRow fullType">
-                    <input id="formLabel4_2" class="input" type="text" placeholder="새로운 비밀번호를 확인해 주세요." value="">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <label id="formLabel5">회사 대표전화</label>
+                  <!-- 디자인 수정 : 워딩수정 -->
+                  <label id="formLabel5">회사대표 전화번호</label>
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel5">
-                    <input class="input" type="text" title="회사 대표전화(1/3)" placeholder="000" value="010">
+                    <!-- 디자인 수정 : wid100 -->
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="000" value="010">
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="회사 대표전화(2/3)" placeholder="00" value="1234">
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00" value="1234">
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="회사 대표전화(3/3)" placeholder="00000" value="5678">
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00000" value="5678">
                   </div>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  <label id="formLabel6">이메일</label>
+                  <!-- 디자인 수정 : 워딩수정 -->
+                  <label id="formLabel6">회사대표 이메일</label>
                 </th>
                 <td>
                   <div class="formRow" role="group" aria-labelledby="formLabel6">
-                    <input class="input" type="text" title="이메일 아이디" placeholder="" value="hong" maxlength="50">
+                    <!-- 디자인 수정 : wid180 -->
+                    <input class="input wid180" type="text" title="이메일 아이디" placeholder="hong" value="hong" maxlength="50">
                     <span class="unit mail">@</span>
-                    <input class="input" type="text" title="도메인주소" placeholder="" value="naver.com"> 
+                    <!-- 디자인 수정 : wid210 -->
+                    <input class="input wid210" title="도메인주소" type="text" placeholder="gmail.com" value="">
                   </div>
                 </td>
               </tr>
@@ -148,28 +135,35 @@
                 </th>
                 <td role="group" aria-labelledby="formLabel7">
                   <div class="formRow">
-                    <input class="input" type="text" title="주소" placeholder="" value="서울 중구 청계천로 54">
-                    <button type="button" class="btnWhite">주소검색</button>
+                    <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54">
+                    <button type="button" class="btnBlack">주소검색</button>
                   </div>
-                  <div class="formRow fullType">
-                    <input class="input" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="">
-                  </div>
-                </td>
-              <tr>
-                <th scope="row">
-                  <label for="formLabel8">대표자명</label>
-                </th>
-                <td>
-                  <div class="formRow fullType" role="group" aria-labelledby="formLabel8">
-                    <input id="formLabel8" class="input" type="text" placeholder="" value="홍길동">
+                  <!-- 디자인 수정 : fullType 삭제 -->
+                  <div class="formRow">
+                    <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="">
                   </div>
                 </td>
               </tr>
-              <tr>
+              <!-- 디자인 수정 : 삭제 -->
+              <!-- <tr>
                 <th scope="row">
-                  <label>대표자 유형</label>
+                  <label for="formLabel7_1">사업장(공장) 주소</label>
                 </th>
                 <td>
+                  <div class="formRow fullType">
+                    <input class="input" id="formLabel7_1" type="text" placeholder="" value="서울 중구 청계천로 88공장" readonly>
+                  </div>
+                </td>
+              </tr> -->
+              <tr>
+                <th scope="row">
+                  <label id="formLabel8">대표자명</label>
+                </th>
+                <!-- 디자인 수정 -->
+                <td role="group" aria-labelledby="formLabel8">
+                  <div class="formRow">
+                    <input id="formLabel8" class="input" type="text" placeholder="" value="홍길동">
+                  </div>
                   <!-- v1.3 수정 : .pt15 추가 -->
                   <div class="formRow pt15">
                     <span class="radio">
@@ -187,21 +181,35 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <!-- 디자인 수정 : 삭제 -->
+              <!-- <tr>
                 <th scope="row">
                   <label id="formLabel9">대표자 휴대전화</label>
                 </th>
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel9">
-                    <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="">
+                    <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="00" value="">
+                    <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="00" value="" readonly>
                     <span class="unit">-</span>
-                    <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="00000" value="">
-                    <button type="button" class="btnWhite">본인확인</button>
+                    <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="00000" value="" readonly>
                   </div>
                 </td>
-              </tr>
+              </tr> -->
+              <!-- <tr>
+                <th scope="row">
+                  <label id="formLabel9">대표자 휴대전화</label>
+                </th>
+                <td>
+                  <div class="formRow textCenter" role="group" aria-labelledby="formLabel9">
+                    <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="00" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="00000" value="" readonly>
+                  </div>
+                </td>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -209,7 +217,6 @@
       <div class="table_bt">
         <div class="btn_c">
           <button type="button" class="btnSuccess">저장</button>
-          <!-- 디자인 수정 .btnWhite -> .btn -->
           <button type="button" class="btnGray">취소</button>
         </div>
       </div>
