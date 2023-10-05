@@ -129,27 +129,62 @@
           <legend>게시물 검색</legend>
           <div class="searchControlBox">
             <div class="searchControlGroup">
-              <div class="searchControlItem expand">
-                <label for="selectLabelState" class="label">비교 신청 건</label>
+              <div class="searchControlItem">
+                <label for="label_tit_1" class="label">구분 </label>
                 <div class="formRow">
-                  <select id="selectLabelState">
-                    <option>S_230401_0001 시설 자금 대출</option>
-                    <option>S_230401_0001 시설 자금 대출</option>
+                  <select name="" id="">
+                    <option value="">법인회원</option>
                   </select>
                 </div>
               </div>
-
-              <div class="searchControlItem expand">
-                <label for="selectLabelState" class="label">제안서 마감일</label>
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label for="selectLabelOption3" class="label">상호명</label>
                 <div class="formRow">
-
-                  <div class="rangeControl">
-                    <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                    <span class="uit">~</span>
-                    <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-                  </div>
-                  <button type="button" class="btnSuccess">마감일 변경</button>
+                  <input type="text" class="input" placeholder="법인명을 입력해 주세요">
                 </div>
+              </div>
+              <div class="searchControlItem">
+                <label for="selectLabelOption3" class="label">대표자명</label>
+                <div class="formRow">
+                  <input type="text" class="input" placeholder="대표자명을 입력해 주세요">
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label for="selectLabelOption3" class="label">사업자등록번호</label>
+                <div class="formRow">
+                  <input type="text" class="input" placeholder="사업자등록번호를 입력해 주세요">
+                </div>
+              </div>
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem ">
+                <label id="selectLabelArea" class="label">대출 신청</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
+                  <select title="범위">
+                    <option>유</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem ">
+                <label id="selectLabelArea" class="label">대출 실행</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
+                  <select title="범위">
+                    <option>유</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem ">
+                <label id="selectLabelArea" class="label">회원 상태</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
+                  <select title="범위">
+                    <option>정상</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">검색</button>
               </div>
             </div>
           </div>
@@ -157,17 +192,9 @@
 
 
         <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
+          <span class="count"></span>
           <div class="formRow" role="group">
-                
-            <div class="bbsTip">
-              <p class="tipTxt">가려진 항목은 상세페이지에서 ‘심사하기’를 선택한 이후에 열람 가능합니다.</p>
-            </div>
 
-            <select title="정렬 선택 (신청일 최신순)">
-              <option>신청일 최신순</option>
-              <option>본부2</option>
-            </select>
             <select title="보기갯수 선택">
               <option>10개씩 보기</option>
               <option>본부2</option>
@@ -308,140 +335,6 @@
         
       </section>
 
-      <div class="bgWrap">
-        <section>
-          <div class="formListTable formMdTable">
-            <table>
-              <caption>회원가입정보 법인회사정보</caption>
-              <colgroup>
-                <col width="186px">
-                <col width="auto">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label class="label" id="inpBizNum">사업자등록번호</label>
-                  </th>
-                  <td>
-                    <div class="formRow hasError textCenter inputBizNumber" role="group" aria-labelledby="inpBizNum">
-                      <input class="input" type="text" title="사업자등록번호(1/3)" maxlength="3" size="3" placeholder="000" value="">
-                      <span class="unit">-</span>
-                      <input class="input" type="text" title="사업자등록번호(2/3)" maxlength="2" size="2" placeholder="00" value="">
-                      <span class="unit">-</span>
-                      <input class="input" type="text" title="사업자등록번호(3/3)" maxlength="5" size="5" placeholder="00000" value="">
-                      <button type="button" class="btnWhite">사업자등록번호 검증</button>
-                    </div>
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpBrdName">상호명</label>
-                  </th>
-                  <td>
-                    <div class="formRow hasError">
-                      <input id="inpBrdName" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
-                    </div>
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpBizTel">회사대표번호</label>
-                  </th>
-                  <td>
-                    <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
-                      <input class="input" type="text" title="회사대표번호(1/3)" placeholder="000" value="">
-                      <span class="unit">-</span>
-                      <input class="input" type="text" title="회사대표번호(2/3)" placeholder="0000" value="">
-                      <span class="unit">-</span>
-                      <input class="input" type="text" title="회사대표번호(3/3)" placeholder="0000" value="">
-                    </div>
-                    <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" id="inpBizAdd">본사 주소</label>
-                  </th>
-                  <td role="group" aria-labelledby="inpBizAdd">
-                    <div class="formRow">
-                      <input class="input " type="text" title="주소" placeholder="주소를 검색해 주세요." value="">
-                      <button type="button" class="btnBlack">주소검색</button>
-                    </div>
-                    <div class="formRow">
-                      <input class="input" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" id="inpEmail">대표자 이메일</label>
-                  </th>
-                  <td>
-                    <div class="formRow" role="group" aria-labelledby="inpEmail">
-                      <input class="input wid240" type="text" title="이메일 아이디" placeholder="hong" value="" maxlength="50">
-                      <span class="unit mail">@</span>
-                      <input class="input" title="도메인주소" type="text" placeholder="gmail.com" value="">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpCeo">대표자명</label>
-                  </th>
-                  <td>
-                    <div class="formRow">
-                      <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
-                      <button type="button" class="btnWhite">본인확인</button>
-                    </div>
-                    <div class="formRow mt20">
-                      <span class="radio">
-                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="">
-                        <label class="label" for="testRdoBoxA"><span></span>1인 대표</label>
-                      </span>
-                      <span class="radio">
-                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="">
-                        <label class="label" for="testRdoBoxB"><span></span>공동 대표</label>
-                      </span>
-                      <span class="radio"> 
-                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="">
-                        <label class="label" for="testRdoBoxC"><span></span>각자 대표</label>
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </section>
-      </div>
-      
-      
-      <section>
-        <div class="table_bt">
-          <div class="btn_c">
-            <button type="button" class="btnSuccess">등록</button>
-            <button type="button" class="btnGray">취소</button>
-          </div>
-        </div>
-      </section>
-      
-
-
-
-      <!-- 하단 풀 배너 : start -->
-      <section class="bnrInerCont">
-        
-      </section>
-      <!-- 하단 풀 배너 : end -->
-
-      <!-- 하단 풀 배너 : start -->
-      <div class="btFullBnr">
-        
-      </div>
-      <!-- 하단 풀 배너 : end -->
 
     </div>
     <!-- **************** -->

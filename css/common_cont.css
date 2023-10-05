@@ -1845,6 +1845,7 @@ ul.youtubeList li .titBox p   {margin-top:8px; }
 .messageList table tr.read td  { color: #888;}
 .messageList table tr td  { font-weight: 400;}
 .messageList table tr.checked td  { font-weight: 700;}
+table tr.checked td  { font-weight: 700;}
 
 /* 심사안내 */
 ol.auditInfo      {}

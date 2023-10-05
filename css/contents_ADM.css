@@ -62,9 +62,12 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .bgWrap       {padding:40px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#FAFAFA; }
 
 section       {max-width:1920px; padding:0 60px;  }
+.pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
-.pageTop h2      {padding-top:70px; padding-bottom:40px;   }
+.pageTop h2      {padding-top:70px;   }
 footer    {width:100%; }
+.table_bt   {max-width: 1920px;}
+.searchControlBox   {border:1px solid #ddd; background:#f4f4f4; }
 
 /* body  { background:rgba(244, 246, 248, 1)} */
 
