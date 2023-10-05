@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../css/contents_ADM.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <div class="skip_nav">
+    <a href="#skip_gnb">주메뉴 바로가기</a>
+    <a href="#skip_content">컨텐츠 바로가기</a>
+  </div>
+ 
+  <div class="wrap">
+    <!-- **************** -->
+    <!-- header : start -->
+    <!-- **************** -->
+    <header class="" >
+      <nav class="headerCont">
+        <h1 class="logo"><a href="#none">Loan&Biz</a></h1>
+        <h2 class="hide">메뉴 영역</h2>
+        <ul class="gnb" id="skip_gnb" aria-label="주메뉴" role="menu">
+          <li class="depth_1 " ><a href="#none"><span class="ico_gnb_acc">대시보드 </span></a> </li>
+          <li class="depth_1 on"><a href="#none"><span class="ico_gnb_info">회원 관리</span></a>
+            <ul>
+              <li class="depth_2 on"><a href="#none">법인 회원 관리</a></li>
+              <li class="depth_2"><a href="#none">금융 회원 관리</a></li>
+              <li class="depth_2"><a href="#none">정보 조회 이력 관리</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_cus">통계</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">법인 회원 통계</a></li>
+              <li class="depth_2"><a href="#none">금융 회원 통계</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">정산 현황</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">정산 현황</a></li>
+              <li class="depth_2"><a href="#none">이의 제기 관리</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">이용자 현황</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">법인 회원 방문 현황</a></li>
+              <li class="depth_2"><a href="#none">금융 회원 방문 현황</a></li>
+              <li class="depth_2"><a href="#none">사용 환경</a></li>
+              <li class="depth_2"><a href="#none">정산 현황</a></li>
+              <li class="depth_2"><a href="#none">오류 현황</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">이벤트 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">이벤트 관리</a></li>
+              <li class="depth_2"><a href="#none">당첨자 관리</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">정책 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">수수료 관리</a></li>
+              <li class="depth_2"><a href="#none">일정 관리</a></li>
+              <li class="depth_2"><a href="#none">금칙어 관리</a></li>
+              <li class="depth_2"><a href="#none">약관 관리</a></li>
+              <li class="depth_2"><a href="#none">상품 설명서 관리</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">게시판 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">1:1 게시판 관리</a></li>
+              <li class="depth_2"><a href="#none">F&Q 관리</a></li>
+              <li class="depth_2"><a href="#none">리뷰 관리</a></li>
+              <li class="depth_2"><a href="#none">정보 마당 관리</a></li>
+              <li class="depth_2"><a href="#none">배너 관리</a></li>
+            </ul>
+          </li>
+          <li class="depth_1" ><a href="#none"><span class="ico_gnb_my">운영자 관리</span></a>
+            <ul>
+              <li class="depth_2"><a href="#none">운영자 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="headerLogin">
+          <!-- <li><a href="#none" class="join">회원가입</a></li>
+          <li><a href="#none" class="login">로그인</a></li> -->
+          <li><a href="#none" class="logout">로그아웃</a></li>
+        </ul>
+      </nav>
+      <div class="bg"></div>
+      <div class="line"></div>
+    </header>
+    <!-- **************** -->
+    <!-- header : end -->
+    <!-- **************** -->
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">이벤트 등록</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none"><strong>대출 비교하기</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      <div class="bgWrap">
+        <section>
+          CONTENTS
+        </section>
+      </div>
+
+      <!-- 하단 풀 배너 : start -->
+      <section class="bnrInerCont">
+        
+      </section>
+      <!-- 하단 풀 배너 : end -->
+
+      <!-- 하단 풀 배너 : start -->
+      <div class="btFullBnr">
+        
+      </div>
+      <!-- 하단 풀 배너 : end -->
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- footer : start -->
+    <!-- **************** -->
+    <hr/>
+    <footer id="skip_footer"  aria-label="푸터">
+       <div class="footerWrap">
+        <ul class="footerLnk">
+          <li><a href="#none">약관동의</a></li>
+          <li><a href="#none">개인처리방침</a></li>
+          <li><a href="#none">대출서비스 안내</a></li>
+          <li><a href="#none">FAQ</a></li>
+          <li><a href="#none">고객센터</a></li>
+         </ul>
+         <div class="copy">
+          <p>
+            <span>대출 조회 시 귀사 신용등급 영향을 주지 않습니다. <br>
+              직접 대출 계약을 체결할 권한이 없으며, 본 플랫폼에서 직접 대출을 하지 않습니다.</span>
+            <span>
+              사업제휴 문의 :  고객문의:  서울 중구 청계천로 54 백년관 3층
+            </span>
+          </p>
+         </div>
+       </div>
+    </footer>
+    <!-- **************** -->
+    <!-- footer : end -->
+    <!-- **************** -->
+  </div>
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap">
+    <div class="layerHeader"></div>
+    <div class="layerContainer"></div>
+    <div class="layerFooter"></div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+</body>
+</html>

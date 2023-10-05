@@ -240,13 +240,13 @@ table .btnDkGreen,
 table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
 table button.full { width: 100%;}
 
-table a.btnSuccess        { line-height: 50px;}
-table a.btnSky         { line-height: 50px;}
-table a.btnWhite       { line-height: 50px;}
-table a.btnGray       { line-height: 50px;}
-table a.btnWhiteLine       { line-height: 50px;}
-table a.btnDkGreen       { line-height: 50px;}
-table a.btnLine       { line-height: 50px;}
+table a.btnSuccess        { line-height: 36px;}
+table a.btnSky         { line-height: 36px;}
+table a.btnWhite       { line-height: 36px;}
+table a.btnGray       { line-height: 36px;}
+table a.btnWhiteLine       { line-height: 36px;}
+table a.btnDkGreen       { line-height: 36px;}
+table a.btnLine       { line-height: 36px;}
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
