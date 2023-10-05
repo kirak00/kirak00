@@ -430,6 +430,27 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio + .formSet { margin-left: 30px;}
 .radio + .formSet.formVertical { margin-left: 0px; align-items:flex-start;}
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
+
+.jsGridWrap .checkbox input[type=checkbox] { position: absolute}
+.jsGridWrap input[type=checkbox] { position: relative;}
+.jsGridWrap input[type=checkbox]::after  {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/COP/checkbox_inactive.png") center center no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.jsGridWrap input[type=checkbox]:checked::after {
+  background: url("../images/COP/checkbox_active.png") center center no-repeat;
+}
+.jsGridWrap th input[type=checkbox]::after,
+.jsGridWrap th input[type=checkbox]:checked::after { background-color: #EFF5EF;}
+.jsGridWrap td input[type=checkbox]::after,
+.jsGridWrap td input[type=checkbox]:checked::after  { background-color: #fff;}
+
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 16px; font-weight: 400;} 
 .checkbox.checkAll { padding: 0 0 20px 0;}
@@ -512,8 +533,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* .formRow > div { display: flex; align-items: center; gap: 8px;} */
 .formVertical .formRow ~ .formRow { margin-top: 0;}
 .formVertical .label ~ .label { margin-top: 10px;}
-.formVertical .label + .formRow,
-.formVertical .formRow + .formRow { margin-top: -10px;}
+/* .formVertical .label + .formRow,
+.formVertical .formRow + .formRow { margin-top: -10px;} */
 .formVertical .formRow { width: 100%;}
 
 .formRow ~ .formRow { margin-top: 10px;}
@@ -1451,6 +1472,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .alertCont .status { font-size: 18px; font-weight: 700;}
 
 
+.layerWrap .layerBody.wid1100       {width:1100px;  }
 .layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody.wid800       {width:800px;  }
 .layerWrap .layerBody.wid720       {width:720px;  }
