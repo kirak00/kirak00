@@ -23,164 +23,148 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="콘텐츠">
 
-    <section class="pageTop">
-      <h2 class="pageTit">운영자 등록</h2>
-      <ul class="breadcrumb">
-        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-        <li><a href="#none"><span>운영자 관리</span></a></li>
-        <li><a href="#none"><strong>운영자 등록</strong></a></li>
-     </ul>
+    <section>
+     <!-- 
+      * 레이어 호출
+      class="open_layer"  // 팝업 호출
+      aria-controls="레이어 ID" // 접근성 팝업 알림용
+      -->
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">운영자 등록</button>
     </section>
-
-    <section class="sectionBlock80">
-      <!-- <div class="titH3 hasLine"><h3>법인 회사 정보 입력 <strong class="blue">(필수)</strong></h3></div>  -->
-      <div class="formListTable formMdTable">
-        <table>
-          <caption>운영자 등록 정보</caption>
-          <colgroup>
-            <col width="186px">
-            <col width="auto">
-          </colgroup>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <label class="label" id="inpBizNum">사업자등록번호</label>
-              </th>
-              <td>
-                <div class="formRow textCenter inputBizNumber" role="group" aria-labelledby="inpBizNum">
-                  <input class="input" type="text" title="사업자등록번호(1/3)" maxlength="3" size="3" placeholder="000" value="">
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="사업자등록번호(2/3)" maxlength="2" size="2" placeholder="00" value="">
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="사업자등록번호(3/3)" maxlength="5" size="5" placeholder="00000" value="">
-                  <button type="button" class="btnWhite">사업자등록번호 검증</button>
-                </div>
-                <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="inpBrdName">운영자명</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpBrdName" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
-                </div>
-                <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="inpId">아이디</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpId" class="input" type="text" placeholder="영문, 숫자포함 20자내, 비속어 금지" value="">
-                  <button type="button" class="btnWhite">중복 체크</button>
-                  <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="inpBizTel">대표자 휴대전화</label>
-              </th>
-              <td>
-                <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
-                  <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="">
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="0000" value="">
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="0000" value="">
-                </div>
-                <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="inpPw">비밀번호</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpPw" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="inpPwCheck">비밀번호 확인</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" for="labelMemo">운영자 메모</label>
-              </th>
-              <td>
-                <div class="formRow">
-                  <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <label class="label" id="labelRoute">운영자 메모</label>
-              </th>
-              <td>
-                <div class="formRow pt15 wid673" role="group" aria-labelledby="labelRoute">
-                  <span class="checkbox">
-                    <input type="checkbox" id="testRdoSns1" name="testRdoSns" value="" />
-                    <label for="testRdoSns1"><span></span>회원관리</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="testRdoSns2" name="testRdoSns" value="" />
-                    <label for="testRdoSns2"><span></span>통계</label>
-                  </span>
-                  <span class="checkbox"> 
-                    <input type="checkbox" id="testRdoSns3" name="testRdoSns" value="" />
-                    <label for="testRdoSns3"><span></span>정산 현황</label>
-                  </span>
-                  <span class="checkbox"> 
-                    <input type="checkbox" id="testRdoSns4" name="testRdoSns" value="" />
-                    <label for="testRdoSns4"><span></span>이용자 현황</label>
-                  </span>
-                  <span class="checkbox"> 
-                    <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                    <label for="testRdoSns5"><span></span>이벤트 관리</label>
-                  </span>
-                  <span class="checkbox"> 
-                    <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                    <label for="testRdoSns5"><span></span>정책관리</label>
-                  </span>
-                  <span class="checkbox"> 
-                    <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                    <label for="testRdoSns5"><span></span>게시판관리</label>
-                  </span>
-                  <!-- <input class="input" type="text" placeholder="Ex) 지인추천" value=""> -->
-                </div>
-              </td>
-            </tr>
-           
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <div class="table_bt">
-      <div class="btn_c">
-        <button type="button" class="btnSuccess">등록</button>
-        <button type="button" class="btnGray">취소</button>
-      </div>
-    </div>
-
-
 
   </div>
   <!-- **************** -->
   <!-- contents : end -->
+  <!-- **************** -->
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
+    <!-- 너비 800px 경우 .sizeM 추가 -->
+    <div class="layerBody wid1100">
+      <div class="layerHead">
+        <h3>운영자 등록</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="formListTable formMdTable">
+          <table>
+            <caption>운영자 등록 정보</caption>
+            <colgroup>
+              <col width="120px">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inpId">사번</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inpId" class="input" type="text" placeholder="" value="">
+                    <button type="button" class="btnSuccess">인증</button>
+                    <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inpBrdName">이름</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inpBrdName" class="input" type="text" placeholder="" value="">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inpBrdPart">부서명</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inpBrdPart" class="input" type="text" placeholder="" value="">
+                  </div>
+                </td>
+              </tr>
+             
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inpBizTel">직통전화</label>
+                </th>
+                <td>
+                  <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
+                    <input class="input wid70" type="text" title="직통전화(1/3)" placeholder="000" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input wid80" type="text" title="직통전화(2/3)" placeholder="0000" value="" readonly>
+                    <span class="unit">-</span>
+                    <input class="input wid80" type="text" title="직통전화(3/3)" placeholder="0000" value="" readonly>
+                  </div>
+                  <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="labelMemo">운영자 메모</label>
+                </th>
+                <td>
+                  <div class="formRow fullType">
+                    <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="pt15">
+                  <label class="label" id="labelRoute">관리 권한</label>
+                </th>
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="labelRoute">
+                    <span class="checkbox">
+                      <input type="checkbox" id="testRdoSns1" name="testRdoSns" value="" />
+                      <label for="testRdoSns1"><span></span>회원관리</label>
+                    </span>
+                    <span class="checkbox">
+                      <input type="checkbox" id="testRdoSns2" name="testRdoSns" value="" />
+                      <label for="testRdoSns2"><span></span>통계</label>
+                    </span>
+                    <span class="checkbox"> 
+                      <input type="checkbox" id="testRdoSns3" name="testRdoSns" value="" />
+                      <label for="testRdoSns3"><span></span>정산 현황</label>
+                    </span>
+                    <span class="checkbox"> 
+                      <input type="checkbox" id="testRdoSns4" name="testRdoSns" value="" />
+                      <label for="testRdoSns4"><span></span>이용자 현황</label>
+                    </span>
+                    <span class="checkbox"> 
+                      <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                      <label for="testRdoSns5"><span></span>이벤트 관리</label>
+                    </span>
+                    <span class="checkbox"> 
+                      <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                      <label for="testRdoSns5"><span></span>정책관리</label>
+                    </span>
+                    <span class="checkbox"> 
+                      <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                      <label for="testRdoSns5"><span></span>게시판관리</label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
+        <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
   <!-- **************** -->
 
 

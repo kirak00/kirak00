@@ -158,24 +158,68 @@
     data: clients,
     noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>금융 기관 마감 기한 연장 요청이 없어요.</p></div>",
     fields: [
-      { name: "Name1",  type: "checkbox", title : "<input type='checkbox'/>", width: 140, 
+      { name: "Name1",  type: "checkbox", width: 140, 
+        headerTemplate: function() {
+            return $("<input>").attr("type", "checkbox").attr("id", "selectAllCheckbox")
+        },
         itemTemplate: function(value, item) {
-          return $("<input>").attr("type", "checkbox")
-            .attr("checked", value || item.Checked)
-            .on("change", function() {
-              item.Checked = $(this).is(":checked");
-            });
-        } },
+          return $("<input>").attr("type", "checkbox").attr("class", "singleCheckbox")
+            .prop("checked", $.inArray(item.firstName, selectedItems) > -1)
+            .on("change", function () {
+              $(this).is(":checked");
+            }
+          );
+        } 
+      },
       { name: "Name2",  type: "text", title : "연장 요청 금융회사", width: 290 },
       { name: "Name3", type: "text", title : "요청사유", width: 470},
       { name: "Name4", type: "text", title : "연장 요청일", width: 120},
       { name: "Name5", type: "button", title : "승인", width: 360},
+      
     ],
         
     pagerContainer: "#externalPager",
   });
+
+  var selectedItems = [];
+  var selectItem = function(item) {
+    selectedItems.push(item);
+    if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+      $("#selectAllCheckbox").prop("checked", true);
+    } else {
+      $("#selectAllCheckbox").prop("checked", false);
+    }
+  }; 
+  var unselectItem = function(item) {
+    selectedItems = $.grep(selectedItems, function(i) {
+    return i !== item;
+    });
+    if(selectedItems.length == 0) {
+      $('#selectAllCheckbox').attr('checked', false);
+    }
+    if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+      $("#selectAllCheckbox").prop("checked", true);
+      } else {
+        $("#selectAllCheckbox").prop("checked", false);
+      }
+  };
+  $("#selectAllCheckbox").click(function(item) {
+    selectedItems = [];
+    if(this.checked) { // check select status
+      $('.singleCheckbox').each(function() { 
+        this.checked = true;      
+      });			         
+      }else {
+        $('.singleCheckbox').each(function() { 
+            this.checked = false;      
+            unselectItem(item);
+        });  
+        selectedItems = [];
+      }
+  });
   
   });
+  
   
           </script>
         </div>

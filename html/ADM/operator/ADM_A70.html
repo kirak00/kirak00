@@ -50,10 +50,11 @@
           var clients = [
             { 
               "Name1": "박신한",
-              "Name2": "sonhan01", 
-              "Name3": "2023-08-12", 
-              "Name4": "회원 관리 담당", 
-              "Name5": `
+              "Name2": "디지털전략부",
+              "Name3": "1234567", 
+              "Name4": "2023-08-12", 
+              "Name5": "회원 관리 담당", 
+              "Name6": `
               <div class="checkGroup">
                 <span class="checkbox">
                   <input type="checkbox" id="chk1_1" name="chk1" />
@@ -85,7 +86,11 @@
                 </span>
               </div>
               `, 
-              "Name6": "<buton type='button'>수정</button>", 
+              "Name7": `<div class="btnSet">
+                          <button type="button" class="ico_edit">수정</button>
+                          <button type="button" class="ico_delete">삭제</button>
+                        </div>
+                        `, 
             },
           ]; 
 
@@ -95,11 +100,12 @@
 
             fields: [
               { name: "Name1",  type: "text", title : "운영자명", width: 120},
-              { name: "Name2",  type: "text", title : "아이디", width: 140},
-              { name: "Name3", type: "text", title : "등록일", width: 120 },
-              { name: "Name4", type: "text", title : "메모", width: 140 },
-              { name: "Name5", type: "text", title : "관리 권한", width: 'auto' },
-              { name: "Name6", type: "text", title : "관리", width: 180 },
+              { name: "Name2",  type: "text", title : "부서명", width: 160},
+              { name: "Name3",  type: "text", title : "사번", width: 140},
+              { name: "Name4", type: "text", title : "등록일", width: 170 },
+              { name: "Name5", type: "text", title : "메모", width: 170 },
+              { name: "Name6", type: "text", title : "관리 권한", width: 'auto' },
+              { name: "Name7", type: "text", title : "관리", width: 195 },
             ],
             pagerContainer: "#externalPager2",
 

@@ -72,3 +72,6 @@ footer    {width:100%; }
 /* body  { background:rgba(244, 246, 248, 1)} */
 
 
+
+.formRow .checkbox + .checkbox { margin-left: 12px;}
+
