@@ -379,6 +379,7 @@ select:disabled       { background-color:#dddddd; color:#555; border:0; cursor:u
 .btnHelp:focus { outline: 2px solid #069B66;}
 
 button.xl      {height:50px; }
+button.mm       {height:40px; padding:0 50px; }
 button.sm       {height:36px; padding:0 20px; }
 .wid530      {min-width:530px;}
 
@@ -488,6 +489,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: -7px; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
+.radio input[type=radio]:checked:disabled  + label span { background-image: url("../images/common/radio_disable.png")}
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 50%;}
 
@@ -647,6 +649,10 @@ select.wid145 { min-width: 145px !important;}
 select.wid430 { min-width: 430px;}
 
 /* textarea */
+.textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px;  }
+.textareaWrap .textarea { width: 100%; min-height: 50px;  height: 130px !important; padding:0; border: 0;  }
+.textareaWrap .count {display:block; text-align: right;}
+
 .textarea { width: 100%; min-height: 50px; height: 180px; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 /* .textarea.autoHeight { padding: 18px 20px; } */
@@ -1489,7 +1495,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
-.layerWrap .layerBody .layerFoot button    {min-width:210px; }
+.layerWrap .layerBody .layerFoot button    {min-width:208px; }
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}
 .layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100%); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
@@ -1595,7 +1601,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLineWrap { margin-bottom: 0px; border-bottom: 1px solid #ddd; }
 .bgGray .tabLineWrap { margin-bottom: 40px; }
 .tabLine { display: flex; width:100%; max-width: 1400px; height: 60px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
-.tabLineWrap .tabLine { border-bottom: 0;  }
+.tabLineWrap .tabLine { border-bottom: 0; margin-bottom:-1px;  }
 .tabLine button,
 .tabLine a { display: inline-block; height: 100%; padding: 0 32px; font-size: 18px; font-weight: 500; line-height: 58px;}
 .tabLine li.on button,
