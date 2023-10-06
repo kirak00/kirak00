@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../css/contents_ADM.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="adm">
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">회원 관리</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none"><strong>회원 관리</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      <div class="tabLineWrap">
+        <div class="inner">
+          <ul class="tabLine tabScript" role="tablist">
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_1">법인 정보</button></li>
+            <li class="on"><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_2">대출 비교 신청 정보</button></li>
+            <li><button type="button" role="tab" aria-selected="true" aria-controls="main_loan_cont_3">메모</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bgWrap">
+        <section class="detail">
+          <ul class="innerTab tabScript" role="tablist">
+            <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true" aria-controls="main_loan_cont_1" class="on">업체 개요</button></li>
+            <li><button type="button" role="tab" id="innerTab_2" aria-selected="false" aria-controls="main_loan_cont_1">경영진 인적사항</button></li>
+            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">주주 인적 사항</button></li> 
+            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">노사 관계 및 연혁</button></li> 
+            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">필요 서류 제출</button></li> 
+          </ul>
+          
+          
+          <div class="formListTable formLdTable">
+            <table>
+              <caption>회원가입정보 법인회사정보</caption>
+              <colgroup>
+                <col width="186px">
+                <col width="auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName1">사업자등록번호</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName1" class="input" type="text" value="dd" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName2">법인명</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName2" class="input" type="text" value="dd" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBizTel">경영 방식</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="" disabled>
+                        <label class="label" for="testRdoBoxA"><span></span>창업자(소유자)</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxB"><span></span>창업 2세</label>
+                      </span>
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxC"><span></span>전문경영인</label>
+                      </span>
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxC"><span></span>기타</label>
+                      </span>
+                      <input id="inpBrdName2" class="input" type="text" value="임시 대표직" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">업종</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName" class="input" type="text" value="dd" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">개업일</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName" class="input" type="text" value="dd" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" id="inpBizAdd">본사 주소</label>
+                  </th>
+                  <td role="group" aria-labelledby="inpBizAdd">
+                    <div class="formRow">
+                      <input class="input " type="text" title="주소" placeholder="주소를 검색해 주세요." value="" readonly>
+                      <button type="button" class="btnBlack" disabled>주소검색</button>
+                    </div>
+                    <div class="formRow">
+                      <input class="input" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" id="inpBizAdd">사업장(공장)주소</label>
+                  </th>
+                  <td role="group" aria-labelledby="inpBizAdd">
+                    <div class="formRow">
+                      <input class="input " type="text" title="주소" placeholder="주소를 검색해 주세요." value="" readonly>
+                      <button type="button" class="btnBlack" disabled>주소검색</button>
+                    </div>
+                    <div class="formRow">
+                      <input class="input" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpCeo">대표자명</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="" readonly>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="" disabled>
+                        <label class="label" for="testRdoBoxA"><span></span>1인 대표</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxB"><span></span>공동 대표</label>
+                      </span>
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxC"><span></span>각자 대표</label>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpCeo">설립자와의 관계</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="" disabled>
+                        <label class="label" for="testRdoBoxA"><span></span>창업자(소유자)</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxB"><span></span>창업 2세</label>
+                      </span>
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxC"><span></span>전문경영인</label>
+                      </span>
+                      <span class="radio"> 
+                        <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+                        <label class="label" for="testRdoBoxC"><span></span>기타</label>
+                      </span>
+                      <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">동업계 종사년수</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName" class="input" type="text" value="dd  년" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">직원수</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName" class="input" type="text" value="dd  명" readonly>
+                    </div>
+                  </td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+
+        </section>
+      </div>
+      
+      <section>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnWhite">목록</button>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+
+    
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal " id="member_disabled" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>계정 비활성화</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="memberMent">
+          <strong>해당 회원의 계정을 비활성화 하시겠습니까?</strong>
+          <div>
+            비활성화 처리된 계정은 대출 비교 서비스를 이용할 수 없습니다. <br>
+            해당 법인 회원에게 전달할 계정 비활성화 사유를 입력해 주세요
+          </div>
+        </div>
+        <div class="formVertical " id="tabpanel_1">
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>실제 법인 정보와 상이</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>금융 기관과 소통 시 비방 및 욕설</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>1:1 게시판 내 반복적인 비방 및 욕설</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>기타</label>
+          </span>
+        </div>
+        <div class="formVertical mt10">
+          <div class="textareaWrap">
+            <textarea class="textarea" placeholder="1000자 미만으로 입력해주세요"></textarea>
+            <span class="count">0/100</span>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess " >비활성화</button>
+        <button type="button" class="btnWhite " onclick="layer_close('member_disabled')"  aria-label="레이어 닫기">취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+</body>
+</html>
