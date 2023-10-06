@@ -55,38 +55,36 @@
               "Name4": "2023-08-12", 
               "Name5": "회원 관리 담당", 
               "Name6": `
-              <div class="checkGroup">
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_1" name="chk1" />
+                  <input type="checkbox" id="chk1_1" name="chk1" checked disabled/>
                   <label for="chk1_1"><span></span>회원관리</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_2" name="chk1" />
+                  <input type="checkbox" id="chk1_2" name="chk1" checked disabled/>
                   <label for="chk1_2"><span></span>통계</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_3" name="chk1" />
+                  <input type="checkbox" id="chk1_3" name="chk1" disabled/>
                   <label for="chk1_3"><span></span>정산 현황</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_4" name="chk1" />
+                  <input type="checkbox" id="chk1_4" name="chk1" checked disabled/>
                   <label for="chk1_4"><span></span>이용자 현황</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_5" name="chk1" />
+                  <input type="checkbox" id="chk1_5" name="chk1" checked disabled/>
                   <label for="chk1_5"><span></span>이벤트 관리</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_6" name="chk1" />
+                  <input type="checkbox" id="chk1_6" name="chk1" disabled/>
                   <label for="chk1_6"><span></span>정책관리</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk1_7" name="chk1" />
+                  <input type="checkbox" id="chk1_7" name="chk1" checked disabled/>
                   <label for="chk1_7"><span></span>게시판관리</label>
                 </span>
-              </div>
               `, 
-              "Name7": `<div class="btnSet">
+              "Name7": `<div class="btnBarSet">
                           <button type="button" class="ico_edit">수정</button>
                           <button type="button" class="ico_delete">삭제</button>
                         </div>
@@ -100,12 +98,12 @@
 
             fields: [
               { name: "Name1",  type: "text", title : "운영자명", width: 120},
-              { name: "Name2",  type: "text", title : "부서명", width: 160},
-              { name: "Name3",  type: "text", title : "사번", width: 140},
-              { name: "Name4", type: "text", title : "등록일", width: 170 },
-              { name: "Name5", type: "text", title : "메모", width: 170 },
+              { name: "Name2",  type: "text", title : "부서명", width: 150},
+              { name: "Name3",  type: "text", title : "사번", width: 130},
+              { name: "Name4", type: "text", title : "등록일", width: 160 },
+              { name: "Name5", type: "text", title : "메모", width: 160 },
               { name: "Name6", type: "text", title : "관리 권한", width: 'auto' },
-              { name: "Name7", type: "text", title : "관리", width: 195 },
+              { name: "Name7", type: "text", title : "관리", width: 225 },
             ],
             pagerContainer: "#externalPager2",
 

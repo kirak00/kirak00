@@ -16,6 +16,7 @@
 </style>
 </head>
 <body>
+  
   <!-- **************** -->
   <!-- contents : start -->
   <!-- **************** -->
@@ -37,20 +38,46 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="label_tit_1" class="label">대출 신청 번호 </label>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_1" class="label">년도</label>
               <div class="formRow">
-                <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                <select id="selectLabelState1_1">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
               </div>
             </div>
-            <div class="searchControlItem expand">
-              <label for="selectLabelState" class="label">법인명</label>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_2" class="label">월</label>
               <div class="formRow">
-                <input type="text" class="input" id="selectLabelState" placeholder="법인명을 입력해 주세요">
+                <select id="selectLabelState1_2">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_3" class="label srOnly">기간선택</label>
+              <div class="formRow">
+                <div class="rangeControl">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState1_4" class="label">답변 상태</label>
+              <div class="formRow">
+                <select id="selectLabelState1_4">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
               </div>
             </div>
             <div class="searchBtns">
-              <button type="button" class="btnReset">초기화</button>
               <button type="button" class="btnSuccess">조회</button>
             </div>
           </div>
@@ -58,19 +85,11 @@
       </fieldset>
       <!-- 검색 -->
    
-      <section class="">
+      <div class="sectionBlock40">
         <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
-          <div class="formRow" role="group">
-            <select title="정렬 선택(등록일)">
-              <option>등록일 최신순</option>
-              <option>본부2</option>
-            </select>
-            <select title="보기갯수 선택">
-              <option>10개씩 보기</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
+          <div class="countBarSet">
+            <span class="count">총 접수 건 수 <strong>84</strong>건</span>
+            <span class="count">답변 완료 건 수 <strong>14</strong>건</span>
           </div>
         </fieldset>
 
@@ -78,9 +97,6 @@
           <div id="jsGrid2" class="bbs" caption="보증 예비 심사 목록"></div>    
           <div class="table_bt">
             <div id="externalPager2" class="external-pager"></div>
-            <div class="btn_r">
-              <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
-            </div>
           </div>
         </div>
 
@@ -90,52 +106,37 @@
 
             var clients = [
               { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "<span class='textBold'>접수</span>",
+                "Name2": "2023-08-12", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
+                "Name5": "김신한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
               { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "<span class='textBold'>접수</span>",
+                "Name2": "2023-08-12", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
+                "Name5": "김신한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
             ]; 
 
             $("#jsGrid2").jsGrid({
               data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOOOO 있어요.</p></div>",
 
               fields: [
-                { name: "Name1",  type: "text", title : "대출 신청 번호", width: 340},
-                { name: "Name2",  type: "text", title : "법인명", width: 340},
-                { name: "Name3", type: "text", title : "등록일", width: 340 },
-                { name: "Name4", type: "button", title : "상세보기", width: 340 },
+                { name: "Name1",  type: "text", title : "답변상태", width: 130},
+                { name: "Name2",  type: "text", title : "문의 작성일", width: 170},
+                { name: "Name3", type: "text", title : "문의 회원", width: 170 },
+                { name: "Name4", type: "button", title : "문의 제목", width: 'auto' },
+                { name: "Name5", type: "button", title : "답변자", width: 120 },
+                { name: "Name6", type: "button", title : "답변일", width: 170 },
+                { name: "Name7", type: "button", title : "상세", width: 230 },
               ],
               
               pagerContainer: "#externalPager2",
@@ -143,7 +144,7 @@
             });
           });
         </script>
-      </section>
+      </div>
     </section>
 
   </div>
