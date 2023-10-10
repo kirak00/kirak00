@@ -47,24 +47,42 @@
         <h3>FAQ 상세</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
-      <div class="layerCont">
-
-        <div class="formList">
-          <label class="label" for="labelExtraOp1">Q</label>
-          <div>
-            <div class="formRow">
-              <textarea id="labelExtraOp1" class="textarea" placeholder="문의 내용을 입력해 주세요.">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다.</textarea>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState1_1" class="label">노출 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState1_1">
+                  <option>노출</option>
+                  <option>노출</option>
+                </select>
+              </div>
             </div>
-            <p class="notiTxt noIcon">*운영자에게 제공할 화면을 선택해 주세요. 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
           </div>
         </div>
-        <div class="formList">
-          <label class="label" for="labelExtraOp2">A</label>
-          <div>
-            <div class="formRow">
-              <textarea id="labelExtraOp2" class="textarea" placeholder="문의 내용을 입력해 주세요.">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다.</textarea>
+      </fieldset>
+      <div class="layerCont">
+        <div class="formQna">
+          <label class="q" for="labelExtraOp1">Q</label>
+          <div class="cont">
+            <div class="formRow hasCount">
+              <textarea id="labelExtraOp1" class="textarea" placeholder="문의 내용을 입력해 주세요.">개인사업자도 회원 가입이 가능하나요?</textarea>
+              <span class="countSet"><span class="count">20</span>/100</span>
             </div>
-            <p class="notiTxt noIcon">*운영자에게 제공할 화면을 선택해 주세요. 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
+            <p class="notiTxt noIcon">* 작성은 최대 100자 까지 가능합니다.</p>
+          </div>
+        </div>
+        <div class="formQna">
+          <label class="a" for="labelExtraOp2">A</label>
+          <div class="cont">
+            <div class="formRow hasCount">
+              <textarea id="labelExtraOp2" class="textarea" placeholder="문의 내용을 입력해 주세요.">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다.</textarea>
+              <span class="countSet"><span class="count">20</span>/100</span>
+            </div>
+            <p class="notiTxt noIcon">* 작성은 최대 500자 까지 가능합니다.</p>
           </div>
         </div>
       </div>

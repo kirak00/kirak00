@@ -101,3 +101,19 @@ ul.innerTab     {max-width:1920px; margin-bottom:40px; margin-top:-20px; }
 .countBarSet .count:first-child { padding-left: 0;}
 .countBarSet .count + .count::before { content: ''; display: block; position: absolute; top: 50%; left: 0; width: 1px; height: 16px; margin-top: -8px; background: #ddd; }
 
+.formQna { display: flex; gap: 20px;}
+.formQna + .formQna { margin-top: 30px;}
+.formQna .q,
+.formQna .a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; color: #fff; font-weight: 700; }
+.formQna .q { background-color: #069B66;}
+.formQna .a { background-color: #4C9DA2;}
+.formQna .cont { flex: 1;}
+.formQna .cont .textarea { height: 108px;}
+
+
+fieldset:not(.tableFilterGroup) { display: flex; gap: 20px; margin-bottom: 40px;}
+fieldset .searchControlBox { width: 100%;}
+.radioIndent { padding-left: 32px;}
+.radioIndent .radio { margin-left: -32px;}
+
+.pntCol_1.mt6 { margin-top: 6px;}
