@@ -160,7 +160,7 @@
     fields: [
       { name: "Name1",  type: "checkbox", width: 140, 
         headerTemplate: function() {
-            return $("<input>").attr("type", "checkbox").attr("id", "selectAllCheckbox")
+            return $("<input>").attr("type", "checkbox").attr("class", "selectAllCheckbox")
         },
         itemTemplate: function(value, item) {
           return $("<input>").attr("type", "checkbox").attr("class", "singleCheckbox")
@@ -185,9 +185,9 @@
   var selectItem = function(item) {
     selectedItems.push(item);
     if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
-      $("#selectAllCheckbox").prop("checked", true);
+      $(".selectAllCheckbox").prop("checked", true);
     } else {
-      $("#selectAllCheckbox").prop("checked", false);
+      $(".selectAllCheckbox").prop("checked", false);
     }
   }; 
   var unselectItem = function(item) {
@@ -195,15 +195,15 @@
     return i !== item;
     });
     if(selectedItems.length == 0) {
-      $('#selectAllCheckbox').attr('checked', false);
+      $('.selectAllCheckbox').attr('checked', false);
     }
     if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
-      $("#selectAllCheckbox").prop("checked", true);
+      $(".selectAllCheckbox").prop("checked", true);
       } else {
-        $("#selectAllCheckbox").prop("checked", false);
+        $(".selectAllCheckbox").prop("checked", false);
       }
   };
-  $("#selectAllCheckbox").click(function(item) {
+  $(".selectAllCheckbox").click(function(item) {
     selectedItems = [];
     if(this.checked) { // check select status
       $('.singleCheckbox').each(function() { 

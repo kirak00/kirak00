@@ -61,8 +61,10 @@ $(function(){
 
   if($(".textarea.autoHeight").length >0) $('.textarea.autoHeight').calcTextareaHeight();
 
-
-  
+  var bbsReplyBoxLen = $('.bbsReplyArea .bbsReplyBox').length;
+  if(bbsReplyBoxLen) {
+    for( var i=0; i<bbsReplyBoxLen; i++)  $('.bbsReplyArea .bbsReplyBox:nth-child('+(i+1)+')').css('padding-left',40+(20*i)+'px')
+  }
   try {
     
   $( ".calendar" ).datepicker({

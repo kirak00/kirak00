@@ -37,37 +37,34 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="label_tit_1" class="label">대출 신청 번호 </label>
+            <div class="searchControlItem">
+              <label for="label_tit_1" class="label">금융 기관명</label>
               <div class="formRow">
-                <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                <input type="text" class="input" id="label_tit_1" placeholder="">
               </div>
-            </div>
-            <div class="searchControlItem expand">
-              <label for="selectLabelState" class="label">법인명</label>
-              <div class="formRow">
-                <input type="text" class="input" id="selectLabelState" placeholder="법인명을 입력해 주세요">
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">조회</button>
               </div>
-            </div>
-            <div class="searchBtns">
-              <button type="button" class="btnReset">초기화</button>
-              <button type="button" class="btnSuccess">조회</button>
             </div>
           </div>
         </div>
       </fieldset>
       <!-- 검색 -->
    
-      <section class="">
+      <div class="">
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
-            <select title="정렬 선택(등록일)">
-              <option>등록일 최신순</option>
+            <select title="정렬 선택(제안 건수)">
+              <option>제안 건수</option>
               <option>본부2</option>
             </select>
-            <select title="보기갯수 선택">
-              <option>10개씩 보기</option>
+            <select title="정렬 선택(대출 실행 건수)">
+              <option>대출 실행 건수</option>
+              <option>본부2</option>
+            </select>
+            <select title="정렬 선택(대출 실행액)">
+              <option>대출 실행액 높은 순</option>
               <option>본부2</option>
             </select>
             <button type="button" class="btnDkGreen">적용</button>
@@ -90,41 +87,26 @@
 
             var clients = [
               { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "새마을금고",
+                "Name2": "홍길동", 
+                "Name3": "02-998-8547", 
+                "Name4": "0.5%", 
+                "Name5": "125", 
+                "Name6": "33", 
+                "Name7": "33억 4000만원", 
+                "Name8": "<button type='button' class='btnWhite'>변경하기</button>", 
               },
               { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "새마을금고",
+                "Name2": "홍길동", 
+                "Name3": "02-998-8547", 
+                "Name4": "0.5%", 
+                "Name5": "125", 
+                "Name6": "33", 
+                "Name7": "33억 4000만원", 
+                "Name8": "<button type='button' class='btnWhite'>변경하기</button>", 
               },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
-              { 
-                "Name1": "S_203809_0001",
-                "Name2": "(주)길동건설", 
-                "Name3": "2023-07-22", 
-                "Name4": "<button type='button' class='btnWhite'>상세보기</button>", 
-              },
+              
             ]; 
 
             $("#jsGrid2").jsGrid({
@@ -132,10 +114,14 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
               fields: [
-                { name: "Name1",  type: "text", title : "대출 신청 번호", width: 340},
-                { name: "Name2",  type: "text", title : "법인명", width: 340},
-                { name: "Name3", type: "text", title : "등록일", width: 340 },
-                { name: "Name4", type: "button", title : "상세보기", width: 340 },
+                { name: "Name1",  type: "text", title : "대금융기관명", width: 230},
+                { name: "Name2",  type: "text", title : "관리자", width: 230},
+                { name: "Name3",  type: "text", title : "관리자 연락처", width: 200},
+                { name: "Name4",  type: "text", title : "적용 수수료율", width: 200},
+                { name: "Name5",  type: "text", title : "총 제안 건 수", width: 200},
+                { name: "Name6",  type: "text", title : "총 대출 실행 건 수", width: 200},
+                { name: "Name7",  type: "text", title : "총 대출 실행 액", width: 230},
+                { name: "Name8", type: "text", title : "적용 수수료율 변경", width: 230 },
               ],
               
               pagerContainer: "#externalPager2",
@@ -143,7 +129,7 @@
             });
           });
         </script>
-      </section>
+      </div>
     </section>
 
   </div>

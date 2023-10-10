@@ -126,6 +126,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
 .notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
+.notiTxt.noIcon::before { display: none;} 
 
 .notiTxt.blue { color: #069B66; font-weight: 700; }
 .notiTxt.blue::before { background-image: url('../images/common/ico_24_notice_primary.png') }
@@ -158,6 +159,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
 .guideBox .desc + .guideList { margin-top: 8px; font-size: 14px; }
 .layerCont .guidTxt { margin-top: 32px;}
+
+.layerCont .resultBox { margin-bottom: 20px; padding: 16px; background: #EAFAEB; border-radius: 8px; text-align: center; }
 
 /* .guideBox .infoList { font-size: 18px;} */
 .layerCont .guideBox .infoList { margin-top: 16px;}
@@ -404,13 +407,13 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .icoBank1::after { content:""; display:inline-block; width:150px; height:55px; background: url('../images/common/ico_bank1.png')  no-repeat center / cover }
 
-.ico_edit { color: #555;}
-.ico_edit::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_edit.png) no-repeat center / 24px 24px; }
+.ico_edit { color: #555; font-weight: 700;}
+.ico_edit::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_edit.png) no-repeat center / contain; }
 
 .ico_detail { color: #555; font-weight: 700;}
-.ico_detail::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_18_blank_w.png) no-repeat center / 24px 24px; }
+.ico_detail::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w.png) no-repeat center / contain; }
 .ico_delete { color: #555; font-weight: 700;}
-.ico_delete::after { content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_trash_g.png) no-repeat center / 24px 24px; }
+.ico_delete::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_trash_g.png) no-repeat center / contain; }
 
 /* .ico_drag { color: #555;} */
 .icoDrag::before{ content:""; display:inline-block; width:32px; height:40px; background: url('../images/common/ico_drag.png')  no-repeat center / 32px 40px; }
@@ -434,9 +437,10 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio + .formSet.formVertical { margin-left: 0px; align-items:flex-start;}
 .bbs input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle;}
 
-.jsGridWrap .checkbox input[type=checkbox] { position: absolute}
-.jsGridWrap input[type=checkbox] { position: relative;}
-.jsGridWrap input[type=checkbox]::after  {
+.jsGridWrap .singleCheckbox,
+.jsGridWrap .selectAllCheckbox { position: relative;}
+.jsGridWrap .singleCheckbox::after,
+.jsGridWrap .selectAllCheckbox::after  {
   content: "";
   display: block;
   width: 24px;
@@ -446,13 +450,18 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
   top: 0;
   left: 0;
 }
-.jsGridWrap input[type=checkbox]:checked::after {
+.jsGridWrap .singleCheckbox:checked::after,
+.jsGridWrap .selectAllCheckbox:checked::after {
   background: url("../images/COP/checkbox_active.png") center center no-repeat;
 }
-.jsGridWrap th input[type=checkbox]::after,
-.jsGridWrap th input[type=checkbox]:checked::after { background-color: #EFF5EF;}
-.jsGridWrap td input[type=checkbox]::after,
-.jsGridWrap td input[type=checkbox]:checked::after  { background-color: #fff;}
+.jsGridWrap th .singleCheckbox::after,
+.jsGridWrap th .selectAllCheckbox::after,
+.jsGridWrap th .singleCheckbox:checked::after,
+.jsGridWrap th .selectAllCheckbox:checked::after { background-color: #EFF5EF;}
+.jsGridWrap td .singleCheckbox::after,
+.jsGridWrap td .selectAllCheckbox::after,
+.jsGridWrap td .singleCheckbox:checked::after,
+.jsGridWrap td .selectAllCheckbox:checked::after  { background-color: #fff;}
 
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 16px; font-weight: 400;} 
@@ -463,14 +472,15 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* checkbox */
 .checkbox { display: inline-block; white-space: nowrap;}
 .checkbox + .checkbox { margin-left:26px; }
-.formGroup .checkbox { margin-left:0; padding-left:20px; }
-.checkbox input[type=checkbox] + label span:first-child { position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
+.bbs .checkbox + .checkbox { margin-left:20px; }
+.formGroup .checkbox { margin-left:0; padding-left:20px; } /* 검색쪽 */
+.checkbox input[type=checkbox] + label span:first-child { position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/common/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
 .checkbox input[type=checkbox] + label.on span:first-child,
-.checkbox input[type=checkbox]:checked  + label span:first-child { background-image: url("../images/COP/checkbox_active.png")}
+.checkbox input[type=checkbox]:checked  + label span:first-child { background-image: url("../images/common/checkbox_active.png")}
 .checkbox input[type=checkbox]:focus + label span:first-child::before,
 .checkbox input[type=checkbox]:focus + label.on span:first-child::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 5px;}
-/* .checkbox input[type=checkbox] + label.disable span {background:url("../images/COP/checkbox_disabled.png") no-repeat}
-.checkbox input[type=checkbox]:disabled + label span {background:url("../image s/COP/checkbox_disabled.png") no-repeat;cursor:default} */
+.checkbox input[type=checkbox]:disabled + label span {background-image:url("../images/common/checkbox_inactive_disabled.png") no-repeat;cursor:default}
+.checkbox input[type=checkbox]:disabled:checked  + label span:first-child { background-image: url("../images/common/checkbox_active_disabled.png")}
 
 .checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
 .checkBoxScroll > .checkbox { margin: 0; padding: 15px;}
@@ -478,9 +488,6 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .checkBoxScroll.number5 > .checkbox { width: calc(20% - 4px);}
 .checkBoxScroll.number4 > .checkbox { width: calc(25% - 4px);}
 
-/* .checkBoxScroll { width: 1400px; max-height: 700px; margin-top: 20px; padding: 25px 65px; border: 1px solid #ddd; border-radius: 16px; overflow: auto; }
-.checkBoxScroll .checkbox { width: calc(20% - 4px); margin: 0; padding: 15px;} */
-/* .checkBoxScroll .checkbox:nth-child(5n) { margin-right: 0;} */
 /* radio */ 
 .textTable .radio { padding-top: 0; height: auto;}
 .radio { display: inline-block; white-space: nowrap; /* height:64px; padding:20px 0 0; */}
@@ -488,9 +495,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio + input[type="text"] { margin-left: 16px;}
 .radio + .radio { margin-left:30px; }
 .radio + em + .radio { margin-left:30px; }
-.radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: -7px; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/COP/radio_inactive.png"); cursor: pointer;}
+.radio input[type=radio] + label span { position: relative; display: inline-block; vertical-align: -7px; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../images/common/radio_inactive.png"); cursor: pointer;}
 .radio input[type=radio] + label.on span,
-.radio input[type=radio]:checked  + label span { background-image: url("../images/COP/radio_active.png")}
+.radio input[type=radio]:checked  + label span { background-image: url("../images/common/radio_active.png")}
 .radio input[type=radio]:checked:disabled  + label span { background-image: url("../images/common/radio_disable.png")}
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 50%;}
@@ -532,13 +539,17 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 폼 한줄 그룹  */
 .formRowWrap { margin-top:10px; }
+
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
+.formRow>:only-child { }
+/* textarea text count 있을경우 */
+.formRow.hasCount { position: relative;}
+.formRow.hasCount .textarea { padding-bottom: 44px;} 
+.formRow.hasCount .countSet { display: inline-flex; align-items: center; position: absolute; bottom: 20px; right: 20px;}
+.formRow.hasCount .countSet .count { color: #069B66;}
 .formRow.fullType { width: 100%;}
-/* .formRow > div { display: flex; align-items: center; gap: 8px;} */
 .formVertical .formRow ~ .formRow { margin-top: 0;}
 .formVertical .label ~ .label { margin-top: 10px;}
-/* .formVertical .label + .formRow,
-.formVertical .formRow + .formRow { margin-top: -10px;} */
 .formVertical .formRow { width: 100%;}
 
 .formRow ~ .formRow { margin-top: 10px;}
@@ -546,15 +557,13 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow.mt15 { margin-top: 15px; }
 .formRow.mt20 { margin-top: 20px; }
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
-/* .formRow .unit.mail { margin: 0 8px;} */
-/* .formRow .input { width: 100%;} */
 .formRow .result { margin: 0 22px;}
 
 
 .formRow.wid470 { width:470px; }
 .formRow.wid470 select { flex:1; margin-right:20px;}
 
-.formRow.ver {}
+
 .formRow.ver + .ver {padding:10px 0 0;}
 
 .readonlyForm     {width:470px; padding-left:20px; border:1px solid #ddd; background:#EEF0F1; border-radius:8px; line-height:50px; color:#555;  }
@@ -604,6 +613,7 @@ input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-he
 input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:50px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1.wid114 {width:114px; }
+input[type=text].innerTxt_1.wid155 {width:155px; }
 
 
 .inputTimer   {position:relative; width:100%; }
@@ -657,9 +667,9 @@ select.wid430 { min-width: 430px;}
 
 .textarea { width: 100%; min-height: 50px; height: 180px; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
-/* .textarea.autoHeight { padding: 18px 20px; } */
 .layerCont .textarea { min-height: 50px; height: 180px;}
 .layerCont .textarea.h64 { height: 50px; }
+.layerCont .textarea.h100 { height: 100px; }
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
@@ -683,7 +693,6 @@ select.wid430 { min-width: 430px;}
 .formRow.mt30 { margin-top: 30px; }
 .formRow.py15 { padding-top: 15px; padding-bottom: 15px; }
 
-/* .formVertical .label + .formRow { margin-top: -10px;} */
 
 .formSurvey { padding-top: 15px}
 .formSurvey .label { margin-bottom: 10px; font-weight: 700;}
@@ -695,15 +704,13 @@ select.wid430 { min-width: 430px;}
 .bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
 
+
 .searchControlBox { position: relative; margin-bottom:0px; padding: 32px 40px  32px 40px; background: #EAFAEB; border-radius: 16px;}
 .main .searchControlBox { background: #fff;  padding: 32px 115px 32px 40px; } 
-/* .searchControlBox.fullType { padding-right: 40px;}
-.searchControlBox.fullType .searchControlItem,
-.searchControlBox.fullType .formRow,
-.searchControlBox.fullType .formRow select,
-.searchControlBox.fullType .formRow input { flex: 1;}
-.searchControlBox.fullType .formRow .line { flex-shrink: 0; margin-right: 0px;} */
 
+/* 팝업의 경우 */
+.layerWrap .searchControlBox { margin: 0; padding: 24px 40px; border: none; border-radius: 0; }
+.layerWrap fieldset:not(.tableFilterGroup) { margin-bottom: 0;}
 
 .searchControlBox .searchBtns { display:flex; gap:8px; margin-left: auto; }
 .searchControlBox .searchBtns.fl { margin-left: 0;}
@@ -720,6 +727,7 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 30px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
+.searchControlItem .searchBtns { margin-left: 8px;}
 .searchControlItem .rangeControl .input { width: 142px;}
 .searchControlItem .label.srOnly  { display: none;}
 .searchControlItem .label.srOnly + .formRow .input,
@@ -754,6 +762,7 @@ select.wid430 { min-width: 430px;}
 
 .searchControlItem.expand { max-width: 50%;}
 .searchControlItem.expand .formRow { width: 100%;}
+.searchControlBox.half .searchControlItem.expand { max-width: 100%;}
 
 .disabled .searchControlItem .label,
 .disabled .searchControlItem select,
@@ -781,17 +790,20 @@ select.wid430 { min-width: 430px;}
 .msgPg .divTable .head .cell { font-weight: 700;}
 .msgPg .divTable .head .cell:first-child { flex: 1; justify-content: center;}
 .msgPg .divTable .body .cell:first-child { flex: 1; justify-content: flex-start;}
-/* .msgPg .divTable .row .cell:nth-child(2) { width: 196px; padding-right: 60px; }
-.msgPg .divTable .row .cell:nth-child(2)::after { content: ''; position: absolute; top: 50%; right: 0; margin-top: -12px; display: block; width: 1px; height: 24px; background: #ddd;}
-.msgPg .divTable .row .cell:nth-child(3) { width: 214px; padding-left: 60px;} */
 .msgPg .divTable .row .cell:nth-child(2) { width: 120px; padding: 0 }
 .msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
 .msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
 
+.formListWrap { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.formListWrap .formList:first-child { margin-top: 0;}
+.formListWrap .formList:last-child { margin-bottom: 0;}
 .formList { display: flex; align-items: center; margin: 40px 0 20px; }
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
+
+.layerCont .formList { margin: 16px 0; }
+.layerCont .formList .label { margin-right: 30px;}
  
 /****************************
 **********  accordion  **********
@@ -953,8 +965,6 @@ header.on .line  {display:block; }
 .main .container {padding-bottom:0px }
 .container.member { }
 .container.member section.login  {}
-/* .container.hasBg { padding-bottom: 0;}
-.container.hasBg .bgGray { padding: 0 0 100px; overflow: hidden;} */
 .bgGray { background: #FAFAFA; padding: 20px 0 40px; border-bottom: 1px solid #ddd;}
 
 footer    {position:relative; z-index:1; background:#333 }
@@ -1189,19 +1199,16 @@ table { width: 100%;}
 .viewLineTable.noLastLine tr:last-child td { padding-bottom: 0; }
 
 
-/* .detailCont .viewNolineTable { padding-top: 60px} */
 .detailCont .viewNolineTable th, 
 .detailCont .viewNolineTable td { padding: 15px 0; }
 .detailCont .viewNolineTable th:first-child { padding-left:0px; }
 
 /* 폼 테이블 */
-/* .bgGray .formListTable { margin-top: 20px} */
-/* .bgGray .formListTable:first-child { margin-top: 0px} */
 
 .formGrayBox.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 .formGrayBox .line + .line { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
 
-/* .formListTable { margin-top: 40px;} */
+
 .formListTable.fullType select { width: 100%; }
 .formListTable.mt40 { margin-top: 40px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
@@ -1211,7 +1218,6 @@ table { width: 100%;}
 .formListTable tr:first-child th{ padding-top: 15px;}
 .formListTable tr:first-child td { padding-top: 0;}
 .formListTable tr:first-child td.pt15{ padding-top: 15px;}
-/* .formListTable tr:first-child td .radio { padding-top: 15px;} */
 .formListTable tr:last-child th,
 .formListTable tr:last-child td { padding-bottom: 0;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
@@ -1245,7 +1251,6 @@ table { width: 100%;}
 .addControl { display: flex; justify-content: space-between; align-items: center;}
 .addControl .checkbox input[type=checkbox] + label { font-weight: 500;}
 /* 텍스트 테이블 */
-/* .tableBox .textTable { margin-top: 0;} */
 .textTable.boxType.pointTable { border: 1px solid #069B66; margin-top:0; }
 .textTable.hasLine { padding: 40px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
 .textTable { margin-top: 20px;}
@@ -1258,7 +1263,6 @@ table { width: 100%;}
 .textTable .sub { color: #888; font-size: 16px; font-weight: 400;}
 
 .textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
-.textTable.boxType tr.tit { }
 .textTable.boxType tr.tit th,
 .textTable.boxType tr.tit td {border-bottom:1px solid #ddd;  }
 .textTable.boxType tr.tit td {font-weight: 700; color:#069B66; }
@@ -1521,12 +1525,14 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 /* .layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  font-size: 24px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
-.layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px;  text-align: center;}
-.layerWrap.typeAlert .layerBody .layerFoot { display: flex; gap: 8px; padding-left: 90px; padding-right: 90px; padding-top: 20px;}
+.layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px;}
+.layerWrap.typeAlert .layerBody.wid400,
+.layerWrap.typeAlert .layerBody.wid500  { text-align: center;}
+.layerWrap.typeAlert .layerBody .layerFoot { display: flex; justify-content: center; gap: 8px; padding-left: 90px; padding-right: 90px; padding-top: 20px;}
 .layerWrap.typeAlert .layerBody .layerFoot.pt32 { padding-top: 32px;}
 .layerWrap.typeAlert .layerBody .layerFoot.pt40 { padding-top: 40px;}
 .layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding-left: 40px; padding-right: 40px;}
-.layerWrap.typeAlert .layerBody .layerFoot button    {min-width:0; flex: 1 }
+.layerWrap.typeAlert .layerBody .layerFoot.wid500 button    {min-width:0; flex: 1 }
 
 
 .layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
@@ -1971,12 +1977,17 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .callCenter .info { color: #555; font-size: 14px;} 
 
 .inqueryGroup + .inqueryGroup { margin-top: 20px;}
-.inqueryForm { margin-top: 20px;}
+.inqueryForm { background: #EFF5EF; padding: 40px;}
 
-.bbsReplyBox { margin-top: 20px; padding: 60px; background: #F6FBF7; border-radius: 16px;}
+.bbsReplyArea {  margin-top: 20px; border-radius: 16px; overflow: hidden;}
+.bbsReplyArea > *:nth-child(odd) { background: #F6FBF7}
+.bbsReplyArea > *:nth-child(even) { background: #EFF5EF}
+.bbsReplyBox {position: relative; padding: 40px; background: #F6FBF7; }
+.bbsReplyBox .ico_edit { position: absolute; top: 40px; right: 60px; }
 .bbsReplyBox .tit { display: flex; align-items: center;}
+.bbsReplyBox .tit .date { margin-left: 16px; color: #555; font-size: 14px; font-weight: 400;} 
 .bbsReplyBox .tit::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
-.bbsReplyBox .cont { margin-top: 40px;}
+.bbsReplyBox .cont { margin-top: 25px; padding-left: 30px;}
 
 .inqueryTit { display: flex;}
 .inqueryTit a { padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
