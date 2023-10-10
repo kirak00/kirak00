@@ -797,6 +797,8 @@ select.wid430 { min-width: 430px;}
 .formListWrap { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .formListWrap .formList:first-child { margin-top: 0;}
 .formListWrap .formList:last-child { margin-bottom: 0;}
+
+.formListBox { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
 .formList { display: flex; align-items: center; margin: 40px 0 20px; }
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
@@ -1325,6 +1327,7 @@ table { width: 100%;}
 .jsgrid-cell    {height:60px;  }
 .jsgrid-cell .done { font-weight: 700;}
 .jsgrid-cell .deny { color: #888;}
+.bbs .tit { padding-left: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
 
