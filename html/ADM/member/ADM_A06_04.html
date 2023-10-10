@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../css/contents_ADM.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="adm">
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">회원 관리</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none"><strong>회원 관리</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      <div class="tabLineWrap">
+        <div class="inner">
+          <ul class="tabLine tabScript" role="tablist">
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_1">법인 정보</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_2">대출 비교 신청 정보</button></li>
+            <li class="on" ><button type="button" role="tab" aria-selected="true" aria-controls="main_loan_cont_3">메모</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bgWrap">
+        <section class="detail">
+          <div class="formListTable formMdTable">
+            <table>
+              <caption>메모등록</caption>
+                <colgroup><col width="186px">
+              </colgroup><colgroup>
+                <col width="auto">
+              </colgroup>
+              <tbody> 
+                <tr>
+                  <th scope="row">
+                    <label for="formText">내용</label>
+                  </th>
+                  <td><textarea class="textarea" name="" id="formText" cols="30" rows="10" ></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table_bt mt20">
+            <div class="btn_r">
+              <button type="button" class="btnSuccess">등록</button>
+            </div>
+          </div>
+
+          <div class="memoHistory">
+            <table>
+              <caption>메모내용</caption>
+              <tr>
+                <th scope="row">등록</th>
+                <td>2023-12-21 / 홍길동</td>
+              </tr>
+              <tr>
+                <th scope="row">내용</th>
+               <td><textarea class="textarea" name=""  cols="30" rows="10" readonly></textarea></td>
+              </tr>
+              <tr>
+               <td class="btns" colspan="2">
+                <button type="button" class="btnSuccess">수정</button>
+                <button type="button" class="btnWhite">삭제</button>
+               </td>
+              </tr>
+            </table>
+            <table>
+              <caption>메모내용</caption>
+              <tr>
+                <th scope="row">등록</th>
+               <td>2023-12-21 / 홍길동</td>
+              </tr>
+              <tr>
+                <th scope="row">수정</th>
+               <td>2023-12-21 / 홍길동</td>
+              </tr>
+              <tr>
+                <th scope="row">내용</th>
+               <td><textarea class="textarea" name=""  cols="30" rows="10"></textarea></td>
+              </tr>
+              <tr>
+               <td class="btns" colspan="2">
+                <button type="button" class="btnSuccess">수정완료</button>
+               </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </div>
+      
+      <section>
+        <div class="table_bt">  
+          <div class="btn_c">
+            <button type="button" class="btnWhite">목록</button>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+
+    
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal " id="member_disabled" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>계정 비활성화</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="memberMent">
+          <strong>해당 회원의 계정을 비활성화 하시겠습니까?</strong>
+          <div>
+            비활성화 처리된 계정은 대출 비교 서비스를 이용할 수 없습니다. <br>
+            해당 법인 회원에게 전달할 계정 비활성화 사유를 입력해 주세요
+          </div>
+        </div>
+        <div class="formVertical " id="tabpanel_1">
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>실제 법인 정보와 상이</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>금융 기관과 소통 시 비방 및 욕설</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>1:1 게시판 내 반복적인 비방 및 욕설</label>
+          </span>
+          <span class="radio"> 
+            <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
+            <label class="label" for="testRdoBoxC"><span></span>기타</label>
+          </span>
+        </div>
+        <div class="formVertical mt10">
+          <div class="textareaWrap">
+            <textarea class="textarea" placeholder="1000자 미만으로 입력해주세요"></textarea>
+            <span class="count">0/100</span>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess " >비활성화</button>
+        <button type="button" class="btnWhite " onclick="layer_close('member_disabled')"  aria-label="레이어 닫기">취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+</body>
+</html>

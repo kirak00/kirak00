@@ -66,6 +66,11 @@ section       {max-width:1920px; padding:0 60px;  }
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
+.pageTop p.dataInfo      {position:absolute; right:60px; top:10px; color:#4C9DA2; text-align: right; }
+
+.main .pageTop h2      {padding-top:0; }
+.main.container      {padding:40px 0; background: #FAFAFA; min-height:calc(100vh - 320px) }
+
 footer    {width:100%; }
 .table_bt   {max-width: 1920px;}
 .searchControlBox   {border:1px solid #ddd; background:#f4f4f4; }
@@ -84,6 +89,61 @@ ul.innerTab     {max-width:1920px; margin-bottom:40px; margin-top:-20px; }
 
 .formLdTable      {width:1020px; }
 .table_wrap + h3.tit45      {margin-top:40px; }
+.searchControlGroup   {column-gap: 8px; }
+fieldset  {margin-bottom:40px; }
+fieldset.tableFilterGroup  {margin-bottom:20px; }
+
+
+.adm.login .wrap        {display:flex; flex-direction: column; min-height:100vh }
+.adm.login .wrap .container        {margin:0 0 auto; }
+.loginCont        {background:url(../images/common/logo.png) no-repeat 50% 100px; padding:220px 0 0;}
+
+div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0;  }
+div.login_form.change_pw .formBox  { padding-left:150px; }
+div.login_form.change_pw .loginBtn  { margin-top:60px; }
+ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; top:0; font-size:18px; border-bottom:1px solid #ddd;   }
+ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
+ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
+ul.loginTab li + li button.loginTabBtn  { left:50%;  }
+ul.loginTab li div.login_form  { position:absolute; left:0; top:80px; width:530px;  display:none; margin:0px 0 0;   }
+ul.loginTab li div.login_form .errorTxt  { margin-top:5px; line-height:18px;}
+ul.loginTab li.on div.login_form    { display:block;}
+ul.loginTab li.on.fast div.login_form    { transition:none;}
+ul.loginTab li .row + .row  { margin-top:20px; }
+ul.loginTab li .row .formRow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; width: 400px;}
+ul.loginTab li .row label   { min-width:130px; padding-left:0;padding-right:0;  }
+ul.loginTab li .row input   { width: 100%; }
+ul.loginTab li div.loginBtn   { position:absolute; top:150px; width:100%; }
+ul.loginTab .hasError .errorTxt { display: block;}   
+ul.loginTab li div.login_form p.info_txt  { position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
+
+ul.loginTab.searchId  div.login_form .formBox  { padding-left:150px; }
+ul.loginTab li #cont_certificate_login .formBox { padding-left:150px; }
+ul.loginTab li #cont_certificate_login .formRow { width:100%; }
+ul.loginTab li .formRow .textCenter  { display:flex;  }
+ul.loginTab li .formRow .textCenter input  { width:100%; }
+
+
+
+/* */
+.memoHistory      {background:#EFF5EF; padding:40px ; margin-top:40px; border-radius: 16px;   }
+.memoHistory table th      {text-align: left; vertical-align: top; width:100px;  }
+.memoHistory table td      {text-align: left;  }
+.memoHistory table td textarea      {height:90px; }
+
+.memoHistory table tr + tr th,
+.memoHistory table tr + tr td      {padding-top:40px; }
+
+.memoHistory table + table  {margin-top:40px; border-top:1px solid #ddd; }
+.memoHistory table + table tr:first-child th,
+.memoHistory table + table tr:first-child td      {padding-top:40px;}
+.memoHistory table td.btns      {text-align: right; padding:14px 0 0;  } 
+.memoHistory table td.btns button   {height:40px; } 
+
+/* dashboard */
+ul.boxWrap        {display:flex; row-gap: 20px; }
+ul.boxWrap li.box        {border:1px solid #ddd; background:#fff; border-radius: 16px; min-height:180px;  }
+
 
 /* */
 

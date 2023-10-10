@@ -371,6 +371,8 @@ select:disabled       { background-color:#dddddd; color:#555; border:0; cursor:u
 .btnMinus:hover    {background-color:#148159; }
 .btnMinus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
+.btnMinus.w50 { width: 50px; height: 50px;}
+
 .addBtnSet { display: flex; column-gap: 8px;}
 
 .btnSet { display: inline-flex; gap: 8px;}
@@ -578,7 +580,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* input */
 .input { width: 100%; min-height: 50px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; vertical-align: middle;}
-.input::placeholder { color: #888; line-height: normal; }
+.input::placeholder { color: #888; line-height: normal; font-size: 16px; }
 .input:disabled, .input:read-only { background: #EEF0F1; color: #888; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
@@ -1292,6 +1294,11 @@ table { width: 100%;}
 
 .formGrayBox .input { width: 100%;}
 .formGrayBox .input.wid240 { width: 240px;}
+
+.formLgTable .formRow { width:1000px;}
+.formLgTable .formRow.long { width:100%;}
+.formLgTable .formRow.long .num { max-width:90px;}
+.formLgTable .formRow.long .bar {display:inline-block; height:47px; border-left:1px solid #ddd; margin:0 12px;  }
 
 
 

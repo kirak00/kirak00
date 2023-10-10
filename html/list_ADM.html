@@ -69,9 +69,9 @@ table {margin:0 20px; width:calc(100% - 40px)}
    {
      tit : '로그인', folder : 'login', page : '', status : false, ment : '', end : '',
      sub : [
-       {tit : '로그인', folder : '', page : 'ADM_A01.html', status : false , ment : 'v0.4', end : ''},
-       {tit : '아이디찾기/비밀번호 찾기', folder : '', page : 'ADM_A02.html', status : false , ment : 'v0.4', end : ''},
-       {tit : '비밀번호 재설정', folder : '', page : 'ADM_A03.html', status : false, ment : 'v0.4', end : ''},
+       {tit : '로그인', folder : '', page : 'ADM_A01.html', status : true , ment : 'v0.4', end : ''},
+      //  {tit : '아이디찾기/비밀번호 찾기', folder : '', page : 'ADM_A02.html', status : false , ment : 'v0.4', end : ''},
+      //  {tit : '비밀번호 재설정', folder : '', page : 'ADM_A03.html', status : false, ment : 'v0.4', end : ''},
     ],
    },
    {
@@ -81,26 +81,27 @@ table {margin:0 20px; width:calc(100% - 40px)}
     ],
    },
    {
-    tit : '회원관리', folder : 'member', page : '', status : false, pop : false, ment : '', end : '',
+    tit : '회원관리', folder    : 'member', page : '', status : false, pop : false, ment : '', end : '',
     sub : [
-      {tit : '법인회원 > 회원목록', folder : '', page : 'ADM_A06', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 법인정보', folder : '', page : 'ADM_A06_01', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 담당자정보', folder : '', page : 'ADM_A06_02', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보', folder : '', page : 'ADM_A06_03', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 엄체개요', folder : '', page : 'ADM_A06_03_1', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 경영진인적사항', folder : '', page : 'ADM_A06_03_2', status : false, ment : 'v0.4', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 주주인적사항', folder : '', page : 'ADM_A06_03_3', status : false, ment : 'v0.4 디자인 없음', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 노사관계 및 연혁', folder : '', page : 'ADM_A06_03_4', status : false, ment : 'v0.4 디자인 없음', end : '' },
-      {tit : '법인회원 > 회원상세 > 대출비교신청정보 > 필요서류제출', folder : '', page : 'ADM_A06_03_5', status : false, ment : 'v0.4 디자인 없음', end : '' },
-      {tit : '금융회원 > 회원목록', folder : '', page : 'ADM_A07', status : false, ment : 'v0.4', end : '' },
-      {tit : '금융회원 > 회원상세(일반)', folder : '', page : 'ADM_A07_01', status : false, ment : 'v0.4', end : '' },
-      {tit : '금융회원 > 회원상세(보증기금)', folder : '', page : 'ADM_A07_02', status : false, ment : 'v0.4', end : '' },
-      {tit : '금융회원 > 회원상세(중앙회)', folder : '', page : 'ADM_A07_03', status : false, ment : 'v0.4', end : '' },
-      {tit : '금융회원 > 정보조회이력관리', folder : '', page : 'ADM_A08', status : false, ment : 'v0.4', end : '' },
-     
+      {tit : '법인회원 > 회원목록(법인회원)', folder : '', page : 'ADM_A06_01.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 법인정보', folder : '', page : 'ADM_A06_02.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보', folder : '', page : 'ADM_A06_03.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 엄체개요', folder : '', page : 'ADM_A06_03_1.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 경영진인적사항', folder : '', page : 'ADM_A06_03_2.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 주주인적사항', folder : '', page : 'ADM_A06_03_3.html', status : true, ment : 'v0.5 ', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 노사관계 및 연혁', folder : '', page : 'ADM_A06_03_4.html', status : true, ment : 'v0.5 ', end : '' },
+      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 필요서류제출', folder : '', page : 'ADM_A06_03_5.html', status : true, ment : 'v0.5 ', end : '' },
+      {tit : '법인회원 > 회원상세 > 메모', folder : '', page : 'ADM_A06_04.html', status : true, ment : 'v0.5 ', end : '' },
+
+      {tit : '금융회원 > 회원목록', folder : '', page : 'ADM_A07.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '금융회원 > 회원상세(금융회원정보)', folder : '', page : 'ADM_A07_01.html', status : true, ment : 'v0.5', end : '' },
+      {tit : '금융회원 > 회원상세 > 메모(법인 동일)', folder : '', page : 'ADM_A06_04.html', status : true, ment : 'v0.5', end : '' },
+       
+      {tit : '금융회원 > 정보조회이력관리', folder : '', page : 'ADM_A08.html', status : false, ment : 'v0.4', end : '' },
+      
     ],
    },
-   {
+   { 
     tit : '통계', folder : 'statistics', page : '', status : false, pop : false, ment : '', end : '',
     sub : [
       {tit : '법인회원통계 > 대시보드', folder : '', page : 'ADM_A10.html', status : false, ment : 'v0.4', end : '' },
