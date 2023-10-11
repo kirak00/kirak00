@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section>
+     <!-- 
+      * 레이어 호출
+      class="open_layer"  // 팝업 호출
+      aria-controls="레이어 ID" // 접근성 팝업 알림용
+      -->
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">당첨자발표 미리보기</button>
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
+    <div class="layerBody eventPop wid1400">
+      <div class="layerHead">
+        <div class="titBox">
+          <div>
+           <h3 class="tit">가입 후 첫 대출 완료 시 수수료 0.2% 인하 이벤트!</h3>
+           <p class="date">2023-06-01~2023-08-31</p>
+          </div>
+          <p class="blue textBold">준법감시인 심의필 제 2023-광고-059호</p>
+        </div>
+        <button type="button" class="topPreview">이벤트 미리보기</button>
+        <button type="button" class="layerClose topClose" popup-close="sampleLayer">닫기</button>
+      </div>
+      <div class="layerCont">
+        <div class="evtCont">
+          <div class="evtImg">
+            <img src="../../../images/COP/evt_detail.png" alt="">
+          </div>
+          <div class="evtTxt">
+            가입 후 첫 대출 진행을 완료한 금융기관 고객님께 드리는 수수료 0.2% 인하 이벤트! <br><br>
+            Loan&amp;Biz 플랫폼에서 대출을 진행한 금융기관을 대상으로 정산 시 수수료 0.2%를 인하 해드려요 (월보 데이터 기준)<br><br>
+            금융기관의 많은 참여 부탁드려요~
+          </div>
+        </div>
+     
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

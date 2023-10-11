@@ -1496,7 +1496,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 
 .layerWrap      {position:fixed; left:-100%; z-index:1000; width:100%; height:100%; top:0; display: flex; overflow: hidden; }
 .layerWrap .layerBody         {
-  position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; overflow: hidden;
+  position:relative; width:724px; z-index:10; margin:auto; padding-bottom:40px; background:#fff; border-radius: 16px; /*overflow: hidden;*/
   transition: .3s; opacity: 0; transform: translateY(-50px); 
 }
 
@@ -1509,6 +1509,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .alertCont .status { font-size: 18px; font-weight: 700;}
 
 
+.layerWrap .layerBody.wid1400       {width:1400px;  }
 .layerWrap .layerBody.wid1100       {width:1100px;  }
 .layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody.wid800       {width:800px;  }
@@ -1516,12 +1517,14 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody.wid640       {width:640px;  }
 .layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody.wid500       {width:500px;  }
-.layerWrap .layerBody .layerHead    {padding:24px 0;  background:#EAFAEB;   }
+.layerWrap .layerBody .layerHead    {padding:24px 0;  background:#EAFAEB; border-radius: 16px 16px 0 0;  }
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 20px; font-weight: 700;}
 .layerWrap .layerBody .layerHead.bgChk h3    {padding:66px 0 0px; background: url(../adm_images/common/ico_80_alert.png) no-repeat 50% 0 / 56px; }
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:18px; height:18px; background: url(../adm_images/common/ico_24_close_b.png) no-repeat 0 0 / 18px; }
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
+.layerWrap .layerBody .layerHead button.topPreview { position: absolute; top: -44px; left: 0; background-image: none; color: #fff; font-size: 20px; font-weight: 700;}
+.layerWrap .layerBody .layerHead button.layerClose.topClose { position: absolute; top: -60px; right: 0; width: auto; height: 40px; padding: 0 50px; border: 1px solid #fff; border-radius: 45px; background-image: none; color: #fff; font-size: 16px; font-weight: 700;}
 .layerWrap .layerBody .layerCont    {padding:40px 40px 0;  }
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
@@ -1709,6 +1712,27 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .btnSet { gap: 0;}
 .bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
 .bbsDetailBox .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
+
+.layerBody.eventPop .titBox     {width:100%; padding:24px 40px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
+/* .layerBody.eventPop .titBox.typeDark { background: #069B66; color: #fff;} */
+.layerBody.eventPop .titBox .mainTit  { font-size: 30px; font-weight: 700;}
+.layerBody.eventPop .titBox h3.tit  { display: inline-flex; align-items: center; font-size:20px; font-weight: 700; }
+.layerBody.eventPop .titBox .badgeWhite { margin-right: 20px; }
+.layerBody.eventPop .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
+.layerBody.eventPop .titBox .date,
+.layerBody.eventPop .titBox .date { margin-top: 8px; color: #555; }
+.layerBody.eventPop .layerHead .blue { color: #069B66;}
+.layerBody.eventPop .layerHead .textBold { font-weight: 700;}
+
+.layerBody.eventPop .titBox .sub { font-size: 18px; }
+.layerBody.eventPop .evtCont     { padding: 44px 20px 0;}
+.layerBody.eventPop .evtCont.result { padding: 0 20px 100px; font-weight: 500;}
+.layerBody.eventPop .evtCont .evtTxt     {margin-top: 40px; padding-bottom: 42px;}
+.layerBody.eventPop .evtCont.result .evtTxt { margin-top: 0; padding-bottom: 0;}
+.layerBody.eventPop .titBox .btnSet { gap: 0;}
+.layerBody.eventPop .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
+.layerBody.eventPop .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
+
 
 .faqPage .bbsDetailBox .detailCont { padding: 80px 60px}
 
