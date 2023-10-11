@@ -1044,6 +1044,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup.mt40 { margin-top: 40px;}
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 16px; color: #333; font-weight: 700;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
+.tableFilterGroup .count .dkGreen { color: #4C9DA2;}
 .tableFilterGroup select { height: 40px; padding: 0 64px 0 16px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
 .tableFilterGroup .btnDkGreen { height: 40px;  width: 88px; padding: 0;}
