@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
   <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
   <script src="../../../adm_js/jquery-ui.js"></script>
@@ -14,6 +16,7 @@
   <script src="../../../adm_js/common_adm.js"></script>
   <title>SHINHAN</title>
 <style>
+
 
 </style>
 </head>
@@ -27,10 +30,11 @@
     <div class="container" id="skip_content"  aria-label="콘텐츠">
 
       <section class="pageTop">
-        <h2 class="pageTit">회원 관리</h2>
+        <h2 class="pageTit">정보 조회 이력 관리</h2>
         <ul class="breadcrumb">
             <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-            <li><a href="#none"><strong>회원 관리</strong></a></li>
+            <li><a href="#none">회원 관리</a></li>
+            <li><a href="#none"><strong>정보 조회 이력 관리</strong></a></li>
         </ul>
       </section>
 
@@ -39,45 +43,25 @@
       
       <section>
           
-        <!--  금융회원 -->
         <fieldset>
           <legend>게시물 검색</legend>
           <div class="searchControlBox">
             <div class="searchControlGroup">
-              <div class="searchControlItem">
-                <label for="label_tit_1" class="label">구분 </label> 
-                <div class="formRow">
-                  <select name="" id="">
-                    <option value="">금융회원</option>
-                  </select>
-                </div>
+              <div class="rangeControl">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
               </div>
-            </div>
-            <div class="searchControlGroup">
               <div class="searchControlItem">
-                <label for="selectLabelOption1" class="label">금융기관</label>
+                <label class="label">운영자 아이디</label>
                 <div class="formRow">
-                  <select title="범위" id="selectLabelOption1">
-                    <option>금융기관을 입력해 주세요</option>
-                  </select>
+                  <input type="text" class="input" placeholder="아이디를 입력하세요">
                 </div>
               </div>
               <div class="searchControlItem">
-                <label for="selectLabelOption3" class="label">검색어</label>
+                <label  class="label">회원 아이디</label>
                 <div class="formRow">
-                  <input type="text" class="input" placeholder="검색어를 입력해 주세요">
-                </div>
-              </div>
-              <div class="searchControlItem">
-                <label for="selectLabelOption3" class="label">지점코드</label>
-                <div class="formRow">
-                  <input type="text" class="input" placeholder="지점코드 7자리">
-                </div>
-              </div>
-              <div class="searchControlItem ">
-                <label id="selectLabelArea" class="label">사업자등록번호</label>
-                <div class="formRow">
-                  <input type="text" class="input" placeholder="000-00-00000">
+                  <input type="text" class="input" placeholder="아이디를 입력하세요">
                 </div>
               </div>
               <div class="searchBtns">
@@ -86,7 +70,6 @@
             </div>
           </div>
         </fieldset>
-
 
         <fieldset class="tableFilterGroup">
           <span class="count"></span>
@@ -105,48 +88,39 @@
           <div id="jsGrid2" class="bbs" caption="제출 제안서 목록"></div>    
           <div class="table_bt">
             <div id="externalPager2" class="external-pager"></div>
-            <div class="btn_r">
-              <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
-            </div>
           </div>
         </div>
 
-                
+        
+        
+        
+        
         <script>
           $(function() {
 
             var clients = [
               { 
-                "Name1": "156",
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "MG_1234567",
-                "Name7": "2023-10-02",  
-                "Name8": "2023-10-02", 
-                "Name9": "홍길동", 
-                "Name10": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name1": "211.35.77.11",
+                "Name2": "loannbiz01",
+                "Name3": "2080chiyak", 
+                "Name4": "법인 회원 상세 정보", 
+                "Name5": "12억 5000만원", 
+                "Name6": "2023-01-02 (14:25:25)", 
               },
             
             ]; 
             
 
-
             $("#jsGrid2").jsGrid({
               data: clients,
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
               fields: [
-                { name: "Name1",  type: "text", title : "번호", width: 110},
-                { name: "Name2",  type: "text", title : "금융기관 명", width: 110},
-                { name: "Name3", type: "text", title : "지점명", width: 110 },
-                { name: "Name4", type: "text", title : "사업자등록번호", width: 110 },
-                { name: "Name5", type: "text", title : "지점코드", width: 110 },
-                { name: "Name6", type: "text", title : "아이디", width: 110 },
-                { name: "Name7", type: "text", title : "가입일", width: 110 },
-                { name: "Name8", type: "text", title : "인증일 ", width: 110 },
-                { name: "Name9", type: "text", title : "담당자", width: 110 },
-                { name: "Name10", type: "text", title : "비밀번호 관리", width: 110 },
+                { name: "Name1",  type: "text", title : "아이피", width: 110},
+                { name: "Name2",  type: "text", title : "운영자 아이디", width: 110},
+                { name: "Name3", type: "text", title : "회원 아이디", width: 120 },
+                { name: "Name4", type: "text", title : "조회 정보", width: 110 },
+                { name: "Name5", type: "text", title : "가입일", width: 158 },
+                { name: "Name6", type: "text", title : "일시", width: 110 },
               ],
               
               pagerContainer: "#externalPager2",
