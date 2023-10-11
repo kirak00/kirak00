@@ -55,25 +55,28 @@
       </fieldset>
       <!-- 검색 -->
 
-      <div class="formListBox">
+      <div class="formListWrap hasLine">
         <div class="formList">
           <label class="label" for="inputLabel1">파일 위치</label>
           <div class="formRow">
-            <input class="input" id="inputLabel1" type="text" placeholder="" value="">
+            <input class="input" id="inputLabel1" type="text" placeholder="" value="http://img.shinhan.com/lnb/yak/20231105e">
           </div>
+          <p class="notiTxt">*S-Basic에 등록 후 해당 파일의 경로를 입력해 주세요</p>
         </div>
         <div class="formList">
-          <label class="label" for="inputLabel1">파일 위치</label>
+          <label class="label" for="inputLabel2">주요 변경 사항</label>
           <div class="formRow">
-            <input class="input" id="inputLabel1" type="text" placeholder="" value="">
+            <input class="input" id="inputLabel2" type="text" placeholder="" value="M&A 서비스 추가, 정보제공 금융사 추가 (하나캐피탈)">
           </div>
+          <p class="notiTxt">*주요 변경사항은 100자 이내로 입력해 주세요</p>
+        </div>
+        <div class="searchBtns">
+          <button type="button" class="btnSuccess">적용</button>
         </div>
       </div>
    
       <div class="sectionBlock40">
-        <fieldset class="tableFilterGroup">
-          <span class="count">총 <strong>15</strong>건</span>
-        </fieldset>
+        <h4 class="titH4">파일 적용 히스토리</h4>
 
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs" caption="보증 예비 심사 목록"></div>    

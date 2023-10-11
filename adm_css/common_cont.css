@@ -125,8 +125,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiTxt {  color: #4C9DA2; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
-.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
-.notiTxt.noIcon::before { display: none;} 
+/* .notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
+.notiTxt.noIcon::before { display: none;}  */
 
 .notiTxt.blue { color: #069B66; font-weight: 700; }
 .notiTxt.blue::before { background-image: url('../adm_images/common/ico_24_notice_primary.png') }
@@ -292,6 +292,7 @@ a.ico_down       {color:#069B66; }
 .btnWhiteLine:hover.ico_down::after,
 .btnWhiteLine:active.ico_down::after  { }
 
+
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../adm_images/common/ico_24_chart.png) no-repeat 50% 50%; }
 .btnWhite.ico_chart::after  {background:url(../adm_images/common/ico_24_chart.png) no-repeat 50% 50%; }
@@ -409,6 +410,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .ico_edit { color: #555; font-weight: 700;}
 .ico_edit::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_24_edit.png) no-repeat center / contain; }
+.btnSuccess.ico_edit::after  {background-image:url(../adm_images/common/ico_18_edit_g.png); }
+.btnSuccess.ico_edit:disabled::after  {background-image:url(../adm_images/common/ico_18_edit_g.png); }
+
 
 .ico_detail { color: #555; font-weight: 700;}
 .ico_detail::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_blank_w.png) no-repeat center / contain; }
@@ -539,7 +543,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 폼 한줄 그룹  */
 .formRowWrap { margin-top:10px; }
-
+/* .formGroup {}
+.formGroup.wid840 { width: 840px;} */
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow>:only-child { }
 /* textarea text count 있을경우 */
@@ -794,18 +799,30 @@ select.wid430 { min-width: 430px;}
 .msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
 .msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
 
-.formListWrap { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-.formListWrap .formList:first-child { margin-top: 0;}
-.formListWrap .formList:last-child { margin-bottom: 0;}
 
-.formListBox { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
+
+.formListWrap {position: relative; }
+.formListWrap.wid1020 { width: 1020px; }
+.formListWrap.hasLine { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
 .formList { display: flex; align-items: center; margin: 40px 0 20px; }
+.formListWrap .formList { width: 1020px; flex-wrap: wrap; margin: 0;}
+.formListWrap .formList + .formList { margin-top: 30px;}
+.formListWrap .formList .label {width: 175px; margin-right: 0;}
+.formListWrap .formList .formRow {width: calc(100% - 175px);}
+.formListWrap .formList .notiTxt { padding-left: 175px;}
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
+.formListWrap.hasLine .searchBtns { position: absolute; right: 40px; bottom: 40px;}
 
-.layerCont .formList { margin: 16px 0; }
-.layerCont .formList .label { margin-right: 30px;}
+
+
+.layerCont .formLisLine { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.layerCont .formLisLine .formList:first-child { margin-top: 0;}
+.layerCont .formLisLine .formList:last-child { margin-bottom: 0;}
+
+.layerCont .formList { width: 100%; margin: 16px 0; }
+.layerCont .formList .label { width: 90px; margin-right: 0px;}
  
 /****************************
 **********  accordion  **********

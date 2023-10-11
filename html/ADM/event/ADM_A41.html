@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+  
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">이벤트 등록</h2>
+      <ul class="breadcrumb">
+         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+         <li><a href="#none"><span>이벤트 관리</span></a></li>
+         <li><a href="#none"><strong>이벤트 등록</strong></a></li>
+      </ul>
+    </section>
+    <div class="bgWrap">
+      <section>
+        <div class="formListWrap wid1020">
+          <div class="formList">
+            <label class="label" for="inpBrdName">이벤트 구분</label>
+            <div class="formRow">
+              <span class="radio">
+                <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="">
+                <label class="label" for="testRdoBoxA"><span></span>법인/금융 회원 이벤트</label>
+              </span>
+              <span class="radio">
+                <input type="radio" id="testRdoBoxB" name="testRdoBox" value="">
+                <label class="label" for="testRdoBoxB"><span></span>법인 회원 이벤트</label>
+              </span>
+              <span class="radio"> 
+                <input type="radio" id="testRdoBoxC" name="testRdoBox" value="">
+                <label class="label" for="testRdoBoxC"><span></span>금융 회원 이벤트</label>
+              </span>
+            </div>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpBrdName1">이벤트 제목</label>
+            <div class="formRow">
+              <input id="inpBrdName1" class="input" type="text" value="" placeholder="이벤트 제목을 입력하세요.">
+            </div>
+            <p class="notiTxt">*제목은 50자 미만으로 입력해 주세요.</p>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpBrdName2">이벤트 기간</label>
+            <div class="formRow">
+              <div class="rangeControl">
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>    
+            </div>
+            <p class="notiTxt">*이벤트 시작일과 종료일을 입력해 주세요. (당일 선택 불가합니다.)</p>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpBrdName1">이미지 경로</label>
+            <div class="formRow">
+              <input id="inpBrdName1" class="input" type="text" value="" placeholder="이미지 경로를 입력하세요.">
+            </div>
+            <p class="notiTxt">*S-basic에 등록 후 해당 파일의 경로를 입력해 주세요.</p>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpBrdName1">이벤트 상세 내용</label>
+            <div class="formRow">
+              <textarea id="inpBrdName1" class="textarea" type="text" value="" placeholder="이벤트 내용을 입력해주세요."></textarea>
+            </div>
+            <p class="notiTxt">*이벤트 내용은 5000자 미만으로 입력해 주세요.</p>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpBrdName1">준법감시인 심의필</label>
+            <div class="formRow">
+              <input id="inpBrdName1" class="input" type="text" value="" placeholder="심의 번호를 입력하세요.">
+            </div>
+            <p class="notiTxt">*이벤트는 반드시 준법감시인 심의필을 입력해 주세요.</p>
+          </div>
+                
+          <div class="table_bt">
+            <div class="btn_r">
+              <button type="button" class="btnDkGreen mm open_layer" aria-controls="">미리보기</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="table_bt">
+      <div class="btn_c">
+        <button type="button" class="btnSuccess">등록</button>
+        <button type="button" class="btnWhite">취소</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+<script>
+</script>
+ 
+
+</body>
+</html>
