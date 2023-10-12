@@ -122,11 +122,12 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; }
+.notiTxt {  color: #4C9DA2; margin-left: 9px; text-indent: -4px; }
 .notiTxt.textCenter { justify-content: center;}
+.notiTxt.mt8 { margin-top: 8px;}
 .notiTxt.mt40 { margin-top: 40px;}
-/* .notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
-.notiTxt.noIcon::before { display: none;}  */
+.notiTxt::before { content: '*'; display: inline-block; flex-shrink: 0; width: 5px;}
+
 
 .notiTxt.blue { color: #069B66; font-weight: 700; }
 .notiTxt.blue::before { background-image: url('../adm_images/common/ico_24_notice_primary.png') }
@@ -291,6 +292,9 @@ a.ico_down       {color:#069B66; }
 .btnWhiteLine.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_blue.png); }
 .btnWhiteLine:hover.ico_down::after,
 .btnWhiteLine:active.ico_down::after  { }
+.ico_preview       {padding:0 30px; font-weight: 700;}
+.ico_preview::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_Preview_w.png) no-repeat 50% 50% / contain; }
+
 
 
 .ico_chart       {padding:0 32px;}
@@ -386,6 +390,7 @@ select:disabled       { background-color:#dddddd; color:#555; border:0; cursor:u
 
 button.xl      {height:50px; }
 button.mm       {height:40px; padding:0 50px; }
+button.mm2       {height:40px; padding:0 30px; }
 button.sm       {height:36px; padding:0 20px; }
 .wid530      {min-width:530px;}
 
@@ -548,10 +553,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow>:only-child { }
 /* textarea text count 있을경우 */
-.formRow.hasCount { position: relative;}
-.formRow.hasCount .textarea { padding-bottom: 44px;} 
-.formRow.hasCount .countSet { display: inline-flex; align-items: center; position: absolute; bottom: 20px; right: 20px;}
-.formRow.hasCount .countSet .count { color: #069B66;}
+
 .formRow.fullType { width: 100%;}
 .formVertical .formRow ~ .formRow { margin-top: 0;}
 .formVertical .label ~ .label { margin-top: 10px;}
@@ -635,6 +637,8 @@ input[type=text].innerTxt_1.wid155 {width:155px; }
 
 
 .textCenter .input { width: 100%; text-align: center; }
+.textCenter .input.wid70 {width: 72px;}
+.textCenter .input.wid80 {width: 82px;}
 .fullFix  {width:100%; display:flex; gap:10px;}
 .fullFix select { flex:1 }
 .inputBizNumber .input { width: auto;}
@@ -666,9 +670,20 @@ select.wid145 { min-width: 145px !important;}
 select.wid430 { min-width: 430px;}
 
 /* textarea */
-.textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px;  }
-.textareaWrap .textarea { width: 100%; min-height: 50px;  height: 130px !important; padding:0; border: 0;  }
+.textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px;  }
+.textareaWrap { position: relative; display: flex; flex-direction: column; align-items: end; }
 .textareaWrap .count {display:block; text-align: right;}
+
+.textareaWrap .textarea { width: 100%; min-height: 50px;  height: 130px; padding:0; border: 0;  }
+.textareaWrap .textarea.h40 { height: 40px;} /* 100자 - 팝업 */
+.textareaWrap .textarea.h120 { height: 120px;} /* 500자 - 팝업, 5000자 - 페이지 */
+.textareaWrap .countSet { display: inline-flex; align-items: center; }
+.textareaWrap .countSet .count { color: #069B66;}
+
+.inputWrap { width: 100%; position: relative; }
+.inputWrap .input { padding-right: 100px; }
+.inputWrap .countSet { display: inline-flex; align-items: center; position: absolute; right: 20px; top: 14px; }
+.inputWrap .countSet .count { color: #069B66;}
 
 .textarea { width: 100%; min-height: 50px; height: 180px; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
@@ -1707,9 +1722,10 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:20px; font-weight: 700; }
 .bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
 .bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
-.bbsDetailBox .titBox .date { margin-top: 8px; color: #555; }
+.bbsDetailBox .titBox .brand { margin-top: 8px; color: #555; }
+.bbsDetailBox .titBox .date {color: #555; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
-.bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px;  border-top:0; border-radius:0 0 16px 16px;  }
+.bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px; background: #fff;  border-top:0; border-radius:0 0 16px 16px;  }
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
 .bbsDetailBox .titBox .btnSet { gap: 0;}
 .bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
@@ -2023,9 +2039,16 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .callCenter .info { color: #555; font-size: 14px;} 
 
 .inqueryGroup + .inqueryGroup { margin-top: 20px;}
+.inqueryGroup .table_bt { margin-top: 20px;}
+.table_bt { margin-top: 20px;}
+.inqueryForm .textareaWrap { padding: 40px; }
 .inqueryForm { background: #EFF5EF; padding: 40px;}
+.inqueryForm.isHide { display: none;}
+.inqueryGroup .inqueryForm { margin-top: 20px; padding: 0; background: 0;}
+.bbsReplyArea .bbsReplyBox .inqueryForm { margin-top: 30px; padding: 30px 0 0; border-top: 1px solid #ddd; background: transparent}
+.bbsReplyArea .inqueryForm { margin-top: 0; padding: 30px 40px 40px; }
 
-.bbsReplyArea {  margin-top: 20px; border-radius: 16px; overflow: hidden;}
+.bbsReplyArea {  margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .bbsReplyArea > *:nth-child(odd) { background: #F6FBF7}
 .bbsReplyArea > *:nth-child(even) { background: #EFF5EF}
 .bbsReplyBox {position: relative; padding: 40px; background: #F6FBF7; }
@@ -2033,7 +2056,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .bbsReplyBox .tit { display: flex; align-items: center;}
 .bbsReplyBox .tit .date { margin-left: 16px; color: #555; font-size: 14px; font-weight: 400;} 
 .bbsReplyBox .tit::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_comment_g.png'); vertical-align: middle;}
-.bbsReplyBox .cont { margin-top: 25px; padding-left: 30px;}
+.bbsReplyBox .cont { margin-top: 25px; }
+
+
 
 .inqueryTit { display: flex;}
 .inqueryTit a { padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}

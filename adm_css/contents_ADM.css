@@ -265,7 +265,7 @@ ul.boxWrap.detail li.box.detail_4 ul li.avr strong em   {font-size:30px; color:#
 .formQna .q { background-color: #069B66;}
 .formQna .a { background-color: #4C9DA2;}
 .formQna .cont { flex: 1;}
-.formQna .cont .textarea { height: 108px;}
+/* .formQna .cont .textarea { height: 108px;} */
 
 
 fieldset:not(.tableFilterGroup) { display: flex; gap: 20px; margin-bottom: 40px;}

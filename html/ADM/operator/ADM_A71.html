@@ -45,13 +45,13 @@
   <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
   <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
     <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid1100">
+    <div class="layerBody wid640">
       <div class="layerHead">
         <h3>운영자 등록</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="formListTable formMdTable">
+        <div class="formListTable">
           <table>
             <caption>운영자 등록 정보</caption>
             <colgroup>
@@ -69,7 +69,7 @@
                     <button type="button" class="btnSuccess">인증</button>
                     <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
                   </div>
-                  <p class="notiTxt">*사번은 숫자만 입력 가능합니다.</p>
+                  <p class="notiTxt">사번은 숫자만 입력 가능합니다.</p>
                 </td>
               </tr>
               <tr>
@@ -78,7 +78,7 @@
                 </th>
                 <td>
                   <div class="formRow">
-                    <input id="inpBrdName" class="input" type="text" placeholder="" value="">
+                    <input id="inpBrdName" class="input" type="text" placeholder="" value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -88,7 +88,7 @@
                 </th>
                 <td>
                   <div class="formRow">
-                    <input id="inpBrdPart" class="input" type="text" placeholder="" value="">
+                    <input id="inpBrdPart" class="input" type="text" placeholder="" value="" readonly>
                   </div>
                 </td>
               </tr>
@@ -116,6 +116,7 @@
                   <div class="formRow fullType">
                     <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
                   </div>
+                  <p class="notiTxt">운영자의 역할 등을 입력하세요.</p>
                 </td>
               </tr>
               <tr>
@@ -123,7 +124,7 @@
                   <label class="label" id="labelRoute">관리 권한</label>
                 </th>
                 <td>
-                  <div class="formRow" role="group" aria-labelledby="labelRoute">
+                  <div class="formVertical" role="group" aria-labelledby="labelRoute">
                     <span class="checkbox">
                       <input type="checkbox" id="testRdoSns1" name="testRdoSns" value="" />
                       <label for="testRdoSns1"><span></span>회원관리</label>
@@ -153,7 +154,7 @@
                       <label for="testRdoSns5"><span></span>게시판관리</label>
                     </span>
                   </div>
-                  <p class="notiTxt">*운영자에게 제공할 화면을 선택해 주세요. 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
+                  <p class="notiTxt">운영자에게 제공할 화면을 선택해 주세요.<br/> 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
                 </td>
               </tr>
              
