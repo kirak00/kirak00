@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+  
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section>
+      <!-- 
+      * 레이어 호출
+      class="open_layer"  // 팝업 호출
+      aria-controls="레이어 ID" // 접근성 팝업 알림용
+      -->
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">청구 확인</button>
+    </section>
+  </div>
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid1400">
+      <div class="layerHead">
+        <h3>청구 확인</h3>
+        <p>아래 정보를 확인 후 청구 여부를 진행하세요.</p>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="textTable">
+          <table>
+            <caption>업체개요</caption>
+            <colgroup>
+              <col width="185px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">금융기관명</th> 
+                <td>새마을금고 / 서울영업본부 / 삼청금고 / 가회지점</td>
+              </tr>
+              <tr>
+                <th scope="row">담당자명</th> 
+                <td>홍길동</td>
+              </tr>
+              <tr>
+                <th scope="row">담당자 연락처</th> 
+                <td>02-444-7788</td>
+              </tr>
+              <tr>
+                <th scope="row">담당자 이메일</th> 
+                <td>hong@mg.co.kr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_wrap mt30">
+          <table class="bbs_list">
+            <caption>담보 정보</caption>
+            <colgroup>
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">실행일</th>
+                <th scope="col">대출 신청 번호</th>
+                <th scope="col">법인명</th>
+                <th scope="col">금융기관명</th>
+                <th scope="col">금융기관<br>사업자등록 번호</th>
+                <th scope="col">실행 금액</th>
+                <th scope="col">수수료율</th>
+                <th scope="col">청구액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-08-12</td>
+                <td>없음</td>
+                <td>(주)아이코스<br>105-86-78945</td>
+                <td>새마을금고/<br>가회지점</td>
+                <td>105-88-12345</td>
+                <td>400,000,000<p class="sub">(사억원)</p></td>
+                <td>0.5%</td>
+                <td>400,000,000<p class="sub">(사억원)</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tableData">상기 수수료를 청구합니다.</div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnSuccess">청구</button>
+            <button type="button" class="btnWhite">청구제외</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+<script>
+</script>
+ 
+
+</body>
+</html>

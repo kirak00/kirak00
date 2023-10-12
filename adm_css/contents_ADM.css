@@ -63,6 +63,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
 
 section       {max-width:1920px; padding:0 60px;  }
+.bgWrap section { padding: 0 120px}
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
@@ -354,7 +355,7 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .formQna .q { background-color: #069B66;}
 .formQna .a { background-color: #4C9DA2;}
 .formQna .cont { flex: 1;}
-.formQna .cont .textarea { height: 108px;}
+/* .formQna .cont .textarea { height: 108px;} */
 
 
 fieldset:not(.tableFilterGroup) { display: flex; gap: 20px; margin-bottom: 40px;}
@@ -363,3 +364,29 @@ fieldset .searchControlBox { width: 100%;}
 .radioIndent .radio { margin-left: -32px;}
 
 .pntCol_1.mt6 { margin-top: 6px;}
+
+/* 당첨자 명단 */
+.winnerList { display: inline-block; margin: 30px 0 40px; background: #F6FBF7; border-radius: 16px; padding: 20px;}
+.winnerList .tit { margin-bottom: 20px;}
+.winnerList .list + .list { margin-top: 20px;} 
+.layerBody.eventPop .layerHead { display: flex; justify-content: space-between; min-height: 100px; padding: 0; border-bottom: 1px solid #ddd;}
+.layerBody.eventPop .layerHead h3 { font-size: 18px;}
+.layerBody.eventPop .layerHead p { margin-top: 0; text-align: unset; font-weight: 400;}
+
+
+/* .barList */
+.layerBody.eventPop .layerHead .barList .list { color: #555; font-weight: 400;}
+.layerBody.eventPop .layerHead .barList .list + .list { margin-left: 16px; padding-left: 16px;}
+.layerBody.eventPop .layerHead .barList .list + .list::before { background: #888;}
+
+.layerCont .textTable { margin-top: 0;}
+.layerCont .textTable th, 
+.layerCont .textTable td { padding-top: 10px; padding-bottom: 10px;}
+
+.table_wrap.mt30 { margin-top: 30px;}
+.layerCont .tableData { padding: 30px 0; text-align: center;}
+
+.comment .replies { margin-left: 120px;}
+.comment .textarea { width: 1400px;}
+.comment .commentBody { display: flex; }
+.comment .commentBody .btnSuccess { margin-left: 20px; align-self: flex-end;}

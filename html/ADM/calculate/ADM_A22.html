@@ -28,11 +28,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">1:1 문의 관리</h2>
+      <h2 class="pageTit">이의 제기 관리</h2>
       <ul class="breadcrumb">
          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-         <li><a href="#none"><span>게시판 관리</span></a></li>
-         <li><a href="#none"><strong>1:1 문의 관리</strong></a></li>
+         <li><a href="#none"><span>정산 현황</span></a></li>
+         <li><a href="#none"><strong>이의 제기 관리</strong></a></li>
       </ul>
     </section>
 
@@ -73,9 +73,15 @@
           </div>
           <div class="searchControlGroup">
             <div class="searchControlItem">
-              <label for="selectLabelState1_4" class="label">답변 상태</label>
+              <label for="selectLabelState1_4" class="label">금융기관명</label>
               <div class="formRow">
-                <select id="selectLabelState1_4">
+                <input type="text" class="input" value="" placeholder="법인명을 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_5" class="label">상태</label>
+              <div class="formRow">
+                <select id="selectLabelState1_5">
                   <option>전체</option>
                   <option>전체</option>
                 </select>
@@ -91,9 +97,13 @@
    
       <div class="sectionBlock40">
         <fieldset class="tableFilterGroup">
-          <div class="countBarSet">
-            <span class="count">총 접수 건 수 <strong>84</strong>건</span>
-            <span class="count">답변 완료 건 수 <strong>14</strong>건</span>
+          <span class="count">총 <strong>23</strong>건</span>
+          <div class="formRow" role="group">
+            <select title="보기갯수 선택">
+              <option>10개씩 보기</option>
+              <option>본부2</option>
+            </select>
+            <button type="button" class="btnDkGreen">적용</button>
           </div>
         </fieldset>
 
@@ -110,22 +120,28 @@
 
             var clients = [
               { 
-                "Name1": "<span class='textBold'>접수</span>",
-                "Name2": "2023-08-12", 
-                "Name3": "(주)튼튼철강", 
-                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
-                "Name5": "김신한", 
-                "Name6": "2023-06-01", 
-                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite'>진행중</button>", 
               },
               { 
-                "Name1": "<span class='textBold blue'>답변완료</span>",
-                "Name2": "2023-08-12", 
-                "Name3": "(주)튼튼철강", 
-                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
-                "Name5": "김신한", 
-                "Name6": "2023-06-01", 
-                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite' disabled>거절</button>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<span class='textBold blue'>수락</span>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite'>접수중</button>", 
               },
             ]; 
 
@@ -134,13 +150,10 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOOOO 있어요.</p></div>",
 
               fields: [
-                { name: "Name1",  type: "text", title : "답변상태", width: 130},
-                { name: "Name2",  type: "text", title : "문의 작성일", width: 170},
-                { name: "Name3", type: "text", title : "문의 회원", width: 170 },
-                { name: "Name4", type: "text", title : "문의 제목", width: 'auto' },
-                { name: "Name5", type: "text", title : "답변자", width: 120 },
-                { name: "Name6", type: "text", title : "답변일", width: 170 },
-                { name: "Name7", type: "button", title : "상세", width: 230 },
+                { name: "Name1",  type: "text", title : "이의 신청일", width: '25%'},
+                { name: "Name2",  type: "text", title : "금융기관명", width: '25%'},
+                { name: "Name3", type: "text", title : "담당자명", width: '25%' },
+                { name: "Name4", type: "button", title : "상태", width: '25%' },
               ],
               
               pagerContainer: "#externalPager2",
