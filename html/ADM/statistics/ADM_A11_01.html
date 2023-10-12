@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/lib/echarts.min.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="adm">
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** --> 
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">금융 회원 통계</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none">통계</a></li>
+            <li><a href="#none"><strong>금융 회원 통계</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      
+      <section>
+          
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label class="label">조회 항목</label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">대시보드 1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label  class="label">업종</label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+      </section>
+
+      <section>
+        
+        <ul class="dashboardWrap">
+          <li class="box wid50">
+            <div class="chart_lineBox size_2">
+              <div class="titBox">
+                <strong>월 건수 실적 변동 추이</strong>
+                <div class="legendBg"></div>
+              </div>
+              <div class="chartBox" id="dashChart_1"></div>
+            </div>
+            <script>
+
+              var myChart1 = echarts.init(document.getElementById('dashChart_1'));
+              var option = {
+                  // title: {
+                  //   text: '월 건수 실적 변동 추이',
+                  //   textStyle : {
+                  //     fontSize: '24px'
+                  //   },
+                  // },
+                  tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                      type: 'cross',
+                      label: {
+                        backgroundColor: '#6a7985'
+                      }
+                    }
+                  },
+                  
+                  legend: {
+                    data: ['제안 건수', '실행 건수'],
+                    right:'20px',
+                    icon : 'circle',
+                    textStyle : {
+                      fontSize: '13px',
+                      color : '#555'
+                    },
+                    itemStyle : {
+                      shadowColor:'#ddd'
+                    },
+
+                  },
+
+                  grid: {
+                    left: '1%',
+                    right: '3%',
+                    bottom: '0%',
+                    containLabel: true
+                  },
+                  xAxis: [
+                    {
+                      type: 'category',
+                      boundaryGap: false,
+                      data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      axisLabel: {
+                        fontSize:"12px"
+                      }
+                    }
+                  ],
+                  yAxis: [
+                    {
+                      type: 'value'
+                    }
+                  ],
+                  series: [
+                    {
+                      name: '실행 건수',
+                      type: 'line',
+                      symbol : "none",
+                      color: "#FE5050",
+                      lineStyle : {
+                        width:3,
+                      },
+                      areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                          {
+                            offset: 0,
+                            color: 'rgba(254, 80, 80, 0.15)'
+                          },
+                          {
+                            offset: 1,
+                            color: 'rgba(255, 124, 68, 0.00)'
+                          }
+                        ])
+      
+                      },
+                      data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                    },
+                    {
+                      name: '제안 건수',
+                      type: 'line',
+                      symbol : "none",
+                      color: "#069B66",
+                      lineStyle : {
+                        width:3,
+                      },
+                      areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                          {
+                            offset: 0,
+                            color: 'rgba(6, 155, 102, 0.15)'
+                          },
+                          {
+                            offset: 1,
+                            color: 'rgba(6, 155, 102, 0.00)'
+                          }
+                        ])
+
+                      },
+                      data: [120, 182, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310, 191, 204, 290, 330, 310]
+                    },
+                  ]
+                };
+                myChart1.setOption(option);
+
+            </script>
+          </li>
+          <li class="box wid50">
+            <div class="chart_lineBox">
+              <div class="titBox">
+                <strong>월 건수 실적 변동 추이</strong>
+                <em>단위 억</em>
+                <div class="legendBg size_1"></div>
+              </div>
+              <div class="chartBox" id="dashChart_2">
+                <div class="noData"><span>아직은 조회할 데이터가 없어요</span></div>
+              </div>
+            </div>
+            <script>
+
+              var myChart2 = echarts.init(document.getElementById('dashChart_2'));
+              var option = {
+                  tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                      type: 'cross',
+                      label: {
+                        backgroundColor: '#6a7985'
+                      }
+                    }
+                  },
+                  
+                  legend: {
+                    data: ['실행 금액'],
+                    right:'20px',
+                    icon : 'circle',
+                    textStyle : {
+                      fontSize: '13px',
+                      color : '#555'
+                    },
+                    itemStyle : {
+                      shadowColor:'#ddd'
+                    },
+
+                  },
+
+                  grid: {
+                    left: '1%',
+                    right: '3%',
+                    bottom: '0%',
+                    containLabel: true
+                  },
+                  xAxis: [
+                    {
+                      type: 'category',
+                      boundaryGap: false,
+                      data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      axisLabel: {
+                        fontSize:12
+                      }
+                    }
+                  ],
+                  yAxis: [
+                    {
+                      type: 'value'
+                    }
+                  ],
+                  series: [
+                    {
+                      name: '실행 금액',
+                      type: 'line',
+                      symbol : "none",
+                      color: "#3295CD",
+                      lineStyle : {
+                        width:3,
+                      },
+                      areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                          {
+                            offset: 0,
+                            color: 'rgba(50, 149, 205, 0.15)'
+                          },
+                          {
+                            offset: 1,
+                            color: 'rgba(50, 149, 205, 0.00)'
+                          }
+                        ])
+      
+                      },
+                      data: [120, 132, 101, 134, 90, 230, 210, 134, 90, 230, 210, 134, 90, 230, 210]
+                    },
+                  ]
+                };
+                myChart2.setOption(option);
+            </script>
+          </li>
+        </ul>
+
+        
+        <ul class="dashboardWrap">
+          <li class="items type_1">
+            <strong class="tit">총 취급 건수</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>238</strong>
+                <span>건</span> 
+              </span>
+            </div>
+          </li>
+          <li class="items type_2">
+            <strong class="tit">총 취급액</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>125</strong>
+                <span>억</span> 
+                <strong>5000</strong>
+                <span>만원</span> 
+              </span>
+            </div>
+          </li> 
+          <li class="items type_3">
+            <strong class="tit">총 제안 건수</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>125</strong>
+                <span>건</span> 
+              </span>
+            </div>
+          </li>
+          <li class="items type_4">
+            <strong class="tit">총 제안 금액</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>125</strong>
+                <span>억</span> 
+                <strong>5000</strong>
+                <span>만원</span> 
+              </span>
+            </div>
+          </li>
+          <li class="items type_3">
+            <strong class="tit">총 보증 건수</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>125</strong>
+                <span>건</span> 
+              </span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="dashboardWrap">
+          <li class="rank">
+            <strong class="tit">최다 제안서 제출 금융기관</strong>
+            <ol>
+              <li><em>1</em>신한캐피탈</li>
+              <li><em>2</em>신한캐피탈</li>
+              <li><em>3</em>신한캐피탈신한캐피탈</li>
+              <li><em>4</em>신한캐피탈</li>
+              <li><em>5</em>신한캐피탈</li>
+            </ol>
+          </li>
+          <li class="rank">
+            <strong class="tit">최다 대출 실행 금융기관</strong>
+            <ol>
+              <li><em>1</em>신한캐피탈</li>
+              <li><em>2</em>신한캐피탈</li>
+              <li><em>3</em>신한캐피탈</li>
+              <li><em>4</em>신한캐피탈</li>
+              <li><em>5</em>신한캐피탈</li>
+            </ol>
+          </li>
+          <li class="rank">
+            <strong class="tit">최다 대출 실행액 금융기관</strong>
+            <ol>
+              <li><em>1</em>신한캐피탈</li>
+              <li><em>2</em>신한캐피탈</li>
+              <li><em>3</em>신한캐피탈신한캐피탈</li>
+              <li><em>4</em>신한캐피탈</li>
+              <li><em>5</em>신한캐피탈</li>
+            </ol>
+          </li>
+          <li class="rank">
+            <strong class="tit">최다 예비 심사 제출 보증기관 </strong>
+            <ol>
+              <li><em>1</em>신한캐피탈</li>
+              <li><em>2</em>신한캐피탈</li>
+              <li><em>3</em>신한캐피탈</li>
+              <li><em>4</em>신한캐피탈</li>
+              <li><em>5</em>신한캐피탈</li>
+            </ol>
+          </li>
+        </ul>
+
+
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+</body>
+</html>
