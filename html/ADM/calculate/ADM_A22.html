@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+  
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">이의 제기 관리</h2>
+      <ul class="breadcrumb">
+         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+         <li><a href="#none"><span>정산 현황</span></a></li>
+         <li><a href="#none"><strong>이의 제기 관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState1_1" class="label">년도</label>
+              <div class="formRow">
+                <select id="selectLabelState1_1">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_2" class="label">월</label>
+              <div class="formRow">
+                <select id="selectLabelState1_2">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_3" class="label srOnly">기간선택</label>
+              <div class="formRow">
+                <div class="rangeControl">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState1_4" class="label">금융기관명</label>
+              <div class="formRow">
+                <input type="text" class="input" value="" placeholder="법인명을 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_5" class="label">상태</label>
+              <div class="formRow">
+                <select id="selectLabelState1_5">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+   
+      <div class="sectionBlock40">
+        <fieldset class="tableFilterGroup">
+          <span class="count">총 <strong>23</strong>건</span>
+          <div class="formRow" role="group">
+            <select title="보기갯수 선택">
+              <option>10개씩 보기</option>
+              <option>본부2</option>
+            </select>
+            <button type="button" class="btnDkGreen">적용</button>
+          </div>
+        </fieldset>
+
+        <div class="jsGridWrap">
+          <div id="jsGrid2" class="bbs" caption="보증 예비 심사 목록"></div>    
+          <div class="table_bt">
+            <div id="externalPager2" class="external-pager"></div>
+          </div>
+        </div>
+
+                
+        <script>
+          $(function() {
+
+            var clients = [
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite'>진행중</button>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite' disabled>거절</button>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<span class='textBold blue'>수락</span>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
+                "Name4": "<button type='button' class='btnWhite'>접수중</button>", 
+              },
+            ]; 
+
+            $("#jsGrid2").jsGrid({
+              data: clients,
+              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOOOO 있어요.</p></div>",
+
+              fields: [
+                { name: "Name1",  type: "text", title : "이의 신청일", width: '25%'},
+                { name: "Name2",  type: "text", title : "금융기관명", width: '25%'},
+                { name: "Name3", type: "text", title : "담당자명", width: '25%' },
+                { name: "Name4", type: "button", title : "상태", width: '25%' },
+              ],
+              
+              pagerContainer: "#externalPager2",
+
+            });
+          });
+        </script>
+      </div>
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+<script>
+</script>
+ 
+
+</body>
+</html>

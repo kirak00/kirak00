@@ -63,6 +63,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
 
 section       {max-width:1920px; padding:0 60px;  }
+.bgWrap section { padding: 0 120px}
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
@@ -287,3 +288,15 @@ fieldset .searchControlBox { width: 100%;}
 .layerBody.eventPop .layerHead .barList .list { color: #555; font-weight: 400;}
 .layerBody.eventPop .layerHead .barList .list + .list { margin-left: 16px; padding-left: 16px;}
 .layerBody.eventPop .layerHead .barList .list + .list::before { background: #888;}
+
+.layerCont .textTable { margin-top: 0;}
+.layerCont .textTable th, 
+.layerCont .textTable td { padding-top: 10px; padding-bottom: 10px;}
+
+.table_wrap.mt30 { margin-top: 30px;}
+.layerCont .tableData { padding: 30px 0; text-align: center;}
+
+.comment .replies { margin-left: 120px;}
+.comment .textarea { width: 1400px;}
+.comment .commentBody { display: flex; }
+.comment .commentBody .btnSuccess { margin-left: 20px; align-self: flex-end;}

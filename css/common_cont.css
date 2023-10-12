@@ -142,7 +142,6 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiBox { padding: 24px 30px; background: #F6FBF7; border-radius: 16px; color: #333; }
 .notiBox.lineType { background: #fff; text-align: center; border: 1px solid #ddd; }
 .notiBox.lineType .notiTxt { justify-content: center;}
-.notiBox .titH4.hasLine,
 .notiBox.grayType { background: #F4F4F4;}
 .notiBox .notiTxt { color: #333;}
 .notiBox .notiTxt::before { width: 20px; height: 20px; margin-right: 16px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / contain;}
@@ -670,6 +669,7 @@ select.wid430 { min-width: 430px;}
 .layerCont .textarea { min-height: 50px; height: 180px;}
 .layerCont .textarea.h64 { height: 50px; }
 .layerCont .textarea.h100 { height: 100px; }
+
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */

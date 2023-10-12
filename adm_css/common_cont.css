@@ -999,7 +999,7 @@ footer .copy p    {float:left;  }
 footer .copy p span {display:block; line-height:28px;   }
 footer .copy .wa    {float:right; }
 
-.bgWrap     {background:#FAFAFA}
+/* .bgWrap     {background:#FAFAFA; } */
 
 section   {margin:0 auto; max-width: 1400px;}
 
@@ -1061,6 +1061,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox button.btnSky { min-width:120px; padding:0 10px; }
 
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
+.table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .bgGray + .table_bt      { margin-top:20px; }
 .table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
@@ -1524,7 +1525,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:18px; height:18px; background: url(../adm_images/common/ico_24_close_b.png) no-repeat 0 0 / 18px; }
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
-.layerWrap .layerBody .layerHead button.topPreview { position: absolute; top: -44px; left: 0; background-image: none; color: #fff; font-size: 20px; font-weight: 700;}
+.layerWrap .layerBody .layerHead .topTitle { position: absolute; top: -44px; left: 0; background-image: none; color: #fff; font-size: 20px; font-weight: 700;}
 .layerWrap .layerBody .layerHead button.layerClose.topClose { position: absolute; top: -60px; right: 0; width: auto; height: 40px; padding: 0 50px; border: 1px solid #fff; border-radius: 45px; background-image: none; color: #fff; font-size: 16px; font-weight: 700;}
 .layerWrap .layerBody .layerCont    {padding:40px 40px 0;  }
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
