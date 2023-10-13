@@ -489,6 +489,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .checkbox { display: inline-block; white-space: nowrap;}
 .checkbox + .checkbox { margin-left:26px; }
 .bbs .checkbox + .checkbox { margin-left:20px; }
+.bbs_list .checkVertical { padding: 20px 0;}
+.checkVertical .checkbox { width: 100%;}
+.checkVertical .checkbox + .checkbox { margin-left: 0; margin-top: 10px;}
 .formGroup .checkbox { margin-left:0; padding-left:20px; } /* 검색쪽 */
 .checkbox input[type=checkbox] + label span:first-child { position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../adm_images/common/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
 .checkbox input[type=checkbox] + label.on span:first-child,
