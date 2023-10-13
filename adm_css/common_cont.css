@@ -119,10 +119,11 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .barList .list { position: relative; color: #fff; font-size: 18px;}
 .barList .list + .list { margin-left: 8px; padding-left: 8px;}
 .barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #fff; }
+
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; margin-left: 9px; text-indent: -4px; }
+.notiTxt {  color: #4C9DA2; padding-left: 9px; text-indent: -4px; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt8 { margin-top: 8px;}
 .notiTxt.mt40 { margin-top: 40px;}
@@ -351,6 +352,12 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 .btnFile      {font-size: 18px; font-weight: 700; color:#069B66; text-decoration: underline;}
 .btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 
+.btnRefresh      {font-size: 16px; font-weight: 700; color: #555;}
+.btnRefresh::after  {content:""; display:inline-block; margin-left:2px; width:18px; height:18px; vertical-align: -4px; background:url(../adm_images/common/ico_18_refresh_primary.png) no-repeat 50% 50% / contain }
+.btnRefresh.blue      {color: #069B66;}
+.btnRefresh.blue::after  {background-image:url(../adm_images/common/ico_24_refresh_primary.png);}
+
+
 .btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../adm_images/common/ico_24_download_white.png) no-repeat 50% 50% #069B66;  }
 .btnDown:focus
 .btnDown:hover    {background-color:#148159 ;  }
@@ -483,6 +490,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .checkbox { display: inline-block; white-space: nowrap;}
 .checkbox + .checkbox { margin-left:26px; }
 .bbs .checkbox + .checkbox { margin-left:20px; }
+.bbs_list .checkVertical { padding: 20px 0;}
+.checkVertical .checkbox { width: 100%;}
+.checkVertical .checkbox + .checkbox { margin-left: 0; margin-top: 10px;}
 .formGroup .checkbox { margin-left:0; padding-left:20px; } /* 검색쪽 */
 .checkbox input[type=checkbox] + label span:first-child { position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 8px; background: no-repeat center / 24px 24px url("../adm_images/common/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
 .checkbox input[type=checkbox] + label.on span:first-child,
@@ -552,7 +562,6 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* .formGroup {}
 .formGroup.wid840 { width: 840px;} */
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
-.formRow>:only-child { }
 /* textarea text count 있을경우 */
 
 .formRow.fullType { width: 100%;}
@@ -819,26 +828,36 @@ select.wid430 { min-width: 430px;}
 
 .formListWrap {position: relative; }
 .formListWrap.wid1020 { width: 1020px; }
-.formListWrap.hasLine { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
-.formList { display: flex; align-items: center; margin: 40px 0 20px; }
-.formListWrap .formList { width: 1020px; flex-wrap: wrap; margin: 0;}
+.formListWrap.hasBorder { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
+.formListWrap.hasBorder .searchBtns { position: absolute; right: 40px; bottom: 40px;}
+.formList { display: flex; align-items: center; flex-wrap: wrap;  margin: 40px 0 20px; }
+.formListWrap .formList { width: 1020px; flex-wrap: wrap;  margin: 0;}
 .formListWrap .formList + .formList { margin-top: 30px;}
 .formListWrap .formList .label {width: 175px; margin-right: 0;}
-.formListWrap .formList .formRow {width: calc(100% - 175px);}
-.formListWrap .formList .notiTxt { padding-left: 175px;}
+.formListWrap .formList .radio .label { width: auto;}
+.formListWrap .formList .formRow { max-width: calc(100% - 175px);}
+.formListWrap .formList .formRow.fullType { max-width: 100%;}
+.formListWrap .formList .notiTxt { margin-left: 175px;}
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
-.formListWrap.hasLine .searchBtns { position: absolute; right: 40px; bottom: 40px;}
 
 
 
 .layerCont .formLisLine { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-.layerCont .formLisLine .formList:first-child { margin-top: 0;}
-.layerCont .formLisLine .formList:last-child { margin-bottom: 0;}
+.layerCont .formLisLine .formList { width: 100%; margin: 16px 0; }
+.layerCont .formLisLine .formList .label { width: 90px; margin-right: 0px;}
+.layerCont .formLisLine .formList .formRow { max-width: calc(100% - 90px);}
+.layerCont .formLisLine .formList .notiTxt { margin-left: 90px;}
 
-.layerCont .formList { width: 100%; margin: 16px 0; }
-.layerCont .formList .label { width: 90px; margin-right: 0px;}
+
+.layerCont .formList:first-child { margin-top: 0;}
+.layerCont .formList:last-child { margin-bottom: 0;}
+.layerCont .formList { width: 100%; margin: 30px 0; }
+.layerCont .formList .label { width: 100px; margin-right: 0px;}
+.layerCont .formList .radio .label { width: auto;}
+.layerCont .formList .formRow { max-width: calc(100% - 100px);}
+.layerCont .formList .notiTxt { margin-left: 100px;}
  
 /****************************
 **********  accordion  **********
@@ -2188,3 +2207,24 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .multipleRows tr:last-child > td {
   border-bottom: 0;
 }
+
+
+.boxTableWrap { display: flex; flex-wrap: wrap; gap: 40px}
+.boxTableWrap .box { width: calc(50% - 20px); min-height: 500px; padding: 30px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px; }
+.boxTableWrap .box .titArea { display: flex; justify-content: space-between;}
+.boxTableWrap .box .titArea .barList { align-items: center;}
+.boxTableWrap .box .titArea .barList .list { color: #333; font-size: 16px;}
+.boxTableWrap .box .titArea .barList .list .btnRefresh {  padding: 20px 0;}
+.boxTableWrap .box .titArea .barList .list + .list { margin-left: 20px; padding-left: 20px;}
+.boxTableWrap .box .titArea .barList .list + .list::before { background: #ddd;}
+.boxTableWrap .box .titH4 { padding-bottom: 30px;}
+.boxTableWrap .box .table_wrap { height: 320px; margin-top: 0; border-radius: 0;}
+.boxTableWrap .box .bbs_list { height: 100%; }
+.boxTableWrap .box .bbs_list th { padding-left: 30px; border: 1px solid #ddd;}
+.boxTableWrap .box .bbs_list td { padding-left: 24px;}
+.boxTableWrap .box .bbs_list th,
+.boxTableWrap .box .bbs_list td { text-align: left;}
+.boxTableWrap .box .bbs_list .formRow { justify-content: flex-start;}
+.boxTableWrap .box .input { width: 80px; text-align: right;}
+.boxTableWrap .box .sub { margin-top: 12px; color: #888;}
+.boxTableWrap .box .sub.right { margin-top: 0; margin-left: auto;}
