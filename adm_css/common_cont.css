@@ -122,7 +122,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; margin-left: 9px; text-indent: -4px; }
+.notiTxt {  color: #4C9DA2; padding-left: 9px; text-indent: -4px; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt8 { margin-top: 8px;}
 .notiTxt.mt40 { margin-top: 40px;}
@@ -551,7 +551,6 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* .formGroup {}
 .formGroup.wid840 { width: 840px;} */
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
-.formRow>:only-child { }
 /* textarea text count 있을경우 */
 
 .formRow.fullType { width: 100%;}
@@ -818,26 +817,36 @@ select.wid430 { min-width: 430px;}
 
 .formListWrap {position: relative; }
 .formListWrap.wid1020 { width: 1020px; }
-.formListWrap.hasLine { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
-.formList { display: flex; align-items: center; margin: 40px 0 20px; }
-.formListWrap .formList { width: 1020px; flex-wrap: wrap; margin: 0;}
+.formListWrap.hasBorder { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
+.formListWrap.hasBorder .searchBtns { position: absolute; right: 40px; bottom: 40px;}
+.formList { display: flex; align-items: center; flex-wrap: wrap;  margin: 40px 0 20px; }
+.formListWrap .formList { width: 1020px; flex-wrap: wrap;  margin: 0;}
 .formListWrap .formList + .formList { margin-top: 30px;}
 .formListWrap .formList .label {width: 175px; margin-right: 0;}
-.formListWrap .formList .formRow {width: calc(100% - 175px);}
-.formListWrap .formList .notiTxt { padding-left: 175px;}
+.formListWrap .formList .radio .label { width: auto;}
+.formListWrap .formList .formRow { max-width: calc(100% - 175px);}
+.formListWrap .formList .formRow.fullType { max-width: 100%;}
+.formListWrap .formList .notiTxt { margin-left: 175px;}
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
-.formListWrap.hasLine .searchBtns { position: absolute; right: 40px; bottom: 40px;}
 
 
 
 .layerCont .formLisLine { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-.layerCont .formLisLine .formList:first-child { margin-top: 0;}
-.layerCont .formLisLine .formList:last-child { margin-bottom: 0;}
+.layerCont .formLisLine .formList { width: 100%; margin: 16px 0; }
+.layerCont .formLisLine .formList .label { width: 90px; margin-right: 0px;}
+.layerCont .formLisLine .formList .formRow { max-width: calc(100% - 90px);}
+.layerCont .formLisLine .formList .notiTxt { margin-left: 90px;}
 
-.layerCont .formList { width: 100%; margin: 16px 0; }
-.layerCont .formList .label { width: 90px; margin-right: 0px;}
+
+.layerCont .formList:first-child { margin-top: 0;}
+.layerCont .formList:last-child { margin-bottom: 0;}
+.layerCont .formList { width: 100%; margin: 30px 0; }
+.layerCont .formList .label { width: 100px; margin-right: 0px;}
+.layerCont .formList .radio .label { width: auto;}
+.layerCont .formList .formRow { max-width: calc(100% - 100px);}
+.layerCont .formList .notiTxt { margin-left: 100px;}
  
 /****************************
 **********  accordion  **********

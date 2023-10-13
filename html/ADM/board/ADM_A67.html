@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section>
+     <!-- 
+      * 레이어 호출
+      class="open_layer"  // 팝업 호출
+      aria-controls="레이어 ID" // 접근성 팝업 알림용
+      -->
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">등록</button>
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>등록</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="formList">
+          <label class="label">등록일</label>
+          <div class="formRow">2023-01-0</div>
+        </div>
+        <div class="formList">
+          <label class="label">등록자</label>
+          <div class="formRow">홍길동</div>
+        </div>
+        <div class="formList">
+          <label class="label" for="labelExtraOp1">영상 경로</label>
+          <div class="formRow">
+            <input class="input" id="labelExtraOp1" type="text" placeholder="URL" value="">
+          </div>
+          <p class="notiTxt"><span class="pntCol_1">(필수)</span>Youtube에 업로드 후 영상의 경로를 입력해 주세요</p>
+        </div>
+        <div class="formList">
+          <label class="label" for="labelExtraOp2">제목</label>
+          <div class="formRow">
+            <input class="input" id="labelExtraOp2" type="text" placeholder="" value="Loan&Biz 소개 영상">
+          </div>
+          <p class="notiTxt"><span class="pntCol_1">(필수)</span>제목은 50자 미만으로 입력해 주세요</p>
+        </div>
+        <div class="formList">
+          <label class="label" for="labelExtraOp3">준법감시인<br>심의필</label>
+          <div class="formRow">
+            <input class="input" id="labelExtraOp3" type="text" placeholder="심의 번호를 입력하세요." value="">
+          </div>
+          <p class="notiTxt">(선택)영상 등록 전 준법감시인 심의필 여부를 반드시 확인해 주세요</p>
+        </div>
+        <div class="formList">
+          <label class="label" id="labelExtraOp4">심의 기간</label>
+          <div class="formRow">
+            <div class="rangeControl" role="group" aria-labelledby="labelExtraOp4">
+              <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>           
+          </div>
+        </div>
+        <div class="formList">
+          <label class="label" id="labelExtraOp5">노출 여부</label>
+          <div class="formRow" role="group" aria-labelledby="labelExtraOp5">
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_1"><span></span>노출</label>
+            </span>        
+            <span class="radio">
+              <input type="radio" id="formLabel1_2" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_2"><span></span>비노출</label>
+            </span>        
+          </div>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
+        <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
