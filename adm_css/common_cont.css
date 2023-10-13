@@ -2195,3 +2195,18 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .multipleRows tr:last-child > td {
   border-bottom: 0;
 }
+
+
+.boxTableWrap { display: flex; flex-wrap: wrap; gap: 40px}
+.boxTableWrap .box { width: calc(50% - 20px); min-height: 500px; padding: 30px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px; }
+.boxTableWrap .box .titH4 { padding-bottom: 30px;}
+.boxTableWrap .box .table_wrap { height: 320px; margin-top: 0; border-radius: 0;}
+.boxTableWrap .box .bbs_list { height: 100%;}
+.boxTableWrap .box .bbs_list th { padding-left: 30px; border: 1px solid #ddd;}
+.boxTableWrap .box .bbs_list td { padding-left: 24px;}
+.boxTableWrap .box .bbs_list th,
+.boxTableWrap .box .bbs_list td { text-align: left;}
+.boxTableWrap .box .bbs_list .formRow { justify-content: flex-start;}
+.boxTableWrap .box .input { width: 80px; text-align: right;}
+.boxTableWrap .box .sub { margin-top: 12px; color: #888;}
+.boxTableWrap .box .sub.right { margin-top: 0; margin-left: auto;}
