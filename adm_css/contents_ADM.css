@@ -247,6 +247,8 @@ ul.boxWrap.chartBox li.box span.tit em  {display:block; font-size:16px; font-wei
 ul.boxWrap.chartBox li.box div.chart  {display:block; width:300px; height:400px; margin:0 auto;  }
 ul.boxWrap.chartBox li.box div.pie  {display:block; width:250px; height:300px; margin:0 auto;  }
 .notiTxt.tr {text-align: right;}
+.notiTxt.tr em {margin-right:8px; }
+.notiTxt.tr::before {display:none; }
 .notiTxt button {color:#fff; margin-left:10px;  }
 ul.boxWrap.chartBox li.box ul.legend      { background:#F6FBF7; margin:0 40px; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap; border-radius:8px;     }
 ul.boxWrap.chartBox li.box ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
@@ -278,7 +280,9 @@ ul.boxWrap.payData li.box .barChart .legend em.icon_2::before    {background:#46
 .flexCont > div   {width:100%; }
 .table_wrap table td ol   {padding:20px 0; text-align: left; display:inline-block }
 
-.moneyTxt span   {font-size: 14px;  }
+.moneyTxt     {}
+.moneyTxt em     {}
+.moneyTxt span   {display:block; color:#888; font-size: 14px;   }
 
 ul.dashboardWrap      {display:flex; gap:20px;  }
 ul.dashboardWrap > li   {width:calc(50% - 10px); padding:40px 50px; max-width:50%; border:1px solid #ddd; border-radius:16px; }

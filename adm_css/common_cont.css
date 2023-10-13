@@ -281,6 +281,7 @@ table a.btnLine       { line-height: 36px;}
 .btnBlack:disabled {border:1px solid #ddd;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
+.ico_down.btnSky {color:#fff; }
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
 .btnSuccess.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
@@ -1057,12 +1058,13 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup { display: flex; justify-content: space-between; align-items: center; }
 .tableFilterGroup.mt20 { margin-top: 20px;}
 .tableFilterGroup.mt40 { margin-top: 40px;}
-.tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 16px; color: #333; font-weight: 700;}
+.tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 16px; color: #333; font-weight: 700; margin-top:auto; }
 .tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
 .tableFilterGroup .count .dkGreen { color: #4C9DA2;}
 .tableFilterGroup select { height: 40px; padding: 0 64px 0 16px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
 .tableFilterGroup .btnDkGreen { height: 40px;  width: 88px; padding: 0;}
+.tableFilterGroup .btnSky { height: 40px;  padding: 0 30px;}
 .tableFilterGroup .bbsTip { padding:0; padding-right:12px; }
 .filterLabel { margin-bottom: 20px; color: #4C9DA2; text-align: right;}
 

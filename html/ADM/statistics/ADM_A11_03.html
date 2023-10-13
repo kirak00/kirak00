@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/lib/echarts.min.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="adm">
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** --> 
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">금융 회원 통계</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none">통계</a></li>
+            <li><a href="#none"><strong>금융 회원 통계</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      
+      <section>
+          
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label class="label">조회 항목</label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">상세 통계 (일반 현황)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label  class="label">금융업권 </label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <label  class="label">연도</label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label  class="label">월</label>
+                <div class="formRow">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+              <div class="rangeControl">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+      </section>
+
+      <section>
+        <p class="notiTxt tr">
+          제안서 제출별 지역 현황(법인 회원 본사 기준)
+          <button type="button" class="btnSky ico_down">엑셀 다운로드</button>
+        </p>
+        
+        <h4 class="titH4">대출 비교하기 신청 현황</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <colgroup>
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">서울</th>
+                <th scope="col">경기</th>
+                <th scope="col">인천</th>
+                <th scope="col">충남</th>
+                <th scope="col">충북</th>
+                <th scope="col">경남</th>
+                <th scope="col">경북</th>
+                <th scope="col">전북</th>
+                <th scope="col">전남</th>
+                <th scope="col">강원</th>
+                <th scope="col">제주</th>
+                <th scope="col">세종</th>
+                <th scope="col">부산</th>
+                <th scope="col">대구</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+              </tr>
+            </thead>
+            <tbody>
+          </table>
+        </div>
+        
+        
+        <h4 class="titH4">대출 실행별 지역 현황(법인 회원 본사 기준)</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <colgroup>
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">서울</th>
+                <th scope="col">경기</th>
+                <th scope="col">인천</th>
+                <th scope="col">충남</th>
+                <th scope="col">충북</th>
+                <th scope="col">경남</th>
+                <th scope="col">경북</th>
+                <th scope="col">전북</th>
+                <th scope="col">전남</th>
+                <th scope="col">강원</th>
+                <th scope="col">제주</th>
+                <th scope="col">세종</th>
+                <th scope="col">부산</th>
+                <th scope="col">대구</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+              </tr>
+            </thead>
+            <tbody>
+          </table>
+        </div>
+        
+        
+        <h4 class="titH4">예비 보증 심사별 지역 현황(법인 회원 본사 기준)</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <colgroup>
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">서울</th>
+                <th scope="col">경기</th>
+                <th scope="col">인천</th>
+                <th scope="col">충남</th>
+                <th scope="col">충북</th>
+                <th scope="col">경남</th>
+                <th scope="col">경북</th>
+                <th scope="col">전북</th>
+                <th scope="col">전남</th> 
+                <th scope="col">강원</th>
+                <th scope="col">제주</th>
+                <th scope="col">세종</th>
+                <th scope="col">부산</th>
+                <th scope="col">대구</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+                <td>40 <br>(4%)</td>
+              </tr>
+            </thead>
+            <tbody>
+          </table>
+        </div>
+        
+
+        
+        
+        <div class="flexCont">
+          <div>
+            <h4 class="titH4">제안서 제출별 법인 회원 업종 현황</h4>
+            <div class="table_wrap">
+              <table class="bbs_list">
+                <colgroup>
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">비율</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>제조업</td>
+                    <td>65 <br>(10%)</td>
+                  </tr>
+                </thead>
+                <tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div>
+            <h4 class="titH4">대출 실행별 법인 회원 업종 현황</h4>
+            <div class="table_wrap">
+              <table class="bbs_list">
+                <colgroup>
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">비율</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>제조업</td>
+                    <td>65 <br>(10%)</td>
+                  </tr>
+                </thead>
+                <tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div>
+            <h4 class="titH4">예비 보증 심사 회원 업종 현황</h4>
+            <div class="table_wrap">
+              <table class="bbs_list">
+                <colgroup>
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">제조업</th>
+                    <th scope="col">비율</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>제조업</td>
+                    <td>65 <br>(10%)</td>
+                  </tr>
+                </thead>
+                <tbody>
+              </table>
+            </div>
+            
+          </div>
+        </div>
+
+        
+
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+</body>
+</html>
