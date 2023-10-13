@@ -119,6 +119,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .barList .list { position: relative; color: #fff; font-size: 18px;}
 .barList .list + .list { margin-left: 8px; padding-left: 8px;}
 .barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #fff; }
+
 /****************************
 **********  noti  **********
 *****************************/
@@ -349,6 +350,12 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 
 .btnFile      {font-size: 18px; font-weight: 700; color:#069B66; text-decoration: underline;}
 .btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+
+.btnRefresh      {font-size: 16px; font-weight: 700; color: #555;}
+.btnRefresh::after  {content:""; display:inline-block; margin-left:2px; width:18px; height:18px; vertical-align: -4px; background:url(../adm_images/common/ico_18_refresh_primary.png) no-repeat 50% 50% / contain }
+.btnRefresh.blue      {color: #069B66;}
+.btnRefresh.blue::after  {background-image:url(../adm_images/common/ico_24_refresh_primary.png);}
+
 
 .btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../adm_images/common/ico_24_download_white.png) no-repeat 50% 50% #069B66;  }
 .btnDown:focus
@@ -2199,9 +2206,15 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 
 .boxTableWrap { display: flex; flex-wrap: wrap; gap: 40px}
 .boxTableWrap .box { width: calc(50% - 20px); min-height: 500px; padding: 30px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px; }
+.boxTableWrap .box .titArea { display: flex; justify-content: space-between;}
+.boxTableWrap .box .titArea .barList { align-items: center;}
+.boxTableWrap .box .titArea .barList .list { color: #333; font-size: 16px;}
+.boxTableWrap .box .titArea .barList .list .btnRefresh {  padding: 20px 0;}
+.boxTableWrap .box .titArea .barList .list + .list { margin-left: 20px; padding-left: 20px;}
+.boxTableWrap .box .titArea .barList .list + .list::before { background: #ddd;}
 .boxTableWrap .box .titH4 { padding-bottom: 30px;}
 .boxTableWrap .box .table_wrap { height: 320px; margin-top: 0; border-radius: 0;}
-.boxTableWrap .box .bbs_list { height: 100%;}
+.boxTableWrap .box .bbs_list { height: 100%; }
 .boxTableWrap .box .bbs_list th { padding-left: 30px; border: 1px solid #ddd;}
 .boxTableWrap .box .bbs_list td { padding-left: 24px;}
 .boxTableWrap .box .bbs_list th,
