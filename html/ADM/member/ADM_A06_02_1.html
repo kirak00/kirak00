@@ -40,79 +40,54 @@
       <div class="tabLineWrap">
         <div class="inner">
           <ul class="tabLine tabScript" role="tablist">
-            <li><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_1">법인 정보</button></li>
-            <li class="on"><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_2">대출 비교 신청 정보</button></li>
-            <li><button type="button" role="tab" aria-selected="true" aria-controls="main_loan_cont_3">메모</button></li>
-          </ul>
+            <li class="on"><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_1">법인 정보</button></li>
+          </ul> 
         </div>
       </div>
       <div class="bgWrap">
         <section class="detail">
-          <ul class="innerTab tabScript" role="tablist">
-            <li><button type="button" role="tab" id="innerTab_1" aria-selected="true" aria-controls="main_loan_cont_1" class="on">업체 개요</button></li>
-            <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="false" aria-controls="main_loan_cont_1">경영진 인적사항</button></li>
-            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">주주 인적 사항</button></li> 
-            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">노사 관계 및 연혁</button></li> 
-            <li><button type="button" role="tab" id="innerTab_3" aria-selected="false" aria-controls="main_loan_cont_1">필요 서류 제출</button></li> 
-          </ul>
-          
-          <!-- <h3 class="tit45">대표자 유형: 단독 대표</h3> 
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <caption>대표자 유형: 단독 대표</caption>
+          <div class="formListTable formLgTable">
+            <table>
+              <caption>회원가입정보 법인회사정보</caption>
               <colgroup>
-                <col />
+                <col width="186px">
+                <col width="auto">
               </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">성명</th>
-                  <th scope="col">직함</th>
-                  <th scope="col">사업장 소유구분</th>
-                  <th scope="col">동업계 종사년수</th>
-                  <th scope="col">자가 여부</th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>홍길동</td>
-                  <td>공동대표</td>
-                  <td>가족</td>
-                  <td>19</td>
-                  <td>있음</td>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">회원 상태</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName" class="input" type="text" value="탈퇴" readonly>
+                    </div>
+                  </td>
                 </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName1">사업자등록번호</label>
+                  </th>
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName1" class="input" type="text" value="105-88-77898" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName2">아이디</label>
+                  </th> 
+                  <td>
+                    <div class="formRow ">
+                      <input id="inpBrdName2" class="input" type="text" value="shinhan01" readonly>
+                    </div>
+                  </td>
+                </tr>
+ 
               </tbody>
             </table>
           </div>
-         -->
-          <h3 class="tit45">경영진 현황</h3> 
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <caption>경영진 현황</caption>
-              <colgroup>
-                <col />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">성명</th>
-                  <th scope="col">직함</th>
-                  <th scope="col">회사와의 실질적 관계</th>
-                  <th scope="col">근속년수</th>
-                  <th scope="col">주요 경력</th>
-
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>홍길동</td>
-                  <td>회장</td>
-                  <td>주주 (단독 30% 이상)</td>
-                  <td>21</td>
-                  <td>한국은행 부행장</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        
 
         </section>
       </div>
