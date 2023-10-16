@@ -261,6 +261,22 @@ ul.boxWrap.chartBox li.box ul.legend li em   {display:inline-block; width:8px; h
 ul.boxWrap.chartBox li.box div.chart2  {display:block; width:430px; height:400px; margin:0 auto;  }
 ul.boxWrap.chartBox li.box .ment  {text-align: center; font-weight: 500;}
 
+
+ul.boxWrap.chartBox.review            {display:block; overflow: hidden; }
+ul.boxWrap.chartBox.review li.box     {float:right; width:430px; margin-left:20px; padding-bottom:30px;    }
+ul.boxWrap.chartBox.review li.box.left     {float:left; width:430px; }
+ul.boxWrap.chartBox.review li.box.left ~ .left  {margin-top:24px; }
+ul.boxWrap.chartBox.review li.box ul.legend     {width:280px; flex-direction: column; padding:10px 30px; }
+ul.boxWrap.chartBox.review li.box ul.legend li  {width:100%; margin:10px 0 }
+ul.boxWrap.chartBox.review li.box div.chart   {width:280px; height:230px; }
+ul.boxWrap.chartBox.review li.box div.pie     {width:150px; height:150px; }
+ul.boxWrap.chartBox.review li.box div.avr     {text-align: center; height:148px; }
+ul.boxWrap.chartBox.review li.box div.avr .formRow     {justify-content: center; padding:30px 0 20px }
+ul.boxWrap.chartBox.review li.box div.avr strong     {font-size: 30px; color:#069B66; }
+
+
+
+
 ul.boxWrap.payData li.box   {text-align: center; height:275px;  }
 ul.boxWrap.payData li.box span.tit   {display:block; padding:40px 0 0; text-align: center; font-size: 18px; font-weight: 700; }
 ul.boxWrap.payData li.box span.tit + strong   {display:inline-block; padding:40px 10px 0; text-align: center; font-size: 30px; margin-top:60px; box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ; }
@@ -320,17 +336,17 @@ ul.dashboardWrap li.itemTxt strong.tit    { font-size:18px;}
 ul.dashboardWrap li.itemTxt .dash_data    {  text-align: center; }
 
 
-.barChart         { width:100%; position:relative; height:26px;  }
-.barChart::before { content:""; display:block; position:absolute; width:100%; height:10px; top:8px; background:#F4F6F8; border-radius: 5px; }
-.barChart span { display:block; position:relative; z-index: 2; float:left; height:10px; margin-top:8px; background:#5066B6; border-radius: 5px; }  
-.barChart span em { position:absolute; z-index:10; width:18px; height:18px; right:-4px; border:4px solid rgba(25, 55, 109, 0.20); border-radius: 50%; margin-top: -8px; box-sizing: content-box;   } 
-.barChart span em::before { content: ""; display:block; width:18px; height:18px; background:#5066B6; border-radius: 50%;; } 
-.barChart em.l         {position:absolute; left:0;  bottom:-20px; font-size: 14px; color:#555;  }
-.barChart em.r         {position:absolute; right:0; bottom:-20px; font-size: 14px; color:#555;  }
+.barChart2         { width:100%; position:relative; height:26px;  }
+.barChart2::before { content:""; display:block; position:absolute; width:100%; height:10px; top:8px; background:#F4F6F8; border-radius: 5px; }
+.barChart2 span { display:block; position:relative; z-index: 2; float:left; height:10px; margin-top:8px; background:#5066B6; border-radius: 5px; }  
+.barChart2 span em { position:absolute; z-index:10; width:18px; height:18px; right:-4px; border:4px solid rgba(25, 55, 109, 0.20); border-radius: 50%; margin-top: -8px; box-sizing: content-box;   } 
+.barChart2 span em::before { content: ""; display:block; width:18px; height:18px; background:#5066B6; border-radius: 50%;; } 
+.barChart2 em.l         {position:absolute; left:0;  bottom:-20px; font-size: 14px; color:#555;  }
+.barChart2 em.r         {position:absolute; right:0; bottom:-20px; font-size: 14px; color:#555;  }
  
 
-ul.dashboardWrap li .barChart   { width: 215px; margin: -60px auto 0;   }
-ul.dashboardWrap li .barChart + span.dataSize   { margin:30px 0 auto; }
+ul.dashboardWrap li .barChart2   { width: 215px; margin: -60px auto 0;   }
+ul.dashboardWrap li .barChart2 + span.dataSize   { margin:30px 0 auto; }
 
 
 span.dataSize      { position:relative; display:inline-block; padding:0 10px; font-size:30px;  }
