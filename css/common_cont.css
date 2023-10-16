@@ -64,6 +64,8 @@
 .titH5.hasLine { height: 40px; border-bottom: 1px solid #ddd;}
 .titH51 { font-size: 16px; font-weight: 400; margin-top:40px; color:#333; }
 
+.titH6 {display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700;}
+
 /* .titH5 + .formListTable { margin-top: 40px;} */
 .tableTit { font-size: 34px; font-size: 700; }
 .titH3.hasLine,
@@ -122,10 +124,10 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; }
+.notiTxt {  color: #4C9DA2; padding-left: 22px; text-indent: -22px; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
-.notiTxt::before { content: ''; display: inline-block; width: 16px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat 0 3px / contain; vertical-align: top; flex-shrink: 0;}
+.notiTxt::before { content: ''; display: inline-block; width: 18px; height: 18px; margin-right: 4px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: -3px; flex-shrink: 0;}
 .notiTxt.noIcon::before { display: none;} 
 
 .notiTxt.blue { color: #069B66; font-weight: 700; }
@@ -463,7 +465,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .jsGridWrap td .selectAllCheckbox:checked::after  { background-color: #fff;}
 
 .radio input[type=radio] + label , 
-.checkbox input[type=checkbox] + label { display: inline-block; vertical-align: middle; color: #333; font-size: 16px; font-weight: 400;} 
+.checkbox input[type=checkbox] + label { display: inline-block; padding-left: 32px; text-indent: -32px; vertical-align: middle; color: #333; font-size: 16px; font-weight: 400; word-break: keep-all} 
 .checkbox.checkAll { padding: 0 0 20px 0;}
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
@@ -596,7 +598,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .input.wid32 { width: 32px; padding: 0;}
 .input.wid82 { width: 82px;}
 .input.wid160 { width: 160px;}
+.input.wid180 { width: 180px;}
 .input.wid200 { width: 200px;}
+.input.wid220 { width: 220px;}
 .input.wid240 { width: 240px;}
 .input.wid300 { width: 300px;}
 .input.wid380 { width: 380px;}
@@ -794,16 +798,28 @@ select.wid430 { min-width: 430px;}
 .msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
 .msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
 
-.formListWrap { margin: 20px 0; padding: 20px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.formListWrap { margin: 20px 0;}
 .formListWrap .formList:first-child { margin-top: 0;}
 .formListWrap .formList:last-child { margin-bottom: 0;}
 .formList { display: flex; align-items: center; margin: 40px 0 20px; }
-.formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
+.formList .label { display: inline-flex; margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
 
-.layerCont .formList { margin: 16px 0; }
-.layerCont .formList .label { margin-right: 30px;}
+.layerCont .formList:first-child { margin-top: 0;}
+.layerCont .formList:last-child { margin-bottom: 0;}
+.layerCont .formList { width: 100%; margin: 24px 0; flex-wrap: wrap; }
+.layerCont .formList .label { width: 100px; margin-right: 0px;}
+.layerCont .formList .radio .label { width: auto;}
+.layerCont .formList .formRow { max-width: calc(100% - 100px);}
+.layerCont .formList .formDesc { margin-left: 100px;}
+.layerCont .formList .formDesc > * { margin-top: 10px;}
+.layerCont .formList .formDesc .checkbox { white-space: initial ;}
+.layerCont .formList .label.wid120 { width: 120px;}
+.layerCont .formList .label.wid120 ~ .formRow { max-width: calc(100% - 120px);}
+.layerCont .formList .label.wid120 ~ .formDesc { margin-left: 120px; }
+.layerCont .formList .btnBlack { padding: 0 32px;}
+ 
  
 /****************************
 **********  accordion  **********
@@ -1503,7 +1519,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:18px; height:18px; background: url(../images/common/ico_24_close_b.png) no-repeat 0 0 / 18px; }
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
 .layerWrap .layerBody .layerCont    {padding:40px 40px 0;  }
-.layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
+.layerWrap .layerBody .layerCont .btnBox    {text-align: center; margin-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
 .layerWrap .layerBody .layerFoot button    {min-width:208px; }
@@ -1538,6 +1554,11 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
 .layerWrap .txt_ment p    {color:#888; font-size: 18px;}
 .layerWrap .txt_ment button     {margin:auto 0;}
+.layerWrap .querySet + .querySet { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
+.layerWrap .indentCont { margin-top: 20px; padding-left: 20px;}
+.layerWrap .indentCont .quest {}
+.layerWrap .indentCont .infoTxt { color: #555; font-size: 14px;}
+.layerWrap .indentCont .quest + .infoTxt { margin-top: 10px;}
 
 .layerWrap .center_ment     {text-align: center; padding-top:40px; }
 
