@@ -21,7 +21,10 @@
   <!-- **************** -->
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
-    
+    <section>
+      <button type="button" class="btnSuccess"  id="confirmClick">로그인</button>
+      <!-- <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>문의하기</button> -->
+    </section>
   </div>
   <!-- **************** -->
   <!-- contents : end -->
@@ -31,25 +34,42 @@
   <!-- layer : start -->
   <!-- **************** -->
   <script>
+    $("#confirmClick").on("click",function(){
       layer_confirm(
-         // 비로그인
-        "1:1 문의를 이용하기 위해서<br/>로그인이 필요해요.<br/><br/>로그인 또는 회원 가입 후 이용할 수 있어요.",
+        // 비로그인
+        // v1.4 수정
+        "1:1 문의를 이용하기 위해서 로그인이 필요해요.<br/>로그인 또는 회원 가입 후 이용할 수 있어요.",
         this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
         {
           confirm:{ //  확인 
-            txt : "심사취소", 
+            txt : "로그인", 
             callback : function(){ 
               alert(3)
             }
           },
           cancel:{ //  취소 
-            txt : "취소",
+            txt : "회원가입",
             callback : function(){
               alert(2)
             }
           }
         }
       )
+    });
+    // function sample_alert_1(obj){
+    //   layer_alert(
+    //     "Loan&Biz 플랫폼 이용과 관련한<br>궁금증을 해결해드려요.<br><br>대출 심사 및 제안 관련 문의는 해당 금융 기관으로<br> 문의해 주세요.", 
+    //     obj, 
+    //     {
+    //       confirm:{
+    //         txt : "문의하기",
+    //         callback:function(){   // x 버튼 callback func
+    //           alert('문의 하기')
+    //         }
+    //       }
+    //     }
+    //   )
+    // }
   </script>
 
   <!-- **************** -->
