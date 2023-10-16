@@ -19,18 +19,54 @@
 
 </style>
 </head>
-<body> 
+<body class="adm"> 
   <!-- **************** -->
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container main" id="skip_content"  aria-label="컨텐츠">
+  <div class="container " id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
       <h2 class="pageTit">Loan & Biz 플랫폼 이용 현황</h2>
       <p class="dataInfo">
         전일 기준 데이터
       </p>
+    </section>
+
+    <section>
+          
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label  class="label">연도</label>
+              <div class="formRow">
+                <select name="" id="">
+                  <option value="">전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label  class="label">월</label>
+              <div class="formRow">
+                <select name="" id="">
+                  <option value="">전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="rangeControl">
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
     </section>
 
     <section class="dashboard" >

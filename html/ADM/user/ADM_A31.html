@@ -49,7 +49,7 @@
               <label for="selectLabelSel1_1" class="label">회원 유형</label>
               <div class="formRow">
                 <select id="selectLabelSel1_1">
-                  <option>법인 회원</option>
+                  <option>금융 회원</option>
                   <option>전체</option>
                 </select>
               </div>
@@ -404,24 +404,26 @@ function barChart_user(id,data,left,color){
       </ul>
 
       <ul class="boxWrap dateChartBox">
-        <li class="box week">
-          <span class="tit">대표자 성별 </span>
+        <li class="box moveType">
+          <span class="tit">행동 유형별 </span>
           <div>
-            <div class="chartTime" id="barChart_5"  style="width:650px;"  ></div>
+            <div class="chartTime" id="barChart_5"    ></div>
             <div>
               <table>
                 <colgroup>
                   <col width="">
-                  <col span="2" width="230">
+                  <col span="3" width="210">
                 </colgroup>
                 <tr>
-                  <th>요일</th>
-                  <th>남</th>
-                  <th>여</th>
+                  <th>행동 유형</th>
+                  <th>대출 비교하기 상세 열람 건</th>
+                  <th>심사 신청 건</th>
+                  <th>제안서 제출 건</th>
                 </tr>
                 <tr>
-                  <td>방문수 </td>
+                  <td>행동 수 </td>
                   <td>4</td>
+                  <td>5</td>
                   <td>5</td>
                 </tr>
               </table>
@@ -433,58 +435,9 @@ function barChart_user(id,data,left,color){
               [
                 {tit:"1",  data: 4},
                 {tit:"2",  data: 5},
+                {tit:"3",  data: 5},
               ],
-              '100px',
-              ['#5066B6','#55D6B6']
-            )
-          </script>
-        </li>
-        <li class="box">
-          <span class="tit">대표자 연령별 </span>
-          <div>
-            <div class="chartTime" id="barChart_6" style="min-width:650px"  ></div>
-            <div>
-              <table>
-                <colgroup>
-                  <col width="">
-                  <col span="7" width="130">
-                </colgroup>
-                <tr>
-                  <th>연령</th>
-                  <th>20대</th>
-                  <th>30대</th>
-                  <th>40대</th>
-                  <th>50대</th>
-                  <th>60대</th>
-                  <th>70대</th>
-                  <th>기타</th>
-                </tr>
-                <tr>
-                  <td>방문</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>13</td>
-                  <td>23</td>
-                  <td>13</td>
-                  <td>33</td>
-                  <td>35</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <script>
-            barChart_user(
-              "barChart_6",
-              [
-                {tit:"1",  data: 4},
-                {tit:"2",  data: 5},
-                {tit:"3",  data: 13},
-                {tit:"4",  data: 23},
-                {tit:"5",  data: 13},
-                {tit:"6",  data: 33},
-                {tit:"7",  data: 35},
-              ],
-              '135px',
+              '200px',
               '#55D6B6'
             )
           </script>

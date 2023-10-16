@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
   <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
   <script src="../../../adm_js/jquery-ui.js"></script>
   <script src="../../../adm_js/lib/fecha.js"></script>
   <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
   <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/lib/echarts.min.js"></script>
   <script src="../../../adm_js/common.js"></script>
   <script src="../../../adm_js/common_adm.js"></script>
   <title>SHINHAN</title>
@@ -80,6 +83,349 @@
    
       <div class="sectionBlock40">
         
+        
+        <ul class="dashboardWrap userEnvir">
+          
+          <li class="chart_pie">
+            <strong class="tit">디바이스 별</strong>
+            <div>
+              <div class="tit2">법인 회원</div>
+              <div class="pie" id="pieChart_1"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_1'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+            <div>
+              <div class="tit2">금융 회원</div>
+              <div class="pie" id="pieChart_2"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_2'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        
+        <ul class="dashboardWrap userEnvir">
+          
+          <li class="chart_pie">
+            <strong class="tit">운영체제 별</strong>
+            <div>
+              <div class="tit2">법인 회원</div>
+              <div class="pie" id="pieChart_3"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_3'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+            <div>
+              <div class="tit2">금융 회원</div>
+              <div class="pie" id="pieChart_4"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_4'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        
+        <ul class="dashboardWrap userEnvir">
+          
+          <li class="chart_pie">
+            <strong class="tit">브라우저 별</strong>
+            <div>
+              <div class="tit2">법인 회원</div>
+              <div class="pie" id="pieChart_5"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_5'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: 'Chrome' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: 'Edge'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'IE'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: 'Safari'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 484, name: '기타'  , itemStyle : {color:'#89E3CD'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+                <li> <em style="background:#5066B6"></em> Chrome <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Edge <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> IE <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> Safari <strong>5%</strong></li>
+                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+            <div>
+              <div class="tit2">금융 회원</div>
+              <div class="pie" id="pieChart_6"></div>
+              <script>
+                var myChart_pie1 = echarts.init(document.getElementById('pieChart_6'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 1048, name: 'Chrome' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: 'Edge'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'IE'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: 'Safari'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 484, name: '기타'  , itemStyle : {color:'#89E3CD'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie1.setOption(option);
+              </script>
+              <ul class="legend">
+
+                <li> <em style="background:#5066B6"></em> Chrome <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> Edge <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> IE <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> Safari <strong>5%</strong></li>
+                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+
       </div>
     </section>
 

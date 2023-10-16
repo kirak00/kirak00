@@ -81,7 +81,7 @@ footer    {width:100%; }
 
 /* */
 .memberMent     {text-align: center; margin-bottom:20px; }
-.memberMent strong     {}
+.memberMent strong     {font-size:18px; }
 .memberMent div     {margin-top:10px; }
 
 section.detail      {padding:0 120px; }
@@ -155,9 +155,13 @@ ul.boxWrap li.memCount strong  {display:block; margin-top:30px; font-size:30px; 
 
 ul.boxWrap li.usageStatus:first-child       {max-width:585px; }
 ul.boxWrap li.bgRed             {max-width:300px; background:linear-gradient(0deg, rgba(254, 80, 80, 0.05) 0%, rgba(254, 80, 80, 0.05) 100%), rgba(255, 255, 255, 0.20); }
+ul.boxWrap li.bgRed ul li strong  {color:#FE5050}
 
 ul.boxWrap li.usageStatus       {text-align: center; padding:30px 0 0; }
-ul.boxWrap li.usageStatus span.tit       {display:inline-block; font-weight: 700; }
+ul.boxWrap li.usageStatus span.tit       {display:inline-block; font-weight: 700; padding-left:30px;  }
+ul.boxWrap li.usageStatus:nth-child(1) span.tit       {background:url(../adm_images/adm/face-smile.png) no-repeat 0 0}
+ul.boxWrap li.usageStatus:nth-child(2) span.tit       {background:url(../adm_images/adm/face-users.png) no-repeat 0 0}
+ul.boxWrap li.usageStatus:nth-child(3) span.tit       {background:url(../adm_images/adm/face-frown.png) no-repeat 0 0}
 ul.boxWrap li.usageStatus ul            {margin-top:35px; display:flex; width:100%;  }
 ul.boxWrap li.usageStatus ul li         {text-align: center; width:100%; }
 ul.boxWrap li.usageStatus ul li span    {display:inline-block; }
@@ -334,6 +338,27 @@ span.dataSize::after    { content:""; position:absolute; left:0; bottom:6px; wid
 span.dataSize strong    { position:relative; z-index:2; display:inline-block; vertical-align: 0; font-size: 30px; }
 span.dataSize span      { position:relative; z-index:2; display:inline-block; vertical-align: 2px; font-size: 30px; font-weight: 700;}
 
+
+.boxWrap.boxWrap.dateChartBox       {}
+.boxWrap.boxWrap.dateChartBox li.box    {padding:40px; }
+.boxWrap.boxWrap.dateChartBox li.box table  {width:100%; }
+.boxWrap.boxWrap.dateChartBox li.box table th    {text-align: center; height:50px; border:1px solid #ddd; background:#EFF5EF;   }
+.boxWrap.boxWrap.dateChartBox li.box table td    {text-align: center; height:50px; border:1px solid #ddd;  }
+.boxWrap.boxWrap.dateChartBox li.box .tit    {text-align: left; font-size:20px; font-weight: 700;  }
+.boxWrap.boxWrap.dateChartBox li.box .chartTime    {max-width:100%; height:140px; }
+.boxWrap.boxWrap.dateChartBox li.box.week       {max-width:650px; }
+.boxWrap.boxWrap.dateChartBox li.box.moveType   {max-width:900px; }
+
+
+
+ul.dashboardWrap.userEnvir > li {display:flex; min-width:100%;  }
+ul.dashboardWrap.userEnvir li.chart_pie strong.tit {position:absolute;  }
+ul.dashboardWrap.userEnvir li > div {width:600px; display:flex; margin:0 auto; position:relative; padding:20px 0 0;  }
+ul.dashboardWrap.userEnvir li > div .tit2 {position:absolute; left:50%; top:0; }
+ul.dashboardWrap.userEnvir li.chart_pie ul.legend     {width:240px; height:230px; margin:auto 0 ;   }
+ul.dashboardWrap.userEnvir li.chart_pie ul.legend li  {width:100%; margin:auto 0; }
+ul.dashboardWrap.userEnvir li.chart_pie ul.legend li em  {vertical-align: middle; }
+ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 
 
 /* */
