@@ -19,6 +19,7 @@
 .green	{color:#537a7c}
 .blue { color: #069B66;}
 .gray { color: #888;}
+.gray5 { color: #555;}
 
 .srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
 
@@ -207,8 +208,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 **********  badge  **********
 *****************************/
 .badgeBlue { background: #EAFAEB; color: #fff; text-align: center; }
-.badgeWhite { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
-.badgeOrange { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  }
+.badgeWhite { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66; font-size: 14px; }
+.badgeOrange { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  font-size: 14px; }
 .badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
 /****************************
 **********  button  **********
@@ -1114,7 +1115,7 @@ table.bbs_list td.tit   {text-align: left; padding-left:30px;
 overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
 table.bbs_list .tit { padding: 20px 0; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 table.bbs_list .tit a { padding: 20px 0;}
-table.bbs_list .tit [class^='badge'] { width: 95px; margin: 0 20px 0 40px; font-size: 18px; vertical-align: middle; }
+table.bbs_list .tit [class^='badge'] { width: 94px; height: 24px; line-height: 22px; margin: 0 20px; font-size: 14px; vertical-align: middle; }
 table.bbs_list td.num   {text-align: right; padding-right:30px;}
 table.bbs_list thead tr.top th { background: #EFF5EF;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
@@ -1717,10 +1718,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox     {width:100%; padding:24px 40px; border: 1px solid #ddd; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
 .bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
 .bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
-.bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:20px; font-weight: 700; }
-.bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
+.bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:18px; font-weight: 700; }
+.bbsDetailBox .titBox [class^="badge"] { margin-right: 20px; }
 .bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
-.bbsDetailBox .titBox .date { margin-top: 8px; color: #555; }
+.bbsDetailBox .titBox .date { margin-top: 16px; color: #888; font-weight: 500; }
+.bbsDetailBox .titBox .date .bar { display: inline-block; width: 1px; height: 14px; margin-left: 8px; margin-right: 8px; background: #888; vertical-align: -2px;}
 .bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px;  border-top:0; border-radius:0 0 16px 16px;  }
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
