@@ -118,6 +118,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 *****************************/
 
 .barList { display: flex;}
+.barList.gray .list { color: #555; font-size: 16px;}
+.barList.gray .list + .list::before{ background: #555; }
 .barList .list { position: relative; color: #fff; font-size: 18px;}
 .barList .list + .list { margin-left: 8px; padding-left: 8px;}
 .barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #fff; }
@@ -153,6 +155,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .resultCont + .guideBox { max-width: 920px; margin: 40px auto 0; padding: 40px 30px;}
 
 .guideBox { margin-top: 20px; padding: 24px 30px; background: #F6FBF7; color: #555; border-radius: 16px; line-height: 1.5;}
+.guideBox.mt40 { margin-top: 40px;}
 .guideBox.point { color: #069B66; }
 .layerCont .guideBox.point { background: #EAFAEB}
 .guideBox.type2 { padding: 40px; background: #EAFAEB; }
@@ -292,6 +295,7 @@ a.ico_down       {color:#069B66; }
 .btnWhiteLine.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
 .btnWhiteLine:hover.ico_down::after,
 .btnWhiteLine:active.ico_down::after  { }
+.btnSuccess.link::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w2.png) no-repeat 50% 50% / contain; }
 
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
@@ -323,6 +327,7 @@ a.ico_down       {color:#069B66; }
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 a.download2       {padding-right:26px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 100% 0% / 18px; }
+a.attach       {padding-left:32px; font-weight: 700; color:#555;  background:url(../images/common/ico_18_clip_primary.png) no-repeat 0% 50% / 24px 24px ; }
 
 a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50%; }
 
@@ -705,7 +710,7 @@ select.wid430 { min-width: 430px;}
 .formSurvey .formRow:not(:last-child) { margin-bottom: 20px;}
 
 /* control group */
-.bbsSearch { position: relative; margin-bottom: 40px; padding: 32px 40px 32px 40px; background: #EAFAEB; border-radius: 16px; display:flex; gap:12px; }
+.bbsSearch { position: relative; margin-bottom: 20px; padding: 32px 40px 32px 40px; background: #EAFAEB; border-radius: 16px; display:flex; gap:12px; }
 .bbsSearch .formRow { width:100%; }
 .bbsSearch .formRow input { width:100%; }
 .bbsSearch .searchBtns { width:auto; }
@@ -1047,7 +1052,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup.mt40 { margin-top: 40px;}
 .tableFilterGroup .count { display: inline-flex; align-items: center; font-size: 16px; color: #333; font-weight: 700;}
 .tableFilterGroup .count strong { margin-left: 4px; color: #069B66;}
-.tableFilterGroup select { width: 200px; height: 40px; padding: 0 64px 0 16px }
+.tableFilterGroup select {  height: 40px; padding: 0 64px 0 16px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
 .tableFilterGroup .btnDkGreen { height: 40px;  width: 88px; padding: 0;}
 .tableFilterGroup .bbsTip { padding:0; padding-right:12px; }
@@ -1081,10 +1086,12 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt a + a      {margin-left:10px; }
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 .table_bt.fullType button { width: 100%;}
-.layerCont .table_bt { margin-top: 20px;}
+/* .layerCont .table_bt { margin-top: 20px;} */
 .btnBox.btn_r      { text-align: right; }
 .detailCont .table_bt .btn_c button,
 .detailCont .table_bt .btn_c a { min-width: 214px;}
+
+.layerCont .table_bt button { min-width: unset; padding: 0 32px; }
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.mt0 { margin-top: 0px;}
@@ -1864,7 +1871,7 @@ ul.evtThumList li img  { width:100%; height:300px; object-fit:cover; overflow: h
 ul.evtThumList li span.evtTit  { display:block; padding: 20px; border-top:1px solid #ddd;  }
 ul.evtThumList li span.evtTit strong  { display:block; }
 ul.evtThumList li span.evtTit span    { display:block; margin-top:8px; color:#888 }
-ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:30px; align-items: center; justify-content: center; }
+ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; position:absolute; width:100%; height:100%; border-radius:8px; background:rgba(0,0,0,0.5); color:#fff; display:flex; font-size:20px; font-weight: 700; align-items: center; justify-content: center; }
 
 
 /* tooltip */
@@ -1895,7 +1902,7 @@ ul.youtubeList li .movie  {background:url(../images/common/play.png) no-repeat 5
 ul.youtubeList li iframe  {width:100%; height:250px;}
 ul.youtubeList li .titBox  {width:100%; padding:20px; border-top: 1px solid #ddd; }
 ul.youtubeList li .titBox strong  {display:block; }
-ul.youtubeList li .titBox p   {margin-top:8px; }
+ul.youtubeList li .titBox p   {margin-top:8px; color: #888; }
 
 /****************************
 **********  파일첨부  **********
@@ -2008,12 +2015,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .callCenter .info { color: #555; font-size: 14px;} 
 
 .inqueryGroup + .inqueryGroup { margin-top: 20px;}
-.inqueryForm { background: #EFF5EF; padding: 40px;}
+.inqueryForm { margin-top: 58px;}
 
-.bbsReplyArea {  margin-top: 20px; border-radius: 16px; overflow: hidden;}
+.bbsReplyArea {  margin-top: 40px; overflow: hidden;}
 .bbsReplyArea > *:nth-child(odd) { background: #F6FBF7}
-.bbsReplyArea > *:nth-child(even) { background: #EFF5EF}
-.bbsReplyBox {position: relative; padding: 40px; background: #F6FBF7; }
+/* .bbsReplyArea > *:nth-child(even) { background: #fff} */
+.bbsReplyBox {position: relative; padding: 40px; border-radius: 16px;}
 .bbsReplyBox .ico_edit { position: absolute; top: 40px; right: 60px; }
 .bbsReplyBox .tit { display: flex; align-items: center;}
 .bbsReplyBox .tit .date { margin-left: 16px; color: #555; font-size: 14px; font-weight: 400;} 
@@ -2059,7 +2066,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .processStepWrap .name {  font-weight: 700; } */
 
 .boxWrap { display: flex; gap: 20px;}
-.boxWrap.flatform { height: 340px;}
+.boxWrap.flatform { height: 340px; margin-top: 20px;}
 .boxWrap.flatform .box { position: relative; display: flex; justify-content: center; padding-top: 220px; text-align: center;} 
 .boxWrap.flatform .ico1 {position: absolute; top: 70px;}
 .boxWrap.flatform .ico1::before { content: ''; display: inline-block; width: 86px; height: 99px; background: url('../images/common/ico_flatform1.png')  no-repeat center / cover;}
@@ -2068,7 +2075,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .boxWrap.flatform .ico3 {position: absolute; top: 74px;}
 .boxWrap.flatform .ico3::before { content: ''; display: inline-block; width: 112px; height: 92px; background: url('../images/common/ico_flatform3.png')  no-repeat center / cover;}
 
-.boxWrap.offline { height: 300px;}
+.boxWrap.offline { height: 300px; margin-top: 20px;}
 .boxWrap.offline .box{ position: relative; display: flex; align-items: center; padding-left: 256px;}
 .boxWrap.offline .ico1 {position: absolute; left: 75px;}
 .boxWrap.offline .ico1::before { content: ''; display: inline-block; width: 90px; height: 84px; background: url('../images/common/ico_offline1.png')  no-repeat center / cover;}

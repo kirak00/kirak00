@@ -36,7 +36,8 @@
         <ul class="tabLine tabScript" role="tablist">
           <li class="on"><button type="button" role="tab" aria-controls="tab-1" aria-selected="true">진행중인 이벤트</button></li>
           <li><button type="button" role="tab" aria-controls="tab-2" aria-selected="false">종료된 이벤트</button></li> 
-          <li><button type="button" role="tab" aria-controls="tab-3" aria-selected="false">당첨자 발표</button></li>
+          <!-- v1.4 반영 워딩수정 -->
+          <li><button type="button" role="tab" aria-controls="tab-3" aria-selected="false">공지사항 및 이벤트 당첨자 발표</button></li>
         </ul>
       </div>
     </div>
@@ -134,7 +135,7 @@
             </div>
           </fieldset>
           
-          <div class="table_top">
+          <!-- <div class="table_top">
             <div class="total">
               총 <strong>15</strong>건
             </div>
@@ -145,7 +146,17 @@
               </select>
               <button type="button" class="btnSky sm">적용</button>
             </div>
-          </div>
+          </div> -->
+          <fieldset class="tableFilterGroup">
+            <span class="count">총 <strong>15</strong>건</span>
+            <div class="formRow" role="group">
+              <select title="정렬 선택(보기 갯수)">
+                <option>10개씩 보기</option>
+                <option>10개씩 보기</option>
+              </select>
+              <button type="button" class="btnDkGreen">적용</button>
+            </div>
+          </fieldset>
           <div class="table_wrap">
             <table class="bbs_list">
               <caption>
@@ -163,7 +174,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                  <td class="tit"><span class="badgeWhite"></span><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
                   <td>2023-08-01~2023-08-01</td>
                 </tr>
                 <tr>
