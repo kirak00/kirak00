@@ -69,6 +69,11 @@
         align: 'center',
         position: 'insideBottom'
       },
+      grid : {
+        top:30,
+        bottom:30,
+        right:0
+      },
       xAxis: { 
         type: 'category',
         data:titSet ,
@@ -95,12 +100,12 @@
   }
 </script>
     <section>
-      <ul class="boxWrap chartBox">
-        <li class="box">
+      <ul class="boxWrap chartBox review">
+        <li class="box left">
           <span class="tit">제안서와 실행 금액 일치율</span>
           
           <div class="pie" id="pieChart_2"></div>
-          <script>
+          <script> 
             var chartDom = document.getElementById('pieChart_2');
             var myChart_pie1 = echarts.init(chartDom);
             var option = {
@@ -142,29 +147,29 @@
             myChart_pie1.setOption(option);
           </script>
 
-        </li>
+        </li> 
         <li class="box">
-          <span class="tit">금융 상품 만족 순위</span>
-          <div>
-            <div class="chart" id="barChart_2"></div>
-          </div>  
+          <span class="tit">개선사항 순위</span>
+          
+          <div class="chart" id="barChart_4"></div>
           <script>
             barChart(
-              "barChart_2", 
+              "barChart_4", 
               [
-                {tit:"1위 대출액", data: 200},
-                {tit:"2위 금리", data: 180},
-                {tit:"3위 상환 방식", data: 120},
-                {tit:"4위 대출 기간", data: 100},
+                {tit:"1위 신속성", data: 200},
+                {tit:"2위 편리함", data: 180},
+                {tit:"3위 다양한 금융기관의 참여", data: 120},
+                {tit:"4위 다양한 대출 제안", data: 100},
               ]
             )
           </script>
           <ul class="legend">
-            <li> <em style="background:#5066B6"></em> 1위 대출액</li>
-            <li> <em style="background:#46B9B2"></em> 2위 금리</li>
-            <li> <em style="background:#55D6B6"></em> 3위 상환 방식</li>
-            <li> <em style="background:#89E3CD"></em> 4위 대출 기간</li>
+            <li> <em style="background:#5066B6"></em> 1위 다양한 금융기관의 참여</li>
+            <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
+            <li> <em style="background:#55D6B6"></em> 3위 신속함</li>
+            <li> <em style="background:#89E3CD"></em> 4위 다양한 정보</li>
           </ul>
+
         </li>
         <li class="box">
           <span class="tit">Loan&Biz 만족 순위</span>
@@ -190,28 +195,33 @@
           </ul>
         </li>
         <li class="box">
-          <span class="tit">개선사항 순위</span>
-          
-          <div class="chart" id="barChart_4"></div>
+          <span class="tit">금융 상품 만족 순위</span>
+          <div>
+            <div class="chart" id="barChart_2"></div>
+          </div>  
           <script>
             barChart(
-              "barChart_4", 
+              "barChart_2", 
               [
-                {tit:"1위 신속성", data: 200},
-                {tit:"2위 편리함", data: 180},
-                {tit:"3위 다양한 금융기관의 참여", data: 120},
-                {tit:"4위 다양한 대출 제안", data: 100},
+                {tit:"1위 대출액", data: 200},
+                {tit:"2위 금리", data: 180},
+                {tit:"3위 상환 방식", data: 120},
+                {tit:"4위 대출 기간", data: 100},
               ]
             )
           </script>
           <ul class="legend">
-            <li> <em style="background:#5066B6"></em> 1위 다양한 금융기관의 참여</li>
-            <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
-            <li> <em style="background:#55D6B6"></em> 3위 신속함</li>
-            <li> <em style="background:#89E3CD"></em> 4위 다양한 정보</li>
+            <li> <em style="background:#5066B6"></em> 1위 대출액</li>
+            <li> <em style="background:#46B9B2"></em> 2위 금리</li>
+            <li> <em style="background:#55D6B6"></em> 3위 상환 방식</li>
+            <li> <em style="background:#89E3CD"></em> 4위 대출 기간</li>
           </ul>
-
         </li>
+        <li class="box left">
+          <span class="tit">만족도 평균</span>
+          
+
+        </li> 
       
       </ul>
     </section>

@@ -261,6 +261,20 @@ ul.boxWrap.chartBox li.box ul.legend li em   {display:inline-block; width:8px; h
 ul.boxWrap.chartBox li.box div.chart2  {display:block; width:430px; height:400px; margin:0 auto;  }
 ul.boxWrap.chartBox li.box .ment  {text-align: center; font-weight: 500;}
 
+
+ul.boxWrap.chartBox.review            {display:block; overflow: hidden; }
+ul.boxWrap.chartBox.review li.box     {float:right; width:430px; margin-left:20px; padding-bottom:30px;    }
+ul.boxWrap.chartBox.review li.box.left     {float:left; width:430px; }
+ul.boxWrap.chartBox.review li.box.left ~ .left  {margin-top:24px; }
+ul.boxWrap.chartBox.review li.box ul.legend     {width:280px; flex-direction: column; padding:10px 30px; }
+ul.boxWrap.chartBox.review li.box ul.legend li  {width:100%; margin:10px 0 }
+ul.boxWrap.chartBox.review li.box div.chart   {width:280px; height:230px; }
+ul.boxWrap.chartBox.review li.box div.pie     {width:150px; height:150px; }
+ul.boxWrap.chartBox.review li.box div.pie     {width:150px; height:150px; }
+
+
+
+
 ul.boxWrap.payData li.box   {text-align: center; height:275px;  }
 ul.boxWrap.payData li.box span.tit   {display:block; padding:40px 0 0; text-align: center; font-size: 18px; font-weight: 700; }
 ul.boxWrap.payData li.box span.tit + strong   {display:inline-block; padding:40px 10px 0; text-align: center; font-size: 30px; margin-top:60px; box-shadow:inset 0 -18px 0  0  rgba(24, 167, 116, 0.15) ; }
