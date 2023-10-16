@@ -110,7 +110,7 @@
             var myChart_pie1 = echarts.init(chartDom);
             var option = {
               tooltip: {
-                trigger: 'item'
+                show:false,
               },
               series: [
                 {
@@ -124,12 +124,13 @@
                     borderWidth: 2
                   },
                   label: {
-                    show: false,
+                    show: true,
+                    formatter: '{@score}%',
                     position: 'center'
                   },
                   emphasis: {
                     label: {
-                      show: true,
+                      show: false,
                       fontSize: 20,
                       fontWeight: 'bold'
                     }
@@ -138,8 +139,8 @@
                     show: false
                   },
                   data: [
-                    { value: 1048, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
-                    { value: 735, name: '운전 자금'  , itemStyle : {color:'#46B9B2'} },
+                    { value: 20, name: '운전 자금'  , itemStyle : {color:'#ddd'} },
+                    { value: 83, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
                   ]
                 }
               ]
@@ -220,6 +221,22 @@
         <li class="box left">
           <span class="tit">만족도 평균</span>
           
+          <div class="avr">
+            <div class="formRow starChkWrap">
+              <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' disabled />
+              <input type='radio' id="starChk_2" class='starChk starChk_2' name="starChk" title='별점2' disabled />
+              <input type='radio' id="starChk_3" class='starChk starChk_3' name="starChk" title='별점3' disabled checked />
+              <input type='radio' id="starChk_4" class='starChk starChk_4' name="starChk" title='별점4' disabled />
+              <input type='radio' id="starChk_5" class='starChk starChk_5' name="starChk" title='별점5' disabled />
+              <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
+              <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
+              <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
+              <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
+              <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
+            </div>
+  
+            <strong><em>10점</em></strong>
+          </div>
 
         </li> 
       
