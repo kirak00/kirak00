@@ -48,7 +48,8 @@
         <div class="table_bt">
           <div id="externalPager2" class="external-pager"></div>
           <div class="btn_r">
-            <button type="button" class="btnWhite">문의하기</button>
+            <!-- v1.4 수정 .mm 추가 -->
+            <button type="button" class="btnWhite mm">문의하기</button>
           </div>
         </div>
       </div>
@@ -56,30 +57,34 @@
               
       <script>
         $(function() {
-
+          // v1.4 수정
           var clients = [
             { 
-              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit hasReply'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
             { 
-              "Name1": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit re hasReply'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
             { 
-              "Name1": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
             { 
-              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
             { 
-              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit hasReply'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
             { 
-              "Name1": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name1": "<p class='inqueryTit hasReply'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
+              "Name2": "2023-08-01", 
+            },
+            { 
+              "Name1": "<p class='inqueryTit hasReply'><span class='tit'>[플랫폼 이용 문의]</span><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>",
               "Name2": "2023-08-01", 
             },
           ]; 

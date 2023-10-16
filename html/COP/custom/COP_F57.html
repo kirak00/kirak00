@@ -27,16 +27,15 @@
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>고객센터</span></a></li>
-          <li><a href="#none"><span>1:1 문의</span></a></li>
-          <li><a href="#none"><span>상세</span></a></li>
-          <li><a href="#none"><strong>수정</strong></a></li>
+          <li><a href="#none"><strong>1:1 문의</strong></a></li>
       </ul>
     </section>
 
     <section class="">
       <!-- 디자인 수정 .textCenter 추가 -->
       <div class="notiBox grayType"><span class="srOnly">알림</span><p class="notiTxt textCenter">oan&Biz 이용과 관련한 문의만 가능해요. 대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해주세요.</p></div>
-      <div class="viewLineTable noLastLine">
+      <!-- v1.4 반영 .viewNolineTable.mt40 -->
+      <div class="viewNolineTable mt40">
         <table>
           <caption>일대일 문의</caption>
           <colgroup>
@@ -50,7 +49,16 @@
             </tr>
             <tr>
               <th scope="row">제목</th> 
-              <td>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</td>
+              <!-- <td>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</td> -->
+              <td>
+                <div class="formRow">
+                  <select id="selectLabelState1_1" class="wid220" title="말머리 선택">
+                    <option>전체</option>
+                    <option>기타</option>
+                  </select>
+                  <input type="text" class="input" value="플랫폼 이용 문의 대출 비교 요청 신청하면 얼마 정도 소요되나요?" />
+                </div>
+              </td>
             </tr>
             <tr> 
               <th scope="row">
@@ -58,7 +66,8 @@
               </th> 
               <td>
                 <div class="formRow">
-                  <textarea class="textarea" id="inpLabel2">안녕하세요.
+                  <!-- v1.4 반영 .h140 -->
+                  <textarea class="textarea h140" id="inpLabel2">안녕하세요.
 법인 대출이 시급하게 필요하여 신청했습니다.
 대출 비교 요청을 하게 되면 대략 얼마 정도 시간이 소요되는지 궁금합니다.
 답변 부탁 드립니다.</textarea>
@@ -74,6 +83,13 @@
           <!-- 디자인 수정 .btnWhite -> .btn -->
           <button type="button" class="btnGray">취소</button>
         </div>
+      </div>
+      <!-- v1.4 반영 추가 -->
+      <div class="table_bt hasLine">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
     </section>
 
 
