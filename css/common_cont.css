@@ -72,7 +72,7 @@
 .tableTit { font-size: 34px; font-size: 700; }
 .titH3.hasLine,
 .titH4.hasLine { display: flex; align-items: center; border-bottom: 1px solid #ddd; }
-.titH3.hasLine {min-height: 60px; margin-bottom: 30px; }
+.titH3.hasLine {min-height: 60px; margin-bottom: 20px; }
 .titH4.hasLine {min-height: 56px; margin-bottom: 40px; }
 .titH3 strong.blue { margin-left: 10px; vertical-align: 0;}
 .titH4.hasPadding { padding: 0 40px;} 
@@ -161,7 +161,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox.mt60 { margin-top: 60px;}
 .guideBox.point { color: #069B66; }
 .layerCont .guideBox.point { background: #EAFAEB}
-.guideBox.type2 { padding: 40px; background: #EAFAEB; }
+.guideBox.type2 { background: #EAFAEB; }
 .guideBox .notiTxt + .guideList { margin-top: 10px;}
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
 .guideBox .desc + .guideList { margin-top: 8px; font-size: 14px; }
@@ -258,6 +258,8 @@ table .btnWhiteLine,
 table .btnDkGreen,
 table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
 table button.full { width: 100%;}
+
+.btnFixed .bbs_list button { min-width: 140px;}
 
 table a.btnSuccess        { line-height: 34px;}
 table a.btnSky         { line-height: 34px;}
@@ -809,13 +811,14 @@ select.wid430 { min-width: 430px;}
 .divTable .row { min-height: 100px; padding: 35px 0;}
 .divTable .row + .row { border-top: 1px solid #ddd;}
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
+.divTable .row .cell .period { width: 62px; text-align: center;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
 
 .periodInfo { border: 1px solid #ddd;}
 .periodInfo .input{ height: 42px; min-height: 42px; padding: 0; text-align: center;}
 .periodInfo .row { height: 60px; min-height: 60px; padding: 0; justify-content: space-between; background: #EFF5EF;}
-.periodInfo .cell { width: 50%; align-items: center; gap: 8px; font-weight: 700; font-size: 18px}
+.periodInfo .cell { width: 100%; align-items: center; gap: 8px; font-weight: 700; font-size: 18px}
 .periodInfo .cell.textLeft { justify-content: flex-start;}
 
 .msgPg .divTable .head .cell { font-weight: 700;}
@@ -1018,6 +1021,7 @@ header.on .line  {display:block; }
 .container.member { }
 .container.member section.login  {}
 .bgGray { background: #FAFAFA; padding: 20px 0 40px; border-bottom: 1px solid #ddd;}
+.bgGray .titH3.hasLine { margin-top: 40px;}
 
 footer    {position:relative; z-index:1; background:#333 }
 footer::before    {content:""; position:absolute; width:100%; top:67px; border-top:1px solid #555}
@@ -1253,6 +1257,10 @@ table { width: 100%;}
 .detailCont .viewLineTable th { padding-left: 20px; padding-right: 20px; }
 .lineBox .viewLineTable td,
 .detailCont .viewLineTable td { padding-right: 20px; }
+.viewLineTable tr:first-child th,
+.viewLineTable tr:first-child td { padding-top: 0;}
+.viewLineTable tr:last-child th,
+.viewLineTable tr:last-child td { padding-bottom: 0;}
 /* 마지막 라인 NO */
 .viewLineTable.noLastLine tr:last-child { border-bottom: none; }
 .viewLineTable.noLastLine tr:last-child th,
