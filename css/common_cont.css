@@ -57,7 +57,8 @@
 .titH43 { font-size:18px; margin-top:10px; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
 
-.pageTxt { display: flex; align-items: center; margin-bottom: 20px; font-weight: 700;}
+.pageTxt { margin-bottom: 20px; font-weight: 700;}
+.pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
 
@@ -127,7 +128,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; padding-left: 22px; text-indent: -22px; }
+.notiTxt { display: block; color: #4C9DA2; padding-left: 22px; text-indent: -22px; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
 .notiTxt::before { content: ''; display: inline-block; width: 18px; height: 18px; margin-right: 4px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: -3px; flex-shrink: 0;}
@@ -472,7 +473,12 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .radio input[type=radio] + label , 
 .checkbox input[type=checkbox] + label { display: inline-block; padding-left: 32px; text-indent: -32px; vertical-align: middle; color: #333; font-size: 16px; font-weight: 400; word-break: keep-all} 
+.radio input[type=radio] + label span, 
+.radio input[type=radio] + label strong, 
+.checkbox input[type=checkbox] + label span,
+.checkbox input[type=checkbox] + label strong { vertical-align: baseline;}
 .checkbox.checkAll { padding: 0 0 20px 0;}
+/* .checkbox.checkAll input[type=checkbox] + label { display: inline-flex; align-items: center;} */
 .radio input[type=radio],
 .checkbox input[type=checkbox] { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
 /* .radio.ht64 { height: 64px; line-height: 64px;} */
@@ -862,7 +868,7 @@ select.wid430 { min-width: 430px;}
 .agreeAccordion .accordionTrigger { height:80px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
 .agreeAccordion .accordionTitle:not(:first-child) { border-top: 1px solid #ddd;}
 .agreeAccordion .accordionTitle .checkbox {position: absolute;  top: 0; height: 100%; display: flex; align-items: center; }
-.agreeAccordion .accordionTitle .checkbox label { display: inline-flex; align-items: center; height: 100%; padding: 0 40px; font-size: 18px; font-weight: 700;}
+.agreeAccordion .accordionTitle .checkbox label {  line-height: 80px; margin: 0 40px; font-size: 18px; font-weight: 700;}
 .agreeAccordion .accordionTitle .required { margin-left: 8px; color: #069B66;}
 .agreeAccordion .accordionPanel { margin: 0 ; padding: 30px 40px; background: #fff;}
 /****************************
@@ -1115,7 +1121,7 @@ table.bbs_list td.tit   {text-align: left; padding-left:30px;
 overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
 table.bbs_list .tit { padding: 20px 0; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 table.bbs_list .tit a { padding: 20px 0;}
-table.bbs_list .tit [class^='badge'] { width: 94px; height: 24px; line-height: 22px; margin: 0 20px; font-size: 14px; vertical-align: middle; }
+table.bbs_list .tit [class^='badge'] {width: 95px; height: 24px; line-height: 22px; margin: 0 20px; font-size: 14px; vertical-align: middle; }
 table.bbs_list td.num   {text-align: right; padding-right:30px;}
 table.bbs_list thead tr.top th { background: #EFF5EF;}
 table.bbs_list thead:has(.top) tr th { border-radius: 0;}
@@ -1655,9 +1661,9 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine { display: flex; width:100%; max-width: 1400px; height: 60px; margin: 0 auto; border-bottom: 1px solid #ddd;  }
 .tabLineWrap .tabLine { border-bottom: 0; margin-bottom:-1px;  }
 .tabLine button,
-.tabLine a { display: inline-block; height: 100%; padding: 0 32px; font-size: 18px; font-weight: 500; line-height: 58px;}
+.tabLine a { display: inline-block; height: 100%; padding: 0 32px; font-size: 18px; font-weight: 500; line-height: 58px; text-decoration: none;}
 .tabLine li.on button,
-.tabLine li.on a {  border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700; }
+.tabLine li.on a {  border-bottom: 3px solid #069B66; color: #069B66; font-weight: 700;  }
 .tabLine li button:focus,
 .tabLine li a:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
