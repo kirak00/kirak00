@@ -111,10 +111,10 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">대표자 인적 사항</h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner">경영진 인적 사항 (선택)</h3></div><!-- v1.4 반영 -->
     <div class="bgGray">
       <section class="sectionBlock20">
-        <p class="pageTxt">경영진 현황 입력해 주세요. <span class="blue">(필수)</span></p>
+        <p class="pageTxt">경영진 현황 입력해 주세요.</p><!-- v1.4 반영 -->
         <div class="formGrayBox boxType">
           <!-- 디자인 수정 .line 추가 -->
           <section class="line">
@@ -155,12 +155,13 @@
                     <th scope="row">
                       <label for="formLabel1_3">직함</label>
                     </th> 
-                    <td>
+                    <td colspan="3"><!-- v1.4 반영 -->
                       <div class="formRow">
                         <select title="" id="formLabel1_3">
-                          <option>회장</option>
+                          <option>기타</option>
                           <option>본부2</option>
                         </select>
+                        <input id="formLabelEtc" class="input wid220" type="text" placeholder="정보를 입력해 주세요." value="">
                       </div>
                     </td>
                   </tr>
@@ -223,7 +224,7 @@
                     <th scope="row">
                       <label for="formLabel2_3">직함</label>
                     </th> 
-                    <td>
+                    <td colspan="3"><!-- v1.4 반영 -->
                       <div class="formRow">
                         <select title="" id="formLabel2_3">
                           <option>회장</option>

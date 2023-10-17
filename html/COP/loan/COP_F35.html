@@ -32,7 +32,7 @@
       <ol class="barStep">
         <li class="on">
           <span class="circle">1</span>
-          <p class="name"><span>정보 제공 및 조회 약관 동의</span></p>
+          <p class="name"><span>스크래핑 서비스 동의 및 정보제공 및 조회 동의</span></p> <!-- v1.4 워딩수정 -->
         </li>
         <li>
           <span class="circle">2</span>
@@ -111,16 +111,84 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine"><h3 class="inner">정보 제공 및 조회 약관 동의</h3></div>
-    <section>
-      <p class="pageTxt">대출 비교를 위한 <span class="blue">정보제공 동의</span> 및 <span class="blue">제3자 정보제공 동의</span> 및 <span class="blue">스크래핑 약관</span>에 동의해주세요</p>
-      <section class="sectionBlock60">
+    <!-- v1.4 추가 -->
+    <div class="titH3 hasLine"><h3 class="inner">스크래핑 서비스 신청 동의</h3></div>
+    <section class="agreeContent">
+      <p class="pageTxt">
+        대출 비교를 위한 <span class="blue">스크래핑 약관</span>에 동의해주세요<br/>
+        스크래핑 서비스를 통해 법인 사업장 및 재무 현황을 <span class="blue">자동</span>으로 수집합니다. 수집이 불가 하거나 자동 수집되지 않은 항목은 추가로 서류를 제출 할 수 있습니다.
+      </p>
+      <section class="sectionBlock40">
+        <span class="checkbox checkAll">
+          <input type="checkbox" id="agreeLabelAll1" name="agreeLabelAll1" >
+          <label for="agreeLabelAll1"><span></span><strong class="blue">스크래핑 서비스</strong> 신청 동의</label>
+        </span> 
+
+        <div class="accordion agreeAccordion" accordion-option="only">
+          <h3 class="accordionTitle">
+            <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1" id="accordionFirstid">
+              <span class="accordionIcon"></span>
+            </button>
+            <span class="checkbox">
+              <input type="checkbox" id="agreeLabel1" name="agreeLabel1" >
+              <label for="agreeLabel1"><span></span>스크래핑 서비스 동의</label>
+            </span>
+          </h3>
+          <div id="acc1" role="region" aria-labelledby="accordionFirstid" class="accordionPanel" hidden="">
+            ex) 제 1조 (목적)<br/>
+            법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
+            대출 분리하게 적용할
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- v1.4 추가 -->
+    <div class="titH3 hasLine"><h3 class="inner">법인/대표자 유형 선택</h3></div>
+    <section class="agreeContent">
+      <p class="pageTxt">고객님 해당하는 유형을 선택해 주세요.</p>
+      <div class="bbsSearch">
+        <div class="formList">
+          <label class="label">법인 유형</label>
+          <span class="formRow">
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value=""/>
+              <label class="label" for="formLabel1_1"><span></span>비외감 법인(일반 법인)</label>
+            </span>        
+            <span class="radio">
+              <input type="radio" id="formLabel1_2" name="formLabel1" value=""/>
+              <label class="label" for="formLabel1_2"><span></span>외감 법인</label>
+            </span>   
+          </span>
+        </div>
+        <div class="formList">
+          <label class="label">대표자 유형</label>
+          <span class="formRow">
+            <span class="radio">
+              <input type="radio" id="formLabel2_1" name="formLabel2" value=""/>
+              <label class="label" for="formLabel2_1"><span></span>단독 대표</label>
+            </span>        
+            <span class="radio">
+              <input type="radio" id="formLabel2_2" name="formLabel2" value=""/>
+              <label class="label" for="formLabel2_2"><span></span>공동 대표</label>
+            </span>   
+            <span class="radio">
+              <input type="radio" id="formLabel2_3" name="formLabel2" value=""/>
+              <label class="label" for="formLabel2_3"><span></span>각자 대표</label>
+            </span>   
+          </span>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="titH3 hasLine"><h3 class="inner">정보 제공 및 조회 동의</h3></div><!-- v1.4 수정 -->
+    <section class="agreeContent">
+      <p class="pageTxt">대출 비교를 위한 <span class="blue">정보제공 동의</span> 및 <span class="blue">제3자 정보제공 동의</span>에 동의해주세요</p>
+      <section class="sectionBlock40"><!-- v1.4 수정 .sectionBlock60 -> sectionBlock40 -->
         <span class="checkbox checkAll">
           <input type="checkbox" id="agreeLabelAll1" name="agreeLabelAll1" >
           <label for="agreeLabelAll1"><span></span>법인<strong class="blue">정보 제공</strong> 및 제 <strong class="blue">3자 정보 제공</strong> 전체 동의</label>
         </span> 
-
-        
         <div class="accordion agreeAccordion" accordion-option="only">
           <h3 class="accordionTitle">
             <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_1" id="accordion1id">
@@ -166,7 +234,7 @@
           </div>
         </div>
       </section>
-      <section class="sectionBlock60">
+      <section class="sectionBlock40"><!-- v1.4 수정 .sectionBlock60 -> sectionBlock40 -->
         <span class="checkbox checkAll">
           <input type="checkbox" id="agreeLabelAll2" name="agreeLabelAll2" >
           <label for="agreeLabelAll2"><span></span><strong class="blue">대표자 정보 제공</strong> 및 <strong class="blue">제 3자 정보 제공</strong> 전체 동의</label>
@@ -216,7 +284,8 @@
           </div>
         </div>
       </section>
-      <section class="sectionBlock60">
+      <!-- v1.4 수정 위치 상단이동 -->
+      <!-- <section class="sectionBlock40">
         <span class="checkbox checkAll">
           <input type="checkbox" id="agreeLabelAll3" name="agreeLabelAll3" >
           <label for="agreeLabelAll3"><span></span><strong class="blue">스크래핑 서비스</strong> 신청 동의</label>
@@ -237,28 +306,26 @@
             대출 분리하게 적용할
           </div>
         </div>
-      </section>
-      <section class="sectionBlock60">
-        <div class="guideBox">
-          <strong class="notiTxt blue">유의사항</strong>
-          <p class="desc">신용도 판단 정보 및 공공 정보를 기반으로 아래 사유에 해당되는 경우 대출 진행이 제한 됩니다.</p>
-          <ul class="guideList num">
-            <li class="list">신용도 판단 정보 : 연체, 부도, 금융질서 문란 등</li>
-            <li class="list">공공정보 : 세금 및 사대보험 체납, 회생, 채무불이행, 신용회복지원, 파산 면책 결정, 국외이주신고에 대한 정보, 새출발기금(채무조종)등</li>
-            <li class="list">휴/폐업 상태</li>
-            <li class="list">기타 대출제한일 경우&nbsp;<a href="#;" class="textBold blue">[대출 제한 대상 자세히보기]</a></li>
-          </ul>
-        </div>
-      </section>
-      <div class="table_bt">
-        <div class="btn_c">
-          <button type="button" class="btnSuccess">법인 공동인증서 인증</button>
-        </div>
-        <div class="btn_r">
-          <button type="button" class="btnWhite ico_next">다음</button>
-        </div>
-      </div>    
+      </section> -->
     </section>
+    <section class="guideBox mt60">
+      <strong class="notiTxt blue">유의사항</strong>
+      <p class="desc">신용도 판단 정보 및 공공 정보를 기반으로 아래 사유에 해당되는 경우 대출 진행이 제한 됩니다.</p>
+      <ul class="guideList num">
+        <li class="list">신용도 판단 정보 : 연체, 부도, 금융질서 문란 등</li>
+        <li class="list">공공정보 : 세금 및 사대보험 체납, 회생, 채무불이행, 신용회복지원, 파산 면책 결정, 국외이주신고에 대한 정보, 새출발기금(채무조종)등</li>
+        <li class="list">휴/폐업 상태</li>
+        <li class="list">기타 대출제한일 경우&nbsp;<button type="button" class="textBold blue">[대출 제한 대상 자세히보기]</button></li>
+      </ul>
+    </section>
+    <div class="table_bt">
+      <div class="btn_c">
+        <button type="button" class="btnSuccess">법인 공동인증서 인증</button>
+      </div>
+      <div class="btn_r">
+        <button type="button" class="btnWhite ico_next">다음</button>
+      </div>
+    </div>    
   </section>
   
   <!-- **************** -->

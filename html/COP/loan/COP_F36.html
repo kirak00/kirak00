@@ -111,10 +111,11 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner flexBetween">업체 개요<button type="button" class="btnDkGreen">내 정보 불러오기</button></h3></div>
+    <!-- v1.4 반영 -->
+    <div class="titH3 hasLine mb0"><h3 class="inner">업체 개요<span class="blue">(필수)</span><button type="button" class="btnSuccess">내 정보 불러오기</button></h3></div>
     <div class="bgGray">
       <section class="sectionBlock20">
-        <div class="titH5"><h3>법인 회사 정보를 입력해주세요.  <strong class="blue">(필수)</strong></h3></div> 
+        <h3 class="titH5">법인 회사 정보를 입력해주세요.</h3> <!-- v1.4 반영 -->
         <div class="formListTable mt40">
           <table>
             <caption>법인회사정보</caption>
@@ -193,11 +194,17 @@
                   <label class="label" id="inputLabel5">개업일</label>
                 </th>
                 <td>
-                  <div class="rangeControl lg">
-                    <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                    <span class="uit">~</span>
-                    <input type="text" class="input calendar" value="2023-07-31" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-                  </div> 
+                  <!-- v1.4 반영 -->
+                  <div class="formRow">
+                    <div class="rangeControl lg">
+                      <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                    </div> 
+                    <label class="label th" id="inputLabel5_1">결산월</label>
+                    <select title="정렬 선택"> 
+                      <option>12월</option>
+                      <option>본부2</option>
+                    </select>
+                  </div>
                 </td>
               </tr>
               <tr>
@@ -215,15 +222,16 @@
                   <label class="label" id="inputLabel7">본사 사업장의<br/>임대 형태</label>
                 </th>
                 <td>
+                  <!-- v1.4 반영 -->
                   <div class="formRow">
                     <span class="radio">
                       <input type="radio" id="radioLabel2_1" name="radioLabel2" value="" />
-                      <label class="label" for="radioLabel2_1"><span></span>창업 2세</label>
+                      <label class="label" for="radioLabel2_1"><span></span>사옥(자가)</label>
                     </span>
                     <div class="formSet">
                       <span class="radio"> 
                         <input type="radio" id="radioLabel2_2" name="radioLabel2" value="" />
-                        <label class="label" for="radioLabel2_2"><span></span>전문경영인</label>
+                        <label class="label" for="radioLabel2_2"><span></span>임대-전세</label>
                       </span>
                       <input class="input wid240" type="text" placeholder="전세금을 입력해 주세요." value="" >
                       <span class="unit">원</span>
@@ -247,7 +255,7 @@
               </tr>
               <tr>
                 <th scope="row">
-                  <label class="label" id="inputLabel8">본사 주소</label>
+                  <label class="label" id="inputLabel8">사업장(공장) 주소</label><!-- v1.4 반영 -->
                 </th>
                 <td>
                   <div role="group" aria-labelledby="inputLabel8">
@@ -288,12 +296,11 @@
                       <label class="label" for="radioLabel9_3"><span></span>각자 대표</label>
                     </span>
                   </div>
-                  <p class="notiTxt">대표자 정보와 법인등기상 정보가 다르면 대출 비교 접수가 불가합니다. 대표자 정보가 다를 경우 마이페이지에서 수정 후 진행해 주세요.</p>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  <label class="label" id="inputLabel10">법인 담당자<br/>전화번호</label>
+                  <label class="label" id="inputLabel10">법인 대표<br/>전화번호</label><!-- v1.4 반영 -->
                 </th>
                 <td>
                   <div class="formRow wid600 textCenter" role="group" aria-labelledby="inputLabel10">
@@ -304,17 +311,30 @@
                     <input class="input" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" readonly>
                     <button type="button" class="btnWhite" disabled>본인확인</button>
                   </div>
+                  <p class="notiTxt">대표자 정보와 법인등기상 정보가 다르면 대출 비교 접수가 불가합니다. </p><!-- v1.4 반영 -->
                 </td>
               </tr>
+              <!-- v1.4 추가 -->
               <tr>
                 <th scope="row">
-                  <label class="label" for="inputLabel11">직원수</label>
+                  <label class="label" for="inputLabel11">동업계 종사년수</label>
                 </th>
                 <td>
                   <div class="formRow">
                     <input id="inputLabel11" class="input wid160 innerTxt_1" type="text" placeholder="" value="21">
+                    <span class="unit">년</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label class="label" for="inputLabel12">직원수</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input id="inputLabel12" class="input wid160 innerTxt_1" type="text" placeholder="" value="21">
                     <span class="unit">명</span>
-                    <button type="button" class="btnSuccess px32">상시 직원수 조회 <em class="tooltip_q" title="해당 정보는 근로복지공단의 공공 API를 통해 제공합니다."><span class="txt">?</span></em></button>
+                    <button type="button" class="btnWhite px32">상시 직원수 조회 <em class="tooltip_q" title="해당 정보는 근로복지공단의 공공 API를 통해 제공합니다."><span class="txt">?</span></em></button>
                   </div>
                 </td>
               </tr>

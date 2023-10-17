@@ -61,14 +61,14 @@
         <li>
           <span class="circle">7</span>
           <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>노사관계 및 연혁</span></p>
-        </li>
-        <li>
-          <span class="circle">8</span>
-          <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>필요서류 제출</span></p>
         </li>
         <li class="on">
+          <span class="circle">8</span>
+          <!-- <p class="name top"><span>법인정보</span></p> --><!-- v1.2 수정 -->
+          <p class="name"><span>희망 대출 정보</span></p>
+        </li>
+        <li>
           <span class="circle">9</span>
           <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>대출정보 등록</span></p>
@@ -111,7 +111,7 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">대출정보등록<span class="pointDesc">금융기관의 심사를 통해 희망하는 자금 용도 이외의 다른 용도의 제안이 추가 발생 할 수 있습니다.</span></h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner">희망 대출 정보</h3></div><!-- v1.2 수정 -->
     <div class="bgGray">
       <section>
         <div class="formListTable">
@@ -132,12 +132,13 @@
                       <option>시설자금</option>
                       <option>운영자금</option>
                     </select>
+                    <span class="pointDesc">자금용도에 따라 금융기관이 제안하는 상품이 달라질 수 있습니다.</span>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td colspan="3">
-                  <label for="accLabel1_2" class="label">상세 용도</label>
+                <td colspan="2"><!-- v1.2 수정 -->
+                  <label for="accLabel1_2" class="label textBold">상세 용도</label><!-- v1.2 수정 -->
                   <div class="checkBoxScroll number4" role="group" aria-labelledby="accLabel1_2">
                     <span class="checkbox">
                       <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox" />
