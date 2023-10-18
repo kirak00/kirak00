@@ -238,12 +238,13 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .serviceInfo_visual         { width:1415px; height:356px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
 .serviceInfo_visual.login   { width:1400px; height:322px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
 .serviceInfo_visual.loan   { width:1400px; height:388px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
-/* .serviceInfo_txt            { padding:60px 0 0;} */
+.serviceInfo_txt            { margin-top:-30px;}
+.notiTxt + .serviceInfo_txt { margin-top: 10px}
 .serviceInfo_txt dl         { position:relative; padding:30px 0; border-bottom:1px solid #ddd; }
-.serviceInfo_txt dl:first-child { padding-top: 0;}
-.serviceInfo_txt dl:first-child dt { top: 0; transform: none;}
 .serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
 .serviceInfo_txt dl dd      { padding-left:150px; line-height: 1.5;}
+.serviceInfo_txt dl dd strong,
+.serviceInfo_txt dl dd span { vertical-align: 0;}
 
 .main_btn     {padding:40px 0 0px; text-align: center;}
 .main_btn button     {width:220px; }
