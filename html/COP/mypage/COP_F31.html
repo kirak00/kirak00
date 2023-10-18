@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/lib/calendar_min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container mypage" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">메시지함</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>메시지함</strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="">
+      <fieldset class="tableFilterGroup mt20">
+        <span class="count">총 <strong>3</strong>건</span>
+        <!-- <div class="formRow" role="group">
+          <select title="정렬" class="wid200">
+            <option>정렬</option>
+            <option>옵션</option> 
+          </select>
+          <button type="button" class="btnDkGreen">적용</button>
+        </div> -->
+      </fieldset>
+      
+      <div class="table_wrap messageList">
+        <table class="bbs_list">
+          <caption>
+            메세지 목록
+          </caption>
+          <colgroup>
+            <col width="140px"/>
+            <col width="240px"/>
+            <col width="200px"/>
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_all" class="chk_all" name="messageChk" title="메세지 전체선택" />
+                  <label for="chk_all"><span></span></label>
+                </span>
+              </th>
+              <th scope="col">일시</th>
+              <th scope="col">대상</th>
+              <th scope="col">내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1" name="messageChk" title="메세지 선택" />
+                  <label for="chk_1"><span></span></label>
+                </span>
+              </td>
+              <td>2023-07-31  20:25</td>
+              <td>(주)길동건설</td>
+              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
+            </tr>
+            <tr class="">
+              <td>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_2" name="messageChk" title="메세지 선택" />
+                  <label for="chk_2"><span></span></label>
+                </span>
+              </td>
+              <td>2023-07-31  20:25</td>
+              <td>(주)길동건설</td>
+              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_3" name="messageChk" title="메세지 선택" />
+                  <label for="chk_3"><span></span></label>
+                </span>
+              </td>
+              <td>2023-07-31  20:25</td>
+              <td>(주)길동건설</td>
+              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
+            </tr>
+            <tr class="read">
+              <td>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_4" name="messageChk" title="메세지 선택" />
+                  <label for="chk_4"><span></span></label>
+                </span>
+              </td>
+              <td>2023-07-31  20:25</td>
+              <td>(주)길동건설</td>
+              <td class="tit"><a href="#">제안서 접수가 되었습니다.</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- 디자인 수정 -->
+      <div class="table_bt small mt20">
+        <div class="btn_l">
+          <button type="button" class="btnGray">삭제</button>
+          <!-- <button type="button" class="btnWhite">읽음처리</button> -->
+        </div>
+        <div class="external-pager jsgrid-pager-container">
+          <div class="jsgrid-pager">
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;&lt;</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;</a></span> 
+            <span class="jsgrid-pager-page jsgrid-pager-current-page">1</span>
+            <span class="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;</a></span> 
+            <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&gt;&gt;</a></span> 
+          </div>
+        </div>
+        <!-- <div class="btn_r">
+          <button type="button" class="btnGray">삭제</button>
+        </div> -->
+      </div>
+      
+
+
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

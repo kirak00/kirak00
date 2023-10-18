@@ -34,9 +34,9 @@
       <div class="inner">
         <ul class="tabLine tabScript" role="tablist">
           <li class="on"><button type="button" role="tab" aria-selected="true">법인</button></li>
-          <!-- 디자인 수정 : 워딩 수정 -->
+          <!-- 디자인 수정 : 탭 수정 -->
           <li><button type="button" role="tab" aria-selected="false">비밀번호 변경</button></li>
-          <li><button type="button" role="tab" aria-selected="false">기업 정보</button></li>
+          <!-- <li><button type="button" role="tab" aria-selected="false">기업 정보</button></li> -->
         </ul>
         <!-- 디자인 수정 : 삭제 -->
         <!-- <p class="update">업데이트 &nbsp; 2023-08-10</p> -->
@@ -106,11 +106,11 @@
                 <td>
                   <div class="formRow textCenter" role="group" aria-labelledby="formLabel5">
                     <!-- 디자인 수정 : wid100 -->
-                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="000" value="" readonly>
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="000" value="010">
                     <span class="unit">-</span>
-                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00" value="" readonly>
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00" value="1234">
                     <span class="unit">-</span>
-                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00000" value="" readonly>
+                    <input class="input wid100" type="text" title="회사 대표전화(1/3)" placeholder="00000" value="5678">
                   </div>
                 </td>
               </tr>
@@ -122,10 +122,35 @@
                 <td>
                   <div class="formRow" role="group" aria-labelledby="formLabel6">
                     <!-- 디자인 수정 : wid180 -->
-                    <input class="input wid180" type="text" title="이메일 아이디" placeholder="hong" value="" maxlength="50" readonly>
+                    <input class="input wid180" type="text" title="이메일 아이디" placeholder="hong" value="hong" maxlength="50">
                     <span class="unit mail">@</span>
                     <!-- 디자인 수정 : wid210 -->
-                    <input class="input wid210" title="도메인주소" type="text" placeholder="gmail.com" value="" readonly>
+                    <!-- <input class="input wid210" title="도메인주소" type="text" placeholder="gmail.com" value=""> -->
+                    <!-- v1.4 수정 -->
+                    <select title="도메인주소 선택" class="wid200">
+                      <option>gmail.com</option>
+                      <option>직접 입력</option>
+                    </select>
+                    <input class="input wid200" title="도메인주소" type="text" placeholder="gmail.com" value="">
+                  </div>
+                </td>
+              </tr>
+              <!-- v1.4 추가 -->
+              <tr>
+                <th scope="row" class="pt15">
+                  <label id="formLabelEmail">이메일 수신동의</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <span class="radio">
+                      <input type="radio" id="rdoAgreeA" name="rdoAgree" value="A" />
+                      <label for="rdoAgreeA"><span></span>수신동의</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="rdoAgreeB" name="rdoAgree" value="B" />
+                      <label for="rdoAgreeB"><span></span>수신거부</label>
+                    </span>
+                    <p class="formDesc">수신 동의일 2023-09-22</p>
                   </div>
                 </td>
               </tr>
@@ -135,12 +160,12 @@
                 </th>
                 <td role="group" aria-labelledby="formLabel7">
                   <div class="formRow">
-                    <input class="input inputBoss" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
-                    <button type="button" class="btnBlack" disabled>주소검색</button>
+                    <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54">
+                    <button type="button" class="btnBlack">주소검색</button>
                   </div>
                   <!-- 디자인 수정 : fullType 삭제 -->
                   <div class="formRow">
-                    <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="4층" readonly>
+                    <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="">
                   </div>
                 </td>
               </tr>
@@ -159,10 +184,25 @@
                 <th scope="row">
                   <label id="formLabel8">대표자명</label>
                 </th>
-                <td>
-                  <div class="formRow" role="group" aria-labelledby="formLabel8">
-                    <input class="input inputBoss" type="text" title="대표자명" placeholder="" value="홍길동" readonly>
-                    <input class="input" type="text" title="대표자 유형" placeholder="" value="1인 대표" readonly>
+                <!-- 디자인 수정 -->
+                <td role="group" aria-labelledby="formLabel8">
+                  <div class="formRow">
+                    <input id="formLabel8" class="input" type="text" placeholder="" value="홍길동">
+                  </div>
+                  <!-- v1.3 수정 : .pt15 추가 v1.4 수정 : .pt15 삭제 -->
+                  <div class="formRow">
+                    <span class="radio">
+                      <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
+                      <label for="testRdoBoxA"><span></span>1인 대표</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
+                      <label for="testRdoBoxB"><span></span>공동 대표</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="testRdoBoxC" name="testRdoBox" value="C" />
+                      <label for="testRdoBoxC"><span></span>각자 대표</label>
+                    </span>
                   </div>
                 </td>
               </tr>
@@ -181,17 +221,6 @@
                   </div>
                 </td>
               </tr> -->
-              <tr>
-                <th scope="row">
-                  <label id="formLabel8">대표자명</label>
-                </th>
-                <td>
-                  <div class="formRow" role="group" aria-labelledby="formLabel8">
-                    <input class="input inputBoss" type="text" title="대표자명" placeholder="" value="홍길동" readonly>
-                    <input class="input" type="text" title="대표자 유형" placeholder="" value="1인 대표" readonly>
-                  </div>
-                </td>
-              </tr>
               <!-- <tr>
                 <th scope="row">
                   <label id="formLabel9">대표자 휴대전화</label>
@@ -206,15 +235,63 @@
                   </div>
                 </td>
               </tr> -->
+              <tr>
+                <th scope="row">
+                  <label id="formLabelTalk2">알림톡 담당자</label>
+                </th>
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="formLabelTalk2">
+                    <input class="input wid200" title="도메인주소" type="text" placeholder="" value="홍길동">
+                    <p class="formDesc">수신 동의일 2023-09-22</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label id="formLabelTalk2">알림톡 담당자 전화번호</label>
+                </th>
+                <td>
+                  <div class="formRow textCenter" role="group" aria-labelledby="formLabelTalk2">
+                    <input class="input wid100" type="text" title="알림톡 담당자 전화번호(1/3)" placeholder="000" value="010">
+                    <span class="unit">-</span>
+                    <input class="input wid100" type="text" title="알림톡 담당자 전화번호(1/3)" placeholder="00" value="1234">
+                    <span class="unit">-</span>
+                    <input class="input wid100" type="text" title="알림톡 담당자 전화번호(1/3)" placeholder="00000" value="5678">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label id="formLabelTalk3">알림톡 담당자 이메일</label>
+                </th>
+                <td>
+                  <div class="formRow" role="group" aria-labelledby="formLabelTalk3">
+                    <input class="input wid180" type="text" title="이메일 아이디" placeholder="hong" value="hong" maxlength="50">
+                    <span class="unit mail">@</span>
+                    <select title="도메인주소 선택" class="wid200">
+                      <option>gmail.com</option>
+                      <option>직접 입력</option>
+                    </select>
+                    <input class="input wid200" title="도메인주소" type="text" placeholder="gmail.com" value="">
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
       <div class="table_bt">
         <div class="btn_c">
-          <button type="button" class="btnSuccess">수정</button>
+          <button type="button" class="btnSuccess">저장</button>
+          <button type="button" class="btnGray">취소</button>
         </div>
       </div>
+      <!-- <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnSuccess">수정</button>
+        </div>
+      </div> -->
+      
     </div>
     
 

@@ -575,7 +575,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow.flexBetween { justify-content: space-between;}
-.formRow>:only-child { }
+.formRow .formDesc { margin-left: 30px; color: #888; font-size: 14px;}
 /* textarea text count 있을경우 */
 .formRow.hasCount { position: relative;}
 .formRow.hasCount .textarea { padding-bottom: 44px;} 
@@ -690,6 +690,7 @@ select.selectSm { min-width: 206px;}
 select.wid100 { min-width: 100px;}
 select.wid180 { min-width: 180px;}
 select.wid200 { min-width: 200px;}
+/* select.wid210 { min-width: 210px;} */
 select.wid220 { min-width: 220px;}
 select.wid240 { min-width: 240px;}
 select.wid300 { min-width: 300px;}
@@ -706,7 +707,7 @@ select.wid430 { min-width: 430px;}
 .textarea.h140 { height: 140px; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 .layerCont .textarea { min-height: 50px; height: 180px;}
-.layerCont .textarea.h64 { height: 50px; }
+.layerCont .textarea.h64 { height: 64px; }
 .layerCont .textarea.h100 { height: 100px; }
 
 
@@ -800,7 +801,7 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.fullChk .formRow { flex:1}
 .searchControlItem.fullChk .formRow .checkbox:last-child  { flex:1}
 
-.searchControlItem.expand { max-width: 50%;}
+/* .searchControlItem.expand { max-width: 50%;} */
 .searchControlItem.expand .formRow { width: 100%;}
 .searchControlBox.half .searchControlItem.expand { max-width: 100%;}
 
@@ -1106,6 +1107,9 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
 .table_bt.hasLine { padding-top: 40px; border-top: 1px solid #ddd;}
 .bgGray + .table_bt      { margin-top:20px; }
+.table_bt.small button,
+.table_bt.small a { padding: 0 24px; height: 40px; }
+
 .table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
 .table_bt .btn_l      {float:left; }
@@ -1337,7 +1341,7 @@ table { width: 100%;}
 .textTable tr:last-child th, .textTable tr:last-child td { padding-bottom: 0px; }
 .textTable .sub { color: #888; font-size: 16px; font-weight: 400;}
 
-.textTable.boxType { padding: 40px 60px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+.textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 .textTable.boxType tr.tit th,
 .textTable.boxType tr.tit td {border-bottom:1px solid #ddd;  }
 .textTable.boxType tr.tit td {font-weight: 700; color:#069B66; }
@@ -1365,6 +1369,7 @@ table { width: 100%;}
 .formMdTable .input { width: 100%;}
 .formMdTable .input.wid100 { width: 100px;}
 .formMdTable .input.wid180 { width: 180px;}
+.formMdTable .input.wid200 { width: 200px;}
 .formMdTable .input.wid210 { width: 210px;}
 .formMdTable .input.wid240 { width: 240px;}
 .formMdTable .input.inputBoss { width: 418px; flex-shrink: 0;}
@@ -1609,6 +1614,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px;}
 .layerWrap.typeAlert .layerBody.wid400,
 .layerWrap.typeAlert .layerBody.wid500  { text-align: center;}
+.layerWrap.typeAlert .layerBody.wid400 .layerFoot { padding-top: 32px;}
+.layerWrap.typeAlert .layerBody.wid400 .tit + .formVertical { margin-top: 16px;}
 .layerWrap.typeAlert .layerBody .layerFoot { display: flex; justify-content: center; gap: 8px; padding-left: 90px; padding-right: 90px; padding-top: 20px;}
 .layerWrap.typeAlert .layerBody .layerFoot.pt32 { padding-top: 32px;}
 .layerWrap.typeAlert .layerBody .layerFoot.pt40 { padding-top: 40px;}
@@ -1632,7 +1639,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 *****************************/
 .pageTop        { position: relative; margin-bottom:40px; overflow: hidden; }
 .pageTop + .tabLineWrap { margin-top: -20px;}
-.pageTop.textCenter { margin-top: 0px;}
+/* .pageTop.textCenter { margin-top: 0px;} */
 .pageTop h2.pageTit        {font-size:30px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; overflow: hidden; }
 .pageTop ul.breadcrumb li  { float:left; }
@@ -2209,3 +2216,42 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .multipleRows tr:last-child > td {
   border-bottom: 0;
 }
+
+
+
+/****************************
+**********  로그인 페이지  **********
+*****************************/
+/* 진 */
+/* 공통 */
+.loginWrap { position: relative; margin-top: 20px;}
+/* .loginWrap .formBox.wid346 .label { width: calc(100% - 346px); flex-shrink: 0;}
+.loginWrap .formBox.wid346 .errorTxt { margin-left: calc(100% - 346px + 8px); }
+.loginWrap .formBox.wid400 .label { width: calc(100% - 400px); flex-shrink: 0;}
+.loginWrap .formBox.wid400 .errorTxt { margin-left: calc(100% - 400px + 8px); } */
+.formList { flex-wrap: wrap;}
+.formList .label.wid120 { width: 120px; margin-right: 0;}
+.formList .label.wid120 + .formRow { max-width: calc(100% - 120px);}
+.formList .label.wid120 ~ .errorTxt { margin-left: 120px;}
+/* 탭이 있는 경우 */ 
+/* .tabpanel .pageTop { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); margin: 0;}
+.loginWrap .tabWrap { width: 530px; margin: 40px auto 0;}
+.loginWrap .input { width: 100%;}
+.loginWrap .inputBizNumber .input { width: auto;}
+.loginWrap .inputBizNumber .input:nth-of-type(1) { width: 80px;}
+.loginWrap .inputBizNumber .input:nth-of-type(2) { width: 68px;}
+.loginWrap .inputBizNumber .input:nth-of-type(3) { width: 100%;}
+.loginWrap .tabpanel { display: none; padding: 40px 0 0;}
+.loginWrap .tabpanel.isShow { display: block; }
+.loginWrap .formCont { display: flex; flex-direction: column; min-height: 254px; }
+.loginWrap .pageTop[data-tabTitle].isHidden { display: none;}
+.tabWrap.fixHeight .tabpanel{ position: relative; height: 318px;}
+.tabWrap.fixHeight .loginBtn { position: absolute; bottom: 0;} */
+
+/* 탭이 없는 경우 */
+.loginCon { width: 460px; margin: 60px auto 0;}
+.loginCon .btnBox { margin: 60px auto 0; }
+.loginCon .btnBox button,
+.loginCon .btnBox a { width: 100%; }
+/* .loginTit .info_txt { margin-top: 20px;} */
+
