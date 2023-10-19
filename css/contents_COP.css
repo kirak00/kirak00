@@ -214,6 +214,9 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .main_survey.bgGreen { background: #F6FBF7; padding: 40px;}
 .main_survey.bgGreen dt {padding-top: 0;}
 
+.layerCont .main_survey { padding: 0;}
+.layerCont .main_survey dl:first-child dt { padding-top: 0;}
+
 /* 약관 */
 .content_terms    { margin-top:40px; }
 .content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; }

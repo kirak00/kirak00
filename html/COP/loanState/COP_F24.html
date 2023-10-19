@@ -22,11 +22,12 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
-      <h2 class="pageTit">심사 중인 금융기관</h2>
+      <h2 class="pageTit">심사 현황</h2>
+      <p class="pageSub">조회할 대출 비교 신청 건을 선택하세요. </p>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><strong>심사 중인 금융기관</strong></a></li>
+          <li><a href="#none"><span>대출 비교 진행 현황</span></a></li>
+          <li><a href="#none"><strong>심사현황</strong></a></li>
       </ul>
     </section>
 
@@ -35,23 +36,29 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="selectLabelState" class="label">비교 신청 건 <span>3</span>건</label>
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">비교 신청 건</label>
               <div class="formRow">
-                <select id="selectLabelState">
+                <select id="selectLabelState" class="wid640">
                   <option>S_230401_0001 시설 자금 대출</option>
                   <option>S_230401_0001 시설 자금 대출</option>
                 </select>
+                <button type="button" class="btnSuccess">대출 비교 신청 정보</button>
+                <button type="button" class="btnDkGreen">추가 서류 관리</button>
               </div>
             </div>
-            <!-- 디자인 수정 추가 -->
-            <button type="button" class="btnSuccess">조회</button>
+            <div class="searchControlItem">
+              <label for="selectLabelState2" class="label">제안서 마감일</label>
+              <div class="formRow">
+                <input type="text" class="input wid480" value="2023-07-01">
+                <button type="button" class="btnWhite">마감일 변경</button>
+              </div>
+            </div>
           </div>
         </div>
       </fieldset>
       
-      <!-- 디자인 수정: 테이블 삭제 -->
-      <!-- <section class="">
+      <section class="sectionBlock40">
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>0</strong>건</span>
           <div class="formRow" role="group">
@@ -64,59 +71,118 @@
         </fieldset>
         <div class="jsGridWrap">
           <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
-          <div id="externalPager" class="external-pager"></div>
+          <div class="table_bt small">
+            <div class="btn_l">
+              <button type="button" class="btnSuccess">승인</button>
+              <button type="button" class="btnGray">거절</button>
+            </div>
+            <div id="externalPager" class="external-pager"></div>
+          </div>
           <script>
+            /* jsgrid sample */
+            $(function() {
+            var clients = [
+              { "Name1": false,
+                "Name2": "신한저축은행",
+                "Name3": "2023-08-10", 
+                "Name4": "2023-08-10", 
+                "Name5": "2023-08-10", 
+                "Name6": "2023-08-10", 
+                "Name7": "<button type='button' class='btnWhite'>요청 내용 보기</button>", 
+                "Name8": "2023-08-10", 
+                "Name9": "2023-08-10", 
+              },
+              { "Name1": false,
+                "Name2": "신한저축은행",
+                "Name3": "2023-08-10", 
+                "Name4": "2023-08-10", 
+                "Name5": "2023-08-10", 
+                "Name6": "2023-08-10", 
+                "Name7": "<span class='textBold gray'>거절</span>", 
+                "Name8": "-", 
+                "Name9": "-", 
+              },
+              { "Name1": false,
+                "Name2": "신한저축은행",
+                "Name3": "2023-08-10", 
+                "Name4": "2023-08-10", 
+                "Name5": "2023-08-10", 
+                "Name6": "2023-08-10", 
+                "Name7": "<span class='textBold blue'>승인</span>", 
+                "Name8": "-", 
+                "Name9": "-", 
+              },
+            ];
+            $("#jsGrid").jsGrid({
+              data: clients,
+              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+              fields: [
+                { name: "Name1",  type: "checkbox", width: 130, 
+                    headerTemplate: function() {
+                        return $("<input>").attr("type", "checkbox").attr("class", "selectAllCheckbox")
+                    },
+                    itemTemplate: function(value, item) {
+                      return $("<input>").attr("type", "checkbox").attr("class", "singleCheckbox")
+                        .prop("checked", $.inArray(item.firstName, selectedItems) > -1)
+                        .on("change", function () {
+                          $(this).is(":checked");
+                        }
+                      );
+                    } 
+                  },
+                  { name: "Name2",  type: "text", title : "심사 참여<br/>금융 기관", width: 160},
+                  { name: "Name3", type: "text", title : "심사 시작일", width: 160},
+                  { name: "Name4", type: "text", title : "추가 서류<br/>요청일", width: 160},
+                  { name: "Name5", type: "text", title : "추가 서류<br/>제출일", width: 160},
+                  { name: "Name6", type: "text", title : "마감 기한 연장<br/>요청일", width: 140},
+                  { name: "Name7", type: "text", title : "마감 기한 연장<br/>요청상태", width: 140},
+                  { name: "Name8", type: "text", title : "마감 기한 연장일", width: 200},
+                  { name: "Name9", type: "text", title : "심사 취소일", width: 140},
+                ],
+                pagerContainer: "#externalPager",
+              });
             
-  /* jsgrid sample */
-  $(function() {
-  
-  var clients = [
-    { "Name1": "3건",
-      "Name2": "2023-08-10", 
-      "Name3": "농협은행", 
-      "Name4": "2023-08-10", 
-    },
-    { "Name1": "3건",
-      "Name2": "2023-08-10", 
-      "Name3": "농협은행", 
-      "Name4": "2023-08-10", 
-    },
-    { "Name1": "3건",
-      "Name2": "2023-08-10", 
-      "Name3": "농협은행", 
-      "Name4": "2023-08-10", 
-    },
-    { "Name1": "3건",
-      "Name2": "2023-08-10", 
-      "Name3": "농협은행", 
-      "Name4": "2023-08-10", 
-    },
-  ];
-  
-  
-  $("#jsGrid").jsGrid({
-    data: clients,
-    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-    fields: [
-      { name: "Name1",  type: "text", title : "열람한 금융기간 건수", width: 400},
-      { name: "Name2", type: "text", title : "열람 날짜", width: 260},
-      { name: "Name2", type: "text", title : "심사 중인 금융기관명", width: 480},
-      { name: "Name2", type: "text", title : "심사 요청일", width: 200},
-    ],
-        
-    pagerContainer: "#externalPager",
-    
-    });
-  
-  });
-  
-
+              var selectedItems = [];
+              var selectItem = function(item) {
+                selectedItems.push(item);
+                if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+                  $(".selectAllCheckbox").prop("checked", true);
+                } else {
+                  $(".selectAllCheckbox").prop("checked", false);
+                }
+              }; 
+              var unselectItem = function(item) {
+                selectedItems = $.grep(selectedItems, function(i) {
+                return i !== item;
+                });
+                if(selectedItems.length == 0) {
+                  $('.selectAllCheckbox').attr('checked', false);
+                }
+                if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+                  $(".selectAllCheckbox").prop("checked", true);
+                  } else {
+                    $(".selectAllCheckbox").prop("checked", false);
+                  }
+              };
+              $(".selectAllCheckbox").click(function(item) {
+                selectedItems = [];
+                if(this.checked) { // check select status
+                  $('.singleCheckbox').each(function() { 
+                    this.checked = true;      
+                  });			         
+                  }else {
+                    $('.singleCheckbox').each(function() { 
+                        this.checked = false;      
+                        unselectItem(item);
+                    });  
+                    selectedItems = [];
+                  }
+              });
+            });
           </script>
         </div>
-      </section> -->
-      <div class="notiBox lineType">
-        <p class="notiTxt">오늘까지 <strong class="blue">14</strong>개의 금융기관이 회원님의 대출 비교하기 정보를 열람하고  <strong class="blue">5</strong>개의 금융기관이 심사를 요청했어요.</p>
-      </div>
+      </section>
+     
     </section>
 
 

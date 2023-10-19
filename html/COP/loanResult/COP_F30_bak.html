@@ -17,32 +17,69 @@
 </style>
 </head>
 <body>
-
   <!-- **************** -->
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container" id="skip_content"  aria-label="콘텐츠">
-    <section>
-      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">정부 지원 사업 안내 상세</button>
-    </section>    
-  </div>
-  <!-- **************** -->
-  <!-- contents : end -->
-  <!-- **************** -->
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
 
-  
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap modal show" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <div class="layerBody wid640">
-      <div class="layerHead">
-        <h3>만족도 평가</h3>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+    <section class="pageTop">
+      <h2 class="pageTit">대출 비교 신청 결과</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>대출 비교 신청 결과</strong></a></li>
+      </ul>
+    </section>
+ 
+    <section class="">
+      <h3 class="titH3">대출 실행 결과</h3>
+      <div class="textTable boxType">
+        <table>
+          <caption>대출 실행 결과</caption>
+          <colgroup>
+            <col width="213px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">대출 신청 상품</th> 
+              <td>시설자금</td>
+            </tr>
+            <tr>
+              <th scope="row">상품 상세</th> 
+              <td>공장의 신설, 매입, 개보수</td>
+            </tr>
+            <tr>
+              <th scope="row">신청일</th> 
+              <td>2023-07-10</td>
+            </tr>
+            <tr>
+              <th scope="row">대출 발생일</th> 
+              <td>2023-08-10</td>
+            </tr>
+            <tr>
+              <th scope="row">대출 발생 금액</th> 
+              <td>4,970,000,000원 <span class="sub">(금 사십 구억 칠천 만원)</span></td>
+            </tr>
+            <tr>
+              <th scope="row">실행 금리</th> 
+              <td>변동 5.3%</td>
+            </tr>
+            <tr>
+              <th scope="row">금융기관</th> 
+              <td>농협 중앙회</td>
+            </tr>
+            <tr>
+              <th scope="row">대출 진행 여부</th> 
+              <td>실행</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="layerCont">
-        <div class="main_survey">
+      <section class="sectionBlock40">
+        <div class="titH3"><h3>만족도 평가</h3><!--<button type="button" class="ico_edit">수정하기</button>--></div>
+        <div class="main_survey bgGreen">
           <dl>
             <dt>· 금융 회사가 제출한 제안서와 실제 대출이 일치 했나요?</dt>
             <dd>
@@ -74,7 +111,7 @@
             </dd>
             <dt>·  자금 조달된 금융상품에 대해 만족하신 부분을 선택해 주세요. (복수 선택 가능)</dt>
             <dd>
-              <div class="formRow flexWrap">
+              <div class="formRow">
                 <span class="checkbox">
                   <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>대출액</label>
                 </span>
@@ -87,17 +124,15 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_1_4" name="CheckBox"><label for="chk_1_4"><span></span>상환 방식</label>
                 </span>
-                <div class="formSet">
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk_1_5" name="CheckBox"><label for="chk_1_5"><span></span>기타</label>
-                  </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
-                </div>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_5" name="CheckBox"><label for="chk_1_5"><span></span>기타</label>
+                </span>
+                <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
               </div>
             </dd>
             <dt>·  Loan&amp;Biz의 서비스 중 어떤 부분이 도움이 되셨나요? (복수 선택 가능)</dt>
             <dd>
-              <div class="formRow flexWrap">
+              <div class="formRow">
                 <span class="checkbox">
                   <input type="checkbox" id="chk_2_1" name="CheckBox"><label for="chk_2_1"><span></span>편리함</label>
                 </span>
@@ -110,17 +145,15 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_2_4" name="CheckBox"><label for="chk_2_4"><span></span>다양한 대출 제안</label>
                 </span>
-                <div class="formSet">
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk_2_5" name="CheckBox"><label for="chk_2_5"><span></span>기타</label>
-                  </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
-                </div>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_2_5" name="CheckBox"><label for="chk_2_5"><span></span>기타</label>
+                </span>
+                <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
               </div>
             </dd>
             <dt>·  개선이 필요한 사항을 알려주세요. (복수 선택 가능)</dt>
             <dd>
-              <div class="formRow flexWrap">
+              <div class="formRow">
                 <span class="checkbox">
                   <input type="checkbox" id="chk_3_1" name="CheckBox"><label for="chk_3_1"><span></span>편리함</label>
                 </span>
@@ -133,32 +166,48 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_3_4" name="CheckBox"><label for="chk_3_4"><span></span>다양한 정보</label>
                 </span>
-                <div class="formSet">
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk_3_5" name="CheckBox"><label for="chk_3_5"><span></span>기타</label>
-                  </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요." value="감사합니다.">
-                </div>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_3_5" name="CheckBox"><label for="chk_3_5"><span></span>기타</label>
+                </span>
+                <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요." value="감사합니다.">
               </div>
             </dd>
           </dl>
         </div>
+        <!-- 디자인 수정 위치이동 -->
         <div class="table_bt">
           <div class="btn_c">
-            <button type="button" class="btnSuccess">평가 완료</button>
-            <!-- 수정일 경우 -->
-            <!-- <button type="button" class="btnWhite">수정</button> -->
+            <button type="button" class="btnSuccess">제출</button>
+            <button type="button" class="btnWhite">목록</button>
           </div>
         </div>
-      </div>
+      </section>
+    
+    </section>
+
+
+  </div>
+          
+   
+
+    </section>
+
+    <!-- 하단 풀 배너 : start -->
+    <section class="bnrInerCont">
+      
+    </section>
+    <!-- 하단 풀 배너 : end -->
+
+    <!-- 하단 풀 배너 : start -->
+    <div class="btFullBnr">
+      
     </div>
-    <div class="layerDimm"></div>
+    <!-- 하단 풀 배너 : end -->
+
   </div>
   <!-- **************** -->
-  <!-- layer : end -->
+  <!-- contents : end -->
   <!-- **************** -->
-
-
 
 
 </body>

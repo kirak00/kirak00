@@ -43,6 +43,8 @@
 
 
 .goLink { color: #333; text-decoration: underline; }
+.jsGridWrap .goLink,
+.bbs_list .goLink { color: #069B66; font-weight: 700; text-underline-offset: 3px; }
 
 /****************************
 **********  title  **********
@@ -122,9 +124,10 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .barList { display: flex;}
 .barList.gray .list { color: #555; font-size: 16px;}
 .barList.gray .list + .list::before{ background: #555; }
-.barList .list { position: relative; color: #fff; font-size: 18px;}
+.barList .list { position: relative; color: #fff; font-size: 16px;}
 .barList .list + .list { margin-left: 8px; padding-left: 8px;}
 .barList .list + .list::before{ content: ''; position: absolute; left: 0; top: 50%; margin-top: -8px; display: inline-block; width: 1px; height: 16px; background: #fff; }
+
 /****************************
 **********  noti  **********
 *****************************/
@@ -238,6 +241,7 @@ button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-ra
 .btnWhite      {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 .btnGray       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #888; }
 .btnWhiteLine  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
+.btnWhiteLine2  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
 .btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 .btnBlack      {padding:0 50px; height:50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
 .btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
@@ -347,6 +351,7 @@ a.download2       {padding-right:26px; font-weight: 700; color:#069B66;  backgro
 a.attach       {padding-left:32px; font-weight: 700; color:#555;  background:url(../images/common/ico_18_clip_primary.png) no-repeat 0% 50% / 24px 24px ; }
 
 a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50%; }
+.btnCheck       {padding-right:22px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_18_survey_primary.png) no-repeat 100% 0% / 18px; }
 
 
 .ico_print       {padding:0 32px;}
@@ -468,14 +473,14 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
   display: block;
   width: 24px;
   height: 24px;
-  background: url("../images/COP/checkbox_inactive.png") center center no-repeat;
+  background: url("../images/common/checkbox_inactive.png") center center no-repeat;
   position: absolute;
   top: 0;
   left: 0;
 }
 .jsGridWrap .singleCheckbox:checked::after,
 .jsGridWrap .selectAllCheckbox:checked::after {
-  background: url("../images/COP/checkbox_active.png") center center no-repeat;
+  background: url("../images/common/checkbox_active.png") center center no-repeat;
 }
 .jsGridWrap th .singleCheckbox::after,
 .jsGridWrap th .selectAllCheckbox::after,
@@ -575,7 +580,13 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow.flexBetween { justify-content: space-between;}
+.formRow.flexWrap { flex-wrap: wrap;}
+
 .formRow .formDesc { margin-left: 30px; color: #888; font-size: 14px;}
+.formRow .checkbox + .checkbox { margin-left: 22px;}
+
+
+.layerCont .formRow .checkbox + .checkbox { margin-left: 12px;}
 /* textarea text count 있을경우 */
 .formRow.hasCount { position: relative;}
 .formRow.hasCount .textarea { padding-bottom: 44px;} 
@@ -768,6 +779,9 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 30px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
+.searchControlItem .btnWhite, 
+.searchControlItem .btnSuccess, 
+.searchControlItem .btnDkGreen { padding: 0 30px;} 
 .searchControlItem .searchBtns { margin-left: 8px;}
 .searchControlItem .rangeControl .input { width: 142px;}
 .searchControlItem .label.srOnly  { display: none;}
@@ -777,9 +791,11 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
 .searchControlItem select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
-.searchControlItem .input { height: 100%; padding: 0 16px 0 30px; color: #333; font-size: 18px;}
+.searchControlItem select.wid640 { width: 640px; }
+.searchControlItem .input { height: 100%; padding: 0 16px 0 30px; color: #333; }
 .searchControlItem .input.inputXs { width: 100px;}
 .searchControlItem .input.wid360 { width: 360px;}
+.searchControlItem .input.wid480 { width: 480px;}
 .searchControlItem .unit { padding: 0 30px 0 10px; color: #333; font-size: 18px;}
 .searchControlItem .line  {position: relative; width: 0px; height: 100%; }
 .searchControlItem .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background: #ddd}
@@ -846,19 +862,28 @@ select.wid430 { min-width: 430px;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
 
+.layerCont .formList.ver .label { width: auto; margin-bottom: 8px;}
+.layerCont .formList.ver.single .label { margin-bottom: 20px; font-weight: 400;}
+
 .layerCont .formList:first-child { margin-top: 0;}
 .layerCont .formList:last-child { margin-bottom: 0;}
 .layerCont .formList { width: 100%; margin: 24px 0; flex-wrap: wrap; }
-.layerCont .formList .label { width: 100px; margin-right: 0px;}
+.formList .label.layerCont  { width: 100px; margin-right: 0px;}
 .layerCont .formList .radio .label { width: auto;}
 .layerCont .formList .formRow { max-width: calc(100% - 100px);}
 .layerCont .formList .formDesc { margin-left: 100px;}
 .layerCont .formList .formDesc > * { margin-top: 10px;}
 .layerCont .formList .formDesc .checkbox { white-space: initial ;}
-.layerCont .formList .label.wid120 { width: 120px;}
-.layerCont .formList .label.wid120 ~ .formRow { max-width: calc(100% - 120px);}
-.layerCont .formList .label.wid120 ~ .formDesc { margin-left: 120px; }
-.layerCont .formList .btnBlack { padding: 0 32px;}
+
+.formList .label.wid120 { width: 120px; margin-right: 0}
+.formList .label.wid120 ~ .formRow { max-width: calc(100% - 120px);}
+.formList .label.wid120 ~ .formDesc { margin-left: 120px; }
+
+.formList .label.wid200 { width: 200px; margin-right: 0;}
+.formList .label.wid200 ~ .formRow { max-width: calc(100% - 200px);}
+.formList .label.wid200 ~ .formDesc { margin-left: 200px; }
+
+.formList .btnBlack { padding: 0 32px;}
  
  
 /****************************
@@ -1107,8 +1132,10 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
 .table_bt.hasLine { padding-top: 40px; border-top: 1px solid #ddd;}
 .bgGray + .table_bt      { margin-top:20px; }
+
 .table_bt.small button,
 .table_bt.small a { padding: 0 24px; height: 40px; }
+.table_bt.small .btn_l * + * { margin-left: 4px;}
 
 .table_bt.mt20 { margin-top: 20px;}
 .table_bt::after      {content: ""; display:block; clear: both;}
@@ -1120,7 +1147,9 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt .external-pager   {position:absolute; margin-top:0; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
 .table_bt .btn_c      {position:absolute; left:50%; transform: translateX(-50%); text-align: center; display:flex; }
 .table_bt .btn_c button,
-.table_bt .btn_c a {min-width:228px; }
+.table_bt .btn_c a {min-width:214px; }
+.table_bt.large .btn_c button,
+.table_bt.large .btn_c a {min-width:228px; }
 .table_bt .btn_c button.btnGray { border-color: #ddd}
 .table_bt button + button,
 .table_bt a + a      {margin-left:10px; }
@@ -1128,10 +1157,10 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt.fullType button { width: 100%;}
 /* .layerCont .table_bt { margin-top: 20px;} */
 .btnBox.btn_r      { text-align: right; }
-.detailCont .table_bt .btn_c button,
+/* .detailCont .table_bt .btn_c button,
 .detailCont .table_bt .btn_c a { min-width: 214px;}
 .layerCont .table_bt .btn_c button,
-.layerCont .table_bt .btn_c a { min-width: 214px;}
+.layerCont .table_bt .btn_c a { min-width: 214px;} */
 
 /* .layerCont .table_bt button { min-width: unset; padding: 0 32px; } */
 
@@ -1487,6 +1516,8 @@ th{word-break: break-all;}
 **********  Range picker  **********
 *****************************/
 .rangeControl { position: relative; display: flex; gap: 10px; }
+.rangeControl.fullType,
+.rangeControl.fullType .input { width: 100%;}
 .rangeControl .input { min-height: 50px; padding: 0 16px;}
 .rangeControl.lg .input { min-height: 50px; padding: 0 16px;}
 .rangeControl .btnCalendar { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding: 0;}
@@ -1592,7 +1623,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; margin-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
-.layerWrap .layerBody .layerFoot button    {min-width:208px; }
+/* .layerWrap .layerBody .layerFoot button    {min-width:208px; } */
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}
 .layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100%); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
@@ -1784,7 +1815,18 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
 .bbsDetailBox .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
 
-.faqPage .bbsDetailBox .detailCont { padding: 80px 60px}
+.faqPage .bbsDetailBox .detailCont {  padding: 80px 60px}
+
+
+/* 대출비교 결과 */
+.bbsLineBox {padding-bottom: 40px; border: 1px solid #ddd; border-radius: 16px;}
+.bbsLineBox .titBg {  max-width: unset;  margin: -1px -2px 0px; border-radius: 16px 16px 0 0;}
+/* .bbsLineBox .titBg + .titH4.hasLine { margin-top: 20px;} */
+.bbsLineBox .titH4.hasLine + .tableFilterGroup { margin-top: 26px;}
+.bbsLineBox section { padding: 0 40px}
+.bbsLineBox section .titH4.hasLine { margin-left: -40px; margin-right: -40px; margin-bottom: 26px; padding: 16px 40px;}
+.bbsLineBox + .table_bt { margin-top: 20px;}
+
 
 .detailTopBtn     {padding-bottom:20px; display:flex; justify-content: end; }
 
@@ -1942,7 +1984,7 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
   border-right: 14px solid transparent; }
 .tooltip_q.textCenter .tooltipLayer { text-align: center;}
 
-.bbsSearch .tooltip_q { background-image: url(../images/common/ico_q_bg_no.png);}
+.bbsSearch .tooltip_q { background-image: url(../images/common/ico_q_bg_no.png); vertical-align: -2px;}
 
 button .tooltip_q        { vertical-align: -1px;  background:url(../images/common/ico_q2.png) no-repeat 0 0 / 18px; cursor: pointer; }
 button .tooltip_q span.txt   {display:block; overflow: hidden; text-indent: -100px; line-height: 1;}
@@ -2225,14 +2267,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 /* 진 */
 /* 공통 */
 .loginWrap { position: relative; margin-top: 20px;}
-/* .loginWrap .formBox.wid346 .label { width: calc(100% - 346px); flex-shrink: 0;}
-.loginWrap .formBox.wid346 .errorTxt { margin-left: calc(100% - 346px + 8px); }
-.loginWrap .formBox.wid400 .label { width: calc(100% - 400px); flex-shrink: 0;}
-.loginWrap .formBox.wid400 .errorTxt { margin-left: calc(100% - 400px + 8px); } */
-.formList { flex-wrap: wrap;}
-.formList .label.wid120 { width: 120px; margin-right: 0;}
-.formList .label.wid120 + .formRow { max-width: calc(100% - 120px);}
-.formList .label.wid120 ~ .errorTxt { margin-left: 120px;}
+.loginWrap .formList { flex-wrap: wrap;}
+
 /* 탭이 있는 경우 */ 
 /* .tabpanel .pageTop { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); margin: 0;}
 .loginWrap .tabWrap { width: 530px; margin: 40px auto 0;}
@@ -2253,5 +2289,4 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .loginCon .btnBox { margin: 60px auto 0; }
 .loginCon .btnBox button,
 .loginCon .btnBox a { width: 100%; }
-/* .loginTit .info_txt { margin-top: 20px;} */
 
