@@ -152,15 +152,7 @@
                   <label for="selectLabelState" class="label">조직 선택</label>
                   <div class="formRow formGroup">
                     <select id="selectLabelState">
-                      <option>지역본부</option>
-                    </select>
-                    <span class="line"></span>
-                    <select id="selectLabelState">
-                      <option>금고본점</option>
-                    </select>
-                    <span class="line"></span>
-                    <select id="selectLabelState">
-                      <option>지점</option>
+                      <option>영업점</option>
                     </select>
                   </div>
                 </div>
@@ -331,10 +323,13 @@
                         show: false
                       },
                       data: [
-                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                        { value: 1048, name: '건설업' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: '농업,임..'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: '제조업'  , itemStyle : {color:'#55D6B6'}},
+                        { value: 484, name: '도매 및..'  , itemStyle : {color:'#89E3CD'}},
+                        { value: 484, name: '건설업'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '농업,임..'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 484, name: '제조업'  , itemStyle : {color:'#BEE2A2'}},
                       ]
                     }
                   ]
@@ -342,10 +337,12 @@
                 myChart_pie1.setOption(option);
               </script>
               <ul class="legend">
-                <li> <em style="background:#5066B6"></em> 시설</li>
-                <li> <em style="background:#46B9B2"></em> 운전</li>
-                <li> <em style="background:#55D6B6"></em> 리스</li>
-                <li> <em style="background:#89E3CD"></em> 렌탈</li>
+                <li> <em style="background:#5066B6"></em> 건설업</li>
+                <li> <em style="background:#46B9B2"></em> 농업,임..</li>
+                <li> <em style="background:#55D6B6"></em> 제조업</li>
+                <li> <em style="background:#55C6D6"></em> 도매 및..</li>
+                <li> <em style="background:#8BDCE7"></em> 농업,임.</li>
+                <li> <em style="background:#BEE2A2"></em> 제조업</li>
               </ul>
             </li>
           </ul>

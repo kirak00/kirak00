@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">보증 심사 이력관리 </h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><strong>보증 심사 이력관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class=""> 
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem ">
+                <div class="rangeControl">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>
+            </div>
+            <div class="searchControlItem expand full">
+              <label id="selectLabelPay" class="label">희망 신청 금액</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelArea" id="selectLabelPay" class="label">보증 금액</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <input class="input wid82" type="text" name="inpUnitOut" id="selectLabelArea" placeholder="000" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand full">
+              <label for="inpUnitOut" id="selectLabelPay" class="label">보증서 발급 여부</label>
+              <div class="formRow" >
+                <select id="selectLabelPa">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <section class="sectionBlock40">
+        <fieldset class="tableFilterGroup">
+          <span class="count">총 <strong>15</strong>건</span>
+          <div class="formRow" role="group">
+            <p class="notiTxt nonIcon ">2023-07-01 한국신용정보원 데이터 수집 기준</p>
+            <select title="마감일 선택">
+              <option>심사 최신순</option>
+              <option>본부2</option>
+            </select>
+            <select title="보기갯수 선택">
+              <option>10개씩 보기</option>
+              <option>본부2</option>
+            </select>
+            <button type="button" class="btnDkGreen">적용</button>
+          </div>
+        </fieldset>
+        <div class="jsGridWrap">
+          <div id="jsGrid" class="bbs" caption="제안서 제출 가능 목록"></div>
+          <div class="table_bt">
+            <div id="externalPager" class="external-pager"></div>
+            <div class="btn_r">
+              <button type="button" class="btnSuccess ico_down">엑셀 다운로드</button>
+            </div>
+          </div>
+          <script>
+            
+  /* jsgrid sample */
+  $(function() {
+
+    var clients = [
+      { "Name1": "2023-05-02",
+        "Name2": "S_230809_0001", 
+        "Name3": "(주)길동건설", 
+        "Name4": "2023-05-20", 
+        "Name5": "2023-05-20", 
+        "Name6": "100,000,000<p class='sub'>(일억원)</p>", 
+        "Name7": "시설자금", 
+        "Name8": "80%", 
+        "Name9": "2023-06-10", 
+        "Name10": "100,000,000<p class='sub'>(일억원)</p>", 
+        "Name11": "발급", 
+      },
+    
+    ];
+
+
+    $("#jsGrid").jsGrid({
+      data: clients,
+      gridBodyClass : 'jsgrid-grid-body double',
+      headerRowRenderer: function () { //
+        var $result = $("<tr class='jsgrid-header-row'>")
+        $result.append(`
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">대출 신청일</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">대출 신청 번호</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">법인명</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">심사 시작일</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">예비 심사 등록일</th>
+            <th scope='col' width='400px' class='jsgrid-header-cell' colspan="3">보증 예비 심사 정보</th>
+            <th scope='col' width='400px' class='jsgrid-header-cell' colspan="2">발급정보</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2">보증서<br>발급 여부</th>
+          `); 
+          var $tr = $("<tr class='jsgrid-header-row'>");   
+          var grid = this;
+          grid._eachField(function(field, index) {
+              if (4 < index && index<8) {
+                var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+              } 
+              if (7 < index && index<10) {
+                console.log(field.width)
+                var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+              } 
+          });
+          return $result.add($tr);
+      },
+      fields: [
+        { name: "Name1", width: 120,  type: "text", title : "대출 신청일", },
+        { name: "Name2", width: 130, type: "text", title : "대출 신청 번호", },
+        { name: "Name3", width: 140, type: "text", title : "법인명", },
+        { name: "Name4", width: 30, type: "text", title : "심사 시작일", },
+        { name: "Name5", width: 110, type: "text", title : "예비 심사 등록일", },
+        { name: "Name6", width: 100, type: "text",title : "보증 예상 금액", },
+        { name: "Name7", width: 90, type: "text", title : "용도", },
+        { name: "Name8", width: 100, type: "text", title : "보증비율", },
+        { name: "Name9", width: 100, type: "text", title : "보증서 발급일", },
+        { name: "Name10", width: 'auto', type: "text", title : "보증 금액", },
+        { name: "Name11", width: 'auto', type: "text", title : "보증서<br>발급 여부", },
+      ],
+          
+      pagerContainer: "#externalPager",
+        
+
+    });
+
+  });
+
+          </script>
+        </div>
+      </section>
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+
+  
+</body>
+</html>

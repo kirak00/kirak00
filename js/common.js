@@ -51,7 +51,9 @@ $(function(){
   messageList()
 
   //tooltip 자동생성
-  tooltip_q();
+  setInterval(function(){
+    tooltip_q();
+  },100)
 
   loginTab();
 
@@ -386,7 +388,7 @@ function alert_control(alertBody ,focusObj , btnObj){
   alertBody.find(".alertBody").focus();
   alertBody.find(".alertClose").click(function(){
     close(this);
-    if(btnObj?.cancel?.callback) eval(btnObj.cancel.callback)();
+    if(btnObj?.closebtn?.callback) eval(btnObj.closebtn.callback)();
   });
 
   alertBody.find(".alertConfirm").click(function(){
@@ -437,8 +439,7 @@ function layer_alert(msg , focusObj , btnObj ){
     'data-popup' : 'alert',
     role : 'dialog',
   });
-  var closeBtn = focusObj.closeBtn;
-  console.log(closeBtn)
+  var closeBtn = btnObj.closebtn?.show;
   
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
@@ -470,7 +471,7 @@ function layer_alert(msg , focusObj , btnObj ){
     `;
   }
   alertBody.html(alertHTML)
-  if(closeBtn == false){
+  if(closeBtn != true){
     alertBody.find(".alertClose").remove()
   }
 
@@ -503,6 +504,7 @@ function layer_confirm(msg,focusObj,btnObj){
   if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt;
   if(btnObj?.confirm?.class) confirmClass = btnObj.confirm.class;
   if(btnObj?.cancel?.class) cancelClass = btnObj.cancel.class;
+  var closeBtn = btnObj.closebtn?.show;
   // let alertHTML = ''
   // alertHTML += ''
 
@@ -537,6 +539,9 @@ function layer_confirm(msg,focusObj,btnObj){
     <div class="alertDimm"></div>
   `;
   alertBody.html(alertHTML)
+  if(closeBtn == false){
+    alertBody.find(".alertClose").remove()
+  }
   
   alert_control(alertBody, focusObj , btnObj)
 
@@ -640,7 +645,9 @@ function accordion() {
     }
     onButtonClick(e , This) {
       const accordionOption = This.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
+
       if (accordionOption === 'only') { //only type
+
         if (This.buttonEl.ariaExpanded === 'false') { //close 
           This.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionTrigger').forEach((trigger) => {
             trigger.setAttribute('aria-expanded', 'false');
@@ -652,8 +659,7 @@ function accordion() {
             This.contentEl.removeAttribute('hidden');
           });
           This.buttonEl.parentNode.parentNode.classList.add("isOpen")
-        } 
-        else { // open
+        } else { // open
           This.buttonEl.parentNode.parentNode.classList.remove("isOpen")
           This.buttonEl.setAttribute('aria-expanded', 'false');
           This.contentEl.setAttribute('hidden', '');

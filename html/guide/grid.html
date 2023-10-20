@@ -74,7 +74,6 @@
           $("#jsGrid").jsGrid({
             data: clients,
             noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-
             fields: [
               // { width: 70, name: "관심대출", type: "text", itemTemplate:grid_template_star },
               { width: 100, name: "관심대출", type: "text",  },
@@ -216,12 +215,13 @@
       <h1 class="c-h1">Grid headerGroup (방법2)</h1>
       <div id="jsGrid3_1" class="bbs" caption=""></div>
       <div id="externalPager3_1" class="external-pager"></div>
+      
           
       <script>
         $(function() {
           var clients = [
             { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-              "Name2": "심사전", 
+            "Name2": "심사전", 
               "Name3": "askldjfn", 
               "Name4": "1억 2000만원 <br>~ 2억", 
               "Name5": "서울", 
@@ -278,6 +278,76 @@
           });
         });
       </script>
+
+
+
+  <h1 class="c-h1">Grid headerGroup (방법2)</h1>
+  <div id="jsGrid3_2" class="bbs" caption=""></div>
+  <div id="externalPager3_2" class="external-pager"></div>
+
+<SCRIPT>
+  
+
+  var clients = [
+      { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+        "Name2": "S_230809_0001", 
+        "Name3": "제출가능", 
+        "Name4": "<button type='button' class='btnWhite'>작성하기</button>", 
+        "Name5": "<button type='button' class='btnWhite'>마감 기한 연장 요청</button>", 
+        "Name6": "(주)길동건설", 
+        "Name7": "2억 5000만원", 
+        "Name8": "서울", 
+        "Name9": "시설자금", 
+        "Name10": "유", 
+        "Name11": "2023-08-30", 
+      },
+    
+    ];
+
+
+  $("#jsGrid3_2").jsGrid({
+      data: clients,
+      gridBodyClass : 'jsgrid-grid-body double',
+      headerRowRenderer: function () { //
+        var $result = $("<tr class='jsgrid-header-row'>")
+        $result.append(`
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">대출 신청일</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">대출 신청 번호</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">법인명</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">심사 시작일</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">제안서 제출일</th>
+            <th scope='col' class='jsgrid-header-cell' colspan="5">제안 정보</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">제안서 <br>채택 여부</th>
+          `); 
+          var $tr = $("<tr class='jsgrid-header-row'>");   
+          var grid = this;
+          grid._eachField(function(field, index) {
+              if (4 < index && index<10) {
+                var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+              } 
+          });
+          return $result.add($tr);
+      },
+      fields: [
+        { name: "Name1", width: 120,  type: "text", title : "대출 신청일", },
+        { name: "Name2", width: 130, type: "text", title : "대출 신청 번호", },
+        { name: "Name3", width: 140, type: "text", title : "법인명", },
+        { name: "Name4", width: 130, type: "text", title : "심사 시작일", },
+        { name: "Name5", width: 110, type: "text", title : "제안서 제출일", },
+        { name: "Name6", width: 100, type: "text",title : "제안 금액", },
+        { name: "Name7", width: 90, type: "text", title : "용도", },
+        { name: "Name8", width: 140, type: "text", title : "담보 유무", },
+        { name: "Name9", width: 120, type: "text", title : "금리 유형", },
+        { name: "Name10", width: 120, type: "text", title : "금리", },
+        { name: "Name11", width: 'auto', type: "text", title : "제안서 <br>채택 여부", },
+      ],
+          
+      pagerContainer: "#externalPager3_2",
+        
+
+    });
+
+</SCRIPT>
 <style>
   
 

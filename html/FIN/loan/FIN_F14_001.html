@@ -144,7 +144,7 @@
                     <tr>
                       <th scope="row">금융소비자 유형</th> 
                       <td>전문금융소비자</td>
-                    </tr>
+                    </tr> 
                     <tr>
                       <th scope="row">메모</th> 
                       <td >
@@ -177,55 +177,59 @@
                     <colgroup>
                       <col width="205px" />
                       <col />
+                      <col width="205px" />
+                      <col width="305px"  />
                     </colgroup>
                     <tbody>
                       <tr>
                         <th scope="row">사업자 번호</th> 
-                        <td>123-89-12345</td>
+                        <td colspan="3">123-89-12345</td>
                       </tr>
                       <tr>
                         <th scope="row">법인명</th> 
-                        <td>(주)신한은행</td>
+                        <td colspan="3">(주)신한은행</td>
                       </tr>
                       <tr>
                         <th scope="row">경영방식</th> 
-                        <td>창업 2세</td>
+                        <td colspan="3">창업 2세</td>
                       </tr>
                       <tr>
                         <th scope="row">업종</th> 
-                        <td>정보통신</td>
+                        <td colspan="3">정보통신</td>
                       </tr>
                       <tr>
                         <th scope="row">개업일</th> 
-                        <td>2009-02-17</td>
+                        <td colspan="3">2009-02-17</td>
                       </tr>
                       <tr>
                         <th scope="row">본사 주소</th> 
-                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                        <td colspan="3">서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
                       </tr>
                       <tr>
                         <th scope="row">사업장(공장) 주소</th> 
-                        <td>서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
+                        <td colspan="3">서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
                       </tr>
                       <tr>
                         <th scope="row">대표자명</th> 
                         <td>박충일</td>
+                        <th scope="row">주민등록번호</th> 
+                        <td>701204-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
                       </tr>
                       <tr>
                         <th scope="row">대표자 유형</th> 
-                        <td>단독 대표</td>
+                        <td colspan="3">단독 대표</td>
                       </tr>
                       <tr>
                         <th scope="row">법인 담당자 전화번호</th> 
-                        <td>02-3210-1874</td>
+                        <td colspan="3">02-3210-1874</td>
                       </tr>
                       <tr>
                         <th scope="row">동업계 종사년수</th> 
-                        <td>19년</td>
+                        <td colspan="3">19년</td>
                       </tr>
                       <tr>
                         <th scope="row">직원수</th> 
-                        <td>123명 <em class="greenLine">근로복지공단 정보</em></td>
+                        <td colspan="3">123명 <em class="greenLine">근로복지공단 정보</em></td>
                       </tr>
                     </tbody>
                   </table>
@@ -237,42 +241,6 @@
               <div class="companytabContentPrint" id="loan_company_cont_2_2" role="tabpanel" tabindex="0">
                 <h4 class="hide">경영진 인적 사항</h4>
 
-                <div class="companyInfo">
-                  <h4 class="titH5 ">대표자 인적 사항</h4>
-                  <div class="table_wrap">
-                    <table class="bbs_list"> 
-                      <caption>대표자 인적 사항</caption>
-                      <colgroup>
-                        <col width="205px" />
-                        <col />
-                        <col width="205px" />
-                        <col width="150px" />
-                        <col width="105px" />
-                        <col width="335px" />
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th scope="col">성명</th> 
-                          <th scope="col">직함</th>
-                          <th scope="col">설립자와의 관계</th> 
-                          <th scope="col">동업계 종사년수</th>
-                          <th scope="col">자가 여부</th>
-                          <th scope="col">대표자 주민등록번호</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>홍길동</td> 
-                          <td>회장</td>
-                          <td>창업 2세</td> 
-                          <td>19</td>
-                          <td>있음</td>
-                          <td><span>701204-1******</span> <button type="button" class="btnBlack sm">전체노출</button></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
                 
                 <div class="companyInfo">
                   <h4 class="titH5 ">경영진 현황</h4>
@@ -489,10 +457,10 @@
                 </div>
 
                 <div class="companyInfo">
-                  <h4 class="titH5 ">권장 서류</h4>
+                  <h4 class="titH5 ">추가 증빙 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>권장 서류</caption>
+                      <caption>추가 증빙 서류</caption>
                       <colgroup>
                         <col width="33%" />
                         <col />
@@ -1026,15 +994,14 @@
             <div class="table_bt">
               <div class="btn_c">
                 <a href="#;" class="btnSuccess">심사하기</a>
-                <a href="#;" class="btnSky">심사 영업점 변경</a>
+                <button class="btnGray2">이번달 심사 가능 횟수 <em class="mainGreen">15</em>/50</button>
               </div>
             </div>
             
             <div class="table_bt">
               <div class="btn_c">
                 <a href="#;" class="btnSuccess">추가 서류 요청</a>
-                <a href="#;" class="btnSuccess">마감 기한 연장 요청</a>
-                <a href="#;" class="btnSky">심사 영업점 변경</a>
+                <a href="#;" class="btnSky ">마감 기한 연장 요청</a>
                 <a href="#;" class="btnBlack">심사 취소하기</a>
               </div>
             </div>
