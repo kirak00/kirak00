@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <!-- v1.4 수정 -->
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">대출 비교 신청 결과</h2>
+      <ul class="breadcrumb">
+        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+        <li><a href="#none"><strong>대출 비교 신청 결과</strong></a></li>
+      </ul>
+    </section>
+    <div class="titH3 hasLine fullType"><h3 class="inner">대출 실행 건</h3></div>
+    <section class="">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>10</strong>건</span>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid" class="bbs" caption="제안서 비교신청 목록"></div>
+        <div id="externalPager" class="external-pager"></div>
+        <script>
+        /* jsgrid sample */
+        $(function() {
+        var clients = [
+          { 
+            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name2": "2023-08-10", 
+            "Name3": "2023-08-10", 
+            "Name4": "농협캐피탈<br/>소공동 지점", 
+            "Name5": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name6": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name7": "시설<br/>자금", 
+            "Name8": "유", 
+            "Name9": "5.3%", 
+            "Name10": "48개월", 
+            "Name11": "만기일시<br/>상환", 
+            "Name12": "<button type='button' class='btnCheck'>평가하기</button>", 
+          },
+          { 
+            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name2": "2023-08-10", 
+            "Name3": "2023-08-10", 
+            "Name4": "농협캐피탈<br/>소공동 지점", 
+            "Name5": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name6": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name7": "시설<br/>자금", 
+            "Name8": "유", 
+            "Name9": "5.3%", 
+            "Name10": "48개월", 
+            "Name11": "만기일시<br/>상환", 
+            "Name12": "<span class='textBold'>평가 완료</span>", 
+          },
+        ];
+        $("#jsGrid").jsGrid({
+          data: clients,
+          noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+          fields: [
+            { name: "Name1", type: "text", title : "대출신청번호", width: 160},
+            { name: "Name2", type: "text", title : "대출 비교<br/>하기일", width: 120},
+            { name: "Name3", type: "text", title : "대출 실행일", width: 120},
+            { name: "Name4", type: "text", title : "금융기관 명", width: 120},
+            { name: "Name5", type: "text", title : "희망 대출액(최대)", width: 190},
+            { name: "Name6", type: "text", title : "대출실행액", width: 190},
+            { name: "Name7", type: "text", title : "자금<br/>용도", width: 60},
+            { name: "Name8", type: "text", title : "담보<br/>유무", width: 60},
+            { name: "Name9", type: "text", title : "실행<br/>금리", width: 60},
+            { name: "Name10", type: "text", title : "대출<br/>기간", width: 80},
+            { name: "Name11", type: "text", title : "상환<br/>방식", width: 90},
+            { name: "Name12", type: "text", title : "만족도 평가", width: 130},
+          ],
+          pagerContainer: "#externalPager",
+          });
+        });
+        </script>
+      </div>
+    </section>
+    <div class="titH3 hasLine fullType"><h3 class="inner">대출 미실행 건</h3></div>
+    <section class="">
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>10</strong>건</span>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid2" class="bbs" caption="제안서 비교신청 목록"></div>
+        <div id="externalPager2" class="external-pager"></div>
+        <script>
+        /* jsgrid sample */
+        $(function() {
+        var clients = [
+          { 
+            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name2": "2023-08-10", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name5": "시설 자금", 
+            "Name6": "유", 
+            "Name7": "15건", 
+            "Name8": "1건", 
+          },
+          { 
+            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name2": "2023-08-10", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name5": "시설 자금", 
+            "Name6": "유", 
+            "Name7": "15건", 
+            "Name8": "1건", 
+          },
+        ];
+        $("#jsGrid2").jsGrid({
+          data: clients,
+          noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+          fields: [
+            { name: "Name1", type: "text", title : "대출신청번호", width: 160},
+            { name: "Name2", type: "text", title : "대출 비교 하기일", width: 155},
+            { name: "Name3", type: "text", title : "희망 대출액(최대)", width: 190},
+            { name: "Name4", type: "text", title : "평균 제안액", width: 190},
+            { name: "Name5", type: "text", title : "신청 자금 용도", width: 170},
+            { name: "Name6", type: "text", title : "담보 제공 유무", width: 170},
+            { name: "Name7", type: "text", title : "제안서 접수", width: 170},
+            { name: "Name8", type: "text", title : "제안서 채택 수", width: 170},
+          ],
+          pagerContainer: "#externalPager2",
+          });
+        });
+
+        </script>
+      </div>
+    </section>
+
+    
+  </div>
+  
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

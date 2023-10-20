@@ -40,33 +40,34 @@
       </div>
       <div class="layerCont">
         <div class="tit">탈퇴 사유를 말해주세요</div>
-        <div class="formVertical mt20">
-          <span class="radio">
-            <input type="radio" id="radioLabel1_1" name="radioLabel1" value="" checked/>
-            <label for="radioLabel1_1"><span></span>대출이 필요 없어졌어요.</label>
+        <div class="formVertical"><!-- v1.4 .mt20 삭제 -->
+          <!-- v1.4 .radio -> .checkbox -->
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_1" name="checkboxLabel1" value="" checked/>
+            <label for="checkboxLabel1_1"><span></span>대출이 필요 없어졌어요.</label>
           </span>
-          <span class="radio">
-            <input type="radio" id="radioLabel1_2" name="radioLabel1" value="" />
-            <label for="radioLabel1_2"><span></span>제안서 받은 금융 기관 없어요.</label>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_2" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_2"><span></span>제안서 받은 금융 기관 없어요.</label>
           </span>
-          <span class="radio">
-            <input type="radio" id="radioLabel1_3" name="radioLabel1" value="" />
-            <label for="radioLabel1_3"><span></span>사업자등록번호가 변경 됐어요.</label>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_3" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_3"><span></span>사업자등록번호가 변경 됐어요.</label>
           </span>
-          <span class="radio">
-            <input type="radio" id="radioLabel1_4" name="radioLabel1" value="" />
-            <label for="radioLabel1_4"><span></span>Loan&Biz 플랫폼 사용이 불편해요.</label>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_4" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_4"><span></span>Loan&Biz 플랫폼 사용이 불편해요.</label>
           </span>
           <div class="formSet formVertical">
-            <span class="radio"> 
-              <input type="radio" id="radioLabel1_5" name="radioLabel1" value="" />
-              <label for="radioLabel1_5"><span></span>기타</label>
+            <span class="checkbox"> 
+              <input type="checkbox" id="checkboxLabel1_5" name="checkboxLabel1" value="" />
+              <label for="checkboxLabel1_5"><span></span>기타</label>
             </span>
             <textarea id="textareaVal" title="기타 사유입력" class="textarea h64" placeholder=""></textarea>
           </div>
         </div>
       </div>
-      <div class="layerFoot fullType pt40">
+      <div class="layerFoot fullType"><!-- v1.4 .mt40 삭제 -->
         <button type="button" class="btnSuccess xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">확인</button>
       </div>
     </div>

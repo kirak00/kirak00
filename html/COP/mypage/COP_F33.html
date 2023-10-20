@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/lib/calendar_min.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">메시지 알림 설정</h2>
+      <ul class="breadcrumb">
+        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+        <li><a href="#none"><span>마이페이지</span></a></li>
+        <li><a href="#none"><span>메시지함</span></a></li>
+        <li><a href="#none"><strong>메시지 알림 설정</strong></a></li>
+      </ul>
+    </section>
+    <section>
+       <!-- 검색 -->
+       <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">알림톡 알림 수신자</label>
+              <div class="formRow">
+                <select id="selectLabelState" class="wid300">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns fl">
+              <button type="button" class="btnSuccess">추가</button>
+              <button type="button" class="btnWhite">변경</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="table_wrap">
+        <table class="bbs_list">
+          <caption>메시지 알림설정</caption>
+          <colgroup>
+            <col width="620px">
+            <col/>
+            <col/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">메시지</th>
+              <th scope="col">플랫폼 알림</th>
+              <th scope="col">알림톡 알림</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">추가 서류 등록건</td>
+              <td colspan="2"><strong>필수 알림</strong></td>
+            </tr>
+            <tr>
+              <td scope="row">제안서 마감 완료</td>
+              <td colspan="2"><strong>필수 알림</strong></td>
+            </tr>
+            <tr>
+              <td scope="row">마감기한 연장</td>
+              <td colspan="2"><strong>필수 알림</strong></td>
+            </tr>
+            <tr>
+              <td scope="row">심사중인 금융기관</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">플랫폼 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">알림톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">제안서 등록</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">플랫폼 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">알림톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">제안서 회수</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">플랫폼 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">알림톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row">1:1 답변 등록</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">플랫폼 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">알림톡 알림</span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnSuccess">적용</button>
+          <button type="button" class="btnWhite">확인</button>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

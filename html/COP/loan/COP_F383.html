@@ -31,14 +31,15 @@
       </ul>
     </section>
     <div class="barStepWrap">
+      <!-- v1.4 수정 -->
       <ol class="barStep">
         <li>
           <span class="circle">1</span>
-          <p class="name"><span>정보 제공 및 조회 약관 동의</span></p>
+          <p class="name"><span>스크래핑 서비스 동의 및 정보제공 및 조회 동의</span></p>
         </li>
         <li>
           <span class="circle">2</span>
-          <p class="name"><span>스크래핑 정보 제공 및 약관 동의</span></p>
+          <p class="name"><span>대표자 인적사항</span></p>
         </li>
         <li>
           <span class="circle">3</span>
@@ -48,82 +49,71 @@
         <li>
           <span class="circle">4</span>
           <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>대표자 인적사항</span></p>
+          <p class="name"><span>경영진 인적사항</span></p>
         </li>
         <li>
           <span class="circle">5</span>
           <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>경영진 인적사항</span></p>
+          <p class="name"><span>주주정보 인적사항</span></p>
         </li>
         <li>
           <span class="circle">6</span>
           <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>주주정보 인적사항</span></p>
+          <p class="name"><span>노사관계 및 연혁</span></p>
         </li>
         <li>
           <span class="circle">7</span>
           <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>노사관계 및 연혁</span></p>
-        </li>
-        <li>
-          <span class="circle">8</span>
-          <p class="name top"><span>법인정보</span></p>
           <p class="name"><span>필요서류 제출</span></p>
         </li>
         <li>
-          <span class="circle">9</span>
-          <p class="name top"><span>법인정보</span></p>
-          <p class="name"><span>대출정보 등록</span></p>
+          <span class="circle">8</span>
+          <p class="name"><span>희망 대출 정보</span></p>
         </li>
         <li class="on">
-          <span class="circle">10</span>
-          <p class="name top"><span>재무현황</span></p>
+          <span class="circle">9</span>
+          <p class="name top"><span>재무 현황</span></p>
           <p class="name"><span>수집 자료</span></p>
         </li>
         <li>
+          <span class="circle">10</span>
+          <p class="name top"><span>재무 현황</span></p>
+          <p class="name"><span>매출/매입 처별 세금계산서 합산표 </span></p>
+        </li>
+        <li>
           <span class="circle">11</span>
-          <p class="name top"><span>재무현황</span></p>
-          <p class="name"><span>재무상태표</span></p>
-        </li>
-        <li>
-          <span class="circle">12</span>
-          <p class="name top"><span>재무현황</span></p>
-          <p class="name"><span>손익계산서</span></p>
-        </li>
-        <li>
-          <span class="circle">13</span>
-          <p class="name"><span>판매처별 매입/매출처별 매입 세금계산서 합산표 </span></p>
-        </li>
-        <li>
-          <span class="circle">14</span>
           <p class="name"><span>적합성/적정성 원칙확인</span></p>
         </li>
         <li>
-          <span class="circle">15</span>
+          <span class="circle">12</span>
+          <p class="name top"><span>대출 신청 진행 완료</span></p>
           <p class="name"><span>대출 신청 정보확인</span></p>
         </li>
         <li>
-          <span class="circle">16</span>
+          <span class="circle">13</span>
+          <p class="name top"><span>대출 신청 진행 완료</span></p>
           <p class="name"><span>대출 제외 금융기관 선택</span></p>
         </li>
+        
         <li>
           <span class="circle"><img src="../../../images/common/ico_24_setting_w.png" alt=""></span>
           <p class="name"><span>대출 신청완료</span></p>
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">수집자료</h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner flexBetween">수집자료<p class="titLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p></h3></div><!-- v1.4 추가 -->
     <div class="bgGray">
       <!-- 디자인 수정 .sectionBlock40 삭제 -->
       <section class="">
         <!-- 디자인 수정 .mt0 추가 -->
-        <div class="table_wrap mt0">
+        <div class="table_wrap mt0 btnFixed">
           <table class="bbs_list">
             <caption>재무 현황 자료 수집 정보</caption>
             <colgroup>
               <col />
               <col width="300px" />
               <col width="200px" />
+              <col width="220px" />
               <col width="220px" />
             </colgroup>
             <thead>
@@ -132,6 +122,7 @@
                 <th scope="col">수집 기준 년도</th>
                 <th scope="col">수집상태</th>
                 <th scope="col">자료</th>
+                <th scope="col">파일관리</th><!-- v1.4 추가 -->
               </tr>
             </thead>
             <tbody>
@@ -140,67 +131,75 @@
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>손익계산서(최근 3년)</td>
                 <td><input type="text" class="input textCenter" placeholder="수집년도를 입력하세요." title="수집년도를 입력하세요."/></td>
                 <td><span class="textBold pntCol_1">미수집</span></td>
-                <td><button type="button" class="btnSuccess">자료 업로드</button></td>
+                <td>-</td>
+                <td><button type="button" class="btnSuccess">파일 업로드</button></td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>제조(공사) 원가명세서</td>
                 <td><input type="text" class="input textCenter" placeholder="수집년도를 입력하세요." title="2023"/></td>
-                <td><span class="textBold">직접등록</span></td>
+                <td><span class="textBold gray">직접등록</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td><button type="button" class="btnGray">파일 삭제</button></td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>이익잉여금처분계산서</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>현금흐름표</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>자본변동표</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>사업자등록증명원</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>국세청 납세증명서</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft"><span aria-hidden="true" class="required">*</span>지방세 납세증명원</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
               <tr>
                 <td class="textLeft">부가가치세표준증명원(최근년도 또는 최근 분기)</td>
                 <td>2021,2022,2023</td>
                 <td><span class="textBold">수집 완료</span></td>
                 <td><button type="button" class="ico_down">다운로드</button></td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>
         </div>
-     
-        <!-- 디자인 수정 .type2 추가 -->
-        <div class="guideBox type2">
+        <div class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
           <ul class="guideList dot">
             <li class="list blue">필수 항목 중 ‘스크래핑 서비스’를 통해 수집되지 않은 경우 미수집 항목을 직접 업로드 하셔야 합니다.</li>
             <li class="list blue">재무상태표 및 손익계산서는 3개년도 자료를 기본을 합니다. 단 업력이 짧을 경우 1개년도, 2개년도 자료도 가능합니다.</li>
@@ -208,6 +207,323 @@
           </ul>
         </div>
       </section>
+      <div class="titH3 hasLine"><h3 class="inner">재무상태표 <span class="blue">(필수)</span></h3></div>
+
+      <!-- 재무상태표 내용 가져오기 성공 -->
+      <section class="">
+        <!-- 디자인 수정 .type2 추가 -->
+        <div class="guideBox type2">
+          <ul class="guideList dot">
+            <li class="list blue">(당)기 2022년 1월 1일부터 2022년 12월 31까지</li><!-- v1.4 수정 -->
+          <li class="list blue">(전)기 2021년 1월 1부터 2021년 12월 31까지</li><!-- v1.4 수정 -->
+          <li class="list blue">(전전)기 2020년 1월 1일부터 2020년 12월 31까지</li><!-- v1.4 수정 -->
+          </ul>
+        </div>
+        <!-- 디자인 수정 .sectionBlock40 삭제 -->
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col">2022(당)기</th><!-- v1.4 수정 -->
+                <th scope="col">2021(전)기</th><!-- v1.4 수정 -->
+                <th scope="col">2020(전전)기</th><!-- v1.4 수정 -->
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>자산총계</td>
+                <td>40,000,000</td>
+                <td>66,000,000</td>
+                <td>140,000,000</td>
+              </tr>
+              <tr>
+                <td>부채총계</td>
+                <td>21,000,000</td>
+                <td>11,000,000</td>
+                <td>21,000,000</td>
+              </tr>
+              <tr>
+                <td>자본총계</td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
+              </tr>
+              <tr>
+                <td>매출채권</td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
+              </tr>
+              <tr>
+                <td>자본금</td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
+              </tr>
+              <tr>
+                <td>장기차입금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>단기차입금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>현금및현금성자산</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>장기(성)예금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+              <tr>
+                <td>단기(성)예금</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- //재무상태표 내용 가져오기 성공 -->
+
+      <!-- 재무상태표 내용 가져오기 실패 -->
+      <section class="">
+        <div class="divTable periodInfo">
+          <div class="row">
+            <div class="cell">
+              <span class="period">(당)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <span class="period">(전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <span class="period">(전전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+        </div>
+        <div class="table_wrap"><!-- 디자인 수정 .mt40 삭제 -->
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>(전)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>(전전)기</div></th>
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>자산총계</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>부채총계</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>자본총계</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="guideBox type2"> <!-- 디자인 수정 .type2 추가 -->
+        <ul class="guideList dot">
+          <li class="list blue">모든 항목은 숫자만 입력해 주세요.</li>
+          <li class="list blue">금액은 원단위로 입력해 주세요.</li>
+          <li class="list blue">음수의 경우는 - 로 표기해 주세요. ex) 양수 2,000,000 / 음수 -2,000,000</li>
+        </ul>
+      </section>
+       <!-- //재무상태표 내용 가져오기 실패 -->
+
+
+      <div class="titH3 hasLine"><h3 class="inner">손익계산서 <span class="blue">(필수)</span></h3></div>
+      <!-- 손익계산서 내용 가져오기 성공 -->
+      <section class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
+        <ul class="guideList dot">
+          <li class="list blue">(당)기 2022년 1월 1일부터 2022년 12월 31까지</li><!-- v1.4 수정 -->
+          <li class="list blue">(전)기 2021년 1월 1부터 2021년 12월 31까지</li><!-- v1.4 수정 -->
+          <li class="list blue">(전전)기 2020년 1월 1일부터 2020년 12월 31까지</li><!-- v1.4 수정 -->
+        </ul>
+      </section>
+      <section class=""><!-- 디자인 수정 .sectionBlock40 삭제 -->
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col">2022(당)기</th><!-- v1.4 수정 -->
+                <th scope="col">2021(전)기</th><!-- v1.4 수정 -->
+                <th scope="col">2020(전전)기</th><!-- v1.4 수정 -->
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>매출액</td>
+                <td>40,000,000</td>
+                <td>66,000,000</td>
+                <td>140,000,000</td>
+              </tr>
+              <tr>
+                <td>영업이익</td>
+                <td><span class="pntCol_1">(1,000,000)</span></td>
+                <td>11,000,000</td>
+                <td><span class="pntCol_1">(2,000,000)</span></td>
+              </tr>
+              <tr>
+                <td>이자비용</td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- //손익계산서 내용 가져오기 성공 -->
+
+      <!-- 손익계산서 내용 가져오기 실패 -->
+      <section class="">
+        <div class="divTable periodInfo">
+          <div class="row">
+            <div class="cell">
+              <span class="period">(당)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <span class="period">(전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <span class="period">(전전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+        </div>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th><!-- v1.4 수정 -->
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>매출액</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>영업이익</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>이자비용</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
+        <ul class="guideList dot">
+          <li class="list blue">모든 항목은 숫자만 입력해 주세요.</li>
+          <li class="list blue">금액은 원단위로 입력해 주세요.</li>
+          <li class="list blue">음수의 경우는 - 로 표기해 주세요. ex) 양수 2,000,000 / 음수 -2,000,000</li>
+        </ul>
+      </section>
+      <!-- //손익계산서 내용 가져오기 실패 -->
     </div>
     <div class="table_bt">
       <div class="btn_l">
