@@ -83,16 +83,14 @@
   <!-- **************** -->
   <div class="layerWrap modal show" id="sampleLayer" role="dialog" aria-modal="true" >
     <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody">
+    <div class="layerBody wid640">
       <div class="layerHead">
         <h3>대출 예상 상환 스케줄</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="tipTxt">
-          본 스케줄은 제안서 제출일 기준으로 집계되었으며, 일별 금리 변동율에 따라 내용이  변동될 수 있습니다.
-        </div>
-        <div class="textTable">
+        <p class="notiTxt">본 스케줄은 제안서 제출일 기준으로 집계되었으며, 일별 금리 변동율에 따라 내용이  변동될 수 있습니다.</p>
+        <div class="textTable mt32"><!-- v1.4 .mt32 추가 -->
           <table>
             <caption>업체개요</caption>
             <colgroup>
@@ -116,15 +114,16 @@
           </table>
         </div>
         
-        <div class="table_wrap">
+        <div class="table_wrap mt40">
           <table class="bbs_list">
             <caption>
               제안서 제출 가능 목록
             </caption>
+            <!-- v1.4 수정 -->
             <colgroup>
-              <col width="150"/>
+              <col width="120px"/>
+              <col width="160px"/>
               <col width=""/>
-              <col width="300"/>
             </colgroup>
             <thead>
               <tr>
@@ -135,53 +134,53 @@
             </thead>
             <tbody>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">1</td><!-- v1.4 .textBold 추가 -->
+                <td>123,456</td><!-- v1.4 .tit 삭제 -->
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">2</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">3</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">4</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">5</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">6</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">7</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">8</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">9</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
               <tr>
-                <td>22</td>
-                <td class="tit">123,456</td>
+                <td class="textBold">10</td>
+                <td>123,456</td>
                 <td>20,000,000</td>
               </tr>
             </tbody>
