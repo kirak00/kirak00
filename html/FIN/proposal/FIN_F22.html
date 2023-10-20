@@ -77,6 +77,7 @@
                         <label for="testRdoBoxB"><span></span>완료</label>
                       </span>
                     </div>
+                    <p class="notiTxt">현장실사 완료 여부는 제안서 제출 가능 여부 또는 제안서 채택에 영향을 주지 않습니다.</p>
                   </td>
                 </tr>
                 <tr> 
@@ -87,6 +88,7 @@
                     <div class="formRow wid425">
                       <input class="input" type="text" name="" id="formLabel2" placeholder="대출 담당자명을 입력해 주세요." />
                     </div>
+                    <p class="notiTxt">기업 고객과의 연락을 위한 번호를 입력해 주세요.</p>
                   </td>
                 </tr>
                 <tr> 
@@ -127,6 +129,45 @@
               </tbody>
             </table>
           </div>
+
+
+          <div class="employeeInfo">
+            <div class="titBox">
+              <div class="tit">
+                <h4>제안 직원 정보</h4>
+                <p class="notiTxt">기업 고객에게는 ‘제안 직원명’ 정보만 노출되며, 대출 관련 소통은 ‘문의 전화 번호’를 통해 이루어집니다.</p>
+              </div>
+              <button type="button" class="btnSuccess mm">수정</button>
+            </div>
+
+            
+            <div class="textTable">
+              <table>
+                <caption>제안서 기본 정보 입력</caption>
+                <colgroup>
+                  <col width="240px">
+                  <col width="auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">제안 직원명</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">알림 수신 휴대전화</th>
+                    <td>010-1234-5678</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">알림 수신 이메일</th>
+                    <td>gildong@shinhan.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+
           <div id="accordionGroup" class="accordion formAccordion" accordion-option="only">
             <div class="accordionItem">
               <h3 class="accordionTitle">
@@ -225,12 +266,20 @@
                         </th> 
                         <td>
                           <div class="formRow">
-                            제안서 채택 후 약
-                            <select class="wid100" title="범위" id="accLabel3">
-                              <option>1</option>
-                              <option>2</option>
-                            </select>
-                            <span class="unit">일 이후</span>
+                            
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect1" name="telSelect" title="유선안내 선택" checked value="">
+                              <label for="telSelect1"><span></span>제안서 채택 후 약</label>
+                              <select class="wid100" title="범위" id="accLabel3">
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                              <span class="unit">일 이후</span>
+                            </span>
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect2" name="telSelect" title="유선안내 선택"  value="">
+                              <label for="telSelect2"><span></span>유선안내</label>
+                            </span>
                           </div>
                         </td>
                       </tr>
@@ -377,27 +426,51 @@
                       <tbody>
                         <tr>
                           <th scope="row">
-                            <label class="label" for="notiLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기 및 방법</label>
+                            <label class="label" id="interestForm_1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기 및 방법</label>
                           </th> 
-                          <td><textarea class="textarea autoHeight" id="notiLabel1">1개월 후 후취</textarea></td>
+                          <td>
+                            <div class="formRow" role="group" aria-labelledby="inpEmail">
+                              <select name="" title="이자부과 시기" >
+                                <option value="">1개월</option>
+                              </select>
+                              <select name="" title="이자부과 방법" >
+                                <option value="">후취</option>
+                              </select>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">
                             <label class="label" for="notiLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>연체 금리</label>
                           </th> 
-                          <td><textarea class="textarea autoHeight" id="notiLabel2">법정 최고 금리 20% 이율 적용</textarea></td>
+                          <td>
+                            <div class="formRow">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="notiLabel2" placeholder="0.00">
+                              <span class="unit">%</span>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">
                             <label class="label" for="notiLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>중도 상환 수수료</label>
                           </th> 
-                          <td><textarea class="textarea autoHeight" id="notiLabel3">3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</textarea></td>
+                          <td>
+                            <div class="formRow">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
+                              <span class="unit">%</span>
+                              <input class="input " type="text" name="inpPeriod" id="inpPeriod" placeholder="추가 입력 사항" title="추가 입력 사항">
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">
                             <label class="label" for="notiLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 시 부대 비용</label>
                           </th> 
-                          <td><textarea class="textarea autoHeight" id="notiLabel4">부대비용 대출금액 1% 부과 됩니다.</textarea></td>
+                          <td>
+                            <div class="formRow">
+                              <input class="input  " type="text" name="inpPeriod" id="notiLabel4" placeholder="인지세, 보증료 등">
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -440,7 +513,7 @@
             <div class="cont">
               <span class="label">제안 대출 금액</span>
               <p class="desc">500,000,000원(오억원)</p>
-              <span class="label">제안 대출 금리</span>
+              <span class="label">제안 대출 금리(가중 평균 금리)</span>
               <p class="desc">연 6.00%</p>
               <span class="label">제안 대출 수</span>
               <p class="desc">2건</p>

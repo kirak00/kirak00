@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출 가능 목록</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
+          <li><a href="#none"><strong>제안서 제출 가능 목록</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <!-- 검색 -->
+      <div>
+        <button type="button" class="btnSuccess"  onclick="layer_open('layer_proposalChkForm',this)" aria-controls="sampleLayer">제안서 작성 전 입력 사항</button>
+      </div>
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+
+
+  <!-- 'show' class 추가하면 레이어 오픈 -->
+  <div class="layerWrap modal show" id="layer_proposalChkForm" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>제안서 작성 전 입력 사항</h3>
+        <button type="button" class="layerClose" popup-close="layer_proposalChkForm" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+
+        <div class="proposalChkForm">
+          <div class="tit">
+            1. 현장실사 여부 확인
+          </div>
+          <div class="ment">
+            <strong>{(주)길동건설}</strong>에 대한 현장실사를 진행하셨나요?
+            <p class="subMent">현장실사 완료 여부는 제안서 제출 가능 여부 또는 제안서 채택에 영향을 주지 않습니다.</p>
+          </div>
+
+          <div class="radioGroup">
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_1"><span></span>네, 현장실사를 완료했습니다.</label>
+            </span>     
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_1"><span></span>아니요, 현장실사는 하지 않았습니다.</label>
+            </span>     
+            
+          </div>
+          <div class="tit">
+            2. 제안 직원 정보 입력 및 알림 수신 설정
+            <em>* 표시는 필수 입력 항목입니다.</em>
+          </div>
+          
+          본 제안서에 대한 제안 직원 정보 입력 및 알림메시지를 받을 수단을 선택해 주세요.
+
+          <table class="formListTable">
+            <caption>제안 직원 정보 입력 및 알림 수신 설정</caption>
+            <colgroup>
+              <col width="120">
+              <col width="">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><em class="required">*</em>제안 직원</th>
+                <td>
+                  <div class="formRow">
+                    <input type="text" class="input">
+                    <button type="button" class="btnBlack" onclick="layer_open('layer_employeeSelect ',this)" >조회</button>
+                  </div>
+                  <p class="notiTxt">
+                    기존에 등록된 알림 수신자 이름을 조회하여 제안 직원으로 선택할 수 있습니다.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th><em class="required">*</em>제안 직원명</th>
+                <td>
+                  <div class="formRow">
+                    <input type="text" class="input">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>알림톡 수신 <br>휴대전화</th>
+                <td>
+                  <div class="formRow textCenter" role="group" aria-labelledby="formLabel1_3">
+                    <input class="input" type="text" title="알림톡 수신 휴대전화(1/3)" placeholder="000" value="010" >
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="알림톡 수신 휴대전화(2/3)" placeholder="0000" value="1234" >
+                    <span class="unit">-</span>
+                    <input class="input" type="text" title="알림톡 수신 휴대전화(3/3)" placeholder="0000" value="5678" >
+                    <button type="button" class="btnBlack p33" onclick="layer_open('SMS_layerOpen',this)" >본인 확인</button>
+                  </div>
+                  <p class="notiTxt">
+                    진행사항 알림톡 수신을 원하시면 본인확인을 진행해 주세요. <br>
+                    해당 번호는 기업 고객에게 노출되지 않습니다.
+                  </p>
+                  <div class="chkWrap">
+                    <span class="checkbox">
+                      <input type="checkbox" id="ckbCell1" name="ckbCell" />
+                      <label for="ckbCell1"><span></span>(필수) 알림톡을 받기 위한 NICE 본인확인 및 개인정보 제공에 동의합니다. <a href="#">[개인정보제공동의]</a></label>
+                    </span>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <th><em class="required">*</em><span class="inbox">알림 수신 <br>이메일</span></th>
+                <td>
+                  <div class="formRow">
+                    <input type="text" class="input">
+                    <span class="unit">@shinhan.com</span>
+                  </div>
+                  <div class="chkWrap">
+                    <span class="checkbox">
+                      <input type="checkbox" id="ckbCell1" name="ckbCell" />
+                      <label for="ckbCell1"><span></span>부서(또는 지점) 대표 이메일로 수신</label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+
+        <div class="btnBox">
+          <button type="button" class="btnSuccess " onclick="layer_close('layer_proposalChkForm')"  aria-label="레이어 닫기">제안서 작성하기</button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+
+
+  <!-- 'show' class 추가하면 레이어 오픈 -->
+  <div class="layerWrap modal" id="layer_employeeSelect" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid400">
+      <div class="layerHead">
+        <h3>‘홍길동’ 검색 결과</h3>
+        <button type="button" class="layerClose" popup-close="layer_employeeSelect" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <ul class="employeeSelect">
+          <li>
+            <span class="radio">
+              <input type="radio" id="formLabel2_1" name="formLabel2" value="" checked/>
+              <label class="label" for="formLabel2_1"><span></span>홍길동 010-1234-5678</label>
+            </span>     
+          </li> 
+          <li>
+            <span class="radio">
+              <input type="radio" id="formLabel2_2" name="formLabel2" value="" />
+              <label class="label" for="formLabel2_2"><span></span>홍길동 010-1234-5678</label>
+            </span>     
+          </li>
+          <li>
+            <span class="radio">
+              <input type="radio" id="formLabel2_2" name="formLabel2" value="" />
+              <label class="label" for="formLabel2_2"><span></span>홍길동 010-1234-5678</label>
+            </span>     
+          </li>
+          <li>
+            <span class="radio">
+              <input type="radio" id="formLabel2_2" name="formLabel2" value="" />
+              <label class="label" for="formLabel2_2"><span></span>홍길동 010-1234-5678</label>
+            </span>     
+          </li>
+        </ul>
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess " onclick="layer_close('layer_employeeSelect')"  aria-label="레이어 닫기">새로 등록</button>
+        <button type="button" class="btnWhite " onclick="layer_close('layer_employeeSelect')"  aria-label="레이어 닫기">선택</button>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal " id="SMS_layerOpen" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid600">
+      <div class="layerHead">
+        <h3>휴대폰 인증</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="formRow full">
+          <input type="text" class="input" placeholder="이름" title="이름">
+        </div>
+        <div class="formRow full">
+          <input type="text" class="input" placeholder="주민번호 13자리" title="주민번호 13자리(1/2)">
+          <span class="unit">-</span>
+          <input type="password" class="input" placeholder="oooooo" title="주민번호 13자리(1/2)">
+        </div>
+        <div class="formRow full mt30">
+          <select name=""  title="통신사">
+            <option value="">SKT</option>
+          </select>
+        </div>
+        <div class="formRow full">
+          <input type="text" class="input" value="010" title="휴대폰 번호 (1/3)">
+          <input type="text" class="input" title="휴대폰 번호(2/3)">
+          <input type="text" class="input" title="휴대폰 번호(3/3)">
+          <button type="button" class="btnSuccess" disabled>인증</button>
+        </div>
+        <div class="formRow full">
+          <span class="inputTimer">
+            <input type="text" class="input timer" placeholder="인증번호 입력" title="인증번호 입력">
+            <span class="unit">03:00</span>
+          </span>
+          <button type="button" class="btnSuccess" onclick='layer_alert("본인 확인이 완료되었습니다.", this, {confirm:{txt:"로그인", callback:function(){alert(3)}}})''>확인</button>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
+  
+</body>
+</html>

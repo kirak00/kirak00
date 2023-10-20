@@ -45,7 +45,7 @@ div.login_form.change_pw .formBox  { padding-left:150px; }
 div.login_form.change_pw .loginBtn  { margin-top:30px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:70px; width:50%; top:0; font-size:20px; border-bottom:1px solid #ddd;   }
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
-ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:2px solid #EAFAEB; }
+ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
 ul.loginTab li div.login_form  { position:absolute; left:0; top:110px; width:530px;  display:none; margin:0px 0 0;   }
 ul.loginTab li.on div.login_form    { display:block;}
@@ -54,11 +54,12 @@ ul.loginTab li .row + .row  { margin-top:20px; }
 ul.loginTab li .row .formRow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; width: 400px;}
 ul.loginTab li .row label   { min-width:130px; padding-left:0;padding-right:0;  }
 ul.loginTab li .row input   { width: 100%; }
-ul.loginTab li div.loginBtn   { position:absolute; top:160px; width:100%; }
+ul.loginTab li div.loginBtn   { position:static; margin-top:30px; }
 ul.loginTab .hasError .errorTxt { display: block;}   
 ul.loginTab li div.login_form p.info_txt  { position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
 
-ul.loginTab.searchId div.login_form .formBox  { padding-left:215px; }
+ul.loginTab.searchId div.login_form .formBox  { padding-left:160px; }
+ul.loginTab li p.notiTxt   {padding-left:180px; margin-top:16px; }
 ul.loginTab li #cont_certificate_login .formBox { padding-left:150px; }
 ul.loginTab li #cont_certificate_login .formRow { width:100%; }
 
@@ -67,6 +68,11 @@ ul.loginTab li ul.login_info li  {line-height:50px; overflow: hidden;  }
 ul.loginTab li ul.login_info li em  {height:50px; float:left; margin-right:16px; background:#4C9DA2; width:255px; border-radius: 8px; text-align: center; color:#fff; font-weight: 700; }
 ul.loginTab li ul.login_info li:first-child em  {background:#069B66; }
 ul.loginTab li ul.login_info li + li   {margin-top:20px;  }
+
+ul.loginTab li .searchIdResult   {height:116px; text-align: center; font-size: 18px; padding:40px 0 0;}
+
+.login_form .formBox label.line2        {line-height:24px;   }
+
 
 
 /* 메인 */
@@ -149,15 +155,15 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 .main_list_status a.item_6 span.icon    { background-image:url(../images/FIN/main_status_6.png)}
 .main_list_status a.item_7 span.icon    { background-image:url(../images/FIN/main_status_7.png)}
 
-.main_list_contents .list_top_box      { width:550px; margin: 40px auto 30px; display:flex; justify-content: space-between; }
+.main_list_contents .list_top_box      { width:100%; margin: 40px 0 30px; display:flex; justify-content:center; }
 .main_list_contents .list_top_box .info_txt   { text-align: center;  }
 .main_list_contents .list_top_box .info_txt strong   { display:block; }
-.main_list_contents .list_top_box button   { height:40px; font-size:16px; padding:0 32px; }
+.main_list_contents .list_top_box button   { height:40px; font-size:16px; padding:0 32px; margin-left:20px;  }
 
 section.main_dashboard       {}
 .main_dashboard .mng_btns           { padding:140px 0 40px; text-align: right;}
-.main_dashboard ul.dashboardWrap:first-child    {padding-top:20px; } 
-.center .main_dashboard ul.dashboardWrap:first-child    {padding-top:0px; } 
+.main_dashboard ul.dashboardWrap:first-child    {padding-top:0px; } 
+.main_dashboard .tabLine ~ div ul.dashboardWrap:first-child    {padding-top:30px; } 
 .main_dashboard ul.dashboardWrap    {  display:flex; flex-wrap: wrap; gap:20px; padding-top:20px;  } 
 .main_dashboard ul.dashboardWrap li.items    { width:calc(25% - 15px); height:210px; border:1px solid #ddd; border-radius:16px; text-align: center; }
 .main_dashboard ul.dashboardWrap li strong.tit    { display:block; font-size:18px; color:#333; padding:16px 0 0; text-align: center;  }
@@ -236,6 +242,43 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
  
 
 fieldset + section   {margin-top:40px; }
+
+
+th .inbox     {display:inline-block}
+
+
+/* 
+.proposalChkForm      {text-align: left;}
+.proposalChkForm .formListTable {margin-top:20px; }
+.proposalChkForm .formListTable .checkbox   {white-space:unset;}
+.proposalChkForm .formListTable .chkWrap   {margin-top:10px; }
+.proposalChkForm .formListTable .chkWrap a {font-weight: 700; color:#069B66}
+.proposalChkForm .formListTable .checkbox input[type=checkbox] + label span:first-child { vertical-align: -7px; }
+.proposalChkForm .tit   {position:relative; font-weight: 700; padding-bottom:20px; }
+.proposalChkForm .tit em   {position:absolute; right:0; color:#FE5050; font-weight: 400; }
+.proposalChkForm .tit ~ .tit   {padding-top:30px; margin-top:30px; border-top:1px solid #ddd; }
+.proposalChkForm .ment .subMent   {font-size:14px; }
+.proposalChkForm .radioGroup   {margin-top:20px; } 
+*/
+ul.employeeSelect li + li  {margin-top:20px; }
+
+.employeeInfo         {margin-top:40px; }
+.employeeInfo .titBox    {position:relative; border-bottom:1px solid #ddd;  }
+.employeeInfo .titBox .tit    {padding-bottom:15px; padding-left:40px;  }
+.employeeInfo .titBox .tit h4 {font-size:24px; }
+.employeeInfo .titBox .tit p  {margin-top:10px; }
+.employeeInfo .titBox button  {position:absolute; right:0; top:10px; }
+.employeeInfo .textTable  {margin-top:40px; margin-bottom:40px; padding-left:40px;   }
+
+.proposal_preview .tit45    {margin-top:40px; }
+.proposal_preview .tit45_g    {color:#069B66; MARGIN-TOP:20px;   }
+.proposal_preview .txtCenter    {text-align: center; padding-bottom:20px; }
+.proposal_preview .txtCenter p  {display:inline-block; }
+.proposal_preview .prevTit      {overflow:hidden; padding:24px 40px; background:#069B66; border-radius:16px; color:#fff;   }
+.proposal_preview .prevTit strong    {float:left; font-size:24px;  }
+.proposal_preview .prevTit span      {float:left; margin-left:16px; padding:6px 0 0;  }
+.proposal_preview .prevTit span.r    {float:right; }
+
 
 /* 
  대쉬보드 프린트 셋팅
@@ -344,4 +387,26 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .uploadResult .resutlBox em.total  {}
 
 
+.managerRegistTit     {width:720px; margin:20px auto 0; border-radius:16px; padding:20px 20px 20px 68px; background:url(../images/common/ico_24_notice_primary.png) no-repeat 30px 50% #F4F4F4 ; background-size:20px;   }
+.managerRegistTit li + li  {margin-top:6px; }
+.managerRegistForm    {width:460px; margin:60px auto 0;   }
+.agreeChk    {padding:30px 0; }
+.managerRegistForm .agreeChk    {padding:30px 0; }
+.managerRegistForm .agreeChk .checkbox    {white-space:unset;}
+.managerRegistForm .agreeChk .checkbox .blue    {font-weight: 700; vertical-align: 0;  }
+.layerCont ul.guideBox:first-child    {margin-top:0; }
+
+.layer_alarm .searchControlItem      {min-width:100%; max-width:100%;  }
+.layer_alarm .searchControlItem .formRow      {flex:1}
+.layer_alarm .searchControlItem .formRow select      {width:100%;  }
+.layerCont .layer_alarm .formVertical   {width:auto;  }
+.layerCont .layer_alarm .formList > label {margin-bottom:auto; margin-top:15px; }
+.notiCen         {text-align: center;}
+.notiCen.mt40         {margin-top: 40px;}
+.notiCen .notiTxt {display:inline-block}
+
+.changePw     {width:460px; margin:60px auto 0px;}
+.changePw .loginBtn     {margin:30px auto 0px;}
+
+.checkbox.ml30    {margin-left:30px; }
 /* 진희 */

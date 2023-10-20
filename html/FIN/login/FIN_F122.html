@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+ 
+
+</style>
+</head>
+<body>
+     <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container member" id="skip_content"  aria-label="콘텐츠">
+
+      <h2 class="hide">콘텐츠 영역</h2> 
+      <section class="login" id="skip_login"  aria-label="로그인" >
+
+         <div class="loginCont">
+          <div class="loginTit" id="login_tit_01">
+            <h2 class="tit">담당자 등록</h2>
+          </div>
+          <div class="managerRegistTit">
+            <ul>
+              <li>·  대출 업무를 관리할 <strong>부서 또는 지점의 담당자</strong>를 등록해 주시기 바랍니다.</li>
+              <li>·  담당자를 등록하시면 주요 알림 수신 및 희망하는 대출 신청 조건에 대한 알림을 설정할 수 있습니다.</li>
+              <li>·  담당자 알림톡 수신과 개인정보 제공을 위하여 동의 및 본인확인 절차가 필요합니다.</li>
+            </ul>
+          </div>
+        
+          <div class="login_form" id="cont_id_login">
+            <div class="managerRegistForm">
+              <div class="formBox">
+                <label for="findIdLabel1" class="label">담당자명</label>
+                <div class="formRow textCenter" >
+                  <input class="input" type="text" name="" id="findIdLabel1" placeholder="">
+                </div>
+                <p class="errorTxt"></p>
+              </div>
+              <div class="formBox">
+                <label id="findIdLabel2" class="label ">담당자 휴대전화</label>
+                <div class="formRow textCenter" role="group" aria-labelledby="findIdLabel2">
+                  <input class="input" type="text" name="" title="대표휴대전화(1/3)" placeholder="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" name="" title="대표휴대전화(2/3)" placeholder="">
+                  <span class="unit">-</span>
+                  <input class="input" type="text" name="" title="대표휴대전화(3/3)" placeholder="">
+                </div>
+                <p class="errorTxt">다시 입력해주세요.</p>
+              </div>
+              <div class="formBox">
+                <label id="findIdLabel3" class="label ">담당자 이메일</label>
+                <div class="formRow textCenter" role="group" aria-labelledby="findIdLabel3">
+                  <input class="input" type="text" name="" title="대표이메일(1/2)" placeholder="">
+                  <span class="unit">@</span>
+                  <input class="input" type="text" name="" title="대표이메일(2/2)" placeholder="">
+                </div>
+                <p class="errorTxt">다시 입력해주세요.</p>
+              </div>
+              <div class="agreeChk">
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                  <label for="searchCheckBox"><span></span>(필수) 알림톡을 받기 위한 NICE 본인확인 및 개인정보 제공에 동의합니다. <a href="#" class="blue">[개인정보제공동의]</a></label>
+                </span>
+
+                
+              </div>
+              <div class="loginBtn">
+                <button type="button" class="btnSuccess" aria-controls="cont_id_login">본인 확인 및 로그인</button>
+              </div>
+            </div>
+            
+          </div>
+         </div>
+        
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+ 
+
+    
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+
+
+  <!-- 'show' class 추가하면 레이어 오픈 -->
+  <div class="layerWrap modal show" id="layer_employeeSelect" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>희망 업체 알림설정 </h3>
+        <button type="button" class="layerClose" popup-close="layer_employeeSelect" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="layer_alarm">
+          <ul class="guideBox">
+            <li class="bul">대출 신청 건에 대해 희망하는 알림 조건을 선택하고 해당 조건을 적용할 번호를 선택하시면 해당 조건의 대출 신천이 등록되었을 때에만 발송해드립니다.</li>
+            <li class="bul">모든 대출 신청건의 알림 받기를 희망하시면 조건을 초기화하거나 본인의 휴대전화 번호에 대한 조건 적용을 해제해 주세요.</li>
+            <li class="bul">담보대출 : 법인 회원 신청한 5억 미만 금액 5영업일,법인 회원 신청한 5억 초과 금액 10영업일 정도 평균 소요 됩니다.</li>
+            <li class="bul">수신 거부를 원하시면 [마이페이지 > 메시지함 > <a href="#"><strong>메시지 알림 설정</strong></a>] 페이지에서 ‘대출 신청 관련 알림’을 설정해 주세요.</li>
+          </ul>
+           
+          <fieldset>
+            <legend>게시물 검색</legend>
+            <div class="searchControlBox">
+              <div class="searchControlGroup">
+                <div class="searchControlItem ">
+                  <label for="label_tit_1" class="label">희망 알림 설정 적용 번호 </label>
+                  <div class="formRow">
+                    <select name="" id="label_tit_1">
+                      <option value="">010-1234-5678</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="formListWrap">
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_1">희망 신청 금액 </label>
+              <div class="formRow">
+                <input class="input wid220" id="alarmLabel_1" type="text" placeholder="" value="">
+                <span class="unit">억</span>
+                <select name="" title="희망 금액 범위">
+                 <option value="">이상</option>
+                </select>
+              </div>
+              <div class="formDesc">
+                <p class="notiTxt">기업고객 희망 신청 금액 중 최대 금액 기준입니다.</p>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_2">자금 용도 </label>
+              <div class="formRow">
+                 <select name="" id="alarmLabel_2">
+                  <option value=""></option>
+                 </select>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_3">담보 유무 </label>
+              <div class="formRow">
+                 <select name="" id="alarmLabel_3">
+                  <option value=""></option>
+                 </select>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_4">특허 보유 여부 </label>
+              <div class="formRow">
+                 <select name="" id="alarmLabel_4">
+                  <option value=""></option>
+                 </select>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_5">CRETOP 등급 </label>
+              <div class="formRow">
+                <select name="" id="alarmLabel_5" title="등급 선택">
+                 <option value="">NR</option>
+                </select>
+                <select name="" title="등급 범위 선택">
+                 <option value="">이상</option>
+                </select>
+                <span class="checkbox">
+                  <input type="checkbox" id="alarmLabel_6" name="testCheckBoxOnly" value="A"  />
+                  <label for="alarmLabel_6"><span></span>등급 없음 포함</label>
+                </span>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label wid120" for="alarmLabel_7_1">노출 제외 조건 </label>
+              <div class="formVertical">
+                <span class="checkbox">
+                  <input type="checkbox" name="testCheckBoxOnly" id="alarmLabel_7_1" value=""  />
+                  <label for="alarmLabel_7_1"><span></span>자본잠식</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" name="testCheckBoxOnly" id="alarmLabel_7_2" value=""  />
+                  <label for="alarmLabel_7_2"><span></span>부채비율 700% 초과</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" name="testCheckBoxOnly" id="alarmLabel_7_3" value=""  />
+                  <label for="alarmLabel_7_3"><span></span>3개년 이자보상배율 1.0 미만</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" name="testCheckBoxOnly" id="alarmLabel_7_4" value=""  />
+                  <label for="alarmLabel_7_4"><span></span>매출액 초과 차입금</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" name="testCheckBoxOnly" id="alarmLabel_7_5" value=""  />
+                  <label for="alarmLabel_7_5"><span></span>2년 연속 매출액 50% 이상 감소</label>
+                </span>
+              </div>
+            </div>
+            <div class="notiCen">
+              <p class="notiTxt">
+                조건 설정을 변경하시면 해당 알림을 받는 모든 수신자에게 <br>공통적으로 변경된 값이 적용됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnWhite " onclick="layer_close('layer_employeeSelect')"  aria-label="레이어 닫기">조건 초기화</button>
+        <button type="button" class="btnSuccess" onclick="layer_close('layer_employeeSelect')"  aria-label="레이어 닫기">적용</button>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
+
+</body>
+</html>

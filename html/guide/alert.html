@@ -27,16 +27,22 @@
         <div style="padding:10px 0;">
 
           <!-- 기본형 -->
-          <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>alert 기본</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_options(this)'>alert 기본</button>
           <script>
-            function sample_alert_1(obj){
+            function sample_alert_options(obj){
               layer_alert(
                 "비밀번호 재설정이 필요합니다.", 
                 obj, 
                 {
-                  cancel:{
-                    callback:function(){   // x 버튼 callback func
-                      alert('취소')
+                  confirm : {
+                    txt : "확인",
+                    callback : function(){
+                    }
+                  },
+                  closebtn : {
+                    show: false, // default :  false
+                    callback : function(){
+                      alert("닫기")
                     }
                   }
                 }
@@ -102,7 +108,38 @@
 
         <h2>confirm </h2>
         <div style="padding:10px 0;">
-          <button type="button" class="btnSuccess" onclick='layer_confirm("ㅁㄴㅇㄹ", this )'>confirm 기본</button>
+          <button type="button" class="btnSuccess" onclick='sample_confirm_options(this)'>confirm 기본</button>
+          
+          <!-- confirm 기본형 -->
+          <script>
+            function sample_confirm_options(obj){
+              layer_confirm(
+                "비밀번호 재설정이 필요합니다.", 
+                obj, 
+                {
+                  confirm : {
+                    txt : "확인",
+                    callback : function(){
+                      alert("확인")
+                    }
+                  },
+                  cancel : {
+                    txt : "취소",
+                    callback : function(){
+                      alert("취소")
+                    }
+                  },
+                  closebtn : {
+                    show: true, // default : true
+                    callback : function(){
+                      alert("닫기")
+                    }
+                  }
+                }
+              )
+            }
+          </script>
+
           <button type="button" class="btnSuccess" onclick='layer_confirm({tit:"회원탈퇴 하시겠습니까?", ment:"ㅁㄴㅇㄹ"}, this , {confirm:{txt:"확인1", callback:function(){alert(3)}}} )'>confirm 확인 문구변경</button>
           <br>
           <button type="button" class="btnSuccess" onclick='layer_confirm("ㅁㄴㅇㄹ", this , {confirm:{txt:"확인1", callback:function(){alert(3)}},cancel:{txt:"회원가입",callback:function(){alert(2)}}} )'>confirm 확인 취소 문구변경</button>

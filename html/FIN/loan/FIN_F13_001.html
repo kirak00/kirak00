@@ -119,6 +119,10 @@
               </div>
               <span class="checkbox">
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                <label for="searchCheckBox"><span></span>타점심사중 제외</label>
+                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                <label for="searchCheckBox"><span></span>등급 없음 포함</label>
+                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
                 <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
               </span>
               <div class="searchBtns">
@@ -128,12 +132,14 @@
               </div>
             </div>
           </div>
+
         </fieldset>
         <!-- 검색 -->
       </section>
       <section class="sectionBlock40">
         
 
+        
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
@@ -154,7 +160,7 @@
         </fieldset>
 
         <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs" caption="대출 신청 업체 목록"></div>    
+          <div id="jsGrid2" class="bbs visible" caption="대출 신청 업체 목록"></div>    
 
           <div class="table_bt">
             <div id="externalPager2" class="external-pager"></div>
@@ -206,19 +212,19 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
               fields: [
-                { name: "Name0",  type: "text", title : "관심<br>대출", width: "80", validate: "required", },
-                { name: "Name1",  type: "text", title : "대출 신청 번호", width: "auto", validate: "required", },
-                { name: "Name2", type: "text", title : "상태", width: 80, validate: "required" },
-                { name: "Name3", type: "text", title : "법인명", width: 130, validate: "required" },
-                { name: "Name4", type: "text", title : "희망 신청 금액", width: 130, validate: "required" },
-                { name: "Name5", type: "text", title : "지역", width: 80, validate: "required" },
-                { name: "Name6", type: "text", title : "업종", width: 80, validate: "required" },
-                { name: "Name7", type: "text", title : "자금 용도", width: 100, validate: "required" },
-                { name: "Name8", type: "text", title : "담보<br> 유무", width: 60, validate: "required" },
-                { name: "Name9", type: "text", title : "특허 보유<br>여부", width: 100, validate: "required" },
+                { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은 목록 상단에 고정되며, <Br>사용자 단위가 아닌 계정 단위로 설정이 가능합니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
+                { name: "Name1",  type: "text", title : "대출 신청 번호",  validate: "required", },
+                { name: "Name2", type: "text", title : "상태", width: 60, validate: "required" },
+                { name: "Name3", type: "text", title : "법인명", width: 80, validate: "required" },
+                { name: "Name4", type: "text", title : "희망 신청 금액", width: 100, validate: "required" },
+                { name: "Name5", type: "text", title : "지역", width: 70, validate: "required" },
+                { name: "Name6", type: "text", title : "업종", width: 70, validate: "required" },
+                { name: "Name7", type: "text", title : "자금 용도", width: 80, validate: "required" },
+                { name: "Name8", type: "text", title : "담보<br> 유무", width: 80, validate: "required" },
+                { name: "Name9", type: "text", title : "특허 보유<br>여부", width: 80, validate: "required" },
                 { name: "Name10", type: "text", title : "CRETOP <br>등급", width: 100, validate: "required" },
-                { name: "Name11", type: "text", title : "제안서 마감일", width: 120, validate: "required" },
-                { name: "Name12", type: "text", title : "상세보기", width: 160, validate: "required" },
+                { name: "Name11", type: "text", title : "제안서 마감일", width: 100, validate: "required" },
+                { name: "Name12", type: "text", title : "상세보기", width: 130, validate: "required" },
               ],
               
               pagerContainer: "#externalPager2",

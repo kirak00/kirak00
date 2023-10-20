@@ -22,11 +22,11 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
-      <h2 class="pageTit">청구 관리</h2>
+      <h2 class="pageTit">정산 관리</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><strong>청구 관리</strong></a></li>
+          <li><a href="#none"><strong>정산 관리</strong></a></li>
       </ul>
     </section>
 
@@ -48,6 +48,12 @@
               <label for="labelLoan" class="label">대출 신청 번호 </label>
               <div class="formRow">
                 <input type="text" class="input" id="labelLoan" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem ">
+              <label for="labelLoan" class="label">업체명 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan" placeholder="업체명을 입력해 주세요">
               </div>
             </div>
           </div>
@@ -98,7 +104,12 @@
         </fieldset>
         <div class="jsGridWrap">
           <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
-          <div id="externalPager" class="external-pager"></div>
+          <div class="table_bt">
+            <div id="externalPager" class="external-pager"></div>
+            <div class="btn_r">
+              <button type="button" class="btnSuccess ico_down mm">엑셀 다운로드</button>
+            </div>
+          </div>
         </div>
         <script>
           
@@ -108,57 +119,13 @@ $(function() {
 var clients = [
   { "Name1": "청구중",
     "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "청구중",
-    "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "청구중",
-    "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "청구중",
-    "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "청구중",
-    "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
-  },
-  { "Name1": "청구중",
-    "Name2": "S_230809_0010", 
-    "Name3": "1,350,000", 
-    "Name4": "2023-07-31", 
-    "Name5": "2023-08-05", 
-    "Name6": "미발행", 
-    "Name7": "미정산", 
-    "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+    "Name3": "(주)길동건설", 
+    "Name4": "1,350,000<p class='sub'>(일백삼십오만원)</p>", 
+    "Name5": "2023-07-31", 
+    "Name6": "2023-08-05", 
+    "Name7": "미발행", 
+    "Name8": "미정산", 
+    "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
   },
 ];
 
@@ -167,14 +134,15 @@ $("#jsGrid").jsGrid({
   data: clients,
   noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
   fields: [
-    { name: "Name1",  type: "text", title : "청구 상태", width: 150 },
+    { name: "Name1",  type: "text", title : "청구 상태", width: 120 },
     { name: "Name2", type: "text", title : "대출 신청 번호", width: 180},
-    { name: "Name3", type: "text", title : "청구 금액", width: 180},
-    { name: "Name4", type: "text", title : "청구일", width: 160},
-    { name: "Name5", type: "text", title : "이의신청 기일", width: 160},
-    { name: "Name6", type: "text", title : "세금계산서발행 여부", width: 180},
-    { name: "Name7", type: "text", title : "정산 여부", width: 150},
-    { name: "Name8", type: "button", title : "청구 내역서 보기", width: 180},
+    { name: "Name3", type: "text", title : "법인명", width: 130},
+    { name: "Name4", type: "text", title : "청구 금액", width: 150},
+    { name: "Name5", type: "text", title : "청구일", width: 120},
+    { name: "Name6", type: "text", title : "이의신청 기일", width: 120},
+    { name: "Name7", type: "text", title : "세금계산서발행 여부", width: 140},
+    { name: "Name8", type: "text", title : "정산 여부", width: 100},
+    { name: "Name9", type: "button", title : "청구 내역서 보기", width: 140},
   ],
       
   pagerContainer: "#externalPager",

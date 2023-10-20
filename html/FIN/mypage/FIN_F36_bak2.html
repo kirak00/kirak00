@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">메시지 알림 설정</h2>
+      <ul class="breadcrumb">
+        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+        <li><a href="#none"><span>마이페이지</span></a></li>
+        <li><a href="#none"><span>메시지함</span></a></li>
+        <li><a href="#none"><strong>메시지 알림 설정</strong></a></li>
+      </ul>
+    </section>
+    <section>
+       <!-- 검색 -->
+       <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand full">
+              <label for="selectLabelState" class="label">메시지 수신 담당자 추가</label>
+              <div class="formRow">
+                <select id="selectLabelState" class="wid300">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns fl">
+              <button type="button" class="btnSuccess">수신자 추가</button>
+            </div>
+          </div>
+          <p class="notiTxt">알림 수신자를 선택 후 알림톡 수신 여부를 체크해 주세요. 알림 수신자는 <a href="#"><strong>[마이페이지 > 회원정보]</strong></a>메뉴에서 등록 가능합니다.</p>
+        </div>
+      </fieldset>
+      <div class="table_wrap">
+        <table class="bbs_list hasBorder">
+          <caption>메시지 알림설정</caption>
+          <colgroup>
+            <col width="316px">
+            <col/>
+            <col width="282px">
+            <col width="257px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">메시지</th>
+              <th scope="col">수신자</th>
+              <th scope="col">로그인시 알림</th>
+              <th scope="col">카카오톡 알림</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="require">
+              <td rowspan="2">추가 서류 등록건</td>
+              <td>대표자</td>
+              <td colspan="2" rowspan="6"><strong>필수 알림</strong></td>
+            </tr>
+            <tr class="require">
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr class="require">
+              <td rowspan="2">제안서 마감 완료</td>
+              <td>대표자</td>
+            </tr>
+            <tr class="require">
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr class="require">
+              <td rowspan="2">마감기한 연장</td>
+              <td>대표자</td>
+            </tr>
+            <tr class="require">
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">심사중인 금융기관</td>
+              <td>대표자</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">제안서 등록</td>
+              <td>대표자</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">제안서 회수</td>
+              <td>대표자</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">1:1 답변 등록</td>
+              <td>대표자</td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox" checked/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="formRow">
+                  법인 담당자
+                  <select title="법인 담당자" class="wid180">
+                    <option>김둘리 차장</option>
+                    <option>셀렉트</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">로그인시 알림</span>
+                </label>
+              </td>
+              <td>
+                <label class="switch">
+                  <input role="switch" type="checkbox"/>
+                  <span class="srOnly">카카오톡 알림</span>
+                </label>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
