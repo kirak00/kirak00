@@ -35,7 +35,7 @@ ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; 
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
-ul.loginTab li div.login_form  { position:absolute; left:0; top:80px; width:530px;  display:none; margin:0px 0 0;   }
+ul.loginTab li div.login_form  { position:absolute; left:0; top:90px; width:460px;  display:none; margin:0px 0 0;   }
 ul.loginTab li div.login_form .errorTxt  { margin-top:5px; line-height:18px;}
 ul.loginTab li.on div.login_form    { display:block;}
 ul.loginTab li.on.fast div.login_form    { transition:none;}

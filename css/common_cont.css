@@ -224,6 +224,9 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .sectionBlock60 { margin-top: 40px;}
 .sectionBlock80 { margin-top: 60px;}
 .sectionBar { width: 100%; height: 1px; margin: 60px 0; background: #ddd;}
+.sectionIndent .titH3.hasLine { padding: 0 40px}
+.sectionIndent .formListTable { padding: 0 40px}
+.sectionIndent .titH3.hasLine + .formListTable { margin-top: 40px;}
 .lineBlock { margin-top: 60px; border-top: 1px solid #ddd; }
 /****************************
 **********  badge  **********
@@ -1126,7 +1129,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont .loginTit        {width:100%; text-align: center;}
 .loginCont .loginTit .tit { font-size:30px;}
 .loginCont .loginTit p      { color: #555; padding-top:20px; white-space: nowrap;}
-.loginCont ul.loginTab     {position:relative; width:530px; height:280px; margin:60px auto 0;  }
+.loginCont ul.loginTab     {position:relative; width:460px; height:290px; margin:60px auto 0;  }
 .loginCont .loginBtn button,
 .loginCont .loginBtn a     {width:100%; height: 50px; line-height: 50px; font-size: 16px; }
 
@@ -1134,7 +1137,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginUtilBtn a  {color:#555; font-size: 14px; }
 .loginUtilBtn a + a::before {content:'·'; display:inline-block; margin:0 10px; }
 
-.login_form .formBox        {position:relative; padding-left:130px; padding-bottom:16px;   }
+.login_form .formBox        {position:relative; padding-left:120px; padding-bottom:16px;   }
 .login_form .formBox + .formBox   {padding-bottom:0;   }
 .login_form .formBox + .formBox + .formBox   {padding-top:16px;   }
 .login_form .formBox label        {position:absolute; left:0; height:50px; line-height:50px; font-weight: 700;   }
@@ -1395,7 +1398,7 @@ table { width: 100%;}
 .formGrayBox .formListTable th:first-child { padding-left:0; }
 .formGrayBox .formListTable td { padding: 10px 0; }
 .formListTable .btnWhite,
-.formListTable .btnSuccess { height: 50px; padding: 0 50px;}
+.formListTable .btnSuccess { height: 50px; padding: 0 50px; font-size: 16px;}
 .formListTable a.btnWhite,
 .formListTable a.btnSuccess { line-height: 50px; }
 .formListTable .btnWhite.px32,
@@ -1458,15 +1461,15 @@ table { width: 100%;}
 .formFullTable .guarant .input:nth-child(3) { width: 100%; }
 
 
-.formMdTable .formRow { width: 578px;}
+.formMdTable .formRow { width: 680px;}
 .formMdTable .formRow.fullType { width: 100%; max-width: 830px;}
 .formMdTable .formRow.wid673 { width: 673px;}
 .formMdTable .input { width: 100%;}
-.formMdTable .input.wid100 { width: 100px;}
-.formMdTable .input.wid180 { width: 180px;}
-.formMdTable .input.wid200 { width: 200px;}
-.formMdTable .input.wid210 { width: 210px;}
-.formMdTable .input.wid240 { width: 240px;}
+.formMdTable .input.wid100 { width: 100px; flex-shrink: 0;}
+.formMdTable .input.wid180 { width: 180px; flex-shrink: 0;}
+.formMdTable .input.wid200 { width: 200px; flex-shrink: 0;}
+.formMdTable .input.wid210 { width: 210px; flex-shrink: 0;}
+.formMdTable .input.wid240 { width: 240px; flex-shrink: 0;}
 .formMdTable .input.inputBoss { width: 418px; flex-shrink: 0;}
 .formMdTable .inputBizNumber .input { width: auto;}
 .formMdTable .formGrayBox .formRow { width: 100%;}
