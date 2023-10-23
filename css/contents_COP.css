@@ -218,11 +218,12 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .layerCont .main_survey dl:first-child dt { padding-top: 0;}
 
 /* 약관 */
-.content_terms    { margin-top:40px; }
-.content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; }
-.content_terms .titH3:first-child { margin-top: 60px;}
+.content_terms    { margin-top:60px; }
+/* .content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; } */
+/* .content_terms .titH3:first-child { margin-top: 60px;} */
+.content_terms .titH3.hasLine { padding: 0 40px;}
 .content_terms .terms_type    { padding:10px 0 0;}
-.content_terms .terms_ment    { margin:20px 0 30px;}
+.content_terms .terms_ment    { padding :0 40px 40px;}
 
 .evtWinner      { margin:40px 0 0;  }
 
@@ -270,7 +271,7 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .joinStep li { position: relative; display: inline-block; width: 162px; margin-right: 26px;}
 .joinStep li:last-child { margin-right: 0px;}
 .joinStep li .circle { display: inline-block; width: 40px; height: 40px; line-height: 40px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 20px; font-weight: 700;}
-.joinStep li .name { margin-top: 12px; color: #888; font-size: 16px; }
+.joinStep li .name { margin-top: 12px; color: #888; }
 .joinStep li::before { content: ''; position: absolute; top: 23px; left: -50%; display: inline-block; width: 132px; height: 2px; background: #ddd;}
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #069B66; }
