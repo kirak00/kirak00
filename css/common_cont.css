@@ -30,6 +30,8 @@
 
 .scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../images/common/top.png) no-repeat 0 0;  }
 
+/* 테이블 버튼 */
+.wid130 { width: 130px;} 
 /****************************
 **********  align  **********
 *****************************/
@@ -44,6 +46,7 @@
 
 
 .goLink { color: #333; text-decoration: underline; }
+.jsgrid .goLink,
 .jsGridWrap .goLink,
 .bbs_list .goLink { color: #069B66; font-weight: 700; text-underline-offset: 3px; }
 
@@ -362,7 +365,9 @@ a.attach       {padding-left:32px; font-weight: 700; color:#555;  background:url
 .ico_file1 { color: #555; font-weight: 700;}
 .ico_file1::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_receipt_g.png) no-repeat 50% 50% / contain; }
 
-a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50%; }
+/* a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50%; } */
+a.lnk { padding-right: 22px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50% / 18px 18px; vertical-align: 0;}
+a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_blank_primary.png) no-repeat 100% 50% / 18px 18px; vertical-align: 0;}
 .btnCheck       {padding-right:22px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_18_survey_primary.png) no-repeat 100% 0% / 18px; }
 
 
@@ -1039,6 +1044,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 
 header {}
 .main header::after {content:''; position:absolute; width:100%; height:740px; height:110px; top:0; lefT:0; z-index:0; background:#EAFAEB; }
+.main.bg2 header::after { height: 405px}
 header::before {content:''; width:100%; height:100vh; left:0; top:0; z-index:499; position:fixed; opacity:0; z-index:-1; background: #fff; transition: .5s; }
 header .bg  {content:''; width:100%; left:0; top:0; z-index:499; position:absolute; height:110px; background:#fff; transition: .3s; opacity:0 ; }
 header .line  {content:''; position:absolute; width:100%; height:0; top:110px; left:0; z-index:599;  border-bottom:1px solid #069B66; display:none; }
@@ -1132,6 +1138,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont ul.loginTab     {position:relative; width:460px; height:290px; margin:60px auto 0;  }
 .loginCont .loginBtn button,
 .loginCont .loginBtn a     {width:100%; height: 50px; line-height: 50px; font-size: 16px; }
+.loginCont ul.loginTab .notiTxt { position: absolute; bottom: -125px; left: 50%; transform: translate(-50%, 0px); white-space: nowrap;}
 
 .loginUtilBtn     {text-align: center; padding:20px 0 0; }
 .loginUtilBtn a  {color:#555; font-size: 14px; }
@@ -1483,6 +1490,7 @@ table { width: 100%;}
 .input.wid180 { width: 180px;}
 .input.wid210 { width: 210px;}
 .input.wid240 { width: 240px;}
+.input.wid260 { width: 260px;}
 
 
 .formLgTable .formRow { width:1000px;}
@@ -2151,11 +2159,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 
 /* .suggestPg .accordion { margin-top: 60px; } */
 .suggestPg .accordionItem { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; }
+.suggestPg .accordionItem.noAccordion .accordionPanel { display: block;}
 .suggestPg .accordionItem + .accordionItem { margin-top: 40px;}
 .suggestPg .accordionTrigger { display: flex; align-items: center; padding-left: 40px; padding-right: 40px; font-weight: 400; }
 .suggestPg .accordionTrigger .label { flex-shrink: 0; width: 160px; font-size: 18px; font-weight: 700;}
 .suggestPg .accordionTrigger .tit { font-size: 18px;; flex: 1;}
-.suggestPg .accordionPanel { display: block; margin: 0; padding: 40px; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
+.suggestPg .accordionPanel { margin: 0; padding: 40px; border-top: 1px solid #ddd; background: #fff; border-radius: 0 0 16px 16px;}
 /* .suggestPg  .accordionItem.isOpen .accordionPanel { border-top: 1px solid #069B66;  } */
 .suggestPg .viewNolineTable { margin-top: 0; padding: 0 40px}
 .suggestPg .formListTable { margin-top: 0;}

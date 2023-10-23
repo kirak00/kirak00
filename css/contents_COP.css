@@ -30,7 +30,7 @@
 /* 락 */
 div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0;  }
 div.login_form.change_pw .formBox  { padding-left:150px; }
-div.login_form.change_pw .loginBtn  { margin-top:60px; }
+div.login_form.change_pw .loginBtn  { margin-top:30px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; top:0; font-size:18px; border-bottom:1px solid #ddd;   }
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
@@ -86,7 +86,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 /* 락 */
 /* 메인 */
 .main .container    {padding:40px 0 0px ; }
-.main header::after { height:380px; }
+.main header::after { height:548px; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
@@ -182,13 +182,13 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:18px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
 .main_loan_cont .list .status button:focus {outline: 2px dashed #069B66;} 
 .main_loan_cont .list .status button span   {margin:auto 0;}
-.main_loan_cont .list .status button em     {display:block; padding:0 14px; border:1px solid #EAFAEB; flex:0; color:#069B66; border-radius: 14px;  }
+.main_loan_cont .list .status button em     {display:block; line-height: 25px; padding:0 14px; border:1px solid #069B66; flex:0; color:#069B66; border-radius: 30px;  }
 .main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline; }
 .main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
 .main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 20px; height:auto; text-align: center;  }   
-.main_loan_cont .no_data span     {display:block; padding-top:130px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
+.main_loan_cont .no_data span     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
 .main_loan_cont .no_data span.btn {display:block; background:none !important; padding:0; display:block; text-align: center; padding:40px 0 0; }   
-.main_loan_cont .no_data span.btn button.btnSuccess {width:210px; } 
+/* .main_loan_cont .no_data span.btn button.btnSuccess {width:210px; }  */
 .main_loan_cont .no_data.bg_regist span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_01.png); }  
 .main_loan_cont .no_data.bg_review span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02.png); } 
 .main_loan_cont .no_data.bg_endtime span      {background-image:url(../images/COP/main/ico_80_log_process_nodata_03.png); } 
@@ -255,9 +255,10 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 /*  약관  */
 .tremsWrap      {}
+.tremsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;}
 .tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
-.tremsWrap .searchControlBox      {margin-top:40px; }
-.tremsWrap .terms_cont      {margin-top:0px; border:1px solid #ddd; background:#FAFAFA; padding:60px; border-radius: 16px; }
+.tremsWrap .searchControlBox      {margin-top:60px; }
+.tremsWrap .terms_cont      {margin-top:40px; background:#FAFAFA; padding:40px; border-radius: 16px; }
 .tremsWrap .terms_style_1      {font-size:18px; }
 .tremsWrap .terms_style_1 strong  {display:block;  }
 .tremsWrap .terms_style_1 p     {margin-top:20px;}
