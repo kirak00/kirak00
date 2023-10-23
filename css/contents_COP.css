@@ -337,5 +337,5 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .boardTit .barList { margin-top: 8px;} 
 .boardCont { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; }
 
-.boardCont .con { padding: 20px; line-height: 1.5; }
+.boardCont .con { max-height: 400px; overflow: auto; padding: 20px; line-height: 1.5; }
 .boardCont .attachBox { padding: 20px; margin-top: 20px; border-top: 1px solid #ddd;}
