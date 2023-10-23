@@ -23,12 +23,11 @@
   <div class="container" id="skip_content"  aria-label="콘텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">대출 관리</h2>
+      <h2 class="pageTit">대출 비교 신청 정보</h2><!-- v1.4 워딩수정 -->
       <ul class="breadcrumb">
         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-        <li><a href="#none"><span>마이페이지</span></a></li>
-        <li><a href="#none"><span>대출 관리</span></a></li>
-        <li><a href="#none"><strong>법인 정보</strong></a></li>
+        <li><a href="#none"><span>대출 비교 진행 현황</span></a></li><!-- v1.4 워딩수정 -->
+        <li><a href="#none"><strong>대출 비교 신청 정보</strong></a></li><!-- v1.4 워딩수정 -->
       </ul>
     </section>
     <div class="tabLineWrap">
@@ -38,6 +37,8 @@
           <li><button type="button" role="tab" aria-selected="false">희망 대출 정보</button></li>
           <li><button type="button" role="tab" aria-selected="false">재무 현황</button></li>
         </ul>
+        <!-- v1.4 추가 -->
+        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
     </div>
     <div class="bgGray">
@@ -46,10 +47,10 @@
           <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">업체개요</button></li>
           <!-- 디자인 수정 -->
           <!-- <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">대표자 인적 사항</button></li> -->
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">경영진 인적 사항</button></li>
+          <li class="on"><button type="button" role="tab" id="innerTab_3" aria-selected="true">경영진 인적 사항</button></li>
           <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 정보 인적 사항</button></li> 
           <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 연혁</button></li> 
-          <li><button type="button" role="tab" id="innerTab_6" aria-selected="false">필요 서류 제출</button></li> 
+          <li><button type="button" role="tab" id="innerTab_6" aria-selected="false">법인 서류 등록</button></li> 
         </ul>  
         <!-- 디자인 수정 : sectionBlock60 -> sectionBlock20 -->
         <section class="sectionBlock20">
@@ -91,8 +92,6 @@
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-         <!-- 디자인 수정 : 추가 -->
-         <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
       <div class="btn_c">
         <!-- 디자인 수정 -->

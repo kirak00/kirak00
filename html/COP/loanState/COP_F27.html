@@ -73,12 +73,14 @@
         </div>
       </section>
       <!-- 디자인 수정 아코디언 삭제 -->
+      
       <section class="sectionBlock40">
         <h4 class="titH3">제안 내용</h4>
+        <!-- 제안내용 -->
         <div class="accordionItem">
           <h3 class="accordionTitle">
             <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id">
-              <span class="label">상품명 1 </span><strong class="tit blue">길동바로론</strong><span class="gray5">대출 신청 번호  S_20230809-0001</span><!-- v1.4 .gray5 추가 -->
+              <span class="label">상품명 1</span><strong class="tit blue">길동바로론</strong><span class="gray5">대출 신청 번호  S_20230809-0001</span><!-- v1.4 .gray5 추가 -->
             </button>
           </h3>
           <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
@@ -149,7 +151,7 @@
                   </tbody>
                 </table>
               </div>
-              <p class="tableNoti">기준 금리, 당일 기준 합산 금리는 제안서 제출일 기준의 금리입니다.</p>
+              <p class="notiTxt">기준 금리, 당일 기준 합산 금리는 제안서 제출일 기준의 금리입니다.</p><!-- v1.4 수정 .notiTxt -->
             </section>
 
             <section class="sectionBlock40">
@@ -170,6 +172,27 @@
                   <tbody>
                     <tr>
                       <td>고객님 시설 자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인 되어 변경</td>
+                      <th scope="row">제안서 채택후 약</th>
+                      <td>3일</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- 자금용도를 대출 비교 신청시와 동일하게 설정한 경우 -->
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>제안 자금 변경</caption>
+                  <colgroup>
+                    <col width="228px">
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">가장 빠른 대출 실행 가능일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
                       <th scope="row">제안서 채택후 약</th>
                       <td>3일</td>
                     </tr>
@@ -264,11 +287,231 @@
             <div class="table_bt auto">
               <div class="btn_c">
                 <button type="button" class="btnSuccess">제안서 선택</button>
+                <button type="button" class="btnGray">선택 취소</button>
               </div>
             </div>
           </div>
         </div>
+        <!-- //제안내용 -->
+        <!-- 제안내용 -->
+        <div class="accordionItem">
+          <h3 class="accordionTitle">
+            <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id">
+              <span class="label">상품명 2</span><strong class="tit blue">길동바로론</strong><span class="gray5">대출 신청 번호  S_20230809-0001</span><!-- v1.4 .gray5 추가 -->
+            </button>
+          </h3>
+          <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
+            <section>
+              <span class="srOnly">제안 대출1 상세보기</span>
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>제안 금리</caption>
+                  <colgroup>
+                    <col width="300px">
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">자금 용도</th>
+                      <th scope="col" colspan="2">자금 상세 용도</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>운전 자금</td>
+                      <td>기계기구 등의 신,중설 개보수</td>
+                      <td>다른 은행 운전자금 상환</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="sectionBlock40">
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>제안 금리</caption>
+                  <colgroup>
+                    <col>
+                    <col width="180px">
+                    <col width="180px">
+                    <col width="180px">
+                    <col width="180px">
+                    <col width="110px">
+                    <col width="110px">
+                  </colgroup>
+                  <thead class="double2">
+                    <tr>
+                      <th scope="col" rowspan="2">대출금액</th>
+                      <th scope="col" colspan="4">제안금리(제안서 제출 기준)</th>
+                      <th scope="col" rowspan="2">대출기간</th>
+                      <th scope="col" rowspan="2">상환방식</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">유형</th>
+                      <th scope="col">기준금리</th>
+                      <th scope="col">가산금리</th>
+                      <th scope="col">당일 기준 합산 금리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>4,500,000,000원<p class="sub">(사십오억원)</p></td>
+                      <td>변동</td>
+                      <td>CD91일몰(5.1%)</td>
+                      <td>4.0%</td>
+                      <td>9.1%</td>
+                      <td>48개월</td>
+                      <td>원금균등</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="notiTxt">기준 금리, 당일 기준 합산 금리는 제안서 제출일 기준의 금리입니다.</p><!-- v1.4 수정 .notiTxt -->
+            </section>
+
+            <section class="sectionBlock40">
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>제안 자금 변경</caption>
+                  <colgroup>
+                    <col>
+                    <col width="220px">
+                    <col width="120px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">자금 용도 변경 사유</th><!-- v1.4 워딩수정 -->
+                      <th scope="col" colspan="2">가장 빠른 대출 실행 가능일</th><!-- v1.4 워딩수정 -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>고객님 시설 자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인 되어 변경</td>
+                      <th scope="row">제안서 채택후 약</th>
+                      <td>3일</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- 자금용도를 대출 비교 신청시와 동일하게 설정한 경우 -->
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>제안 자금 변경</caption>
+                  <colgroup>
+                    <col width="228px">
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">가장 빠른 대출 실행 가능일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">제안서 채택후 약</th>
+                      <td>3일</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="sectionBlock40">
+              <div class="titH5"><span class="tit">담보 정보</span><span class="desc">담보 있음</span></div>
+              <div class="table_wrap">
+                <table class="bbs_list">
+                  <caption>담보 정보</caption>
+                  <colgroup>
+                    <col width="220px">
+                    <col width="220px"><!-- v1.4 추가 -->
+                    <col width="220px"><!-- v1.4 수정 -->
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">담보 종류</th>
+                      <th scope="col">부동산 종류</th>
+                      <th scope="col">소유자</th>
+                      <th scope="col">담보물 상세 정보</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>부동산</td>
+                      <td>아파트</td><!-- v1.4 추가 -->
+                      <td>대표자 지인</td>
+                      <td class="textLeft">서울 마포구 합정동 서교아파트 101동</td><!-- v1.4 .textLeft 추가 -->
+                    </tr>
+                    <tr>
+                      <td>동산</td>
+                      <td>-</td><!-- v1.4 추가 -->
+                      <td>대표자 지인</td>
+                      <td class="textLeft">삼성전자 주식 50,000주</td><!-- v1.4 .textLeft 추가 -->
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="sectionBlock40">
+              <h4 class="titH5">특이사항</h4>
+              <p>담보 물건 확인 후 대출 금리 변동 될 수 있습니다. 직접 방문하여 자세한 상담 드리겠습니다.</p>
+            </section>
+
+            <div class="notiBox">
+              <h4 class="titH5 hasLine">유의사항</h4>
+              <div class="textTable">
+                <table>
+                  <caption>업체개요</caption>
+                  <colgroup>
+                    <col width="200px" /><!-- v1.4 수정 -->
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">이자 부과 시기 및 방법</th> 
+                      <td>1개월 후취</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연체 금리</th> 
+                      <td>법정 최고 금리 20% 이율 적용</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">중도 상환 수수료</th> 
+                      <td>3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">대출시 부대 비용</th> 
+                      <td>부대비용 대출금액 1% 부과 됩니다.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">금리 관련 참고사항</th> 
+                      <td>2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- 디자인 수정 -->
+            <div class="table_bt small"><!-- v1.4 .small 추가 -->
+              <div class="btn_r">
+                <button type="button" class="btnWhite">대출 예상 상환스케줄</button>
+                <button type="button" class="btnWhite ico_down">상품설명서 PDF</button>
+              </div>
+            </div>
+            <div class="table_bt auto">
+              <div class="btn_c">
+                <button type="button" class="btnSuccess">제안서 선택</button>
+                <button type="button" class="btnGray">선택 취소</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //제안내용 -->
       </section>
+      
       <div class="table_bt">
         <div class="btn_c">
           <button type="button" class="btnWhite">목록</button>

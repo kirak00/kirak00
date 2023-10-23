@@ -97,10 +97,11 @@
 
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
 .titBg.lightGreen { min-height: 80px; background: #EFF5EF; font-size: 18px;}
-.titBg.flexBetween { justify-content: space-between;}
-.titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-size: 20px; font-weight: 700; }
+.titBg.flexBetween { justify-content: space-between; }
+.titBg.flexBetween h3 { font-size: 24px;}
+.titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-weight: 700; } 
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
-.titBg h3 + .barList { margin-top: 8px;}
+.titBg h3 + .barList { margin-top: 8px;} /* font-size 18px 16px 혼재 - 16px 통일 */
 .titBg .sub { color: #EAFAEB; font-size: 14px;}
 .titBg .badgeWhite { min-width: 140px; height: 46px; margin-right: 16px; line-height: 44px; padding: 0 24px;}
 .titBg ~ .textTable { margin-top: 40px;}
@@ -474,8 +475,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 *****************************/
 .priceList li { display: flex; align-items: center; }
 .priceList li + li { margin-top: 20px}
-.priceList .badgeWhite { margin-right:8px;}
-
+.priceList .badgeWhite { min-width: unset; margin-right:8px;}
+.priceList .txt { color: #555;}
 
 
 .priceSet { display: flex;}
@@ -802,7 +803,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlBox .searchBtns { display:flex; gap:8px; margin-left: auto; }
 .searchControlBox .searchBtns.fl { margin-left: 0;}
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
-.searchControlBox .searchBtns .btnSuccess {  width: auto; }
+.searchControlBox .searchBtns .btnSuccess {  width: auto; padding: 0 50px; }
 .searchControlBox .searchBtns .btnSuccess.sm { min-width: 128px;}
 .searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 128px; }
 .searchControlBox .searchBtns .btnReset ~ .btnWhite { padding:0 30px;}
@@ -816,7 +817,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlGroup [class^="btn"]{ padding: 0 30px;} 
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
-.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 30px; line-height: 50px; white-space: nowrap;
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
 .searchControlItem .searchBtns { margin-left: 8px;}
@@ -827,9 +828,9 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
-.searchControlItem select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
+.searchControlItem select { height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
 .searchControlItem select.wid640 { width: 640px; }
-.searchControlItem .input { height: 100%; padding: 0 16px 0 30px; color: #333; }
+.searchControlItem .input { height: 100%; padding: 0 16px 0 16px; color: #333; }
 .searchControlItem .input.inputXs { width: 100px;}
 .searchControlItem .input.wid360 { width: 360px;}
 .searchControlItem .input.wid480 { width: 480px;}
@@ -1251,6 +1252,7 @@ table.bbs_list thead tr:only-child th:first-child,
 table.bbs_list td:first-child { padding-left: 30px;}
 table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 30px;}
+table.bbs_list tbody th { border: 1px solid #ddd;}
 table.bbs_list tfoot tr {background:#fff; border: 1px solid #ddd; }
 .companyInfo table.bbs_list tfoot tr th,
 .companyInfo table.bbs_list tfoot tr td {background:#EAFAEB;  }
@@ -1325,7 +1327,7 @@ table { width: 100%;}
 .tableLabel { margin-top: 20px; color: #555; font-size: 16px; text-align: right;}
 .tableLabel.pntCol_1 { color: #FE5050;}
 .tableLabel + .titH3 { margin-top: 20px;}
-.tableLabel + .titH5 { margin-top: 20px;}
+.tableLabel + .titH5 { margin-top: 12px;}
 .tableLabel .num { display: inline-block; margin-left: 4px;}
 
 /* 라인 NO */
@@ -1423,6 +1425,7 @@ table { width: 100%;}
 .textTable { margin-top: 20px;}
 .textTable.mt32 { margin-top: 32px;}
 .textTable + .notiTxt { margin-top: 20px; }
+.table_wrap + .notiTxt { margin-top: 10px; }
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 15px 0; min-height: 58px; text-align: left; vertical-align: top;}
 .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;}
@@ -1430,7 +1433,7 @@ table { width: 100%;}
 .textTable tr:last-child th, .textTable tr:last-child td { padding-bottom: 0px; }
 .textTable .sub { color: #888; font-size: 16px; font-weight: 400;}
 
-.textTable.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
+.textTable.boxType { margin-top: 10px; padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 .textTable.boxType tr.tit th,
 .textTable.boxType tr.tit td {border-bottom:1px solid #ddd;  }
 .textTable.boxType tr.tit td {font-weight: 700; color:#069B66; }
@@ -1714,6 +1717,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 
 .layerWrap.typeAlert .layerBody.wid500       {width:500px; text-align: center; }
 .layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 16px;}
+.layerWrap.typeAlert .layerBody.wid500 .layerFoot button    {min-width:0; flex: 1; }
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  font-size: 24px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
 .layerWrap.typeAlert .layerBody .layerCont { padding-top: 20px;}
@@ -1722,7 +1726,6 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap.typeAlert .layerBody .layerFoot.pt32 { padding-top: 32px;}
 .layerWrap.typeAlert .layerBody .layerFoot.pt40 { padding-top: 40px;}
 .layerWrap.typeAlert .layerBody .layerFoot.fullType { display: block; padding-left: 40px; padding-right: 40px;}
-.layerWrap.typeAlert .layerBody .layerFoot.wid500 button    {min-width:0; flex: 1 }
 
 
 .layerWrap .txt_ment     {display:flex; justify-content: space-between; margin-top:8px; }
@@ -1820,7 +1823,9 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLine li button:focus,
 .tabLine li a:focus { outline: 2px dashed #069B66; border-radius: 16px 16px 0 0; }
 
-.tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto;;}
+.tabLineWrap .inner { position: relative; max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+.tabLineWrap .inner .btnGray { height: 40px; padding: 0 30px;}
+
 .tabLineWrap .update { position: absolute; bottom: 18px; right: 0; color: #888; font-size: 14px;}
 
 /* 라인있는 탭 너비 100% */ 
