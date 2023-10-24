@@ -231,7 +231,7 @@
                   <label id="accLabel3_1" class="label">담보 제공 유무</label>
                 </th> 
                 <td>
-                  <div class="formRow pt15" role="group" aria-labelledby="accLabel3_1">
+                  <!-- <div class="formRow pt15" role="group" aria-labelledby="accLabel3_1">
                     <span class="radio">
                       <input type="radio" id="chkLabel1_1" name="chkLabel1" title="담보유무 선택" checked value="">
                       <label for="chkLabel1_1"><span></span>있음</label>
@@ -249,7 +249,7 @@
                         <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="ㅇㅇㅇ" disabled>
                         <button type="button" class="btnBlack">주소검색</button>
                         <button type="button" class="btnMinus"><span class="hide">담보상세 입력 폼 삭제</span></button>
-                        <!-- <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button> -->
+                        <button type="button" class="btnPlus"><span class="hide">담보상세 입력 폼 추가</span></button>
                       </div>
                       <div class="formRow">
                         <select title="담보종류 선택">
@@ -286,6 +286,70 @@
                         var $listblock = $(this).closest(".formRow").clone().removeClass("none");
                         damboListIdx++
                         $listblock.attr({id: "damboList_"+ damboListIdx})
+                        $listblock.find(".btnMinus")[0].value = "";
+                        $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
+                        $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
+                        $(this).closest('.formAdd').append($listblock);
+                      });
+                      $(document).on("click", ".btnMinus", function() {
+                        $(this).closest(".formAdd .formRow").detach();
+                      });
+                    });
+                  </script> -->
+                  <div class="formRow" >
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank1" name="testRdoBank" title="담보유무 선택" checked value="">
+                      <label for="testRdoBank1"><span></span>담보 없음</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoBank2" name="testRdoBank" title="담보유무 선택" value="">
+                      <label for="testRdoBank2"><span></span>담보 있음</label>
+                    </span>
+                  </div>
+                  <div id="damboHasChkCont" class="formRowWrap">
+                    <div class="formRow" >
+                      <select class="wid180" title="담보종류 선택" disabled>
+                        <option value="부동산">부동산</option>
+                        <option value="옵션">옵션</option>
+                      </select>
+                      <select class="wid240" title="담보종류 선택" disabled>
+                        <option value="부동산">부동산</option>
+                        <option value="옵션">옵션</option>
+                      </select>
+                    </div>
+                    <div class="formAdd">
+                      <div class="formRow">
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                        <button type="button" class="btnBlack p30" disabled>주소검색</button>
+                        <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                      </div>
+                      <div class="formRow">
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                        <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    $(function(){
+                      
+                      $("[name=testRdoBank]").on("click", function(){
+                        if(this.id =="testRdoBank2"){
+                          $("#damboHasChkCont").find("input,select,button").each(function(){
+                            this.disabled = false;
+                          })
+                        }else{
+                          $("#damboHasChkCont").find("input,select,button").each(function(){
+                            this.disabled = true;
+                          })
+                        }
+                      })
+                      
+                      var damboListIdx = 100;
+                      $(document).on("click", ".btnPlus", function() {
+                        var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                        damboListIdx++
+                        $listblock.attr({id: "damboList_"+ damboListIdx})
+                        $listblock.find(".btnPlus")[0].className = "btnMinus";
                         $listblock.find(".btnMinus")[0].value = "";
                         $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
                         $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })

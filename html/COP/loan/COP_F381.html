@@ -104,17 +104,19 @@
       </li>
     </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">매출처별 매출 세금계산서 합산표 <span class="blue">(필수)</span></h3></div>
+    <div class="titH3 hasLine mb0"><h3 class="inner"><span class="blue">(최근년도)</span>매출/매입 처별 매출 세금계산서 합계표 (선택)</h3></div><!-- v1.4 워딩수정 -->
     <div class="bgGray">
       <!-- 디자인 수정 .sectionBlock40 삭제 -->
       <section class="">
+        <h4 class="titH5">매출/매입 처별 세금계산서 합계표 파일 올려주세요.</h4><!-- v1.4 추가 -->
         <div class="table_wrap mt0">
           <table class="bbs_list">
-            <caption>매출처별 매출 세금계산서 합산표</caption>
+            <caption>매출/매입 처별 세금계산서 합계표</caption>
             <colgroup>
-              <col />
-              <col width="260px" />
-              <col width="260px" />
+              <!-- v1.4 수정 -->
+              <col width="33.3%" />
+              <col width="33.3%" />
+              <col width="33.3%" />
             </colgroup>
             <thead>
               <tr>
@@ -129,15 +131,20 @@
                 <td>2023-08-10</td>
                 <td><button type="button" class="btnSuccess">자료 업로드</button></td>
               </tr>
+              <tr>
+                <td>매출 세금 계산서</td>
+                <td>2023-08-10</td>
+                <td><span class="textBold">제출 완료</span></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="sectionBlock40">
-        <h4 class="titH5">매입처별 매입 세금계산서 합산표 (선택)</h4>
+        <h4 class="titH5">매출처별 매출 세금 계산서 합계표 수기로 작성해 주세요. </h4><!-- v1.4 워딩수정 -->
         <div class="table_wrap">
           <table class="bbs_list">
-            <caption>매입처별 매출 세금계산서 합산표</caption>
+            <caption>매입처별 매출 세금계산서 합계표</caption>
             <colgroup>
               <col width="25%" />
               <col width="25%" />
@@ -196,7 +203,7 @@
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="2" scope="row">기타</td> 
+                <th colspan="2" scope="row" class="point">기타</th> <!-- v1.4 .point 추가, 태그 td->th -->
                 <td>
                   <div class="formRow"><input type="text" class="input textCenter" placeholder="000,000,000 "/></div>
                 </td>
@@ -205,7 +212,7 @@
                 </td>
               </tr>
               <tr>
-                <td colspan="2" scope="row">합계</td> 
+                <th colspan="2" scope="row" class="point">합계</th> <!-- v1.4 .point 추가, 태그 td->th -->
                 <td>
                   <div class="formRow"><input type="text" class="input textCenter" placeholder="000,000,000 "/></div>
                 </td>
@@ -218,7 +225,8 @@
         </div>
       </section>
       <!-- 디자인 수정 mt80 -> .fullType -->
-      <div class="titH3 hasLine fullType"><h3 class="inner">매출처별 매출 세금계산서 합산표 <span class="blue">(필수)</span></h3></div>
+      <!-- v1.4 삭제 -->
+      <!-- <div class="titH3 hasLine fullType"><h3 class="inner">매출처별 매출 세금계산서 합산표 <span class="blue">(필수)</span></h3></div>
       <section class="sectionBlock60">
         <div class="table_wrap">
           <table class="bbs_list">
@@ -244,9 +252,9 @@
             </tbody>
           </table>
         </div>
-      </section>
+      </section> -->
       <section class="sectionBlock40">
-        <h4 class="titH5">매입처별 매입 세금계산서 합산표 (선택)</h4>
+        <h4 class="titH5">매입처별 매출 세금 계산서 합계표 수기로 작성해 주세요.</h4><!-- v1.4 워딩수정 -->
         <div class="table_wrap">
           <table class="bbs_list">
             <caption>매입처별 매출 세금계산서 합산표</caption>
@@ -308,7 +316,7 @@
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="2" scope="row">기타</td> 
+                <th colspan="2" scope="row" class="point">기타</th> <!-- v1.4 .point 추가, 태그 td->th -->
                 <td>
                   <div class="formRow"><input type="text" class="input textCenter" placeholder="000,000,000 "/></div>
                 </td>
@@ -317,7 +325,7 @@
                 </td>
               </tr>
               <tr>
-                <td colspan="2" scope="row">합계</td> 
+                <th colspan="2" scope="row" class="point">합계</th>  <!-- v1.4 .point 추가, 태그 td->th -->
                 <td>
                   <div class="formRow"><input type="text" class="input textCenter" placeholder="000,000,000 "/></div>
                 </td>

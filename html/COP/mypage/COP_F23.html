@@ -34,8 +34,8 @@
   <!-- **************** -->
   <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
   <div class="layerWrap modal show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <!-- 디자인 수정 wid870 -> wid640 -->
-    <div class="layerBody wid640">
+    <!-- v1.4 wid870 -> wid720 -->
+    <div class="layerBody wid720">
       <div class="layerHead">
         <h3>파일 업로드</h3>
         <p>업로드 할 파일을 선택해 주세요.</p>
@@ -43,16 +43,16 @@
       </div>
       <div class="layerCont">
         <!-- 디자인 수정  -->
-        <div class="formVertical">
-          <label class="label">파일명</label>
+        <div class="formList"><!-- v1.4 .formList-->
+          <label class="label wid62">파일명</label><!-- v1.4수정 .wid62-->
           <div class="formRow filebox">
             <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
             <label for="exFilename" class="btnWhite">파일 선택</label>
             <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
             <button type="button" class="btnSuccess">등록</button>
           </div>
+          <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF,IMG 입니다. (최대 용량 50MB)</p><!-- v1.4수정 .notiTxt-->
         </div>
-        <p class="txt_fileForm">업로드 가능한 파일 포맷은 PPT, PDF,IMG 입니다. (최대 용량 50MB)</p>
       </div>
     </div>
     <div class="layerDimm"></div>

@@ -90,7 +90,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
-.main_visual_logout .txtBox strong { color:#069B66;  vertical-align: 0;  }
+.main_visual_logout .txtBox strong { color:#02C37E;  vertical-align: 0;  }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -129,6 +129,7 @@ ul.main_loan_info li .main_btn   {padding-bottom:0px; text-align: left; padding-
 ul.main_loan_btn  {display:flex; gap:20px; }
 ul.main_loan_btn li   {width:335px; }
 ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
+ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
  
 
 
@@ -153,7 +154,7 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 16px; font-weight: 700;  } 
 .main_loan_progress ol.status_tab li strong {display:block; margin-top:10px; font-size: 18px; font-weight: 700;  }
 .main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
-.main_loan_progress ol.status_tab li.disabled { }
+.main_loan_progress ol.status_tab li.disabled { background-color: #fafafa; border-color: #fafafa;}
 .main_loan_progress ol.status_tab li.disabled em,
 .main_loan_progress ol.status_tab li.disabled strong {color:#888}
 .main_loan_progress ol.status_tab li.step_1   {background-image:url(../images/COP/main/no_data_main_1.png); }

@@ -31,6 +31,7 @@
 .scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../images/common/top.png) no-repeat 0 0;  }
 
 /* 테이블 버튼 */
+.wid80 { width: 80px;} 
 .wid130 { width: 130px;} 
 /****************************
 **********  align  **********
@@ -329,6 +330,8 @@ a.ico_down       {color:#069B66; }
 .btnWhiteLine:hover.ico_down::after,
 .btnWhiteLine:active.ico_down::after  { }
 .btnSuccess.link::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w2.png) no-repeat 50% 50% / contain; }
+.btnSuccess.ico_right { }
+.btnSuccess.ico_right::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_right_w.png) no-repeat 50% 50% / contain; }
 
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
@@ -1268,6 +1271,7 @@ table.bbs_list tbody th { border: 1px solid #ddd;}
 table.bbs_list tfoot tr {background:#fff; border: 1px solid #ddd; }
 .companyInfo table.bbs_list tfoot tr th,
 .companyInfo table.bbs_list tfoot tr td {background:#EAFAEB;  }
+table.bbs_list tfoot th.point { background: #EFF5EF; font-weight: 700; border: 1px solid #ddd;}
 table.bbs_list tfoot th { background: #fff; font-weight: 400;}
 table.bbs_list tfoot tr.point th,
 table.bbs_list tfoot tr.point td { background: #EAFAEB; font-weight: 700; }
@@ -1690,14 +1694,14 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .layerBody.wid1000       {width:1000px;  }
 .layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody.wid800       {width:800px;  }
-.layerWrap .layerBody.wid720       {width:720px; padding-bottom: 20px; }
+.layerWrap .layerBody.wid720       {width:720px;  }
 .layerWrap .layerBody.wid640       {width:640px;  }
 .layerWrap .layerBody.wid600       {width:600px;  }
 .layerWrap .layerBody.wid500       {width:500px;  }
 .layerWrap .layerBody.wid400       {width:420px;  }
 
-.layerWrap .layerBody.wid720 .table_bt { margin-top: 20px;}
-.layerWrap .layerBody.wid720 .layerCont { padding-top: 20px;}
+/* .layerWrap .layerBody.wid720 .table_bt { margin-top: 20px;} */
+/* .layerWrap .layerBody.wid720 .layerCont { padding-top: 20px;} */
 
 
 .layerWrap .layerBody .layerHead    {padding:24px 0;  background:#EAFAEB;   }
@@ -2010,7 +2014,7 @@ ul.guideBox li.bul::before {content:"·"; position:absolute; left:0; top:0px; }
 .main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
 .main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
 .main_myInfo .welcomeBox .welcometit strong {display:block; font-size:30px; margin-top:3px;  }
-.main_myInfo .welcomeBox button        {margin-bottom:2px; height:36px; font-size:14px; }
+.main_myInfo .welcomeBox button        { height:40px; padding: 0 30px;}
 .main_myInfo .msgBox        {position:relative; width:40px; height:40px; top:31px; right:30px;  }
 .main_myInfo .msgBox span.ico_msg        {display:block; width:40px; height:40px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0 / 26px auto ; }
 .main_myInfo .msgBox span.ico_msg em     {position:absolute; width:18px; height:18px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:12px; line-height:18px; font-weight: 700; text-align: center; border-radius:50%;  }
