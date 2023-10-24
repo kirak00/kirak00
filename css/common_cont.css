@@ -1203,7 +1203,7 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .table_bt.small { min-height: 40px; margin-top: 20px;}
 .table_bt.small button,
-.table_bt.small a { padding: 0 24px; height: 40px; }
+.table_bt.small a { padding: 0 30px; height: 40px; }
 .table_bt.small .btn_l * + * { margin-left: 4px;}
 
 .table_bt.auto button,

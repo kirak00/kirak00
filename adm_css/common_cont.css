@@ -627,11 +627,19 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
-input[type=text].innerTxt_2.wid135  { width:135px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:50px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:50px;padding-right:20px; text-align: right;  }
-input[type=text].innerTxt_1.wid114 {width:114px; }
+input[type=text].innerTxt_4         { margin-right:-88px;  padding: 0 88px 0 20px; }
+input[type=text].innerTxt_4 + .unit { display: inline-block; width:80px; line-height:50px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_5         { margin-right:-102px;  padding: 0 102px 0 20px; }
+input[type=text].innerTxt_5 + .unit { display: inline-block; width:94px; line-height:50px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_1.wid135,
+input[type=text].innerTxt_2.wid135 { width:135px; }
+input[type=text].innerTxt_1.wid114,
+input[type=text].innerTxt_2.wid114 {width:114px; }
+input[type=text].innerTxt_4.wid146,
+input[type=text].innerTxt_5.wid146 {width:146px; }
 input[type=text].innerTxt_1.wid155 {width:155px; }
 
 
@@ -1126,6 +1134,11 @@ section   {margin:0 auto; max-width: 1400px;}
 .layerCont .table_bt { margin-top: 20px;}
 .btnBox.btn_r      { text-align: right; }
 
+.table_bt.small { min-height: 40px; margin-top: 20px;}
+.table_bt.small button,
+.table_bt.small a { padding: 0 30px; height: 40px; }
+.table_bt.small .btn_l * + * { margin-left: 4px;}
+
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.mt0 { margin-top: 0px;}
 .table_wrap.mt40 { margin-top: 40px;}
@@ -1592,6 +1605,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap.typeAlert .layerBody.wid400 { width: 400px;}
 /* .layerWrap.typeAlert .layerBody.wid400 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody.wid500       {width:500px;  }
+.layerWrap.typeAlert .layerBody.wid600       {width:600px;  }
+.layerWrap.typeAlert .layerBody.wid600 .layerFoot { padding-top: 40px; }
 /* .layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  font-size: 24px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
@@ -2248,5 +2263,6 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .boxTableWrap .box .bbs_list td { text-align: left;}
 .boxTableWrap .box .bbs_list .formRow { justify-content: flex-start;}
 .boxTableWrap .box .input { width: 80px; text-align: right;}
-.boxTableWrap .box .sub { margin-top: 12px; color: #888;}
-.boxTableWrap .box .sub.right { margin-top: 0; margin-left: auto;}
+.boxTableWrap .box .sub {  color: #888; margin-left: auto;}
+.boxTableWrap .box .formRow + .sub { margin-top: 12px;}
+.boxTableWrap .table_bt { margin-top: 20px;}
