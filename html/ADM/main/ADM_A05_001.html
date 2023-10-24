@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_js/lib/jquery-ui-1.12.1/jquery-ui.css" >
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/lib/echarts.min.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="adm"> 
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container " id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">Loan & Biz 플랫폼 이용 현황</h2>
+      <p class="dataInfo">
+        전일 기준 데이터
+      </p>
+    </section>
+
+    <section>
+          
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="dateTab tabScript" role="tablist">
+              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
+            </div>
+
+            <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+              <select id="selectLabelState">
+                <option>2023년</option>
+              </select>
+            
+              <select id="selectLabelState">
+                <option>7월</option>
+              </select> 
+            </div>
+
+            <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+
+        </div>
+      </fieldset>
+
+    </section>
+
+    <section class="dashboard" >
+      <h3 class="">회원 현황</h3>
+      <div class="memberStatus">
+        <ul class="boxWrap">
+          <li class="box memCount">
+            <span class="ico_1">법인회원</span>
+            <strong>257명</strong>
+          </li>
+          <li class="box memCount">
+            <span class="ico_2">대출 신청 법인</span>
+            <strong>257명</strong>
+          </li>
+          <li class="box memCount">
+            <span class="ico_3">대출 성사 법인 회원</span>
+            <strong>257명</strong>
+          </li>
+          <li class="box memCount bgGreen">
+            <span class="ico_4">금융 회원 수</span>
+            <strong>257명</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="memberStatus">
+        <ul class="boxWrap">
+          <li class="box usageStatus">
+            <span class="tit ico_1">이용 현황</span>
+            <ul>
+              <li>
+                <span>대출 신청</span>
+                <strong>10건</strong>
+              </li>
+              <li>
+                <span>대출 심사</span>
+                <strong>10건</strong>
+              </li>
+              <li>
+                <span>제안서 제출</span>
+                <strong>10건</strong>
+              </li>
+            </ul>
+          </li>
+          <li class="box usageStatus">
+            <span class="tit ico_2 ">누적 방문 현황</span>
+            <ul>
+              <li>
+                <span>일 방문자 <span>(전일)</span></span>
+                <strong>2,145명</strong>
+              </li>
+              <li>
+                <span>주 방문자 <span>(최근 7일)</span></span>
+                <strong>54,844명</strong>
+              </li>
+              <li>
+                <span>월 방문자 <span>(최근 30일)</span></span>
+                <strong>548,487명</strong>
+              </li>
+              <li>
+                <span>연 방문자 <span>(해당 년도)</span></span>
+                <strong>2,245,477명</strong>
+              </li>
+            </ul>
+            <button type="button" class="btnSuccess sm">상세보기</button>
+          </li>
+          <li class="box usageStatus bgRed">
+            <span class="tit ico_3">오류 현황</span>
+            <ul>
+              <li>
+                <span>오류 발생 수</span>
+                <strong>241건</strong>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+
+    <section class="dashboard" >
+      <h3 class="">대출 현황</h3>
+      <div class="memberStatus">
+        <ul class="boxWrap">
+          <li class="box loanStatus">
+            <ul>
+              <li>
+                <span class="ico_1">대출 비교 신청</span>
+                <strong>142건</strong>
+              </li>
+              <li>
+                <span class="ico_2">심사 진행</span>
+                <strong>142건</strong>
+              </li>
+              <li>
+                <span class="ico_3">제안서 제출</span>
+                <strong>142건</strong>
+              </li>
+              <li>
+                <span class="ico_4">제안서 미접수</span>
+                <strong>142건</strong>
+              </li>
+              <li>
+                <span class="ico_5">대출 실행</span>
+                <strong>142건</strong>
+              </li>
+              <li>
+                <span class="ico_6">대출 실행 비율</span>
+                <strong>142건</strong>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="memberStatus">
+        <ul class="boxWrap float">
+          <li class="box loanIngStatus">
+            <span class="tit ico_1">대출 비교하기 진행 상태 (누적 중간 저장 값)</span>
+            <ul>
+              <li>
+                <span class="icon_1">법인 정보 등록 단계</span>
+                <strong>10건</strong>
+              </li>
+              <li>
+                <span class="icon_2 ">법인 서류 등록 단계</span>
+                <strong>10건</strong>
+              </li>
+              <li>
+                <span class="icon_3">재무 현황 입력 단계</span>
+                <strong>10건</strong>
+              </li>
+            </ul>
+          </li>
+          <li class="box loadMoney ">
+            <ul>
+              <li>
+                <span class="icon_1">대출 비교 신청 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+              <li>
+                <span class="icon_2">대출 실행 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+              <li>
+                <span class="icon_3">전체 정산 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+            </ul>
+          </li>
+          <li class="box rightCount">
+            <span>대출 신청별 평균 제안서 제출 수</span>
+            <strong><em>4건</em></strong>
+          </li>
+          <li class="box rightCount">
+            <span>제안서와 실행 금액 일치율 </span>
+            <strong><em>80%</em></strong>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+
+    <section class="dashboard ">
+      <h3 class="">대출 상세 현황 </h3>
+      <div class="memberStatus">
+        <ul class="boxWrap detail">
+          <li class="box detail_1">
+            <span class="tit">대출 신청 용도 유형</span>
+            <table>
+              <tr>
+                <th>시설자금</th>
+                <th>운전자금</th>
+              </tr>
+              <tr>
+                <td><strong>20</strong> 건</td>
+                <td><strong>25</strong> 건</td>
+              </tr>
+            </table>
+            <span class="tit">제안 금리 유형</span>
+            <table>
+              <tr>
+                <th>고정</th>
+                <th>변동</th>
+              </tr>
+              <tr>
+                <td><strong>20</strong> 건</td>
+                <td><strong>25</strong> 건</td>
+              </tr>
+            </table>
+          </li>
+          <li class="box detail_2">
+            <span class="tit">제안 담보/신용 비율</span>
+            
+            <div class="pie" id="pieChart_1" ></div>
+            <ul class="legend">
+              <li>
+                <span class="icon_1">담보</span>
+                <strong>78%</strong>
+              </li>
+              <li>
+                <span class="icon_2">신용</span>
+                <strong>22%</strong>
+              </li>
+            </ul>
+            <script>
+              var chartDom = document.getElementById('pieChart_1');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '제안 담보/신용 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '담보' , itemStyle : {color:'#1BC98B'} },
+                      { value: 735, name: '신용'  , itemStyle : {color:'#0A7BAF'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+
+          </li>
+          <li class="box detail_3">
+            <span class="tit">제안 평균 금리</span>
+            <strong>7.5%</strong>
+          </li>
+          <li class="box detail_4">
+            <span class="tit">고객 피드백</span>
+            <ul>
+              <li class="total">
+                <span>전체 평가 수</span>
+                <strong>10건</strong>
+              </li>
+              <li class="avr">
+                <span>평균 평점</span>
+                
+                <div class="formRow starChkWrap">
+                  <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' disabled />
+                  <input type='radio' id="starChk_2" class='starChk starChk_2' name="starChk" title='별점2' disabled />
+                  <input type='radio' id="starChk_3" class='starChk starChk_3' name="starChk" title='별점3' disabled checked />
+                  <input type='radio' id="starChk_4" class='starChk starChk_4' name="starChk" title='별점4' disabled />
+                  <input type='radio' id="starChk_5" class='starChk starChk_5' name="starChk" title='별점5' disabled />
+                  <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
+                  <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
+                  <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
+                  <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
+                  <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
+                </div>
+
+                <strong><em>6점</em> / 10</strong>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+   
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
+    <!-- 너비 800px 경우 .sizeM 추가 -->
+    <div class="layerBody sizeM">
+      <div class="layerHead">
+        <h3>방문자 상세 정보</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+
+        <div class="visitViewCont">
+          <ul role="tablist" class="tabLine fullType tabScript">
+            <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">DAU</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">WAU</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">MAU</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_4">YAU</button></li>
+          </ul>
+
+          
+          <ul role="tablist" class="tabBtn fullType tabScript">
+            <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1_1">조회 기간</button></li>
+            <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_1_2">기간 설정</button></li>
+          </ul>
+
+          <div id="tabpanel_1_1">
+            <div class="fullYear">
+              <select name="" id="">
+                <option value="">2023년</option>
+              </select>
+              <select name="" id="">
+                <option value="">7월</option>
+              </select>
+            </div>
+          </div>
+          <div id="tabpanel_1_2">
+            <div class="rangeControl">
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>
+          </div>
+
+          <div class="btn_r">
+            <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
+          </div>
+          <div id="jsGrid1_1" class="bbs" caption=""></div>    
+          <div id="externalPager2" class="external-pager"></div>
+          
+          <script>
+            $(function() {
+              
+
+              var clients = [
+                { "Name1": "1",
+                  "Name2": "123", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+                { "Name1": "2",
+                  "Name2": "1,321", 
+                },
+              ];
+              
+
+              $("#jsGrid1_1").jsGrid({
+                data: clients,
+                paging:false,
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                fields: [
+                  { name: "Name1", type: "text", title : "일", width: "auto", validate: "required", sorting: false },
+                  { name: "Name2", type: "text", title : "방문자수", width: 300, validate: "required" },
+                ],
+                
+                pagerContainer: "#externalPager2",
+
+              });
+            });
+          </script>
+        </div>
+
+
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">닫기</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+</body>
+</html>

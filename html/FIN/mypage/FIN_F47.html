@@ -86,11 +86,30 @@
                   <th scope="row">청구액</th> 
                   <td>
                     450,000,000<strong class="priceKr">사억오천만 원</strong>
-                    <ul class="commissionItem">
+                    <div class="table_wrap"><!--1.5 -->
+                      <table class="bbs_list">
+                        <caption>청구액 수수료율</caption>
+                        <thead>
+                          <tr>
+                            <th>기본 수수료율</th>
+                            <th>할인 수수료율</th>
+                            <th class="blue">최종 수수료율</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>0.5%</td>
+                            <td>-0.2%</td>
+                            <td class="blue">0.3%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- <ul class="commissionItem">
                       <li><em>기존 수수료율</em> <span>0.5%</span></li>
                       <li><em class="discount">할인 수수료율</em> <span>-0.5%</span></li>
                       <li><em>최종 수수료율</em> <span>0.5%</span></li>
-                    </ul>
+                    </ul> -->
                   </td>
                 </tr>
                 <tr> 
@@ -115,7 +134,7 @@
               
             <div class="table_bt">
               <div class="btn_c">
-                <button type="button" class="btnS uccess">이의 신청</button>
+                <button type="button" class="btnSuccess">이의 신청</button>
               </div>
             </div>
             
@@ -126,6 +145,12 @@
                 <label class="label" for="labelExtraOpi1_1">이의 신청 내용을 입력해 주세요.</label>
                 <textarea id="labelExtraOpi1_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
               </div>
+              <div class="formRow filebox sectionBlock20"><!--1.5 -->
+                <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
+                <label for="exFilename" class="btnDkGray">파일 첨부</label>
+                <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+              </div>
+              <p class="notiTxt">지원하는 파일 형식: .xlsx</p>
               <!-- Comment 1 -->
               <div class="table_bt">
                 <div class="btn_c">
@@ -136,8 +161,14 @@
           </div>
         </div>
         <div class="table_bt">
+          <div class="btn_l">
+            <button type="button" class="btnWhite ico_prev">이전</button>
+          </div>
           <div class="btn_c">
             <button type="button" class="btnWhite">목록</button>
+          </div>
+          <div class="btn_r">
+            <button type="button" class="btnWhite ico_next">다음</button>
           </div>
         </div>
       </div>

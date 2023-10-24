@@ -92,10 +92,10 @@
         <!-- 검색 -->
       
         <section class="">
-          <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
           <fieldset class="tableFilterGroup">
             <span class="count">총 <strong>15</strong>건</span>
-            <div class="formRow" role="group">
+            <div class="formRow" role="group"><!--1.5 -->
+              <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
               <select title="정렬 선택 (보증 금액)">
                 <option>보증 금액 높은순</option>
                 <option>본부2</option>
@@ -166,13 +166,13 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
 
                 fields: [
                   { name: "Name1",  type: "text", title : "대출 신청 번호", },
-                  { name: "Name2",  type: "text", title : "법인명", },
+                  { name: "Name2",  type: "text", title : "기업명", },
                   { name: "Name3", type: "text", title : "보증 금액",  },
-                  { name: "Name4", type: "text", title : "대출 실행일",},
+                  { name: "Name4", type: "text", title : "보증서 발급일",},
                 ],
                  
                 pagerContainer: "#externalPager2",

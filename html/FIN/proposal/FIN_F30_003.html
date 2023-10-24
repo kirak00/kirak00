@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제출 제안서 관리</span></a></li>
+          <li><a href="#none"><span>제안서 제출 가능 목록</span></a></li>
+          <li><a href="#none"><strong>제안서 제출</strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="suggestPg">
+      <div class="titBg flexBetween">
+        <div>
+           <h3>(주)길동건설</h3><span class="info">마포지부</span>
+        </div>
+        <p class="sub">대출 신청 번호  S_230809_0001</p>
+      </div>
+      <div class="divideCon">
+        <div class="left">
+          <div class="titH3 hasLine">
+            <h4>제안서 기본 정보 입력</h4>
+            <p class="titLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p>
+          </div>
+          <div class="formListTable">
+            <table>
+              <caption>제안서 기본 정보 입력</caption>
+              <colgroup>
+                <col width="240px">
+                <col width="auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label id="formLabel1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>현장실사 여부</label>
+                  </th>
+                  <td>
+                    <div class="formRow" role="group" aria-labelledby="formLabel1">
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
+                        <label for="testRdoBoxA"><span></span>미완료</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
+                        <label for="testRdoBoxB"><span></span>완료</label>
+                      </span>
+                    </div>
+                    <p class="notiTxt">현장실사 완료 여부는 제안서 제출 가능 여부 또는 제안서 채택에 영향을 주지 않습니다.</p>
+                  </td>
+                </tr>
+                <tr> 
+                  <th scope="row">
+                    <label for="formLabel2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 직원명</label>
+                  </th> 
+                  <td>
+                    <div class="formRow wid425">
+                      <input class="input" type="text" name="" id="formLabel2" placeholder="대출 담당자명을 입력해 주세요." />
+                    </div>
+                    <p class="notiTxt">기업 고객과의 연락을 위한 번호를 입력해 주세요.</p>
+                  </td>
+                </tr>
+                <tr> 
+                  <th scope="row">
+                    <label id="formLabel3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>문의 전화 번호</label>
+                  </th> 
+                  <td>
+                    <div class="formRow wid425" role="group" aria-labelledby="formLabel3">
+                      <input class="input" type="text" title="문의 전화 번호(1/3)" placeholder="" value="">
+                      <span class="unit">-</span>
+                      <input class="input" type="text" title="문의 전화 번호(2/3)" placeholder="" value="">
+                      <span class="unit">-</span>
+                      <input class="input" type="text" title="문의 전화 번호(3/3)" placeholder="" value="">
+                    </div>
+                </tr>
+                <tr> 
+                  <th scope="row">
+                    <label for="formLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안서 유효 기일</label>
+                  </th> 
+                  <td>
+                    <div class="dateControl lg">
+                      <input id="formLabel4" class="input calendar " type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
+                      <!-- <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button> -->
+                      까지 유효
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <th scope="row">
+                    <label for="formLabel5" class="label">메모</label>
+                  </th> 
+                  <td>
+                    <div class="formRow">
+                      <textarea class="textarea" id="formLabel5" title="메모내용을 입력해주세요" placeholder="메모 내용을 입력해 주세요.(500자 이내)"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <div class="employeeInfo">
+            <div class="titBox">
+              <div class="tit">
+                <h4>제안 직원 정보</h4>
+                <p class="notiTxt">기업 고객에게는 ‘제안 직원명’ 정보만 노출되며, 대출 관련 소통은 ‘문의 전화 번호’를 통해 이루어집니다.</p>
+              </div>
+              <button type="button" class="btnSuccess mm">수정</button>
+            </div>
+
+            
+            <div class="textTable">
+              <table>
+                <caption>제안서 기본 정보 입력</caption>
+                <colgroup>
+                  <col width="240px">
+                  <col width="auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">제안 직원명</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">알림 수신 휴대전화</th>
+                    <td>010-1234-5678</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">알림 수신 이메일</th>
+                    <td>gildong@shinhan.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+
+          <div id="accordionGroup" class="accordion formAccordion" accordion-option="only">
+            <div class="accordionItem">
+              <h3 class="accordionTitle">
+                <span class="label" for="formLabel_tit_1" >상품명1</span>
+                <select name="" id=" " title="대출 상품 선택" >
+                  <option value="">대출 상품을 선택해 주세요.</option>
+                </select>
+                <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id"><span class="accordionIcon"></span></button>
+              </h3>
+              <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
+                <span class="srOnly">제안 대출1 상세보기</span>
+                <div class="formListTable">
+                  <table>
+                    <caption>제안서 기본 정보</caption>
+                    <colgroup>
+                      <col width="200px">
+                      <col width="auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <label for="accLabel1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <select class="wid220" title="자금용도 선택">
+                              <option>시설자금</option>
+                              <option>운영자금</option>
+                            </select>
+                            <button type="button" class="btnSuccess" aria-controls="tabpanel_1" >선택 </button>
+                          </div>
+                          <div class="formVertical lineBox" id="tabpanel_1" title="시설자금/운영자금 자금용도 선택">
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox" />
+                              <label for="searchCheckBox_1"><span></span>인건비(급여 등)</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_2" name="searchCheckBox" />
+                              <label for="searchCheckBox_2"><span></span>공과금 납부</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_3" name="searchCheckBox" />
+                              <label for="searchCheckBox_3"><span></span>원자재 구입 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_4" name="searchCheckBox" />
+                              <label for="searchCheckBox_4"><span></span>예비운영 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_5" name="searchCheckBox" />
+                              <label for="searchCheckBox_5"><span></span>다른회사 인수 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_6" name="searchCheckBox" />
+                              <label for="searchCheckBox_6"><span></span>분양목적 부동산 구입</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_7" name="searchCheckBox" />
+                              <label for="searchCheckBox_7"><span></span>임대보증금 반환</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_8" name="searchCheckBox" />
+                              <label for="searchCheckBox_8"><span></span>판매활동비</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_9" name="searchCheckBox" />
+                              <label for="searchCheckBox_9"><span></span>다른 운행 운전자금 상환</label>
+                            </span>
+                            <div class="formRow ">
+                              <span class="checkbox">
+                                <input type="checkbox" id="searchCheckBox_10" name="searchCheckBox" onchange="$('#searchCheckBox_10_1')[0].disabled = !this.checked" />
+                                <label for="searchCheckBox_10"><span></span>기타</label>
+                              </span>
+                              <input type="text" class="input" id="searchCheckBox_10_1" title="기타 내용 입력" disabled>
+                            </div>
+                          </div>
+                          <div class="formVertical mt10">
+                            <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="자금 용도 변경 사유를 입력해 주세요.(자금 용도 변경 사유 변경 시 필수/500자 이내)" disabled></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 금액</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <input class="input wid400" type="text" name="" id="accLabel2" placeholder="대출 금액을 입력해 주세요." value="" />
+                            <strong class="unit">원</strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>가장 빠른 대출 <br> 실행 가능일</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect1" name="telSelect" title="유선안내 선택" checked value="">
+                              <label for="telSelect1"><span></span>제안서 채택 후 약</label>
+                              <select class="wid100" title="범위" id="accLabel3">
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                              <span class="unit">일 이후</span>
+                            </span>
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect2" name="telSelect" title="유선안내 선택"  value="">
+                              <label for="telSelect2"><span></span>유선안내</label>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
+                            <span class="unit">개월</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label id="accLabel5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상환 방식</label>
+                        </th> 
+                        <td>
+                          <div class="formRow" role="group" aria-labelledby="accLabel5">
+                            <select class="wid220" title="상환방식 선택">
+                              <option>기타</option>
+                              <option>셀렉트</option>
+                            </select>
+                            <input class="input" type="text" name="" id="accLabel1" placeholder="기타 상환 방식을 입력해 주세요." value="" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <span class="radio radioBtn"><input type="radio" id="selectLabel1" name="selectLabel" checked><label for="selectLabel1">변동</label></span>
+                            <span class="radio radioBtn"><input type="radio" id="selectLabel2" name="selectLabel"><label for="selectLabel2">고정</label></span>
+                            <p class="notiTxt">대출 기간과 기준금리물 기간이 일치할 경우 고정으로 선택해 주세요.</p>
+                          </div>
+                          
+                          <div class="formRow wid470" role="group" aria-labelledby="inpLabel6">
+                            <select class="wid220" title="기준금리 선택">
+                              <option value="">기준금리</option>
+                              <option value="">3.50%</option>
+                            </select>
+                            <!-- <strong class="result mainGreen">3.50%</strong> -->
+                            <label for="inpLabelRate" class="label">가산금리</label>
+                            <input class="input innerTxt_1 wid114" id="inpLabelRate" type="text" placeholder="" value="0.50">
+                            <span class="unit">%</span>
+                          </div>
+                          <div class="formRow wid470">
+                            <div class="readonlyForm">
+                              당일 기준 합산 금리 <strong>4.00%</strong>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+                        </th> 
+                        <td>
+                          <div class="formRow" >
+                            <span class="radio">
+                              <input type="radio" id="testRdoBank1" name="testRdoBank" title="담보유무 선택" checked value="">
+                              <label for="testRdoBank1"><span></span>담보 없음</label>
+                            </span>
+                            <span class="radio">
+                              <input type="radio" id="testRdoBank2" name="testRdoBank" title="담보유무 선택" value="">
+                              <label for="testRdoBank2"><span></span>담보 있음</label>
+                            </span>
+                          </div>
+                          <div id="damboHasChkCont" class="formRowWrap">
+                            <div class="formRow" >
+                              <select class="wid180" title="담보종류 선택" disabled>
+                                <option value="부동산">부동산</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                              <select class="wid240" title="담보종류 선택" disabled>
+                                <option value="부동산">부동산</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                            </div>
+                            <div class="formAdd">
+                              <div class="formRow">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                                <button type="button" class="btnBlack p30" disabled>주소검색</button>
+                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                              </div>
+                              <div class="formRow">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                              </div>
+                            </div>
+                          </div>
+                          <script>
+                            $(function(){
+                              
+                              $("[name=testRdoBank]").on("click", function(){
+                                if(this.id =="testRdoBank2"){
+                                  $("#damboHasChkCont").find("input,select,button").each(function(){
+                                    this.disabled = false;
+                                  })
+                                }else{
+                                  $("#damboHasChkCont").find("input,select,button").each(function(){
+                                    this.disabled = true;
+                                  })
+                                }
+                              })
+                              
+                              var damboListIdx = 100;
+                              $(document).on("click", ".btnPlus", function() {
+                                var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                                damboListIdx++
+                                $listblock.attr({id: "damboList_"+ damboListIdx})
+                                $listblock.find(".btnPlus")[0].className = "btnMinus";
+                                $listblock.find(".btnMinus")[0].value = "";
+                                $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
+                                $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
+                                $(this).closest('.formAdd').append($listblock);
+                              });
+                              $(document).on("click", ".btnMinus", function() {
+                                $(this).closest(".formAdd .formRow").detach();
+                              });
+                            });
+                          </script>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">기타 조건</th> 
+                        <td><input class="input" type="text" name="" id="accLabel1" placeholder="상환 조건 등 조건을 입력해 주세요." value="" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="notiBox">
+                  <h4 class="titH4 hasLine">유의사항 입력</h4>
+                  <div class="textTable">
+                    <table>
+                      <caption>업체개요</caption>
+                      <colgroup>
+                        <col width="200px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" id="interestForm_1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이자 부과 시기 및 방법</label>
+                          </th> 
+                          <td>
+                            <div class="formRow" role="group" aria-labelledby="inpEmail">
+                              <select name="" title="이자부과 시기" >
+                                <option value="">1개월</option>
+                              </select>
+                              <select name="" title="이자부과 방법" >
+                                <option value="">후취</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>연체 금리</label>
+                          </th> 
+                          <td>
+                            <div class="formRow">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="notiLabel2" placeholder="0.00">
+                              <span class="unit">%</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>중도 상환 수수료</label>
+                          </th> 
+                          <td>
+                            <div class="formRow">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
+                              <span class="unit">%</span>
+                              <input class="input " type="text" name="inpPeriod" id="inpPeriod" placeholder="추가 입력 사항" title="추가 입력 사항">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 시 부대 비용</label>
+                          </th> 
+                          <td>
+                            <div class="formRow">
+                              <input class="input  " type="text" name="inpPeriod" id="notiLabel4" placeholder="인지세, 보증료 등">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>유의사항</label>
+                          </th> 
+                          <td><textarea class="textarea" id="notiLabel5">2023년 08월 자 기준으로 작성되었으며 예고 없이 변동될 수 있습니다.</textarea></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+            <div class="accordionItem">
+              <h3 class="accordionTitle">
+                <button type="button" class="btnDelete"><span class="srOnly">삭제</span></button>
+                <span class="label" for="formLabel_tit_2" >상품명1</span>
+                <select name="" id="formLabel_tit_2" title="대출 상품 선택" >
+                  <option value="">대출 상품을 선택해 주세요.</option>
+                </select>
+                <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2" id="accordion2id"><span class="accordionIcon"></span></button>
+              </h3>
+              <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordionPanel" hidden="">
+                <span class="srOnly">제안 대출1 상세보기</span>
+                
+              
+              </div>
+            </div>
+            <script>
+            </script>
+          </div>
+          <div class="table_bt fullType">
+            <button type="button" class="btnGray">+제안 대출 추가</button>
+          </div>
+        </div>
+        <div class="right">
+          <div class="totalInfoBox">
+            <div class="head">제안 대출 정보 합계</div>
+            <div class="cont">
+              <span class="label">제안 대출 금액</span>
+              <p class="desc">500,000,000원(오억원)</p>
+              <span class="label">제안 대출 금리(가중 평균 금리)</span>
+              <p class="desc">연 6.00%</p>
+              <span class="label">제안 대출 수</span>
+              <p class="desc">2건</p>
+            </div>
+            <div class="foot">
+              <button type="button" class="btnSuccess">제출하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

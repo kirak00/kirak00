@@ -69,14 +69,14 @@
               </div>
             </div>
             <div class="searchControlGroup">
-              <div class="searchControlItem expand">
-                <label for="selectLabelState" class="label">법인명</label>
+              <div class="searchControlItem expand"><!--1.5 -->
+                <label for="selectLabelState" class="label">기업명</label>
                 <div class="formRow">
-                  <input type="text" class="input wid240" id="selectLabelState" placeholder="법인명을 입력해 주세요">
+                  <input type="text" class="input wid240" id="selectLabelState" placeholder="기업명을 입력해 주세요">
                 </div>
               </div>
               <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">대출 금액</label>
+                <label id="selectLabelPay" class="label">실행 금액</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
                   <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
                   <span class="unit">억</span>
@@ -129,20 +129,13 @@
         <!-- 검색 -->
       
         <section class="">
-          <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
+          <!--1.5 -->
           <fieldset class="tableFilterGroup">
             <span class="count">총 <strong>15</strong>건</span>
             <div class="formRow" role="group">
-              <select title="정렬 선택 (대출 금액)">
-                <option>대출 금액 높은순</option>
-                <option>본부2</option>
-              </select>
+              <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
               <select title="정렬 선택 (금리 높은순)">
-                <option>대출 실행일 최신순</option>
-                <option>본부2</option>
-              </select>
-              <select title="정렬 선택 (금리)">
-                <option>금리 높은순</option>
+                <option>실행일 최신순</option>
                 <option>본부2</option>
               </select>
               <button type="button" class="btnDkGreen">적용</button>
@@ -195,12 +188,12 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+                noDataContent: "<div class='noTableData'><i class='icoNormal'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
 
                 fields: [
                   { name: "Name1",  type: "text", title : "대출 신청 번호", width: 150},
-                  { name: "Name2",  type: "text", title : "법인명", width: 170},
-                  { name: "Name3", type: "text", title : "대출 금액", width: 170 },
+                  { name: "Name2",  type: "text", title : "기업명", width: 170},
+                  { name: "Name3", type: "text", title : "실행 금액", width: 170 },
                   { name: "Name4", type: "text", title : "대출 실행일", width: 170 },
                   { name: "Name5", type: "text", title : "대출 기간", width: 110 },
                   { name: "Name6", type: "text", title : "용도", width: 110 },

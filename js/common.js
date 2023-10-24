@@ -51,7 +51,7 @@ $(function(){
   messageList()
 
   //tooltip 자동생성
-  setInterval(function(){
+  setTimeout(function(){
     tooltip_q();
   },100)
 
@@ -647,22 +647,22 @@ function accordion() {
       const accordionOption = This.buttonEl.closest('[accordion-option]').getAttribute('accordion-option');
 
       if (accordionOption === 'only') { //only type
-
-        if (This.buttonEl.ariaExpanded === 'false') { //close 
+        var status = This.buttonEl.parentNode.parentNode.classList.contains("isOpen");
+        if (status == false) { //close 
           This.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionTrigger').forEach((trigger) => {
             trigger.setAttribute('aria-expanded', 'false');
             This.buttonEl.setAttribute('aria-expanded', 'true');
           })
           This.buttonEl.closest('[accordion-option]').querySelectorAll('.accordionPanel').forEach((panel) => {
             panel.closest('.accordionItem')?.classList.remove("isOpen")
-            panel.setAttribute('hidden', '');
-            This.contentEl.removeAttribute('hidden');
+            panel.setAttribute('aria-hidden',true);
+            This.contentEl.removeAttribute('aria-hidden',false);
           });
           This.buttonEl.parentNode.parentNode.classList.add("isOpen")
         } else { // open
           This.buttonEl.parentNode.parentNode.classList.remove("isOpen")
-          This.buttonEl.setAttribute('aria-expanded', 'false');
-          This.contentEl.setAttribute('hidden', '');
+          This.buttonEl.setAttribute('aria-expanded', false);
+          This.contentEl.setAttribute('aria-hidden',true);
         }
       } else { //toggle type
         This.toggle(!This.open);
@@ -676,9 +676,9 @@ function accordion() {
       this.open = open;
       this.buttonEl.setAttribute('aria-expanded', `${open}`);
       if (open) {
-        this.contentEl.removeAttribute('hidden');
+        this.contentEl.removeAttribute('aria-hidden',true);
       } else {
-        this.contentEl.setAttribute('hidden', '');
+        this.contentEl.setAttribute('aria-hidden',true);
       }
     }
     open() {

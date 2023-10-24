@@ -67,7 +67,7 @@ section       {max-width:1920px; padding:0 60px;  }
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
-.pageTop p.dataInfo      {position:absolute; right:60px; top:10px; color:#4C9DA2; text-align: right; }
+.pageTop p.dataInfo      {position:absolute; right:60px; bottom:0px; color:#4C9DA2; text-align: right; }
 
 .main .pageTop h2      {padding-top:0; }
 .main.container      {padding:40px 0; background: #FAFAFA; min-height:calc(100vh - 320px) }
@@ -80,6 +80,15 @@ footer    {width:100%; }
 /* body  { background:rgba(244, 246, 248, 1)} */
 
 /* */
+
+
+.searchControlBox .dateTab          {height:50px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
+.searchControlBox .dateTab button    {border:0; width:130px; height:50px; border-radius: 8px; margin:-1px 0 0 -1px; }
+.searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
+.searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
+
+
+
 .memberMent     {text-align: center; margin-bottom:20px; }
 .memberMent strong     {font-size:18px; }
 .memberMent div     {margin-top:10px; }
@@ -104,7 +113,7 @@ div.login_form.change_pw .formBox  { padding-left:150px; }
 div.login_form.change_pw .loginBtn  { margin-top:60px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; top:0; font-size:18px; border-bottom:1px solid #ddd;   }
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
-ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
+ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; width:100%; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
 ul.loginTab li div.login_form  { position:absolute; left:0; top:80px; width:530px;  display:none; margin:0px 0 0;   }
 ul.loginTab li div.login_form .errorTxt  { margin-top:5px; line-height:18px;}
@@ -143,10 +152,10 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 /* dashboard */
 ul.boxWrap        {display:flex; row-gap: 20px; margin-top:20px; }
-ul.boxWrap li.box        {border:1px solid #ddd; background:#fff; border-radius: 16px; min-height:180px;  }
+ul.boxWrap li.box        {border:1px solid #ddd; background:#fff; border-radius: 16px; min-height:200px;  }
 ul.boxWrap li.box.bgGreen        {background:#F6FBF7; }
 ul.boxWrap li.memCount        {text-align: center; padding:40px 0 0; }
-ul.boxWrap li.memCount span        {display:inline-block; font-size:16px;  }
+ul.boxWrap li.memCount span        {display:inline-block; font-size:16px; font-weight: 700;  }
 ul.boxWrap li.memCount span.ico_1  {padding-left:30px; background:url(../adm_images/adm/user-alt-1.png) no-repeat 0 50%; }
 ul.boxWrap li.memCount span.ico_2  {padding-left:30px; background:url(../adm_images/adm/user-check-alt-1.png) no-repeat 0 50%; }
 ul.boxWrap li.memCount span.ico_3  {padding-left:30px; background:url(../adm_images/adm/user-heart-alt-1.png) no-repeat 0 50%; }
@@ -157,16 +166,18 @@ ul.boxWrap li.usageStatus:first-child       {max-width:585px; }
 ul.boxWrap li.bgRed             {max-width:300px; background:linear-gradient(0deg, rgba(254, 80, 80, 0.05) 0%, rgba(254, 80, 80, 0.05) 100%), rgba(255, 255, 255, 0.20); }
 ul.boxWrap li.bgRed ul li strong  {color:#FE5050}
 
-ul.boxWrap li.usageStatus       {text-align: center; padding:30px 0 0; }
+ul.boxWrap li.usageStatus       {position:relative; text-align: center; padding:30px 0 0; }
 ul.boxWrap li.usageStatus span.tit       {display:inline-block; font-weight: 700; padding-left:30px;  }
+ul.boxWrap li.usageStatus.bgRed span.tit       {color:#FE5050  }
 ul.boxWrap li.usageStatus:nth-child(1) span.tit       {background:url(../adm_images/adm/face-smile.png) no-repeat 0 0}
 ul.boxWrap li.usageStatus:nth-child(2) span.tit       {background:url(../adm_images/adm/face-users.png) no-repeat 0 0}
 ul.boxWrap li.usageStatus:nth-child(3) span.tit       {background:url(../adm_images/adm/face-frown.png) no-repeat 0 0}
 ul.boxWrap li.usageStatus ul            {margin-top:35px; display:flex; width:100%;  }
 ul.boxWrap li.usageStatus ul li         {text-align: center; width:100%; }
-ul.boxWrap li.usageStatus ul li span    {display:inline-block; }
+ul.boxWrap li.usageStatus ul li span    {display:inline-block; font-weight: 500; }
 ul.boxWrap li.usageStatus ul li span span {color:#888; vertical-align: 0; font-size: 14px; }
 ul.boxWrap li.usageStatus ul li strong  {display:block; margin-top:10px; font-size: 24px; }
+ul.boxWrap li.usageStatus button.btnSuccess {position:absolute; top:24px; right:30px;  }
 
 section.dashboard + section.dashboard   {margin-top:30px; }
 
@@ -225,7 +236,7 @@ ul.boxWrap.detail li.box.detail_2 .pie {width:240px; height:220px; margin:0 auto
 ul.boxWrap.detail li.box.detail_2 ul.legend    {width:100%; display:flex;  padding:0 100px;   }
 ul.boxWrap.detail li.box.detail_2 ul.legend li {width:100%; text-align: center;}
 ul.boxWrap.detail li.box.detail_2 ul.legend li span   {width:100%; }
-ul.boxWrap.detail li.box.detail_2 ul.legend li strong {display:block; }
+ul.boxWrap.detail li.box.detail_2 ul.legend li strong {display:block; font-size:20px  }
 ul.boxWrap.detail li.box.detail_2 ul.legend li span.icon_1::before   {content:""; display:inline-block; vertical-align: -3px; margin-right:4px;  width:16px; height:16px; border-radius:4px; background:#1BC98B;  }
 ul.boxWrap.detail li.box.detail_2 ul.legend li span.icon_2::before   {content:""; display:inline-block; vertical-align: -3px; margin-right:4px;  width:16px; height:16px; border-radius:4px; background:#0A7BAF;  }
 
@@ -376,6 +387,18 @@ ul.dashboardWrap.userEnvir li.chart_pie ul.legend li  {width:100%; margin:auto 0
 ul.dashboardWrap.userEnvir li.chart_pie ul.legend li em  {vertical-align: middle; }
 ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 
+
+/* 방문자 상세 팝업 */
+.visitViewCont                {}
+.visitViewCont .bbs           {margin-top:20px; }
+.visitViewCont .fullYear      {display:flex; gap:8px; padding:12px 0 0; }
+.visitViewCont .fullYear select {width:55%; }
+.visitViewCont .fullYear select + select {width:auto; flex:1; }
+.visitViewCont .rangeControl      {display:flex; gap:8px; padding:12px 0 0; }
+.visitViewCont .rangeControl input{flex:1;  }
+.visitViewCont .btn_r   {padding:20px 0 0; text-align: right;}
+.visitViewCont .btn_r button   {padding: 0 30px;  }
+.visitViewCont .jsgrid-grid-body   {max-height:400px; }
 
 
 /* */
