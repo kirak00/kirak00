@@ -73,7 +73,6 @@
             <span class="count">총 <strong>15</strong>건</span>
             
           </fieldset>
-
           <div class="jsGridWrap">
             <div id="jsGrid2" class="bbs" caption="대출 실적 목록">
             </div>    
@@ -129,7 +128,7 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+                noDataContent: "<div class='noTableData'><i class='icoNomal'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
 
                 fields: [
                   { name: "Name1",  type: "text", title : "지역본부", width: 280},

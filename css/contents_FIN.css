@@ -32,6 +32,9 @@ header.on .bg  {height:590px; }
 .headerCont ul.gnb li.depth_1        { margin-left:30px}
 
 
+.headerCont ul.gnb li.depth_1:first-child   {}
+.headerCont ul.gnb li.depth_1:first-child ul   {margin-left:-10px; }
+
 /* 진희 */
 
 
@@ -247,7 +250,7 @@ fieldset + section   {margin-top:40px; }
 th .inbox     {display:inline-block}
 
 
-/* 
+/* */
 .proposalChkForm      {text-align: left;}
 .proposalChkForm .formListTable {margin-top:20px; }
 .proposalChkForm .formListTable .checkbox   {white-space:unset;}
@@ -257,9 +260,13 @@ th .inbox     {display:inline-block}
 .proposalChkForm .tit   {position:relative; font-weight: 700; padding-bottom:20px; }
 .proposalChkForm .tit em   {position:absolute; right:0; color:#FE5050; font-weight: 400; }
 .proposalChkForm .tit ~ .tit   {padding-top:30px; margin-top:30px; border-top:1px solid #ddd; }
-.proposalChkForm .ment .subMent   {font-size:14px; }
+.proposalChkForm .tit + p.sub   {font-size: 14px;}
+.proposalChkForm .ment .subMent   {font-size:14px; margin-top:10px; }
 .proposalChkForm .radioGroup   {margin-top:20px; } 
-*/
+
+
+.layerCont .bgMent      {text-align: center; margin-top:20px; padding:15px 0; background:#F6FBF7; text-align: center; font-weight: 700;}
+
 ul.employeeSelect li + li  {margin-top:20px; }
 
 .employeeInfo         {margin-top:40px; }
