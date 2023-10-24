@@ -24,12 +24,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">대출 관리</h2>
+      <h2 class="pageTit">대출 비교 신청 정보</h2><!-- v1.4 워딩수정 -->
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><span>대출 관리</span></a></li>
-          <li><a href="#none"><strong>재무 현황</strong></a></li>
+          <li><a href="#none"><span>대출 비교 진행 현황</span></a></li><!-- v1.4 워딩수정 -->
+          <li><a href="#none"><strong>대출 비교 신청 정보</strong></a></li><!-- v1.4 워딩수정 -->
       </ul>
     </section>
     <div class="tabLineWrap">
@@ -40,6 +39,8 @@
           <li class="on"><button type="button" role="tab" aria-selected="true">재무 현황</button></li>
         </ul>
         <!-- <p class="update">업데이트 &nbsp; 2023-08-10</p> -->
+        <!-- v1.4 추가 -->
+        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div> 
     </div>
     <div class="bgGray">
@@ -49,7 +50,7 @@
           <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">재무상태표</button></li>
           <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li>
           <!-- 디자인 수정 : 세금계산서 합산표 -->
-          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">세금계산서 합산표</button></li> 
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">세금계산서 합계표</button></li> <!-- v1.4 워딩수정 -->
         </ul>  
         <!-- 디자인 수정 : sectionBlock40 -> sectionBlock20 -->
         <section class="sectionBlock20">
@@ -95,19 +96,55 @@
                   <td>140,000,000</td>
                 </tr>
                 <tr>
-                  <td>자산총계</td>
+                  <td>부채총계</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                 </tr>
                 <tr>
-                  <td>자산총계</td>
+                  <td>자본총계</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                 </tr>
                 <tr>
-                  <td>자산총계</td>
+                  <td>매출채권</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>자본금</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>장기차입금</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>단기차입금</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>현금및현금성자산</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>장기금융상품</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>단기금융상품</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
@@ -121,8 +158,6 @@
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-        <!-- 디자인 수정 : 추가 -->
-        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
       <div class="btn_c">
         <!-- 디자인 수정 -->

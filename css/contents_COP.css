@@ -30,12 +30,12 @@
 /* 락 */
 div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0;  }
 div.login_form.change_pw .formBox  { padding-left:150px; }
-div.login_form.change_pw .loginBtn  { margin-top:60px; }
+div.login_form.change_pw .loginBtn  { margin-top:30px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; top:0; font-size:18px; border-bottom:1px solid #ddd;   }
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
-ul.loginTab li div.login_form  { position:absolute; left:0; top:80px; width:530px;  display:none; margin:0px 0 0;   }
+ul.loginTab li div.login_form  { position:absolute; left:0; top:90px; width:460px;  display:none; margin:0px 0 0;   }
 ul.loginTab li div.login_form .errorTxt  { margin-top:5px; line-height:18px;}
 ul.loginTab li.on div.login_form    { display:block;}
 ul.loginTab li.on.fast div.login_form    { transition:none;}
@@ -86,11 +86,11 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 /* 락 */
 /* 메인 */
 .main .container    {padding:40px 0 0px ; }
-.main header::after { height:380px; }
+.main header::after { height:548px; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
-.main_visual_logout .txtBox strong { color:#069B66;  vertical-align: 0;  }
+.main_visual_logout .txtBox strong { color:#02C37E;  vertical-align: 0;  }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -129,6 +129,7 @@ ul.main_loan_info li .main_btn   {padding-bottom:0px; text-align: left; padding-
 ul.main_loan_btn  {display:flex; gap:20px; }
 ul.main_loan_btn li   {width:335px; }
 ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
+ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
  
 
 
@@ -153,7 +154,7 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 16px; font-weight: 700;  } 
 .main_loan_progress ol.status_tab li strong {display:block; margin-top:10px; font-size: 18px; font-weight: 700;  }
 .main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
-.main_loan_progress ol.status_tab li.disabled { }
+.main_loan_progress ol.status_tab li.disabled { background-color: #fafafa; border-color: #fafafa;}
 .main_loan_progress ol.status_tab li.disabled em,
 .main_loan_progress ol.status_tab li.disabled strong {color:#888}
 .main_loan_progress ol.status_tab li.step_1   {background-image:url(../images/COP/main/no_data_main_1.png); }
@@ -182,13 +183,13 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:18px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
 .main_loan_cont .list .status button:focus {outline: 2px dashed #069B66;} 
 .main_loan_cont .list .status button span   {margin:auto 0;}
-.main_loan_cont .list .status button em     {display:block; padding:0 14px; border:1px solid #EAFAEB; flex:0; color:#069B66; border-radius: 14px;  }
+.main_loan_cont .list .status button em     {display:block; line-height: 25px; padding:0 14px; border:1px solid #069B66; flex:0; color:#069B66; border-radius: 30px;  }
 .main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline; }
 .main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
 .main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 20px; height:auto; text-align: center;  }   
-.main_loan_cont .no_data span     {display:block; padding-top:130px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
+.main_loan_cont .no_data span     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
 .main_loan_cont .no_data span.btn {display:block; background:none !important; padding:0; display:block; text-align: center; padding:40px 0 0; }   
-.main_loan_cont .no_data span.btn button.btnSuccess {width:210px; } 
+/* .main_loan_cont .no_data span.btn button.btnSuccess {width:210px; }  */
 .main_loan_cont .no_data.bg_regist span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_01.png); }  
 .main_loan_cont .no_data.bg_review span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02.png); } 
 .main_loan_cont .no_data.bg_endtime span      {background-image:url(../images/COP/main/ico_80_log_process_nodata_03.png); } 
@@ -218,11 +219,12 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .layerCont .main_survey dl:first-child dt { padding-top: 0;}
 
 /* 약관 */
-.content_terms    { margin-top:40px; }
-.content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; }
-.content_terms .titH3:first-child { margin-top: 60px;}
+.content_terms    { margin-top:60px; }
+/* .content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; } */
+/* .content_terms .titH3:first-child { margin-top: 60px;} */
+.content_terms .titH3.hasLine { padding: 0 40px;}
 .content_terms .terms_type    { padding:10px 0 0;}
-.content_terms .terms_ment    { margin:20px 0 30px;}
+.content_terms .terms_ment    { padding :0 40px 40px;}
 
 .evtWinner      { margin:40px 0 0;  }
 
@@ -254,9 +256,10 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 
 /*  약관  */
 .tremsWrap      {}
+.tremsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;}
 .tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
-.tremsWrap .searchControlBox      {margin-top:40px; }
-.tremsWrap .terms_cont      {margin-top:0px; border:1px solid #ddd; background:#FAFAFA; padding:60px; border-radius: 16px; }
+.tremsWrap .searchControlBox      {margin-top:60px; }
+.tremsWrap .terms_cont      {margin-top:40px; background:#FAFAFA; padding:40px; border-radius: 16px; }
 .tremsWrap .terms_style_1      {font-size:18px; }
 .tremsWrap .terms_style_1 strong  {display:block;  }
 .tremsWrap .terms_style_1 p     {margin-top:20px;}
@@ -270,7 +273,7 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .joinStep li { position: relative; display: inline-block; width: 162px; margin-right: 26px;}
 .joinStep li:last-child { margin-right: 0px;}
 .joinStep li .circle { display: inline-block; width: 40px; height: 40px; line-height: 40px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 20px; font-weight: 700;}
-.joinStep li .name { margin-top: 12px; color: #888; font-size: 16px; }
+.joinStep li .name { margin-top: 12px; color: #888; }
 .joinStep li::before { content: ''; position: absolute; top: 23px; left: -50%; display: inline-block; width: 132px; height: 2px; background: #ddd;}
 .joinStep li:first-child::before { display: none;}
 .joinStep li.on .circle { background: #069B66; }
@@ -337,5 +340,5 @@ ul.main_loan_btn li  a  {width:100%; margin-top:35px; }
 .boardTit .barList { margin-top: 8px;} 
 .boardCont { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; }
 
-.boardCont .con { padding: 20px; line-height: 1.5; }
+.boardCont .con { max-height: 400px; overflow: auto; padding: 20px; line-height: 1.5; }
 .boardCont .attachBox { padding: 20px; margin-top: 20px; border-top: 1px solid #ddd;}

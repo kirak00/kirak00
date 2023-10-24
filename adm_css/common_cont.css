@@ -1569,6 +1569,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
+.layerWrap .layerBody.wid640 .layerFoot button    {min-width:160px; }
 .layerWrap .layerBody .layerFoot button    {min-width:208px; }
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}

@@ -107,6 +107,7 @@
                 <span>안녕하세요!</span>
                 <strong>길동중앙회(광교영업점)님😊</strong>
               </div>
+              <button type="button" class="btnWhite">대출 비교하기 추가</button><!-- v1.4 추가 -->
             </div>
             <div class="msgBox on">
               <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
@@ -188,7 +189,8 @@
           <section class=""> 
             <div class="list">
               <div class="btnWrap">
-                <button class="btnSky">대출 비교하기 추가</button>
+                <button class="btnSuccess">대출 정보 이어 작성</button><!-- v1.4 수정 -->
+                <button class="btnSky">추가 서류 제출</button><!-- v1.4 수정 -->
               </div>
             </div>
           </section>
@@ -221,7 +223,7 @@
                   <em>5건</em>
                 </button>
                 <button type="button" role="tab" aria-controls="main_loan_list_2_2" class="on" aria-selected="true">
-                  <span>추가 서류 요청</span>
+                  <span>추가 서류</span><!-- v1.4 워딩 수정 -->
                   <em>5건</em>
                 </button>
               </div>
@@ -291,7 +293,7 @@
               <div class="tabContent" id="main_loan_list_2_2" role="tabpanel">
                 <div class="titBox">
                   <strong>현재 추가서류 요청한 금융회사 목록이에요.</strong>
-                  <p>추가 서류 제출 하면 좀 더 좋은 조건에 제안을 받아 보실 수 있어요.</p>
+                  <p>서류 제출은 <a href="#;" class="lnkLine">심사 현황 페이지</a> 에서 추가 서류 관리 버튼 선택 하시면 가능해요</p>
                 </div>
                 <div class="table_top">
                   <div class="total">
@@ -302,24 +304,23 @@
                 
                 <div id="main_grid_2" class="bbs" caption="추가서류 요청한 금융회사 목록"></div>
                 <div id="externalPager_2" class="external-pager"></div>
+                <!-- v1.4 수정 -->
                 <script>
                   /* jsgrid sample */
                   $(function() {
                     
                     var clients = [
-                      { "Name1": '(주)신한은행',
+                      { "Name1": '<span class="goLink">롯데캐피탈</span>',
                         "Name2": '종합소득세',
-                        "Name3": '<div class="moneyTxt"><em>230,000,001원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name4": '2023-07-24',
-                        "Name6": '<strong>제출완료</strong>',
+                        "Name3": '2023-07-25',
+                        "Name4": '<button type="button" class="ico_down">다운로드</button>',
+                        "Name5": '<button type="button" class="btnGray wid130">파일 변경</button>',
                       },
-                      { "Name1": '(주)신한은행',
+                      { "Name1": '<span class="goLink">롯데캐피탈</span>',
                         "Name2": '종합소득세',
-                        "Name3": '<div class="moneyTxt"><em>230,000,002원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name4": '2023-07-25',
-                        "Name6": '<button type="button" class="btnWhite">제출하기</button>',
+                        "Name3": '2023-07-25',
+                        "Name4": '<button type="button" class="ico_down">다운로드</button>',
+                        "Name5": '<button type="button" class="btnSuccess wid130">제출 서류 선택</button>',
                       },
                     ];
                     
@@ -327,17 +328,18 @@
                       data: clients,
                       sorting : true,
                       fields: [
-                        { name: "Name1", width: 200,  type: "text", title : "금융기관 명",  validate: "required", sorting: false,},
-                        { name: "Name2", width: 200, type: "text", title : "필요 서류 안내",  validate: "required", css:"left", sorting: false, },
+                        { name: "Name1", width: 200,  type: "text", title : "심사 참여 금융기관",  validate: "required", sorting: false,},
+                        { name: "Name2", width: 200, type: "text", title : "필요 서류 안내",  validate: "required", sorting: false, },
                         { name: "Name3", width: 200, type: "text", title : "요청일",  validate: "required",  },
-                        { name: "Name4", width: 200, type: "text", title : "제풀 완료일",  validate: "required",  },
-                        { name: "Name6", width: 200, type: "text", title : "제안서 상세보기",  validate: "required", sorting: false, },
+                        { name: "Name4", width: 200, type: "text", title : "다운로드",  validate: "required",  },
+                        { name: "Name5", width: 200, type: "text", title : "파일관리",  validate: "required", sorting: false, },
                       ],
                       pagerContainer: "#externalPager_2",
                       
                     });
                   });
                 </script>
+                 <!-- //v1.4 수정 -->
               </div>
 
 
@@ -356,7 +358,7 @@
                   <em>5건</em>
                 </button>
                 <button type="button" role="tab" aria-controls="main_loan_list_3_2" class="on" aria-selected="true">
-                  <span>채택된 제안서</span>
+                  <span>제안서 채택</span><!-- v1.4 수정 -->
                   <em>5건</em>
                 </button>
                 <button type="button" role="tab" aria-controls="main_loan_list_3_3" >
@@ -376,7 +378,7 @@
                   현재까지 도착한 제안서가 없어요. <br>
                   제안서 마감일을 연장 하시겠어요?
                   <span class="btn">
-                    <button type="button" class="btnSuccess">대출 정보 수정</button>
+                    <button type="button" class="btnSuccess">제안서 마감일 변경</button><!-- v1.4 워딩수정 -->
                   </span>
                 </span>
               </div>
@@ -388,7 +390,7 @@
                   제출된 제안서를 선택 할 수 있는 시간이 지났어요. <br>
                   아쉽지만 다시 대출을 신청하시거나 관심 있던 금융회사의 담당자에게 연락을 해보시겠어요?
                   <span class="btn">
-                    <button type="button" class="btnSuccess">대출 정보 수정</button>
+                    <button type="button" class="btnSuccess">다시 대출 비교하기 신청</button><!-- v1.4 워딩수정 -->
                   </span>
                 </span>
               </div>
@@ -398,7 +400,7 @@
               <div class="tabContent" id="main_loan_list_3_1" role="tabpanel">
                 <div class="titBox">
                   <strong>회원님에게 제안서를 제출한 금융회사 목록이에요.</strong>
-                  <p>제안서 접수 마감일 이후 확인 할 수 있어요</p>
+                  <p>제안서 정보 확인해보세요.</p><!-- v1.4 워딩수정 -->
                 </div>
                 <div class="table_top">
                   <div class="total">
@@ -406,24 +408,27 @@
                   </div>
                 </div>
 
-                <!-- 마스킹 있는경우 -->
+                <!-- 열람 마스킹 없음/ 미열람 마스킹 있음 -->
                 <div id="main_grid_3" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
                 <div id="externalPager_3" class="external-pager"></div>
+                <!-- v1.4 수정 -->
                 <script>
                   /* jsgrid sample */
                   $(function() {
                     var clients = [
-                      { "Name1": '(주)*********',
-                        "Name2": '*.*%',
-                        "Name3": '<div class="moneyTxt"><em>*********만원</em><span>(금 ******원)</span></div>',
-                        "Name4": '2023-07-24',
-                        "Name6": '공개 10일전',
+                      { "Name1": '(주)신한은행',
+                        "Name2": '7.1%',
+                        "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                        "Name4": '고길동',
+                        "Name5": '02-1234-5678',
+                        "Name6": '열람',
                       }, 
-                      { "Name1": '(주)*********',
-                        "Name2": '*.*%',
-                        "Name3": '<div class="moneyTxt"><em>*********만원</em><span>(금 ******원)</span></div>',
-                        "Name4": '2023-07-24',
-                        "Name6": '공개 10일전',
+                      { "Name1": '(주)신한은행',
+                        "Name2": '7.1%',
+                        "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                        "Name4": '고*동',
+                        "Name5": '02-12*4-56**',
+                        "Name6": '<span class="textBold">미열람</span>',
                       }, 
                     ];
                     
@@ -431,10 +436,11 @@
                       data: clients,
                       sorting : true,
                       fields: [
-                        { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
+                        { name: "Name1", width: 200,  type: "text", title : "제출 금융회사 명",  validate: "required",  },
                         { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                        { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
-                        { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
+                        { name: "Name3", width: 200, type: "text", title : "제안 대출액",  validate: "required",  },
+                        { name: "Name4", width: 200, type: "text", title : "제안 담당자",  validate: "required",  },
+                        { name: "Name5", width: 200, type: "text", title : "문의 전화 번호",  validate: "required",  },
                         { name: "Name6", width: 200, type: "text", title : "공개 유무",  validate: "required", sorting : false, },
                       ],
                       pagerContainer: "#externalPager_3",
@@ -442,10 +448,10 @@
                     });
                   });
                 </script>
-                
+                 <!-- v1.4 수정 -->
 
                 <!-- 마스킹 없는경우 -->
-                <div id="main_grid_3_1" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
+                <!-- <div id="main_grid_3_1" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
                 <div id="externalPager3_1" class="external-pager"></div>
                 <script>
                   /* jsgrid sample */
@@ -480,7 +486,7 @@
                       
                     });
                   });
-                </script>
+                </script> -->
 
               </div>
 
@@ -490,7 +496,7 @@
               <div class="tabContent" id="main_loan_list_3_2" role="tabpanel">
                 <div class="titBox">
                   <strong>고객님이 선택한 제안서 목록이에요.</strong>
-                  <p>선택된 금융회사에서 연락을 못받으신 경우, 담당자와 통화해보세요. </p>
+                  <p>선택하신 금융기관에서 연락을 못받으신 경우, 담당자와 통화해보세요.</p><!-- v1.4 워딩 수정 -->
                 </div>
                 <div class="table_top">
                   <div class="total">
@@ -508,16 +514,16 @@
                       { "Name1": '(주)신한은행',
                         "Name2": '7.1%',
                         "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name4": '2023-07-25',
-                        "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
+                        "Name4": '고길동',//v1.4 수정 
+                        "Name5": '02-1234-5678',
+                        "Name6": '<a href="#;" class="lnk">열람</a>',//v1.4 수정 
                       },
                       { "Name1": '(주)신한은행',
                         "Name2": '7.1%',
                         "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name4": '2023-07-25',
-                        "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
+                        "Name4": '고길동',//v1.4 수정 
+                        "Name5": '02-1234-5678',
+                        "Name6": '<a href="#;" class="lnk">열람</a>',//v1.4 수정 
                       },
                     ];
                     
@@ -528,8 +534,8 @@
                         { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
                         { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
                         { name: "Name3", width: 200, type: "text", title : "제안 대출액 ",  validate: "required",  },
-                        { name: "Name4", width: 150, type: "text", title : "제안서 제출일",  validate: "required",  },
-                        { name: "Name4", width: 150, type: "text", title : "제안서 채택일",  validate: "required",  },
+                        { name: "Name4", width: 150, type: "text", title : "제안 담당자",  validate: "required",  }, //v1.4 수정 
+                        { name: "Name5", width: 150, type: "text", title : "문의전화번호",  validate: "required",  },
                         { name: "Name6", width: 200, type: "text", title : "상세보기",  validate: "required", sorting : false,  },
                       ],
                       pagerContainer: "#externalPager_44",
@@ -546,6 +552,7 @@
                 
                 <div class="titBox">
                   <strong>회원님에게 마감 기한 연장을 요청한 목록입니다.</strong>
+                  <p>금융기관 요청한 마감 기한 연장은 <a href="#;" class="lnkLine">심사 현황 페이지</a>심사 현황 페이지에서 승인이 가능해요.</p><!-- v1.4 추가 -->
                 </div>
                 <div class="table_top">
                   <div class="total">
@@ -556,11 +563,11 @@
                 
                 <div id="main_grid_4" class="bbs" caption=" 마감 기한 연장을 요청한 목록"></div>
                 
-                <div class="table_bt">
+                <!-- <div class="table_bt">
                   <div class="btn_r">
                     <button type="button" class="btnSuccess">승인</button>
                     <button type="button" class="btnSuccess">거절</button>
-                  </div>
+                  </div> -->
                 </div>
 
                 <div id="externalPager_4" class="external-pager"></div>
@@ -570,25 +577,25 @@
                     
                     var clients = [
                       { 
-                        "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_1" name="CheckBox" title="선택" ><label for="chk_1_1"><span></span></label></span>',
-                        "Name2": '(주)신한은행',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name5": '<button type="button" class="btnWhite">승인</button> <button type="button" class="btnLine">거절</button>',
+                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_1" name="CheckBox" title="선택" ><label for="chk_1_1"><span></span></label></span>',
+                        "Name1": '<span class="goLink">농협중앙회<span>',
+                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                        "Name2": '2023-07-25',
+                        // "Name5": '<button type="button" class="btnWhite">승인</button> <button type="button" class="btnLine">거절</button>',
                       },
                       { 
-                        "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_2" name="CheckBox" title="선택" ><label for="chk_1_2"><span></span></label></span>',
-                        "Name2": '(주)신한은행',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name5": '<span>거절</span>',
+                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_2" name="CheckBox" title="선택" ><label for="chk_1_2"><span></span></label></span>',
+                        "Name1": '<span class="goLink">OK 저축은행<span>',
+                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                        "Name2": '2023-07-25',
+                        // "Name5": '<span>거절</span>',
                       },
                       { 
-                        "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_3" name="CheckBox" title="선택" ><label for="chk_1_3"><span></span></label></span>',
-                        "Name2": '(주)신한은행',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name5": '<strong>승인완료</strong>',
+                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_3" name="CheckBox" title="선택" ><label for="chk_1_3"><span></span></label></span>',
+                        "Name1": '<span class="goLink">OK 저축은행<span>',
+                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
+                        "Name2": '2023-07-25',
+                        // "Name5": '<strong>승인완료</strong>',
                       },
                     ];
                     
@@ -596,11 +603,11 @@
                       data: clients,
                       sorting:true,
                       fields: [
-                        { name: "Name1", width: 80, type: "text", title : '<span class="checkbox"><input type="checkbox" id="chk_all_1" name="CheckBox" title="전체선택" ><label for="chk_all_1"><span></span></label></span>' ,  validate: "required", sorting:false, },
-                        { name: "Name2", width: 300,  type: "text", title : '연장 요청 금융회사',  validate: "required", sorting:false, },
-                        { name: "Name3", width: 200, type: "text", title : '요청 사유',  validate: "required",  sorting:false,},
-                        { name: "Name4", width: 200, type: "text", title : '연장 요청일',  validate: "required",  },
-                        { name: "Name5", width: 200, type: "text", title : '승인',  validate: "required", css:"status",  sorting:false,},
+                        // { name: "Name1", width: 80, type: "text", title : '<span class="checkbox"><input type="checkbox" id="chk_all_1" name="CheckBox" title="전체선택" ><label for="chk_all_1"><span></span></label></span>' ,  validate: "required", sorting:false, },
+                        { name: "Name1", width: 'auto',  type: "text", title : '연장 요청 금융기관',  validate: "required", sorting:false, },
+                        // { name: "Name3", width: 200, type: "text", title : '요청 사유',  validate: "required",  sorting:false,},
+                        { name: "Name2", width: 500, type: "text", title : '연장 요청일',  validate: "required",  },
+                        // { name: "Name5", width: 200, type: "text", title : '승인',  validate: "required", css:"status",  sorting:false,},
                       ],
                       pagerContainer: "#externalPager_4",
                       
@@ -635,8 +642,8 @@
                 <!-- 채택된 제안서 -->
                 <!-- 채택된 제안서 -->
                 <div class="titBox">
-                  <strong>고객님이 선택한 제안서 목록이에요.</strong>
-                  <p>선택된 금융회사에서 연락을 못받으신 경우, 담당자와 통화해보세요. </p>
+                  <strong>고객님이 채택한 제안서 목록이에요.</strong><!-- v1.4 수정 -->
+                  <p>선택하신 금융기관에서 연락을 못받으신 경우, 담당자와 통화해보세요.</p><!-- v1.4 수정 -->
                 </div>
                 <div class="table_top">
                   <div class="total">
@@ -655,16 +662,16 @@
                     { "Name1": '(주)신한은행',
                       "Name2": '7.1%',
                       "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '2023-07-25',
-                      "Name4": '2023-07-25',
-                      "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
+                      "Name4": '고길동', //v1.4 수정
+                      "Name5": '02-1234-5678', //v1.4 수정
+                      "Name6": '<a href="#;" class="lnk">채택</a>', //v1.4 수정
                     },
                     { "Name1": '(주)신한은행',
                       "Name2": '7.1%',
                       "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '2023-07-25',
-                      "Name4": '2023-07-25',
-                      "Name6": '<button type="button" class="btnWhite">제안서 보기</button>',
+                      "Name4": '고길동',
+                      "Name5": '02-1234-5678',
+                      "Name6": '<a href="#;" class="lnk">채택</a>',
                     },
                   ];
                   
@@ -674,8 +681,8 @@
                       { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
                       { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
                       { name: "Name3", width: 200, type: "text", title : "제안 대출액",  validate: "required",  },
-                      { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
-                      { name: "Name4", width: 200, type: "text", title : "제안서 채택일",  validate: "required",  },
+                      { name: "Name4", width: 200, type: "text", title : "제안 담당자",  validate: "required",  }, //v1.4 수정
+                      { name: "Name5", width: 200, type: "text", title : "문의전화번호",  validate: "required",  }, //v1.4 수정
                       { name: "Name6", width: 200, type: "text", title : "상세보기",  validate: "required",  },
                     ],
                     pagerContainer: "#externalPager_5",
@@ -750,7 +757,7 @@
                       <span class="checkbox">
                         <input type="checkbox" id="chk_1_5" name="CheckBox" ><label for="chk_1_5"><span></span>기타</label>
                       </span>
-                      <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요."  >
+                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요."  >
                     </div>
                   </dd>
                   <dt>·  Loan&Biz의 서비스 중 어떤 부분이 도움이 되셨나요? (복수 선택 가능)</dt>
@@ -771,7 +778,7 @@
                       <span class="checkbox">
                         <input type="checkbox" id="chk_2_5" name="CheckBox" ><label for="chk_2_5"><span></span>기타</label>
                       </span>
-                      <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
+                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
                     </div>
                   </dd>
                   <dt>·  개선이 필요한 사항을 알려주세요. (복수 선택 가능)</dt>
@@ -788,12 +795,12 @@
                         <input type="checkbox" id="chk_3_3" name="CheckBox" ><label for="chk_3_3"><span></span>다양한 금융회사의 참여</label>
                       </span>
                       <span class="checkbox">
-                        <input type="checkbox" id="chk_3_4" name="CheckBox" ><label for="chk_3_4"><span></span>다양한 대출 제안</label>
+                        <input type="checkbox" id="chk_3_4" name="CheckBox" ><label for="chk_3_4"><span></span>다양한 정보</label><!-- v1.4 워딩수정 -->
                       </span>
                       <span class="checkbox">
                         <input type="checkbox" id="chk_3_5" name="CheckBox" ><label for="chk_3_5"><span></span>기타</label>
                       </span>
-                      <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
+                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
                     </div>
                   </dd>
                 </dl>

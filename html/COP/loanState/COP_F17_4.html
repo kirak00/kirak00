@@ -24,12 +24,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">대출 관리</h2>
+      <h2 class="pageTit">대출 비교 신청 정보</h2><!-- v1.4 워딩수정 -->
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>마이페이지</span></a></li>
-          <li><a href="#none"><span>대출 관리</span></a></li>
-          <li><a href="#none"><strong>재무 현황</strong></a></li>
+          <li><a href="#none"><span>대출 비교 진행 현황</span></a></li><!-- v1.4 워딩수정 -->
+          <li><a href="#none"><strong>대출 비교 신청 정보</strong></a></li><!-- v1.4 워딩수정 -->
       </ul>
     </section>
     <div class="tabLineWrap">
@@ -40,6 +39,8 @@
           <li class="on"><button type="button" role="tab" aria-selected="true">재무 현황</button></li>
         </ul>
         <!-- <p class="update">업데이트 &nbsp; 2023-08-10</p> -->
+        <!-- v1.4 추가 -->
+        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div> 
     </div>
     <div class="bgGray">
@@ -49,16 +50,16 @@
           <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">재무상태표</button></li>
           <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li>
           <!-- 디자인 수정 : 세금계산서 합산표 -->
-          <li class="on"><button type="button" role="tab" id="innerTab_4" aria-selected="true">세금계산서 합산표</button></li> 
+          <li class="on"><button type="button" role="tab" id="innerTab_4" aria-selected="true">세금계산서 합계표</button></li> <!-- v1.4 워딩수정 -->
         </ul>  
         <!-- 디자인 수정 : sectionBlock80 -> sectionBlock20 -->
         <section class="sectionBlock20">
           <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p>
           <!-- 디자인 수정 : hasLine 삭제, titH3 -> titH5 -->
-          <h3 class="titH5">매출처별 매출 세금계산서 합산표</h3>
+          <h3 class="titH5">매출/매입처별 세금계산서 합계표</h3><!-- v1.4 워딩 수정 -->
           <div class="table_wrap">
             <table class="bbs_list">
-              <caption>매출처별 매출 세금계산서 합산표</caption>
+              <caption>매출/매입처별 세금계산서 합계표</caption>
               <colgroup>
                 <!-- 디자인 수정 -->
                 <col width="33.33%" />
@@ -86,10 +87,10 @@
         </section>
         <!-- 디자인 수정 : 추가 -->
         <section class="sectionBlock40">
-          <h3 class="titH5">매출처별 매출 세금계산서 합산표 정보 입력</h3>
+          <h3 class="titH5">매출처별 매출 세금계산서 합계표 정보 입력</h3><!-- v1.4 워딩 수정 -->
           <div class="table_wrap">
             <table class="bbs_list">
-              <caption>매출처별 매출 세금계산서 합산표 정보 입력</caption>
+              <caption>매출처별 매출 세금계산서 합계표 정보 입력</caption>
               <colgroup>
                  <col width="25%" />
                  <col width="25%" />
@@ -130,7 +131,7 @@
                   <td>1,513,223</td>
                   <td>4%</td>
                 </tr>
-                <tr>
+                <tr class="point">
                   <th scope="row" colspan="2">합계</th>
                   <td>78,752,478</td>
                   <td>100%</td>
@@ -141,10 +142,10 @@
         </section>
          <!-- 디자인 수정 : 추가 -->
          <section class="sectionBlock40">
-          <h3 class="titH5">매입처별 매출 세금계산서 합산표 정보 입력</h3>
+          <h3 class="titH5">매입처별 매입 세금계산서 합계표 정보 입력</h3><!-- v1.4 워딩 수정 -->
           <div class="table_wrap">
             <table class="bbs_list">
-              <caption>매출처별 매출 세금계산서 합산표 정보 입력</caption>
+              <caption>매입처별 매입 세금계산서 합계표 정보 입력</caption>
               <colgroup>
                  <col width="25%" />
                  <col width="25%" />
@@ -185,7 +186,7 @@
                   <td>1,513,223</td>
                   <td>4%</td>
                 </tr>
-                <tr>
+                <tr class="point">
                   <th scope="row" colspan="2">합계</th>
                   <td>78,752,478</td>
                   <td>100%</td>
@@ -199,15 +200,10 @@
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-        <!-- 디자인 수정 : 추가 -->
-        <button type="button" class="btnGray">대출 비교 하기 취소</button>
       </div>
       <div class="btn_c">
         <!-- 디자인 수정 -->
         <button type="button" class="btnWhite">목록</button>
-      </div>
-      <div class="btn_r">
-        <a href="#" class="btnWhite ico_next">다음</a>
       </div>
     </div>
 
