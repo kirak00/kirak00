@@ -286,11 +286,14 @@ table a.btnLine       { line-height: 36px;}
 .btnBlack:disabled {border:1px solid #ddd;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
-.ico_down.btnSky {color:#fff; }
+.ico_down.btnSky,
+.ico_down.btnDkGreen {color:#fff; }
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
-.btnSuccess.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
-.btnSuccess.ico_down:disabled::after       {background-image:url(../adm_images/common/ico_24_download_w.png); }
+.btnSuccess.ico_down::after,
+.btnDkGreen.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
+.btnSuccess.ico_down:disabled::after,
+.btnDkGreen.ico_down:disabled::after       {background-image:url(../adm_images/common/ico_24_download_w.png); }
 .btnSky.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
 .btnWhite.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_blue.png); }
 .btnWhite:active.ico_down::after,
@@ -629,11 +632,19 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
-input[type=text].innerTxt_2.wid135  { width:135px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:50px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:50px;padding-right:20px; text-align: right;  }
-input[type=text].innerTxt_1.wid114 {width:114px; }
+input[type=text].innerTxt_4         { margin-right:-88px;  padding: 0 88px 0 20px; }
+input[type=text].innerTxt_4 + .unit { display: inline-block; width:80px; line-height:50px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_5         { margin-right:-102px;  padding: 0 102px 0 20px; }
+input[type=text].innerTxt_5 + .unit { display: inline-block; width:94px; line-height:50px;padding-right:20px; text-align: right;  }
+input[type=text].innerTxt_1.wid135,
+input[type=text].innerTxt_2.wid135 { width:135px; }
+input[type=text].innerTxt_1.wid114,
+input[type=text].innerTxt_2.wid114 {width:114px; }
+input[type=text].innerTxt_4.wid146,
+input[type=text].innerTxt_5.wid146 {width:146px; }
 input[type=text].innerTxt_1.wid155 {width:155px; }
 
 
@@ -749,16 +760,26 @@ select.wid430 { min-width: 430px;}
 .searchControlBox .searchBtns { display:flex; gap:8px; margin-left: auto; }
 .searchControlBox .searchBtns.fl { margin-left: 0;}
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
-.searchControlBox .searchBtns .btnSuccess {  width: auto; }
-.searchControlBox .searchBtns .btnSuccess.sm { min-width: 128px;}
+.searchControlBox .searchBtns button {  width: 128px; padding: 0; }
+/* .searchControlBox .searchBtns .btnSuccess.sm { min-width: 128px;} */
 .searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 128px; }
 .searchControlBox .searchBtns .btnReset ~ .btnWhite { padding:0 30px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
 .searchControlBox .searchBtns.wid190 button { width:190px }
+.searchControlGroup.hasBar { gap: 0;}
+.searchControlGroup.hasBar .searchControlItem { position: relative;}
+.searchControlGroup.hasBar .searchControlItem + .searchControlItem { margin-left: 20px; padding-left: 20px; }
+.searchControlGroup.hasBar .searchControlItem + .searchControlItem::before { content: ''; display: block; position: absolute; left: 0; top: 0; width: 1px; height: 50px; background: #ddd;}
+
+.searchControlBox .dateTab          {height:50px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
+.searchControlBox .dateTab button    {border:0; width:130px; height:50px; border-radius: 8px; margin:-1px 0 0 -1px; }
+.searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
+.searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
+
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
-.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 30px; line-height: 50px; white-space: nowrap;
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 20px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
 .searchControlItem .searchBtns { margin-left: 8px;}
@@ -769,8 +790,8 @@ select.wid430 { min-width: 430px;}
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
-.searchControlItem select { height: 100%; padding: 0 60px 0 30px; background: #fff url('../adm_images/common/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
-.searchControlItem .input { height: 100%; padding: 0 16px 0 30px; color: #333; font-size: 18px;}
+.searchControlItem select { height: 100%; padding: 0 60px 0 20px; background: #fff url('../adm_images/common/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
+.searchControlItem .input { height: 100%; padding: 0 16px 0 20px; color: #333; font-size: 18px;}
 .searchControlItem .input.inputXs { width: 100px;}
 .searchControlItem .input.wid360 { width: 360px;}
 .searchControlItem .unit { padding: 0 30px 0 10px; color: #333; font-size: 18px;}
@@ -794,7 +815,7 @@ select.wid430 { min-width: 430px;}
 .searchControlItem.fullChk .formRow { flex:1}
 .searchControlItem.fullChk .formRow .checkbox:last-child  { flex:1}
 
-.searchControlItem.expand { max-width: 50%;}
+/* .searchControlItem.expand { max-width: 50%;} */
 .searchControlItem.expand .formRow { width: 100%;}
 .searchControlBox.half .searchControlItem.expand { max-width: 100%;}
 
@@ -1123,6 +1144,15 @@ section   {margin:0 auto; max-width: 1400px;}
 .layerCont .table_bt { margin-top: 20px;}
 .btnBox.btn_r      { text-align: right; }
 
+.table_bt.small,
+.jsGridWrap .table_bt { min-height: 40px; margin-top: 20px;}
+.table_bt.small button,
+.table_bt.small a,
+.jsGridWrap .table_bt button,
+.jsGridWrap .table_bt a { padding: 0 30px; height: 40px; }
+.table_bt.small .btn_l * + *,
+.jsGridWrap .table_bt .btn_l * + * { margin-left: 4px;}
+
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.mt0 { margin-top: 0px;}
 .table_wrap.mt40 { margin-top: 40px;}
@@ -1394,6 +1424,7 @@ table { width: 100%;}
 .jsgrid-cell .deny { color: #888;}
 .bbs .tit { padding-left: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 
+
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
 
 .jsgrid-header-row > .jsgrid-header-cell, 
@@ -1594,6 +1625,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap.typeAlert .layerBody.wid400 { width: 400px;}
 /* .layerWrap.typeAlert .layerBody.wid400 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody.wid500       {width:500px;  }
+.layerWrap.typeAlert .layerBody.wid600       {width:600px;  }
+.layerWrap.typeAlert .layerBody.wid600 .layerFoot { padding-top: 40px; }
 /* .layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px;  font-size: 24px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead button.layerClose { top: 40px;}
@@ -2084,18 +2117,19 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 
 .inqueryGroup + .inqueryGroup { margin-top: 20px;}
 .inqueryGroup .table_bt { margin-top: 20px;}
-.table_bt { margin-top: 20px;}
+.inqueryGroup .table_bt .btn_r button { min-width: 156px;}
+.inqueryGroup .table_bt .btn_l .notiTxt { margin-top: -10px;}
 .inqueryForm .textareaWrap { padding: 40px; }
 .inqueryForm { background: #EFF5EF; padding: 40px;}
 .inqueryForm.isHide { display: none;}
 .inqueryGroup .inqueryForm { margin-top: 20px; padding: 0; background: 0;}
 .bbsReplyArea .bbsReplyBox .inqueryForm { margin-top: 30px; padding: 30px 0 0; border-top: 1px solid #ddd; background: transparent}
-.bbsReplyArea .inqueryForm { margin-top: 0; padding: 30px 40px 40px; }
+.bbsReplyArea .inqueryForm { margin-top: 0; padding: 40px; border-radius: 16px; }
 
-.bbsReplyArea {  margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
-.bbsReplyArea > *:nth-child(odd) { background: #F6FBF7}
-.bbsReplyArea > *:nth-child(even) { background: #EFF5EF}
-.bbsReplyBox {position: relative; padding: 40px; background: #F6FBF7; }
+.bbsReplyArea {  margin-top: 60px; }
+.bbsReplyArea > *:nth-child(odd) { background: #F6FBF7; border: 1px solid #ddd;}
+/* .bbsReplyArea > *:nth-child(even) { background: #EFF5EF} */
+.bbsReplyBox {position: relative; padding: 40px; border-radius: 16px; overflow: hidden; }
 .bbsReplyBox .ico_edit { position: absolute; top: 40px; right: 60px; }
 .bbsReplyBox .tit { display: flex; align-items: center;}
 .bbsReplyBox .tit .date { margin-left: 16px; color: #555; font-size: 14px; font-weight: 400;} 
@@ -2249,10 +2283,6 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .boxTableWrap .box .bbs_list td { text-align: left;}
 .boxTableWrap .box .bbs_list .formRow { justify-content: flex-start;}
 .boxTableWrap .box .input { width: 80px; text-align: right;}
-.boxTableWrap .box .sub { margin-top: 12px; color: #888;}
-.boxTableWrap .box .sub.right { margin-top: 0; margin-left: auto;}
-
-
-
-
-.btnTxt     {text-decoration: underline;}
+.boxTableWrap .box .sub {  color: #888; margin-left: auto;}
+.boxTableWrap .box .formRow + .sub { margin-top: 12px;}
+.boxTableWrap .table_bt { margin-top: 20px;}

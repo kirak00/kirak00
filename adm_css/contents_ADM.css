@@ -156,7 +156,8 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 /* dashboard */
 ul.boxWrap        {display:flex; row-gap: 20px; margin-top:20px; }
-ul.boxWrap li.box        {border:1px solid #ddd; background:#fff; border-radius: 16px; min-height:200px;  }
+ul.boxWrap li.box,
+ul.boxWrap .box         {border:1px solid #ddd; background:#fff; border-radius: 16px; min-height:200px;  }
 ul.boxWrap li.box.bgGreen        {background:#F6FBF7; }
 ul.boxWrap li.memCount        {text-align: center; padding:40px 0 0; }
 ul.boxWrap li.memCount span        {display:inline-block; font-size:16px; font-weight: 700;  }
@@ -269,25 +270,25 @@ ul.boxWrap.chartBox li.box div.pie  {display:block; width:250px; height:210px; m
 .notiTxt.tr em {margin-right:8px; }
 .notiTxt.tr::before {display:none; }
 .notiTxt button {color:#fff; margin-left:10px;  }
-ul.boxWrap.chartBox li.box ul.legend      { background:#F6FBF7; margin:0 40px; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap; border-radius:8px;     }
-ul.boxWrap.chartBox li.box ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
-ul.boxWrap.chartBox li.box ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;  }
+ul.boxWrap.chartBox .box ul.legend      { background:#F6FBF7; margin:0 40px; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap; border-radius:8px;     }
+ul.boxWrap.chartBox .box ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
+ul.boxWrap.chartBox .box ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;  }
 
 ul.boxWrap.chartBox li.box div.chart2  {display:block; width:430px; height:310px; margin:0 auto;  }
 ul.boxWrap.chartBox li.box .ment  {text-align: center; font-weight: 500;}
 
 
-ul.boxWrap.chartBox.review            {display:block; overflow: hidden; }
-ul.boxWrap.chartBox.review li.box     {float:right; width:430px; margin-left:20px; padding-bottom:30px;    }
-ul.boxWrap.chartBox.review li.box.left     {float:left; width:430px; }
-ul.boxWrap.chartBox.review li.box.left ~ .left  {margin-top:24px; }
-ul.boxWrap.chartBox.review li.box ul.legend     {width:280px; flex-direction: column; padding:10px 30px; }
-ul.boxWrap.chartBox.review li.box ul.legend li  {width:100%; margin:10px 0 }
-ul.boxWrap.chartBox.review li.box div.chart   {width:280px; height:230px; }
-ul.boxWrap.chartBox.review li.box div.pie     {width:150px; height:150px; }
-ul.boxWrap.chartBox.review li.box div.avr     {text-align: center; height:148px; }
-ul.boxWrap.chartBox.review li.box div.avr .formRow     {justify-content: center; padding:30px 0 20px }
-ul.boxWrap.chartBox.review li.box div.avr strong     {font-size: 30px; color:#069B66; }
+ul.boxWrap.chartBox.review            {display: flex; overflow: hidden; gap: 24px}
+ul.boxWrap.chartBox.review .box span.tit  {display:block; padding:40px 0 0; font-size: 18px; font-weight: 700; text-align: center;  }
+ul.boxWrap.chartBox.review .box     { width:432px; margin-left:0px; padding-bottom:30px;    }
+ul.boxWrap.chartBox.review .box.half + .box.half   { margin-top: 24px; }
+ul.boxWrap.chartBox.review .box ul.legend     {width:280px; flex-direction: column; margin: 0 auto; padding:10px 30px; }
+ul.boxWrap.chartBox.review .box ul.legend li  {width:100%; margin:10px 0 }
+ul.boxWrap.chartBox.review .box div.chart   {width:300px; height:230px; }
+ul.boxWrap.chartBox.review .box div.pie     {width:150px; height:150px; }
+ul.boxWrap.chartBox.review .box div.avr     {text-align: center; height:148px; }
+ul.boxWrap.chartBox.review .box div.avr .formRow     {justify-content: center; padding:30px 0 20px }
+ul.boxWrap.chartBox.review .box div.avr strong     {font-size: 30px; color:#069B66; }
 
 
 
@@ -331,6 +332,7 @@ ul.dashboardWrap li .dash_data span.dataSize { margin:auto;}
 ul.dashboardWrap li.items::before   { content:""; display:block; width:56px; height:56px; margin:30px auto 0; border-radius: 50%; background:url(../images/FIN/main/ico_type_F01.png) no-repeat 50% 50% #069B66; background-size:25px;  }
 
 ul.dashboardWrap + ul.dashboardWrap      {margin-top:30px; }
+ul.dashboardWrap.userEnvir + ul.dashboardWrap.userEnvir      {margin-top:20px; }
 
 ul.dashboardWrap li.rank    {padding:30px; text-align: center; }
 ul.dashboardWrap li.rank ol    {display:inline-block; text-align:left; margin-top:30px;  }

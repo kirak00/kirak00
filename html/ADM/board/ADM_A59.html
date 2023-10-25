@@ -32,214 +32,212 @@
     <section class="pageTop">
       <h2 class="pageTit">리뷰 관리</h2>
     </section> 
-<script>
-  function barChart(id,data){
-    var chartDom = document.getElementById(id);
-    chartDom.myChart = echarts.init(chartDom);
-    var colors = ['#5066B6','#46B9B2','#55D6B6','#89E3CD']
-    var titSet = [];
-    var dataSet = [];
-  
-    data.forEach((o,i) => {
-      dataSet.push({
-        value: o.data,
-        itemStyle: {
-          color: colors[i],
-          barBorderRadius: [16, 16, 0 ,0 ],
-        },
-        label: {
-          formatter: function (params) {
-            return (i+1)+`위`
-          }
-        }
-      })
-      titSet.push({
-        value: o.tit,
-        textStyle: {
-          fontSize: 16
-        },
-      })
-    });
-    var option;
-    option = {
-      label: {
-        show: true,
-        color:'#fff',
-        position: 'center',
-        align: 'center',
-        position: 'insideBottom'
-      },
-      grid : {
-        top:30,
-        bottom:30,
-        right:0
-      },
-      xAxis: { 
-        type: 'category',
-        data:titSet ,
-        axisLabel: { show: false },
-        axisTick: { show: false },
-        axisLine: { show: false }
-      },
-      yAxis: {
-        type: 'value',
-        splitLine: { show: false },
-        axisLabel: { show: false },
-        axisTick: { show: false },
-        axisLine: { show: false }
-      },
-      series: [
-        {
-          data: dataSet,
-          type: 'bar',
-        },
-      ]
-    };
-  
-    option && chartDom.myChart.setOption(option);
-  }
-</script>
+    <script>
+      function barChart(id,data){
+        var chartDom = document.getElementById(id);
+        chartDom.myChart = echarts.init(chartDom);
+        var colors = ['#5066B6','#46B9B2','#55D6B6','#89E3CD']
+        var titSet = [];
+        var dataSet = [];
+      
+        data.forEach((o,i) => {
+          dataSet.push({
+            value: o.data,
+            itemStyle: {
+              color: colors[i],
+              barBorderRadius: [16, 16, 0 ,0 ],
+            },
+            label: {
+              formatter: function (params) {
+                return (i+1)+`위`
+              }
+            }
+          })
+          titSet.push({
+            value: o.tit,
+            textStyle: {
+              fontSize: 16
+            },
+          })
+        });
+        var option;
+        option = {
+          width: '100%',
+          label: {
+            show: true,
+            color:'#fff',
+            position: 'center',
+            align: 'center',
+            position: 'insideBottom'
+          },
+          grid : {
+            top:30,
+            bottom:30,
+            left: 0,
+          },
+          xAxis: { 
+            type: 'category',
+            data:titSet ,
+            axisLabel: { show: false },
+            axisTick: { show: false },
+            axisLine: { show: false }
+          },
+          yAxis: {
+            type: 'value',
+            splitLine: { show: false },
+            axisLabel: { show: false },
+            axisTick: { show: false },
+            axisLine: { show: false }
+          },
+          series: [
+            {
+              data: dataSet,
+              type: 'bar',
+            },
+          ]
+        };
+      
+        option && chartDom.myChart.setOption(option);
+      }
+    </script>
     <section>
       <ul class="boxWrap chartBox review">
-        <li class="box left">
-          <span class="tit">제안서와 실행 금액 일치율</span>
-          
-          <div class="pie" id="pieChart_2"></div>
-          <script> 
-            var chartDom = document.getElementById('pieChart_2');
-            var myChart_pie1 = echarts.init(chartDom);
-            var option = {
-              tooltip: {
-                show:false,
-              },
-              series: [
-                {
-                  name: '제안서와 실행 금액 일치율',
-                  type: 'pie',
-                  radius: ['35%', '70%'],
-                  avoidLabelOverlap: false,
-                  itemStyle: {
-                    borderRadius: 0,
-                    borderColor: '#fff',
-                    borderWidth: 2
-                  },
-                  label: {
-                    show: true,
-                    formatter: '{@score}%',
-                    position: 'center'
-                  },
-                  emphasis: {
+        <li>
+          <div class="box half">
+            <span class="tit">제안서와 실행 금액 일치율</span>
+            <div class="pie" id="pieChart_2"></div>
+            <script> 
+              var chartDom = document.getElementById('pieChart_2');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  show:false,
+                },
+                series: [
+                  {
+                    name: '제안서와 실행 금액 일치율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
                     label: {
-                      show: false,
-                      fontSize: 20,
-                      fontWeight: 'bold'
-                    }
-                  },
-                  labelLine: {
-                    show: false
-                  },
-                  data: [
-                    { value: 20, name: '운전 자금'  , itemStyle : {color:'#ddd'} },
-                    { value: 83, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
-                  ]
-                }
-              ]
-            };
-            myChart_pie1.setOption(option);
-          </script>
-
-        </li> 
-        <li class="box">
-          <span class="tit">개선사항 순위</span>
-          
-          <div class="chart" id="barChart_4"></div>
-          <script>
-            barChart(
-              "barChart_4", 
-              [
-                {tit:"1위 신속성", data: 200},
-                {tit:"2위 편리함", data: 180},
-                {tit:"3위 다양한 금융기관의 참여", data: 120},
-                {tit:"4위 다양한 대출 제안", data: 100},
-              ]
-            )
-          </script>
-          <ul class="legend">
-            <li> <em style="background:#5066B6"></em> 1위 다양한 금융기관의 참여</li>
-            <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
-            <li> <em style="background:#55D6B6"></em> 3위 신속함</li>
-            <li> <em style="background:#89E3CD"></em> 4위 다양한 정보</li>
-          </ul>
-
-        </li>
-        <li class="box">
-          <span class="tit">Loan&Biz 만족 순위</span>
-          <div>
-            <div class="chart" id="barChart_3"></div>
-          </div>  
-          <script>
-            barChart(
-              "barChart_3", 
-              [
-                {tit:"1위 신속성", data: 200},
-                {tit:"2위 편리함", data: 180},
-                {tit:"3위 다양한 금융기관의 참여", data: 120},
-                {tit:"4위 다양한 대출 제안", data: 100},
-              ]
-            )
-          </script>
-          <ul class="legend">
-            <li> <em style="background:#5066B6"></em> 1위 신속성</li>
-            <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
-            <li> <em style="background:#55D6B6"></em> 3위 다양한 금융기관의 참여</li>
-            <li> <em style="background:#89E3CD"></em> 4위 다양한 대출 제안</li>
-          </ul>
-        </li>
-        <li class="box">
-          <span class="tit">금융 상품 만족 순위</span>
-          <div>
-            <div class="chart" id="barChart_2"></div>
-          </div>  
-          <script>
-            barChart(
-              "barChart_2", 
-              [
-                {tit:"1위 대출액", data: 200},
-                {tit:"2위 금리", data: 180},
-                {tit:"3위 상환 방식", data: 120},
-                {tit:"4위 대출 기간", data: 100},
-              ]
-            )
-          </script>
-          <ul class="legend">
-            <li> <em style="background:#5066B6"></em> 1위 대출액</li>
-            <li> <em style="background:#46B9B2"></em> 2위 금리</li>
-            <li> <em style="background:#55D6B6"></em> 3위 상환 방식</li>
-            <li> <em style="background:#89E3CD"></em> 4위 대출 기간</li>
-          </ul>
-        </li>
-        <li class="box left">
-          <span class="tit">만족도 평균</span>
-          
-          <div class="avr">
-            <div class="formRow starChkWrap">
-              <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' disabled />
-              <input type='radio' id="starChk_2" class='starChk starChk_2' name="starChk" title='별점2' disabled />
-              <input type='radio' id="starChk_3" class='starChk starChk_3' name="starChk" title='별점3' disabled checked />
-              <input type='radio' id="starChk_4" class='starChk starChk_4' name="starChk" title='별점4' disabled />
-              <input type='radio' id="starChk_5" class='starChk starChk_5' name="starChk" title='별점5' disabled />
-              <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
-              <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
-              <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
-              <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
-              <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
-            </div>
-  
-            <strong><em>10점</em></strong>
+                      show: true,
+                      formatter: '{@score}%',
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: false,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 20, name: '운전 자금'  , itemStyle : {color:'#ddd'} },
+                      { value: 83, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
           </div>
-
+          <div class="box half">
+            <span class="tit">만족도 평균</span>
+            <div class="avr">
+              <div class="formRow starChkWrap">
+                <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' disabled />
+                <input type='radio' id="starChk_2" class='starChk starChk_2' name="starChk" title='별점2' disabled />
+                <input type='radio' id="starChk_3" class='starChk starChk_3' name="starChk" title='별점3' disabled checked />
+                <input type='radio' id="starChk_4" class='starChk starChk_4' name="starChk" title='별점4' disabled />
+                <input type='radio' id="starChk_5" class='starChk starChk_5' name="starChk" title='별점5' disabled />
+                <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
+                <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
+                <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
+                <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
+                <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
+              </div>
+              <strong><em>10점</em></strong>
+            </div>
+          </div>
         </li> 
-      
+        <li>
+          <div class="box">
+            <span class="tit">금융 상품 만족 순위</span>
+            <div class="chart" id="barChart_2"></div>
+            <script>
+              barChart(
+                "barChart_2", 
+                [
+                  {tit:"1위 대출액", data: 200},
+                  {tit:"2위 금리", data: 180},
+                  {tit:"3위 상환 방식", data: 120},
+                  {tit:"4위 대출 기간", data: 100},
+                ]
+              )
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 1위 대출액</li>
+              <li> <em style="background:#46B9B2"></em> 2위 금리</li>
+              <li> <em style="background:#55D6B6"></em> 3위 상환 방식</li>
+              <li> <em style="background:#89E3CD"></em> 4위 대출 기간</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="box">
+            <span class="tit">Loan&Biz 만족 순위</span>
+            <div class="chart" id="barChart_3"></div>
+            <script>
+              barChart(
+                "barChart_3", 
+                [
+                  {tit:"1위 신속성", data: 200},
+                  {tit:"2위 편리함", data: 180},
+                  {tit:"3위 다양한 금융기관의 참여", data: 120},
+                  {tit:"4위 다양한 대출 제안", data: 100},
+                ]
+              )
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 1위 신속성</li>
+              <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
+              <li> <em style="background:#55D6B6"></em> 3위 다양한 금융기관의 참여</li>
+              <li> <em style="background:#89E3CD"></em> 4위 다양한 대출 제안</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="box">
+            <span class="tit">개선사항 순위</span>
+            
+            <div class="chart" id="barChart_4"></div>
+            <script>
+              barChart(
+                "barChart_4", 
+                [
+                  {tit:"1위 신속성", data: 200},
+                  {tit:"2위 편리함", data: 180},
+                  {tit:"3위 다양한 금융기관의 참여", data: 120},
+                  {tit:"4위 다양한 대출 제안", data: 100},
+                ]
+              )
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 1위 다양한 금융기관의 참여</li>
+              <li> <em style="background:#46B9B2"></em> 2위 편리함</li>
+              <li> <em style="background:#55D6B6"></em> 3위 신속함</li>
+              <li> <em style="background:#89E3CD"></em> 4위 다양한 정보</li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </section>
     <section class="sectionBlock40">

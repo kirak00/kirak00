@@ -28,11 +28,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">정보 마당 관리</h2>
+      <h2 class="pageTit">1:1 문의 관리</h2>
       <ul class="breadcrumb">
          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
          <li><a href="#none"><span>게시판 관리</span></a></li>
-         <li><a href="#none"><strong>정보 마당 관리</strong></a></li>
+         <li><a href="#none"><strong>1:1 문의 관리</strong></a></li>
       </ul>
     </section>
 
@@ -61,7 +61,7 @@
               <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
             </div>
             <div class="searchControlItem">
-              <label for="selectLabelState1_4" class="label">노출 상태</label>
+              <label for="selectLabelState1_4" class="label">답변 상태</label>
               <div class="formRow">
                 <select id="selectLabelState1_4">
                   <option>전체</option>
@@ -69,30 +69,27 @@
                 </select>
               </div>
             </div>
+            <div class="searchBtns">
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
           </div>
+          <!-- //v0.9 수정 -->
         </div>
       </fieldset>
       <!-- 검색 -->
    
       <div class="sectionBlock40">
         <fieldset class="tableFilterGroup">
-            <span class="count">총 <strong>84</strong>건</span>
-            <div class="formRow" role="group">
-              <select title="정렬" class="wid200">
-                <option>정렬</option>
-                <option>옵션</option> 
-              </select>
-              <button type="button" class="btnDkGreen">적용</button>
-            </div>
+          <div class="countBarSet">
+            <span class="count">총 접수 건 수 <strong>84</strong>건</span>
+            <span class="count">답변 완료 건 수 <strong>14</strong>건</span>
+          </div>
         </fieldset>
 
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs" caption="보증 예비 심사 목록"></div>    
           <div class="table_bt">
             <div id="externalPager2" class="external-pager"></div>
-            <div class="btn_r">
-              <button type="button" class="btnSuccess mm2 ico_edit">등록</button>
-            </div>
           </div>
         </div>
 
@@ -102,24 +99,22 @@
 
             var clients = [
               { 
-                "Name1": "<span class='textBold blue'>노출</span>",
+                "Name1": "<span class='textBold'>접수</span>",
                 "Name2": "2023-08-12", 
-                "Name3": "2023-07-31", 
-                "Name4": "대상", 
-                "Name5": "Loan&Biz 소개 영상", 
-                "Name6": "김신한", 
-                "Name7": "121", 
-                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
+                "Name5": "김신한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
               { 
-                "Name1": "<span class='gray'>비노출</span>",
+                "Name1": "<span class='textBold blue'>답변완료</span>",
                 "Name2": "2023-08-12", 
-                "Name3": "2023-07-31", 
-                "Name4": "대상", 
-                "Name5": "Loan&Biz 소개 영상", 
-                "Name6": "김신한", 
-                "Name7": "121", 
-                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
+                "Name5": "김신한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
             ]; 
 
@@ -128,14 +123,13 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOOOO 있어요.</p></div>",
 
               fields: [
-                { name: "Name1",  type: "text", title : "노출 여부", width: 130},
-                { name: "Name2",  type: "text", title : "등록일", width: 170},
-                { name: "Name3", type: "text", title : "종료일", width: 170 },
-                { name: "Name4", type: "text", title : "준법감시인 심의필 여부", width: 270 },
-                { name: "Name5", type: "text", title : "영상 제목", width: 'auto' },
-                { name: "Name6", type: "text", title : "등록자", width: 170 },
-                { name: "Name7", type: "text", title : "조회수", width: 160 },
-                { name: "Name8", type: "button", title : "관리", width: 220 },
+                { name: "Name1",  type: "text", title : "답변상태", width: 130},
+                { name: "Name2",  type: "text", title : "문의 작성일", width: 170},
+                { name: "Name3", type: "text", title : "문의 회원", width: 170 },
+                { name: "Name4", type: "text", title : "문의 제목", width: 'auto' },
+                { name: "Name5", type: "text", title : "답변자", width: 120 },
+                { name: "Name6", type: "text", title : "답변일", width: 170 },
+                { name: "Name7", type: "button", title : "상세", width: 230 },
               ],
               
               pagerContainer: "#externalPager2",
