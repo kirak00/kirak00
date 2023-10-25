@@ -284,11 +284,14 @@ table a.btnLine       { line-height: 36px;}
 .btnBlack:disabled {border:1px solid #ddd;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
-.ico_down.btnSky {color:#fff; }
+.ico_down.btnSky,
+.ico_down.btnDkGreen {color:#fff; }
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
-.btnSuccess.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
-.btnSuccess.ico_down:disabled::after       {background-image:url(../adm_images/common/ico_24_download_w.png); }
+.btnSuccess.ico_down::after,
+.btnDkGreen.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
+.btnSuccess.ico_down:disabled::after,
+.btnDkGreen.ico_down:disabled::after       {background-image:url(../adm_images/common/ico_24_download_w.png); }
 .btnSky.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_white.png); }
 .btnWhite.ico_down::after  {background-image:url(../adm_images/common/ico_24_download_blue.png); }
 .btnWhite:active.ico_down::after,
@@ -755,13 +758,17 @@ select.wid430 { min-width: 430px;}
 .searchControlBox .searchBtns { display:flex; gap:8px; margin-left: auto; }
 .searchControlBox .searchBtns.fl { margin-left: 0;}
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
-.searchControlBox .searchBtns .btnSuccess {  width: auto; }
-.searchControlBox .searchBtns .btnSuccess.sm { min-width: 128px;}
+.searchControlBox .searchBtns button {  width: 128px; padding: 0; }
+/* .searchControlBox .searchBtns .btnSuccess.sm { min-width: 128px;} */
 .searchControlBox .searchBtns .btnReset ~ .btnSuccess { width: 128px; }
 .searchControlBox .searchBtns .btnReset ~ .btnWhite { padding:0 30px;}
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
 .searchControlBox .searchBtns.wid190 button { width:190px }
+.searchControlGroup.hasBar { gap: 0;}
+.searchControlGroup.hasBar .searchControlItem { position: relative;}
+.searchControlGroup.hasBar .searchControlItem + .searchControlItem { margin-left: 20px; padding-left: 20px; }
+.searchControlGroup.hasBar .searchControlItem + .searchControlItem::before { content: ''; display: block; position: absolute; left: 0; top: 0; width: 1px; height: 50px; background: #ddd;}
 
 .searchControlBox .dateTab          {height:50px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
 .searchControlBox .dateTab button    {border:0; width:130px; height:50px; border-radius: 8px; margin:-1px 0 0 -1px; }
@@ -1134,10 +1141,14 @@ section   {margin:0 auto; max-width: 1400px;}
 .layerCont .table_bt { margin-top: 20px;}
 .btnBox.btn_r      { text-align: right; }
 
-.table_bt.small { min-height: 40px; margin-top: 20px;}
+.table_bt.small,
+.jsGridWrap .table_bt { min-height: 40px; margin-top: 20px;}
 .table_bt.small button,
-.table_bt.small a { padding: 0 30px; height: 40px; }
-.table_bt.small .btn_l * + * { margin-left: 4px;}
+.table_bt.small a,
+.jsGridWrap .table_bt button,
+.jsGridWrap .table_bt a { padding: 0 30px; height: 40px; }
+.table_bt.small .btn_l * + *,
+.jsGridWrap .table_bt .btn_l * + * { margin-left: 4px;}
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.mt0 { margin-top: 0px;}
@@ -1404,6 +1415,7 @@ table { width: 100%;}
 .jsgrid-cell .done { font-weight: 700;}
 .jsgrid-cell .deny { color: #888;}
 .bbs .tit { padding-left: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
 

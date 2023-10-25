@@ -39,29 +39,35 @@
       <!-- 검색 -->
       <fieldset>
         <legend>게시물 검색</legend>
-        <div class="searchControlBox half">
-          <div class="searchControlGroup">
-            <div class="searchControlItem expand">
+        <div class="searchControlBox">
+          <div class="searchControlGroup hasBar">
+            <div class="searchControlItem">
               <label for="label_tit_1" class="label">금칙어 검색</label>
               <div class="formRow">
                 <input type="text" class="input" id="label_tit_1" placeholder="">
               </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
             </div>
-            <div class="searchBtns">
-              <button type="button" class="btnSuccess">조회</button>
-            </div>
-          </div>
-        </div>
-        <div class="searchControlBox half">
-          <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="label_tit_2" class="label">금칙어 등록</label>
+            <div class="searchControlItem">
+              <label for="label_tit_2" class="label">금칙어 직접 등록</label>
               <div class="formRow">
                 <input type="text" class="input" id="label_tit_2" placeholder="">
               </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">등록</button>
+              </div>
             </div>
-            <div class="searchBtns">
-              <button type="button" class="btnSuccess">조회</button>
+            <div class="searchControlItem">
+              <label for="label_tit_3" class="label">금칙어 파일 등록</label>
+              <div class="formRow">
+                <input type="text" class="input" id="label_tit_3" placeholder="">
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnBlack">파일찾기</button>
+                <button type="button" class="btnSuccess">등록</button>
+              </div>
             </div>
           </div>
         </div>
@@ -78,6 +84,7 @@
           <div class="table_bt">
             <div id="externalPager2" class="external-pager"></div>
             <div class="btn_r">
+              <button type="button" class="btnDkGreen ico_down">양식 다운로드</button>
               <button type="button" class="btnSuccess ico_down">금칙어 다운로드</button>
             </div>
           </div>
@@ -92,13 +99,13 @@
                 "Name1": "2023-05-06",
                 "Name2": "loanbiz01", 
                 "Name3": "우리은행나빠", 
-                "Name4": "<button type='button' class='btnWhite'>삭제</button>", 
+                "Name4": "<button type='button' class='ico_delete'>삭제</button>", 
               },
               { 
                 "Name1": "2023-05-06",
                 "Name2": "loanbiz01", 
                 "Name3": "우리은행나빠", 
-                "Name4": "<button type='button' class='btnWhite'>삭제</button>", 
+                "Name4": "<button type='button' class='ico_delete'>삭제</button>", 
               },
               
             ]; 
@@ -109,7 +116,7 @@
 
               fields: [
                 { name: "Name1",  type: "text", title : "등록일", width: '25%'},
-                { name: "Name2",  type: "text", title : "등록자", width: '25%'},
+                { name: "Name2",  type: "text", title : "등록자 사번", width: '25%'},
                 { name: "Name3",  type: "text", title : "금칙어", width: '25%'},
                 { name: "Name4",  type: "text", title : "관리", width: '25%'},
               ],
