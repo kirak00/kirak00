@@ -31,11 +31,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">사용 환경</h2>
+      <h2 class="pageTit">방문 현황</h2>
       <ul class="breadcrumb">
          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
          <li><a href="#none"><span>이용자 현황</span></a></li>
-         <li><a href="#none"><strong>사용 환경</strong></a></li>
+         <li><a href="#none"><strong>방문 현황</strong></a></li>
       </ul>
     </section>
 
@@ -44,34 +44,42 @@
       <fieldset>
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
+          <!-- v0.9 수정 -->
           <div class="searchControlGroup">
             <div class="searchControlItem">
-              <label for="selectLabelState1_1" class="label">년도</label>
+              <label for="selectLabelSel1_1" class="label">회원 유형</label>
               <div class="formRow">
-                <select id="selectLabelState1_1">
-                  <option>전체</option>
+                <select id="selectLabelSel1_1" class="wid220">
+                  <option>금융 회원</option>
                   <option>전체</option>
                 </select>
               </div>
             </div>
             <div class="searchControlItem">
-              <label for="selectLabelState1_2" class="label">월</label>
+              <label for="selectLabelSel1_2" class="label">업권</label>
               <div class="formRow">
-                <select id="selectLabelState1_2">
+                <select id="selectLabelSel1_2">
                   <option>전체</option>
                   <option>전체</option>
                 </select>
               </div>
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelState1_3" class="label srOnly">기간선택</label>
-              <div class="formRow">
-                <div class="rangeControl">
-                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                  <span class="uit">~</span>
-                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-                </div>
-              </div>
+            <div class="dateTab tabScript" role="tablist">
+              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">조회 기간</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >기간 설정</button>
+            </div>
+            <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+              <select id="selectLabelState" class="wid200">
+                <option>2023년</option>
+              </select>
+              <select id="selectLabelState" class="wid200">
+                <option>7월</option>
+              </select> 
+            </div>
+            <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
             </div>
             <div class="searchBtns">
               <button type="button" class="btnSuccess">조회</button>
@@ -80,354 +88,349 @@
         </div>
       </fieldset>
       <!-- 검색 -->
-   
-      <div class="sectionBlock40">
-        
-        
-        <ul class="dashboardWrap userEnvir">
-          
-          <li class="chart_pie">
-            <strong class="tit">디바이스 별</strong>
-            <div>
-              <div class="tit2">법인 회원</div>
-              <div class="pie" id="pieChart_1"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_1'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-            <div>
-              <div class="tit2">금융 회원</div>
-              <div class="pie" id="pieChart_2"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_2'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        
-        <ul class="dashboardWrap userEnvir">
-          
-          <li class="chart_pie">
-            <strong class="tit">운영체제 별</strong>
-            <div>
-              <div class="tit2">법인 회원</div>
-              <div class="pie" id="pieChart_3"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_3'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-            <div>
-              <div class="tit2">금융 회원</div>
-              <div class="pie" id="pieChart_4"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_4'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        
-        <ul class="dashboardWrap userEnvir">
-          
-          <li class="chart_pie">
-            <strong class="tit">브라우저 별</strong>
-            <div>
-              <div class="tit2">법인 회원</div>
-              <div class="pie" id="pieChart_5"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_5'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: 'Chrome' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: 'Edge'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: 'IE'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: 'Safari'  , itemStyle : {color:'#8BDCE7'}},
-                        { value: 484, name: '기타'  , itemStyle : {color:'#89E3CD'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-                <li> <em style="background:#5066B6"></em> Chrome <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Edge <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> IE <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> Safari <strong>5%</strong></li>
-                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-            <div>
-              <div class="tit2">금융 회원</div>
-              <div class="pie" id="pieChart_6"></div>
-              <script>
-                var myChart_pie1 = echarts.init(document.getElementById('pieChart_6'));
-                var option = {
-                  tooltip: {
-                    trigger: 'item'
-                  },
-                  series: [
-                    {
-                      name: '실행 업종',
-                      type: 'pie',
-                      radius: ['35%', '70%'],
-                      avoidLabelOverlap: false,
-                      itemStyle: {
-                        borderRadius: 0,
-                        borderColor: '#fff',
-                        borderWidth: 2
-                      },
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: 20,
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [
-                        { value: 1048, name: 'Chrome' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: 'Edge'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: 'IE'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: 'Safari'  , itemStyle : {color:'#8BDCE7'}},
-                        { value: 484, name: '기타'  , itemStyle : {color:'#89E3CD'}},
-                      ]
-                    }
-                  ]
-                };
-                myChart_pie1.setOption(option);
-              </script>
-              <ul class="legend">
-
-                <li> <em style="background:#5066B6"></em> Chrome <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Edge <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> IE <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> Safari <strong>5%</strong></li>
-                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-
-
-      </div>
     </section>
+    <script>
+    function barChart_user(id,data,left,color){
+      var chartDom = document.getElementById(id);
+      chartDom.myChart = echarts.init(chartDom);
+      // var colors = ['#5066B6','#46B9B2','#55D6B6','#89E3CD','#55C6D6']
+      var titSet = [];
+      var dataSet = [];
+      data.forEach((o,i) => {
+
+        var col = color;
+        if(typeof color == 'object'){
+          col = color[i];
+        }
+        dataSet.push({
+          value: o.data,
+          itemStyle: {
+            color: col,
+            barBorderRadius: [16, 16, 0 ,0 ],
+          },
+        })
+        titSet.push({
+          value: o.tit,
+          textStyle: {
+            fontSize: 16
+          },
+        })
+      });
+      var option;
+      option = {
+        grid : {
+          left: left,
+          top:0,
+          bottom:20,
+          right:0
+        },
+        label: {
+          show: false,
+          color:'#fff',
+          position: 'center',
+          align: 'center',
+          position: 'insideBottom'
+        },
+        xAxis: { 
+          type: 'category',
+          data:titSet ,
+          splitLine: { show: false },
+          axisLabel: { show: false },
+          axisTick: { show: false },
+          axisLine: { show: false }
+        },
+        yAxis: {
+          type: 'value',
+          splitLine: { show: false },
+          axisLabel: { show: false },
+          axisTick: { show: false },
+          axisLine: { show: false }
+        },
+        series: [
+          {
+            data: dataSet,
+            type: 'bar',
+            barWidth: '52px'
+          },
+        ]
+      };
+
+      option && chartDom.myChart.setOption(option);
+    }
+    </script>
+    <section class="">
+      <ul class="boxWrap dateChartBox">
+        <li class="box">
+          <span class="tit">시간대별 </span>
+          <div>
+            <div class="chartTime" id="barChart_1" ></div>
+            <div>
+              <table>
+                <colgroup>
+                  <col span="25" width="70">
+                </colgroup>
+                <tr>
+                  <th>시간</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                  <th>13</th>
+                  <th>14</th>
+                  <th>15</th>
+                  <th>16</th>
+                  <th>17</th>
+                  <th>18</th>
+                  <th>19</th>
+                  <th>10</th>
+                  <th>21</th>
+                  <th>22</th>
+                  <th>23</th>
+                  <th>24</th>
+                </tr>
+                <tr>
+                  <td>방문</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>13</td>
+                  <td>23</td>
+                  <td>13</td>
+                  <td>33</td>
+                  <td>35</td>
+                  <td>40</td>
+                  <td>33</td>
+                  <td>13</td>
+                  <td>23</td>
+                  <td>13</td>
+                  <td>23</td>
+                  <td>13</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>13</td>
+                  <td>13</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <script>
+            barChart_user(
+              "barChart_1",
+              [
+                {tit:"1",  data: 4},
+                {tit:"2",  data: 5},
+                {tit:"3",  data: 13},
+                {tit:"4",  data: 23},
+                {tit:"5",  data: 13},
+                {tit:"6",  data: 33},
+                {tit:"7",  data: 35},
+                {tit:"8",  data: 40},
+                {tit:"9",  data: 33},
+                {tit:"10", data: 13},
+                {tit:"11", data: 23},
+                {tit:"12", data: 13},
+                {tit:"13", data: 23},
+                {tit:"14", data: 13},
+                {tit:"15", data: 7},
+                {tit:"16", data: 7},
+                {tit:"17", data: 7},
+                {tit:"18", data: 13},
+                {tit:"19", data: 13},
+                {tit:"10", data: 7},
+                {tit:"21", data: 7},
+                {tit:"22", data: 7},
+                {tit:"23", data: 7},
+                {tit:"24", data: 7},
+              ],
+              '69px',
+              '#46B9B2'
+            )
+          </script>
+        </li>
+      </ul>
+
+
+      <ul class="boxWrap dateChartBox">
+        <li class="box week">
+          <span class="tit">요일별 </span>
+          <div>
+            <div class="chartTime" id="barChart_2"  style="width:650px;"  ></div>
+            <div>
+              <table>
+                <colgroup>
+                  <col width="">
+                  <col span="7" width="70">
+                </colgroup>
+                <tr>
+                  <th>요일</th>
+                  <th>월</th>
+                  <th>화</th>
+                  <th>수</th>
+                  <th>목</th>
+                  <th>금</th>
+                  <th>토</th>
+                  <th>일</th>
+                </tr>
+                <tr>
+                  <td>방문</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>13</td>
+                  <td>23</td>
+                  <td>13</td>
+                  <td>33</td>
+                  <td>35</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <script>
+            barChart_user(
+              "barChart_2",
+              [
+                {tit:"1",  data: 4},
+                {tit:"2",  data: 5},
+                {tit:"3",  data: 13},
+                {tit:"4",  data: 23},
+                {tit:"5",  data: 13},
+                {tit:"6",  data: 33},
+                {tit:"7",  data: 35},
+              ],
+              '76px',
+              '#5066B6'
+            )
+          </script>
+        </li>
+        <li class="box">
+          <span class="tit">지역별 </span>
+          <div>
+            <div class="chartTime" id="barChart_3" style="min-width:650px"  ></div>
+            <div>
+              <table>
+                <colgroup>
+                  <col width="">
+                  <col span="14" width="68">
+                </colgroup>
+                <tr>
+                  <th>지역</th>
+                  <th>서울</th>
+                  <th>경기</th>
+                  <th>인천</th>
+                  <th>충북</th>
+                  <th>충남</th>
+                  <th>경북</th>
+                  <th>경남</th>
+                  <th>전북</th>
+                  <th>전남</th>
+                  <th>강원</th>
+                  <th>제주</th>
+                  <th>세종</th>
+                  <th>부산</th>
+                  <th>대구</th>
+                </tr>
+                <tr>
+                  <td>방문</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>13</td>
+                  <td>23</td>
+                  <td>13</td>
+                  <td>33</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>35</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <script>
+            barChart_user(
+              "barChart_3",
+              [
+                {tit:"1",  data: 4},
+                {tit:"2",  data: 5},
+                {tit:"3",  data: 13},
+                {tit:"4",  data: 23},
+                {tit:"5",  data: 13},
+                {tit:"6",  data: 33},
+                {tit:"7",  data: 35},
+                {tit:"8",  data: 35},
+                {tit:"9",  data: 35},
+                {tit:"10",  data: 35},
+                {tit:"11",  data: 35},
+                {tit:"12",  data: 35},
+                {tit:"13",  data: 35},
+                {tit:"14",  data: 35},
+              ],
+              '95px',
+              '#55D6B6'
+            )
+          </script>
+        </li>
+      </ul>
+
+      <ul class="boxWrap dateChartBox">
+        <li class="box moveType">
+          <span class="tit">행동 유형별 </span>
+          <div>
+            <div class="chartTime" id="barChart_5"    ></div>
+            <div>
+              <table>
+                <colgroup>
+                  <col width="">
+                  <col span="3" width="210">
+                </colgroup>
+                <tr>
+                  <th>행동 유형</th>
+                  <th>대출 비교하기 상세 열람 건</th>
+                  <th>심사 신청 건</th>
+                  <th>제안서 제출 건</th>
+                </tr>
+                <tr>
+                  <td>행동 수 </td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <script>
+            barChart_user(
+              "barChart_5",
+              [
+                {tit:"1",  data: 4},
+                {tit:"2",  data: 5},
+                {tit:"3",  data: 5},
+              ],
+              '200px',
+              '#89E3CD'
+            )
+          </script>
+        </li>
+      </ul>
+
+
+    </section>
+
 
   </div>
   <!-- **************** -->
