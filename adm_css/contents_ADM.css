@@ -440,15 +440,15 @@ fieldset .searchControlBox { width: 100%;}
 .winnerList { display: inline-block; margin: 30px 0 40px; background: #F6FBF7; border-radius: 16px; padding: 20px;}
 .winnerList .tit { margin-bottom: 20px;}
 .winnerList .list + .list { margin-top: 20px;} 
-.layerBody.eventPop .layerHead { display: flex; justify-content: space-between; min-height: 100px; padding: 0; border-bottom: 1px solid #ddd;}
+/* .layerBody.eventPop .layerHead { display: flex; justify-content: space-between; min-height: 100px; padding: 0; border-bottom: 1px solid #ddd;}
 .layerBody.eventPop .layerHead h3 { font-size: 18px;}
-.layerBody.eventPop .layerHead p { margin-top: 0; text-align: unset; font-weight: 400;}
+.layerBody.eventPop .layerHead p { margin-top: 0; text-align: unset; font-weight: 400;} */
 
 
 /* .barList */
-.layerBody.eventPop .layerHead .barList .list { color: #555; font-weight: 400;}
+/* .layerBody.eventPop .layerHead .barList .list { color: #555; font-weight: 400;}
 .layerBody.eventPop .layerHead .barList .list + .list { margin-left: 16px; padding-left: 16px;}
-.layerBody.eventPop .layerHead .barList .list + .list::before { background: #888;}
+.layerBody.eventPop .layerHead .barList .list + .list::before { background: #888;} */
 
 .layerCont .textTable { margin-top: 0;}
 .layerCont .textTable th, 

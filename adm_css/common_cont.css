@@ -1142,13 +1142,20 @@ section   {margin:0 auto; max-width: 1400px;}
 .btnBox.btn_r      { text-align: right; }
 
 .table_bt.small,
-.jsGridWrap .table_bt { min-height: 40px; margin-top: 20px;}
+.jsGridWrap .table_bt,
+.formListWrap.wid1020 .table_bt { min-height: 40px; margin-top: 20px;}
 .table_bt.small button,
 .table_bt.small a,
 .jsGridWrap .table_bt button,
-.jsGridWrap .table_bt a { padding: 0 30px; height: 40px; }
+.jsGridWrap .table_bt a,
+.formListWrap.wid1020 .table_bt button,
+.formListWrap.wid1020 .table_bt a { padding: 0 30px; height: 40px; }
 .table_bt.small .btn_l * + *,
-.jsGridWrap .table_bt .btn_l * + * { margin-left: 4px;}
+.jsGridWrap .table_bt .btn_l * + *,
+.formListWrap.wid1020 .table_bt .btn_l * + * { margin-left: 4px;}
+
+.layerBody.wid1400 .table_bt .btn_c button { min-width: 160px;}
+
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
 .table_wrap.mt0 { margin-top: 0px;}
@@ -1800,8 +1807,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
 .bbsDetailBox .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
 
-.layerBody.eventPop .titBox     {width:100%; padding:24px 40px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
-/* .layerBody.eventPop .titBox.typeDark { background: #069B66; color: #fff;} */
+/* .layerBody.eventPop .titBox     {width:100%; padding:24px 40px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
+.layerBody.eventPop .titBox.typeDark { background: #069B66; color: #fff;}
 .layerBody.eventPop .titBox .mainTit  { font-size: 30px; font-weight: 700;}
 .layerBody.eventPop .titBox h3.tit  { display: inline-flex; align-items: center; font-size:20px; font-weight: 700; }
 .layerBody.eventPop .titBox .badgeWhite { margin-right: 20px; }
@@ -1818,8 +1825,11 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .layerBody.eventPop .evtCont.result .evtTxt { margin-top: 0; padding-bottom: 0;}
 .layerBody.eventPop .titBox .btnSet { gap: 0;}
 .layerBody.eventPop .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
-.layerBody.eventPop .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
+.layerBody.eventPop .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;} */
 
+
+.layerBody.eventPop .table_bt { margin-top: 40px;}
+.layerBody.eventPop .layerCont { padding: 40px 60px 0;}
 
 .faqPage .bbsDetailBox .detailCont { padding: 80px 60px}
 
@@ -2111,13 +2121,13 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .inqueryGroup .table_bt { margin-top: 20px;}
 .inqueryGroup .table_bt .btn_r button { min-width: 156px;}
 .inqueryGroup .table_bt .btn_l .notiTxt { margin-top: -10px;}
+.inqueryGroup .inqueryForm {border-radius: 16px;}
 .inqueryForm .textareaWrap { padding: 40px; }
 .inqueryForm { background: #EFF5EF; padding: 40px;}
 .inqueryForm.isHide { display: none;}
 .inqueryGroup .inqueryForm { margin-top: 20px; padding: 0; background: 0;}
-.bbsReplyArea .bbsReplyBox .inqueryForm { margin-top: 30px; padding: 30px 0 0; border-top: 1px solid #ddd; background: transparent}
-.bbsReplyArea .inqueryForm { margin-top: 0; padding: 40px; border-radius: 16px; }
-
+.bbsReplyArea .bbsReplyBox .inqueryForm { margin-top: 30px; padding: 30px 0 0; border-top: 1px solid #ddd; background: transparent; border-radius: 0;}
+.bbsReplyArea .inqueryForm { margin-top: 0; padding: 40px;  }
 .bbsReplyArea {  margin-top: 60px; }
 .bbsReplyArea > *:nth-child(odd) { background: #F6FBF7; border: 1px solid #ddd;}
 /* .bbsReplyArea > *:nth-child(even) { background: #EFF5EF} */
