@@ -64,23 +64,24 @@
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
-                <label  class="label">연도</label>
-                <div class="formRow">
-                  <select name="" id="">
-                    <option value="">전체</option>
-                  </select>
-                </div>
+            </div>
+            <div class="searchControlGroup">
+              <div class="dateTab tabScript" role="tablist">
+                <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
+                <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
               </div>
-              <div class="searchControlItem">
-                <label  class="label">월</label>
-                <div class="formRow">
-                  <select name="" id="">
-                    <option value="">전체</option>
-                  </select>
-                </div>
+  
+              <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+                <select id="selectLabelState">
+                  <option>2023년</option>
+                </select>
+              
+                <select id="selectLabelState">
+                  <option>7월</option>
+                </select> 
               </div>
-              <div class="rangeControl">
+  
+              <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
                 <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
                 <span class="uit">~</span>
                 <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
@@ -100,7 +101,34 @@
           <button type="button" class="btnSky ico_down">엑셀 다운로드</button>
         </p>
         
-        <h4 class="titH4">대출 비교하기 신청 현황</h4>
+        <h4 class="titH4">회원수</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <colgroup>
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">총 회원</th>
+                <th scope="col">정상(최초 로그인)</th>
+                <th scope="col">제안서 제출 회원</th>
+                <th scope="col">대출 실행 회원</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+              </tr>
+            </thead>
+            <tbody>
+          </table>
+        </div>
+
+
+        <h4 class="titH4">제안서 제출별 지역 현황(법인 회원 본사 기준)</h4>
         <div class="table_wrap">
           <table class="bbs_list">
             <colgroup>
@@ -126,20 +154,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
               </tr>
             </thead>
             <tbody>
@@ -173,20 +201,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
               </tr>
             </thead>
             <tbody>
@@ -220,20 +248,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
-                <td>40 <br>(4%)</td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
+                <td>40 <p class="sub">(4%)</p></td>
               </tr>
             </thead>
             <tbody>
@@ -260,7 +288,7 @@
                 <tbody>
                   <tr>
                     <td>제조업</td>
-                    <td>65 <br>(10%)</td>
+                    <td>40 <p class="sub">(4%)</p></td>
                   </tr>
                 </thead>
                 <tbody>
@@ -284,7 +312,7 @@
                 <tbody>
                   <tr>
                     <td>제조업</td>
-                    <td>65 <br>(10%)</td>
+                    <td>40 <p class="sub">(4%)</p></td>
                   </tr>
                 </thead>
                 <tbody>
@@ -308,7 +336,7 @@
                 <tbody>
                   <tr>
                     <td>제조업</td>
-                    <td>65 <br>(10%)</td>
+                    <td>40 <p class="sub">(4%)</p></td>
                   </tr>
                 </thead>
                 <tbody>

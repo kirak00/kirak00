@@ -217,6 +217,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 button    {background:none; cursor: pointer; transition: background .2s; white-space: nowrap;}
 
 /* MAIN 버튼 */ 
+label.btnSuccess   ,
 a.btnSuccess   ,
 button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff  }
 .btnSky        {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff }
@@ -228,6 +229,7 @@ button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-ra
 .btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 .btnBlack.p30  {padding:0 30px; }
 
+label.btnSuccess   ,
 a.btnSuccess        {display:inline-block; line-height:50px; white-space: nowrap;}
 a.btnSky         {display:inline-block; line-height:50px; white-space: nowrap;}
 a.btnWhite       {display:inline-block; line-height:50px; white-space: nowrap;}
@@ -1120,6 +1122,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox button.btnSky { min-width:120px; padding:0 10px; }
 
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
+.table_bt.mt40      { margin-top:40px; }
 .table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .bgGray + .table_bt      { margin-top:20px; }
 .table_bt.mt20 { margin-top: 20px;}
@@ -1168,6 +1171,9 @@ table.bbs_list.hasBorder tr.require th,
 table.bbs_list.hasBorder tr.require td { background: #fafafa;}
 table.bbs_list th   {height:60px; background:#EFF5EF;  }
 table.bbs_list .double th   {height:40px; background:#EFF5EF;  }
+table.bbs_list .doubleLine th   {height:40px; background:#EFF5EF;  }
+table.bbs_list .doubleLine th[colspan="2"]   {border:1px solid #ddd; }
+table.bbs_list .doubleLine tr+tr th   {border:1px solid #ddd; }
 table.bbs_list .double2 th   {height:40px;  }
 table.bbs_list .double2 th .input { height: 32px; min-height: 32px;}
 table.bbs_list .double2.wideType th   {height:60px;  }
@@ -1396,6 +1402,8 @@ table { width: 100%;}
 .formGrayBox .input.wid240 { width: 240px;}
 
 .formLgTable .formRow { width:1000px;}
+.formLgTable .formRow.mail { width:500px;}
+.formLgTable .formRow.phone { width:300px;}
 .formLgTable .formRow.long { width:100%;}
 .formLgTable .formRow.long .num { max-width:90px;}
 .formLgTable .formRow.long .bar {display:inline-block; height:47px; border-left:1px solid #ddd; margin:0 12px;  }

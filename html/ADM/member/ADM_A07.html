@@ -122,11 +122,14 @@
                 "Name3": "새마을금고", 
                 "Name4": "종로지점", 
                 "Name5": "0850123",  
-                "Name6": "MG_1234567",
-                "Name7": "2023-10-02",  
-                "Name8": "2023-10-02", 
-                "Name9": "홍길동", 
-                "Name10": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
               },
             
             ]; 
@@ -135,7 +138,33 @@
 
             $("#jsGrid2").jsGrid({
               data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+              gridBodyClass : 'jsgrid-grid-body double',
+              headerRowRenderer: function () { //
+                var $result = $("<tr class='jsgrid-header-row'>")
+                $result.append(`
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">번호</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">금융기관 명</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">지점명</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">사업자등록번호</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">지점코드</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">아이디</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">유형</th>
+                    <th scope='col' class='jsgrid-header-cell' colspan="2">심사</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">가입일</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">인증일</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">관리자</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">비밀번호 관리</th>
+                  `); 
+                  var $tr = $("<tr class='jsgrid-header-row'>");   
+                  var grid = this;
+                  grid._eachField(function(field, index) {
+                      if (6 < index && index<9) {
+                        var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+                      } 
+                  });
+                  return $result.add($tr);
+              },
               fields: [
                 { name: "Name1",  type: "text", title : "번호", width: 110},
                 { name: "Name2",  type: "text", title : "금융기관 명", width: 110},
@@ -143,10 +172,13 @@
                 { name: "Name4", type: "text", title : "사업자등록번호", width: 110 },
                 { name: "Name5", type: "text", title : "지점코드", width: 110 },
                 { name: "Name6", type: "text", title : "아이디", width: 110 },
-                { name: "Name7", type: "text", title : "가입일", width: 110 },
-                { name: "Name8", type: "text", title : "인증일 ", width: 110 },
-                { name: "Name9", type: "text", title : "담당자", width: 110 },
-                { name: "Name10", type: "text", title : "비밀번호 관리", width: 110 },
+                { name: "Name7", type: "text", title : "유형", width: 110 },
+                { name: "Name8", type: "text", title : "횟수", width: 110 },
+                { name: "Name9", type: "text", title : "초기화", width: 110 },
+                { name: "Name10", type: "text", title : "가입일", width: 110 },
+                { name: "Name11", type: "text", title : "인증일  ", width: 110 },
+                { name: "Name12", type: "text", title : "관리자", width: 110 },
+                { name: "Name13", type: "text", title : "비밀번호 관리", width: 110 },
               ],
               
               pagerContainer: "#externalPager2",

@@ -302,7 +302,7 @@
             </div>
           </li>
           <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">평균 취급 수</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -311,7 +311,7 @@
             </div>
           </li>
           <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">평균 취급액</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -320,7 +320,7 @@
             </div>
           </li>
           <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">평균 제안 수</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -332,7 +332,7 @@
 
         <ul class="dashboardWrap">
           <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">평균 제안액</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -340,8 +340,55 @@
               </span>
             </div>
           </li>
+          <li class="chart_pie">
+            <strong class="tit">평균 성사율</strong>
+              <div class="pie2" id="pieChart_5"></div>
+              <script>
+                var myChart_pie5 = echarts.init(document.getElementById('pieChart_5'));
+                var option = {
+                  tooltip: {
+                    trigger: 'item'
+                  },
+                  series: [
+                    {
+                      name: '실행 업종',
+                      type: 'pie',
+                      radius: ['35%', '70%'],
+                      avoidLabelOverlap: false,
+                      itemStyle: {
+                        borderRadius: 0,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                      },
+                      label: {
+                      show: true,
+                      position: 'center',
+                      formatter: '{@score}%',
+                      fontSize: 20,
+                      fontWeight: 'bold'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: 20,
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        { value: 67.8, name: '성공' , itemStyle : {color:'#46B9B2'} },
+                        { value: 22.2, name: ''  , itemStyle : {color:'#ddd'}},
+                      ]
+                    }
+                  ]
+                };
+                myChart_pie5.setOption(option);
+              </script>
+          </li>
           <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">제안한 평균 금리</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -349,23 +396,52 @@
               </span>
             </div>
           </li>
-          <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <strong>238</strong>
-                <span>건</span> 
-              </span>
-            </div>
-          </li>
-          <li class="itemTxt">
-            <strong class="tit">총 취급 건수</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <strong>238</strong>
-                <span>건</span> 
-              </span>
-            </div>
+          <li class="chart_pie">
+            <strong class="tit">제안서와 실제 조건 일치율</strong>
+            <div class="pie2" id="pieChart_6"></div>
+            <script>
+              var myChart_pie6 = echarts.init(document.getElementById('pieChart_6'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '실행 업종',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: true,
+                      position: 'center',
+                      formatter: '{@score}%',
+                      fontSize: 20,
+                      fontWeight: 'bold'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 75, name: '담보' , itemStyle : {color:'#5066B6'} },
+                      { value: 25, name: ''  , itemStyle : {color:'#ddd'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie6.setOption(option);
+            </script>
           </li>
         </ul>
 
