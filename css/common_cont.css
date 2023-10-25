@@ -2261,7 +2261,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .bbsReplyBox .tit::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 .bbsReplyBox .cont { margin-top: 25px; padding-left: 30px;}
 
-.inqueryTit { display: flex; align-items: center;}
+.inqueryTit { display: flex; align-items: center; padding: 0 30px;}
 .inqueryTit .tit { width: 148px; color: #555;}
 .inqueryTit a {padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .inqueryTit .icoReply{ display: none; flex-shrink: 0; align-self: center; margin-left: 16px; font-weight: 700;}
