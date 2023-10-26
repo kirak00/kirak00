@@ -284,8 +284,8 @@ ul.boxWrap.chartBox.review .box     { width:432px; margin-left:0px; padding-bott
 ul.boxWrap.chartBox.review .box.half + .box.half   { margin-top: 24px; }
 ul.boxWrap.chartBox.review .box ul.legend     {width:280px; flex-direction: column; margin: 0 auto; padding:10px 30px; }
 ul.boxWrap.chartBox.review .box ul.legend li  {width:100%; margin:10px 0 }
-ul.boxWrap.chartBox.review .box div.chart   {width:300px; height:230px; }
-ul.boxWrap.chartBox.review .box div.pie     {width:150px; height:150px; }
+ul.boxWrap.chartBox.review .box div.chart   {width:300px; height:230px; margin: 0 auto;}
+ul.boxWrap.chartBox.review .box div.pie     {width:150px; height:150px; margin: 0 auto;}
 ul.boxWrap.chartBox.review .box div.avr     {text-align: center; height:148px; }
 ul.boxWrap.chartBox.review .box div.avr .formRow     {justify-content: center; padding:30px 0 20px }
 ul.boxWrap.chartBox.review .box div.avr strong     {font-size: 30px; color:#069B66; }
