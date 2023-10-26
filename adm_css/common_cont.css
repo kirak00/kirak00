@@ -96,7 +96,7 @@
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
 .titBg h3 + .barList { margin-top: 8px;}
 .titBg .sub { color: #EAFAEB; font-size: 14px;}
-.titBg .badgeWhite { min-width: 140px; height: 46px; margin-right: 16px; line-height: 44px; padding: 0 24px;}
+.titBg .badgeWhite { min-width: 140px; margin-right: 16px; line-height: 44px; padding: 0 24px;}
 .titBg ~ .textTable { margin-top: 40px;}
 /* .titBox .badgeBlue {min-width: 136px; height: 46px; line-height: 46px; padding: 0 24px; border-radius: 60px; font-size: 24px; } */
 .titBg ~ fieldset { margin-top: 20px; }
@@ -207,8 +207,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 **********  badge  **********
 *****************************/
 .badgeBlue { background: #EAFAEB; color: #fff; text-align: center; }
-.badgeWhite { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
-.badgeOrange { display: inline-block; height: 30px; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  }
+.badgeWhite { display: inline-block; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #069B66; border-radius: 30px; text-align: center; font-weight: 700; color:#069B66;  }
+.badgeOrange { display: inline-block; line-height: 28px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  }
 .badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
 /****************************
 **********  button  **********
@@ -1142,7 +1142,11 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 .table_bt.fullType button { width: 100%;}
 .layerCont .table_bt { margin-top: 20px;}
+.layerCont .table_bt.mt40 { margin-top: 40px;}
 .btnBox.btn_r      { text-align: right; }
+
+.layerWrap .table_bt .btn_c button,
+.layerWrap .table_bt .btn_c a {min-width:160px; }
 
 .table_bt.small,
 .jsGridWrap .table_bt,
@@ -1615,8 +1619,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; padding-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
-.layerWrap .layerBody.wid640 .layerFoot button    {min-width:160px; }
-.layerWrap .layerBody .layerFoot button    {min-width:208px; }
+/* .layerWrap .layerBody.wid640 .layerFoot button    {min-width:160px; } */
+.layerWrap .layerBody .layerFoot button    {min-width:160px; }
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}
 .layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100%); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
@@ -1805,7 +1809,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
 .bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:20px; font-weight: 700; }
 .bbsDetailBox .titBox .badgeWhite { margin-right: 20px; }
-.bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
+.bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; line-height: 46px;}
 .bbsDetailBox .titBox .brand { margin-top: 8px; color: #555; }
 .bbsDetailBox .titBox .date {color: #555; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
@@ -1836,8 +1840,15 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .layerBody.eventPop .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;} */
 
 
-.layerBody.eventPop .table_bt { margin-top: 40px;}
-.layerBody.eventPop .layerCont { padding: 40px 60px 0;}
+.layerBody.wid1400 .layerCont .titBox { margin-bottom: 40px;}
+.layerCont .evtImg img { display: block; max-width: 100%; width: 100%; margin: 0 auto; }
+.layerCont .evtImg + .evtTxt { margin-top: 40px;}
+.layerCont .titBox { display: flex; justify-content: space-between; align-items: center; margin: -40px -40px 30px; padding: 24px 40px; border-bottom: 1px solid #ddd; overflow: hidden; }
+.layerCont .titBox .tit { font-size: 18px; }
+.layerCont .titBox .date {  margin-top: 16px; color: #888;}
+.layerCont .titBox .date .label { position: relative; padding-right: 8px; margin-right: 8px;}
+.layerCont .titBox .date .label::after { position: absolute; top: 50%; right: 0; content: ''; display: block; width: 1px; height: 14px; margin-top: -7px; background: #888;}
+.layerCont .titBox .badgeWhite { width: 92px; line-height: 22px; margin-right: 16px; font-size: 14px; vertical-align: 2px;}
 
 .faqPage .bbsDetailBox .detailCont { padding: 80px 60px}
 
