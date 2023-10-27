@@ -38,11 +38,14 @@
  
     <section class="">
       <ul class="guideBox"><!--1.5 -->
-        <li>· 대출 신청 건에 대해 희망하는 알림 조건을 선택하고 해당 조건을 적용할 번호를 선택하시면 해당 조건의 대출 신청이 등록되었을 때에만 알림을 발송해 드립니다.</li>
-        <li>·  모든 대출 신청건의 알림 받기를 희망하시면 조건을 초기화 하거나 본인의 휴대전화 번호에 대한 조건 적용을 해제해 주세요.</li>
-        <li>·  수신 여부 설정을 원하시면 [마이페이지 > 메시지함 > <a href="#"><strong>메시지 알림 설정</strong></a> ] 페이지에서 ‘대출 신청 관련 알림’을 설정해 주세요.</li>
+        
+        <li>· 기업고객의 대출 신청 건에 대해 알림 받을 조건을 적용하시면 해당 조건의 대출 신청이 등록되었을 때 담당자 연락처를 통해 알림을 발송해 드립니다.</li>
+        <li>· 모든 대출 신청건의 알림 받기를 희망하시면 [설정 초기화] 버튼을 클릭 후 적용해 주세요.</li>
+        <li>· 수신 여부 설정을 원하시면 [마이페이지 > 메시지함 > <a href="#"><strong class="blue">메시지 알림 설정</strong></a> ] 페이지에서 ‘대출 신청 관련 알림’을 설정해 주세요.</li>
+        <li>·  담보대출 : 법인 회원 신청한 5억 미만 금액 5영업일, 법인 회원 신청한 5억 초과 금액 10영업일 정도 평균 소요 됩니다.</li>
       </ul>
-      <fieldset>
+      <!-- 1.6
+        <fieldset>
        <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
@@ -60,8 +63,10 @@
             </div>
           </div>
         </div>
-      </fieldset>
-      
+      </fieldset> -->
+      <div class="topRbtn">
+        <button type="button" class="btnWhite mm">설정 초기화</button>
+      </div>
       <div class="formListTable sectionBlock40">
         <table>
           <caption>희망 업체 알림 설정</caption>
@@ -186,14 +191,15 @@
             </tr>
           </tbody>
         </table>
-        <div class="notiCen mt40">
-          <p class="notiTxt">조건 설정을 변경하시면 해당 알림을 받는 모든 수신자에게 공통적으로 변경된 값이 적용됩니다.</p>
-        </div>
+        <!-- 1.6
+          <div class="notiCen mt40">
+            <p class="notiTxt">조건 설정을 변경하시면 해당 알림을 받는 모든 수신자에게 공통적으로 변경된 값이 적용됩니다.</p>
+          </div> 
+        -->
       </div>
         
       <div class="table_bt">
         <div class="btn_c">
-          <button type="button" class="btnWhite">조건 초기화</button>
           <button type="button" class="btnSuccess">적용</button>
         </div>
         <div class="btn_r">
