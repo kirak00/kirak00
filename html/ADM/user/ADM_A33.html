@@ -72,11 +72,15 @@
       <!-- 검색 -->
    
       <div class="sectionBlock40">
+        <fieldset class="tableFilterGroup">
+          <span></span>
+          <span class="dkGreen">전 일자 기준 자료</span>
+        </fieldset>
         <ul class="dashboardWrap userEnvir">
           <li class="chart_pie">
             <strong class="tit">디바이스 별</strong>
             <div>
-              <div class="tit2">법인 회원</div>
+              <!-- <div class="tit2">법인 회원</div> -->
               <div class="pie" id="pieChart_1"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_1'));
@@ -110,10 +114,10 @@
                         show: false
                       },
                       data: [
-                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: 'Mobile'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'iPad'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '기타'  , itemStyle : {color:'#8BDCE7'}},
                       ]
                     }
                   ]
@@ -128,7 +132,7 @@
               </ul>
             </div>
             <div>
-              <div class="tit2">금융 회원</div>
+              <!-- <div class="tit2">금융 회원</div> -->
               <div class="pie" id="pieChart_2"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_2'));
@@ -163,9 +167,9 @@
                       },
                       data: [
                         { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 735, name: 'Mobile'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'iPad'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 484, name: '기타'  , itemStyle : {color:'#8BDCE7'}},
                       ]
                     }
                   ]
@@ -188,7 +192,7 @@
           <li class="chart_pie">
             <strong class="tit">운영체제 별</strong>
             <div>
-              <div class="tit2">법인 회원</div>
+              <!-- <div class="tit2">법인 회원</div> -->
               <div class="pie" id="pieChart_3"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_3'));
@@ -222,10 +226,11 @@
                         show: false
                       },
                       data: [
-                        { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 1048, name: 'Windows' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: 'MacOS'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'IOS'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 284, name: 'AOS'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 200, name: '기타'  , itemStyle : {color:'#89E3CD'}},
                       ]
                     }
                   ]
@@ -233,14 +238,15 @@
                 myChart_pie1.setOption(option);
               </script>
               <ul class="legend">
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+                <li> <em style="background:#5066B6"></em> Windows <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> MacOS <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> IOS <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> AOS <strong>5%</strong></li>
+                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
               </ul>
             </div>
             <div>
-              <div class="tit2">금융 회원</div>
+              <!-- <div class="tit2">금융 회원</div> -->
               <div class="pie" id="pieChart_4"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_4'));
@@ -274,10 +280,11 @@
                         show: false
                       },
                       data: [
-                        { value: 1048, name: 'PC' , itemStyle : {color:'#5066B6'} },
-                        { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
-                        { value: 580, name: '리스'  , itemStyle : {color:'#55C6D6'}},
-                        { value: 484, name: '렌탈'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 1048, name: 'Windows' , itemStyle : {color:'#5066B6'} },
+                        { value: 735, name: 'MacOS'  , itemStyle : {color:'#46B9B2'}},
+                        { value: 580, name: 'IOS'  , itemStyle : {color:'#55C6D6'}},
+                        { value: 284, name: 'AOS'  , itemStyle : {color:'#8BDCE7'}},
+                        { value: 200, name: '기타'  , itemStyle : {color:'#89E3CD'}},
                       ]
                     }
                   ]
@@ -285,11 +292,11 @@
                 myChart_pie1.setOption(option);
               </script>
               <ul class="legend">
-
-                <li> <em style="background:#5066B6"></em> PC <strong>75%</strong></li>
-                <li> <em style="background:#46B9B2"></em> Mobile <strong>10%</strong></li>
-                <li> <em style="background:#55C6D6"></em> iPad <strong>10%</strong></li>
-                <li> <em style="background:#8BDCE7"></em> 기타 <strong>5%</strong></li>
+                <li> <em style="background:#5066B6"></em> Windows <strong>75%</strong></li>
+                <li> <em style="background:#46B9B2"></em> MacOS <strong>10%</strong></li>
+                <li> <em style="background:#55C6D6"></em> IOS <strong>10%</strong></li>
+                <li> <em style="background:#8BDCE7"></em> AOS <strong>5%</strong></li>
+                <li> <em style="background:#89E3CD"></em> 기타 <strong>5%</strong></li>
               </ul>
             </div>
           </li>
@@ -300,7 +307,7 @@
           <li class="chart_pie">
             <strong class="tit">브라우저 별</strong>
             <div>
-              <div class="tit2">법인 회원</div>
+              <!-- <div class="tit2">법인 회원</div> -->
               <div class="pie" id="pieChart_5"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_5'));
@@ -354,7 +361,7 @@
               </ul>
             </div>
             <div>
-              <div class="tit2">금융 회원</div>
+              <!-- <div class="tit2">금융 회원</div> -->
               <div class="pie" id="pieChart_6"></div>
               <script>
                 var myChart_pie1 = echarts.init(document.getElementById('pieChart_6'));
@@ -410,9 +417,6 @@
             </div>
           </li>
         </ul>
-
-
-
       </div>
     </section>
 

@@ -47,60 +47,28 @@
   <div class="layerWrap typeAlert show" id="sampleLayer" role="dialog" aria-modal="true" >
     <div class="layerBody wid600">
       <div class="layerHead">
-        <h3>새마을금고의 적용 수수료율 변경</h3>
+        <h3 class="titH4">수락하실 조건(수수료율)을 입력해 주세요.</h3>
+        <p class="notiTxt red">변경된 수수료율은 해당 건에만 적용됩니다.</p>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="resultBox">
-          <p class="blue">현재 적용 수수료율 <strong>0.5%</strong>
-          </p>
-        </div>
-        <div class="radioIndent">
-          <span class="radio">
-            <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
-            <label class="label" for="formLabel1_1"><span></span>한시적 수수료율 변경 </label>
-          </span>
-          <p class="pntCol_1 mt6">(적용 기한이 지나면 원래의 수수료율이 반영됩니다)</p>
-        </div>
-        <div class="formLisLine">
-          <div class="formList">
-            <label class="label" for="labelExtraOp1">적용 기한</label>
-            <div class="formRow">
-              <div class="rangeControl">
-                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                <span class="uit">~</span>
-                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-              </div>           
-            </div>
+        <div class="resultBox2">
+          <div class="formVertical">
+            <label class="label">현재 수수료율</label>
+            <div class="formRow">0.5%</div>
           </div>
-          <div class="formList">
-            <label class="label" for="labelExtraOp2">적용<br>수수료율</label>
+          <div class="formVertical">
+            <label class="label">현재 수수료율</label>
             <div class="formRow">
-              <input class="input innerTxt_1 wid155" id="inpLabelRate" type="text" placeholder="" value="0.50">
+              <input type="text" class="input wid108 textCenter" />
               <span class="unit">%</span>
             </div>
-          </div>
-          <div class="formList">
-            <label class="label" for="labelExtraOp3">적용 사유</label>
-            <div class="formRow">
-              <textarea id="labelExtraOp3" class="textarea h100" placeholder=""></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="radioIndent">
-          <span class="radio">
-            <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
-            <label class="label" for="formLabel1_1"><span></span>계약 변경에 의한 수수료율 변경</label>
-          </span>
-          <p class="pntCol_1 mt6">(적용 후 새롭게 생성되는 청구 내역서부터 반영됩니다)</p>
-          <div class="formRow mt20">
-            <input class="input innerTxt_1 wid135" type="text" placeholder="000" value="" title="">
-            <span class="unit">%</span>
           </div>
         </div>
       </div>
       <div class="layerFoot">
         <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">적용</button>
+        <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
       </div>
     </div>
     <div class="layerDimm"></div>

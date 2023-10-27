@@ -981,8 +981,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeAccordion { border-bottom: 1px solid #ddd}
 .agreeAccordion.noLine { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .agreeAccordion .accordionTrigger { height:80px; padding: 0 40px; background: #F6FBF7; line-height: 92px; font-size: 24px;}
-.agreeAccordion .accordionTitle { border-top: 1px solid #ddd;}
-.agreeAccordion .accordionTitle:first-child { border-top: 2px solid #069B66;}
+.agreeAccordion .accordionItem { border: none; border-top: 1px solid #ddd; border-radius: 0;}
+.agreeAccordion .accordionItem:first-child { border-top: 2px solid #069B66;}
 .agreeAccordion .accordionTitle .checkbox {position: absolute;  top: 0; height: 100%; display: flex; align-items: center; }
 .agreeAccordion .accordionTitle .checkbox label {  margin: 0 40px; font-weight: 700;}
 .agreeAccordion .accordionTitle .checkbox label span:first-child { vertical-align: -6px; }
