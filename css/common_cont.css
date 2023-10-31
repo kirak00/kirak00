@@ -319,7 +319,8 @@ table a.btnLine       { line-height: 34px;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
-.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.programDown .ico_down::after { width: 24px; height: 24px; vertical-align: -4px;}
 .btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
 .btnSky.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
@@ -341,7 +342,7 @@ a.ico_down       {color:#069B66; }
 .btnWhite:hover.ico_chart::after  {background:url(../images/common/ico_24_chart_w.png) no-repeat 50% 50%; }
 
 .ico_end       {padding:0 32px;  color:#555; font-weight: 700;}
-.ico_end::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: middle; background:url(../images/common/ico_18_setting_g.png) no-repeat 50% 50% / contain; }
+.ico_end::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_18_setting_g.png) no-repeat 50% 50% / contain; }
 
 .ico_setting       {padding:0 32px;  color:#333}
 .ico_setting::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
