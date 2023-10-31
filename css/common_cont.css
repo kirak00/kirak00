@@ -956,7 +956,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .accordion .accordionTitle .q { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; }
 .accordionTrigger { position: relative; display: flex; align-items: center; width: 100%; height: 72px; padding: 0px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #069B66; }
-.isOpen .accordionTrigger .accordionIcon { transform: rotate(180deg); }
+.isOpen .accordionTrigger .accordionIcon { transform: translateY(-50%) rotate(180deg) ; }
 .accordionIcon {  pointer-events: none; transition: .3s; position: absolute; right: 32px; top: 50%; width: 40px; height: 40px; transform: translateY(-50%); background: url(../images/common/ico_24_down.png) no-repeat center / 24px 24px;}
 .accordionPanel {  display: none; margin: 0px 40px 40px; padding: 20px; background: #F6FBF7; border-radius: 16px; line-height: 1.5;}
 .isOpen .accordionPanel {  display: block;}
@@ -967,7 +967,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 
 .formAccordion .accordionTitle  { display: flex; align-items: center;  padding: 20px 42px 20px 40px}
 .formAccordion .accordionTitle .accordionTrigger { width: 60px; height: 60px; margin-left: 2px; padding: 0; flex-shrink: 0; }
-.formAccordion .isOpen .accordionTrigger .accordionIcon { transform: rotate(180deg);}
+.formAccordion .isOpen .accordionTrigger .accordionIcon { transform: rotate(180deg) ;}
 .formAccordion .accordionTitle .label { width: 200px; flex-shrink: 0;}
 .formAccordion .accordionTitle select { flex:1}
 .formAccordion .accordionTitle .productTit { flex:1; display:flex; justify-content: space-between; font-weight: 400;}

@@ -421,6 +421,7 @@ function close_alert(){
   }
   $(".wrap").removeAttr("aria-hidden"); 
 }
+
 function layer_alert(msg , focusObj , btnObj ){
   //  aria-haspopup="dialog" data-popup="alert";
   var alertBody = $("<div>")
@@ -437,8 +438,7 @@ function layer_alert(msg , focusObj , btnObj ){
     'data-popup' : 'alert',
     role : 'dialog',
   });
-  var closeBtn = focusObj.closeBtn;
-  console.log(closeBtn)
+  var closeBtn = btnObj.closebtn?.show;
   
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
@@ -470,7 +470,7 @@ function layer_alert(msg , focusObj , btnObj ){
     `;
   }
   alertBody.html(alertHTML)
-  if(closeBtn == false){
+  if(closeBtn != true){
     alertBody.find(".alertClose").remove()
   }
 

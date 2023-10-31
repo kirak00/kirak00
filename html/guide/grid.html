@@ -48,7 +48,7 @@
           var clients = [
             {
               "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-              "상태": '심사전', "법인명": 'askldjfn', 
+              "상태": '심사전', "기업명": 'askldjfn', 
               "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
               "지역": '서울', "업종": '건설',
               "담보 유무": '유',
@@ -59,7 +59,7 @@
             },
             {
               "관심대출": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-              "상태": '심사전', "법인명": 'askldjfn', 
+              "상태": '심사전', "기업명": 'askldjfn', 
               "희망 신청 금액": "1억 2000만원 <br>~ 2억", 
               "지역": '서울', "업종": '건설',
               "담보 유무": '유',
@@ -78,7 +78,7 @@
               // { width: 70, name: "관심대출", type: "text", itemTemplate:grid_template_star },
               { width: 100, name: "관심대출", type: "text",  },
               { width: 80, name: "상태", type: "text",  },
-              { width: 120, name: "법인명", type: "text",  },
+              { width: 120, name: "기업명", type: "text",  },
               { width: 140, name: "희망 신청 금액", type: "text",  },
               { width: 70, name: "지역", type: "text",  },
               { width: 80, name: "상태", type: "text", sorting: false  },
@@ -185,7 +185,7 @@
               $result = $result.add($("<tr class='jsgrid-header-row'>")
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
-                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("기업명"))
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
                 var $tr = $("<tr class='jsgrid-header-row'>");   
                 var grid = this;
@@ -199,7 +199,7 @@
             fields: [
               { width: 200, name: "Name1", title: "관심대출", type: "text",  },
               { width: 80, name: "Name2", title: "상태", type: "text",  },
-              { width: 120, name: "Name3", title: "법인명", type: "text",  },
+              { width: 120, name: "Name3", title: "기업명", type: "text",  },
               { width: 140, name: "Name4", title: "희망 신청 금액", type: "text",  },
               { width: 200, name: "Name5", title: "지역", type: "text",  },
               { width: 200, name: "Name6", title: "업종", type: "text",  },
@@ -254,7 +254,7 @@
               $result = $result.add($("<tr class='jsgrid-header-row'>")
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("관심대출"))
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("상태"))
-                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("법인명"))
+                .append($("<th scope='col' class='jsgrid-header-cell'>").attr("rowspan", 2).text("기업명"))
                 .append($("<th scope='col' class='jsgrid-header-cell'>").attr("colspan", 4).text("Group Title")));
               $result = $result.add($("<tr class='jsgrid-header-row'>")
                 .append($("<th  scope='col' class='jsgrid-header-cell'>").text("희망 신청 금액"))
@@ -266,7 +266,7 @@
             fields: [
               { width: 200, name: "Name1", title: "관심대출", type: "text",  },
               { width: 80, name: "Name2", title: "상태", type: "text",  },
-              { width: 120, name: "Name3", title: "법인명", type: "text",  },
+              { width: 120, name: "Name3", title: "기업명", type: "text",  },
               { width: 140, name: "Name4", title: "희망 신청 금액", type: "text",  },
               { width: 200, name: "Name5", title: "지역", type: "text",  },
               { width: 200, name: "Name6", title: "업종", type: "text",  },
@@ -313,7 +313,7 @@
         $result.append(`
             <th scope='col' class='jsgrid-header-cell' rowspan="2">대출 신청일</th>
             <th scope='col' class='jsgrid-header-cell' rowspan="2">대출 신청 번호</th>
-            <th scope='col' class='jsgrid-header-cell' rowspan="2">법인명</th>
+            <th scope='col' class='jsgrid-header-cell' rowspan="2">기업명</th>
             <th scope='col' class='jsgrid-header-cell' rowspan="2">심사 시작일</th>
             <th scope='col' class='jsgrid-header-cell' rowspan="2">제안서 제출일</th>
             <th scope='col' class='jsgrid-header-cell' colspan="5">제안 정보</th>
@@ -331,7 +331,7 @@
       fields: [
         { name: "Name1", width: 120,  type: "text", title : "대출 신청일", },
         { name: "Name2", width: 130, type: "text", title : "대출 신청 번호", },
-        { name: "Name3", width: 140, type: "text", title : "법인명", },
+        { name: "Name3", width: 140, type: "text", title : "기업명", },
         { name: "Name4", width: 130, type: "text", title : "심사 시작일", },
         { name: "Name5", width: 110, type: "text", title : "제안서 제출일", },
         { name: "Name6", width: 100, type: "text",title : "제안 금액", },
