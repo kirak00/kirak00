@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+      <section>
+        <!-- 기본형 -->
+        <button type="button" class="btnSuccess" onclick='sample_alert_options(this)'>비밀번호 5회 오류</button>
+      </section>
+      <script>
+        function sample_alert_options(obj){
+          layer_alert(
+            "비밀번호 <strong>5회 오류</strong>로 로그인이 제한됩니다.<br/>‘비밀번호 재설정’을 진행해주세요.", 
+            obj, 
+            {
+              confirm : {
+                txt : "확인",
+                callback : function(){
+                }
+              },
+              closebtn : {
+                show: true, // default :  false
+                callback : function(){
+                  alert("닫기")
+                }
+              }
+            }
+          )
+        }
+      </script>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+ 
+</body>
+</html>

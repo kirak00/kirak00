@@ -22,8 +22,73 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
       <div class="table_bt">
         <div class="btn_c">
-          <button type="button" class="btnSuccess sm open_layer"  aria-controls="sampleLayer">탈퇴사유</button>
+          <button type="button" class="btnSuccess" onclick='sample_confirm_options(this)'>탈퇴 컨펌</button>
+          <!-- <button type="button" class="btnSuccess open_layer"  aria-controls="sampleLayer">진행중인 대출 비교건 있음</button> -->
+          <button type="button" class="btnSuccess" onclick='layer_confirm({tit:"진행중인 대출 비교 건이 있습니다.", ment:"탈퇴 시 진행 중인 대출 비교 건이 자동 종료됩니다.<br/>계속 진행하시겠습니까?"}, this , {confirm:{txt:"네", callback:function(){alert(3)}},cancel:{txt: "아니오"} })'>진행중인 대출 비교건 있음</button>
+          <button type="button" class="btnSuccess open_layer"  aria-controls="sampleLayer">탈퇴사유</button>
+          <button type="button" class="btnSuccess" onclick='sample_alert_2(this)'>탈퇴 완료</button>
         </div>
+        <!-- confirm 기본형 -->
+        <script>
+          function sample_confirm_options(obj){
+            layer_confirm(
+              "진행중인 대출 비교 건이 있습니다.", 
+              obj, 
+              {
+                confirm : {
+                  txt : "회원탈퇴",
+                  callback : function(){
+                    alert("확인")
+                  }
+                },
+                cancel : {
+                  txt : "취소",
+                  callback : function(){
+                    alert("취소")
+                  }
+                },
+                closebtn : {
+                  show: true, // default : true
+                  callback : function(){
+                    alert("닫기")
+                  }
+                }
+              }
+            )
+          }
+
+          
+            function sample_alert_2(obj){
+              layer_alert(
+                {
+                  tit:"회원탈퇴가 완료되었습니다.", 
+                  ment:"그동안 Loan&Biz를 이용해 주셔서 감사합니다.<br/>귀사의 대출관련정보는 000법에 의거하여<br/>00년간 보관됩니다."
+                }, 
+                obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+                {
+                  confirm:{
+                    txt:"확인",  // 버튼 문구 변경
+                    callback:function(){   // 버튼 callback func
+                      alert(3)
+                    }
+                  },
+                  // cancel:{
+                  //   callback:function(){   // 버튼 callback func
+                  //     alert('취소')
+                  //   }
+                  // },
+                  closebtn : {
+                    show: true, // default :  false
+                    callback : function(){
+                      alert("닫기")
+                    }
+                  }
+                })
+            }
+        </script>
+
+          
+        </script>
       </div>
   </div>
   <!-- **************** -->
@@ -33,7 +98,7 @@
   <!-- layer : start -->
   <!-- **************** -->
   <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-  <div class="layerWrap modal typeAlert show" id="sampleLayer" role="dialog" aria-modal="true" >
+  <div class="layerWrap modal typeAlert" id="sampleLayer" role="dialog" aria-modal="true" >
     <div class="layerBody wid400" tabindex="0">
       <div class="layerHead">
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>

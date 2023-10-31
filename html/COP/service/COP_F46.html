@@ -25,25 +25,26 @@
     <section class="pageTop">
       <h2 class="pageTit">정부 지원 사업 안내</h2>
       <ul class="breadcrumb">
-          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>서비스 안내</span></a></li>
-          <li><a href="#none"><strong>정부 지원 사업 안내</strong></a></li>
+        <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+        <li><a href="#none"><span>서비스 안내</span></a></li>
+        <li><a href="#none"><strong>정부 지원 사업 안내</strong></a></li>
       </ul>
     </section>
-
-
-    
     <section>
       <fieldset>
         <legend>게시물 검색</legend>
+        <!-- v1.6 수정 -->
         <div class="bbsSearch">
-          <span class="formRow">
-            <input class="input" type="text" name="" placeholder="공고 제목 또는 담당자를 입력해 주세요." value="">
-          </span>
-          <div class="searchBtns">
+          <div class="rangeControl">
+            <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+            <span class="uit">~</span>
+            <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+          </div>
+          <div class="searchBtns fr">
             <button type="button" class="btnSuccess">검색</button>
           </div>
         </div>
+        <!-- //v1.6 수정 -->
       </fieldset>
 
       <fieldset class="tableFilterGroup">
@@ -65,67 +66,39 @@
           <colgroup>
             <col width=""/>
             <col width="200"/>
-            <col width="100"/>
-            <col width="200"/>
-            <col width="200"/>
+            <col width="150"/><!-- v1.6 수정 -->
+            <!-- <col width="200"/> --><!-- v1.6 삭제 -->
+            <col width="150"/><!-- v1.6 수정 -->
           </colgroup>
           <thead>
             <tr>
               <th scope="col">공고 제목</th>
               <th scope="col">기관명</th>
-              <th scope="col">담당자</th>
-              <th scope="col">첨부</th>
-              <th scope="col">등록일</th>
+              <th scope="col">공고 시작일</th><!-- v1.6 워딩 수정 -->
+              <!-- <th scope="col">첨부</th> --><!-- v1.6 삭제 -->
+              <th scope="col">공고 마감일</th><!-- v1.6 워딩 수정 -->
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
               <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
+              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
+              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
               <td>2023-08-01</td>
             </tr>
             <tr>
               <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
               <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
+              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
+              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
               <td>2023-08-01</td>
             </tr>
             <tr>
               <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
               <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
-              <td>2023-08-01</td>
-            </tr>
-            <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
-              <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
-              <td>2023-08-01</td>
-            </tr>
-            <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
-              <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
-              <td>2023-08-01</td>
-            </tr>
-            <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
-              <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
-              <td>2023-08-01</td>
-            </tr>
-            <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
-              <td>중소벤처기업부</td>
-              <td>최미선</td>
-              <td><button type="button" class="ico_down">다운로드</button></td>
+              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
+              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
               <td>2023-08-01</td>
             </tr>
           </tbody>
