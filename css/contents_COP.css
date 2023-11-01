@@ -342,3 +342,5 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 
 .boardCont .con { max-height: 400px; overflow: auto; padding: 20px; line-height: 1.5; }
 .boardCont .attachBox { padding: 20px; margin-top: 20px; border-top: 1px solid #ddd;}
+.boardCont .attachBox li { display: block; width: 100%;}
+.boardCont .attachBox li + li { margin-top: 4px;}

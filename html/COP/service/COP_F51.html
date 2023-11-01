@@ -23,31 +23,32 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">이벤트</h2>
+      <h2 class="pageTit">공지사항</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>서비스 안내</span></a></li>
-          <li><a href="#none"><strong>이벤트</strong></a></li>
+          <li><a href="#none"><strong>공지사항</strong></a></li>
       </ul>
     </section>
     <!-- 디자인 수정 .tabLineWrap 추가 및 위치이동 -->
-    <div class="tabLineWrap">
+    <!-- v1.6 탭 삭제 -->
+    <!-- <div class="tabLineWrap">
       <div class="inner">
-        <!-- v1.4 반영 탭삭제 -->
+        v1.4 반영 탭삭제
         <ul class="tabLine">
           <li><a href="COP_F49.html">진행중인 이벤트</a></li>
           <li><a href="COP_F491.html">종료된 이벤트</a></li> 
-          <!-- v1.4 반영 워딩수정 -->
+          v1.4 반영 워딩수정
           <li class="on"><a href="COP_F51.html">공지사항 및 이벤트 당첨자 발표</a></li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <!-- 디자인 수정 .sectionBlock40 추가 -->
     <section class="sectionBlock40">
       
       <div class="evtWinner">
-        
-        <fieldset>
+        <!-- v1.6 삭제 -->
+        <!-- <fieldset>
           <legend>이벤트 검색</legend>
           <div class="bbsSearch">
             <span class="formRow">
@@ -57,7 +58,7 @@
               <button type="button" class="btnSuccess">검색</button>
             </div>
           </div>
-        </fieldset>
+        </fieldset> -->
 
         <!-- v1.4 수정 -->
         <fieldset class="tableFilterGroup">
@@ -72,9 +73,7 @@
         </fieldset>
         <div class="table_wrap">
           <table class="bbs_list">
-            <caption>
-              제안서 제출 가능 목록
-            </caption>
+            <caption>공지사항 목록</caption><!-- v1.6 수정 -->
             <colgroup>
               <col width=""/>
               <col width="300"/>
@@ -82,18 +81,22 @@
             <thead>
               <!-- v1.4 수정 -->
               <tr>
-                <th scope="col">공지사항</th>
+                <th scope="col">공지사항</th><!-- v1.6 수정 -->
                 <th scope="col">등록일</th>
               </tr>
             </thead>
             <tbody>
               <!-- v1.4 수정 -->
               <tr>
-                <td class="tit"><span class="badgeWhite">공지사항</span><a href="COP_F52.html">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td class="tit"><span class="badgeRed">긴급</span><a href="COP_F50_2.html">긴급인데 서버 점검 안내 드립니다. 라고?? 서버 점검은 저기 있는딩..!</a></td><!-- v1.6 badgeWhite 수정 -->
                 <td>2023-08-01</td>
               </tr>
               <tr>
-                <td class="tit"><span class="badgeOrange">당첨자 발표</span><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+                <td class="tit"><span class="badgeOrange">서버 점검</span><a href="#"> 서버 점검이 왜 공지사항 일까.. 공지사항</a></td><!-- v1.6 badgeBlue 수정 -->
+                <td>2023-08-01</td>
+              </tr>
+              <tr>
+                <td class="tit"><span class="badgeWhite">공지사항</span><a href="#"> 그냥 평범한 공지사항은 없는걸까..?</a></td><!-- v1.6 badgeBlue 수정 -->
                 <td>2023-08-01</td>
               </tr>
             </tbody>
