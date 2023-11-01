@@ -38,12 +38,13 @@
           <h3>S_230809_0001</h3>
           <ul class="barList">
             <li class="list"><strong>시설자금 대출</strong></li>
-            <li class="list">대출 비교 하기일 : 2023-09-08</li>
+            <li class="list">대출 비교 신청일 : 2023-09-08</li><!-- v1.6 수정 -->
+            <li class="list">희망 대출 금액(최대): 600,000,000 (육억원)</li><!-- v1.6 수정 -->
             <li class="list">제안서 마감일 : 2023-09-15</li>
           </ul>
         </div>
         <!-- <p class="sub">대출 신청 번호  S_230809_0001</p> -->
-        <button type="button" class="btnWhiteLine2">대출 비교 하기 정보</button>
+        <button type="button" class="btnWhiteLine2">대출 비교 신청 정보</button><!-- v1.6 워딩 수정 -->
       </div>
 
       <section class="sectionBlock20">
@@ -68,22 +69,22 @@
             { 
               "Name1": "신용보증기관<br/>신촌지점", 
               "Name2": "2023-08-10", 
-              "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", // v1.6 삭제 
               "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
               "Name5": "85%", 
               "Name6": "홍길동", 
               "Name7": "02-2345-1234", 
-              "Name8": "<button type='button' class='btnWhite'>열람</button>", 
+              "Name8": "<button type='button' class='btnWhite wid84'>열람</button>",// v1.6 .wid84 추가
             },
             { 
               "Name1": "신용보증기관<br/>신촌지점", 
               "Name2": "2023-08-10", 
-              "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
               "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
               "Name5": "85%", 
               "Name6": "홍길동", 
               "Name7": "02-2345-1234", 
-              "Name8": "<button type='button' class='btnWhite'>열람</button>", 
+              "Name8": "<button type='button' class='btnWhite wid84'>열람</button>", 
             },
           ];
           $("#jsGrid").jsGrid({
@@ -92,7 +93,7 @@
             fields: [
               { name: "Name1", type: "text", title : "보증기관", width: 150},
               { name: "Name2", type: "text", title : "예비 심사 제출일", width: 150},
-              { name: "Name3", type: "text", title : "희망 대출액(최대)", width: 190},
+              // { name: "Name3", type: "text", title : "희망 대출액(최대)", width: 190}, // v1.6 삭제 
               { name: "Name4", type: "text", title : "보증 예상 금액", width: 190},
               { name: "Name5", type: "text", title : "보증 비율", width: 130},
               { name: "Name6", type: "text", title : "심사 담당자", width: 130},
@@ -127,24 +128,46 @@
             { 
               "Name1": "신한적축은행<br/>광교 영업점", 
               "Name2": "2023-08-10", 
-              "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", // v1.6 삭제 
+              "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
+              "Name5": "4.6%", 
+              "Name6": "홍*동", 
+              "Name7": "02-2**5-1**4", 
+              "Name8": "-", 
+              "Name9": "<strong>미열람</strong>", 
+            },
+            { 
+              "Name1": "신한적축은행<br/>광교 영업점", 
+              "Name2": "2023-08-10", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", // v1.6 삭제 
+              "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
+              "Name5": "4.6%", 
+              "Name6": "홍*동", 
+              "Name7": "02-2**5-1**4", 
+              "Name8": "-", 
+              "Name9": "<span class='gray'>회수</span>", 
+            },
+            { 
+              "Name1": "신한적축은행<br/>광교 영업점", 
+              "Name2": "2023-08-10", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", // v1.6 삭제 
               "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
               "Name5": "4.6%", 
               "Name6": "홍길동", 
               "Name7": "02-2345-1234", 
-              "Name8": "-", 
+              "Name8": "<strong class='gray'>N</strong>", 
               "Name9": "열람", 
             },
             { 
               "Name1": "신한적축은행<br/>광교 영업점", 
               "Name2": "2023-08-10", 
-              "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+              // "Name3": "600,000,000<p class='sub'>(육억원)</p>", // v1.6 삭제 
               "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
               "Name5": "4.6%", 
               "Name6": "홍길동", 
               "Name7": "02-2345-1234", 
-              "Name8": "-", 
-              "Name9": "열람", 
+              "Name8": "<strong class='blue'>Y</strong> (2023-09-01)", 
+              "Name9": "<strong class='blue'>채택</strong>", 
             },
           ];
           $("#jsGrid2").jsGrid({
@@ -153,12 +176,12 @@
             fields: [
               { name: "Name1", type: "text", title : "금융 기관 명", width: 160},
               { name: "Name2", type: "text", title : "제안서 제출일", width: 130},
-              { name: "Name3", type: "text", title : "희망 대출액(최대)", width: 190},
+              // { name: "Name3", type: "text", title : "희망 대출액(최대)", width: 190}, // v1.6 삭제 
               { name: "Name4", type: "text", title : "제안 대출 금액", width: 190},
               { name: "Name5", type: "text", title : "제안 금리", width: 100},
               { name: "Name6", type: "text", title : "제안 담당자", width: 120},
               { name: "Name7", type: "text", title : "문의 전화 번호", width: 130},
-              { name: "Name8", type: "text", title : "제안서 채택일", width: 150},
+              { name: "Name8", type: "text", title : "제안서 채택 여부", width: 150}, // v1.6 수정 
               { name: "Name9", type: "text", title : "제안서 상태", width: 130},
             ],
             pagerContainer: "#externalPager2",

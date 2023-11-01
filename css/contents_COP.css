@@ -204,6 +204,9 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .moneyTxt em     {}
 .moneyTxt span   {display:block; color:#888; }
 
+.sectionLine .main_survey { margin: 0; padding: 0; }
+.sectionLine .main_survey dt { padding-top: 0; font-weight: 700;}
+.sectionLine .main_survey dt ~ dt { margin-top: 40px; }
 .main_survey      {margin-top:10px; background:#fff; padding:40px; border-radius: 16px;  }
 .main_survey dt   { padding:24px 0 20px;  }
 .main_survey dt ~ dt   {margin-top:30px; }

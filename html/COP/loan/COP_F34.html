@@ -20,28 +20,35 @@
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container bgGray" id="skip_content"  aria-label="컨텐츠">
-    <section class="pageTop">
-      <h2 class="pageTit">대출 비교하기</h2>
-      <ul class="breadcrumb">
-          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><strong>대출 비교 하기</strong></a></li>
-      </ul>
-    </section>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section>
-      <div class="doneWrap">
-        <i class="ico icoPerson"></i>
-        <p class="subTit">대출 비교 서비스를 이용하기 위해선<br/>
-          로그인 또는 회원가입 후 이용할 수 있어요.</p>
-        <!-- 수정 : 위치 이동-->
-        <div class="table_bt">
-          <div class="btn_c">
-            <button type="button" class="btnSuccess">로그인</button>
-            <button type="button" class="btnWhite">회원가입 </button>
-          </div>
-        </div>
-      </div>
+      <button type="button" class="btnSuccess" id="confirmClick">비로그인 접근</button>
     </section>
+        <script>
+          $("#confirmClick").on("click",function(){
+            // layer alert
+            layer_confirm(
+              "대출 비교 서비스를 이용하기 위해선<br/>로그인 또는 회원가입이 필요합니다.",
+              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "로그인", 
+                  callback : function(){ 
+                    alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "회원가입",
+                  callback : function(){
+                    alert(2)
+                  }
+                }
+              }
+            )
+            // layer alert
+
+          })
+        </script>
 
     
   </div>
