@@ -19,7 +19,7 @@
 
 */
 /* layout */
-body    {min-width:1920px;  }
+body    {min-width:1820px;  }
 .headerCont   {width:1920px;  padding:16px 60px 0; height:130px; }
 .headerUtil   {display:none; }
 .headerCont ul.gnb    {position:absolute; width:100%; top:80px; padding:0;  }
@@ -62,7 +62,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .bgWrap       {padding:40px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#FAFAFA; }
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
 
-section       {max-width:1920px; padding:0 60px;  }
+section       {max-width:1820px;   }
 .bgWrap section { padding: 0 120px}
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }

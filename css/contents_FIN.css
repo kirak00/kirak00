@@ -50,7 +50,7 @@ ul.loginTab li button.loginTabBtn  { position:absolute; height:70px; width:50%; 
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
 ul.loginTab li + li button.loginTabBtn  { left:50%;  }
-ul.loginTab li div.login_form  { position:absolute; left:0; top:110px; width:530px;  display:none; margin:0px 0 0;   }
+ul.loginTab li div.login_form  { position:absolute; left:0; top:110px; width:460px;  display:none; margin:0px 0 0;   }
 ul.loginTab li.on div.login_form    { display:block;}
 ul.loginTab li.on.fast div.login_form    { transition:none;}
 ul.loginTab li .row + .row  { margin-top:20px; }
@@ -418,5 +418,11 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .checkbox.ml30    {margin-left:30px; }
 
 .topRbtn    {text-align: right; margin-top:40px }
+
+.alarmSettingInfo       {margin-top:50px; padding-top:260px;  text-align: center; background:url(../images/FIN/img_alarm.png) no-repeat 50% 0; }
+.alarmSettingInfo .ment  {}
+.alarmSettingInfo .ment strong  {font-size:18px;  color:#069B66; }
+.alarmSettingInfo .ment p       {margin-top:20px; }
+
 
 /* 진희 */
