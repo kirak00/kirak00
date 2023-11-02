@@ -272,11 +272,11 @@ button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-ra
 .btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 .btnBlack.p30  {padding:0 30px; }
 
-a.btnSuccess        {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnSky         {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnWhite       {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnGray       {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnLine       {display:inline-block; line-height:50px; white-space: nowrap; }
+a.btnSuccess,
+a.btnSky,
+a.btnWhite,
+a.btnGray,
+a.btnLine,
 a.btnBlack, label.btnBlack       {display:inline-block; line-height:50px; white-space: nowrap;}
 
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; }

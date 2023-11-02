@@ -121,8 +121,8 @@ ul.main_loan_info li.step_4::before   {background-image: url(../images/COP/main/
 ul.main_loan_info li em   {color:#069B66; font-weight: 700;  }
 ul.main_loan_info li strong   {display:block; margin-top:0px; font-size:20px; padding:0 0; }
 ul.main_loan_info li strong em {color:#069B66; }
-ul.main_loan_info li p   {margin-top:8px; font-size: 16px; }
-ul.main_loan_info li div.txt   {position:relative; margin-top:20px; padding-top:20px; font-size: 14px; border-top:1px solid #ddd; }
+ul.main_loan_info li p   {margin-top:8px; font-size: 16px; min-height: 38px; }
+ul.main_loan_info li div.txt   {position:relative; margin-top:20px; padding-top:0px; font-size: 14px; border-top:1px solid #ddd; }
 /* ul.main_loan_info li div.txt::before   {content:""; position:absolute; left:50%; top:0; width:180px;  transform: translateX(-50%);} */
 ul.main_loan_info li span   {display:inline-block; white-space: nowrap;}
 ul.main_loan_info li .main_btn   {padding-bottom:0px; text-align: left; padding-top:20px; }
@@ -153,6 +153,7 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_progress ol.status_tab li a {display:block; padding-top:150px; height:260px; text-decoration: none;  }
 .main_loan_progress ol.status_tab li em {display:block; color:#069B66; font-size: 16px; font-weight: 700;  } 
 .main_loan_progress ol.status_tab li strong {display:block; margin-top:10px; font-size: 18px; font-weight: 700;  }
+.main_loan_progress ol.status_tab li .sub { font-size: 14px; }
 .main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
 .main_loan_progress ol.status_tab li.disabled { background-color: #fafafa; border-color: #fafafa;}
 .main_loan_progress ol.status_tab li.disabled em,
@@ -186,14 +187,20 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_cont .list .status button em     {display:block; line-height: 25px; padding:0 14px; border:1px solid #069B66; flex:0; color:#069B66; border-radius: 30px;  }
 .main_loan_cont .list .status button.on span   {color:#069B66; font-weight: 700; text-decoration: underline; }
 .main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
-.main_loan_cont .no_data        { background:transparent; padding:90px 0; font-size: 20px; height:auto; text-align: center;  }   
-.main_loan_cont .no_data span     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0; } 
+.main_loan_cont .no_data        { background:transparent; padding:60px 0 0; font-size: 20px; height:auto; text-align: center;  }   
+.main_loan_cont .no_data .tit     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0 / 80px 80px; } 
 .main_loan_cont .no_data span.btn {display:block; background:none !important; padding:0; display:block; text-align: center; padding:40px 0 0; }   
+.main_loan_cont .no_data span.btn button { min-width: 214px;}
 /* .main_loan_cont .no_data span.btn button.btnSuccess {width:210px; }  */
-.main_loan_cont .no_data.bg_regist span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_01.png); }  
-.main_loan_cont .no_data.bg_review span       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02.png); } 
-.main_loan_cont .no_data.bg_endtime span      {background-image:url(../images/COP/main/ico_80_log_process_nodata_03.png); } 
-.main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); } 
+.main_loan_cont .no_data.bg_regist .tit       {background-image:url(../images/COP/main/ico_80_log_process_nodata_01.png); }  
+.main_loan_cont .no_data.bg_review .tit       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02.png); } 
+.main_loan_cont .no_data.bg_reviewing .tit       {background-image:url(../images/COP/main/ico_80_log_process_nodata_02_2.png); } 
+.main_loan_cont .no_data.bg_endtime .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); } 
+.main_loan_cont .no_data.bg_survey .box { width: 832px; margin: 0 auto; padding: 40px; background: #fff; border-radius: 16px; border: 1px solid #ddd; }
+.main_loan_cont .no_data.bg_survey .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_05.png); } 
+.main_loan_cont .no_data.bg_survey .formVertical { width: 440px; margin: 0 auto; align-items: flex-start; margin-top: 40px; gap: 30px; }
+.main_loan_cont .no_data.bg_survey .tit { font-size: 18px; font-weight: 700;}
+/* .main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); }  */
 .main_loan_cont .table_top .total     {font-weight: 700;} 
 .main_loan_cont .titBox     {padding:40px 0 20px; text-align: center; }
 .main_loan_cont .titBox strong  {font-size: 24px; }
@@ -207,8 +214,10 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .sectionLine .main_survey { margin: 0; padding: 0; }
 .sectionLine .main_survey dt { padding-top: 0; font-weight: 700;}
 .sectionLine .main_survey dt ~ dt { margin-top: 40px; }
-.main_survey      {margin-top:10px; background:#fff; padding:40px; border-radius: 16px;  }
-.main_survey dt   { padding:24px 0 20px;  }
+.bgWrap .main_survey { border: 1px solid #ddd; }
+.main_survey      { background:#fff; padding:40px; border-radius: 16px;  }
+.main_survey dt   { padding:0px 0 20px; font-weight: 500; }
+.main_survey dt .blue { vertical-align: 0;}
 .main_survey dt ~ dt   {margin-top:30px; }
 .main_survey dd   {padding-left:8px; }
 .main_survey dd input[type=radio].starChk ~ label   {height:24px; }
@@ -244,7 +253,7 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 
 /* 서비스 - 대출절차 */
 .serviceInfo_visual         { width:1415px; height:356px; margin:0 auto 0px; background:url(../images/COP/img_service_info.png) no-repeat 0 0; }
-.serviceInfo_visual.login   { width:1400px; height:322px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0;}
+.serviceInfo_visual.login   { width:1400px; height:322px; margin-bottom:80px;  background:url(../images/COP/main/img_main_step_info.png) no-repeat 0 0 / contain;}
 .serviceInfo_visual.loan   { width:1400px; height:388px; margin: 20px 0 0; background:url(../images/COP/img_service_info.png) no-repeat 0 0/ cover;}
 .serviceInfo_txt            { margin-top:-30px;}
 .notiTxt + .serviceInfo_txt { margin-top: 10px}
