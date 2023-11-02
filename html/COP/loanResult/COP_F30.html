@@ -57,7 +57,25 @@
                 </span>
               </div>
             </dd>
-            <dt>· 대출을 진행한 금융회사에 대한 만족도를 평가해 주세요.</dt>
+            <!-- v1.6 수정 -->
+            <dt>· 금융기관 선택 기준 (복수 선택 가능)</dt>
+            <dd>
+              <div class="formRow flexWrap">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>대출 금액(한도)</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>대출 금리</label>
+                </span>
+                <div class="formSet full">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>기타</label>
+                  </span>
+                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
+                </div>
+               </div>
+             </dd>
+            <dt>·  대출을 진행한 금융기관에 대한 만족도를 평가해 주세요.</dt>
             <dd>
               <div class="formRow starChkWrap">
                 <input type="radio" id="starChk_1" class="starChk starChk_1" name="starChk" title="별점1">
@@ -72,72 +90,50 @@
                 <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
               </div>
             </dd>
-            <dt>·  자금 조달된 금융상품에 대해 만족하신 부분을 선택해 주세요. (복수 선택 가능)</dt>
+            <dt>·  향후 Loan&amp;Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
             <dd>
-              <div class="formRow flexWrap">
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>대출액</label>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chk_2_1" name="chk_2" value="A">
+                  <label for="chk_2_1"><span></span>네</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>금리</label>
+                <span class="radio">
+                  <input type="radio" id="chk_2_2" name="chk_2" value="A">
+                  <label for="chk_2_2"><span></span>아니오</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>대출기간</label>
-                </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_4" name="CheckBox"><label for="chk_1_4"><span></span>상환 방식</label>
-                </span>
-                <div class="formSet">
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk_1_5" name="CheckBox"><label for="chk_1_5"><span></span>기타</label>
-                  </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
-                </div>
               </div>
             </dd>
-            <dt>·  Loan&amp;Biz의 서비스 중 어떤 부분이 도움이 되셨나요? (복수 선택 가능)</dt>
+           
+            <dt>·  Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
             <dd>
               <div class="formRow flexWrap">
                 <span class="checkbox">
-                  <input type="checkbox" id="chk_2_1" name="CheckBox"><label for="chk_2_1"><span></span>편리함</label>
+                  <input type="checkbox" id="chk_3_1" name="CheckBox"><label for="chk_3_1"><span></span>제휴된 금융기관이 많아서</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk_2_2" name="CheckBox"><label for="chk_2_2"><span></span>신속함</label>
+                  <input type="checkbox" id="chk_3_2" name="CheckBox"><label for="chk_3_2"><span></span>대출 탐색시간이 줄어서</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_2_3" name="CheckBox"><label for="chk_2_3"><span></span>다양한 금융회사의 참여</label>
-                </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_2_4" name="CheckBox"><label for="chk_2_4"><span></span>다양한 대출 제안</label>
-                </span>
-                <div class="formSet">
+                <div class="formSet full">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk_2_5" name="CheckBox"><label for="chk_2_5"><span></span>기타</label>
+                    <input type="checkbox" id="chk_3_3" name="CheckBox"><label for="chk_3_3"><span></span>기타</label>
                   </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
+                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
                 </div>
               </div>
-            </dd>
-            <dt>·  개선이 필요한 사항을 알려주세요. (복수 선택 가능)</dt>
+            <dt>·  Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
             <dd>
               <div class="formRow flexWrap">
                 <span class="checkbox">
-                  <input type="checkbox" id="chk_3_1" name="CheckBox"><label for="chk_3_1"><span></span>편리함</label>
+                  <input type="checkbox" id="chk_4_1" name="CheckBox"><label for="chk_4_1"><span></span>복잡한 절차</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk_3_2" name="CheckBox"><label for="chk_3_2"><span></span>신속함</label>
+                  <input type="checkbox" id="chk_4_2" name="CheckBox"><label for="chk_4_2"><span></span>플랫폼 속도</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_3_3" name="CheckBox"><label for="chk_3_3"><span></span>다양한 금융회사의 참여</label>
-                </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_3_4" name="CheckBox"><label for="chk_3_4"><span></span>다양한 정보</label>
-                </span>
-                <div class="formSet">
+                <div class="formSet full">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk_3_5" name="CheckBox"><label for="chk_3_5"><span></span>기타</label>
+                    <input type="checkbox" id="chk_4_3" name="CheckBox"><label for="chk_4_3"><span></span>기타</label>
                   </span>
-                  <input type="text" class="input wid300" title="기타 내용 입력" placeholder="정보를 입력해 주세요." value="감사합니다.">
+                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
                 </div>
               </div>
             </dd>

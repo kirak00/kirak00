@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section>
+     <!-- 
+      * 레이어 호출
+      class="open_layer"  // 팝업 호출
+      aria-controls="레이어 ID" // 접근성 팝업 알림용
+      -->
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">추가 서류 관리</button>
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
+    <!-- 너비 800px 경우 .sizeM 추가 -->
+    <div class="layerBody wid1000">
+      <div class="layerHead">
+        <h3>추가 서류 관리</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <h4 class="titH6 textRegular">추가하실 서류를 등록해 주세요.</h4>
+          <div class="formListRow">
+            <div class="formList">
+              <label class="label wid62" for="labelExtraOp1">파일명</label>
+              <div class="formRow filebox">
+                <!-- <input class="input" id="labelExtraOp1" type="text" placeholder="" value="사업장부동산등기부등본.pdf">
+                <button type="button" class="btnBlack">파일 첨부</button> -->
+
+                <input type="text" class="input" placeholder="파일을 첨부해 주세요." value="사업장부동산등기부등본.pdf" disabled="disabled" title="선택 파일">
+                <label for="exFilename" class="btnDkGray">파일 첨부</label>
+                <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+              </div>
+              <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF, IMG 입니다. <br/>
+                업로드는 최대 50MB까지 가능합니다.</p>
+            </div>
+            <div class="formList">
+              <label class="label wid62" for="labelExtraOp1">서류명</label>
+              <div class="formRow">
+                <input class="input" id="labelExtraOp1" type="text" placeholder="" value="사업장부동산등기부등본.pdf">
+              </div>
+            </div>
+          </div>
+          <div class="searchBtns">
+            <button type="button" class="btnSuccess">등록</button>
+          </div>
+        </div>
+      </fieldset>
+      <div class="layerCont">
+        <section>
+          <h4 class="titH4">나의 서류함</h4>
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <colgroup>
+                <col width="170px"/>
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">대출 비교 신청<br/>자료 활용 여부</th>
+                  <th scope="col">서류명</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <select title="" class="arrow">
+                      <option>노출</option>
+                    </select>
+                  </td>
+                  <td>법인 공동대표 동의서</td>
+                  <td>2023-07-11</td>
+                  <td>
+                    <div class="btnBarSet">
+                      <button type="button" class="ico_preview">미리보기</button>
+                      <button type="button" class="ico_delete">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select title="" class="arrow">
+                      <option>노출</option>
+                    </select>
+                  </td>
+                  <td>본사 등기부 등본</td>
+                  <td>2023-07-11</td>
+                  <td>
+                    <div class="btnBarSet">
+                      <button type="button" class="ico_preview">미리보기</button>
+                      <button type="button" class="ico_delete">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="sectionBlock40">
+          <h4 class="titH4">금융기관 요청 서류</h4>
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <colgroup>
+                <col width="170px"/>
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">금융기관명</th>
+                  <th scope="col">필요 서류 안내</th>
+                  <th scope="col">요청일</th>
+                  <th scope="col">서류 제출 여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>롯데캐피탈</td>
+                  <td>종합소득세</td>
+                  <td>2023-07-11</td>
+                  <td>
+                    <button type="button" class="ico_file1">제출 서류 선택</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>롯데캐피탈</td>
+                  <td>사업자등록증</td>
+                  <td>2023-07-11</td>
+                  <td>
+                    <button type="button" class="ico_down">다운로드</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>

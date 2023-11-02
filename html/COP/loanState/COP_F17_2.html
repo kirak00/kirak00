@@ -46,9 +46,9 @@
     <div class="bgGray">
       <section class="">
         <ul class="innerTab tabScript" role="tablist">
-          <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">재무자료 수집</button></li>
-          <li class="on"><button type="button" role="tab" id="innerTab_2" aria-selected="true">재무상태표</button></li>
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li>
+          <li class="on"><button type="button" role="tab" id="innerTab_1" aria-selected="true">재무상태표 및 손익 계산서</button></li><!-- v1.6 수정 -->
+          <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">제출 자료</button></li><!-- v1.6 수정 -->
+          <!-- <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">손익 계산서</button></li> -->
           <!-- 디자인 수정 : 세금계산서 합산표 -->
           <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">세금계산서 합계표</button></li> <!-- v1.4 워딩수정 -->
         </ul>  
@@ -145,6 +145,63 @@
                 </tr>
                 <tr>
                   <td>단기금융상품</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="sectionBlock40">
+          <!-- 디자인 수정 : hasLine 삭제, titH3 -> titH5 -->
+          <h3 class="titH5">손익계산서</h3>
+          <!-- 디자인 수정 .sectionBlock40 삭제, type2 추가 -->
+          <div class="guideBox type2">
+            <ul class="guideList dot">
+              <li class="list blue">제4(당)기 2022년 1월 1일 부터 2022년 12월 31까지</li>
+              <li class="list blue">제3(전)기 2021년 1월 1일 부터 2021년 12월 31까지</li>
+              <li class="list blue">제2(전전)기 2020년 1월 1일 부터 2020년 12월 31까지</li>
+            </ul>
+          </div>
+          <div class="table_wrap sectionBlock60">
+            <table class="bbs_list">
+              <caption>재무 현황 자료 수집 정보</caption>
+              <colgroup>
+                <col />
+                <col width="380px" />
+                <col width="380px" />
+                <col width="380px" />
+              </colgroup>
+              <!-- 디자인 수정 .wideType 삭제 -->
+              <thead class="double2">
+                <tr>
+                  <th scope="col" rowspan="2">계정과목</th>
+                  <th scope="col">제4(당)기</th>
+                  <th scope="col">제3(전)기</th>
+                  <th scope="col">제2(전전)기</th>
+                </tr>
+                <tr>
+                  <th scope="col">금액</th>
+                  <th scope="col">금액</th>
+                  <th scope="col">금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>매출액</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                  <td>140,000,000</td>
+                </tr>
+                <tr>
+                  <td>영업이익</td>
+                  <td class="pntCol_1">(1,000,000)</td>
+                  <td>140,000,000</td>
+                  <td class="pntCol_1">(1,000,000)</td>
+                </tr>
+                <tr>
+                  <td>이자비용</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>
                   <td>140,000,000</td>

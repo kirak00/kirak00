@@ -259,45 +259,100 @@
                     </tr>
                     <tr>
                       <th scope="row">연체 금리</th> 
-                      <td>법정 최고 금리 20% 이율 적용</td>
+                      <td>
+                        <!-- v1.6 수정 -->
+                        <ul class="guideList mt0">
+                          <li class="list">법정 최고 금리 20% 이율 적용</li>
+                          <li class="list">연체가산이율은 연 00%로 함</li>
+                          <li class="list">대출 이자율+연체가산이율로 적용</li>
+                        </ul>
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">중도 상환 수수료</th> 
-                      <td>3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</td>
+                      <td>
+                        3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음
+                        <p class="gray5 mt10">계산방식: 중도상환 대출금x중도상환 수수로율x대출 잔여일수 / 대출기간</p><!-- v1.6 추가 -->
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">대출시 부대 비용</th> 
                       <td>부대비용 대출금액 1% 부과 됩니다.</td>
                     </tr>
+                    <!-- v1.6 추가 -->
                     <tr>
-                      <th scope="row">금리 관련 참고사항</th> 
-                      <td>2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+                      <th scope="row">인지세</th> 
+                      <td>
+                        인지세법에 따라 대출 신규약정시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융기관과 고객이 각각 50%씩 부담
+                        <div class="table_wrap mt10">
+                          <table class="bbs_list gray">
+                            <caption>인지세 정보</caption>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">대출 금액</th>
+                                <th scope="col">5천만원 이하</th>
+                                <th scope="col">5천만원 초과~ 1억원 이하</th>
+                                <th scope="col">1억원 초과 ~ 10억원 이하</th>
+                                <th scope="col">10억원 초과</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">인지세액</th>
+                                <td>비과세</td>
+                                <td>7만원(각각 3만 5천원)</td>
+                                <td>15만원(각각 7만 5천원)</td>
+                                <td>35만원(각각 17만 5천원)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- v1.6 수정 -->
+                    <tr>
+                      <th scope="row">유의 사항</th> 
+                      <td>
+                        <ul class="guideList dot mt0">
+                          <li class="list">2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</li>
+                          <li class="list">금리결정방법 기업의 여신금리는 조달 비용 및 업무 원가등의 기업의 신용등급과 담보등을 감안하여 금융기관의 금리 결정 시스템을 통하여 신청함을 원칙을 한다.</li>
+                        </ul>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
             <!-- 디자인 수정 -->
-            <div class="table_bt small"><!-- v1.4 .small 추가 -->
+            <div class="table_bt small"><!-- v1.4 .small 추가 --><!-- v1.6 버튼 수정 -->
               <div class="btn_r">
-                <button type="button" class="btnWhite">대출 예상 상환스케줄</button>
-                <button type="button" class="btnWhite ico_down">상품설명서 PDF</button>
+                <button type="button" class="btnWhite ico_down">상품 안내 자료</button>
+                <button type="button" class="btnDkGreen">예상 상환스케줄</button>
+                <button type="button" class="btnSuccess">제안서 채택</button>
               </div>
             </div>
-            <div class="table_bt auto">
+            <!-- v1.6 삭제 -->
+            <!-- <div class="table_bt auto">
               <div class="btn_c">
                 <button type="button" class="btnSuccess">제안서 선택</button>
                 <button type="button" class="btnGray">선택 취소</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- //제안내용 -->
-        <!-- 제안내용 -->
-        <div class="accordionItem noAccordion">
+         <!-- 제안내용 -->
+         <div class="accordionItem noAccordion">
           <h3 class="accordionTitle">
             <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id">
-              <span class="label">상품명 2</span><strong class="tit blue">길동바로론</strong><span class="gray5">대출 신청 번호  S_20230809-0001</span><!-- v1.4 .gray5 추가 -->
+              <span class="label">상품명 1</span><strong class="tit blue">길동바로론</strong><span class="gray5">대출 신청 번호  S_20230809-0001</span><!-- v1.4 .gray5 추가 -->
             </button>
           </h3>
           <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
@@ -476,37 +531,93 @@
                     </tr>
                     <tr>
                       <th scope="row">연체 금리</th> 
-                      <td>법정 최고 금리 20% 이율 적용</td>
+                      <td>
+                        <!-- v1.6 수정 -->
+                        <ul class="guideList mt0">
+                          <li class="list">법정 최고 금리 20% 이율 적용</li>
+                          <li class="list">연체가산이율은 연 00%로 함</li>
+                          <li class="list">대출 이자율+연체가산이율로 적용</li>
+                        </ul>
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">중도 상환 수수료</th> 
-                      <td>3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음</td>
+                      <td>
+                        3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음
+                        <p class="gray5 mt10">계산방식: 중도상환 대출금x중도상환 수수로율x대출 잔여일수 / 대출기간</p><!-- v1.6 추가 -->
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">대출시 부대 비용</th> 
                       <td>부대비용 대출금액 1% 부과 됩니다.</td>
                     </tr>
+                    <!-- v1.6 추가 -->
                     <tr>
-                      <th scope="row">금리 관련 참고사항</th> 
-                      <td>2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+                      <th scope="row">인지세</th> 
+                      <td>
+                        인지세법에 따라 대출 신규약정시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융기관과 고객이 각각 50%씩 부담
+                        <div class="table_wrap mt10">
+                          <table class="bbs_list gray">
+                            <caption>인지세 정보</caption>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">대출 금액</th>
+                                <th scope="col">5천만원 이하</th>
+                                <th scope="col">5천만원 초과~ 1억원 이하</th>
+                                <th scope="col">1억원 초과 ~ 10억원 이하</th>
+                                <th scope="col">10억원 초과</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">인지세액</th>
+                                <td>비과세</td>
+                                <td>7만원(각각 3만 5천원)</td>
+                                <td>15만원(각각 7만 5천원)</td>
+                                <td>35만원(각각 17만 5천원)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- v1.6 수정 -->
+                    <tr>
+                      <th scope="row">유의 사항</th> 
+                      <td>
+                        <ul class="guideList dot mt0">
+                          <li class="list">2000년 00월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</li>
+                          <li class="list">금리결정방법 기업의 여신금리는 조달 비용 및 업무 원가등의 기업의 신용등급과 담보등을 감안하여 금융기관의 금리 결정 시스템을 통하여 신청함을 원칙을 한다.</li>
+                        </ul>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
             <!-- 디자인 수정 -->
-            <div class="table_bt small"><!-- v1.4 .small 추가 -->
+            <div class="table_bt small"><!-- v1.4 .small 추가 --><!-- v1.6 버튼 수정 -->
               <div class="btn_r">
-                <button type="button" class="btnWhite">대출 예상 상환스케줄</button>
-                <button type="button" class="btnWhite ico_down">상품설명서 PDF</button>
+                <button type="button" class="btnWhite ico_down">상품 안내 자료</button>
+                <button type="button" class="btnDkGreen">예상 상환스케줄</button>
+                <!-- <button type="button" class="btnSuccess">제안서 채택</button> -->
+                <button type="button" class="btnBlack">제안서 채택 취소</button>
               </div>
             </div>
-            <div class="table_bt auto">
+            <!-- v1.6 삭제 -->
+            <!-- <div class="table_bt auto">
               <div class="btn_c">
                 <button type="button" class="btnSuccess">제안서 선택</button>
                 <button type="button" class="btnGray">선택 취소</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- //제안내용 -->

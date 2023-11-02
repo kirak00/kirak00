@@ -7,7 +7,6 @@
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
-  <script src="../../../js/lib/calendar_min.js"></script>
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_COP.js"></script>
   <title>SHINHAN</title>
@@ -37,25 +36,17 @@
   <div class="layerWrap modal typeAlert show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid500">
       <div class="layerHead">
-        <h3>선택한 제안서가 담당자에게 전달 됩니다.</h3><!-- v1.4 br삭제, 워딩수정 --><!-- v1.6 워딩 재수정 -->
-        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
+        <h3>제안서 채택 취소</h3>
       </div>
       <div class="layerCont">
-        <div class="guideBox point">
-          <strong>농협은행 신촌지점</strong>
-          <ul class="infoList">
-            <li>담당자 : <span>고길동</span></li>
-            <li>연락처 : <span>02-1234-1234</span></li>
-          </ul>
-        </div>
 
-        <p class="guidTxt">제안서 채택 시, 채택 여부가 금융기관 담당자에게 전달됩니다.<br><!-- v1.6 워딩 수정 -->
-          향후 절차는 담당자 통해 진행해 주세요.</p>
+        <p class="guidTxt">제안서 채택을 취소하시겠습니까?<br/>
+          제안서 채택을 취소하는 경우, 금융기관에 알림이 발송됩니다.</p>
   
       </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess layerClose" popup-close="sampleLayer">확인</button>
-        <button type="button" class="btnWhite layerClose" popup-close="sampleLayer">취소</button>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnSuccess layerClose" popup-close="sampleLayer">네, 제안서 채택을 취소합니다.</button>
+        <button type="button" class="btnWhite layerClose" popup-close="sampleLayer">아니오, 취소하지 않겠습니다.</button>
       </div>
 
     </div>

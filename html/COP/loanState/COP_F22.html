@@ -16,167 +16,221 @@
 </style>
 </head>
 <body>
-
   <!-- **************** -->
   <!-- contents : start -->
   <!-- **************** -->
   <hr/>
-  <div class="container" id="skip_content"  aria-label="콘텐츠">
-
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">추가 서류 관리</h2>
+      <p class="pageSub">조회할 대출 비교 신청 건을 선택하세요. </p>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>대출 비교 진행 현황</span></a></li>
+          <li><a href="#none"><strong>추가 서류 관리</strong></a></li>
+      </ul>
+    </section>
     <section>
-     <!-- 
-      * 레이어 호출
-      class="open_layer"  // 팝업 호출
-      aria-controls="레이어 ID" // 접근성 팝업 알림용
-      -->
-      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">추가 서류 관리</button>
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">비교 신청 건</label>
+              <div class="formRow wid600">
+                <select id="selectLabelState">
+                  <option>S_230401_0001 시설 자금 대출</option>
+                  <option>S_230401_0001 시설 자금 대출</option>
+                </select>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </fieldset>
+    </section>
+      
+   
+    <section class="">
+      <div class="filestep">
+        <ol>
+          <li class="step">
+            <div class="icoWrap"><i class="ico1"></i></div>
+            <p class="number">STEP 1.</p>
+            <p class="name">법인고객 내 서류함</p>
+          </li>
+          <li class="step">
+            <div class="icoWrap"><i class="ico2"></i></div>
+            <p class="number">STEP 2.</p>
+            <p class="name">등록 서류함</p>
+          </li>
+          <li class="step">
+            <div class="icoWrap"><i class="ico3"></i></div>
+            <p class="number">STEP 3.</p>
+            <p class="name">금융기관</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="titH3 hasLine fullType"><h3 class="inner">Step 1. 추가하실 서류를 등록해 주세요.</h3></div>
+    <section class="">
+      <div class="formListRow">
+        <div class="formList">
+          <label class="label wid120" for="labelExtraOp1">파일 선택</label>
+          <div class="formRow filebox">
+            <input type="text" class="input" placeholder="파일을 첨부해 주세요." value="사업장부동산등기부등본.pdf" disabled="disabled" title="선택 파일">
+            <label for="exFilename" class="btnBlack">파일 첨부</label>
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+          </div>
+          <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF, IMG 입니다. 업로드는 최대 50MB까지 가능합니다.</p>
+        </div>
+        <div class="formList">
+          <label class="label wid120" for="labelExtraOp1">서류명</label>
+          <div class="formRow">
+            <input class="input" id="labelExtraOp1" type="text" placeholder="" value="사업장부동산등기부등본.pdf">
+          </div>
+        </div>
+      </div>
+      <div class="table_bt mt20">
+        <div class="btn_r">
+          <button type="button" class="btnSuccess lg">등록</button>
+        </div>
+      </div>
+    </section>
+    <div class="titH3 hasLine fullType"><h3 class="inner">Step 2. 등록된 서류를 확인해 주세요.</h3></div>
+    <section class="">
+      <div class="jsGridWrap">
+        <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
+        <div id="externalPager" class="external-pager"></div>
+      </div>
+      <script> 
+        /* jsgrid sample */
+        $(function() {
+          var clients = [
+            { "Name1": false,
+              "Name2": "법인 공동대표 동의서", 
+              "Name3": "2023-07-11", 
+              "Name4": `<div class="btnBarSet">
+                          <button type="button" class="ico_down">다운로드</button>
+                          <button type="button" class="ico_delete">삭제</button>
+                        </div>`, 
+            },
+            { "Name1": false,
+              "Name2": "본사 등기부 등본", 
+              "Name3": "2023-07-11", 
+              "Name4":  `<div class="btnBarSet">
+                          <button type="button" class="ico_down">다운로드</button>
+                          <button type="button" class="ico_delete">삭제</button>
+                        </div>`, 
+            },
+            { "Name1": false,
+              "Name2": "대표이사 졸업 증명서", 
+              "Name3": "2023-07-11", 
+              "Name4":  `<div class="btnBarSet">
+                          <button type="button" class="ico_down">다운로드</button>
+                          <button type="button" class="ico_delete">삭제</button>
+                        </div>`, 
+            },
+          ];
+          $("#jsGrid").jsGrid({
+            data: clients,
+            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 보증 기관들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+            fields: [
+              { name: "Name1",  type: "checkbox", width: 170, 
+                headerTemplate: function() {
+                    return $("<input>").attr("type", "checkbox").attr("class", "selectAllCheckbox")
+                },
+                itemTemplate: function(value, item) {
+                  return $("<input>").attr("type", "checkbox").attr("class", "singleCheckbox")
+                    .prop("checked", $.inArray(item.firstName, selectedItems) > -1)
+                    .on("change", function () {
+                      $(this).is(":checked");
+                    }
+                  );
+                } 
+              },
+              { name: "Name2", type: "text", title : "서류명", width: 'auto', align: 'left' },
+              { name: "Name3", type: "text", title : "등록일", width: 160 },
+              { name: "Name4", type: "text", title : "관리", width: 230 },
+            ],
+            pagerContainer: "#externalPager",
+          });
+          var selectedItems = [];
+            var selectItem = function(item) {
+              selectedItems.push(item);
+              if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+                $(".selectAllCheckbox").prop("checked", true);
+              } else {
+                $(".selectAllCheckbox").prop("checked", false);
+              }
+            }; 
+            var unselectItem = function(item) {
+              selectedItems = $.grep(selectedItems, function(i) {
+              return i !== item;
+              });
+              if(selectedItems.length == 0) {
+                $('.selectAllCheckbox').attr('checked', false);
+              }
+              if($(".singleCheckbox").length == $(".singleCheckbox:checked").length) {
+                $(".selectAllCheckbox").prop("checked", true);
+                } else {
+                  $(".selectAllCheckbox").prop("checked", false);
+                }
+            };
+            $(".selectAllCheckbox").click(function(item) {
+              selectedItems = [];
+              if(this.checked) { // check select status
+                $('.singleCheckbox').each(function() { 
+                  this.checked = true;      
+                });			         
+                }else {
+                  $('.singleCheckbox').each(function() { 
+                      this.checked = false;      
+                      unselectItem(item);
+                  });  
+                  selectedItems = [];
+                }
+            });
+        });
+      </script>
+    </section>
+
+    <div class="titH3 hasLine fullType"><h3 class="inner">Step 3. 제출할 서류와 서류를 받을 금융기관을 선택해주세요.</h3></div>
+    <section class="">
+      <div class="table_wrap">
+        <table class="bbs_list">
+          <colgroup>
+            <col width="170px"/>
+            <col />
+            <col width="160px"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">금융기관명</th>
+              <th scope="col">필요 서류 안내</th>
+              <th scope="col">요청일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>롯데캐피탈</td>
+              <td class="tit">종합소득세</td>
+              <td>2023-07-11</td>
+            </tr>
+            <tr>
+              <td>롯데캐피탈</td>
+              <td class="tit">사업자등록증</td>
+              <td>2023-07-11</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
   </div>
   <!-- **************** -->
   <!-- contents : end -->
-  <!-- **************** -->
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" >
-    <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid1000">
-      <div class="layerHead">
-        <h3>추가 서류 관리</h3>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
-      </div>
-      <!-- 검색 -->
-      <fieldset>
-        <legend>게시물 검색</legend>
-        <div class="searchControlBox">
-          <h4 class="titH6 textRegular">추가하실 서류를 등록해 주세요.</h4>
-          <div class="formListRow">
-            <div class="formList">
-              <label class="label wid62" for="labelExtraOp1">파일명</label>
-              <div class="formRow filebox">
-                <!-- <input class="input" id="labelExtraOp1" type="text" placeholder="" value="사업장부동산등기부등본.pdf">
-                <button type="button" class="btnBlack">파일 첨부</button> -->
-
-                <input type="text" class="input" placeholder="파일을 첨부해 주세요." value="사업장부동산등기부등본.pdf" disabled="disabled" title="선택 파일">
-                <label for="exFilename" class="btnDkGray">파일 첨부</label>
-                <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
-              </div>
-              <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF, IMG 입니다. <br/>
-                업로드는 최대 50MB까지 가능합니다.</p>
-            </div>
-            <div class="formList">
-              <label class="label wid62" for="labelExtraOp1">서류명</label>
-              <div class="formRow">
-                <input class="input" id="labelExtraOp1" type="text" placeholder="" value="사업장부동산등기부등본.pdf">
-              </div>
-            </div>
-          </div>
-          <div class="searchBtns">
-            <button type="button" class="btnSuccess">등록</button>
-          </div>
-        </div>
-      </fieldset>
-      <div class="layerCont">
-        <section>
-          <h4 class="titH4">나의 서류함</h4>
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <colgroup>
-                <col width="170px"/>
-                <col />
-                <col />
-                <col />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">대출 비교 신청<br/>자료 활용 여부</th>
-                  <th scope="col">서류명</th>
-                  <th scope="col">등록일</th>
-                  <th scope="col">관리</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <select title="" class="arrow">
-                      <option>노출</option>
-                    </select>
-                  </td>
-                  <td>법인 공동대표 동의서</td>
-                  <td>2023-07-11</td>
-                  <td>
-                    <div class="btnBarSet">
-                      <button type="button" class="ico_preview">미리보기</button>
-                      <button type="button" class="ico_delete">삭제</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <select title="" class="arrow">
-                      <option>노출</option>
-                    </select>
-                  </td>
-                  <td>본사 등기부 등본</td>
-                  <td>2023-07-11</td>
-                  <td>
-                    <div class="btnBarSet">
-                      <button type="button" class="ico_preview">미리보기</button>
-                      <button type="button" class="ico_delete">삭제</button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="sectionBlock40">
-          <h4 class="titH4">금융기관 요청 서류</h4>
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <colgroup>
-                <col width="170px"/>
-                <col />
-                <col />
-                <col />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">금융기관명</th>
-                  <th scope="col">필요 서류 안내</th>
-                  <th scope="col">요청일</th>
-                  <th scope="col">서류 제출 여부</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>롯데캐피탈</td>
-                  <td>종합소득세</td>
-                  <td>2023-07-11</td>
-                  <td>
-                    <button type="button" class="ico_file1">제출 서류 선택</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>롯데캐피탈</td>
-                  <td>사업자등록증</td>
-                  <td>2023-07-11</td>
-                  <td>
-                    <button type="button" class="ico_down">다운로드</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
   <!-- **************** -->
 
 

@@ -47,8 +47,8 @@
           <li><button type="button" role="tab" id="innerTab_1" aria-selected="false">업체개요</button></li>
           <!-- 디자인 수정 -->
           <!-- <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">대표자 인적 사항</button></li> -->
-          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">경영진 인적 사항</button></li>
-          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 정보 인적 사항</button></li> 
+          <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">경영진 정보</button></li><!-- v1.6 워딩수정 -->
+          <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 정보</button></li> <!-- v1.6 워딩수정 -->
           <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 연혁</button></li> 
           <li class="on"><button type="button" role="tab" id="innerTab_6" aria-selected="true">법인 서류 등록</button></li> <!-- v1.4 워딩수정 -->
         </ul>  
@@ -88,58 +88,7 @@
           </div>
         </section>
         
-        <section class="sectionBlock60">
-          <h3 class="titH5">특허 정보 등록</h3> 
-          <div class="table_wrap">
-            <table class="bbs_list">
-              <caption>특허 정보 등록</caption>
-              <colgroup>
-                <col width="140px">
-                <col width="220px">
-                <col width="120px">
-                <col />
-                <col width="170px">
-                <col width="170px">
-                <!-- 디자인 수정 : 추가 -->
-                <col width="170px">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">특허유형</th>
-                  <th scope="col">출원 번호</th>
-                  <th scope="col">등록상태</th>
-                  <th scope="col">발명의 명칭</th>
-                  <th scope="col">등록 일자</th>
-                  <th scope="col">출원인</th>
-                  <!-- 디자인 수정 : 추가 -->
-                  <th scope="col">특허청 정보</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>상표권</td>
-                  <td>10-1234-1234567</td>
-                  <td>등록</td>
-                  <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의블라블라 한줄 말줄임입니다.</p></td>
-                  <td>2023-10-14</td>
-                  <td>(주)신한은행</td>
-                  <!-- 디자인 수정 : 추가 -->
-                  <td>연동</td>
-                </tr>
-                <tr>
-                  <td>상표권</td>
-                  <td>10-1234-1234567</td>
-                  <td>등록</td>
-                  <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의블라블라 한줄 말줄임입니다.</p></td>
-                  <td>2023-10-14</td>
-                  <td>(주)신한은행</td>
-                  <!-- 디자인 수정 : 추가 -->
-                  <td>미연동</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+        
 
         <section class="sectionBlock60">
           <h3 class="titH5">기술 인증 서류</h3> 
@@ -165,7 +114,7 @@
                 <tr>
                   <td>이노비즈</td>
                   <td>기술 혁신 중소 기업 확인서. jpg</td>
-                  <td><strong>제출 완료</strong></td>
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                   <td>2023-08-15</td>
                 </tr>
                 <tr>
@@ -173,6 +122,60 @@
                   <td>기술 혁신 중소 기업 확인서. jpg</td>
                   <td><strong>제출 완료</strong></td>
                   <td>2023-08-15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- v1.6 위치 수정 -->
+        <section class="sectionBlock60">
+          <h3 class="titH5">특허 정보 서류</h3> <!-- v1.6 워딩수정 -->
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>특허 정보 서류</caption>
+              <colgroup>
+                <col width="140px">
+                <col width="220px">
+                <col width="120px">
+                <col />
+                <col width="170px">
+                <col width="170px">
+                <!-- 디자인 수정 : 추가 -->
+                <col width="170px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">특허유형</th>
+                  <th scope="col">출원 번호</th>
+                  <th scope="col">등록상태</th>
+                  <th scope="col">발명의 명칭</th>
+                  <th scope="col">출원인</th>
+                  <!-- 디자인 수정 : 추가 -->
+                  <th scope="col">특허청 정보</th>
+                  <th scope="col">등록 일자</th><!-- v1.6 위치 이동 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>상표권</td>
+                  <td>10-1234-1234567</td>
+                  <td>등록</td>
+                  <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의블라블라 한줄 말줄임입니다.</p></td>
+                  <td>(주)신한은행</td>
+                  <!-- 디자인 수정 : 추가 -->
+                  <td>연동</td>
+                  <td>2023-10-14</td><!-- v1.6 위치 이동 -->
+                </tr>
+                <tr>
+                  <td>상표권</td>
+                  <td>10-1234-1234567</td>
+                  <td>등록</td>
+                  <td><p class="ellips1">그래핀을 함유한 고강도 경량과 복합소재 및 이의블라블라 한줄 말줄임입니다.</p></td>
+                  <td>(주)신한은행</td>
+                  <!-- 디자인 수정 : 추가 -->
+                  <td>미연동</td>
+                  <td>2023-10-14</td><!-- v1.6 위치 이동 -->
                 </tr>
               </tbody>
             </table>
@@ -204,7 +207,7 @@
                 <tr>
                   <td>본사 임대차계약서</td>
                   <td>본사 임대차계약서.jpg</td>
-                  <td><strong>제출 완료</strong></td>
+                  <td><button type="button" class="ico_down">다운로드</button></td>
                   <td>2023-08-15</td>
                 </tr>
                 <tr>
