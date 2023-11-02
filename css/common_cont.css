@@ -322,6 +322,8 @@ table a.btnLine       { line-height: 34px;}
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.ico_down:disabled       {color:#333; opacity: .4; }
+.ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
 .programDown .ico_down::after { width: 24px; height: 24px; vertical-align: -4px;}
 .btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
