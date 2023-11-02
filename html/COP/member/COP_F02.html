@@ -43,90 +43,77 @@
 
 
       <section class="content_terms">
-        <!-- <h3 class="titH3 hasLine">법인 회사 유형</h3>
-        <div class="terms_type">
-          <span class="radio">
-            <input type="radio" id="testRdoBoxOnly_1" name="testRdoBoxOnly" value="A" />
-            <label for="testRdoBoxOnly_1"><span></span>외감법인</label>
-          </span>
-          <em class="tooltip_q" title="주식획사 중 독립된 외부 감사인으로부터 회계감사를 받아야하는 의무를 지닌 기업" ><span class="hide">?</span></em>
-          
-          <span class="radio">
-            <input type="radio" id="testRdoBoxOnly_2" name="testRdoBoxOnly" value="A" />
-            <label for="testRdoBoxOnly_2"><span></span>일반 법인</label>
-          </span>
-        </div> -->
-
         <h3 class="titH3 hasLine">약관 동의</h3>
-        <div class="terms_ment">
-          법인대출 중개 플롯폼 회원 가입을 원하실 경우, <br>
-          법인 동의를 위해 아래 의 ‘이용약관.(필수/선택) 개인정보 수집 및 이용,  개인정보 제3자제공에’ 대한 안내를 읽고 동의 여부를 선택해 주세요.
+        <div class="terms_ment"><!-- v1.6 수정 -->
+          Loan&Biz회원 가입을 원하실 경우, 법인 동의를 위해 아래의 ‘이용약관(필수/선택) 개인정보 수집 및 이용,  개인정보 제3자 제공’에 대한 아래 항목을 읽고 동의 여부를 선택해 주세요.
         </div>
         <!-- 약관 -->
-            
-        <div class="accordion agreeAccordion" accordion-option="only">
-          <div class="accordionItem"><!-- v1.4 추가 -->
-            <h3 class="accordionTitle">
-              <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_1" id="accordion1id">
-                <span class="accordionIcon"></span>
-              </button>
+        <!-- v1.6 수정 -->
+        <div class="agreeForm">
+          <div class="agreeItem">
+            <div class="agreeTitle main">
               <span class="checkbox">
-                <input type="checkbox" id="agreeLabel1" name="agreeLabel1" >
-                <label for="agreeLabel1"><span></span>이용약관 동의<em class="required">(필수)</em></label>
+                <input type="checkbox" id="agreeLabelAll_1" name="agreeLabel1" checked>
+                <label for="agreeLabelAll_1"><span></span>전체<strong class="blue">(필수)</strong> 동의</label>
               </span>
-            </h3>
-            <div id="acc1_1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
-              ex) 제 1조 (목적)<br/>
-              법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
-              대출 분리하게 적용할
+              <button type="button" class="btnWhite ico_check">전체 약관보기</button>
+            </div>
+            <div class="agreeTitle">
+              <span class="checkbox">
+                <input type="checkbox" id="agreeLabel1_1" name="agreeLabel1" checked>
+                <label for="agreeLabel1_1"><span></span>이용약관 동의<strong class="blue"> (필수)</strong></label>
+              </span>
+              <button type="button" class="btnWhite ico_check">약관보기</button>
+            </div>
+            <div class="agreeTitle">
+              <span class="checkbox">
+                <input type="checkbox" id="agreeLabel1_2" name="agreeLabel1" checked>
+                <label for="agreeLabel1_2"><span></span>개인정보 수집 및 이용동의<strong class="blue"> (필수)</strong></label>
+              </span>
+              <button type="button" class="btnWhite ico_check">약관보기</button>
+            </div>
+            <div class="agreeTitle">
+              <span class="checkbox">
+                <input type="checkbox" id="agreeLabel1_3" name="agreeLabel1" checked>
+                <label for="agreeLabel1_3"><span></span>제 3자 제공 동의<strong class="blue"> (필수)</strong></label>
+              </span>
+              <button type="button" class="btnWhite ico_check">약관보기</button>
             </div>
           </div>
-          <div class="accordionItem">
-            <h3 class="accordionTitle">
-              <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_2" id="accordion2id">
-                <span class="accordionIcon"></span>
-              </button>
+          <div class="agreeItem">
+            <div class="agreeTitle main">
               <span class="checkbox">
-                <input type="checkbox" id="agreeLabel2" name="agreeLabel2" >
-                <label for="agreeLabel2"><span></span>개인정보 수집 및 이용 동의<em class="required">(필수)</em></label>
+                <input type="checkbox" id="agreeLabelAll_2" name="agreeLabel2" >
+                <label for="agreeLabelAll_2"><span></span>전체(선택) 동의</label>
               </span>
-            </h3>
-            <div id="acc1_2" role="region" aria-labelledby="accordion2id" class="accordionPanel" hidden="">
-              ex) 제 1조 (목적)<br/>
-              법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
-              대출 분리하게 적용할
+              <button type="button" class="btnWhite">전체 약관보기</button>
             </div>
-          </div>
-          <div class="accordionItem">
-            <h3 class="accordionTitle">
-              <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_3" id="accordion3id">
-                <span class="accordionIcon"></span>
-              </button>
+            <div class="agreeTitle">
               <span class="checkbox">
-                <input type="checkbox" id="agreeLabel3" name="agreeLabel3" >
-                <label for="agreeLabel3"><span></span>제3자 제공 동의<em class="required">(필수)</em></label>
+                <input type="checkbox" id="agreeLabel2_1" name="agreeLabel2" >
+                <label for="agreeLabel2_1"><span></span>마케팅 동의(선택)</label>
               </span>
-            </h3>
-            <div id="acc1_3" role="region" aria-labelledby="accordion3id" class="accordionPanel" hidden="">
-              ex) 제 1조 (목적)<br/>
-              법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
-              대출 분리하게 적용할
+              <button type="button" class="btnWhite">약관보기</button>
             </div>
-          </div>
-          <div class="accordionItem">
-            <h3 class="accordionTitle">
-              <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="acc1_4" id="accordion4id">
-                <span class="accordionIcon"></span>
-              </button>
+            <div class="agreeTitle">
               <span class="checkbox">
-                <input type="checkbox" id="agreeLabel4" name="agreeLabel4" >
-                <label for="agreeLabel4"><span></span>마케팅 동의<em class="">(선택)</em></label>
+                <input type="checkbox" id="agreeLabel2_2" name="agreeLabel2" >
+                <label for="agreeLabel2_2"><span></span>마케팅 동의 활용 방법</label>
               </span>
-            </h3>
-            <div id="acc1_4" role="region" aria-labelledby="accordion4id" class="accordionPanel" hidden="">
-              ex) 제 1조 (목적)<br/>
-              법인중개대출 플랫폼 당사와 제휴 은행에 정보 제공대출 받는 목적 외 사용하지 않음 대출 실행 시 당사에 책임 소지가 없습니다.<br/>
-              대출 분리하게 적용할
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="marketingLabel1_1" name="marketingLabel1"><label for="marketingLabel1_1"><span></span>전화</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="marketingLabel1_2" name="marketingLabel1"><label for="marketingLabel1_2"><span></span>이메일</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="marketingLabel1_3" name="marketingLabel1"><label for="marketingLabel1_3"><span></span>우편</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="marketingLabel1_4" name="marketingLabel1"><label for="marketingLabel1_4"><span></span>문자 또는 SNS</label>
+                </span>
+              </div>
             </div>
           </div>
         </div>

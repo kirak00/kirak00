@@ -282,25 +282,40 @@ a.btnBlack, label.btnBlack       {display:inline-block; line-height:50px; white-
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess,
-table .btnSky,
-table .btnWhite,
-table .btnGray,
-table .btnBlack,
-table .btnWhiteLine,
-table .btnDkGreen,
-table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
-table button.full { width: 100%;}
+table.bbs_list .btnSuccess,
+.jsGridWrap table .btnSuccess,
+table.bbs_list .btnSky,
+.jsGridWrap table .btnSky,
+table.bbs_list .btnWhite,
+.jsGridWrap table .btnWhite,
+table.bbs_list .btnGray,
+.jsGridWrap table .btnGray,
+table.bbs_list .btnBlack,
+.jsGridWrap table .btnBlack,
+table.bbs_list .btnWhiteLine,
+.jsGridWrap table .btnWhiteLine,
+table.bbs_list .btnDkGreen,
+.jsGridWrap table .btnDkGreen,
+table.bbs_list .btnLine,
+.jsGridWrap table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
+table.bbs_list button.full { width: 100%;}
 
 .btnFixed .bbs_list button { min-width: 140px;}
 
-table a.btnSuccess        { line-height: 34px;}
-table a.btnSky         { line-height: 34px;}
-table a.btnWhite       { line-height: 34px;}
-table a.btnGray       { line-height: 34px;}
-table a.btnWhiteLine       { line-height: 34px;}
-table a.btnDkGreen       { line-height: 34px;}
-table a.btnLine       { line-height: 34px;}
+table.bbs_list a.btnSuccess,
+.jsGridWrap table a.btnSuccess,
+table.bbs_list a.btnSky,
+.jsGridWrap table a.btnSky,
+table.bbs_list a.btnWhite,      
+.jsGridWrap table a.btnWhite,      
+table.bbs_list a.btnGray,     
+.jsGridWrap table a.btnGray,     
+table.bbs_list a.btnWhiteLine,    
+.jsGridWrap table a.btnWhiteLine,    
+table.bbs_list a.btnDkGreen,
+.jsGridWrap table a.btnDkGreen,
+table.bbs_list a.btnLine,
+.jsGridWrap table a.btnLine       { line-height: 34px;}
 
 .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -335,6 +350,10 @@ table a.btnLine       { line-height: 34px;}
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+
+
+.ico_check::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -4px; background:url(../images/common/ico_18_check_primary.png) no-repeat 50% 50% / contain; }
+
 .programDown .ico_down::after { width: 24px; height: 24px; vertical-align: -4px;}
 .btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
@@ -1023,6 +1042,22 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeAccordion .accordionTitle .checkbox label span:first-child { vertical-align: -6px; }
 .agreeAccordion .accordionTitle .required { margin-left: 4px; color: #069B66;}
 .agreeAccordion .accordionPanel { margin: 0 ; padding: 30px 40px; background: #fff;}
+
+
+.agreeForm {}
+.agreeForm .agreeItem { border: 1px solid #ddd; border-radius: 16px; overflow: hidden;}
+.agreeForm .agreeItem + .agreeItem { margin-top: 40px;}
+.agreeForm .agreeTitle { display: flex; justify-content: space-between; align-items: center; height: 60px; padding: 0 60px; border-bottom: 1px solid #ddd; }
+.agreeForm .agreeTitle:last-child { border-bottom: 0;}
+.agreeForm .agreeTitle .checkbox label { font-weight: 700;}
+.agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
+.agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
+.agreeForm .agreeTitle.main { background: #F6FBF7; padding: 0 60px 0 40px; }
+.agreeForm .agreeTitle.main .btnWhite { width: 150px; }
+.layerWrap .layerBody.wid1000 .layerCont .tabLine { margin-top: -20px}
+.layerCont .tabLine + .agreeCont { margin-top: 20px;}
+.layerCont .agreeCont { padding: 20px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px;}
+
 /****************************
 **********  paging  **********
 *****************************/
@@ -2332,6 +2367,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .processStepWrap .step { position: relative; width: 100%; height: 282px; padding: 30px 0; background: #F5F9FA; border-radius: 16px; text-align: center;}
 .processStepWrap .step .icoWrap [class^="ico"]::after { content: ''; display: block; width: 46px; height: 46px; background: #fff url(../images/common/ico_18_right.png) no-repeat center / 18px 18px; border-radius: 50%; border: 1px solid #ddd; position: absolute; top: 27px; right: -33px; z-index: 1;}
 .processStepWrap .tit { line-height: 42px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 
+
+.processStepWrap.main { margin-top: 0;}
+.processStepWrap.main .step { background: #fff; box-shadow: 3px 3px 8px 0px #ECF0F4;}
 
 .processStepWrap .left { width: 860px;}
 .processStepWrap .left ol { display: flex; gap: 20px; margin-top: 16px;}
