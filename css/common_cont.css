@@ -1235,7 +1235,7 @@ footer .copy .wa    {float:right; }
 
 .bgWrap     {background:#FAFAFA}
 
-section   {margin:0 auto; max-width: 1400px;}
+section   {margin:0 auto; max-width: 1400px; overflow: hidden;}
 
 .loginCont     {margin:0 auto;  }
 .loginCont .loginTit        {width:100%; text-align: center;}
