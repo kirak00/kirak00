@@ -37,6 +37,8 @@
 .wid84 { width: 84px;} 
 .wid92 { width: 92px;}
 .wid130 { width: 130px;} 
+
+.ml30 { margin-left: 30px;}
 /****************************
 **********  align  **********
 *****************************/
@@ -68,8 +70,10 @@
 .titH42 { font-size:18px; font-weight: 700; }
 .titH43 { font-size:18px; margin-top:10px; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
-
-.pageTxt { margin-bottom: 20px; font-weight: 500;}
+.titH4 + .pageTxt { margin-top: 20px;}
+.pageTxt {margin-bottom: 20px; font-weight: 500;}
+.pageTxt.flex {  display: flex; align-items: center; }
+.pageTxt.flex .right { margin-left: auto;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
@@ -86,8 +90,11 @@
 .tableTit { font-size: 34px; font-size: 700; }
 .titH3.hasLine,
 .titH4.hasLine { display: flex; align-items: center; border-bottom: 1px solid #ddd; }
-.titH3.hasLine {min-height: 60px; margin-bottom: 20px; }
+.titH3.hasLine {min-height: 60px; margin-bottom: 20px;}
+.bgGray .titH3.hasLine { max-width: 1400px; margin-left: auto; margin-right: auto;}
 .titH4.hasLine {min-height: 56px; margin-bottom: 20px; }
+.titH4.hasLine .notiTxt { font-weight: 400;}
+.titH4.hasLine .right { margin-left: auto;}
 .titH3 strong.blue { margin-left: 10px; vertical-align: 0;}
 .titH4.hasPadding { padding: 0 40px;} 
 .detailCont .titH4.hasPadding { padding: 0 0px;} 
@@ -235,6 +242,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 *****************************/
 .formListBlock { margin-top: 0;}
 .sectionBlock20 { margin-top: 20px;}
+.sectionBlock30 { margin-top: 30px;}
 .sectionBlock40 { margin-top: 40px;}
 .sectionBlock60 { margin-top: 40px;}
 .sectionBlock80 { margin-top: 60px;}
@@ -320,23 +328,23 @@ table.bbs_list a.btnDkGreen,
 table.bbs_list a.btnLine,
 .jsGridWrap table a.btnLine       { line-height: 34px;}
 
-.btnSuccess:focus,
+/* .btnSuccess:focus, */
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
 .btnSuccess:active        { background:#069B66; text-decoration: none;  }
-.btnSky:focus,
+/* .btnSky:focus, */
 .btnSky:hover         { background:#24858A; text-decoration: none;  }
 .btnSky:active        { background:#4C9DA2; text-decoration: none;  }
-.btnWhite:focus,
+/* .btnWhite:focus, */
 .btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
 .btnWhite:active       { background:#069B66; text-decoration: none; color:#fff }
-.btnWhiteLine:focus,
+/* .btnWhiteLine:focus, */
 .btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
 .btnWhiteLine:active       { background:#ffffff; color:#069B66 }
-.btnBlack:focus,
+/* .btnBlack:focus, */
 .btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
 .btnBlack:active       { background:#555; color:#fff }
 
-.btnLine:focus,
+/* .btnLine:focus, */
 .btnLine:hover       { color:#069B66; border:1px solid #069B66;}
 .btnLine:active       { color:#069B66 }
 
@@ -376,7 +384,7 @@ a.ico_down       {color:#069B66; }
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
 .btnWhite.ico_chart::after  {background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
-.btnWhite:focus.ico_chart::after,
+/* .btnWhite:focus.ico_chart::after, */
 .btnWhite:active.ico_chart::after,
 .btnWhite:hover.ico_chart::after  {background:url(../images/common/ico_24_chart_w.png) no-repeat 50% 50%; }
 
@@ -386,7 +394,7 @@ a.ico_down       {color:#069B66; }
 .ico_setting       {padding:0 32px;  color:#333}
 .ico_setting::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 .btnWhite.ico_setting::after  {background:url(../images/common/ico_24_setting_primary.png) no-repeat 50% 50%; }
-.btnWhite:focus.ico_chart::after,
+/* .btnWhite:focus.ico_chart::after, */
 .btnWhite:active.ico_setting::after,
 .btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 .ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important;   }
@@ -394,11 +402,11 @@ a.ico_down       {color:#069B66; }
 
 .btnWhite.ico_prev         {padding:0 24px;}
 .btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50% / contain; }
-.btnWhite.ico_prev:focus::before ,
+/* .btnWhite.ico_prev:focus::before , */
 .btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
 .btnWhite.ico_next         {padding:0 24px;}
 .btnWhite.ico_next::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_next.png) no-repeat 50% 50%; }
-.btnWhite.ico_next:focus::after ,
+/* .btnWhite.ico_next:focus::after , */
 .btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
@@ -425,7 +433,7 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
 /* 유틸 버튼 */
 .btnReset     {display:inline-block; padding:0 0px; width:50px !important; min-width: 50px !important; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:49px; height:49px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50% / 18px; }
-.btnReset:focus,
+/* .btnReset:focus, */
 .btnReset:hover       { background:#069B66; text-decoration: none; color:#fff; border-radius: 8px;  }
 .btnReset:focus::after ,
 .btnReset:hover::after  { background-image:url(../images/common/ico_24_refresh_w.png) }
@@ -434,14 +442,14 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
 .btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 
 .btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #069B66;  }
-.btnDown:focus
+/* .btnDown:focus */
 .btnDown:hover    {background-color:#148159 ;  }
 .btnDown.white      {border:1px solid #069B66; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
-.btnDown.white:focus,
+/* .btnDown.white:focus, */
 .btnDown.white:hover {border:1px solid #069B66; background-color:#069B66 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
 .btnCalendar          {width:50px; height:50px; border: 1px solid #069B66; border-radius: 8px; background:url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff;  }
-.btnCalendar:focus,
+/* .btnCalendar:focus, */
 .btnCalendar:hover    {background-color:#148159 ;  }
 .btnCalendar.white      {border:1px solid #069B66; background-image:url(../images/common/ico_24_calendar_b.png); background-color:#fff ;  }
 .btnCalendar.white:focus,
@@ -450,7 +458,7 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
  
 .btnPlus { width: 36px; height: 36px; flex-shrink: 0; background: #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnPlus::after { content:""; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
-.btnPlus:focus,
+/* .btnPlus:focus, */
 .btnPlus:hover    {background-color:#148159;}
 .btnPlus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
@@ -458,7 +466,7 @@ select:disabled       { background-color:#EEF0F1; color:#888; border:1px solid #
 
 .btnMinus { width: 36px; height: 36px; flex-shrink: 0; background: #fff; border: 1px solid #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnMinus::after { content:""; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_24_minus_w.png) no-repeat 50% 50%; vertical-align: top;}
-.btnMinus:focus,
+/* .btnMinus:focus, */
 .btnMinus:hover    {background-color:#148159; }
 .btnMinus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
@@ -1498,9 +1506,9 @@ table { width: 100%;}
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formListTable td span.txt {display:inline-block; padding: 15px 0; }
-.formListTable tbody > tr:first-child th,
-.formListTable tbody > tr:first-child td { padding-top: 0;}
-.formListTable tbody > tr:first-child td.pt15{ padding-top: 15px;}
+/* .formListTable tbody > tr:first-child th,
+.formListTable tbody > tr:first-child td { padding-top: 0;} */
+/* .formListTable tbody > tr:first-child td.pt15{ padding-top: 15px;} */
 .formListTable .pt0 { padding-top: 0px;}
 .formListTable .pt15 { padding-top: 15px;}
 .formListTable tbody > tr:last-child th,
@@ -1529,9 +1537,8 @@ table { width: 100%;}
 
 
 
-.formGrayBox { margin: 20px 0 0;}
+.formGrayBox {  margin: 20px 0 0; padding: 40px; background: #EFF5EF; border-radius: 16px;}
 .formGrayBox .formListTable { margin-top: 20px;}
-.formGrayBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
 .formGrayBox.type2 { padding: 40px 60px 60px;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
@@ -1922,8 +1929,8 @@ ul.tab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidd
 ul.tab li   {width:100%; }
 ul.tab li button   {display:block; width:100%; height:70px; text-align: center; font-size:24px; background:#F4F6F8; }
 ul.tab li.on button   {background:#EAFAEB; color:#fff; font-weight: 700;  }
-ul.tab li:hover button,
-ul.tab li button:focus   {background:#069B66; color:#fff;  }
+ul.tab li:hover button/*,
+ul.tab li button:focus */  {background:#069B66; color:#fff;  }
 
 ul.evtTab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:10px; margin-bottom:60px;  }
 ul.evtTab li button   {display:block; width:100%; height:50px; padding:0 32px; border-radius: 32px; text-align: center; font-size:24px; background:#fff; border:1px solid #ddd; }
@@ -1935,8 +1942,8 @@ ul.evtTab li button:focus   {background:#069B66; color:#fff;  }
 ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 0 auto; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
 ul.innerTab li button   {display:block; width:100%; height:44px; padding:0 32px; border-radius: 32px; text-align: center; font-size:16px; background:#fff; border:1px solid #069B66; color: #069B66; }
 ul.innerTab li.on button   {background:#069B66; color:#fff; font-weight: 700; border:1px solid #069B66;  }
-ul.innerTab li:hover button,
-ul.innerTab li button:focus   {background:#36B688; color:#fff;  }
+ul.innerTab li:hover button/*,
+ul.innerTab li button:focus */  {background:#36B688; color:#fff;  }
 ul.innerTab li.on .required { color: #fff; }
 ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
