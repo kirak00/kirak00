@@ -36,6 +36,7 @@
 .wid80 { width: 80px;} 
 .wid84 { width: 84px;} 
 .wid92 { width: 92px;}
+.wid120 { width: 120px;}
 .wid130 { width: 130px;} 
 
 .ml30 { margin-left: 30px;}
@@ -271,17 +272,41 @@ button    {background:none; cursor: pointer; transition: background .2s; white-s
 /* MAIN 버튼 */ 
 a.btnSuccess   ,
 button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff  }
-.btnSky        {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff }
+.btnSky,.btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 .btnWhite      {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 .btnGray       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #888; }
-.btnGray2      {padding:0 50px; height:50px; background:#EEF0F1; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-.btnGray2 em   {vertical-align: 0;  }
+/* .btnGray2      {padding:0 50px; height:50px; background:#EEF0F1; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnGray2 em   {vertical-align: 0;  } - 미사용 */ 
 .btnWhiteLine  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 .btnWhiteLine2  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
-.btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 .btnBlack      {padding:0 50px; height:50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
-.btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 .btnBlack.p30  {padding:0 30px; }
+
+.btnSuccess:focus,
+.btnSky:focus, .btnDkGreen:focus,
+.btnWhite:focus,
+.btnGray:focus,  
+/* .btnGray2:focus, */
+.btnWhiteLine:focus ,
+.btnWhiteLine2:focus ,
+.btnBlack:focus { outline: 2px dashed #069B66; }
+
+/* .btnSuccess:focus, */
+.btnSuccess:hover       { background:#148159; text-decoration: none; border-color: #148159; }
+.btnSky:hover, .btnDkGreen:hover   { background:#24858A; text-decoration: none; border-color: #24858A; }
+.btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
+.btnGray:hover       { background:#ddd; text-decoration: none; border-color: #ddd;}
+.btnWhiteLine:hover       { background:#069B66; text-decoration: none;  color:#fff }
+.btnWhiteLine2:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
+.btnBlack:hover       { background:#333; text-decoration: none; color:#ffff;  }
+
+/* .btnSuccess:active        { background:#069B66; text-decoration: none;  } */
+/* .btnSky:focus, */
+/* .btnSky:active        { background:#4C9DA2; text-decoration: none;  } */
+/* .btnWhite:focus, */
+/* .btnWhite:active       { background:#069B66; text-decoration: none; color:#fff } */
+/* .btnWhiteLine:focus, */
+/* .btnBlack:active       { background:#555; color:#fff } */
 
 a.btnSuccess,
 a.btnSky,
@@ -328,21 +353,7 @@ table.bbs_list a.btnDkGreen,
 table.bbs_list a.btnLine,
 .jsGridWrap table a.btnLine       { line-height: 34px;}
 
-/* .btnSuccess:focus, */
-.btnSuccess:hover        { background:#148159; text-decoration: none;  }
-.btnSuccess:active        { background:#069B66; text-decoration: none;  }
-/* .btnSky:focus, */
-.btnSky:hover         { background:#24858A; text-decoration: none;  }
-.btnSky:active        { background:#4C9DA2; text-decoration: none;  }
-/* .btnWhite:focus, */
-.btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
-.btnWhite:active       { background:#069B66; text-decoration: none; color:#fff }
-/* .btnWhiteLine:focus, */
-.btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
-.btnWhiteLine:active       { background:#ffffff; color:#069B66 }
-/* .btnBlack:focus, */
-.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
-.btnBlack:active       { background:#555; color:#fff }
+
 
 /* .btnLine:focus, */
 .btnLine:hover       { color:#069B66; border:1px solid #069B66;}
@@ -439,7 +450,7 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
 .btnReset:hover::after  { background-image:url(../images/common/ico_24_refresh_w.png) }
 
 .btnFile      {font-size: 18px; font-weight: 700; color:#069B66; text-decoration: underline;}
-.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
 
 .btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #069B66;  }
 /* .btnDown:focus */
@@ -886,7 +897,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
 .searchControlGroup [class^="btn"]{ padding: 0 30px;} 
 
-.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
+.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; } 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }

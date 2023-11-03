@@ -380,8 +380,8 @@ h4 {
 }
 .c-container { padding: 1rem 2rem;}
 
-.c-h1{ margin: 30px 0; padding: 10px 20px; background: gray; color: #fff; font-size: 28px;}
-.c-h2 { margin: 30px 0; padding: 10px 20px; background: gray; color: #fff; font-size: 28px;}
+.c-h1{ margin: 20px 0; padding: 5px 20px; background: gray; color: #fff; font-size: 20px;}
+.c-h2 { margin: 20px 0; padding: 5px 20px; background: gray; color: #fff; font-size: 20px;}
 .c-guide { margin-top: 0.8rem; }
 
 .c-body { min-width: unset;}
