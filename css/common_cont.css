@@ -31,6 +31,7 @@
 
 .scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../images/common/top.png) no-repeat 0 0;  }
 
+
 /* 테이블 버튼 */
 .wid80 { width: 80px;} 
 .wid84 { width: 84px;} 
@@ -68,7 +69,7 @@
 .titH43 { font-size:18px; margin-top:10px; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
 
-.pageTxt { margin-bottom: 20px; font-weight: 700;}
+.pageTxt { margin-bottom: 20px; font-weight: 500;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
@@ -76,6 +77,7 @@
 .titH5 { margin-bottom: 20px; font-size: 18px; font-weight: 700;}
 .titH5.hasLine { height: 40px; border-bottom: 1px solid #ddd;}
 .titH5 .sub { margin-left: 10px; color: #555; font-size: 16px; font-weight: 400;}
+.titH5 .blue {vertical-align: 1px;}
 .titH51 { font-size: 16px; font-weight: 400; margin-top:40px; color:#333; }
 
 .titH6 {display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700;}
@@ -85,7 +87,7 @@
 .titH3.hasLine,
 .titH4.hasLine { display: flex; align-items: center; border-bottom: 1px solid #ddd; }
 .titH3.hasLine {min-height: 60px; margin-bottom: 20px; }
-.titH4.hasLine {min-height: 56px; margin-bottom: 40px; }
+.titH4.hasLine {min-height: 56px; margin-bottom: 20px; }
 .titH3 strong.blue { margin-left: 10px; vertical-align: 0;}
 .titH4.hasPadding { padding: 0 40px;} 
 .detailCont .titH4.hasPadding { padding: 0 0px;} 
@@ -103,7 +105,7 @@
 .hasLine .inner.flexBetween { justify-content: space-between;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
-
+.hasLine .inner .right { margin-left: auto; }
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
 .titBg.lightGreen { min-height: 80px; background: #EFF5EF; font-size: 18px;}
 .titBg.flexBetween { justify-content: space-between; }
@@ -186,6 +188,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox .notiTxt + .guideList { margin-top: 10px;}
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
 .guideBox .desc + .guideList { margin-top: 8px; font-size: 14px; }
+.guideBox .desc + .guideList .blue {font-size: inherit; line-height: inherit;}
 .layerCont .guidTxt { margin-top: 32px;}
 
 .layerCont .resultBox { margin-bottom: 20px; padding: 16px; background: #EAFAEB; border-radius: 8px; text-align: center; }
@@ -651,7 +654,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 폼 한줄 그룹  */
 .formRowWrap { margin-top:10px; }
-
+.formRowWrap.wid830 { width: 830px;}
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow.flexBetween { justify-content: space-between;}
 .formRow.flexWrap { flex-wrap: wrap;}
@@ -659,7 +662,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow .formDesc { margin-left: 30px; color: #888; font-size: 14px;}
 .formRow .checkbox + .checkbox,
 .formRow .checkbox + .formSet  { margin-left: 22px;}
-
+.formRow .ml120 { margin-left: 120px;} 
 
 .layerCont .formRow .checkbox + .checkbox { margin-left: 12px;}
 /* textarea text count 있을경우 */
@@ -931,6 +934,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .divTable .row { min-height: 100px; padding: 35px 0;}
 .divTable .row + .row { border-top: 1px solid #ddd;}
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
+
+/* .divTable .row .cell .wid62 { width: 62px;} */
 .divTable .row .cell .period { width: 62px; text-align: center;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
@@ -1493,7 +1498,7 @@ table { width: 100%;}
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formListTable td span.txt {display:inline-block; padding: 15px 0; }
-.formListTable tbody > tr:first-child th{ padding-top: 15px;}
+.formListTable tbody > tr:first-child th,
 .formListTable tbody > tr:first-child td { padding-top: 0;}
 .formListTable tbody > tr:first-child td.pt15{ padding-top: 15px;}
 .formListTable .pt0 { padding-top: 0px;}
@@ -1502,7 +1507,7 @@ table { width: 100%;}
 .formListTable tbody > tr:last-child td { padding-bottom: 0;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
-.formGrayBox .formListTable td { padding: 10px 0; }
+/* .formGrayBox .formListTable td { padding: 10px 0; } */
 .formListTable .btnWhite,
 .formListTable .btnSuccess { height: 50px; padding: 0 50px; font-size: 16px;}
 .formListTable a.btnWhite,
@@ -1530,8 +1535,10 @@ table { width: 100%;}
 .formGrayBox.type2 { padding: 40px 60px 60px;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
-.formGrayBox .list:not(:first-child) { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
-.addControl { display: flex; justify-content: space-between; align-items: center;}
+
+.formGrayBox .list .addControl ~ .formListRow { margin-top: 20px;}
+.formGrayBox .list:not(:first-child) { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
+.addControl { display: flex; justify-content: space-between; align-items: center; min-height: 50px;}
 .addControl .checkbox input[type=checkbox] + label { font-weight: 500;}
 /* 텍스트 테이블 */
 .textTable.boxType.pointTable { border: 1px solid #069B66; margin-top:0; }
@@ -2484,18 +2491,38 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 /* 대출 비교하기 */
 .barStepWrap { position: relative; max-width: 1400px; margin: 0 auto 40px; padding: 54px 0;}
 /* .barStepWrap::after { content: ''; display: block; height: 16px; background: #069B66; border-radius: 16px; } */
-.barStep { display: flex; }
-.barStep li { position: relative; display: block; width: calc( 100% / 14 ); height: 16px;}
+.barStep { display: flex; background: #fafafa; justify-content: space-between }
+.barStep li { position: relative; display: block;  height: 16px;}
+.barStep li:nth-of-type(1) .circle {}
+.barStep li.on ~ li:nth-of-type(2) .circle { background-color: #4CA48F; }
+.barStep li.on ~ li:nth-of-type(3) .circle ,
+.barStep li.on ~ li:nth-of-type(4) .circle ,
+.barStep li.on ~ li:nth-of-type(5) .circle ,
+.barStep li.on ~ li:nth-of-type(6) .circle { background-color: #4CA48F; }
+.barStep li.on ~ li:nth-of-type(7) .circle { background-color: #89E3CD; }
+.barStep li.on ~ li:nth-of-type(8) .circle { background-color: #55D6B6; }
+.barStep li.on ~ li:nth-of-type(9) .circle { background-color: #8BDCE7; }
+.barStep li.on ~ li:nth-of-type(10) .circle { background-color: #55C6D6; }
+.barStep li.on ~ li:nth-of-type(11) .circle { background-color: #A3D2E7; }
+.barStep li.on ~ li:nth-of-type(12) .circle { background-color: #B8C7FD; }
+.barStep li.on ~ li:nth-of-type(13) .circle ,
+.barStep li.on ~ li:nth-of-type(14) .circle ,
+.barStep li.on ~ li:nth-of-type(15) .circle { background-color: #D7BFFF; }
 /* .barStep li:first-child { width: 52px;}
 .barStep li:last-child { width: 52px;} */
+/* .barStep li:last-child .circle { right: 0;} */
+.barStep li .circle {  align-items: center; justify-content: center; position: absolute; top: -5px; right: -13px; width: 26px; height: 26px; line-height: 26px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 14px; font-weight: 700; text-align: center; background: #069B66; z-index: 1;}
+.barStep li.on .circle { top: -12px; right: -20px; width: 40px; height: 40px; line-height: 40px; font-size: 16px;
+  display: inline-flex; background: #00AB6E; z-index: 1;}
+.barStep li:first-child .circle { left: 0; right: auto;}
 .barStep li:last-child .circle { right: 0;}
-.barStep li .circle { display: none; align-items: center; justify-content: center; position: absolute; top: -10px; right: -20px; width: 40px; height: 40px; line-height: 40px; background-color: #ddd; border-radius: 50%; color: #fff;  font-weight: 700; text-align: center; background: #069B66; z-index: 1;}
+.barStep li.on .name { display: block; }
 .barStep li .circle img { width: 24px; height: 24px; flex-shrink: 0;}
 .barStep li .name { display: none; margin-top: 8px; color:#333; font-weight: 700; white-space: nowrap;}
 .barStep li .name { position: absolute; top: 28px; left: 100%; }
-.barStep li .name span {position: absolute; display: block; transform: translate(-50%);}
+.barStep li .name span {position: absolute; display: block; transform: translate(-50%); }
 /* 텍스트 좌측 정렬 */
-.barStep li:first-child .name span { transform: translate(-50px);}
+.barStep li:first-child .name span { transform: none;}
 /* 텍스트 우측 정렬 */
 .barStep li:nth-child(16) .name,
 .barStep li:last-child .name { left: unset; right: 20px;}
@@ -2505,15 +2532,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .barStep li .name.top { color: #069B66; font-weight: 500; }
 .barStep li .name.top { position: absolute; top: -48px;}
 
-.barStep li::before { content: ''; position: absolute; display: block; width: 100%; height: 16px; background: #069B66;}
-.barStep li::after { content: ''; position: absolute; left: -5px; top: 3px; display: block; width: 10px; height:10px; border-radius: 50%; background: #0C8258;}
-.barStep li:first-child::before { border-radius: 16px 0 0 16px;}
-.barStep li:last-child::before { border-radius:  0 16px 16px 0;}
-.barStep li:first-child:after { display: none;}
-.barStep li.on ~ li::before { background: #def2ea;}
-.barStep li.on ~ li::after { background: #fff;}
-.barStep li.on .circle { display: inline-flex; background: #069B66; z-index: 1;}
-.barStep li.on .name { display: block; }
+.barStep li::before { content: ''; position: absolute; display: block; left: -90px; width: 100px; height: 16px; background: #02C37E;}
+/* .barStep li::after { content: ''; position: absolute; left: -5px; top: 3px; display: block; width: 10px; height:10px; border-radius: 50%; background: #0C8258; font-size: 0;}  */
+.barStep li:first-child::before { border-radius: 16px 0 0 16px; display: none;}
+.barStep li:last-child::before { border-radius:  0 16px 16px 0; width: 90px;}
+/* .barStep li:first-child:after { display: none;} */
+.barStep li.on ~ li::before { background: #F4F4F4;}
+/* .barStep li.on ~ li::after { background: #fff;} */
+
 
 
 /* table */
