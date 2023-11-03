@@ -897,7 +897,9 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlBox .searchBtns.wid190 button { width:190px }
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 8px; }
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
-.searchControlGroup [class^="btn"]{ padding: 0 30px;} 
+.searchControlGroup .btnSuccess, 
+.searchControlGroup .btnWhite,
+.searchControlGroup .btnBlack{ padding: 0 30px;} 
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; } 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
@@ -911,7 +913,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
-.searchControlItem select { width: 100%; height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
+.searchControlItem select { height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
 .searchControlItem select.wid640 { width: 640px; }
 .searchControlItem .input { height: 100%; padding: 0 16px 0 16px; color: #333; }
 .searchControlItem .input.inputXs { width: 100px;}
@@ -921,7 +923,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .line  {position: relative; width: 0px; height: 100%; }
 .searchControlItem .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background: #ddd}
 .searchControlItem .formRow.formGroup { gap: 0;}
-.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; height: 100%; background-color: #fff;}
+.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; width: auto; height: 100%; background-color: #fff;}
 .searchControlItem .formRow.formGroup > * { border-width: 1px 0px 1px; border-style: solid; border-color: #ddd; border-radius: 0;}
 .searchControlItem .formRow.formGroup > *:last-child { border-width: 1px 1px 1px 0px;  border-radius: 0 8px 8px 0;} 
 /* 버튼을 제외한 폼 확장 */
