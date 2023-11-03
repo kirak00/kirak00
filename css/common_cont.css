@@ -31,11 +31,15 @@
 
 .scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../images/common/top.png) no-repeat 0 0;  }
 
+
 /* 테이블 버튼 */
 .wid80 { width: 80px;} 
 .wid84 { width: 84px;} 
 .wid92 { width: 92px;}
+.wid120 { width: 120px;}
 .wid130 { width: 130px;} 
+
+.ml30 { margin-left: 30px;}
 /****************************
 **********  align  **********
 *****************************/
@@ -67,8 +71,10 @@
 .titH42 { font-size:18px; font-weight: 700; }
 .titH43 { font-size:18px; margin-top:10px; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
-
-.pageTxt { margin-bottom: 20px; font-weight: 700;}
+.titH4 + .pageTxt { margin-top: 20px;}
+.pageTxt {margin-bottom: 20px; font-weight: 500;}
+.pageTxt.flex {  display: flex; align-items: center; }
+.pageTxt.flex .right { margin-left: auto;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
@@ -76,6 +82,7 @@
 .titH5 { margin-bottom: 20px; font-size: 18px; font-weight: 700;}
 .titH5.hasLine { height: 40px; border-bottom: 1px solid #ddd;}
 .titH5 .sub { margin-left: 10px; color: #555; font-size: 16px; font-weight: 400;}
+.titH5 .blue {vertical-align: 1px;}
 .titH51 { font-size: 16px; font-weight: 400; margin-top:40px; color:#333; }
 
 .titH6 {display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700;}
@@ -84,8 +91,11 @@
 .tableTit { font-size: 34px; font-size: 700; }
 .titH3.hasLine,
 .titH4.hasLine { display: flex; align-items: center; border-bottom: 1px solid #ddd; }
-.titH3.hasLine {min-height: 60px; margin-bottom: 20px; }
-.titH4.hasLine {min-height: 56px; margin-bottom: 40px; }
+.titH3.hasLine {min-height: 60px; margin-bottom: 20px;}
+.bgGray .titH3.hasLine { max-width: 1400px; margin-left: auto; margin-right: auto;}
+.titH4.hasLine {min-height: 56px; margin-bottom: 20px; }
+.titH4.hasLine .notiTxt { font-weight: 400;}
+.titH4.hasLine .right { margin-left: auto;}
 .titH3 strong.blue { margin-left: 10px; vertical-align: 0;}
 .titH4.hasPadding { padding: 0 40px;} 
 .detailCont .titH4.hasPadding { padding: 0 0px;} 
@@ -103,7 +113,7 @@
 .hasLine .inner.flexBetween { justify-content: space-between;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
-
+.hasLine .inner .right { margin-left: auto; }
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
 .titBg.lightGreen { min-height: 80px; background: #EFF5EF; font-size: 18px;}
 .titBg.flexBetween { justify-content: space-between; }
@@ -186,6 +196,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox .notiTxt + .guideList { margin-top: 10px;}
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
 .guideBox .desc + .guideList { margin-top: 8px; font-size: 14px; }
+.guideBox .desc + .guideList .blue {font-size: inherit; line-height: inherit;}
 .layerCont .guidTxt { margin-top: 32px;}
 
 .layerCont .resultBox { margin-bottom: 20px; padding: 16px; background: #EAFAEB; border-radius: 8px; text-align: center; }
@@ -207,7 +218,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideList.dot .list.blue::before {background: #069B66}
 
 .guideList.circle { margin-top: 0;}
-.guideList.circle > .list { position: relative; padding-left: 20px; font-size: 18px; }
+.guideList.circle > .list { position: relative; display: block; padding-left: 20px; font-size: 18px; }
 .guideList.circle > .list + .list { margin-top: 0;}
 .guideList.circle > .list::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #555; }
 
@@ -232,6 +243,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 *****************************/
 .formListBlock { margin-top: 0;}
 .sectionBlock20 { margin-top: 20px;}
+.sectionBlock30 { margin-top: 30px;}
 .sectionBlock40 { margin-top: 40px;}
 .sectionBlock60 { margin-top: 40px;}
 .sectionBlock80 { margin-top: 60px;}
@@ -260,65 +272,90 @@ button    {background:none; cursor: pointer; transition: background .2s; white-s
 /* MAIN 버튼 */ 
 a.btnSuccess   ,
 button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff  }
-.btnSky        {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff }
+.btnSky,.btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 .btnWhite      {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 .btnGray       {padding:0 50px; height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #888; }
-.btnGray2      {padding:0 50px; height:50px; background:#EEF0F1; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
-.btnGray2 em   {vertical-align: 0;  }
+/* .btnGray2      {padding:0 50px; height:50px; background:#EEF0F1; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
+.btnGray2 em   {vertical-align: 0;  } - 미사용 */ 
 .btnWhiteLine  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 .btnWhiteLine2  {padding:0 50px; height:50px; background:transparent; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #fff; }
-.btnDkGreen    {padding:0 50px; height:50px; background:#4C9DA2; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #4C9DA2; }
 .btnBlack      {padding:0 50px; height:50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; border:1px solid #555; }
-.btnLine       {padding:0 50px; height:50px; background:#fff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#333; border:1px solid #ddd; }
 .btnBlack.p30  {padding:0 30px; }
 
-a.btnSuccess        {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnSky         {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnWhite       {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnGray       {display:inline-block; line-height:50px; white-space: nowrap;}
-a.btnLine       {display:inline-block; line-height:50px; white-space: nowrap; }
+.btnSuccess:focus,
+.btnSky:focus, .btnDkGreen:focus,
+.btnWhite:focus,
+.btnGray:focus,  
+/* .btnGray2:focus, */
+.btnWhiteLine:focus ,
+.btnWhiteLine2:focus ,
+.btnBlack:focus { outline: 2px dashed #069B66; }
+
+/* .btnSuccess:focus, */
+.btnSuccess:hover       { background:#148159; text-decoration: none; border-color: #148159; }
+.btnSky:hover, .btnDkGreen:hover   { background:#24858A; text-decoration: none; border-color: #24858A; }
+.btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
+.btnGray:hover       { background:#ddd; text-decoration: none; border-color: #ddd;}
+.btnWhiteLine:hover       { background:#069B66; text-decoration: none;  color:#fff }
+.btnWhiteLine2:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
+.btnBlack:hover       { background:#333; text-decoration: none; color:#ffff;  }
+
+/* .btnSuccess:active        { background:#069B66; text-decoration: none;  } */
+/* .btnSky:focus, */
+/* .btnSky:active        { background:#4C9DA2; text-decoration: none;  } */
+/* .btnWhite:focus, */
+/* .btnWhite:active       { background:#069B66; text-decoration: none; color:#fff } */
+/* .btnWhiteLine:focus, */
+/* .btnBlack:active       { background:#555; color:#fff } */
+
+a.btnSuccess,
+a.btnSky,
+a.btnWhite,
+a.btnGray,
+a.btnLine,
 a.btnBlack, label.btnBlack       {display:inline-block; line-height:50px; white-space: nowrap;}
 
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess,
-table .btnSky,
-table .btnWhite,
-table .btnGray,
-table .btnBlack,
-table .btnWhiteLine,
-table .btnDkGreen,
-table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
-table button.full { width: 100%;}
+table.bbs_list .btnSuccess,
+.jsGridWrap table .btnSuccess,
+table.bbs_list .btnSky,
+.jsGridWrap table .btnSky,
+table.bbs_list .btnWhite,
+.jsGridWrap table .btnWhite,
+table.bbs_list .btnGray,
+.jsGridWrap table .btnGray,
+table.bbs_list .btnBlack,
+.jsGridWrap table .btnBlack,
+table.bbs_list .btnWhiteLine,
+.jsGridWrap table .btnWhiteLine,
+table.bbs_list .btnDkGreen,
+.jsGridWrap table .btnDkGreen,
+table.bbs_list .btnLine,
+.jsGridWrap table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
+table.bbs_list button.full { width: 100%;}
 
 .btnFixed .bbs_list button { min-width: 140px;}
 
-table a.btnSuccess        { line-height: 34px;}
-table a.btnSky         { line-height: 34px;}
-table a.btnWhite       { line-height: 34px;}
-table a.btnGray       { line-height: 34px;}
-table a.btnWhiteLine       { line-height: 34px;}
-table a.btnDkGreen       { line-height: 34px;}
-table a.btnLine       { line-height: 34px;}
+table.bbs_list a.btnSuccess,
+.jsGridWrap table a.btnSuccess,
+table.bbs_list a.btnSky,
+.jsGridWrap table a.btnSky,
+table.bbs_list a.btnWhite,      
+.jsGridWrap table a.btnWhite,      
+table.bbs_list a.btnGray,     
+.jsGridWrap table a.btnGray,     
+table.bbs_list a.btnWhiteLine,    
+.jsGridWrap table a.btnWhiteLine,    
+table.bbs_list a.btnDkGreen,
+.jsGridWrap table a.btnDkGreen,
+table.bbs_list a.btnLine,
+.jsGridWrap table a.btnLine       { line-height: 34px;}
 
-.btnSuccess:focus,
-.btnSuccess:hover        { background:#148159; text-decoration: none;  }
-.btnSuccess:active        { background:#069B66; text-decoration: none;  }
-.btnSky:focus,
-.btnSky:hover         { background:#24858A; text-decoration: none;  }
-.btnSky:active        { background:#4C9DA2; text-decoration: none;  }
-.btnWhite:focus,
-.btnWhite:hover       { background:#069B66; text-decoration: none; color:#fff }
-.btnWhite:active       { background:#069B66; text-decoration: none; color:#fff }
-.btnWhiteLine:focus,
-.btnWhiteLine:hover       { background:#ffffff; text-decoration: none; color:#069B66 }
-.btnWhiteLine:active       { background:#ffffff; color:#069B66 }
-.btnBlack:focus,
-.btnBlack:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
-.btnBlack:active       { background:#555; color:#fff }
 
-.btnLine:focus,
+
+/* .btnLine:focus, */
 .btnLine:hover       { color:#069B66; border:1px solid #069B66;}
 .btnLine:active       { color:#069B66 }
 
@@ -337,6 +374,10 @@ a.ico_down       {color:#069B66; }
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
 .ico_down:disabled       {color:#333; opacity: .4; }
 .ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
+
+
+.ico_check::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -4px; background:url(../images/common/ico_18_check_primary.png) no-repeat 50% 50% / contain; }
+
 .programDown .ico_down::after { width: 24px; height: 24px; vertical-align: -4px;}
 .btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
@@ -354,7 +395,7 @@ a.ico_down       {color:#069B66; }
 .ico_chart       {padding:0 32px;}
 .ico_chart::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
 .btnWhite.ico_chart::after  {background:url(../images/common/ico_24_chart.png) no-repeat 50% 50%; }
-.btnWhite:focus.ico_chart::after,
+/* .btnWhite:focus.ico_chart::after, */
 .btnWhite:active.ico_chart::after,
 .btnWhite:hover.ico_chart::after  {background:url(../images/common/ico_24_chart_w.png) no-repeat 50% 50%; }
 
@@ -364,7 +405,7 @@ a.ico_down       {color:#069B66; }
 .ico_setting       {padding:0 32px;  color:#333}
 .ico_setting::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 .btnWhite.ico_setting::after  {background:url(../images/common/ico_24_setting_primary.png) no-repeat 50% 50%; }
-.btnWhite:focus.ico_chart::after,
+/* .btnWhite:focus.ico_chart::after, */
 .btnWhite:active.ico_setting::after,
 .btnWhite:hover.ico_setting::after  {background:url(../images/common/ico_24_setting_w.png) no-repeat 50% 50%; }
 .ico_setting:disabled::after  {background:url(../images/common/ico_24_setting_g.png) no-repeat 50% 50% !important;   }
@@ -372,11 +413,11 @@ a.ico_down       {color:#069B66; }
 
 .btnWhite.ico_prev         {padding:0 24px;}
 .btnWhite.ico_prev::before  {content:""; display:inline-block; margin-right:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_24_prev.png) no-repeat 50% 50% / contain; }
-.btnWhite.ico_prev:focus::before ,
+/* .btnWhite.ico_prev:focus::before , */
 .btnWhite.ico_prev:hover::before   {background-image:url(../images/common/ico_24_prev_w.png)}
 .btnWhite.ico_next         {padding:0 24px;}
 .btnWhite.ico_next::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_next.png) no-repeat 50% 50%; }
-.btnWhite.ico_next:focus::after ,
+/* .btnWhite.ico_next:focus::after , */
 .btnWhite.ico_next:hover::after   {background-image:url(../images/common/ico_24_next_w.png)}
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
@@ -403,23 +444,23 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
 /* 유틸 버튼 */
 .btnReset     {display:inline-block; padding:0 0px; width:50px !important; min-width: 50px !important; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
 .btnReset::after   {content:""; position:absolute; left:0%; top:0; display:inline-block; width:49px; height:49px; background:url(../images/common/ico_24_refresh_primary.png) no-repeat 50% 50% / 18px; }
-.btnReset:focus,
+/* .btnReset:focus, */
 .btnReset:hover       { background:#069B66; text-decoration: none; color:#fff; border-radius: 8px;  }
 .btnReset:focus::after ,
 .btnReset:hover::after  { background-image:url(../images/common/ico_24_refresh_w.png) }
 
 .btnFile      {font-size: 18px; font-weight: 700; color:#069B66; text-decoration: underline;}
-.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
+.btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
 
 .btnDown          {width:50px; height:50px; border-radius: 8px; background:url(../images/common/ico_24_download_white.png) no-repeat 50% 50% #069B66;  }
-.btnDown:focus
+/* .btnDown:focus */
 .btnDown:hover    {background-color:#148159 ;  }
 .btnDown.white      {border:1px solid #069B66; background-image:url(../images/common/ico_24_download_blue.png); background-color:#fff ;  }
-.btnDown.white:focus,
+/* .btnDown.white:focus, */
 .btnDown.white:hover {border:1px solid #069B66; background-color:#069B66 ; background-image:url(../images/common/ico_24_download_white.png);  }
 
 .btnCalendar          {width:50px; height:50px; border: 1px solid #069B66; border-radius: 8px; background:url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff;  }
-.btnCalendar:focus,
+/* .btnCalendar:focus, */
 .btnCalendar:hover    {background-color:#148159 ;  }
 .btnCalendar.white      {border:1px solid #069B66; background-image:url(../images/common/ico_24_calendar_b.png); background-color:#fff ;  }
 .btnCalendar.white:focus,
@@ -428,7 +469,7 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
  
 .btnPlus { width: 36px; height: 36px; flex-shrink: 0; background: #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnPlus::after { content:""; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_24_plus_w.png) no-repeat 50% 50%; vertical-align: top;}
-.btnPlus:focus,
+/* .btnPlus:focus, */
 .btnPlus:hover    {background-color:#148159;}
 .btnPlus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
@@ -436,13 +477,15 @@ select:disabled       { background-color:#EEF0F1; color:#888; border:1px solid #
 
 .btnMinus { width: 36px; height: 36px; flex-shrink: 0; background: #fff; border: 1px solid #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnMinus::after { content:""; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_24_minus_w.png) no-repeat 50% 50%; vertical-align: top;}
-.btnMinus:focus,
+/* .btnMinus:focus, */
 .btnMinus:hover    {background-color:#148159; }
 .btnMinus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
 
 .btnMinus.w50 { width: 50px; height: 50px;}
 
-.addBtnSet { display: flex; column-gap: 8px;}
+.addBtnSet { display: flex; column-gap: 8px; width: 76px; margin: 0 auto;}
+.addBtnSet .btnMinus { margin-right: auto;}
+.addBtnSet .btnPlus {margin-left: auto;}
 
 .btnSet { display: inline-flex; gap: 8px;}
 
@@ -632,7 +675,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* 폼 한줄 그룹  */
 .formRowWrap { margin-top:10px; }
-
+.formRowWrap.wid830 { width: 830px;}
 .formRow { display: flex; align-items: center; gap: 8px; vertical-align: middle;}
 .formRow.flexBetween { justify-content: space-between;}
 .formRow.flexWrap { flex-wrap: wrap;}
@@ -640,7 +683,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow .formDesc { margin-left: 30px; color: #888; font-size: 14px;}
 .formRow .checkbox + .checkbox,
 .formRow .checkbox + .formSet  { margin-left: 22px;}
-
+.formRow .ml120 { margin-left: 120px;} 
 
 .layerCont .formRow .checkbox + .checkbox { margin-left: 12px;}
 /* textarea text count 있을경우 */
@@ -854,9 +897,11 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlBox .searchBtns.wid190 button { width:190px }
 .searchControlGroup { display: flex; align-items: center; flex-wrap: wrap; row-gap: 12px; column-gap: 8px; }
 .searchControlGroup + .searchControlGroup   {margin-top:12px; }
-.searchControlGroup [class^="btn"]{ padding: 0 30px;} 
+.searchControlGroup .btnSuccess, 
+.searchControlGroup .btnWhite,
+.searchControlGroup .btnBlack{ padding: 0 30px;} 
 
-.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
+.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; } 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
@@ -868,7 +913,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
-.searchControlItem select { width: 100%; height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
+.searchControlItem select { height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
 .searchControlItem select.wid640 { width: 640px; }
 .searchControlItem .input { height: 100%; padding: 0 16px 0 16px; color: #333; }
 .searchControlItem .input.inputXs { width: 100px;}
@@ -878,7 +923,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .line  {position: relative; width: 0px; height: 100%; }
 .searchControlItem .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background: #ddd}
 .searchControlItem .formRow.formGroup { gap: 0;}
-.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; height: 100%; background-color: #fff;}
+.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; width: auto; height: 100%; background-color: #fff;}
 .searchControlItem .formRow.formGroup > * { border-width: 1px 0px 1px; border-style: solid; border-color: #ddd; border-radius: 0;}
 .searchControlItem .formRow.formGroup > *:last-child { border-width: 1px 1px 1px 0px;  border-radius: 0 8px 8px 0;} 
 /* 버튼을 제외한 폼 확장 */
@@ -912,6 +957,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .divTable .row { min-height: 100px; padding: 35px 0;}
 .divTable .row + .row { border-top: 1px solid #ddd;}
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
+
+/* .divTable .row .cell .wid62 { width: 62px;} */
 .divTable .row .cell .period { width: 62px; text-align: center;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
@@ -1025,6 +1072,22 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeAccordion .accordionTitle .checkbox label span:first-child { vertical-align: -6px; }
 .agreeAccordion .accordionTitle .required { margin-left: 4px; color: #069B66;}
 .agreeAccordion .accordionPanel { margin: 0 ; padding: 30px 40px; background: #fff;}
+
+
+.agreeForm {}
+.agreeForm .agreeItem { border: 1px solid #ddd; border-radius: 16px; overflow: hidden;}
+.agreeForm .agreeItem + .agreeItem { margin-top: 40px;}
+.agreeForm .agreeTitle { display: flex; justify-content: space-between; align-items: center; height: 60px; padding: 0 60px; border-bottom: 1px solid #ddd; }
+.agreeForm .agreeTitle:last-child { border-bottom: 0;}
+.agreeForm .agreeTitle .checkbox label { font-weight: 700;}
+.agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
+.agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
+.agreeForm .agreeTitle.main { background: #F6FBF7; padding: 0 60px 0 40px; }
+.agreeForm .agreeTitle.main .btnWhite { width: 150px; }
+.layerWrap .layerBody.wid1000 .layerCont .tabLine { margin-top: -20px}
+.layerCont .tabLine + .agreeCont { margin-top: 20px;}
+.layerCont .agreeCont { padding: 20px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px;}
+
 /****************************
 **********  paging  **********
 *****************************/
@@ -1172,7 +1235,7 @@ footer .copy .wa    {float:right; }
 
 .bgWrap     {background:#FAFAFA}
 
-section   {margin:0 auto; max-width: 1400px;}
+section   {margin:0 auto; max-width: 1400px; overflow: hidden;}
 
 .loginCont     {margin:0 auto;  }
 .loginCont .loginTit        {width:100%; text-align: center;}
@@ -1332,7 +1395,7 @@ table.bbs_list tfoot tr.point th,
 table.bbs_list tfoot tr.point td { background: #EAFAEB; font-weight: 700; }
 
 .bbs_list .formRow { justify-content: center;}
-table.bbs_list .addBtnSet { justify-content: center; gap: 4px;}
+table.bbs_list .addBtnSet {  gap: 4px;}
 table.bbs_list .input, 
 table.bbs_list select { height: 50px; min-height: 50px;}
 
@@ -1458,16 +1521,16 @@ table { width: 100%;}
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
 .formListTable td span.txt {display:inline-block; padding: 15px 0; }
-.formListTable tbody > tr:first-child th{ padding-top: 15px;}
-.formListTable tbody > tr:first-child td { padding-top: 0;}
-.formListTable tbody > tr:first-child td.pt15{ padding-top: 15px;}
+/* .formListTable tbody > tr:first-child th,
+.formListTable tbody > tr:first-child td { padding-top: 0;} */
+/* .formListTable tbody > tr:first-child td.pt15{ padding-top: 15px;} */
 .formListTable .pt0 { padding-top: 0px;}
 .formListTable .pt15 { padding-top: 15px;}
 .formListTable tbody > tr:last-child th,
 .formListTable tbody > tr:last-child td { padding-bottom: 0;}
 .formGrayBox .formListTable th { padding: 30px 0 15px 30px; }
 .formGrayBox .formListTable th:first-child { padding-left:0; }
-.formGrayBox .formListTable td { padding: 10px 0; }
+/* .formGrayBox .formListTable td { padding: 10px 0; } */
 .formListTable .btnWhite,
 .formListTable .btnSuccess { height: 50px; padding: 0 50px; font-size: 16px;}
 .formListTable a.btnWhite,
@@ -1489,14 +1552,15 @@ table { width: 100%;}
 
 
 
-.formGrayBox { margin: 20px 0 0;}
+.formGrayBox {  margin: 20px 0 0; padding: 40px; background: #EFF5EF; border-radius: 16px;}
 .formGrayBox .formListTable { margin-top: 20px;}
-.formGrayBox { padding: 40px; background: #F6FBF7; border-radius: 16px;}
 .formGrayBox.type2 { padding: 40px 60px 60px;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
-.formGrayBox .list:not(:first-child) { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
-.addControl { display: flex; justify-content: space-between; align-items: center;}
+
+.formGrayBox .list .addControl ~ .formListRow { margin-top: 20px;}
+.formGrayBox .list:not(:first-child) { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
+.addControl { display: flex; justify-content: space-between; align-items: center; min-height: 50px;}
 .addControl .checkbox input[type=checkbox] + label { font-weight: 500;}
 /* 텍스트 테이블 */
 .textTable.boxType.pointTable { border: 1px solid #069B66; margin-top:0; }
@@ -1889,8 +1953,8 @@ ul.tab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidd
 ul.tab li   {width:100%; }
 ul.tab li button   {display:block; width:100%; height:70px; text-align: center; font-size:24px; background:#F4F6F8; }
 ul.tab li.on button   {background:#EAFAEB; color:#fff; font-weight: 700;  }
-ul.tab li:hover button,
-ul.tab li button:focus   {background:#069B66; color:#fff;  }
+ul.tab li:hover button/*,
+ul.tab li button:focus */  {background:#069B66; color:#fff;  }
 
 ul.evtTab      {width:100%; display:flex; gap:1; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:10px; margin-bottom:60px;  }
 ul.evtTab li button   {display:block; width:100%; height:50px; padding:0 32px; border-radius: 32px; text-align: center; font-size:24px; background:#fff; border:1px solid #ddd; }
@@ -1902,8 +1966,8 @@ ul.evtTab li button:focus   {background:#069B66; color:#fff;  }
 ul.innerTab      {width:100%; max-width: 1400px; display:flex; margin: 0 auto; border-radius: 8px; overflow: hidden; flex-wrap: wrap; gap:16px; }
 ul.innerTab li button   {display:block; width:100%; height:44px; padding:0 32px; border-radius: 32px; text-align: center; font-size:16px; background:#fff; border:1px solid #069B66; color: #069B66; }
 ul.innerTab li.on button   {background:#069B66; color:#fff; font-weight: 700; border:1px solid #069B66;  }
-ul.innerTab li:hover button,
-ul.innerTab li button:focus   {background:#36B688; color:#fff;  }
+ul.innerTab li:hover button/*,
+ul.innerTab li button:focus */  {background:#36B688; color:#fff;  }
 ul.innerTab li.on .required { color: #fff; }
 ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 
@@ -2344,6 +2408,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .processStepWrap .step .icoWrap [class^="ico"]::after { content: ''; display: block; width: 46px; height: 46px; background: #fff url(../images/common/ico_18_right.png) no-repeat center / 18px 18px; border-radius: 50%; border: 1px solid #ddd; position: absolute; top: 27px; right: -33px; z-index: 1;}
 .processStepWrap .tit { line-height: 42px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 
 
+.processStepWrap.main { margin-top: 0;}
+.processStepWrap.main .step { background: #fff; box-shadow: 3px 3px 8px 0px #ECF0F4;}
+
 .processStepWrap .left { width: 860px;}
 .processStepWrap .left ol { display: flex; gap: 20px; margin-top: 16px;}
 .processStepWrap .left .step:last-child .icoWrap [class^="ico"]::after { display: none;}
@@ -2455,18 +2522,38 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 /* 대출 비교하기 */
 .barStepWrap { position: relative; max-width: 1400px; margin: 0 auto 40px; padding: 54px 0;}
 /* .barStepWrap::after { content: ''; display: block; height: 16px; background: #069B66; border-radius: 16px; } */
-.barStep { display: flex; }
-.barStep li { position: relative; display: block; width: calc( 100% / 14 ); height: 16px;}
+.barStep { display: flex; background: #fafafa; justify-content: space-between; width: calc(100% - 26px); margin-left: 13px; }
+.barStep li { position: relative; display: block;  height: 16px;}
+.barStep li:nth-of-type(1) .circle {}
+.barStep li.on ~ li:nth-of-type(2) .circle { background-color: #4CA48F; }
+.barStep li.on ~ li:nth-of-type(3) .circle ,
+.barStep li.on ~ li:nth-of-type(4) .circle ,
+.barStep li.on ~ li:nth-of-type(5) .circle ,
+.barStep li.on ~ li:nth-of-type(6) .circle { background-color: #4CA48F; }
+.barStep li.on ~ li:nth-of-type(7) .circle { background-color: #89E3CD; }
+.barStep li.on ~ li:nth-of-type(8) .circle { background-color: #55D6B6; }
+.barStep li.on ~ li:nth-of-type(9) .circle { background-color: #8BDCE7; }
+.barStep li.on ~ li:nth-of-type(10) .circle { background-color: #55C6D6; }
+.barStep li.on ~ li:nth-of-type(11) .circle { background-color: #A3D2E7; }
+.barStep li.on ~ li:nth-of-type(12) .circle { background-color: #B8C7FD; }
+.barStep li.on ~ li:nth-of-type(13) .circle ,
+.barStep li.on ~ li:nth-of-type(14) .circle ,
+.barStep li.on ~ li:nth-of-type(15) .circle { background-color: #D7BFFF; }
 /* .barStep li:first-child { width: 52px;}
 .barStep li:last-child { width: 52px;} */
-.barStep li:last-child .circle { right: 0;}
-.barStep li .circle { display: none; align-items: center; justify-content: center; position: absolute; top: -10px; right: -20px; width: 40px; height: 40px; line-height: 40px; background-color: #ddd; border-radius: 50%; color: #fff;  font-weight: 700; text-align: center; background: #069B66; z-index: 1;}
+/* .barStep li:last-child .circle { right: 0;} */
+.barStep li .circle {  align-items: center; justify-content: center; position: absolute; top: -5px; right: -13px; width: 26px; height: 26px; line-height: 26px; background-color: #ddd; border-radius: 50%; color: #fff; font-size: 14px; font-weight: 700; text-align: center; background: #069B66; z-index: 1;}
+.barStep li.on .circle { top: -12px; right: -20px; width: 40px; height: 40px; line-height: 40px; font-size: 16px;
+  display: inline-flex; background: #00AB6E; z-index: 1;}
+.barStep li:first-child.on .circle { left: -14px; right: auto;}
+.barStep li:last-child.on .circle { right: -14px;}
+.barStep li.on .name { display: block; }
 .barStep li .circle img { width: 24px; height: 24px; flex-shrink: 0;}
 .barStep li .name { display: none; margin-top: 8px; color:#333; font-weight: 700; white-space: nowrap;}
 .barStep li .name { position: absolute; top: 28px; left: 100%; }
-.barStep li .name span {position: absolute; display: block; transform: translate(-50%);}
+.barStep li .name span {position: absolute; display: block; transform: translate(-50%); }
 /* 텍스트 좌측 정렬 */
-.barStep li:first-child .name span { transform: translate(-50px);}
+.barStep li:first-child .name span { transform: none; left: -14px}
 /* 텍스트 우측 정렬 */
 .barStep li:nth-child(16) .name,
 .barStep li:last-child .name { left: unset; right: 20px;}
@@ -2476,15 +2563,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .barStep li .name.top { color: #069B66; font-weight: 500; }
 .barStep li .name.top { position: absolute; top: -48px;}
 
-.barStep li::before { content: ''; position: absolute; display: block; width: 100%; height: 16px; background: #069B66;}
-.barStep li::after { content: ''; position: absolute; left: -5px; top: 3px; display: block; width: 10px; height:10px; border-radius: 50%; background: #0C8258;}
-.barStep li:first-child::before { border-radius: 16px 0 0 16px;}
-.barStep li:last-child::before { border-radius:  0 16px 16px 0;}
-.barStep li:first-child:after { display: none;}
-.barStep li.on ~ li::before { background: #def2ea;}
-.barStep li.on ~ li::after { background: #fff;}
-.barStep li.on .circle { display: inline-flex; background: #069B66; z-index: 1;}
-.barStep li.on .name { display: block; }
+.barStep li::before { content: ''; position: absolute; display: block; left: -90px; width: 100px; height: 16px; background: #02C37E;}
+/* .barStep li::after { content: ''; position: absolute; left: -5px; top: 3px; display: block; width: 10px; height:10px; border-radius: 50%; background: #0C8258; font-size: 0;}  */
+.barStep li:first-child::before { border-radius: 16px 0 0 16px; display: none;}
+.barStep li:last-child::before { border-radius:  0 16px 16px 0; width: 90px;}
+/* .barStep li:first-child:after { display: none;} */
+.barStep li.on ~ li::before { background: #F4F4F4;}
+/* .barStep li.on ~ li::after { background: #fff;} */
+
 
 
 /* table */

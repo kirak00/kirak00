@@ -74,7 +74,7 @@
           <!-- <p class="name top"><span>재무 현황</span></p> --><!-- v1.6 삭제 -->
           <p class="name"><span>재무 현황</span></p><!-- v1.6 워딩 수정 -->
         </li>
-        <li>
+        <li class="on">
           <span class="circle">10</span>
           <!-- <p class="name top"><span>재무 현황</span></p> --><!-- v1.6 삭제 -->
           <p class="name"><span>제출 자료</span></p><!-- v1.6 워딩 수정 -->
@@ -110,25 +110,35 @@
       <section class="">
         <div class="divTable periodInfo">
           <div class="row">
+            <!-- <div class="cell">
+              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
+            </div> -->
+            
             <div class="cell">
-              제<input type="text" class="input wid32 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
+              <span class="period">(당)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
             </div>
-            <div class="cell textLeft">
-              제<input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+          </div>
+          <div class="row">
+            <!-- <div class="cell">
+              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
+            </div> -->
+            <div class="cell">
+              <span class="period">(전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
             </div>
           </div>
           <div class="row">
             <div class="cell">
-              제<input type="text" class="input wid32 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
-            </div>
-            <div class="cell textLeft">
-              제<input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+              <span class="period">(전전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
             </div>
           </div>
         </div>
-         <!-- 디자인 수정 .mt40 삭제 -->
+        <!-- 디자인 수정 .mt40 삭제 -->
         <div class="table_wrap">
           <table class="bbs_list">
             <caption>재무 현황 자료 수집 정보</caption>
@@ -141,9 +151,9 @@
             <thead class="double2">
               <tr>
                 <th scope="col" rowspan="2">계정과목</th>
-                <th scope="col"><div class="formRow">제<input type="text" class="input wid32 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
-                <th scope="col"><div class="formRow">제<input type="text" class="input wid32 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
-                <th scope="col"><div class="formRow">제<input type="text" class="input wid32 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
               </tr>
               <tr>
                 <th scope="col">금액</th>
@@ -218,6 +228,89 @@
       </section>
       <!-- 디자인 수정 .type2 추가 -->
       <section class="guideBox type2">
+        <ul class="guideList dot">
+          <li class="list blue">모든 항목은 숫자만 입력해 주세요.</li>
+          <li class="list blue">금액은 원단위로 입력해 주세요.</li>
+          <li class="list blue">음수의 경우는 - 로 표기해 주세요. ex) 양수 2,000,000 / 음수 -2,000,000</li>
+        </ul>
+      </section>
+      <div class="titH3 hasLine mb0"><h3 class="inner">손익계산서 <span class="blue">(필수)</span></h3></div>
+      <section class="sectionBlock20">
+        <div class="divTable periodInfo">
+          <div class="row">
+            <!-- <div class="cell">
+              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
+            </div> -->
+            <div class="cell">
+              <span class="period">(당)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <!-- <div class="cell">
+              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
+            </div> -->
+            <div class="cell">
+              <span class="period">(전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <span class="period">(전전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="0000" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+            </div>
+          </div>
+        </div>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>재무 현황 자료 수집 정보</caption>
+            <colgroup>
+              <col />
+              <col width="380px" />
+              <col width="380px" />
+              <col width="380px" />
+            </colgroup>
+            <thead class="double2">
+              <tr>
+                <th scope="col" rowspan="2">계정과목</th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
+              </tr>
+              <tr>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+                <th scope="col">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>매출액</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>영업이익</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+              <tr>
+                <td>이자비용</td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+                <td><input type="text" class="input textCenter" placeholder="금액을 입력해 주세요." title="금액을 입력해 주세요."/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
         <ul class="guideList dot">
           <li class="list blue">모든 항목은 숫자만 입력해 주세요.</li>
           <li class="list blue">금액은 원단위로 입력해 주세요.</li>

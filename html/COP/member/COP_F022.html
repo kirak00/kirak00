@@ -69,11 +69,11 @@
             </tr>
             <tr>
               <th scope="row">
-                <label class="label" for="inpBrdName">상호명</label>
+                <label class="label" for="inpBrdName">법인명</label><!-- v1.6 수정 -->
               </th>
               <td>
                 <div class="formRow hasError">
-                  <input id="inpBrdName" class="input" type="text" placeholder="상호명을 입력해 주세요." value="">
+                  <input id="inpBrdName" class="input" type="text" placeholder="사업자등록증의 법인명과 동일하게 작성해주세요." value="">
                 </div>
                 <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
               </td>
@@ -131,6 +131,14 @@
                   <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
                   <!-- <button type="button" class="btnWhite">본인 확인</button> --><!-- v1.4 삭제 -->
                 </div>
+              </td>
+            </tr>
+            <!-- v1.6 대표자 유형 따로 분리 -->
+            <tr>
+              <th scope="row" class="pt15">
+                <label class="label" for="inpCeo">대표자 유형</label>
+              </th>
+              <td>
                 <div class="formRow"><!-- v1.4 mt20 삭제 -->
                   <span class="radio">
                     <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked/>
@@ -417,7 +425,8 @@
               <td>
                 <div class="formRow">
                   <select title="" class="wid200">
-                    <option>선택하세요</option>
+                    <!-- <option>선택해주세요</option> -->
+                    <option>인터넷 검색</option>
                   </select>
                 </div>
                 <div class="formRow">
@@ -444,6 +453,12 @@
                   <input class="input" type="text" placeholder="Ex) 지인추천" value="">
                 </div>
                 <div class="formRow">
+                  <select title="" class="wid200">
+                    <!-- <option>선택해주세요</option> -->
+                    <option>광고</option>
+                  </select>
+                </div>
+                <div class="formRow">
                   <span class="radio">
                     <input type="radio" id="whereRdo1" name="whereRdo" value="" />
                     <label for="whereRdo1"><span></span>라디오 광고</label>
@@ -463,7 +478,14 @@
                   <input class="input" type="text" placeholder="Ex) 지인추천" value="">
                 </div>
                 <div class="formRow">
+                  <select title="" class="wid200">
+                    <!-- <option>선택해주세요</option> -->
+                    <option>신한은행 직원 소개</option>
+                  </select>
+                </div>
+                <div class="formRow"><!-- v1.6 추가 -->
                   <input class="input" type="text" placeholder="신한은행 직원의 행번을 입력해주세요." value="">
+                  <button type="button" class="btnWhite">조회</button>
                 </div>
               </td>
               <!-- //v1.4 수정 -->
