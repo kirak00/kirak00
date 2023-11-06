@@ -1864,6 +1864,15 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap.show .layerDimm      {opacity:1; left:0; }
 
 
+body.popup          {min-width: auto;}
+.popup .layerWrap      {left:0%; position: static; }
+.popup .layerWrap .layerBody      {width:100% !important}
+.popup .layerWrap .layerBody      {margin:0; opacity:1; transform: translateY(0px); border-radius: 0; }
+.popup .layerWrap .layerDimm      {opacity:0; left:0; }
+.popup .layerWrap .layerCont      {max-height:none}
+
+
+
 .layerWrap .layerBody.sizeM { width: 640px;}
 
 /* alert 스타일 layer */
