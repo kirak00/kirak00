@@ -65,7 +65,7 @@ h4 {
   height: 80px;
   margin: 0;
   padding: 0 1.2rem;
-  background: #EAFAEB;
+  background: #069B66;
 }
 
 .g-wrapper.guide .g-contents {
@@ -343,7 +343,7 @@ h4 {
   min-width: 14rem;
   padding: 0 1.2rem;
   /* background: #6B74C7; */
-  background: #5b72cc;
+  background: #333;
   /* background: #2370cd; */
   border-right: 1px solid #fff;
   overflow: auto;
@@ -380,8 +380,8 @@ h4 {
 }
 .c-container { padding: 1rem 2rem;}
 
-.c-h1{ margin: 20px 0; padding: 5px 20px; background: gray; color: #fff; font-size: 20px;}
-.c-h2 { margin: 20px 0; padding: 5px 20px; background: gray; color: #fff; font-size: 20px;}
+.c-h1,
+.c-h2 { margin: 20px 0; padding: 5px 20px; background: #069B66; color: #fff; font-size: 18px; border-radius: 160px;}
 .c-guide { margin-top: 0.8rem; }
 
 .c-body { min-width: unset;}

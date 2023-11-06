@@ -923,8 +923,9 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .line  {position: relative; width: 0px; height: 100%; }
 .searchControlItem .line::after { content: ''; display: block; position: absolute; top: 50%; right: 0; width: 1px; height: 18px; margin-top: -9px; background: #ddd}
 .searchControlItem .formRow.formGroup { gap: 0;}
-.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; width: auto; height: 100%; background-color: #fff;}
+.searchControlItem .formRow.formGroup > * { display: inline-flex; align-items: center; margin: 0; height: 100%; background-color: #fff;}
 .searchControlItem .formRow.formGroup > * { border-width: 1px 0px 1px; border-style: solid; border-color: #ddd; border-radius: 0;}
+.searchControlItem .formRow.formGroup > .checkbox + .checkbox { padding-left: 40px;}
 .searchControlItem .formRow.formGroup > *:last-child { border-width: 1px 1px 1px 0px;  border-radius: 0 8px 8px 0;} 
 /* 버튼을 제외한 폼 확장 */
 .searchControlItem.expand,
@@ -1303,9 +1304,14 @@ section   {margin:0 auto; max-width: 1400px; overflow: hidden;}
 .table_bt.hasLine .icoLink { display: block; margin-top: -10px;}
 .bgGray + .table_bt      { margin-top:20px; }
 
+.jsGridWrap .table_bt,
 .table_bt.small { min-height: 40px; margin-top: 20px;}
+.jsGridWrap .table_bt button,
 .table_bt.small button,
+.jsGridWrap .table_bt a
 .table_bt.small a { padding: 0 30px; height: 40px; }
+.jsGridWrap .table_bt .btn_l * + *,
+.jsGridWrap .table_bt .btn_r * + *,
 .table_bt.small .btn_l * + *,
 .table_bt.small .btn_r * + * { margin-left: 4px;}
 
