@@ -379,17 +379,17 @@ a.ico_down       {color:#069B66; }
 .ico_check::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -4px; background:url(../images/common/ico_18_check_primary.png) no-repeat 50% 50% / contain; }
 
 .programDown .ico_down::after { width: 24px; height: 24px; vertical-align: -4px;}
-.btnSuccess.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
+.btnSuccess.ico_down::after {background-image:url(../images/common/ico_24_download_white.png); }
 .btnSuccess.ico_down:disabled::after       {background-image:url(../images/common/ico_24_download_w.png); }
 .btnSky.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
 .btnWhite.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
 .btnWhite:active.ico_down::after,
-.btnWhite:hover.ico_down::after  {background-image:url(../images/common/ico_24_download_white.png); }
+.btnWhite:hover.ico_down::after,
+.btnWhiteLine:hover.ico_down::after   {background-image:url(../images/common/ico_24_download_white.png); }
 .btnWhiteLine.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
-.btnWhiteLine:hover.ico_down::after,
-.btnWhiteLine:active.ico_down::after  { }
+
 .btnSuccess.link::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w2.png) no-repeat 50% 50% / contain; }
-.btnSuccess.ico_right { }
+
 .btnSuccess.ico_right::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_right_w.png) no-repeat 50% 50% / contain; }
 
 .ico_chart       {padding:0 32px;}
@@ -1567,6 +1567,7 @@ table { width: 100%;}
 .formGrayBox .list .addControl ~ .formListRow { margin-top: 20px;}
 .formGrayBox .list:not(:first-child) { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
 .addControl { display: flex; justify-content: space-between; align-items: center; min-height: 50px;}
+.addControl .addBtnSet { column-gap: 0; margin: 0;}
 .addControl .checkbox input[type=checkbox] + label { font-weight: 500;}
 /* 텍스트 테이블 */
 .textTable.boxType.pointTable { border: 1px solid #069B66; margin-top:0; }
