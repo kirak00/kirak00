@@ -91,25 +91,25 @@
             var clients = [
               { 
                 "Name1": "새마을금고/삼청지점",
-                "Name2": "A",
+                // "Name2": "A", //v1.0 삭제 
                 "Name3": "홍길동", 
                 "Name4": "02-998-8547", 
                 "Name5": "0.5%", 
                 "Name6": "125", 
                 "Name7": "33", 
                 "Name8": "33억 4000만원", 
-                "Name9": "<button type='button' class='btnWhite'>변경하기</button>", 
+                "Name9": "<button type='button' class='btnWhite wid110'>변경하기</button>",  //v1.0 wid110 추가  
               },
               { 
                 "Name1": "농협/무교동지점",
-                "Name2": "B",
+                // "Name2": "B", //v1.0 삭제 
                 "Name3": "홍길동", 
                 "Name4": "02-998-8547", 
                 "Name5": "0.5%", 
                 "Name6": "125", 
                 "Name7": "33", 
                 "Name8": "33억 4000만원", 
-                "Name9": "<button type='button' class='btnWhite'>변경하기</button>", 
+                "Name9": "<button type='button' class='btnWhite wid110'>변경하기</button>", 
               },
             ]; 
 
@@ -118,9 +118,9 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
               fields: [
                 { name: "Name1",  type: "text", title : "금융기관명", width: 230}, 
-                { name: "Name2",  type: "text", title : "심사 유형", width: 120},
-                { name: "Name3",  type: "text", title : "관리자", width: 130},
-                { name: "Name4",  type: "text", title : "관리자 연락처", width: 200},
+                // { name: "Name2",  type: "text", title : "심사 유형", width: 120}, //v1.0 삭제 
+                { name: "Name3",  type: "text", title : "담당자", width: 130}, //v1.0 워딩수정
+                { name: "Name4",  type: "text", title : "담당자 연락처", width: 200}, //v1.0 워딩수정
                 { name: "Name5",  type: "text", title : "적용 수수료율", width: 200},
                 { name: "Name6",  type: "text", title : "총 제안 건 수", width: 200},
                 { name: "Name7",  type: "text", title : "총 대출 실행 건 수", width: 200},
