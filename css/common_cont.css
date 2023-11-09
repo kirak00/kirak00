@@ -1264,13 +1264,6 @@ section   {margin:0 auto; max-width: 1400px; overflow: hidden;}
 
 
 
-@media print { 
-  .container  {padding:0; }
-  header {display:none;}
-  .mainTop {display:none; }
-  .mng_btns   {display:none; }
-  footer   {display:none; }
-}
 
 
 /****************************
@@ -2094,17 +2087,21 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 
 
 .companytabContentPrint .innerTab { margin-top: 20px;}
-.printTit {display:none; width:100%; padding-bottom:80px; position:relative;  }
+.printTit {display:none; width:100%; padding-bottom:80px; position:relative; -webkit-print-color-adjust:exact;   }
 .printTit .logo {width:152px; height:120px; margin:0 auto; background:url(../images/common/logo2.png) no-repeat 0 0 !important ; -webkit-print-color-adjust:exact; }
 .printTit p   {text-align: center; color:#4C9DA2; font-size:16px; margin-top:20px;   }
 
-@media print{
+.watermark      {display:none;} 
+
+@media print { 
+  
+
   *   {-webkit-print-color-adjust:exact;}
   .loadDetailBox .detailCont .titBox .tit   {display:none;   }
   .loadDetailBox .topBox .status  {display:none; }
   .loadDetailBox .topBox .printTit  {display:inline-block; }
   .printTit + .pageTop {display:none; }
-  .printTit {display:block; }
+  .printTit {display:block;  }
   body  {min-width:1000px; }
   .loadDetailBox    {}
   .loadDetailBox .tabLine,
@@ -2117,6 +2114,18 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
   .companytabContentPrint h4.hide {position: static; border-bottom:1px solid #ccc; width: auto;  height: auto;  padding: 0;  margin: -1px; margin-top:50px; color:#069B66; border:0; padding-bottom:10px; overflow: hidden; font-size:20px;  clip: rect(0, 0, 0, 0); }
   .companytabContentPrint .innerTab  {display:none;  }
   .loadDetailBox .detailCont .companyInfo {margin-top:40px; }
+  .watermark      {display:block; position:absolute; width:100%;  overflow: hidden; border:1px solid #ddd; border-radius: 40%;  } 
+  .watermark      {display:block; position:absolute; top:0; left:0; width:100%; font-size:20px; line-height:180px; opacity: .3; font-weight: 700; transform: rotate(-45deg) translateX(100px) translateY(-200px);    } 
+  .watermark span       {margin:0 50px;} 
+  
+
+  .container  {padding:0; }
+  header {display:none;}
+  .mainTop {display:none; }
+  .mng_btns   {display:none; }
+  footer   {display:none; }
+  header  {display:none; }
+
 }
 
 
