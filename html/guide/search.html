@@ -18,13 +18,20 @@
   <body class="c-body">
     <div class="c-container">
 
-      <h2 class="c-h2">Search - 초기화 존재</h2>
-     <fieldset>
+      <h2 class="c-h2">대출 신청 업체 목록 FIN_F13_001</h2>
+      <!-- 검색 -->
+      <fieldset>
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
-          <div class="row">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="label_tit_1" class="label">대출 신청 번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
             <div class="searchControlItem">
-              <label for="selectLabelState" class="label">제안서 제출 유무</label>
+              <label for="selectLabelState" class="label">상태</label>
               <div class="formRow">
                 <select id="selectLabelState">
                   <option>전체</option>
@@ -33,21 +40,20 @@
               </div>
             </div>
             <div class="searchControlItem">
-              <label for="selectLabelDone" class="label">심사 완료 유무</label>
-              <div class="formRow">
-                <select id="selectLabelDone">
-                  <option>전체</option>
-                  <option>셀렉트</option>
+              <label id="selectLabelPay" class="label">희망 신청 금액</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
                 </select>
               </div>
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPay" class="label srOnly">제출자</label>
-              <div class="formRow">
-                <input class="input wid400" type="text" name="" id="selectLabelPay" placeholder="제출자를 입력해 주세요" value="">
-              </div>
-            </div>
-            <div class="searchControlItem">
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
               <label for="selectLabelArea" class="label">지역</label>
               <div class="formRow">
                 <select id="selectLabelArea">
@@ -56,8 +62,26 @@
                 </select>
               </div>
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPatent" class="label">자금 용도</label>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea2" class="label">자금용도</label>
+              <div class="formRow">
+                <select id="selectLabelArea2">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea3" class="label">담보 유무</label>
+              <div class="formRow">
+                <select id="selectLabelArea3">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelPatent" class="label">특허 보유 여부</label>
               <div class="formRow">
                 <select id="selectLabelPatent">
                   <option>전체</option>
@@ -65,12 +89,19 @@
                 </select>
               </div>
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelPa" class="label">담보 유무</label>
-              <div class="formRow">
-                <select id="selectLabelPa">
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand wid560">
+              <label id="selectLabelPay" class="label">CRETOP 등급</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <select title="등급">
                   <option>전체</option>
-                  <option>셀렉트</option>
+                  <option>이하</option>
+                </select>
+                <span class="line"></span>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
                 </select>
               </div>
             </div>
@@ -79,57 +110,562 @@
               <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
             </span>
           </div>
-          <div class="searchBtns">
-            <button type="button" class="btnReset">초기화</button>
-            <button type="button" class="btnSuccess">조회</button>
+          <div class="searchControlGroup">
+            <div class="searchControlItem fullChk">
+              <label id="selectLabelExcept" class="label">노출 제외 조건</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelExcept">
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_1" name="searchCheck_except" />
+                  <label for="searchCheck_except_1"><span></span>자본 잠식</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_2" name="searchCheck_except" />
+                  <label for="searchCheck_except_2"><span></span>부채비율 700% 초과</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_3" name="searchCheck_except" />
+                  <label for="searchCheck_except_3"><span></span>3개년 이자보상배율 1.0 미만</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_4" name="searchCheck_except" />
+                  <label for="searchCheck_except_4"><span></span>매출액 초과 차입금</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_4" name="searchCheck_except" />
+                  <label for="searchCheck_except_4"><span></span>2년 연속 매출액 50% 이상 감소</label>
+                </span>
+              </div>
+            </div>
+            
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnWhite">알림 희망 조건으로 설정 <em class="tooltip_q" title="선택한 조건의 대출 신청이 등록되면 \n 알림톡을 발송해 드립니다."><span class="txt">?</span></em></button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
           </div>
         </div>
       </fieldset>
-
-      <h2 class="c-h2">Search - 초기화 없음</h2>
-      <fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">대출 신청 업체 목록(보증기관) FIN_F13_002</h2>
+       <!-- 검색 -->
+       <fieldset>
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
-          <div class="row">
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">날짜 선택</label>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="label_tit_1" class="label">대출 신청 번호 </label>
               <div class="formRow">
-                <input type="text" class="input wid360" value="2023-07-01~2023-08-15" title="선택된 기간" /> 
-                <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button>
+                <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
               </div>
             </div>
             <div class="searchControlItem">
-              <label for="selectLabelPa" class="label">담보 유무</label>
+              <label for="selectLabelState" class="label">상태</label>
               <div class="formRow">
-                <select id="selectLabelPa">
+                <select id="selectLabelState">
                   <option>전체</option>
                   <option>셀렉트</option>
                 </select>
               </div>
             </div>
             <div class="searchControlItem">
-              <label id="selectLabelGroup" class="label">조직 선택</label>
-              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelGroup">
-                <select title="본부 선택">
-                  <option>지역본부</option>
+              <label id="selectLabelPay" class="label">희망 신청 금액</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea" class="label">지역</label>
+              <div class="formRow">
+                <select id="selectLabelArea">
+                  <option>전체</option>
                   <option>셀렉트</option>
                 </select>
-                <span class="line"></span>
-                <select title="지점 선택">
-                  <option>금고본점</option>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea2" class="label">자금용도</label>
+              <div class="formRow">
+                <select id="selectLabelArea2">
+                  <option>전체</option>
                   <option>셀렉트</option>
                 </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea3" class="label">담보 유무</label>
+              <div class="formRow">
+                <select id="selectLabelArea3">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelPatent" class="label">특허 보유 여부</label>
+              <div class="formRow">
+                <select id="selectLabelPatent">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand wid560">
+              <label id="selectLabelPay" class="label">CRETOP 등급</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <select title="등급">
+                  <option>전체</option>
+                  <option>이하</option>
+                </select>
                 <span class="line"></span>
-                <select title="지점 선택">
-                  <option>지점</option>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+              <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+            </span>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem fullChk">
+              <label id="selectLabelExcept" class="label">노출 제외 조건</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelExcept">
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_1" name="searchCheck_except" />
+                  <label for="searchCheck_except_1"><span></span>자본 잠식</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_2" name="searchCheck_except" />
+                  <label for="searchCheck_except_2"><span></span>부채비율 700% 초과</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_3" name="searchCheck_except" />
+                  <label for="searchCheck_except_3"><span></span>3개년 이자보상배율 1.0 미만</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_4" name="searchCheck_except" />
+                  <label for="searchCheck_except_4"><span></span>매출액 초과 차입금</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="searchCheck_except_4" name="searchCheck_except" />
+                  <label for="searchCheck_except_4"><span></span>2년 연속 매출액 50% 이상 감소</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnWhite">알림 희망 조건으로 설정 <em class="tooltip_q" title="선택한 조건의 대출 신청이 등록되면 \n 알림톡을 발송해 드립니다."><span class="txt">?</span></em></button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">제안서 등록>제안서 제출 가능 목록 FIN_F21</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+          <div class="searchControlItem expand">
+            <label for="label_tit_1" class="label">대출 신청 번호 </label>
+            <div class="formRow">
+              <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelState" class="label">제안 상태</label>
+            <div class="formRow">
+              <select id="selectLabelState">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label id="selectLabelPay" class="label">희망 신청 금액</label>
+            <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+              <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+              <span class="unit">억</span>
+              <span class="line"></span>
+              <select title="범위">
+                <option>이상</option>
+                <option>이하</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="searchControlGroup">
+          <div class="searchControlItem">
+            <label for="selectLabelArea" class="label">지역</label>
+            <div class="formRow">
+              <select id="selectLabelArea">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem expand">
+            <label for="selectLabelPatent" class="label">자금 용도</label>
+            <div class="formRow">
+              <select id="selectLabelPatent">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <div class="searchControlItem">
+            <label for="selectLabelPa" class="label">담보 유무</label>
+            <div class="formRow">
+              <select id="selectLabelPa">
+                <option>전체</option>
+                <option>셀렉트</option>
+              </select>
+            </div>
+          </div>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+            <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+          </span>
+          <div class="searchBtns">
+            <button type="button" class="btnReset">초기화</button>
+            <button type="button" class="btnSuccess">조회</button>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">마이페이지>제출 제안서 목록 FIN_F30_001</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabel_1_1" class="label">대출 신청 번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabel_1_1" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem ">
+              <label for="selectLabel_1_2" class="label">상태</label>
+              <div class="formRow">
+                <select id="selectLabel_1_2">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabel_1_3" class="label">기업명</label>
+              <div class="formRow">
+                <input type="text" class="input wid240" id="selectLabel_1_3" placeholder="기업명을 입력해 주세요">
+              </div>
+            </div>
+          </div>
+
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea2_1" class="label">제안형태</label>
+              <div class="formRow">
+                <select id="selectLabelArea2_1">
+                  <option>전체</option>
                   <option>셀렉트</option>
                 </select>
               </div>
             </div>
             <div class="searchControlItem">
-              <label for="login_input_certificate_1" class="label">희망 신청 금액</label>
-              <div class="formRow formGroup" role="group" aria-labelledby="login_input_certificate">
-                <input class="input wid82" type="text" name="inpUnitOut" id="login_input_certificate_1" placeholder="000" value="">
+              <label for="selectLabelArea2_2" class="label">제안 대출 금액</label>
+              <div class="formRow formGroup">
+                <input class="input wid82" type="text" name="inpUnitOut" id="selectLabelArea2_2" placeholder="000" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                
+                <select title="제안 대출 금액 범위">
+                  <option>이상</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea2_3" class="label">제안 자금 용도</label>
+              <div class="formRow">
+                <select id="selectLabelArea2_3">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem ">
+              <label for="selectLabelArea3_1" class="label">담보 유무</label>
+              <div class="formRow">
+                <select id="selectLabelArea3_1">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem ">
+              <label for="selectLabelArea3_2" id="selectLabelArea3_20" class="label">대출 기간</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea3_20">
+                <input class="input wid82" type="text" name="inpUnitOut" id="selectLabelArea3_2" placeholder="000" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                
+                <select title="대출 기간 범위">
+                  <option>이상</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelArea3_3" class="label">제안 직원명</label>
+              <div class="formRow">
+                <input type="text" class="input wid240" id="selectLabelArea3_3" placeholder="직원명을 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <!-- <h2 class="c-h2">마이페이지>취급 대출 내역</h2> -->
+      <!-- <h2 class="c-h2">마이페이지>보증 예비 심사 목록</h2> -->
+      <h2 class="c-h2">마이페이지>청구 관리 FIN_F46</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">청구 상태</label>
+              <div class="formRow">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>옵션</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand2">
+              <label for="labelLoan" class="label">대출 신청 번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem ">
+              <label for="labelLoan" class="label">업체명 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan" placeholder="업체명을 입력해 주세요">
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">세금계산서발행 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>옵션</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState" class="label">정산 여부</label>
+              <div class="formRow">
+                <select id="selectLabelState">
+                  <option>전체</option>
+                  <option>옵션</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+          <!-- <div class="searchControlGroup">
+           
+          </div> -->
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">중앙회관리>금융사 대출 목록 FIN_F37</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabel_1" class="label">조직별</label>
+              <div class="formRow formGroup">
+                <select id="selectLabel_1" title="조직선택 > 지역본부">
+                  <option>지역본부</option>
+                  <option>셀렉트</option>
+                </select>
+                <span class="line"></span>
+                <select  title="조직선택 > 지점">
+                  <option>지점</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabel_2" class="label">대출 신청 번호</label>
+              <div class="formRow">
+                <input class="input" type="text" name="" id="selectLabel_2" placeholder="대출 신청 번호를 입력해 주세요" value="">
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabel_3" class="label">제안 상태</label>
+              <div class="formRow">
+                <select title="제안 상태" id="selectLabel_3">
+                  <option>전체</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabel_4" class="label">희망 신청 금액</label>
+              <div class="formRow formGroup">
+                <input class="input wid82" type="text" name="" id="selectLabel_4" value="">
+                <span class="unit">억</span>
+                <span class="line"></span>
+                <select title="대출 금액 범위">
+                  <option>이상</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label for="selectLabel_5" class="label">지역</label>
+              <div class="formRow">
+                <select title="지역" id="selectLabel_5">
+                  <option>전체</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabel_6" class="label">자금 용도</label>
+              <div class="formRow">
+                <select title="자금 용도" id="selectLabel_6">
+                  <option>전체</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabel_7" class="label">담보 유무</label>
+              <div class="formRow">
+                <select id="selectLabel_7">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabel_8" class="label">기업명</label>
+              <div class="formRow">
+                <input class="input" type="text" name="" id="selectLabel_8" placeholder="기업명을 입력해 주세요" value="">
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">중앙회관리>대출 실적 관리 FIN_F38</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="" class="label">소속 지점 조회</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <select title="지역본부">
+                  <option>지역본부</option>
+                  <option>지역본부</option>
+                </select>
+                <span class="line"></span>
+                <select title="금고본점">
+                  <option>금고본점</option>
+                  <option>금고본점</option>
+                </select>
+                <span class="line"></span>
+                <select title="지점">
+                  <option>지점</option>
+                  <option>지점</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- 검색 -->
+      <h2 class="c-h2">중앙회관리>대출 실적 상세 FIN_F39</h2>
+      <!-- 검색 -->
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label id="inputLabel1" class="label srOnly">기간선택</label>
+              <div class="rangeControl" aria-labelledby="inputLabel1">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="inputLabel2" class="label">대출 신청 번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="inputLabel2" placeholder="대출 신청 번호를 입력해 주세요">
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand"><!--1.5 -->
+              <label for="selectLabelState" class="label">기업명</label>
+              <div class="formRow">
+                <input type="text" class="input wid240" id="selectLabelState" placeholder="기업명을 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <label id="selectLabelPay" class="label">실행 금액</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
                 <span class="unit">억</span>
                 <span class="line"></span>
                 <select title="범위">
@@ -139,71 +675,93 @@
               </div>
             </div>
             <div class="searchControlItem">
-              <label for="selectLabelArea" class="label">지역</label>
+              <label id="selectLabelPay2" class="label">대출 기간</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay2">
+                <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                <span class="unit">개월</span>
+                <span class="line"></span>
+                <select title="범위">
+                  <option>이상</option>
+                  <option>이하</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="selectLabelArea" class="label">용도</label>
               <div class="formRow">
-                
                 <select id="selectLabelArea">
                   <option>전체</option>
                   <option>셀렉트</option>
                 </select>
               </div>
             </div>
-          </div>
-          
-          <div class="searchBtns">
-            <button type="button" class="btnSuccess auto">조회</button>
+            <div class="searchControlItem">
+              <label for="selectLabelArea2" class="label">담보 유무</label>
+              <div class="formRow">
+                <select id="selectLabelArea2">
+                  <option>전체</option>
+                  <option>셀렉트</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
           </div>
         </div>
       </fieldset>
-
-      <h2 class="c-h2">Search - FullType(1개)</h2>
+      <!-- 검색 -->
+      <h2 class="c-h2">중앙회관리>소속 금융사 계정 관리 FIN_F44</h2>
+      <!-- 검색 -->
       <fieldset>
         <legend>게시물 검색</legend>
-        <div class="searchControlBox fullType">
-          <div class="row">
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">비교 신청 건</label>
-              <div class="formRow">
-                
-                <select id="selectLabelState">
-                  <option>S_230401_0001 시설 자금 대출</option>
-                  <option>S_230401_0001 시설 자금 대출</option>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="" class="label">소속 지점 조회</label>
+              <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                <select title="지역본부">
+                  <option>지역본부</option>
+                  <option>지역본부</option>
+                </select>
+                <span class="line"></span>
+                <select title="금고본점">
+                  <option>금고본점</option>
+                  <option>금고본점</option>
+                </select>
+                <span class="line"></span>
+                <select title="지점">
+                  <option>지점</option>
+                  <option>지점</option>
                 </select>
               </div>
             </div>
           </div>
-        </div>
-      </fieldset>
-
-      <h2 class="c-h2">Search - FullType(2개)</h2>
-      <fieldset>
-        <legend>게시물 검색</legend>
-        <div class="searchControlBox fullType">
-          <div class="row">
+          <div class="searchControlGroup">
             <div class="searchControlItem">
-              <label for="selectLabelState" class="label">비교 신청 건</label>
+              <label for="" class="label srOnly">소속 지점 조회</label>
               <div class="formRow">
-                
-                <select id="selectLabelState">
-                  <option>S_230401_0001 시설 자금 대출</option>
-                  <option>S_230401_0001 시설 자금 대출</option>
+                <select title="지점코드">
+                  <option>지점코드</option>
+                  <option>이하</option>
                 </select>
+                <input type="text" class="input wid770" id="" placeholder="">
               </div>
             </div>
-            <div class="searchControlItem">
-              <label for="selectLabelState" class="label">보증기관 제안 건</label>
-              <div class="formRow">
-                <input type="text" id="selectLabelState" class="input" value="3" />
-              </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
             </div>
           </div>
         </div>
       </fieldset>
+      <!-- 검색 -->
 
-   
-    
-      
 
+  
     </div>
   </body>
 </html>

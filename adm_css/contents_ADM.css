@@ -62,8 +62,8 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .bgWrap       {padding:40px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#FAFAFA; }
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
 
-section       {max-width:1820px;   }
-.bgWrap section { padding: 0 120px}
+section       {max-width:1820px; padding: 0 10px;  }
+.bgWrap section { padding: 0 70px}
 .pageTop      {}
 .pageTop ul.breadcrumb      {left:60px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
@@ -418,7 +418,7 @@ ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 
 /* 버튼 */
 .btnBarSet { display: inline-flex; align-items: center;}
-.btnBarSet button, .btnBarSet a { padding: 0 20px; font-weight: 700;}
+.btnBarSet button, .btnBarSet a { width: 110px; padding: 0 20px; font-weight: 700;}
 .btnBarSet * + *::before { content: ''; display: block; position: absolute; top: 50%; left: 0; width: 1px; height: 20px; margin-top: -10px; background: #ddd; }
 
 .countBarSet { display: inline-flex; align-items: center;}
@@ -438,9 +438,9 @@ ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 
 fieldset:not(.tableFilterGroup) { display: flex; gap: 20px; margin-bottom: 40px;}
 fieldset .searchControlBox { width: 100%;}
-.radioIndent { padding-left: 32px;}
+.radioIndent { margin-top: 40px; padding-left: 32px;}
 .radioIndent .radio { margin-left: -32px;}
-
+.radioIndent .radio .label { font-weight: 700;}
 .pntCol_1.mt6 { margin-top: 6px;}
 
 /* 당첨자 명단 */

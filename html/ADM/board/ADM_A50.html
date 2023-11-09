@@ -38,10 +38,10 @@
     </section>
     <div class="bgWrap">
       <section>
-        <div class="formListWrap wid1020">
+        <div class="formListWrap"><!-- v1.0 wid1020 삭제 -->
           <div class="formList">
-            <label class="label" for="inpBrdName">게시물 유형</label>
-            <div class="formRow">
+            <label class="label" id="inpLabelSort">게시물 유형</label>
+            <div class="formRow" role="group" aria-labelledby="inpLabelSort">
               <span class="radio">
                 <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked="">
                 <label class="label" for="testRdoBoxA"><span></span>공지사항</label>
@@ -53,18 +53,18 @@
             </div>
           </div>
           <div class="formList">
-            <label class="label" for="inpBrdName1">공지사항 제목</label>
+            <label class="label" for="inpLabelTitle">공지사항 제목</label>
             <div class="formRow">
               <div class="inputWrap">
-                <input id="inpBrdName1" class="input" type="text" value="" placeholder="이벤트 제목을 입력하세요.">
+                <input id="inpLabelTitle" class="input" type="text" value="" placeholder="제목은 50자 미만으로 입력해 주세요."> <!-- v1.0 placeholder 수정-->
                 <span class="countSet"><span class="count">0</span>/50</span>
               </div>
             </div>
-            <p class="notiTxt">제목은 50자 미만으로 입력해 주세요.</p>
+            <!-- <p class="notiTxt">제목은 50자 미만으로 입력해 주세요.</p> --><!-- v1.0 삭제 -->
           </div>
           <div class="formList">
-            <label class="label" for="inpBrdName">노출여부</label>
-            <div class="formRow">
+            <label class="label" for="inpLabelShow">노출여부</label>
+            <div class="formRow" role="group" aria-labelledby="inpLabelShow">
               <span class="radio">
                 <input type="radio" id="testRdoBox2A" name="testRdoBox2" value="" checked="">
                 <label class="label" for="testRdoBox2A"><span></span>비노출</label>
@@ -77,22 +77,30 @@
             <p class="notiTxt">기본 설정은 비노출 입니다. 바로 노출을 희망할 경우 노출로 설정을 변경하세요.</p>
           </div>
           <div class="formList">
-            <label class="label" for="inpBrdName2">게시 대상</label>
+            <label class="label" for="inpLabelFor">게시 대상</label>
             <div class="formRow">
-              <select class="wid200">
+              <select class="wid200" id="inpLabelFor">
                 <option>전체 (법인/금융)</option>
               </select>
             </div>
           </div>
           <div class="formList">
-            <label class="label" for="inpBrdName1">상세 내용</label>
+            <label class="label" id="inpLabelImage">이미지 등록</label>
+            <div class="formRow filebox wid600">
+              <input type="text" class="input" placeholder="선택된 파일이 없습니다." value="" disabled="disabled" title="선택 파일">
+              <label for="exFilename" class="btnBlack">파일 첨부</label>
+              <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            </div>
+          </div>
+          <div class="formList">
+            <label class="label" for="inpDetailInfo">상세 내용</label>
             <div class="formRow">
               <div class="textareaWrap">
-                <textarea id="inpBrdName1" class="textarea" type="text" value="" placeholder="이벤트 내용을 입력해주세요."></textarea>
+                <textarea id="inpDetailInfo" class="textarea" type="text" value="" placeholder="내용은 1,000자 미만으로 입력해 주세요."></textarea> <!-- v1.0 placeholder 수정-->
                 <span class="countSet"><span class="count">0</span>/1000</span>
               </div>
             </div>
-            <p class="notiTxt">내용은 1000자 미만으로 입력해 주세요.</p>
+            <!-- <p class="notiTxt">내용은 1000자 미만으로 입력해 주세요.</p> --><!-- v1.0 삭제 -->
           </div>
                 
           <div class="table_bt">
