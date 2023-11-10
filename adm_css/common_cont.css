@@ -1508,7 +1508,7 @@ th{word-break: break-all;}
 .jsgrid-header-sort-desc::after  {background: url(../adm_images/common/sorting_down.png) no-repeat 0 80%; }
 
 
-.jsgrid-cell .sub { color: #888;}
+.jsgrid-cell .sub { color: #888; font-size: 14px;}
 .jsgrid-header-row .jsgrid-header-cell { border-bottom: 1px solid #ddd;}
 .jsgrid-grid-body tbody tr:last-child > .jsgrid-cell { border-bottom: 0;}
 .jsgrid-grid-body tbody tr > .jsgrid-cell.left { text-align: left; padding-left:30px;}
