@@ -170,7 +170,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .layerCont .resultBox { margin-top: -20px; margin-bottom: 30px; padding: 16px; background: #F6FBF7; border-radius: 8px; text-align: center; }
 .layerCont .resultBox2 { display: flex; padding: 32px 40px; background: #EAFAEB; border-radius: 8px; }
 .layerCont .resultBox2 .formVertical { align-items: center; gap: 16px; color: #069B66;}
-.layerCont .resultBox2 .formVertical .formRow { flex: 1; justify-content: center;}
+.layerCont .resultBox2 .formVertical .formRow { flex: 1; justify-content: center; font-size: 18px}
 
 /* .guideBox .infoList { font-size: 18px;} */
 .layerCont .guideBox .infoList { margin-top: 16px;}
@@ -1170,7 +1170,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt .btn_c a {min-width:214px; }
 .table_bt .btn_c button.btnGray { border-color: #ddd}
 .table_bt button + button,
-.table_bt a + a      {margin-left:10px; }
+.table_bt a + a      {margin-left:8px; }
 .table_bt.wide .btn_c button { width: 530px; height: 70px; line-height: 70px; }
 .table_bt.fullType button { width: 100%;}
 .layerCont .table_bt { margin-top: 20px;}
@@ -1193,7 +1193,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .jsGridWrap .table_bt .btn_l * + *,
 .formListWrap.wid1020 .table_bt .btn_l * + * { margin-left: 4px;}
 
-.layerBody.wid1400 .table_bt .btn_c button { min-width: 160px;}
+.layerBody.wid1400 .table_bt .btn_c button { min-width: 228px;}
 
 
 .table_wrap    { margin-top: 20px; border-radius: 16px; border: 1px solid #ddd; overflow: hidden;}
