@@ -19,6 +19,7 @@
 .green	{color:#537a7c}
 .blue { color: #069B66;}
 .gray { color: #888;}
+.red { color: #FE5050;}
 
 .srOnly { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0,0,0,0);}
 
@@ -30,6 +31,9 @@
 .scrollTop      {position:fixed; z-index:999; bottom:100px; right:100px; width:72px; height:72px; background:url(../adm_images/common/top.png) no-repeat 0 0;  }
 .wid110 { width: 110px;}
 .wid128 { width: 128px;}
+
+
+.underline { text-decoration: underline;}
 
 /****************************
 **********  align  **********
@@ -127,12 +131,11 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
-.notiTxt {  color: #4C9DA2; padding-left: 9px; text-indent: -4px; }
-.notiTxt.red {  color: #FE5050;}
+.notiTxt {  color: #4C9DA2; padding-left: 22px; text-indent: -22px; }
+.notiTxt::before { content: ''; display: inline-block; width: 18px; height: 18px; margin-right: 4px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: -3px; flex-shrink: 0;}
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt8 { margin-top: 8px;}
 .notiTxt.mt40 { margin-top: 40px;}
-.notiTxt::before { content: '*'; display: inline-block; flex-shrink: 0; width: 5px;}
 
 
 .notiTxt.blue { color: #069B66; font-weight: 700; }
@@ -644,6 +647,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .input.wid160 { width: 160px;}
 .input.wid200 { width: 200px;}
 .input.wid240 { width: 240px;}
+.input.wid260 { width: 260px;}
 .input.wid300 { width: 300px;}
 .input.wid380 { width: 380px;}
 .input.wid600 { width: 600px;}
@@ -803,6 +807,7 @@ select.wid430 { min-width: 430px;}
 .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
 .searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
 
+.searchControlBox .dateTab + [role="tabpanel"] select{ width: 206px;}
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 20px; line-height: 50px; white-space: nowrap;
@@ -1305,6 +1310,7 @@ table { width: 100%;}
 .tableLabel + .titH3 { margin-top: 20px;}
 .tableLabel + .titH5 { margin-top: 20px;}
 .tableLabel .num { display: inline-block; margin-left: 4px;}
+.tableLabel + .formList { margin-top: 20px;}
 
 /* 라인 NO */
 .titH4.hasLine + .viewNolineTable { padding-top: 0px}
@@ -1643,6 +1649,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 20px; font-weight: 700;}
 .layerWrap .layerBody .layerHead.bgChk h3    {padding:66px 0 0px; background: url(../adm_images/common/ico_80_alert.png) no-repeat 50% 0 / 56px; }
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
+.layerWrap .layerBody .layerHead p.red { color: #FE5050; }
 .layerWrap .layerBody .layerHead p.notiTxt { color: #FE5050; font-size: 14px;}
 .layerWrap .layerBody .layerHead button.layerClose {position:absolute; right:40px; top:36px; width:18px; height:18px; background: url(../adm_images/common/ico_24_close_b.png) no-repeat 0 0 / 18px; }
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
@@ -1665,6 +1672,18 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 
 
 .layerWrap .layerBody.sizeM { width: 640px;}
+
+
+.jsGridWrap .table_bt,
+.table_bt.small { min-height: 40px; margin-top: 20px;}
+.jsGridWrap .table_bt button,
+.table_bt.small button,
+.jsGridWrap .table_bt a,
+.table_bt.small a { padding: 0 30px; height: 40px; }
+.jsGridWrap .table_bt .btn_l * + *,
+.jsGridWrap .table_bt .btn_r * + *,
+.table_bt.small .btn_l * + *,
+.table_bt.small .btn_r * + * { margin-left: 4px;}
 
 /* alert 스타일 layer */
 .layerWrap.typeAlert .layerBody       {width:610px;  }
@@ -1804,11 +1823,11 @@ ul.tabBtn li a:focus { outline: 2px dashed #069B66; }
 .external-pager .jsgrid-pager     {font-size: 0;}
 .external-pager .jsgrid-pager span     {display:inline-block; width:30px; height:30px;  }
 .external-pager .jsgrid-pager span.jsgrid-pager-nav-button     {width:24px; height:30px; margin:0 3px 0 4px; }
-.external-pager .jsgrid-pager span.jsgrid-pager-nav-button a   {display:block; width:100%; height:30px; overflow: hidden; text-indent: -200px;  }
-.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(1) a     {background: url(../adm_images/common/ico_24_left_double_02.png) no-repeat 50% 50%;}
-.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(2) a     {background: url(../adm_images/common/ico_24_left_02.png) no-repeat 50% 50%;}
-.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(2) a {background: url(../adm_images/common/ico_24_right_03.png) no-repeat 50% 50%;}
-.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(1) a {background: url(../adm_images/common/ico_24_right_double_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button a   {display:block; width:100%; height:30px; padding: 0; overflow: hidden; text-indent: -200px;  }
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(1) a     {background: url(../images/common/ico_24_left_double_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-child(2) a     {background: url(../images/common/ico_24_left_02.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(2) a {background: url(../images/common/ico_24_right_03.png) no-repeat 50% 50%;}
+.external-pager .jsgrid-pager span.jsgrid-pager-nav-button:nth-last-child(1) a {background: url(../images/common/ico_24_right_double_02.png) no-repeat 50% 50%;}
 .external-pager .jsgrid-pager span.jsgrid-pager-nav-button.jsgrid-pager-nav-inactive-button     {display:none; }
 .external-pager .jsgrid-pager span.jsgrid-pager-page,
 .external-pager .jsgrid-pager span.jsgrid-pager-page a          {font-size:16px; line-height:30px; color:#555; padding:0; }
@@ -2169,7 +2188,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .comment .reply .label::before,
 .comment .replies .label::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_comment_g.png'); vertical-align: middle;}
 .comment .reply.isHide { display: none;}
-
+.comment .attach { display: inline-block; margin-top: 10px; padding-left:32px; font-weight: 700; color:#4C9DA2;  background:url('../adm_images/common/ico_18_clip_primary.png') no-repeat 0% 50% / 24px 24px ; text-decoration: underline;}
 
 /* 1:1 문의 */
 .callCenter { margin-top: 100px; border-top: 1px solid #ddd;}

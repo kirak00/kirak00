@@ -57,7 +57,7 @@
                 "Name4": "새마을금고/<br>가회지점", 
                 "Name5": "105-88-12345", 
                 "Name6": "450,000,000<p class='sub'>(사억오천만원)</p>",  
-                "Name7": "0.5%", 
+                "Name7": "<strong class='blue underline'>0.5%<strong>",  //<!-- v1.0 수정 -->
                 "Name8": "450,000,000<p class='sub'>(사억오천만원)</p>", 
                 "Name9": "2023-05-11", 
               },
@@ -71,7 +71,7 @@
                 { name: "Name1",  type: "text", title : "실행일", width: 190},
                 { name: "Name2",  type: "text", title : "대출신청번호", width: 180},
                 { name: "Name3",  type: "text", title : "기업명", width: 160},
-                { name: "Name4", type: "text", title : "금융기관명", width: 160 },
+                { name: "Name4", type: "text", title : "금융 회사명", width: 160 },//<!-- v1.0 워딩 수정 -->
                 { name: "Name5", type: "text", title : "금융기관<br>사업자등록 번호", width: 160 },
                 { name: "Name6", type: "text", title : "실행 금액", width: 160 },
                 { name: "Name7", type: "text", title : "수수료율", width: 160 },
@@ -85,6 +85,25 @@
           });
         </script>
         <div class="sectionBlock40">
+          <!-- v1.0 이의 신청 답변완료 상태 -->
+          <!-- Comment 1 -->
+          <div class="comment">
+            <label class="label" for="labelExtraOpi1">이의 신청 내용<span class="date">2023-09-13</span></label>
+            <div class="commentBody">
+              <textarea class="textarea " id="labelExtraOpi1" placeholder="내용을 입력해 주세요." readonly>해당 대출은 원래 알고 거래중인 법인의 주거래 은행으로서 대출을 진행한 건이므로 본 플랫폼과 무관합니다.</textarea>
+            </div>
+            <div class="replies">
+              <!-- reply -->
+              <div class="comment">
+                <label class="label" for="labelExtraOpi1_12"><span class="blue">이의 신청 답변</span><span class="date">2023-09-13</span></label>
+                <div class="commentBody">
+                  <textarea class="textarea " id="labelExtraOpi2" placeholder="답변을 입력해 주세요." readonly></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- v1.0 이의 신청 답변작성 -->
           <!-- Comment 1 -->
           <div class="comment">
             <label class="label" for="labelExtraOpi1">이의 신청 내용<span class="date">2023-09-13</span></label>
@@ -100,27 +119,10 @@
                   <label for="exFilename" class="btnSuccess">증빙서류제출</label>
                   <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
                 </div>
-                <p class="notiTxt">제출된 증빙서류명: capture.jpg, capture2.gif</p>
+                <a href="#;" class="attach">capture.jpg, capture2.gif</a><!-- v1.0 수정 -->
                 <div class="commentBody">
-                  <textarea class="textarea " id="labelExtraOpi2" placeholder="내용을 입력해 주세요." readonly>알겠습니다. 프로모션 적용하여 0.2%로 진행하겠습니다.</textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comment 1 -->
-          <div class="comment">
-            <label class="label" for="labelExtraOpi1">이의 신청 내용<span class="date">2023-09-13</span></label>
-            <div class="commentBody">
-              <textarea class="textarea " id="labelExtraOpi1" placeholder="내용을 입력해 주세요." readonly>해당 대출은 원래 알고 거래중인 법인의 주거래 은행으로서 대출을 진행한 건이므로 본 플랫폼과 무관합니다.</textarea>
-            </div>
-            <div class="replies">
-              <!-- reply -->
-              <div class="comment">
-                <label class="label" for="labelExtraOpi1_12"><span class="blue">이의 신청 답변</span><span class="date">2023-09-13</span></label>
-                <div class="commentBody">
-                  <textarea class="textarea " id="labelExtraOpi2" placeholder="답변을 입력해 주세요."></textarea>
-                  <button type="button" class="btnSuccess">등록</button>
+                  <textarea class="textarea " id="labelExtraOpi2" placeholder="답변 내용을 입력해 주세요."></textarea>
+                  <button type="button" class="btnSuccess">등록</button><!-- v1.0 수정 -->
                 </div>
               </div>
             </div>
@@ -130,7 +132,7 @@
             <div class="btn_c">
               <button type="button" class="btnDkGreen">조건부 수락</button>
               <button type="button" class="btnSuccess">수락</button>
-              <button type="button" class="btnWhite">거절</button>
+              <button type="button" class="btnBlack">거절</button><!-- v1.0 btnBlack -->
             </div>
           </div>
         </div>

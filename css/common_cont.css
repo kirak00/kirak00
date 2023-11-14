@@ -1302,7 +1302,7 @@ section   {margin:0 auto; max-width: 1400px; overflow: hidden;}
 .table_bt.small { min-height: 40px; margin-top: 20px;}
 .jsGridWrap .table_bt button,
 .table_bt.small button,
-.jsGridWrap .table_bt a
+.jsGridWrap .table_bt a,
 .table_bt.small a { padding: 0 30px; height: 40px; }
 .jsGridWrap .table_bt .btn_l * + *,
 .jsGridWrap .table_bt .btn_r * + *,

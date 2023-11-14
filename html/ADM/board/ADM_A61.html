@@ -51,6 +51,7 @@
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
+        <p class="tableLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p><!-- v1.0 추가 -->
         <div class="formList">
           <label class="label">등록일</label>
           <div class="formRow">2023-01-0</div>
@@ -60,25 +61,26 @@
           <div class="formRow">홍길동</div>
         </div>
         <div class="formList">
-          <label class="label" for="labelExtraOp1">영상 경로</label>
+          <label class="label" for="labelExtraOp1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>영상 경로</label><!-- v1.0 필수값 추가 -->
           <div class="formRow">
-            <input class="input" id="labelExtraOp1" type="text" placeholder="URL" value="">
+            <input class="input" id="labelExtraOp1" type="text" placeholder="Youtube에 업로드 후 영상의 경로를 입력해 주세요" value=""><!-- v1.0 placeholder 수정  -->
           </div>
-          <p class="notiTxt"><span class="pntCol_1">(필수)</span>Youtube에 업로드 후 영상의 경로를 입력해 주세요</p>
+          <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>Youtube에 업로드 후 영상의 경로를 입력해 주세요</p> --><!-- v1.0 삭제 -->
         </div>
         <div class="formList">
-          <label class="label" for="labelExtraOp2">제목</label>
-          <div class="formRow">
+          <label class="label" for="labelExtraOp2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제목</label><!-- v1.0 필수값 추가 -->
+          <div class="formRow inputWrap isActive"><!-- v1.0 .inputWrap 추가, 입력상태 isActive 추가  -->
             <input class="input" id="labelExtraOp2" type="text" placeholder="" value="Loan&Biz 소개 영상">
+            <span class="countSet"><span class="count">14</span>/50</span>
           </div>
-          <p class="notiTxt"><span class="pntCol_1">(필수)</span>제목은 50자 미만으로 입력해 주세요</p>
+          <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>제목은 50자 미만으로 입력해 주세요</p> --><!-- v1.0 삭제 -->
         </div>
         <div class="formList">
           <label class="label" for="labelExtraOp3">준법감시인<br>심의필</label>
           <div class="formRow">
             <input class="input" id="labelExtraOp3" type="text" placeholder="심의 번호를 입력하세요." value="">
           </div>
-          <p class="notiTxt">(선택)영상 등록 전 준법감시인 심의필 여부를 반드시 확인해 주세요</p>
+          <p class="notiTxt">영상 등록 전 준법감시인 심의필 여부를 반드시 확인해 주세요</p><!-- v1.0 워딩 수정 -->
         </div>
         <div class="formList">
           <label class="label" id="labelExtraOp4">심의 기간</label>
@@ -107,6 +109,7 @@
       <div class="layerFoot">
         <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
         <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+        <button type="button" class="btnBlack" onclick="layer_close('sampleLayer')">삭제</button>
       </div>
     </div>
     <div class="layerDimm"></div>
