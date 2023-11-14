@@ -271,7 +271,7 @@ function tabScript(){
         if(cont) contArr.push(cont)
       })
     }
-
+    
     var menuWrap = $(liArr)
     var tabCont = $(contArr);
     
@@ -284,10 +284,11 @@ function tabScript(){
     }else if(initChk){
       tabCont.hide()
     }
-
+    
     tab.click(function(){
       if(this.parent.hasClass("disabled")) return false;
       initTab.hide()
+      
       if(tabCont.length == tab.length ){
         tabCont.hide().attr("aria-hidden", "true");
         tabCont.eq(this.n).show().attr("aria-hidden", "false");

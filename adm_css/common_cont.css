@@ -86,6 +86,7 @@
 .bgGray > section:only-child > :first-child,
 .titH3.fullType + * { margin-top: 0;}
 .titLabel { font-size: 14px; font-weight: 400;}
+.titLabel.tr { margin-bottom:20px; text-align: right;}
 .hasLine .inner { display: flex; align-items: center; max-width: 1400px; width: 100%; margin: 0 auto;}
 .hasLine .inner.flexBetween { justify-content: space-between;}
 .hasLine .inner .btnSuccess,
@@ -135,8 +136,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiTxt::before { content: '*'; display: inline-block; flex-shrink: 0; width: 5px;}
 
 
-.notiTxt.blue { color: #069B66; font-weight: 700; }
-.notiTxt.blue::before { background-image: url('../adm_images/common/ico_24_notice_primary.png') }
+.notiTxt.blue { color: #069B66; font-weight: 400; }
+.notiTxt.blue::before {width:18px; height:18px; background: url('../adm_images/common/ico_24_notice_primary.png') no-repeat 0 0 / contain; overflow: hidden; text-indent: -100px; vertical-align: -3px; }
 .notiTxt.blue span { vertical-align: top;}
 
 .formRow + .notiTxt { margin-top :10px; }
@@ -159,6 +160,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .resultCont + .guideBox { max-width: 920px; margin: 40px auto 0; padding: 40px 30px;}
 
 .guideBox { margin-top: 20px; padding: 24px 30px; background: #F6FBF7; color: #555; border-radius: 16px; line-height: 1.5;}
+.guideBox.layerTop { margin-top: 0px; margin-bottom:30px;  }
 .guideBox.point { color: #069B66; }
 .layerCont .guideBox.point { background: #EAFAEB}
 .guideBox.type2 { padding: 40px; background: #EAFAEB; }
@@ -618,6 +620,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow.wid600 { width: 600px;}
 .formRow.wid640 { width: 640px;}
 .formRow.wid673 { width: 673px;}
+.formRow.wid1400  { width: 1400px;}
 .formRow.wid673.mt30 { margin-top: 30px;}
 .formRow.wid673 .input { width: 100%;}
 .formRow .radio + input[type="text"] { margin-left: 6px;}
@@ -1656,6 +1659,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap .layerBody.wid640 .layerFoot button + button { margin-left: 5px;}
 .layerWrap .layerBody .table_bt button    {min-width:160px; }
 .layerWrap .layerBody .layerFoot button    {min-width:214px; }
+.layerWrap .layerBody.wid500 .layerFoot button    {min-width:200px; }
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}
 .layerWrap .layerDimm      {position:fixed; left:-100%;  transition:opacity .3s; opacity: 0; width:calc(100%); height:100%;  top:0; background:rgba(0, 0, 0, .4) }
@@ -1673,6 +1677,7 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .layerWrap.typeAlert .layerBody.wid500       {width:500px;  }
 .layerWrap.typeAlert .layerBody.wid600       {width:600px;  }
 .layerWrap.typeAlert .layerBody.wid600 .layerFoot { padding-top: 40px; }
+.layerWrap.typeAlert .layerBody.wid640       {width:640px;  }
 /* .layerWrap.typeAlert .layerBody.wid500 .layerCont { padding-top: 0;} */
 .layerWrap.typeAlert .layerBody .layerHead    { min-height: 80px; padding:40px 0 16px; background:none;   }
 .layerWrap.typeAlert .layerBody .layerHead h3 { font-size: 24px; }

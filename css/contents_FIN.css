@@ -43,6 +43,7 @@ header.on .bg  {height:590px; }
 /*********************/
 
 /* 락 */
+.loginCont ul.loginTab      {height:310px; }
 div.login_form.change_pw  { margin:0 auto; max-width:530px; margin:60px auto 0;  }
 div.login_form.change_pw .formBox  { padding-left:150px; }
 div.login_form.change_pw .loginBtn  { margin-top:30px; }
@@ -163,7 +164,7 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 .main_list_contents .list_top_box .info_txt strong   { display:block; }
 .main_list_contents .list_top_box button   { height:40px; font-size:16px; padding:0 32px; margin-left:20px;  }
 
-section.main_dashboard       {}
+section.main_dashboard       {position:relative; overflow: visible; }
 .main_dashboard .mng_btns           { padding:140px 0 40px; text-align: right;}
 .main_dashboard ul.dashboardWrap:first-child    {padding-top:0px; } 
 .main_dashboard .tabLine ~ div ul.dashboardWrap:first-child    {padding-top:30px; } 
@@ -233,6 +234,15 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .main_dashboard ul li.chart_pie ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
 .main_dashboard ul li.chart_pie ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;  }
 
+.main_dashboard ul.slideTab          {width:100%; margin-top:30px; text-align: center; gap:16px; }
+.main_dashboard ul.slideTab li       {display:inline-block; width:14px; height:14px;   }
+.main_dashboard ul.slideTab li a     {border:0; }
+.main_dashboard ul.slideTab li span.bul   {display:block; width:14px; height:14px; padding:0; background:#ddd; border-radius: 50%; overflow: hidden; font-size:10px; text-indent: -10000px;  }
+.main_dashboard ul.slideTab li.on span.bul   {background:#069B66; }
+.main_dashboard ul.slideTab li a span  {display:block; overflow: hidden; font-size:10px; text-indent: -10000px;}
+.main_dashboard ul.slideTab li a.btnSlide    {position:absolute; z-index:100; top:50%; left:-90px; opacity:1; width:80px; height:80px; background:url(../images/FIN/ico_80_left_g.png) no-repeat 0 0; border-radius: 16px;;   }
+.main_dashboard ul.slideTab li.on a.btnSlide    {opacity: 0.2;}
+.main_dashboard ul.slideTab li + li a.btnSlide    { left:auto; right:-90px; transform: rotate(-180deg); }
 
 
 .barChart         { width:100%; position:relative; height:26px;  }

@@ -65,7 +65,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 section       {max-width:1820px; padding: 0 10px;  }
 .bgWrap section { padding: 0 70px}
 .pageTop      {}
-.pageTop ul.breadcrumb      {left:60px; top:0;  }
+.pageTop ul.breadcrumb      {left:10px; top:0;  }
 .pageTop h2      {padding-top:70px;   }
 .pageTop p.dataInfo      {position:absolute; right:60px; bottom:0px; color:#4C9DA2; text-align: right; }
 
@@ -321,6 +321,7 @@ ul.boxWrap.payData li.box .barChart .legend em.icon_2::before    {background:#46
 .moneyTxt span   {display:block; color:#888; font-size: 14px;   }
 
 ul.dashboardWrap      {display:flex; gap:20px;  }
+ul.dashboardWrap   {margin-top:20px; }
 ul.dashboardWrap > li   {width:calc(50% - 10px); padding:40px 50px; max-width:50%; border:1px solid #ddd; border-radius:16px; }
 ul.dashboardWrap > li .titBox     { position:absolute; width:100%; font-size:18px; }
 ul.dashboardWrap > li .chartBox   { width:100%; height:340px; margin:0 auto; }
@@ -470,4 +471,14 @@ fieldset .searchControlBox { width: 100%;}
 .comment .commentBody .btnSuccess { margin-left: 20px; align-self: flex-end;}
 .comment .filebox { width:600px; margin-top:20px;  }
 
+
+
+/* 엑셀 업로드 */
+.uploadResult         {border:1px solid #069B66; padding:20px; border-radius:16px; margin-top:20px;  }
+.uploadResult .resutlBox         {margin-bottom:20px; }
+.uploadResult .resutlBox strong  {font-size: 26px; vertical-align: 0; }
+.uploadResult .resutlBox em {font-size:20px; margin-left:20px;  }
+.uploadResult .resutlBox em strong {font-size:20px;  color:#069B66 }
+.uploadResult .resutlBox em.total  {color:#069B66 }
+.uploadResult .resutlBox em.err strong  {color:#FE5050}
 

@@ -1189,8 +1189,8 @@ header.on .line  {display:block; }
 .headerCont ul.headerLogin li a  {font-size:16px; font-weight: 500; transition: .3s; ;}
 .headerCont ul.headerLogin li a.login {position:relative; margin-left:10px; padding-left:10px; }
 .headerCont ul.headerLogin li a.login::before {content:''; position: absolute; width:2px; height:2px; background:#555; border-radius: 50%; left:0; top:50%; }
-.headerCont ul.headerLogin li a.logout {position:relative; padding-right:34px; }
-.headerCont ul.headerLogin li a.logout::before {content:''; position: absolute; width:24px; height:24px; background:#fff; right:0; top:0%; background:url(../images/COP/ico_logout_off.png) no-repeat 0 0 / 100%;}
+.headerCont ul.headerLogin li a.logout {position:relative; padding-right:24px; }
+.headerCont ul.headerLogin li a.logout::before {content:''; position: absolute; width:18px; height:18px; background:#fff; right:0; top:0%; background:url(../images/COP/ico_logout_off.png) no-repeat 0 0 / 100%;}
 .on .headerCont ul.headerLogin li a {}
 .on .headerCont ul.headerLogin li a:hover {color:#069B66; }
 .on .headerCont ul.headerLogin li a.login::before {background:#EAFAEB; }
@@ -1212,6 +1212,15 @@ header.on .line  {display:block; }
 /* .headerCont ul.gnb li.depth_1 > a:hover span.ico_gnb_cus    {background-image:url(../images/common/ico_gnb_custom_on.png)} */
 .headerCont ul.gnb li.depth_1 > a span.ico_gnb_office    {background-image:url(../images/common/ico_24_center_setting_w.png)}
 /* .headerCont ul.gnb li.depth_1 > a:hover span.ico_gnb_office    {background-image:url(../images/common/ico_24_center_setting_primary.png)} */
+
+
+.headerCont .msgBox        {position:relative; width:40px; height:40px;   }
+.headerCont .msgBox a.ico_msg        {display:block; width:40px; height:40px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0 / 20px auto ; ;}
+.headerCont .msgBox a.ico_msg em     {position:absolute; width:18px; height:18px; right:11px; top:-3px; background:#FE5050; color:#fff; font-size:12px; line-height:18px; font-weight: 700; text-align: center; border-radius:50%;  }
+.headerCont .msgBox .layer_msg         {position:absolute; opacity:0;  padding:10px 15px; font-size:14px; right:70px; bottom:0px; text-align: right; min-width:130px; background:#FFD43C; border-radius: 8px; white-space: nowrap;  }
+.headerCont .msgBox .layer_msg strong  {display:block; }
+.headerCont .msgBox .layer_msg::after  {content:''; position:absolute; right:-15px; bottom:20px; width:18px; height:15px; background:url(../images/FIN/bul_polygon.png); transform: rotate(270deg); }
+.headerCont .msgBox.on .layer_msg  {animation:msgLayer 2s forwards }
 
 
 .container {position:relative; z-index:2; min-height:500px; padding:80px 0 100px }
@@ -1912,11 +1921,11 @@ body.popup          {min-width: auto;}
 .pageTop h2.pageTit        {font-size:30px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; overflow: hidden; }
 .pageTop ul.breadcrumb li  { float:left; }
-.pageTop ul.breadcrumb li a.home {display:inline-block;  width:18px; height:18px; background:url(../images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
+.pageTop ul.breadcrumb li.home {display:inline-block;  width:18px; height:18px; background:url(../images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
 .pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:18px; height:18px; margin:0 8px; background:url(../images/common/ico_24_right_02.png) no-repeat 0 0 / 18px auto; vertical-align: top; }
 .pageTop ul.breadcrumb li:first-child:before  {display:none;}
-.pageTop ul.breadcrumb li a  {display:inline-block; line-height:16px; font-size:14px; color:#555; vertical-align: top }
-.pageTop ul.breadcrumb li a strong{color:#069B66; }
+.pageTop ul.breadcrumb li   {display:inline-block; line-height:16px; font-size:14px; color:#555; vertical-align: top }
+.pageTop ul.breadcrumb li strong{color:#069B66; }
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 
@@ -2183,6 +2192,10 @@ ul.guideBox li.bul::before {content:"·"; position:absolute; left:0; top:0px; }
 .main_myInfo .msgBox .layer_msg::after  {content:''; position:absolute; right:-15px; bottom:20px; width:18px; height:15px; background:url(../images/FIN/bul_polygon.png); transform: rotate(270deg); }
 .main_myInfo .msgBox.on .layer_msg  {animation:msgLayer 2s forwards }
 .main_myInfo + .btnBox    {margin-top:20px; margin-bottom:60px; }
+.main_myInfo ul.pageTab     {display:flex; position:relative; top:40px; height:40px; background:#fff; border:1px solid #ddd; border-radius:40px;   }
+.main_myInfo ul.pageTab li  {}
+.main_myInfo ul.pageTab li a  {display:block; line-height:40px; padding:0 20px; margin-top:-1px; color:#555; text-decoration: none;   }
+.main_myInfo ul.pageTab li.on a  {background:#069B66; border-radius:40px; font-weight: 700; color:#fff;   }
 
 @keyframes msgLayer {
   0% {
