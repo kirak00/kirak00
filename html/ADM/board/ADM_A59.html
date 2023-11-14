@@ -103,8 +103,8 @@
     <section>
       <ul class="boxWrap chartBox review">
         <li>
-          <div class="box half">
-            <span class="tit">제안서와 실행 금액 일치율</span>
+          <div class="box">
+            <span class="tit">제안과 실행 일치율</span><!-- v1.0 워딩수정 -->
             <div class="pie" id="pieChart_2"></div>
             <script> 
               var chartDom = document.getElementById('pieChart_2');
@@ -127,7 +127,10 @@
                     label: {
                       show: true,
                       formatter: '{@score}%',
-                      position: 'center'
+                      position: 'center',
+                      color: 'inherit',
+                      fontSize: 16,
+                      fontWeight: 700
                     },
                     emphasis: {
                       label: {
@@ -149,8 +152,21 @@
               myChart_pie1.setOption(option);
             </script>
           </div>
-          <div class="box half">
-            <span class="tit">만족도 평균</span>
+        </li>
+        <!-- v1.0 수정 -->
+        <li>
+          <div class="box">
+            <span class="tit">금융 회사 선택 기준</span>
+            <ul class="rankList">
+              <li class="list"><em>1</em>대출 금액</li>
+              <li class="list"><em>2</em>금리</li>
+              <li class="list"><em>3</em>기타</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="box">
+            <span class="tit">금융 회사 만족도</span>
             <div class="avr">
               <div class="formRow starChkWrap">
                 <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' disabled />
@@ -164,11 +180,87 @@
                 <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
                 <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
               </div>
-              <strong><em>10점</em></strong>
+              <strong><em>60</em>점</strong>
             </div>
           </div>
         </li> 
         <li>
+          <div class="box">
+            <span class="tit">추천 의향</span><!-- v1.0 워딩수정 -->
+            <div class="pie" id="pieChart_3"></div>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> YES</li>
+              <li> <em style="background:#46B9B2"></em> NO</li>
+            </ul>
+            <script> 
+              var chartDom = document.getElementById('pieChart_3');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  show:false,
+                },
+                series: [
+                  {
+                    // name: '추천 의향',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: true,
+                      formatter: '{@score}%',
+                      color: 'inherit',
+                      fontSize: 16
+                    },
+                      // position: 'center'
+                    emphasis: {
+                      label: {
+                        show: false,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 25, name: 'YES'  , itemStyle : {color:'#46b9b2'} },
+                      { value: 75, name: 'NO' , itemStyle : {color:'#5066B6'} },
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+          </div>
+        </li>
+         <!-- v1.0 수정 -->
+         <li>
+          <div class="box">
+            <span class="tit">Loan&Biz 만족요소</span>
+            <ul class="rankList">
+              <li class="list"><em>1</em>제휴된 금융 회사가 많아서</li>
+              <li class="list"><em>2</em>대출 탐색 시간이 줄어서</li>
+              <li class="list"><em>3</em>기타</li>
+            </ul>
+          </div>
+        </li>
+         <!-- v1.0 수정 -->
+         <li>
+          <div class="box">
+            <span class="tit">개선사항 순위</span>
+            <ul class="rankList">
+              <li class="list"><em>1</em>복잡한 절차</li>
+              <li class="list"><em>2</em>플랫폼 속도</li>
+              <li class="list"><em>3</em>기타</li>
+            </ul>
+          </div>
+        </li>
+        <!-- <li>
           <div class="box">
             <span class="tit">금융 상품 만족 순위</span>
             <div class="chart" id="barChart_2"></div>
@@ -237,7 +329,7 @@
               <li> <em style="background:#89E3CD"></em> 4위 다양한 정보</li>
             </ul>
           </div>
-        </li>
+        </li> -->
       </ul>
     </section>
     <section class="sectionBlock40">
@@ -275,14 +367,16 @@
         <span class="count">총 <strong>20</strong>건</span>
         <!-- <button type="button" class="btnSuccess">메시지 알림 설정</button> -->
       </fieldset>
-      <div class="table_wrap messageList">
+      <div class="table_wrap"><!-- v1.0 .messageList 삭제 -->
         <table class="bbs_list">
           <caption>리뷰관리</caption>
           <colgroup>
-            <col width="180px"/>
-            <col width="170px"/>
-            <col width="300px"/>
-            <col width="170px"/>
+            <col width="160px"/>
+            <col width="140px"/>
+            <col width="230px"/><!-- v1.0 수정 -->
+            <col width="290px"/>
+            <col width="150px"/><!-- v1.0 수정 -->
+            <col width="230px"/><!-- v1.0 수정 -->
             <col width="300px"/>
             <col width="300px"/>
             <col />
@@ -291,11 +385,12 @@
             <tr>
               <th scope="col">기업명</th>
               <th scope="col">등록일</th>
-              <th scope="col">제안과 실행 일치 여부</th>
-              <th scope="col">만족도</th>
-              <th scope="col">금융 상품 만족 순위</th>
-              <th scope="col">Loan&Biz 만족 순위</th>
-              <th scope="col">Loan&Biz 불만족 요소</th>
+              <th scope="col">제안과 실행 일치 여부</th><!-- v1.0 수정 -->
+              <th scope="col">금융 회사 선택 기준</th><!-- v1.0 수정 -->
+              <th scope="col">금융 회사 만족도</th><!-- v1.0 수정 -->
+              <th scope="col">추천 의향</th><!-- v1.0 수정 -->
+              <th scope="col">Loan&Biz 만족 요소</th><!-- v1.0 수정 -->
+              <th scope="col">Loan&Biz 아쉬운 요소</th><!-- v1.0 수정 -->
             </tr>
           </thead>
           <tbody>
@@ -303,130 +398,92 @@
               <td>(주)평가</td>
               <td>2023-08-12</td>
               <td>Y</td>
-              <td>100</td>
-              <td class="textLeft">
+              <td class="textLeft"><!-- v1.0 수정 -->
                 <div class="checkVertical">
                   <span class="checkbox">
                     <input type="checkbox" id="chk1_1" name="chk1" />
-                    <label for="chk1_1"><span></span>대출액</label>
+                    <label for="chk1_1"><span></span>대출 금액(한도)</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk1_2" name="chk1" />
-                    <label for="chk1_2"><span></span>금리</label>
+                    <label for="chk1_2"><span></span>대출 금리</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk1_3" name="chk1" />
-                    <label for="chk1_3"><span></span>대출 기간</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk1_4" name="chk1" />
-                    <label for="chk1_4"><span></span>상환 방식</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk1_5" name="chk1" />
-                    <label for="chk1_5"><span></span>기타:</label>
+                    <label for="chk1_3"><span></span>기타:친절한 응대</label>
                   </span>
                 </div>
               </td>
-              <td class="textLeft">
+              <td>100</td>
+              <td>Y</td><!-- v1.0 수정 -->
+              <td class="textLeft"><!-- v1.0 수정 -->
                 <div class="checkVertical">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk2_1" name="chk2" />
-                    <label for="chk2_1"><span></span>편리함</label>
+                    <input type="checkbox" id="chk12_1" name="chk12" />
+                    <label for="chk12_1"><span></span>제휴된 금융 회사가 많아서</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk2_2" name="chk2" />
-                    <label for="chk2_2"><span></span>신속함</label>
+                    <input type="checkbox" id="chk12_2" name="chk12" />
+                    <label for="chk12_2"><span></span>대출 탐색 시간이 줄어서</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk2_3" name="chk2" />
-                    <label for="chk2_3"><span></span>다양한 금융기관의 참여</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk2_4" name="chk2" />
-                    <label for="chk2_4"><span></span>다양한 대출 제안</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk2_5" name="chk2" />
-                    <label for="chk2_5"><span></span>기타:친절한 응대</label>
+                    <input type="checkbox" id="chk12_3" name="chk12" />
+                    <label for="chk12_3"><span></span>기타:친절한 응대</label>
                   </span>
                 </div>
               </td>
-              <td class="textLeft">
+              <td class="textLeft"><!-- v1.0 수정 -->
                 <div class="checkVertical">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk3_1" name="chk3" />
-                    <label for="chk3_1"><span></span>대출 비교 신청 프로세스 불편</label>
+                    <input type="checkbox" id="chk13_1" name="chk13" />
+                    <label for="chk13_1"><span></span>복잡한 절차</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk3_2" name="chk3" />
-                    <label for="chk3_2"><span></span>대출 필요 시점 대비 긴 시간 소요</label>
+                    <input type="checkbox" id="chk13_2" name="chk13" />
+                    <label for="chk13_2"><span></span>플랫폼 속도</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk3_3" name="chk3" />
-                    <label for="chk3_3"><span></span>제안서의 만족도가 낮음</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk3_4" name="chk3" />
-                    <label for="chk3_4"><span></span>제안 받은 내용과 대출 내용이 다름</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk3_5" name="chk3" />
-                    <label for="chk3_5"><span></span>기타:</label>
+                    <input type="checkbox" id="chk13_3" name="chk13" />
+                    <label for="chk13_3"><span></span>기타:</label>
                   </span>
                 </div>
-              </td>
+              </td>            
             </tr>
             <tr>
               <td>(주)평가</td>
               <td>2023-08-12</td>
               <td>Y</td>
-              <td>100</td>
               <td class="textLeft">
                 <div class="checkVertical">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk11_1" name="chk11" />
-                    <label for="chk11_1"><span></span>대출액</label>
+                    <input type="checkbox" id="chk1_1" name="chk1" />
+                    <label for="chk1_1"><span></span>대출 금액(한도)</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk11_2" name="chk11" />
-                    <label for="chk11_2"><span></span>금리</label>
+                    <input type="checkbox" id="chk1_2" name="chk1" />
+                    <label for="chk1_2"><span></span>대출 금리</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk11_3" name="chk11" />
-                    <label for="chk11_3"><span></span>대출 기간</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk11_4" name="chk11" />
-                    <label for="chk11_4"><span></span>상환 방식</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk11_5" name="chk11" />
-                    <label for="chk11_5"><span></span>기타:</label>
+                    <input type="checkbox" id="chk1_3" name="chk1" />
+                    <label for="chk1_3"><span></span>기타:친절한 응대</label>
                   </span>
                 </div>
               </td>
+              <td>100</td>
+              <td>Y</td>
               <td class="textLeft">
                 <div class="checkVertical">
                   <span class="checkbox">
                     <input type="checkbox" id="chk12_1" name="chk12" />
-                    <label for="chk12_1"><span></span>편리함</label>
+                    <label for="chk12_1"><span></span>제휴된 금융 회사가 많아서</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk12_2" name="chk12" />
-                    <label for="chk12_2"><span></span>신속함</label>
+                    <label for="chk12_2"><span></span>대출 탐색 시간이 줄어서</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk12_3" name="chk12" />
-                    <label for="chk12_3"><span></span>다양한 금융기관의 참여</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk12_4" name="chk12" />
-                    <label for="chk12_4"><span></span>다양한 대출 제안</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk12_5" name="chk12" />
-                    <label for="chk12_5"><span></span>기타:친절한 응대</label>
+                    <label for="chk12_3"><span></span>기타:친절한 응대</label>
                   </span>
                 </div>
               </td>
@@ -434,23 +491,15 @@
                 <div class="checkVertical">
                   <span class="checkbox">
                     <input type="checkbox" id="chk13_1" name="chk13" />
-                    <label for="chk13_1"><span></span>대출 비교 신청 프로세스 불편</label>
+                    <label for="chk13_1"><span></span>복잡한 절차</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk13_2" name="chk13" />
-                    <label for="chk13_2"><span></span>대출 필요 시점 대비 긴 시간 소요</label>
+                    <label for="chk13_2"><span></span>플랫폼 속도</label>
                   </span>
                   <span class="checkbox">
                     <input type="checkbox" id="chk13_3" name="chk13" />
-                    <label for="chk13_3"><span></span>제안서의 만족도가 낮음</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk13_4" name="chk13" />
-                    <label for="chk13_4"><span></span>제안 받은 내용과 대출 내용이 다름</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk13_5" name="chk13" />
-                    <label for="chk13_5"><span></span>기타:</label>
+                    <label for="chk13_3"><span></span>기타:</label>
                   </span>
                 </div>
               </td>
@@ -459,76 +508,53 @@
               <td>(주)평가</td>
               <td>2023-08-12</td>
               <td>Y</td>
+              <td class="textLeft">
+                <div class="checkVertical">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_1" name="chk1" />
+                    <label for="chk1_1"><span></span>대출 금액(한도)</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_2" name="chk1" />
+                    <label for="chk1_2"><span></span>대출 금리</label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk1_3" name="chk1" />
+                    <label for="chk1_3"><span></span>기타:친절한 응대</label>
+                  </span>
+                </div>
+              </td>
               <td>100</td>
+              <td>Y</td>
               <td class="textLeft">
                 <div class="checkVertical">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk21_1" name="chk21" />
-                    <label for="chk21_1"><span></span>대출액</label>
+                    <input type="checkbox" id="chk12_1" name="chk12" />
+                    <label for="chk12_1"><span></span>제휴된 금융 회사가 많아서</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk21_2" name="chk21" />
-                    <label for="chk21_2"><span></span>금리</label>
+                    <input type="checkbox" id="chk12_2" name="chk12" />
+                    <label for="chk12_2"><span></span>대출 탐색 시간이 줄어서</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk21_3" name="chk21" />
-                    <label for="chk21_3"><span></span>대출 기간</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk21_4" name="chk21" />
-                    <label for="chk21_4"><span></span>상환 방식</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk21_5" name="chk21" />
-                    <label for="chk21_5"><span></span>기타:</label>
+                    <input type="checkbox" id="chk12_3" name="chk12" />
+                    <label for="chk12_3"><span></span>기타:친절한 응대</label>
                   </span>
                 </div>
               </td>
               <td class="textLeft">
                 <div class="checkVertical">
                   <span class="checkbox">
-                    <input type="checkbox" id="chk22_1" name="chk22" />
-                    <label for="chk22_1"><span></span>편리함</label>
+                    <input type="checkbox" id="chk13_1" name="chk13" />
+                    <label for="chk13_1"><span></span>복잡한 절차</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk22_2" name="chk22" />
-                    <label for="chk22_2"><span></span>신속함</label>
+                    <input type="checkbox" id="chk13_2" name="chk13" />
+                    <label for="chk13_2"><span></span>플랫폼 속도</label>
                   </span>
                   <span class="checkbox">
-                    <input type="checkbox" id="chk22_3" name="chk22" />
-                    <label for="chk22_3"><span></span>다양한 금융기관의 참여</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk22_4" name="chk22" />
-                    <label for="chk22_4"><span></span>다양한 대출 제안</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk22_5" name="chk22" />
-                    <label for="chk22_5"><span></span>기타:친절한 응대</label>
-                  </span>
-                </div>
-              </td>
-              <td class="textLeft">
-                <div class="checkVertical">
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk23_1" name="chk23" />
-                    <label for="chk23_1"><span></span>대출 비교 신청 프로세스 불편</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk23_2" name="chk23" />
-                    <label for="chk23_2"><span></span>대출 필요 시점 대비 긴 시간 소요</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk23_3" name="chk23" />
-                    <label for="chk23_3"><span></span>제안서의 만족도가 낮음</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk23_4" name="chk23" />
-                    <label for="chk23_4"><span></span>제안 받은 내용과 대출 내용이 다름</label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" id="chk23_5" name="chk23" />
-                    <label for="chk23_5"><span></span>기타:</label>
+                    <input type="checkbox" id="chk13_3" name="chk13" />
+                    <label for="chk13_3"><span></span>기타:</label>
                   </span>
                 </div>
               </td>
@@ -537,7 +563,7 @@
         </table>
       </div>
       
-      <div class="table_bt mt20">
+      <div class="table_bt small mt20"> <!-- v1.0 small 추가 -->
         <div class="external-pager jsgrid-pager-container">
           <div class="jsgrid-pager">
             <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">&lt;&lt;</a></span> 

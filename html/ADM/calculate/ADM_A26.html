@@ -44,8 +44,8 @@
         <div class="searchControlBox">
           <div class="searchControlGroup">
             <div class="dateTab tabScript" role="tablist">
-              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
+              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">조회 기간</button> <!-- v1.0 워딩수정 -->
+              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >기간 설정</button> <!-- v1.0 워딩수정 -->
             </div>
 
             <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
@@ -132,6 +132,12 @@
                 "Name1": "2023-08-12", 
                 "Name2": "신한캐피탈본점", 
                 "Name3": "김신한", 
+                "Name4": "<span class='textBold blue'>수락</span>", 
+              },
+              { 
+                "Name1": "2023-08-12", 
+                "Name2": "신한캐피탈본점", 
+                "Name3": "김신한", 
                 "Name4": "<button type='button' class='btnWhite wid128'>진행중</button>", 
               },
             ]; 
@@ -142,7 +148,7 @@
 
               fields: [
                 { name: "Name1",  type: "text", title : "이의 신청일", width: '25%'},
-                { name: "Name2",  type: "text", title : "금융기관명", width: '25%'},
+                { name: "Name2",  type: "text", title : "금융 기관명", width: '25%'}, //v1.0 워딩수정
                 { name: "Name3", type: "text", title : "담당자명", width: '25%' },
                 { name: "Name4", type: "button", title : "상태", width: '25%' },
               ],

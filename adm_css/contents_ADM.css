@@ -279,17 +279,19 @@ ul.boxWrap.chartBox li.box .ment  {text-align: center; font-weight: 500;}
 
 
 ul.boxWrap.chartBox.review            {display: flex; overflow: hidden; gap: 24px}
-ul.boxWrap.chartBox.review .box span.tit  {display:block; padding:40px 0 0; font-size: 18px; font-weight: 700; text-align: center;  }
-ul.boxWrap.chartBox.review .box     { width:432px; margin-left:0px; padding-bottom:30px;    }
+ul.boxWrap.chartBox.review > li { width: 16.66%;}
+ul.boxWrap.chartBox.review .box span.tit  {display:block; padding:30px 0 0; font-size: 18px; font-weight: 700; text-align: center;  }
+ul.boxWrap.chartBox.review .box     { height: 300px; margin-left:0px; padding-bottom:30px;  text-align: center;  }
 ul.boxWrap.chartBox.review .box.half + .box.half   { margin-top: 24px; }
-ul.boxWrap.chartBox.review .box ul.legend     {width:280px; flex-direction: column; margin: 0 auto; padding:10px 30px; }
-ul.boxWrap.chartBox.review .box ul.legend li  {width:100%; margin:10px 0 }
+ul.boxWrap.chartBox.review .box ul.legend     { display: flex; flex-wrap: nowrap; justify-content: center; gap: 30px; width:220px; margin: 0 auto; padding:10px 30px; }
+ul.boxWrap.chartBox.review .box ul.legend li   { width: auto;}
+ul.boxWrap.chartBox.review .box ul.legend li em { vertical-align: 2px;}
 ul.boxWrap.chartBox.review .box div.chart   {width:300px; height:230px; margin: 0 auto;}
-ul.boxWrap.chartBox.review .box div.pie     {width:150px; height:150px; margin: 0 auto;}
+ul.boxWrap.chartBox.review .box div.pie     {width:100%; height:150px; margin: 20px auto 0;}
 ul.boxWrap.chartBox.review .box div.avr     {text-align: center; height:148px; }
 ul.boxWrap.chartBox.review .box div.avr .formRow     {justify-content: center; padding:30px 0 20px }
 ul.boxWrap.chartBox.review .box div.avr strong     {font-size: 30px; color:#069B66; }
-
+ul.boxWrap.chartBox.review .box div.avr strong em { vertical-align: baseline;}
 
 
 
@@ -340,6 +342,12 @@ ul.dashboardWrap li.rank ol    {display:inline-block; text-align:left; margin-to
 ul.dashboardWrap li.rank ol li    {}
 ul.dashboardWrap li.rank ol li + li  {margin-top:20px }
 ul.dashboardWrap li.rank ol li em    {display:inline-block; width:24px; height:24px; margin-right:8px; background:#069B66; color:#fff; border-radius:50%; text-align: center;   }
+
+.rankList {display: inline-flex; flex-direction: column; margin-top:30px; padding:20px 30px; text-align:left;}
+.rankList .list    { font-weight: 500;}
+.rankList .list + .list  {margin-top:20px }
+.rankList .list em    {display:inline-block; width:24px; height:24px; line-height: 24px; margin-right:8px; background:#069B66; color:#fff; border-radius:50%; text-align: center;  vertical-align: 1px; }
+
 
 ul.dashboardWrap li.chart_pie .pie   {width:240px; height:240px; margin:0 auto;  }
 ul.dashboardWrap li.chart_pie .pie2   {width:240px; height:190px; margin:0 auto;  }
@@ -465,7 +473,7 @@ fieldset .searchControlBox { width: 100%;}
 .table_wrap.mt30 { margin-top: 30px;}
 .layerCont .tableData { padding: 30px 0; text-align: center;}
 
-.comment .replies { margin-left: 120px;}
+.comment .replies { margin-left: 80px;}
 .comment .textarea { width: 100%;}
 .comment .commentBody { display: flex; }
 .comment .commentBody .btnSuccess { margin-left: 20px; align-self: flex-end;}
