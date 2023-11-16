@@ -44,11 +44,15 @@
               </div>
               <div class="searchControlItem">
                 <label for="selectLabelState" class="label">상태</label>
-                <div class="formRow">
+                <div class="formRow formGroup">
                   <select id="selectLabelState">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
+                  <span class="checkbox">
+                    <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                    <label for="searchCheckBox"><span></span>타점심사중 제외</label>
+                  </span>
                 </div>
               </div>
               <div class="searchControlItem">
@@ -118,8 +122,6 @@
                 </div>
               </div>
               <span class="checkbox">
-                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-                <label for="searchCheckBox"><span></span>타점심사중 제외</label>
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
                 <label for="searchCheckBox"><span></span>등급 없음 포함</label>
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
