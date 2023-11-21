@@ -31,6 +31,9 @@
 div.login_form.change_pw  { margin:0 auto; max-width:460px; margin:60px auto 0;  }
 div.login_form.change_pw .formBox  { padding-left:148px; }
 div.login_form.change_pw .loginBtn  { margin-top:30px; }
+div.login_form.dormant_account  { margin:0 auto; max-width:460px; margin:76px auto 0;  }
+div.login_form.dormant_account .formBox  { padding-left:148px; }
+div.login_form.dormant_account .loginBtn  { margin-top:60px; }
 ul.loginTab li button.loginTabBtn  { position:absolute; height:60px; width:50%; top:0; font-size:18px; border-bottom:1px solid #ddd;   }
 ul.loginTab li button.loginTabBtn:focus  { outline: 2px dashed #069B66; border-radius: 5px;}
 ul.loginTab li.on button.loginTabBtn  { color:#069B66; font-weight: 700; border-bottom:3px solid #069B66; }
