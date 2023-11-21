@@ -2193,8 +2193,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .comment .reply .label::before,
 .comment .replies .label::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_comment_g.png'); vertical-align: middle;}
 .comment .reply.isHide { display: none;}
-.comment .attach { display: inline-block; margin-top: 10px; padding-left:32px; font-weight: 700; color:#4C9DA2;  background:url('../adm_images/common/ico_18_clip_primary.png') no-repeat 0% 50% / 24px 24px ; text-decoration: underline;}
-
+.comment .attach { display: inline-block; margin-top: 10px; padding-left:32px; font-weight: 700; color:#4C9DA2;  background:url('../adm_images/common/ico_18_clip_primary.png') no-repeat 0% 50% / 24px 24px ; }
+.comment .attach a { text-decoration: underline;}
 /* 1:1 문의 */
 .callCenter { margin-top: 100px; border-top: 1px solid #ddd;}
 .callCenter .inner { display: flex; align-items: center; max-width: 1400px; margin: 0 auto; padding: 30px 0;}

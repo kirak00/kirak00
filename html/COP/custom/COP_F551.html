@@ -24,7 +24,7 @@
 
     <section class="pageTop">
       <h2 class="pageTit">1:1문의</h2>
-      <p class="pageSub">대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해 주세요.</p>
+      <p class="pageSub">대출 관련 심사 및 제안 관련 문의는 해당 금융 회사로 부탁드려요.</p><!-- v1.8 워딩 수정 -->
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>고객센터</span></a></li>
@@ -36,7 +36,7 @@
       <fieldset class="tableFilterGroup">
         <span class="count">총 <strong>15</strong>건</span>
         <div class="formRow" role="group">
-          <select title="보기갯수 선택">
+          <select title="보기갯수 선택" class="wid200"> 
             <option>10개씩 보기</option>
             <option>본부2</option>
           </select>
@@ -48,8 +48,7 @@
         <div class="table_bt">
           <div id="externalPager2" class="external-pager"></div>
           <div class="btn_r">
-            <!-- v1.4 수정 .mm 추가 -->
-            <button type="button" class="btnWhite mm">문의하기</button>
+            <button type="button" class="btnWhite">문의하기</button>
           </div>
         </div>
       </div>
@@ -94,8 +93,8 @@
             noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
             fields: [
-              { name: "Name1",  type: "text", title : "문의 내용", width: 1000, align: "left"},
-              { name: "Name2",  type: "text", title : "작성일", width: 320},
+              { name: "Name1",  type: "text", title : "문의 내용", width: 1160, align: "left"},//<!-- v1.8 너비 수정 -->
+              { name: "Name2",  type: "text", title : "작성일", width: 230},//<!-- v1.8 너비 수정 -->
             ],
             
             pagerContainer: "#externalPager2",

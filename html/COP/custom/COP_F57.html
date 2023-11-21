@@ -32,8 +32,7 @@
     </section>
 
     <section class="">
-      <!-- 디자인 수정 .textCenter 추가 -->
-      <div class="notiBox grayType"><span class="srOnly">알림</span><p class="notiTxt textCenter">oan&Biz 이용과 관련한 문의만 가능해요. 대출 관련 심사 및 제안 관련 문의는 해당 금융 기관으로 문의해주세요.</p></div>
+      <div class="notiBox grayType"><span class="srOnly">알림</span><p class="notiTxt textCenter">Loan&Biz 이용과 관련한 문의만 가능해요. 대출 관련 심사 및 제안 관련 문의는 해당 금융 회사로 부탁드립니다.</p></div><!-- v1.8 워딩수정 -->
       <!-- v1.4 반영 .viewNolineTable.mt40 -->
       <div class="viewNolineTable mt40">
         <table>
@@ -48,21 +47,34 @@
               <td>2023-01-07</td>
             </tr>
             <tr>
-              <th scope="row">제목</th> 
-              <!-- <td>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</td> -->
+              <th scope="row" class="pt30"> <!-- v1.8 수정 -->
+                <label for="inpLabel1"><span aria-hidden="true" class="required">*</span>제목</label><!-- v1.8 수정 -->
+              </th> 
               <td>
                 <div class="formRow">
-                  <select id="selectLabelState1_1" class="wid220" title="말머리 선택">
+                  <!-- v1.6 select 추가 --> <!-- v1.8 말머리 선택 -> 분류 -->
+                  <select title="분류" class="wid220" title="분류">
                     <option>전체</option>
-                    <option>기타</option>
                   </select>
-                  <input type="text" class="input" value="플랫폼 이용 문의 대출 비교 요청 신청하면 얼마 정도 소요되나요?" />
+                  <input id="inpLabel1" class="input" type="text" placeholder="제목을 입력해 주세요." value="">
                 </div>
               </td>
             </tr>
-            <tr> 
+            <!-- v1.8 첨부파일 추가 -->
+            <tr>
               <th scope="row">
-                <label for="inpLabel2">내용</label>
+                <label for="inpLabel2">첨부파일</label></th> 
+              <td>
+                <div class="attach mint">
+                  <a href="#;">이미지1.jpg</a>,
+                  <a href="#;">법인증명서.gif</a>
+                </div>
+              </td>
+            </tr>
+            <!-- // v1.8 첨부파일 추가 -->
+            <tr> 
+              <th scope="row" class="pt30">
+                <label for="inpLabel2"><span aria-hidden="true" class="required">*</span>문의 사항</label><!-- v1.8 수정 -->
               </th> 
               <td>
                 <div class="formRow">

@@ -107,12 +107,13 @@
                 <span>안녕하세요!</span>
                 <strong>(주)신한은행 고객님😊</strong>
               </div>
-              <button type="button" class="btnWhite">대출 비교하기 추가</button><!-- v1.4 추가 -->
+              <button type="button" class="btnWhite">추가 대출 비교하기</button><!-- v1.8 워딩 수정 -->
             </div>
             <div class="msgBox on">
               <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
               <div class="layer_msg " role="alert"> 
                 제안서 연장 요청이 <strong>승인되었습니다</strong>
+                <!-- <span class="textBold">1건</span>의 메시지가 있습니다. -->
               </div>
             </div>
           </div>
@@ -135,18 +136,18 @@
           <div class="main_loan_progress">
             <div class="step_info">
               <div class="platform">
-                Loan&Biz 플랫폼
+                Loan&Biz (온라인) <!-- v1.8 워딩 수정 -->
                 <ul class="hide">
-                  <li>대출 정보 등록</li>
-                  <li>금융기관 심사</li>
+                  <li>대출 비교 신청 중</li><!-- v1.8 워딩 수정 -->
+                  <li>금융 회사 심사</li><!-- v1.8 워딩 수정 -->
                   <li>제안서 확인 및 선택</li>
                 </ul>
               </div>
               <div class="offline">
-                오프라인
+                금융 회사 (오프라인) <!-- v1.8 워딩 수정 -->
                 <ul class="hide">
-                  <li>금융기관 진행</li>
-                  <li>자금 조달 완료</li>
+                  <li>대출 약정</li><!-- v1.8 워딩 수정 -->
+                  <li>대출 실행</li><!-- v1.8 워딩 수정 -->
                 </ul>
               </div>
             </div>
@@ -160,21 +161,22 @@
               <li class="step_2 disabled">
                 <a href="#main_loan_cont_2" role="tab" id="main_loan_tab_2" >
                   <em>02.</em>
-                  <strong>금융기관 심사</strong>
-                  <p class="sub">심사 중인 금융기관 0건</p><!-- v1.6 워딩 추가 -->
+                  <strong>금융 회사 심사</strong><!-- v1.8 워딩 수정 -->
+                  <p class="sub">심사 진행 0건</p><!-- v1.6 워딩 추가 --><!-- v1.8 워딩 수정 -->
                 </a>
               </li>
               <li class="step_3 ">
                 <a href="#main_loan_cont_3" role="tab" id="main_loan_tab_3">
                   <em>03.</em>
                   <strong>제안서 확인 및 채택</strong><!-- v1.6 워딩 수정 -->
-                  <p class="sub">금융기관 제안서 0건</p><!-- v1.6 워딩 추가 -->
+                  <p class="sub">금융 회사 제안서 0건</p><!-- v1.6 워딩 추가 --><!-- v1.8 워딩 수정 -->
                 </a>
               </li>
               <li class="step_4 "> 
                 <a href="#main_loan_cont_4" role="tab" id="main_loan_tab_4">
                   <em>04.</em>
                 <strong>대출 약정</strong><!-- v1.6 워딩 수정 -->
+                <p class="sub">제안서 채택 0건</p><!-- v1.8 추가 -->
                 </a>
               </li>         
               <li class="step_5 "><!-- disabled 추가하면 클릭 안됨 -->
@@ -190,10 +192,8 @@
         <div class="main_loan_cont step_1" id="main_loan_cont_1" aria-labelledby="main_loan_tab_1" role="tabpanel">
           <section class=""> 
             <div class="list">
-              <div class="btnWrap">
                 <button class="btnSuccess">이어서 작성하기</button><!-- v1.4 수정 --><!-- v1.6 워딩수정 -->
-                <button class="btnSky">추가 서류 제출</button><!-- v1.4 수정 -->
-              </div>
+                <!-- <button class="btnSky">추가 서류 제출</button> -->
             </div>
           </section>
           <div class="bgWrap">
