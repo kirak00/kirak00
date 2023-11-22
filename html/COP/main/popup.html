@@ -24,6 +24,7 @@
   <div class="wrap">
     <div class="container" id="skip_content"  aria-label="콘텐츠">
       <section>
+        <h3 style="margin-bottom: 10px">알럿</h3>
         <!-- 기본형 -->
         <button type="button" class="btnSuccess" onclick='sample_alert_options1_1(this)'>보안프로그램 업데이트 안내</button>
         <script>
@@ -48,32 +49,6 @@
           }
         </script>
 
-
-        <button type="button" class="btnSuccess"  id="confirmClick">로그인/회원가입 알럿</button>
-        <script>
-          $("#confirmClick").on("click",function(){
-            layer_confirm(
-              // 비로그인
-              "대출 비교 서비스를 이용하기 위해선<br/>로그인이 필요해요.<br/><br/>아직 회원가입 전 이라면 회원가입을 해주세요.",
-              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
-              {
-                confirm:{ //  확인 
-                  txt : "로그인", 
-                  callback : function(){ 
-                    // alert(3)
-                  }
-                },
-                cancel:{ //  취소 
-                  txt : "회원가입",
-                  callback : function(){
-                    // alert(2)
-                  }
-                }
-              }
-            )
-          });
-        </script>
-        
         <!-- 기본형 -->
         <button type="button" class="btnSuccess" onclick='sample_alert_options2_1(this)'>로그인 연장</button>
         <script>
@@ -143,33 +118,6 @@
               }
             )
           }
-        </script>
-      </section>
-      <section style="margin-top: 20px;">
-        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>비밀번호 변경</button>
-        <script>
-          function sample_alert_1(obj){
-            layer_confirm(
-              {
-                tit:"비밀번호를 변경해 주세요", 
-                ment:"회원님께서는 3개월 동안 비밀번호를<br/>변경하지 않으셨어요.<br/>개인 정보를 보호하고 개인 정보 도용의 피해를<br/>예방하기 위해 3개월마다 주기적으로<br/>비밀번호 변경을 안내하고 있어요."
-              }, 
-              obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
-              {
-                confirm:{ //  확인 
-                  txt : "지금 변경하기", 
-                  callback : function(){ 
-                    // alert(3)
-                  }
-                },
-                cancel:{ //  취소 
-                  txt : "나중에 변경하기",
-                  callback : function(){
-                    // alert(2)
-                  }
-                }
-              })
-            }
         </script>
 
         <!-- 기본형 -->
@@ -244,6 +192,86 @@
           }
         </script>
 
+        <!-- 기본형 -->
+        <button type="button" class="btnSuccess" onclick='sample_alert_options3_1(this)'>심사 중 수정 불가능</button>
+        <script>
+          function sample_alert_options3_1(obj){
+            layer_alert(
+              "심사 중인 금융회사가 있어요.<br/>심사가 시작되면 수정이 불가능해요.", 
+              obj, 
+              {
+                confirm : {
+                  txt : "확인",
+                  callback : function(){
+                  }
+                },
+                closebtn : {
+                  show: true, // default :  false
+                  callback : function(){
+                    // alert("닫기")
+                  }
+                }
+              }
+            )
+          }
+        </script>
+
+
+      </section>
+      <section style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px">버튼 2개</h3>
+        <button type="button" class="btnSuccess"  id="confirmClick">로그인/회원가입 알럿</button>
+        <script>
+          $("#confirmClick").on("click",function(){
+            layer_confirm(
+              // 비로그인
+              "대출 비교 서비스를 이용하기 위해선<br/>로그인이 필요해요.<br/><br/>아직 회원가입 전 이라면 회원가입을 해주세요.",
+              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "로그인", 
+                  callback : function(){ 
+                    // alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "회원가입",
+                  callback : function(){
+                    // alert(2)
+                  }
+                }
+              }
+            )
+          });
+        </script>
+        
+        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>비밀번호 변경</button>
+        <script>
+          function sample_alert_1(obj){
+            layer_confirm(
+              {
+                tit:"비밀번호를 변경해 주세요", 
+                ment:"회원님께서는 3개월 동안 비밀번호를<br/>변경하지 않으셨어요.<br/>개인 정보를 보호하고 개인 정보 도용의 피해를<br/>예방하기 위해 3개월마다 주기적으로<br/>비밀번호 변경을 안내하고 있어요."
+              }, 
+              obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "지금 변경하기", 
+                  callback : function(){ 
+                    // alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "나중에 변경하기",
+                  callback : function(){
+                    // alert(2)
+                  }
+                }
+              })
+            }
+        </script>
+
+       
 
         <button type="button" class="btnSuccess" onclick='sample_alert_options2_7(this)'>대출 실행 의견</button>
         <script>
@@ -300,30 +328,7 @@
       </section>
 
       <section style="margin-top: 20px;">
-        <!-- 기본형 -->
-        <button type="button" class="btnSuccess" onclick='sample_alert_options3_1(this)'>심사 중 수정 불가능</button>
-        <script>
-          function sample_alert_options3_1(obj){
-            layer_alert(
-              "심사 중인 금융회사가 있어요.<br/>심사가 시작되면 수정이 불가능해요.", 
-              obj, 
-              {
-                confirm : {
-                  txt : "확인",
-                  callback : function(){
-                  }
-                },
-                closebtn : {
-                  show: true, // default :  false
-                  callback : function(){
-                    // alert("닫기")
-                  }
-                }
-              }
-            )
-          }
-        </script>
-
+        <h3 style="margin-bottom: 10px">팝업</h3>
 
         <!-- 
         * 레이어 호출
