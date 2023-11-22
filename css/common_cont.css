@@ -69,13 +69,13 @@
 .titH3.textCenter { justify-content: center; min-height: 50px; margin-bottom: 20px;}
 .titH4 { font-size: 18px; font-weight: 700;}
 .titH41 { font-size:18px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
-.titH42 { font-size:18px; font-weight: 700; }
-.titH43 { font-size:18px; margin-top:10px; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
 .titH4 + .pageTxt { margin-top: 20px;}
 .pageTxt {margin-bottom: 20px; font-weight: 500;}
+.pageTxt.textBold { font-weight: 700;}
 .pageTxt.flex {  display: flex; align-items: center; }
 .pageTxt.flex .right { margin-left: auto;}
+.pageTxt .sub { margin-left: 20px; color: #555; font-size: 14px; font-weight: 400;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
@@ -207,12 +207,22 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .layerCont .guideBox .infoList { margin-top: 16px;}
 .layerCont .guideBox .infoList.type2 { width: 120px; text-align: left; margin: 16px auto 0;}
 
+.agreeLineBox { padding: 40px 40px 0; border-radius: 16px; border: 1px solid #ddd;} 
+.notiBox + .agreeLineBox { margin-top: 40px; }
+.agreeLineBox .guideList.num { margin-top: 0;}
+.agreeLineBox .guideList.num .list + .list { margin-top: 20px; }
+.agreeLineBox .agreeCheck { margin-top: 40px; padding: 20px 0; border-top: 1px solid #ddd; text-align: center; }
+.agreeLineBox .agreeCheck .checkbox label { font-weight: 700;}
+.agreeLineBox .guideList .list p { margin-top: 8px;}
+
 .guideBox .guideList { margin-top: 0;}
 .guideList { margin-top: 8px;}
 .guideList.mt0 { margin-top: 0;}
-.guideList .list { display: flex; color: #555; font-weight: 400;}
+.guideList .list { display: flex; color: #555; font-weight: 400; flex-wrap: wrap;}
 .guideList .list.blue { color: #069B66}
 .guideList .list + .list { margin-top: 8px;}
+.guideList .list div,
+.guideList .list p { width: 100%;}
 .guideBox.type2 .guideList .list { margin-top: 0;}
 .guideList .list .tit { margin-right: 4px;}
 .guideList.dot .list { position: relative; padding-left: 16px; }
@@ -755,12 +765,15 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .input.wid400 { width: 400px;}
 .input.wid32 { width: 32px; padding: 0;}
 .input.wid82 { width: 82px;}
+.input.wid100 { width: 100px;}
 .input.wid120 { width: 120px;}
 .input.wid160 { width: 160px;}
 .input.wid180 { width: 180px;}
 .input.wid200 { width: 200px;}
+.input.wid210 { width: 210px;}
 .input.wid220 { width: 220px;}
 .input.wid240 { width: 240px;}
+.input.wid260 { width: 260px;}
 .input.wid300 { width: 300px;}
 .input.wid350 { width: 350px;}
 .input.wid360 { width: 360px;}
@@ -768,6 +781,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .input.wid600 { width: 600px;}
 .input.wid770 { width: 770px;}
 .input.wid950 { width: 950px;}
+
+
 .input.h50 { min-height: 50px;}
 
 /* 단위가 존재하는 input ex.개월, 원 */
@@ -834,6 +849,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .textareaWrap .count {display:block; text-align: right;}
 
 .textarea { width: 100%; min-height: 50px; height: 180px; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
+.textarea.h120 { height: 120px; }
 .textarea.h140 { height: 140px; }
 .textarea:disabled, .textarea:read-only { background: #f4f6f8; color: #999; }
 .layerCont .textarea { min-height: 50px; height: 180px;}
@@ -849,6 +865,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formVertical.mt10 { margin-top: 10px;}
 .formVertical.mt20 { margin-top: 20px;}
 .formVertical.hasLine { padding: 40px; border: 1px solid #ddd; border-radius: 8px;}
+.formVertical .formSet { align-items: flex-start;}
 .formSet { display: flex; align-items: center; gap: 10px;}
 .formSet.full { width: 100%;}
 .formSet.wid600 { width: 600px;}
@@ -1242,6 +1259,7 @@ header.on .line  {display:block; }
 .container.member { }
 .container.member section.login  {}
 .bgGray { background: #FAFAFA; padding: 20px 0 40px; border-bottom: 1px solid #ddd;}
+.bgGray.hasTopLine { margin-top: 40px; border-top: 1px solid #ddd; }
 .bgGray .titH3.hasLine { margin-top: 40px;}
 
 footer    {position:relative; z-index:1; background:#333 }
@@ -1318,7 +1336,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
 .table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .table_bt.hasLine .icoLink { display: block; margin-top: -10px;}
-.bgGray + .table_bt      { margin-top:20px; }
+/* .bgGray + .table_bt      { margin-top:20px; } */
 
 .jsGridWrap .table_bt,
 .table_bt.small { min-height: 40px; margin-top: 20px;}
@@ -1643,12 +1661,6 @@ table { width: 100%;}
 .formGrayBox .input.wid220 { width: 220px;}
 .formGrayBox .input.wid240 { width: 240px;}
 
-
-.input.wid100 { width: 100px;}
-.input.wid180 { width: 180px;}
-.input.wid210 { width: 210px;}
-.input.wid240 { width: 240px;}
-.input.wid260 { width: 260px;}
 
 
 .formLgTable .formRow { width:1000px;}
@@ -2555,12 +2567,15 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .doneWrap { margin: 80px auto 0; text-align: center;}
 .doneWrap .ico.icoPerson { display: inline-block; width: 95px; height: 93px; background: url(../images/common/ico_person.png) no-repeat center 0 / contain}
 .doneWrap .ico.icoCall { display: inline-block; width: 120px; height: 110px; background: url(../images/common/ico_call.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoDone { display: inline-block; width: 96px; height: 96px; background: url(../images/common/ico_done.png) no-repeat center 0 / contain}
 .doneWrap .ico + .subTit { margin-top: 40px;}
 .doneWrap .ico + .subTxt { margin-top: 40px;}
+.doneWrap .tit { margin-top: 30px; font-size: 30px; font-weight: 700;}
 .doneWrap .subTit { color: #555; font-size: 18px;}
 .doneWrap .subTxt { color: #555; }
 .doneWrap .table_bt { margin-top: 60px;}
-
+.doneWrap .bgGray { margin-top: 60px; padding-top: 40px; border: none;}
+.doneWrap .bgGray .table_bt { margin-top: 40px;}
 
 /* 스크래핑 */
 .loadImg { display: flex; align-items: center; justify-content:center; gap: 26px;  margin: 20px auto;}
