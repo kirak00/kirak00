@@ -30,8 +30,8 @@
         <li><a href="#none"><strong>대출 비교 진행 결과</strong></a></li>
       </ul>
     </section>
-    <div class="titH3 hasLine fullType"><h3 class="inner">대출 실행 건</h3></div>
     <section class="">
+      <h3 class="titH3 hasLine">대출 실행 건</h3><!-- v1.8 수정 -->
       <fieldset class="tableFilterGroup">
         <span class="count">총 <strong>10</strong>건</span>
       </fieldset>
@@ -43,8 +43,8 @@
         $(function() {
         var clients = [
           { 
-            "Name1": "<span class='goLink'>S_230301_0001</span>", 
-            "Name4": "농협캐피탈<br/>소공동 지점", //v1.6 위치 수정
+            "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
+            // "Name4": "농협캐피탈<br/>소공동 지점", //v1.6 위치 수정
             "Name5": "600,000,000<p class='sub'>(육억원)</p>", //v1.6 위치 수정
             "Name6": "600,000,000<p class='sub'>(육억원)</p>", //v1.6 위치 수정
             "Name2": "2023-08-10", //v1.6 위치 수정
@@ -57,8 +57,8 @@
             "Name12": "<button type='button' class='btnCheck'>평가하기</button>", 
           },
           { 
-            "Name1": "<span class='goLink'>S_230301_0001</span>", 
-            "Name4": "농협캐피탈<br/>소공동 지점",  
+            "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
+            // "Name4": "농협캐피탈<br/>소공동 지점",  
             "Name5": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name6": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name2": "2023-08-10", 
@@ -76,7 +76,7 @@
           noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
           fields: [
             { name: "Name1", type: "text", title : "대출 신청 번호", width: 160},
-            { name: "Name4", type: "text", title : "금융 기관명", width: 120},  //v1.6 수정
+            // { name: "Name4", type: "text", title : "금융 기관명", width: 120},  //v1.6 수정
             { name: "Name5", type: "text", title : "희망 대출 금액(최대)", width: 190}, //v1.6 수정
             { name: "Name6", type: "text", title : "대출 실행 금액", width: 190},  //v1.6 수정
             { name: "Name2", type: "text", title : "대출 비교 신청일", width: 120}, //v1.6 수정
@@ -94,8 +94,8 @@
         </script>
       </div>
     </section>
-    <div class="titH3 hasLine fullType"><h3 class="inner">대출 미실행 건</h3></div>
-    <section class="">
+    <section class="sectionBlock40"><!-- v1.8 수정 -->
+      <h3 class="titH3 hasLine">대출 미실행 건</h3><!-- v1.8 수정 -->
       <fieldset class="tableFilterGroup">
         <span class="count">총 <strong>10</strong>건</span>
       </fieldset>
@@ -107,7 +107,7 @@
         $(function() {
         var clients = [
           { 
-            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
             "Name2": "2023-08-10", 
             "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
@@ -117,7 +117,7 @@
             "Name8": "1건", 
           },
           { 
-            "Name1": "<span class='goLink'>S_230301_0001</span>", 
+            "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
             "Name2": "2023-08-10", 
             "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
@@ -131,16 +131,61 @@
           data: clients,
           noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
           fields: [
-            { name: "Name1", type: "text", title : "대출 신청 번호", width: 160},
+            { name: "Name1", type: "text", title : "대출 신청 번호", width: 180},
             { name: "Name2", type: "text", title : "대출 비교 신청일", width: 155}, //v1.6 워딩 수정 
             { name: "Name3", type: "text", title : "희망 대출 금액(최대)", width: 190}, //v1.6 워딩 수정 
-            { name: "Name4", type: "text", title : "평균 제안 금액", width: 190},
-            { name: "Name5", type: "text", title : "신청 자금 용도", width: 170},
-            { name: "Name6", type: "text", title : "담보 제공 유무", width: 170},
-            { name: "Name7", type: "text", title : "받은 제안서 수", width: 170}, //v1.6 워딩 수정 
-            { name: "Name8", type: "text", title : "제안서 채택 수", width: 170},
+            { name: "Name4", type: "text", title : "평균 제안 금액", width: 170},
+            { name: "Name5", type: "text", title : "신청 자금 용도", width: 160},
+            { name: "Name6", type: "text", title : "담보 제공 유무", width: 160},
+            { name: "Name7", type: "text", title : "받은 제안서 수", width: 160}, //v1.6 워딩 수정 
+            { name: "Name8", type: "text", title : "제안서 채택 수", width: 160},
           ],
           pagerContainer: "#externalPager2",
+          });
+        });
+
+        </script>
+      </div>
+    </section>
+
+    <!-- v1.8 대출 취소 건 추가 -->
+    <section class="sectionBlock40">
+      <h3 class="titH3 hasLine">대출 취소 건</h3>
+      <fieldset class="tableFilterGroup">
+        <span class="count">총 <strong>10</strong>건</span>
+      </fieldset>
+      <div class="jsGridWrap">
+        <div id="jsGrid3" class="bbs" caption="제안서 비교신청 목록"></div>
+        <div id="externalPager3" class="external-pager"></div>
+        <script>
+        /* jsgrid sample */
+        $(function() {
+        var clients = [
+          { 
+            "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
+            "Name2": "2023-08-10", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "시설자금", 
+            "Name5": "유", 
+            "Name6": "15건", 
+            "Name7": "1건", 
+            "Name8": "2023-11-14", 
+          },
+        ];
+        $("#jsGrid3").jsGrid({
+          data: clients,
+          noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+          fields: [
+            { name: "Name1", type: "text", title : "대출 신청 번호", width: 180},
+            { name: "Name2", type: "text", title : "대출 비교 신청일", width: 155}, 
+            { name: "Name3", type: "text", title : "희망 대출 금액(최대)", width: 190}, 
+            { name: "Name4", type: "text", title : "신청 자금 용도", width: 170},
+            { name: "Name5", type: "text", title : "담보 제공 유무", width: 160},
+            { name: "Name6", type: "text", title : "받은 제안서 수", width: 160},
+            { name: "Name7", type: "text", title : "제안서 채택 수", width: 160}, 
+            { name: "Name8", type: "text", title : "대출 신청 취소일", width: 160},
+          ],
+          pagerContainer: "#externalPager3",
           });
         });
 

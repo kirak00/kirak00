@@ -31,26 +31,53 @@
       </ul>
     </section>
     <section>
+      <!-- v1.8 수정 -->
       <fieldset>
         <legend>게시물 검색</legend>
-        <!-- v1.6 수정 -->
-        <div class="bbsSearch">
-          <div class="rangeControl">
-            <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-            <span class="uit">~</span>
-            <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <div class="formRow">
+                <select id="selectLabelState" class="noLabel">
+                  <option>지원 사업 분류</option>
+                  <option>지원 사업 분류</option>
+                </select>
+                <select id="selectLabelState" class="noLabel">
+                  <option>지원 사업 공고 지역</option>
+                  <option>지원 사업 공고 지역</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="searchBtns fr">
-            <button type="button" class="btnSuccess">검색</button>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <div class="formRow">
+                <select id="selectLabelState" class="noLabel">
+                  <option>공고 시작일 기준</option>
+                  <option>공고 시작일 기준</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem">
+              <div class="rangeControl">
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- //v1.6 수정 -->
       </fieldset>
+      <!-- //v1.8 수정 -->
 
-      <fieldset class="tableFilterGroup">
+
+      <fieldset class="tableFilterGroup mt40">
         <span class="count">총 <strong>15</strong>건</span>
         <div class="formRow" role="group">
-          <select title="보기갯수 선택">
+          <select title="보기갯수 선택" class="wid200">
             <option>10개씩 보기</option>
             <option>본부2</option>
           </select>
@@ -65,41 +92,86 @@
           </caption>
           <colgroup>
             <col width=""/>
-            <col width="200"/>
-            <col width="150"/><!-- v1.6 수정 -->
-            <!-- <col width="200"/> --><!-- v1.6 삭제 -->
-            <col width="150"/><!-- v1.6 수정 -->
+            <col width="220"/>
+            <col width="220"/>
+            <col width="220"/>
+            <col width="150"/>
+            <col width="160"/>
           </colgroup>
           <thead>
             <tr>
               <th scope="col">공고 제목</th>
               <th scope="col">기관명</th>
-              <th scope="col">공고 시작일</th><!-- v1.6 워딩 수정 -->
-              <!-- <th scope="col">첨부</th> --><!-- v1.6 삭제 -->
-              <th scope="col">공고 마감일</th><!-- v1.6 워딩 수정 -->
+              <th scope="col">지원 사업 분류</th>
+              <th scope="col">지원 사업 지역</th>
+              <th scope="col">공고 시작일</th>
+              <th scope="col">공고 마감일</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
               <td>중소벤처기업부</td>
-              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
-              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
-              <td>2023-08-01</td>
+              <td>금융</td>
+              <td>서울</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
             </tr>
             <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
               <td>중소벤처기업부</td>
-              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
-              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
-              <td>2023-08-01</td>
+              <td>기술</td>
+              <td>대구</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
             </tr>
             <tr>
-              <td class="tit"><a href="#">가입 후 첫 대출 완료 시 수수로 0.2% 인하 이벤트!</a></td>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
               <td>중소벤처기업부</td>
-              <td>2023-08-01</td><!-- v1.6 워딩 수정 -->
-              <!-- <td><button type="button" class="ico_down">다운로드</button></td> --><!-- v1.6 삭제 -->
-              <td>2023-08-01</td>
+              <td>인력</td>
+              <td>제주</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
+              <td>중소벤처기업부</td>
+              <td>수출</td>
+              <td>부산</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
+              <td>중소벤처기업부</td>
+              <td>내수</td>
+              <td>경기</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
+              <td>중소벤처기업부</td>
+              <td>창업</td>
+              <td>광주</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
+              <td>중소벤처기업부</td>
+              <td>경영</td>
+              <td>부산</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="tit">제 11회 재도전 사례 공모전 참가 모집공고</a></td>
+              <td>중소벤처기업부</td>
+              <td>기타</td>
+              <td>대전</td>
+              <td>2023-07-24</td>
+              <td>2023-07-24</td>
             </tr>
           </tbody>
         </table>

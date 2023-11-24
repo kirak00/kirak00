@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+  
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">알럿</h3>
+      <!-- 기본형 -->
+      <button type="button" class="btnSuccess" onclick='sample_alert_options(this)'>오류 메시지 알럿</button>
+      <script>
+        function sample_alert_options(obj){
+          layer_alert(
+            // "비밀번호 <strong>5회 오류</strong>로 로그인이 제한됩니다.<br/>‘비밀번호 재설정’을 진행해주세요.", 
+            "[오류메시지]",
+            obj, 
+            {
+              confirm : {
+                txt : "확인",
+                callback : function(){
+                }
+              },
+              closebtn : {
+                show: true, // default :  false
+                callback : function(){
+                  // alert("닫기")
+                }
+              }
+            }
+          )
+        }
+      </script>
+      <button type="button" class="btnSuccess" onclick='sample_alert_2(this)'>탈퇴 완료</button>
+      <script>
+        function sample_alert_2(obj){
+          layer_alert(
+            {
+              tit:"회원탈퇴가 완료되었습니다.", 
+              ment:"그동안 Loan&Biz를 이용해 주셔서 감사합니다.<br/>귀사의 대출관련정보는 000법에 의거하여<br/>00년간 보관됩니다."
+            }, 
+            obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+            {
+              confirm:{
+                txt:"확인",  // 버튼 문구 변경
+                callback:function(){   // 버튼 callback func
+                  alert(3)
+                }
+              },
+              // cancel:{
+              //   callback:function(){   // 버튼 callback func
+              //     alert('취소')
+              //   }
+              // },
+              closebtn : {
+                show: true, // default :  false
+                callback : function(){
+                  alert("닫기")
+                }
+              }
+            })
+        }
+      </script>
+    </section>
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">버튼 2개</h3>
+      <button type="button" class="btnSuccess" onclick='sample_confirm_options(this)'>탈퇴 컨펌</button>
+      <button type="button" class="btnSuccess" onclick='layer_confirm({tit:"진행중인 대출 비교 건이 있습니다.", ment:"탈퇴 시 진행 중인 대출 비교 건이 자동 종료됩니다.<br/>계속 진행하시겠습니까?"}, this , {confirm:{txt:"네", callback:function(){alert(3)}},cancel:{txt: "아니오"} })'>진행중인 대출 비교건 있음</button>
+      <script>
+        function sample_confirm_options(obj){
+          layer_confirm(
+            "진행중인 대출 비교 건이 있습니다.", 
+            obj, 
+            {
+              confirm : {
+                txt : "회원탈퇴",
+                callback : function(){
+                  alert("확인")
+                }
+              },
+              cancel : {
+                txt : "취소",
+                callback : function(){
+                  alert("취소")
+                }
+              },
+              closebtn : {
+                show: true, // default : true
+                callback : function(){
+                  alert("닫기")
+                }
+              }
+            }
+          )
+        }
+      </script>
+    </section>
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">팝업</h3>
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">서비스 알림 수신 담당자 추가</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="SMS_layerOpen" >휴대폰 인증</button>
+      <button type="button" class="btnSuccess open_layer"  aria-controls="sampleLayer2">탈퇴사유</button>
+    </section>    
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+  
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <!-- v1.8 수정 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>서비스 알림 수신 담당자 추가</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <section>
+          <h4 class="titH textRegular">서비스 알림을 받으실 이메일을 입력해주세요.</h4>
+          <div class="formList">
+            <label class="label wid80" for="formLabel1">이메일</label>
+            <div class="formRow">
+              <input class="input wid120" type="text" id="formLabel1" title="이메일 아이디" placeholder="hong" value="hong" maxlength="50">
+              <span class="unit mail">@</span>
+              <input class="input" title="도메인주소" type="text" placeholder="gmail.com" value="">
+              <select title="도메인주소 선택" class="wid160" >
+                <option>gmail.com</option>
+                <option>직접 입력</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="sectionBlock40">
+          <h4 class="titH textRegular">알림톡을 통한 서비스 알림 수신을 위해 본인 확인 절차가 필요합니다.</h4>
+          <div class="formList">
+            <label class="label wid80" for="formLabel2">성명</label>
+            <div class="formRow">
+              <input type="text" id="formLabel2" class="input" value="김둘리" />
+            </div>
+          </div>
+          <div class="formList">
+            <label class="label wid80" id="formLabel3">휴대전화</label>
+            <div class="formRow textCenter" role="group" aria-labelledby="formLabel3">
+              <input class="input" type="text" title="법인 담당자 전화번호(1/3)" placeholder="" value="010" >
+              <span class="unit">-</span>
+              <input class="input" type="text" title="법인 담당자 전화번호(2/3)" placeholder="" value="1234" >
+              <span class="unit">-</span>
+              <input class="input" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" >
+              <button type="button" class="btnBlack">본인 확인</button>
+            </div>
+          </div>
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_1"><span></span>개인 정보 수집 이용 동의 <strong class="blue">(필수)</strong></label>
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_2" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_2"><span></span>고유식별정보처리 동의 <strong class="blue">(필수)</strong></label>
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
+        </section>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess">확인</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="SMS_layerOpen" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500"> <!-- v1.8 wid500 -->
+      <div class="layerHead">
+        <h3>휴대폰 인증</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="formRow">
+          <input type="text" class="input" placeholder="이름" value="홍길동" title="이름" readonly>
+        </div>
+        <div class="formRow">
+          <input type="text" class="input" placeholder="주민번호 13자리" title="주민번호 13자리(1/2)">
+          <span class="unit">-</span>
+          <input type="password" class="input" placeholder="******" title="주민번호 13자리(1/2)">
+        </div>
+        <div class="formRow full mt24"><!-- v1.8 mt24 -->
+          <select name="" title="통신사">
+            <option value="">SKT</option>
+          </select>
+        </div>
+        <div class="formRow textCenter"><!-- v1.8 textCenter -->
+          <input type="text" class="input" value="010" title="휴대폰 번호 (1/3)" readonly>
+          <span class="unit">-</span><!-- v1.8 추가 -->
+          <input type="text" class="input" title="휴대폰 번호(2/3)" readonly>
+          <span class="unit">-</span><!-- v1.8 추가 -->
+          <input type="text" class="input" title="휴대폰 번호(3/3)" readonly>
+          <button type="button" class="btnBlack wid110">인증</button> <!-- v1.8 btnBlack wid110 -->
+        </div>
+        <div class="formRow">
+          <span class="inputTimer">
+            <input type="text" class="input timer" placeholder="인증번호 입력" title="인증번호 입력">
+            <span class="unit">03:00</span>
+          </span>
+          <button type="button" class="btnSuccess wid110" onclick='layer_alert("본인 확인이 완료되었습니다.", this, {confirm:{txt:"로그인", callback:function(){alert(3)}}})''>확인</button> <!-- v1.8 wid110 -->
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap modal typeAlert" id="sampleLayer2" role="dialog" aria-modal="true" >
+    <div class="layerBody wid400" tabindex="0">
+      <div class="layerHead">
+        <button type="button" class="layerClose" popup-close="sampleLayer2" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="tit">탈퇴 사유를 말해주세요</div>
+        <div class="formVertical"><!-- v1.4 .mt20 삭제 -->
+          <!-- v1.4 .radio -> .checkbox -->
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_1" name="checkboxLabel1" value="" checked/>
+            <label for="checkboxLabel1_1"><span></span>대출이 필요 없어졌어요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_2" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_2"><span></span>제안서 받은 금융 기관 없어요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_3" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_3"><span></span>사업자등록번호가 변경 됐어요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_4" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_4"><span></span>Loan&Biz 플랫폼 사용이 불편해요.</label>
+          </span>
+          <div class="formSet formVertical">
+            <span class="checkbox"> 
+              <input type="checkbox" id="checkboxLabel1_5" name="checkboxLabel1" value="" />
+              <label for="checkboxLabel1_5"><span></span>기타</label>
+            </span>
+            <textarea id="textareaVal" title="기타 사유입력" class="textarea h64" placeholder=""></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="layerFoot fullType"><!-- v1.4 .mt40 삭제 -->
+        <button type="button" class="btnSuccess xl" onclick="layer_close('sampleLayer2')"  aria-label="레이어 닫기">확인</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+</body>
+</html>

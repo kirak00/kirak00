@@ -23,12 +23,13 @@
     <div class="container" id="skip_content"  aria-label="콘텐츠">
       <section>
         <!-- 기본형 -->
-        <button type="button" class="btnSuccess" onclick='sample_alert_options(this)'>비밀번호 5회 오류</button>
+        <button type="button" class="btnSuccess" onclick='sample_alert_options(this)'>오류 메시지</button>
       </section>
       <script>
         function sample_alert_options(obj){
           layer_alert(
-            "비밀번호 <strong>5회 오류</strong>로 로그인이 제한됩니다.<br/>‘비밀번호 재설정’을 진행해주세요.", 
+            // "비밀번호 <strong>5회 오류</strong>로 로그인이 제한됩니다.<br/>‘비밀번호 재설정’을 진행해주세요.", 
+            "[오류메시지]",
             obj, 
             {
               confirm : {

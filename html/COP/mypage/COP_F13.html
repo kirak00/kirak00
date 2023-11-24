@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_COP.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">회원 탈퇴</h2>
+      <ul class="breadcrumb">
+         <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+         <li><a href="#none"><span>마이페이지</span></a></li>
+         <li><a href="#none"><strong>회원 탈퇴</strong></a></li>
+      </ul>
+    </section>
+    <section class="">
+      <div class="notiBox"><span class="srOnly">알림</span><p class="notiTxt textCenter">탈퇴를 고민하시게 되어 너무 아쉬워요. 탈퇴와 관련한 유의 사항을 안내해 드릴게요.</p></div><!-- v1.8 워딩 수정 -->
+      <div class="agreeLineBox">
+        <ul class="guideList num">
+          <li class="list">가입 시 제공하신 데이터는 &nbsp;<span class="textBold blue">영구적으로 삭제</span>되어 다시는 복구 할 수 없어요.</li>
+          <li class="list">
+            대출 비교 신청을 통해 금융 기관에게 제출된 정보는 &nbsp;<span class="textBold blue">전자금융거래법에 의해 5년간 보존 후 영구적으로 삭제</span>돼요.<br/>
+            <p>(고객님의 안전한 금융 거래를 위해 법령으로 정해져 있는 부분이니 양해 부탁드려요)</p>
+          </li>
+          <li class="list">현재 진행중인 대출 비교 신청 건이 있는 경우 해당 신청 건이 &nbsp;<span class="textBold blue">자동 종료</span>되며 심사 또는 제안서를 제출한 금융 회원에게 해당 사실을 통보 해요.</li>
+        </ul>
+        <div class="agreeCheck">
+          <span class="checkbox">
+            <input type="checkbox" id="chkAgreeBox" name="chkAgreeBox" checked/>
+            <label for="chkAgreeBox"><span></span>안내사항을 확인하였으며 동의 합니다</label>
+          </span>
+        </div>
+      </div>
+    </section>
+    <div class="bgGray hasTopLine">
+      <section class="sectionBlock20">
+        <h4 class="pageTxt textBold">탈퇴를 하시려는 사유를 말씀해 주시면 더 나은 서비스가 되도록 노력할게요.<span class="sub">(복수 선택 가능)</span></h4>
+        <div class="formVertical">
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_1" name="checkboxLabel1" value="" checked/>
+            <label for="checkboxLabel1_1"><span></span>대출이 현재 필요하지 않아요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_2" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_2"><span></span>제안서를 제출한 금융 기관이 없어요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_3" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_3"><span></span>제안서 대출 조건과 실제 대출 조건이 달라요.</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="checkboxLabel1_4" name="checkboxLabel1" value="" />
+            <label for="checkboxLabel1_4"><span></span>Loan&Biz 사용이 불편해요.</label>
+          </span>
+          <div class="formSet formVertical">
+            <span class="checkbox"> 
+              <input type="checkbox" id="checkboxLabel1_5" name="checkboxLabel1" value="" />
+              <label for="checkboxLabel1_5"><span></span>기타</label>
+            </span>
+            <textarea id="textareaVal" title="기타 사유입력" class="textarea h120" placeholder="최대 100자 이내로 입력해 주세요, 비속어 및 금칙어는 사용하실 수 없어요."></textarea>
+          </div>
+        </div>
+      </section>
+      <section class="sectionBlock40">
+        <h4 class="pageTxt textBold">안전한 회원 탈퇴를 위해 사용중인 비밀번호를 입력해 주세요.</h4>
+        <div class="formRow hasError">
+          <input type="password" class="input wid600" title="비밀번호 입력" value="***********" />
+        </div>
+        <p class="errorTxt">다시 입력해주세요.</p>
+      </section>
+    </div>
+    <div class="table_bt"> 
+      <div class="btn_c">
+        <button type="button" class="btnSuccess">탈퇴 하기</button>
+        <button type="button" class="btnGray">취소</button>
+      </div>
+     
+    </div>
+    
+
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
