@@ -68,10 +68,10 @@
             </ul>
           </li>
           <li class="depth_1" ><a href="#none"><span class="ico_gnb_office">중앙회(본점) 관리</span></a>
-            <ul>
-              <li class="depth_2"><a href="#none">금융사 대출 목록</a></li>
+            <ul><!-- 1.9 수정-->
+              <li class="depth_2"><a href="#none">금융 회사 대출 목록</a></li>
               <li class="depth_2"><a href="#none">대출 실적 관리</a></li>
-              <li class="depth_2"><a href="#none">소속 금융사 계정 관리</a></li>
+              <li class="depth_2"><a href="#none">소속 금융 회사 계정 관리</a></li>
             </ul>
           </li>
         </ul>
@@ -586,7 +586,7 @@
 
           <ul class="dashboardWrap">
             <li class="chart_pie">
-              <strong class="tit">전체 제안 대출 비율</strong>
+              <strong class="tit">실행 대출 자금 용도 비율</strong>
               <div class="pie" id="pieChart_1"></div>
               <script>
                 var chartDom = document.getElementById('pieChart_1');
@@ -639,7 +639,7 @@
               </ul>
             </li>
             <li class="chart_pie">
-              <strong class="tit">최다 실행 업종</strong>
+              <strong class="tit">실행 대출 업종 비율</strong>
               <div class="pie" id="pieChart_2"></div>
               <script>
                 var myChart_pie2 = echarts.init(document.getElementById('pieChart_2'));
@@ -743,7 +743,7 @@
               </ul>
             </li>
             <li class="chart_pie">
-              <strong class="tit">제안한 담보/신용 비율</strong>
+              <strong class="tit">실행 대출 담보/신용 비율</strong>
               <div class="pie" id="pieChart_4"></div>
               <script>
                 var myChart_pie4 = echarts.init(document.getElementById('pieChart_4'));

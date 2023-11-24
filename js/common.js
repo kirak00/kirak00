@@ -440,7 +440,7 @@ function layer_alert(msg , focusObj , btnObj ){
     'data-popup' : 'alert',
     role : 'dialog',
   });
-  var closeBtn = btnObj.closebtn?.show;
+  var closeBtn = btnObj?.closebtn?.show;
   
   var confirmTxt = '확인';
   if(btnObj?.confirm?.txt) confirmTxt = btnObj.confirm.txt
@@ -505,7 +505,7 @@ function layer_confirm(msg,focusObj,btnObj){
   if(btnObj?.cancel?.txt) cancelTxt = btnObj.cancel.txt;
   if(btnObj?.confirm?.class) confirmClass = btnObj.confirm.class;
   if(btnObj?.cancel?.class) cancelClass = btnObj.cancel.class;
-  var closeBtn = btnObj.closebtn?.show;
+  var closeBtn = btnObj?.closebtn?.show;
   // let alertHTML = ''
   // alertHTML += ''
 

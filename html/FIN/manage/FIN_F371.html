@@ -31,11 +31,11 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">금융사 대출 목록</h2>
+      <h2 class="pageTit">금융 회사 대출 목록</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>중앙회 관리</span></a></li>
-          <li><a href="#none"><strong>금융사 대출 목록</strong></a></li>
+          <li><a href="#none"><strong>금융 회사 대출 목록</strong></a></li>
       </ul>
     </section>
 
@@ -140,7 +140,7 @@
           </div>
         </fieldset>
         <div class="jsGridWrap">
-          <div id="jsGrid" class="bbs" caption="금융사 대출 목록">
+          <div id="jsGrid" class="bbs" caption="금융 회사 대출 목록">
           </div>
           <div class="table_bt">
             <div id="externalPager" class="external-pager"></div>
@@ -189,17 +189,18 @@
 
   $("#jsGrid").jsGrid({
     data: clients,
+    noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>해당 조건의 목록이 존재하지 않습니다.</p></div>",
 
     fields: [
       { name: "Name1",  type: "text", title : "조직명", width: 190},
       { name: "Name2", type: "text", title : "대출 신청 번호", width: 190 },
+      { name: "Name8", type: "text", title : "기업명", width: 190 },
       { name: "Name3", type: "text", title : "대출 발생일", width: 150},
       { name: "Name4", type: "text", title : "실행 금액", width: 160}, // 1.6
       { name: "Name5", type: "text", title : "담보 유무", width: 100 },
       { name: "Name6", type: "text", title : "금리", width: 100},
       { name: "Name7", type: "text", title : "정산 여부", width: 100 },
-      { name: "Name8", type: "text", title : "기업명", width: 190 },
-      { name: "Name9", type: "text", title : "제안서 마감일", width: 140 },
+      // { name: "Name9", type: "text", title : "제안서 마감일", width: 140 },
     ],
     pagerContainer: "#externalPager",
 

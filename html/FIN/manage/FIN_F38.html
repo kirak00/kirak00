@@ -61,6 +61,7 @@
                 </div>
               </div>
               <div class="searchBtns">
+                <button type="button" class="btnReset">초기화</button><!-- 1.9 수정-->
                 <button type="button" class="btnSuccess">조회</button>
               </div>
             </div>
@@ -128,7 +129,7 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
-                noDataContent: "<div class='noTableData'><i class='icoNomal'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
+                noDataContent: "<div class='noTableData'><i class='icoNomal'></i><p class='txt'>소속 금융 회사를 선택해 주세요.</p></div>",
 
                 fields: [
                   { name: "Name1",  type: "text", title : "지역본부", width: 280},

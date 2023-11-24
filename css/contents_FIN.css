@@ -435,4 +435,25 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .alarmSettingInfo .ment p       {margin-top:20px; }
 
 
+.layerCont_cancelHistory      {}
+.layerCont_cancelHistory strong      {}
+.layerCont_cancelHistory strong.point   {color:#069B66; }
+
+.layerCont_viewConfirm strong.tit   {display:block; margin-bottom:16px; font-size:20px;  }
+.manager_filler     {}
+.manager_filler select     {height:40px; }
+
+.dashboardTab     {margin-top:-20px; margin-bottom:20px;  }
+.table_top h3.tit45 {float:left; }
+
+
+
+.proposalDetail       {}
+.proposalDetail .ppsTabCont       {padding:30px 40px 40px;}
+.proposalDetail .ppsTit      {display:flex; width:100%; box-sizing: content-box; margin:0 -40px; padding:0 40px; height:82px; background:#F6FBF7; border-radius: 16px; align-items: center; color:#069B66; font-size: 18px; }
+.proposalDetail .ppsTit span.label      {min-width:160px;  }
+.proposalDetail .ppsTit .productTit     {flex:1; display:flex; justify-content: space-between; font-weight: 400; }
+.proposalDetail .ppsTit .productTit em     { }
+.proposalDetail .ppsTit .productTit span   { }
+
 /* 진희 */

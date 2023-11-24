@@ -35,7 +35,23 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
+            <div class="searchControlItem "><!-- 1.9 수정-->
+              <label for="labelLoan" class="label">조직 </label>
+              <div class="formRow formGroup">
+                <select id="selectLabelState">
+                  <option>지역본부</option>
+                </select>
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>금고본점</option>
+                </select>
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>지점</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchControlItem ">
               <label for="selectLabelState" class="label">청구 상태</label>
               <div class="formRow">
                 <select id="selectLabelState">
@@ -44,20 +60,20 @@
                 </select>
               </div>
             </div>
-            <div class="searchControlItem expand2">
+            <div class="searchControlItem expand2"> 
               <label for="labelLoan" class="label">대출 신청 번호 </label>
               <div class="formRow">
                 <input type="text" class="input" id="labelLoan" placeholder="대출 신청 번호를 입력해 주세요">
               </div>
             </div>
-            <div class="searchControlItem ">
-              <label for="labelLoan" class="label">업체명 </label>
-              <div class="formRow">
-                <input type="text" class="input" id="labelLoan" placeholder="업체명을 입력해 주세요">
-              </div>
-            </div>
           </div>
           <div class="searchControlGroup">
+            <div class="searchControlItem ">
+              <label for="labelLoan" class="label">기업명 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan" placeholder="기업명을 입력해 주세요">
+              </div>
+            </div>
             <div class="searchControlItem expand">
               <label for="selectLabelState" class="label">세금계산서발행 여부</label>
               <div class="formRow">
@@ -117,7 +133,11 @@
 $(function() {
 
 var clients = [
-  { "Name1": "청구중",
+  { 
+    "Name01": "서울지역본부",
+    "Name02": "마포본점",
+    "Name03": "가좌지점",
+    "Name1": "청구중",
     "Name2": "S_230809_0010", 
     "Name3": "(주)길동건설", 
     "Name4": "1,350,000<p class='sub'>(일백삼십오만원)</p>", 
@@ -134,13 +154,16 @@ $("#jsGrid").jsGrid({
   data: clients,
   noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
   fields: [
-    { name: "Name1",  type: "text", title : "청구 상태", width: 120 },
+    { name: "Name01",type: "text", title : "지역본부", width: 100 },
+    { name: "Name02",type: "text", title : "금고본점", width: 100 },
+    { name: "Name03",type: "text", title : "지점", width: 100 },
+    { name: "Name1", type: "text", title : "청구 상태", width: 100 },
     { name: "Name2", type: "text", title : "대출 신청 번호", width: 180},
-    { name: "Name3", type: "text", title : "기업명", width: 130},
-    { name: "Name4", type: "text", title : "청구 금액", width: 150},
-    { name: "Name5", type: "text", title : "청구일", width: 120},
-    { name: "Name6", type: "text", title : "이의신청 기일", width: 120},
-    { name: "Name7", type: "text", title : "세금계산서발행 여부", width: 140},
+    { name: "Name3", type: "text", title : "기업명", width: 110},
+    { name: "Name4", type: "text", title : "청구 금액", width: 120},
+    { name: "Name5", type: "text", title : "청구일", width: 100},
+    { name: "Name6", type: "text", title : "이의신청 기일", width: 100},
+    { name: "Name7", type: "text", title : "세금계산서 <br>발행 여부", width: 120},
     { name: "Name8", type: "text", title : "정산 여부", width: 100},
     { name: "Name9", type: "button", title : "청구 내역서 보기", width: 140},
   ],

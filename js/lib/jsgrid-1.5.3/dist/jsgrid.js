@@ -686,6 +686,9 @@
         },
 
         _renderCells: function($row, item) {
+            if(item.disabled){
+                $row.addClass("disabled")
+            }
             this._eachField(function(field) {
                 $row.append(this._createCell(item, field));
             });
@@ -700,7 +703,7 @@
             if($.isFunction(field.cellRenderer)) {
                 $result = this.renderTemplate(field.cellRenderer, field, args);
             } else {
-                $result = $("<td>").append(this.renderTemplate(field.itemTemplate || fieldValue, field, args));
+                $result = $("<td>").append(this.renderTemplate(field.itemTemplate || fieldValue, field, args)).attr({title:fieldValue.replace(/<[^>]*>?/g, '')});
             }
 
             return this._prepareCell($result, field);

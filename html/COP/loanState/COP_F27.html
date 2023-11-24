@@ -284,34 +284,49 @@
                       <th scope="row">인지세</th> 
                       <td>
                         인지세법에 따라 대출 신규약정시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융기관과 고객이 각각 50%씩 부담
-                        <div class="table_wrap mt10">
+                        
+                        <div class="table_wrap "><!-- 1.9 수정  -->
                           <table class="bbs_list gray">
-                            <caption>인지세 정보</caption>
+                            <caption>인지세</caption>
                             <colgroup>
                               <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
+                              <col width="20%" />
+                              <col width="20%" />
+                              <col width="20%" />
+                              <col width="20%" />
                             </colgroup>
                             <thead>
                               <tr>
                                 <th scope="col">대출 금액</th>
                                 <th scope="col">5천만원 이하</th>
-                                <th scope="col">5천만원 초과~ 1억원 이하</th>
-                                <th scope="col">1억원 초과 ~ 10억원 이하</th>
+                                <th scope="col">5천만원 초과~ <br>1억원 이하</th>
+                                <th scope="col">1억원 초과~ <br>10억원 이하</th>
                                 <th scope="col">10억원 초과</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <th scope="row">인지세액</th>
+                                <th>인지세액</th>
                                 <td>비과세</td>
-                                <td>7만원(각각 3만 5천원)</td>
-                                <td>15만원(각각 7만 5천원)</td>
-                                <td>35만원(각각 17만 5천원)</td>
+                                <td>7만원</td>
+                                <td>15만원</td>
+                                <td>35만원</td>
                               </tr>
-                            </tbody>
+                              <tr>
+                                <th>고객 부담</th>
+                                <td>-</td>
+                                <td>3만 5천원</td>
+                                <td>7만 5천원</td>
+                                <td>17만 5천원</td>
+                              </tr>
+                              <tr>
+                                <th>금융 회사 부담</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>7만 5천원</td>
+                                <td>17만 5천원</td>
+                              </tr>
+                            <tbody>
                           </table>
                         </div>
                       </td>

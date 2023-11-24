@@ -24,7 +24,7 @@
 
       <section class="printTit">
         <div class="logo"></div>
-        <p>본 화면은 Loan&Biz에서 관리 및 보호중인 중요 개인정보가 포함된 화면이므로 대출 정보 조회 용도 외 사용을 금합니다.</p>
+        <p>본 화면은 중요 기업정보가 포함된 화면이므로 대출 심사 용도 외 사용을 금합니다.</p><!-- 1.9 수정-->
       </section>
       <section class="pageTop">
         <h2 class="pageTit">대출 신청 내용 상세</h2>
@@ -44,14 +44,15 @@
           
           <div class="topBox">
             <div class="status">심사전</div>
-            <div class="printTit">(주)길동건설</div>
+            <div class="printTit"> (주)길동건설</div>
             <p class="txt_idx">대출 신청 번호 S_230809_0001</p>
           </div>
           <div class="detailCont">
             <div class="titBox">
               <div class="tit">
                 <input type="checkbox" class="star" id="testCheckBoxB" name="testCheckBox" title="관심대출 여부" checked>
-                (주)길동건설
+                <span class="name">기업명</span>
+                ****(주)길동건설
               </div>
 
               <div class="txt">
@@ -218,7 +219,7 @@
                         <td colspan="3">서울 마포구 양화로 10길 50, 마이빌딩 5층</td>
                       </tr>
                       <tr>
-                        <th scope="row">본사 사업장의 임대 형태</th> 
+                        <th scope="row">본사 소유 구분</th> 
                         <td colspan="3">월세 (보증금 20,000,000원 / 월세 1,600,000원)</td>
                       </tr>
                       <tr>
@@ -230,24 +231,56 @@
                         <td colspan="3">임대-전세 120,000,000원</td>
                       </tr>
                       <tr>
-                        <th rowspan="2" scope="row">대표자명</th> 
-                        <td>박충일</td>
-                        <th scope="row">주민등록번호</th> 
-                        <td>701204-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
-                      </tr>
-                      <tr>
-                        <td>박충일</td>
-                        <th scope="row">주민등록번호</th> 
-                        <td>701204-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
+                        <th scope="row">대표자 정보</th> <!-- 1.9 수정-->
+                        <td colspan="2">
+                            
+                          <div class="table_wrap">
+                            <table class="bbs_list">
+                              <caption>대표자 정보</caption>
+                              <colgroup>
+                                <col width="30%" />
+                                <col width="30%" />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">대표자명</th>
+                                  <th scope="col">대표자 휴대전화</th>
+                                  <th scope="col">대표자 주민등록번호</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>박충일</td>
+                                  <td>010-1234-45678</td>
+                                  <td>990909-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
+                                </tr>
+                                <tr>
+                                  <td>박충일</td>
+                                  <td>010-1234-45678</td>
+                                  <td>990909-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
+                                </tr>
+                                <tr>
+                                  <td>박충일</td>
+                                  <td>010-1234-45678</td>
+                                  <td>990909-1****** <button type="button" class="btnBlack sm">전체 노출</button></td>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            </table>
+                          </div>
+                        
+                      
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">대표자 유형</th> 
                         <td colspan="3">단독 대표</td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <th scope="row">법인 담당자 전화번호</th> 
                         <td colspan="3">02-3210-1874</td>
-                      </tr>
+                      </tr> -->
                       <tr>
                         <th scope="row">동업계 종사년수</th> 
                         <td colspan="3">19년</td>
@@ -808,9 +841,13 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
+              
+              <div class="companyInfo"><!-- 1.9 수정-->
+                <h4 class="titH5">주요 판매처</h4>
                 <div class="table_wrap">
                   <table class="bbs_list">
-                    <caption>매출처별 매출 세금계산서 합산표 </caption>
+                    <caption>주요 판매처 </caption>
                     <colgroup>
                       <col />
                       <col width="25%" />
@@ -818,7 +855,7 @@
                     </colgroup>
                     <thead >
                       <tr>
-                        <th scope="col">업체명</th> 
+                        <th scope="col">기업명</th> 
                         <th scope="col">사업자등록번호</th>
                         <th scope="col">거래 금액</th>
                         <th scope="col">매출 비중</th>
@@ -884,9 +921,13 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
+              
+              <div class="companyInfo"><!-- 1.9 수정-->
+                <h4 class="titH5">주요 판매처</h4>
                 <div class="table_wrap">
                   <table class="bbs_list">
-                    <caption>매출처별 매입 세금계산서 합산표 </caption>
+                    <caption>주요 판매처 </caption>
                     <colgroup>
                       <col />
                       <col width="25%" />
@@ -894,7 +935,7 @@
                     </colgroup>
                     <thead >
                       <tr>
-                        <th scope="col">업체명</th> 
+                        <th scope="col">기업명</th> 
                         <th scope="col">사업자등록번호</th>
                         <th scope="col">거래 금액</th>
                         <th scope="col">매출 비중</th>
@@ -942,13 +983,13 @@
               
 
               
-              <div class="companytabContentPrint">
-                <h4 class="hide">법인이 추가로 등록한 서류</h4>
+              <div class="companytabContentPrint"><!-- 1.9 수정-->
+                <h4 class="hide">기업고객 추가 서류</h4>
                 <div class="companyInfo">
-                  <h4 class="titH5">법인 회원이 직접 추가한 서류</h4>
+                  <h4 class="titH5">기업고객 추가 서류</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>법인 회원이 직접 추가한 서류</caption>
+                      <caption>기업고객 추가 서류</caption>
                       <colgroup>
                         <col />
                         <col width="25%" />
@@ -978,35 +1019,31 @@
                 </div>
               </div>
               
-              <div class="companytabContentPrint">
-                <h4 class="hide">법인에게 요청한 추가 서류</h4>
+              <div class="companytabContentPrint"><!-- 1.9 수정-->
+                <h4 class="hide">추가 서류 요청 이력</h4>
                 <div class="companyInfo">
-                  <h4 class="titH5">법인 회원에게 추가 요청한 서류</h4>
+                  <h4 class="titH5">추가 서류 요청 이력</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>법인 회원에게 추가 요청한 서류</caption>
+                      <caption>추가 서류 요청 이력</caption>
                       <colgroup>
                         <col />
-                        <col width="25%" />
                         <col width="25%" />
                       </colgroup>
                       <thead>
                         <tr>
                           <th scope="col">서류명</th> 
-                          <th scope="col">제출일</th>
-                          <th scope="col">다운로드</th> 
+                          <th scope="col">요청일</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td class="tit">(주)신한은행</td> 
-                          <td>105-88-10201</td>
-                          <td><a href="#" class="download2">다운로드</a></td>
+                          <td>2023-11-11</td>
                         </tr>
                         <tr>
                           <td class="tit">(주)신한은행</td> 
-                          <td>105-88-10201</td>
-                          <td><a href="#" class="download2">다운로드</a></td>
+                          <td>2023-11-11</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1018,8 +1055,51 @@
             
             <div class="table_bt">
               <div class="btn_c">
+                <a href="#;" class="btnSuccess" onclick="viewConfirm_layer(this)" >열람하기</a>
+              </div>
+                            
+              <script>
+                
+                function viewConfirm_layer(obj){
+                    layer_confirm(
+                      `<span class="layerCont_viewConfirm">
+                        <strong class="tit">대출 신청 내용 상세 정보를 <br> 열람하시겠습니까?</strong>
+                        열람 이력 발생 시 일정 기간 동안<br>
+                        대출 실행 여부 확인 및 수수료 정산을 위해<br>
+                        플랫폼에서 <strong>대출 열람 내역이 보존 및 관리</strong>됩니다.
+                      </span>`, 
+                      obj, 
+                      {
+                        confirm : {
+                          txt : "열람하기",
+                          callback : function(){
+                            alert("확인")
+                          }
+                        },
+                        cancel : {
+                          txt : "취소",
+                          callback : function(){
+                            alert("취소")
+                          }
+                        },
+                        closebtn : {
+                          show: true, // default : true
+                          callback : function(){
+                            alert("닫기")
+                          }
+                        }
+                      }
+                    )
+                  }
+                  
+              </script>
+                
+            </div>
+            
+            <div class="table_bt">
+              <div class="btn_c">
                 <a href="#;" class="btnSuccess">심사하기</a>
-                <button class="btnGray2">이번달 심사 가능 횟수 <em class="mainGreen">15</em>/50</button>
+                <button class="btnGray2">금일 심사 가능 횟수 <em class="mainGreen">1</em>/5</button><!-- 1.9 수정-->
               </div>
             </div>
             

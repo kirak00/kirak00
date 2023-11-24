@@ -85,10 +85,9 @@
                     <label for="formLabel2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 직원명</label>
                   </th> 
                   <td>
-                    <div class="formRow wid425">
-                      <input class="input" type="text" name="" id="formLabel2" placeholder="대출 담당자명을 입력해 주세요." />
+                    <div class="formRow "><!-- 1.9 수정-->
+                      <span class="inputTxt">홍길동</span>
                     </div>
-                    <p class="notiTxt">기업 고객과의 연락을 위한 번호를 입력해 주세요.</p>
                   </td>
                 </tr>
                 <tr> 
@@ -103,6 +102,7 @@
                       <span class="unit">-</span>
                       <input class="input" type="text" title="문의 전화 번호(3/3)" placeholder="" value="">
                     </div>
+                    <p class="notiTxt">기업 고객과의 연락을 위한 번호를 입력해 주세요.</p><!-- 1.9 수정-->
                 </tr>
                 <tr> 
                   <th scope="row">
@@ -122,7 +122,7 @@
                   </th> 
                   <td>
                     <div class="formRow">
-                      <textarea class="textarea" id="formLabel5" title="메모내용을 입력해주세요" placeholder="메모 내용을 입력해 주세요.(500자 이내)"></textarea>
+                      <textarea class="textarea" id="formLabel5" title="메모내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
                     </div>
                   </td>
                 </tr>
@@ -172,9 +172,10 @@
             <div class="accordionItem isOpen">
               <h3 class="accordionTitle">
                 <span class="label" for="formLabel_tit_1" >상품명1</span>
-                <select name="" id=" " title="대출 상품 선택" >
+                <!-- <select name="" id=" " title="대출 상품 선택" >
                   <option value="">대출 상품을 선택해 주세요.</option>
-                </select>
+                </select> -->
+                  <input type="text" class="input" id="formLabel_tit_1" placeholder="상품명을 입력해 주세요." >
                 <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id"><span class="accordionIcon"></span></button>
               </h3>
               <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
@@ -200,6 +201,7 @@
                             <button type="button" class="btnSuccess" aria-controls="tabpanel_1" >선택 </button>
                           </div>
                           <div class="formVertical lineBox" id="tabpanel_1" title="시설자금/운영자금 자금용도 선택">
+                            <h5 class="titH5 detail">자금 상세 용도</h5>
                             <span class="checkbox">
                               <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox" />
                               <label for="searchCheckBox_1"><span></span>인건비(급여 등)</label>
@@ -241,11 +243,14 @@
                                 <input type="checkbox" id="searchCheckBox_10" name="searchCheckBox" onchange="$('#searchCheckBox_10_1')[0].disabled = !this.checked" />
                                 <label for="searchCheckBox_10"><span></span>기타</label>
                               </span>
-                              <input type="text" class="input" id="searchCheckBox_10_1" title="기타 내용 입력" disabled>
+                              <input type="text" class="input" id="searchCheckBox_10_1" title="기타 내용 입력" placeholder="기타 상세 용도를 입력해 주세요." disabled>
                             </div>
-                          </div>
-                          <div class="formVertical mt10">
-                            <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="자금 용도 변경 사유를 입력해 주세요.(자금 용도 변경 사유 변경 시 필수/500자 이내)" disabled></textarea>
+                            <div class="detailForm">
+                              <h5 class="titH5">자금 용도 변경 사유</h5>
+                              <div class="formVertical mt10">
+                                <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요.(500자 이내)" disabled></textarea>
+                              </div>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -474,7 +479,60 @@
                         </tr>
                         <tr>
                           <th scope="row">
-                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>유의사항</label>
+                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>인지세</label>
+                          </th> 
+                          <td>
+                            <p>인지세법에 따라 신규 약정시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, <br>각 50%씩 고객과 금융 회사가 부담합니다.</p>
+                                
+                            <div class="table_wrap ">
+                              <table class="bbs_list gray">
+                                <caption>인지세</caption>
+                                <colgroup>
+                                  <col />
+                                  <col width="20%" />
+                                  <col width="20%" />
+                                  <col width="20%" />
+                                  <col width="20%" />
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">대출 금액</th>
+                                    <th scope="col">5천만원 이하</th>
+                                    <th scope="col">5천만원 초과~ <br>1억원 이하</th>
+                                    <th scope="col">1억원 초과~ <br>10억원 이하</th>
+                                    <th scope="col">10억원 초과</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th>인지세액</th>
+                                    <td>비과세</td>
+                                    <td>7만원</td>
+                                    <td>15만원</td>
+                                    <td>35만원</td>
+                                  </tr>
+                                  <tr>
+                                    <th>고객 부담</th>
+                                    <td>-</td>
+                                    <td>3만 5천원</td>
+                                    <td>7만 5천원</td>
+                                    <td>17만 5천원</td>
+                                  </tr>
+                                  <tr>
+                                    <th>금융 회사 부담</th>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>7만 5천원</td>
+                                    <td>17만 5천원</td>
+                                  </tr>
+                                <tbody>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>참고 사항</label>
                           </th> 
                           <td><textarea class="textarea" id="notiLabel5">2023년 08월 자 기준으로 작성되었으며 예고 없이 변동될 수 있습니다.</textarea></td>
                         </tr>

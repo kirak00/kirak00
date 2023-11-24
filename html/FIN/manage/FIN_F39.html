@@ -46,7 +46,14 @@
             <h3>길동중앙회 서교동지점</h3>
             <span class="info">마포지부</span>
           </div>
-          <p class="sub">금융 담당자 <strong>고길동</strong> (02-123-4567)</p>
+          <!-- <p class="sub">금융 담당자 <strong>고길동</strong> (02-123-4567)</p> -->
+          <div class="manager_filler"><!-- 1.9 수정-->
+            <select name="" id="" title="담당자 선택">
+              <option value="">담당자 선택</option>
+              <option value="">고희동(sh000000)</option>
+            </select>
+            <button type='button' class='btnWhiteLine2 mm'>적용</button>
+          </div>
         </div>
         <!-- 검색 -->
         <fieldset>
@@ -102,21 +109,18 @@
             </div>
             <div class="searchControlGroup">
               <div class="searchControlItem">
-                <label for="selectLabelArea" class="label">용도</label>
-                <div class="formRow">
-                  <select id="selectLabelArea">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-              <div class="searchControlItem">
                 <label for="selectLabelArea2" class="label">담보 유무</label>
                 <div class="formRow">
                   <select id="selectLabelArea2">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
+                </div>
+              </div>
+              <div class="searchControlItem"><!-- 1.9 수정-->
+                <label for="selectLabelArea2" class="label">담당자</label>
+                <div class="formRow">
+                  <input type="text" class="input wid240" id="selectLabelState" placeholder="">
                 </div>
               </div>
               <div class="searchBtns">
@@ -153,34 +157,43 @@
 
               var clients = [
                 { 
+                  "Name11": "sh000001",
+                  "Name12": "홍길동",
                   "Name1": "S_203809_0001",
                   "Name2": "(주)길동건설", 
-                  "Name3": "2억 5000만원", 
+                  "Name3": "250,000,000<p class='sub'>(이억오천만원)</p>", 
                   "Name4": "2023-07-22", 
                   "Name5": "24개월", 
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
+                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
                 { 
+                  "Name11": "sh000001",
+                  "Name12": "홍길동",
                   "Name1": "S_203809_0001",
                   "Name2": "(주)길동건설", 
-                  "Name3": "2억 5000만원", 
+                  "Name3": "250,000,000<p class='sub'>(이억오천만원)</p>", 
                   "Name4": "2023-07-22", 
                   "Name5": "24개월", 
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
+                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
                 { 
+                  "Name11": "sh000001",
+                  "Name12": "홍길동",
                   "Name1": "S_203809_0001",
                   "Name2": "(주)길동건설", 
-                  "Name3": "2억 5000만원", 
+                  "Name3": "250,000,000<p class='sub'>(이억오천만원)</p>", 
                   "Name4": "2023-07-22", 
                   "Name5": "24개월", 
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
+                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
               ]; 
               
@@ -188,17 +201,20 @@
 
               $("#jsGrid2").jsGrid({
                 data: clients,
-                noDataContent: "<div class='noTableData'><i class='icoNormal'></i><p class='txt'>소속 금융사를 선택해 주세요.</p></div>",
+                noDataContent: "<div class='noTableData'><i class='icoNormal'></i><p class='txt'>소속 금융 회사를 선택해 주세요.</p></div>",
 
                 fields: [
+                  { name: "Name11",  type: "text", title : "아이디", width: 120},
+                  { name: "Name12",  type: "text", title : "담당자", width: 120},
                   { name: "Name1",  type: "text", title : "대출 신청 번호", width: 150},
-                  { name: "Name2",  type: "text", title : "기업명", width: 170},
-                  { name: "Name3", type: "text", title : "실행 금액", width: 170 },
-                  { name: "Name4", type: "text", title : "대출 실행일", width: 170 },
-                  { name: "Name5", type: "text", title : "대출 기간", width: 110 },
-                  { name: "Name6", type: "text", title : "용도", width: 110 },
+                  { name: "Name2",  type: "text", title : "기업명", width: 150},
+                  { name: "Name3", type: "text", title : "실행 금액", width: 160 },
+                  { name: "Name4", type: "text", title : "대출 실행일", width: 120 },
+                  { name: "Name5", type: "text", title : "대출 기간", width: 100 },
+                  { name: "Name6", type: "text", title : "용도", width: 100 },
                   { name: "Name7", type: "text", title : "담보 유무", width: 100 },
                   { name: "Name8", type: "text", title : "금리", width: 105 },
+                  { name: "Name9", type: "text", title : "제안서 상세보기", width: 150 },
                 ],
                 
                 pagerContainer: "#externalPager2",

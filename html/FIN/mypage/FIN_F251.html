@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,78 +32,87 @@
     <div class="container" id="skip_content"  aria-label="콘텐츠">
  
       <h2 class="hide">콘텐츠 영역</h2>
-      <section>
-        <div class="mainTop">
-
-
-          <fieldset>
-            <legend>검색</legend>
-            
-            <div class="searchControlBox">
-              <div class="searchControlGroup">
-                <div class="dateTab tabScript" role="tablist">
-                  <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
-                  <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
-                </div>
-
-                <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
-                  <select id="selectLabelState">
-                    <option>2023년</option>
-                  </select>
-                
-                  <select id="selectLabelState">
-                    <option>7월</option>
-                  </select> 
-
-                </div>
-
-                <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
-                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                  <span class="uit">~</span>
-                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-                </div>
-                
-                <div class="searchBtns wid190">
-                  <button type="button" class="btnSuccess">조회</button>
-                  <button type="button" class="btnSky ico_print" onclick="printSetting()" title="프린트" >대시보드 출력</button>
-                </div>
-
-              </div>
-              
       
-              <script>
-                function printSetting(){
-                 
-                
-                 $("body").addClass("printSetting");
-                 myChart1.resize()
-                 myChart2.resize();
-                 setTimeout(function(){
-                   print()
-                 },30)
-                 setTimeout(function(){
-                   $("body").removeClass("printSetting");
-                   myChart1.resize()
-                   myChart2.resize();
-                 },50)
-                }
-               
-               </script>  
-                
-            </div>
-          </fieldset>
-    
-
-          
-        </div>
+      <section class="pageTop"><!-- 1.9 수정-->
+        <h2 class="pageTit">대시보드</h2>
+        <ul class="breadcrumb">
+            <li class="home"><span class="hide">홈</span></li>
+            <li><span>마이페이지</span></li>
+            <li><strong>대시보드</strong></li>
+        </ul>
       </section>
+  
+      <section class="">
+      </section>
+  
+      <ul role="tablist" class="tabLine fullType tabScript dashboardTab">
+        <li class="on"><button id="tab_1" type="button" role="tab" aria-selected="true" aria-controls="mainDashboard_1">나의 실적</button></li>
+        <li><button id="tab_2" type="button" role="tab" aria-selected="false" aria-controls="mainDashboard_2">회사 실적</button></li>
+      </ul>
 
       <section class="printTit">
         <div class="logo"></div>
         <p>본 화면은 Loan&Biz에서 관리 및 보호중인 중요 개인정보가 포함된 화면이므로 대출 정보 조회 용도 외 사용을 금합니다.</p>
       </section>
-      <section class="main_dashboard">
+      
+      <section id="mainDashboard_1" role="tabpanel" tabindex="0" aria-hidden="true"  class="main_dashboard ">
+
+        <fieldset>
+          <legend>검색</legend>
           
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="dateTab tabScript" role="tablist">
+                <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
+                <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
+              </div>
+
+              <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+                <select id="selectLabelState">
+                  <option>2023년</option>
+                </select>
+              
+                <select id="selectLabelState">
+                  <option>7월</option>
+                </select> 
+
+              </div>
+
+              <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>
+              
+              <div class="searchBtns wid190">
+                <button type="button" class="btnSuccess">조회</button>
+                <button type="button" class="btnSky ico_print" onclick="printSetting()" title="프린트" >대시보드 출력</button>
+              </div>
+
+            </div>
+            
+    
+            <script>
+              function printSetting(){
+                
+              
+                $("body").addClass("printSetting");
+                myChart1.resize()
+                myChart2.resize();
+                setTimeout(function(){
+                  print()
+                },30)
+                setTimeout(function(){
+                  $("body").removeClass("printSetting");
+                  myChart1.resize()
+                  myChart2.resize();
+                },50)
+              }
+              
+              </script>  
+              
+          </div>
+        </fieldset>
         <ul class="dashboardWrap">
           <li class="box wid50">
             <div class="chart_lineBox size_2">
@@ -513,8 +522,8 @@
               <li> <em style="background:#46B9B2"></em> 변동</li>
             </ul>
           </li>
-          <li class="chart_pie">
-            <strong class="tit">제안한 담보/신용 비율</strong>
+          <li class="chart_pie"><!-- 1.9 수정-->
+            <strong class="tit">실행 대출 담보/신용 비율</strong>
             <div class="pie" id="pieChart_4"></div>
             <script>
               var myChart_pie4 = echarts.init(document.getElementById('pieChart_4'));
@@ -604,10 +613,350 @@
         </ul>
 
 
+      </section>
 
-
+      <!-- 1.9 수정-->
+      <section id="mainDashboard_2" role="tabpanel" tabindex="0" aria-hidden="true"  class="main_dashboard ">
         
+        <fieldset>
+          <legend>검색</legend>
+          
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="dateTab tabScript" role="tablist">
+                <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_2_1" class="on">년/월 선택</button>
+                <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2_2" >직접 선택</button>
+              </div>
 
+              <div class="formRow" id="search_tab_date_2_1" role="tabpanel" tabindex="0">
+                <select id="selectLabelState">
+                  <option>2023년</option>
+                </select>
+              
+                <select id="selectLabelState">
+                  <option>7월</option>
+                </select> 
+              </div>
+
+              <div class="rangeControl" id="search_tab_date_2_2" role="tabpanel" tabindex="0">
+                <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>
+              
+
+            </div>
+            <div class="searchControlGroup">
+              
+              <div class="searchControlItem center_organ">
+                <label for="selectLabelState" class="label">조직 선택</label>
+                <div class="formRow formGroup">
+                  <select id="selectLabelState">
+                    <option>지역본부</option>
+                  </select>
+                  <span class="line"></span>
+                  <select id="selectLabelState">
+                    <option>금고본점</option>
+                  </select>
+                  <span class="line"></span>
+                  <select id="selectLabelState">
+                    <option>지점</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="searchBtns wid190">
+                <button type="button" class="btnSuccess">조회</button>
+                <button type="button" class="btnSky ico_print" onclick="printSetting()" title="프린트" >대시보드 출력</button>
+              </div>
+            </div>
+            
+          </div>
+        </fieldset>
+
+        <ul class="dashboardWrap">
+          <li class="chart_pie">
+            <strong class="tit">실행 대출 자금 용도 비율</strong>
+            <div class="pie" id="pieChart2_1"></div>
+            <script>
+              var chartDom = document.getElementById('pieChart2_1');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '대출 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                      { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
+                      { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 시설</li>
+              <li> <em style="background:#46B9B2"></em> 운전</li>
+              <li> <em style="background:#55D6B6"></em> 리스</li>
+              <li> <em style="background:#89E3CD"></em> 렌탈</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">실행 대출 업종 비율</strong>
+            <div class="pie" id="pieChart2_2"></div>
+            <script>
+              var myChart_pie2 = echarts.init(document.getElementById('pieChart2_2'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '실행 업종',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '건설업' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '농업,임업'  , itemStyle : {color:'#46B9B2'}},
+                      { value: 580, name: '제조업'  , itemStyle : {color:'#55C6D6'}},
+                      { value: 484, name: '농업,임업'  , itemStyle : {color:'#8BDCE7'}},
+                      { value: 484, name: '제조업'  , itemStyle : {color:'#BEE2A2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie2.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 건설업</li>
+              <li> <em style="background:#46B9B2"></em> 농업,임업</li>
+              <li> <em style="background:#55C6D6"></em> 제조업</li>
+              <li> <em style="background:#8BDCE7"></em> 농업,임업</li>
+              <li> <em style="background:#BEE2A2"></em> 제조업</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">제안한 고정/변동 비율</strong>
+            <div class="pie" id="pieChart2_3"></div>
+            <script>
+              var myChart_pie3 = echarts.init(document.getElementById('pieChart2_3'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '고정/변동 비율',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '고정' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '변동'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie3.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 고정</li>
+              <li> <em style="background:#46B9B2"></em> 변동</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">실행 대출 담보/신용 비율</strong>
+            <div class="pie" id="pieChart2_4"></div>
+            <script>
+              var myChart_pie4 = echarts.init(document.getElementById('pieChart2_4'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '담보/신용 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '담보' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '신용'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie4.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 담보</li>
+              <li> <em style="background:#46B9B2"></em> 신용</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="dashboardWrap">
+          <li class="itemTxt">
+            <strong class="tit">청구 비율</strong>
+            <div class="dash_data">
+              <div class="barChart">
+                <span style="width:50%"><strong class="hide">50%</strong><em></em></span>
+                <em class="l">청구</em>
+                <em class="r">미청구</em>
+              </div>
+              <span class="dataSize">
+                <span>정산 대상 수</span> 
+                <strong>10</strong>
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 실행 수</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>125</strong>
+                <span>건</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 실행액</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>10</strong>
+                <span>억</span> 
+                <strong>4800</strong>
+                <span>만원</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 제안 수</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>6</strong>
+                <span>건</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 제안액</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>10</strong>
+                <span>억</span> 
+                <strong>4800</strong>
+                <span>만원</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 성사율</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>67.8</strong>
+                <span>%</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">제안한 평균 금리</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>67.8</strong>
+                <span>%</span> 
+              </span>
+            </div>
+          </li>
+        </ul>
 
       </section>
       

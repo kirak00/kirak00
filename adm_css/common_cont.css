@@ -1727,11 +1727,11 @@ button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/i
 .pageTop h2.pageTit        {font-size:30px; color:#333; font-weight: 700; line-height: 1; }
 .pageTop ul.breadcrumb     { position: absolute; top: 12px; right: 0; overflow: hidden; }
 .pageTop ul.breadcrumb li  { float:left; }
-.pageTop ul.breadcrumb li a.home {display:inline-block;  width:18px; height:18px; background:url(../adm_images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
+.pageTop ul.breadcrumb li.home {display:inline-block;  width:18px; height:18px; background:url(../adm_images/common/ico_24_home.png) no-repeat 0 0 / contain;  }
 .pageTop ul.breadcrumb li::before  {content: ""; display: inline-block; width:18px; height:18px; margin:0 8px; background:url(../adm_images/common/ico_24_right_02.png) no-repeat 0 0 / 18px auto; vertical-align: top; }
 .pageTop ul.breadcrumb li:first-child:before  {display:none;}
-.pageTop ul.breadcrumb li a  {display:inline-block; line-height:16px; font-size:14px; color:#555; vertical-align: top }
-.pageTop ul.breadcrumb li a strong{color:#069B66; }
+.pageTop ul.breadcrumb li   {display:inline-block; line-height:16px; font-size:14px; color:#555; vertical-align: top }
+.pageTop ul.breadcrumb li strong{color:#069B66; }
 
 .pageTop .pageSub { margin-top: 20px; color: #555;}
 

@@ -49,9 +49,10 @@
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
+                  <span class="line"></span><!-- 1.9 수정  -->
                   <span class="checkbox">
                     <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-                    <label for="searchCheckBox"><span></span>타점심사중 제외</label>
+                    <label for="searchCheckBox"><span></span>당 기관 심사 제외</label><!-- 1.9 수정-->
                   </span>
                 </div>
               </div>
@@ -107,7 +108,7 @@
               </div>
             </div>
             <div class="searchControlGroup">
-              <div class="searchControlItem expand wid560">
+              <div class="searchControlItem expand "><!-- 1.9 수정  -->
                 <label id="selectLabelPay" class="label">CRETOP 등급</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
                   <select title="등급">
@@ -115,15 +116,18 @@
                     <option>이하</option>
                   </select>
                   <span class="line"></span>
-                  <select title="범위">
+                  <select title="범위" disabled>
                     <option>이상</option>
                     <option>이하</option>
                   </select>
+                  <span class="line"></span>
+                  <span class="checkbox">
+                    <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                    <label for="searchCheckBox"><span></span>등급 없음 포함</label>
+                  </span>
                 </div>
               </div>
               <span class="checkbox">
-                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-                <label for="searchCheckBox"><span></span>등급 없음 포함</label>
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
                 <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
               </span>
@@ -145,7 +149,7 @@
         <fieldset class="tableFilterGroup">
           <span class="count">총 <strong>15</strong>건</span>
           <div class="formRow" role="group">
-            <p class="notiTxt">가려진 항목은 상세페이지에서 ‘심사하기’를 선택한 이후에 열람 가능합니다.</p>
+            <p class="notiTxt">가려진 항목은 상세페이지에서 ‘열람하기’를 선택한 이후에 열람 가능합니다.</p><!-- 1.9 수정  -->
             <select title="정렬 선택 (신청일 최신순)">
               <option>신청일 최신순</option>
               <option>본부2</option>
@@ -187,12 +191,12 @@
 
             var clients = [
               { 
-                
+                "disabled" : false ,
                 "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
                 "Name1": "S_230809_0001",
-                "Name2": "심사전", 
+                "Name2": "심사중<br>[가회지점]", 
                 "Name3": "(주)길동건설", 
-                "Name4": "12억 5000만원", 
+                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
                 "Name5": "서울", 
                 "Name6": "농업.", 
                 "Name7": "시설자금", 
@@ -201,6 +205,38 @@
                 "Name10": "AA+", 
                 "Name11": "2023-08-30", 
                 "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "disabled" : false ,
+                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name1": "S_230809_0001",
+                "Name2": "심사중<br>[가회지점]", 
+                "Name3": "(주)길동건설", 
+                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
+                "Name5": "서울", 
+                "Name6": "농업.", 
+                "Name7": "시설자금", 
+                "Name8": "유", 
+                "Name9": "보유", 
+                "Name10": "AA+", 
+                "Name11": "2023-08-30", 
+                "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "disabled" : true ,
+                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name1": "S_230809_0001",
+                "Name2": "심사중<br>[가회지점]", 
+                "Name3": "(주)길동건설", 
+                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
+                "Name5": "서울", 
+                "Name6": "농업.", 
+                "Name7": "시설자금", 
+                "Name8": "유", 
+                "Name9": "보유", 
+                "Name10": "AA+", 
+                "Name11": "2023-08-30", 
+                "Name12": "<button type='button' class='btnWhite' disabled>상세보기</button>", 
               },
             ]; 
             
@@ -211,10 +247,10 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
               fields: [
-                { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은 목록 상단에 고정되며, <Br>사용자 단위가 아닌 계정 단위로 설정이 가능합니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
+                { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은<br>목록 상단에 고정됩니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
                 { name: "Name1",  type: "text", title : "대출 신청 번호",  validate: "required", },
-                { name: "Name2", type: "text", title : "상태", width: 60, validate: "required" },
                 { name: "Name3", type: "text", title : "기업명", width: 80, validate: "required" },
+                { name: "Name2", type: "text", title : "상태", width: 60, validate: "required" },
                 { name: "Name4", type: "text", title : "희망 신청 금액", width: 100, validate: "required" },
                 { name: "Name5", type: "text", title : "지역", width: 70, validate: "required" },
                 { name: "Name6", type: "text", title : "업종", width: 70, validate: "required" },
@@ -239,9 +275,54 @@
     <!-- contents : end -->
     <!-- **************** -->
 
+
+
+
+
+
+ <!-- 샘플 -->
+    
+<button type="button" class="btnSuccess" onclick="cancelHistory_layer(this)" >심사취소 있는경우 샘플 </button>
+
 <script>
+  
+  function cancelHistory_layer(obj){
+      layer_confirm(
+        `<span class="layerCont_cancelHistory">
+          해당 대출 신청 건은 이미 <br>
+          <strong>{가회지점}</strong>에서 <strong>심사 취소</strong>를 한 이력이 있습니다. <br><br>
+          <strong class="point">(취소 사유: {심사 시간 부족})</strong><br><br>
+          대출 신청 정보를 확인하시겠습니까?
+        </span>`, 
+        obj, 
+        {
+          confirm : {
+            txt : "확인",
+            callback : function(){
+              alert("확인")
+            }
+          },
+          cancel : {
+            txt : "취소",
+            callback : function(){
+              alert("취소")
+            }
+          },
+          closebtn : {
+            show: true, // default : true
+            callback : function(){
+              alert("닫기")
+            }
+          }
+        }
+      )
+    }
+    
 </script>
    
+
+
+
 
 </body>
 </html>
