@@ -387,9 +387,16 @@ table.bbs_list a.btnLine,
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
+.ico_down.black       {color:#333;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.ico_down.black::after       { background-image:url(../images/common/ico_18_download_primary.png); }
 .ico_down:disabled       {color:#333; opacity: .4; }
 .ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
+
+.ico_send {padding:0 32px; color:#069B66; font-weight: 700;}
+.ico_send::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_18_blank_primary.png) no-repeat 50% 50% / contain; }
+/* .ico_send:disabled       {color:#333; opacity: .4; } */
+/* .ico_send:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; } */
 
 
 .ico_check::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -4px; background:url(../images/common/ico_18_check_primary.png) no-repeat 50% 50% / contain; }
@@ -2221,7 +2228,7 @@ ul.guideBox li.bul::before {content:"·"; position:absolute; left:0; top:0px; }
 .main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
 .main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
 .main_myInfo .welcomeBox .welcometit strong {display:block; font-size:30px; margin-top:3px;  }
-.main_myInfo .welcomeBox button        { height:40px; padding: 0 30px;}
+.main_myInfo .welcomeBox button        { height:40px; padding: 0 20px;}
 .main_myInfo .msgBox        {position:relative; width:40px; height:40px; top:31px; right:30px;  }
 .main_myInfo .msgBox span.ico_msg        {display:block; width:40px; height:40px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0 / 26px auto ; }
 .main_myInfo .msgBox span.ico_msg em     {position:absolute; width:18px; height:18px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:12px; line-height:18px; font-weight: 700; text-align: center; border-radius:50%;  }

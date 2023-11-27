@@ -121,14 +121,12 @@
       </section>
 
       <section>
-        
         <div class="mainLoanSelct">
           <select name="" id="">
             <option value="">230401_S_001 시설자금대자금대자금대출</option>
           </select>
           <button class="search"><span class="">조회</span></button>
         </div>
-        
       </section>
 
       <div>
@@ -136,720 +134,346 @@
           <div class="main_loan_progress">
             <div class="step_info">
               <div class="platform">
-                Loan&Biz (온라인) <!-- v1.8 워딩 수정 -->
+                Loan&Biz (온라인)
                 <ul class="hide">
-                  <li>대출 비교 신청 중</li><!-- v1.8 워딩 수정 -->
-                  <li>금융 회사 심사</li><!-- v1.8 워딩 수정 -->
+                  <li>대출 비교 신청 중</li>
+                  <li>금융 회사 심사</li>
                   <li>제안서 확인 및 선택</li>
                 </ul>
               </div>
               <div class="offline">
-                금융 회사 (오프라인) <!-- v1.8 워딩 수정 -->
+                금융 회사 (오프라인)
                 <ul class="hide">
-                  <li>대출 약정</li><!-- v1.8 워딩 수정 -->
-                  <li>대출 실행</li><!-- v1.8 워딩 수정 -->
+                  <li>대출 약정</li>
                 </ul>
               </div>
             </div>
-            <ol class="status_tab tabScript" role="tablist">
-              <li class="step_1 on ">
-                <a href="#main_loan_cont_1" role="tab" id="main_loan_tab_1" aria-selected="true" >
-                  <em>01.</em>
-                  <strong>대출 비교 신청 중</strong><!-- v1.6 워딩 수정 -->
-                </a>
+            <ol class="status_tab">
+              <li class="step_1 on">
+                <em>01.</em><strong>대출 비교 신청 중</strong>
               </li> 
-              <li class="step_2 disabled">
-                <a href="#main_loan_cont_2" role="tab" id="main_loan_tab_2" >
-                  <em>02.</em>
-                  <strong>금융 회사 심사</strong><!-- v1.8 워딩 수정 -->
-                  <p class="sub">심사 진행 0건</p><!-- v1.6 워딩 추가 --><!-- v1.8 워딩 수정 -->
-                </a>
+              <li class="step_2"> <!-- disabled 추가 시 disabled-->
+                <em>02.</em><strong>금융 회사 심사</strong>
+                <div class="subInfo">
+                  <span class="info" >심사 진행 0건</span>
+                  <span class="info">추가 서류 요청 0건</span>
+                </div>
               </li>
               <li class="step_3 ">
-                <a href="#main_loan_cont_3" role="tab" id="main_loan_tab_3">
-                  <em>03.</em>
-                  <strong>제안서 확인 및 채택</strong><!-- v1.6 워딩 수정 -->
-                  <p class="sub">금융 회사 제안서 0건</p><!-- v1.6 워딩 추가 --><!-- v1.8 워딩 수정 -->
-                </a>
+                <em>03.</em><strong>제안서 확인 및 채택</strong>
+                <div class="subInfo">
+                  <span class="info">금융회사 제안서 접수 5건</span>
+                  <span class="info">제안서 채택 0건</span>
+                </div>
               </li>
-              <li class="step_4 "> 
-                <a href="#main_loan_cont_4" role="tab" id="main_loan_tab_4">
-                  <em>04.</em>
-                <strong>대출 약정</strong><!-- v1.6 워딩 수정 -->
-                <p class="sub">제안서 채택 0건</p><!-- v1.8 추가 -->
-                </a>
+              <li class="step_4 disabled"> <!-- disabled 추가하면 클릭 안됨 -->
+                <em>04.</em><strong>대출 약정</strong>
               </li>         
-              <li class="step_5 "><!-- disabled 추가하면 클릭 안됨 -->
-                <a href="#main_loan_cont_5" role="tab" id="main_loan_tab_5">
-                  <em>05.</em>
-                  <strong>대출 실행</strong><!-- v1.6 워딩 수정 -->
-                </a>
-              </li>
             </ol> 
+            <div class="list">
+              <span class="tit">대출 비교 진행 관리</span>
+              <div class="btnWrap tabScript" role="tablist">
+                <button type="button" class="btnWhite" role="tab" aria-controls="main_loan_cont_1">이어서 작성하기</button>
+                <button type="button" class="btnWhite" role="tab" aria-controls="main_loan_cont_2">추가 서류 요청</button>
+                <button type="button" class="btnWhite" role="tab" aria-controls="main_loan_cont_3">제안서 접수 마감일 연장</button>
+                <!-- disabled 상태일 경우 -->
+                <button type="button" class="btnWhite" role="tab" aria-controls="main_loan_cont_4">제안서 접수 및 채택</button>
+              </div>
+            </div>
           </div>
         </section>
         
-        <div class="main_loan_cont step_1" id="main_loan_cont_1" aria-labelledby="main_loan_tab_1" role="tabpanel">
-          <section class=""> 
-            <div class="list">
-                <button class="btnSuccess">이어서 작성하기</button><!-- v1.4 수정 --><!-- v1.6 워딩수정 -->
-                <!-- <button class="btnSky">추가 서류 제출</button> -->
-            </div>
-          </section>
-          <div class="bgWrap">
-            <section class=""> 
-              
-              <!--  nodata -->
-              <!--  nodata -->
-              <div class="no_data bg_regist">
-                <span class="tit"><!-- v1.6 추가 -->
-                  신청 중인 대출 비교 건이 있어요.<br/>
-신청을 완료하여 다양한 금융기관으로부터 고객님께 최적화된 대출 제안을 받아보세요!<!-- v1.6 수정 -->
-                  <span class="btn">
-                    <button type="button" class="btnSuccess">이어서 작성하기</button>
-                  </span>
-                </span>
-              </div>
-
-              
-            </section>
+        <!-- 이어서 작성하기 -->
+        <section class="main_loan_cont step_1" id="main_loan_cont_1" aria-labelledby="main_loan_tab_1" role="tabpanel">
+          <div class="no_data bg_regist">
+            <span class="tit">
+              신청 중인 대출 비교 건이 있어요.<br/>
+신청을 완료하여 다양한 금융기관으로부터 고객님께 최적화된 대출 제안을 받아보세요!
+              <span class="btn">
+                <button type="button" class="btnSuccess">이어서 작성하기</button>
+              </span>
+            </span>
           </div>
-        </div>
-        <div class="main_loan_cont step_2" id="main_loan_cont_2" aria-labelledby="main_loan_tab_2" role="tabpanel">
-          
-          <section class=""> 
-            <div class="list">
-              <div class="btnWrap"><!-- v1.6 추가 -->
-                <button class="btnSuccess">제안서 마감일 연장</button>
-              </div>
-              <div class="status tabScript" id="main_loan_tab_5" role="tablist">
-                <button type="button" role="tab" aria-controls="main_loan_list_2_1" >
-                  <span>심사 중인 서류 요청</span><!-- v1.6 워딩수정 -->
-                  <em>5건</em>
-                </button>
-                <button type="button" role="tab" aria-controls="main_loan_list_2_2" class="on" aria-selected="true">
-                  <span>추가 서류 요청</span><!-- v1.4 워딩 수정 --><!-- v1.6 워딩수정 -->
-                  <em>5건</em>
-                </button>
-              </div>
-            </div>
-          </section>
-          <div class="bgWrap">
-            <section class="" id="main_loan_list_2">
-              
-              <!--  nodata -->
-              <div class="no_data bg_review">
-                <span class="tit"><!-- v1.6 추가 -->
-                  아직 심사 중인 금융기관이 없어요.<br/>
-금융기관이 심사를 시작하기 전에만 수정이 가능해요.<!-- v1.6 워딩수정 -->
-                    <span class="btn">
-                      <button type="button" class="btnSuccess">대출 비교 신청 정보 수정</button><!-- v1.6 워딩수정 -->
-                    </span>
-                  </span>
-                </span>
-              </div>
-              <!-- v1.6 추가 -->
-              <div class="no_data bg_reviewing">
-                <span class="tit"><!-- v1.6 추가 -->
-                  10개의 금융기관에서 고객님의 신청 건을 심사중에 있어요
-                  </span>
-                </span>
-              </div>
+        </section>
 
-              
-              <div class="tabContent" id="main_loan_list_2_1" role="tabpanel">
-                <!-- 심사 참여 -->
-                <div class="titBox">
-                  <strong>현재 심사중인 금융회사 목록이에요.</strong>
-                  <p>심사가 완료되면 회원님에게 관심 있는 금융회사의 제안서를 받아 보실 수 있어요.</p>
-                </div>
-
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-
-                <div id="main_grid_1" class="bbs" caption="심사중인 금융회사 목록"></div>
-                <div id="externalPager_1" class="external-pager"></div>
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    var clients = [
-                      { "Name1": "시설 자금",
-                        "Name2": "2023-08-10", 
-                      },
-                    ];
-                    $("#main_grid_1").jsGrid({
-                      data: clients,
-                      fields: [
-                        { name: "Name1",  type: "text", title : "심사중인 금융 회사", width: 280, validate: "required",  },
-                        { name: "Name2", type: "text", title : "심사 요청일", width: 160, validate: "required",  },
-                      ],
-                      pagerContainer: "#externalPager_1",
-                    });
-                  });
-                </script>
-
-              </div>
-
-              <!-- 추가서류 제출 -->
-              <div class="tabContent" id="main_loan_list_2_2" role="tabpanel">
-                <div class="titBox">
-                  <strong>금융기관이 요청한 추가 서류는 추가서류 관리 페이지에서도 가능해요.</strong><!-- v1.6 추가 -->
-                  <!-- <p>서류 제출은 <a href="#;" class="lnkLine">심사 현황 페이지</a> 에서 추가 서류 관리 버튼 선택 하시면 가능해요</p> --><!-- v1.6 삭제 -->
-                </div>
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-                
-                
-                <div id="main_grid_2" class="bbs" caption="추가서류 요청한 금융회사 목록"></div>
-                <div id="externalPager_2" class="external-pager"></div>
-                <!-- v1.4 수정 -->
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    
-                    var clients = [
-                      { "Name1": '롯데캐피탈',  //<!-- v1.6 goLink 삭제 -->
-                        "Name2": '종합소득세',
-                        "Name3": '2023-07-25',
-                        // "Name4": '<button type="button" class="ico_down">다운로드</button>',<!-- v1.6 삭제 -->
-                        // "Name5": '<button type="button" class="btnGray wid130">파일 변경</button>',<!-- v1.6 삭제 -->
-                      },
-                      { "Name1": '롯데캐피탈',//<!-- v1.6 goLink 삭제 -->
-                        "Name2": '종합소득세',
-                        "Name3": '2023-07-25',
-                        // "Name4": '<button type="button" class="ico_down">다운로드</button>',
-                        // "Name5": '<button type="button" class="btnSuccess wid130">제출 서류 선택</button>',
-                      },
-                    ];
-                    
-                    $("#main_grid_2").jsGrid({
-                      data: clients,
-                      sorting : true,
-                      fields: [
-                        { name: "Name1", width: 200,  type: "text", title : "금융기관",  validate: "required", sorting: false,},
-                        { name: "Name2", width: 200, type: "text", title : "필요 서류 안내",  validate: "required", sorting: false, },
-                        { name: "Name3", width: 200, type: "text", title : "요청일",  validate: "required",  },
-                        // { name: "Name4", width: 200, type: "text", title : "다운로드",  validate: "required",  },<!-- v1.6 삭제 -->
-                        // { name: "Name5", width: 200, type: "text", title : "파일관리",  validate: "required", sorting: false, },<!-- v1.6 삭제 -->
-                      ],
-                      pagerContainer: "#externalPager_2",
-                      
-                    });
-                  });
-                </script>
-                 <!-- //v1.4 수정 -->
-              </div>
-
-
-
-
-            </section>
+        <!-- 추가 서류 요청 -->
+        <section class="main_loan_cont step_2" id="main_loan_cont_2" aria-labelledby="main_loan_tab_2" role="tabpanel">
+          <div class="titBox">
+            <p>금융 회사가 요청한 추가 서류는 <span class="textBold">‘대출 비교 진행 현황 > 추가 서류 관리’</span> 페이지에서도 가능해요.</p>
           </div>
-          
-        </div>
-        <div class="main_loan_cont step_3" id="main_loan_cont_3" aria-labelledby="main_loan_tab_3" role="tabpanel">
-          <section class=""> 
-            <div class="list">
-              <!-- v1.6 추가 -->
-              <div class="btnWrap">
-                <button class="btnSuccess">제안서 마감일 연장</button>
-                <button class="btnSky">추가 서류 제출</button>
-              </div>
-              <!-- //v1.6 추가 -->
-              <div class="status tabScript" id="main_loan_tab_5" role="tablist">
-                <button type="button" role="tab" aria-controls="main_loan_list_3_1" >
-                  <span>금융기관 제안서</span><!-- v1.6 워딩 수정 -->
-                  <em>5건</em>
-                </button>
-                <button type="button" role="tab" aria-controls="main_loan_list_3_2" class="on" aria-selected="true">
-                  <span>제안서 채택</span><!-- v1.4 수정 -->
-                  <em>5건</em>
-                </button>
-                <!-- <button type="button" role="tab" aria-controls="main_loan_list_3_3" >
-                  <span>마감 기한 연장 요청</span>
-                  <em>5건</em>
-                </button> --><!-- v1.6 삭제 -->
-              </div>
+          <div class="table_top">
+            <div class="total">
+              총 <strong>15</strong>건
             </div>
-          </section>
-          <div class="bgWrap">
-            <section class="" id="main_loan_list_3">
-              <!--  nodata -->
-              <div class="no_data bg_endtime">
-                <span class="tit"><!-- v1.6 추가 -->
-                  현재까지 도착한 제안서가 없어요. <br>
-                  제안서 마감일을 연장 하시겠어요?
-                 <span class="btn">
-                    <button type="button" class="btnSuccess">제안서 마감일 연장</button><!-- v1.6 워딩수정 -->
-                  </span>
-                </span>
-              </div>
-
-              <!--  제안서 미채택 --><!-- v1.6 추가 -->
-              <div class="no_data bg_survey">
-                <div class="box">
-                  <span class="tit">
-                    제안서를 채택하지 않으셨어요.<br/>
-                    혹시 제안서가 고객님의 기준에 맞지 않았던 이유를 알려주세요.
-                  </span>
-                  <div class="formVertical">
-                    <span class="checkbox">
-                      <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>제안 금리가 전부 높아서</label>
-                    </span>
-                    <span class="checkbox">
-                      <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>제안한 대출한도가 부족해서</label>
-                    </span>
-                    <span class="checkbox">
-                      <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>대출 조건이 까다로워서</label>
-                    </span>
-                    <span class="checkbox">
-                      <input type="checkbox" id="chk_1_4" name="CheckBox"><label for="chk_1_4"><span></span>다른 곳에서 자금을 구해서</label>
-                    </span>
-                   </div>
-                </div>
-                <span class="btn">
-                  <button type="button" class="btnSuccess">제출하기</button>
-                  <button type="button" class="btnWhite">다른 대출 알아보기</button>
-                </span>
-                
-              </div>
-              
-              <!--  nodata --><!-- v1.6 삭제 -->
-              <!-- <div class="no_data bg_timeover">
-                <span>
-                  제출된 제안서를 선택 할 수 있는 시간이 지났어요. <br>
-                  아쉽지만 다시 대출을 신청하시거나 관심 있던 금융회사의 담당자에게 연락을 해보시겠어요?
-                  <span class="btn">
-                    <button type="button" class="btnSuccess">다시 대출 비교하기 신청</button>v1.4 워딩수정
-                  </span>
-                </span>
-              </div> -->
-
-              <!-- 제안서 제출 -->
-              <div class="tabContent" id="main_loan_list_3_1" role="tabpanel">
-                <div class="titBox">
-                  <strong>금융기관으로부터 제안서가 도착했어요.</strong><!-- v1.6 워딩수정-->
-                  <p>제안 내용을 확인해 주세요.</p><!-- v1.6 워딩수정 -->
-                </div>
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-
-                <!-- 열람 마스킹 없음/ 미열람 마스킹 있음 -->
-                <div id="main_grid_3" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
-                <div id="externalPager_3" class="external-pager"></div>
-                <!-- v1.4 수정 -->
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    var clients = [
-                      { "Name1": '(주)신한은행',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
-                        "Name4": '고길동',
-                        "Name5": '02-1234-5678',
-                        "Name6": '<a class="lnk">열람</a>',
-                      }, 
-                      { "Name1": '(주)신한은행',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
-                        "Name4": '고*동',
-                        "Name5": '02-12*4-56**',
-                        "Name6": '<span class="textBold">미열람</span>',
-                      }, 
-                    ];
-                    
-                    $("#main_grid_3").jsGrid({
-                      data: clients,
-                      sorting : false,//<!-- v1.6 수정 -->
-                      fields: [
-                        //<!-- v1.6 수정 -->
-                        { name: "Name1", width: 200,  type: "text", title : "금융 기관",  validate: "required",  },
-                        { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                        { name: "Name3", width: 200, type: "text", title : "제안 금액",  validate: "required",  },
-                        { name: "Name4", width: 200, type: "text", title : "담당자",  validate: "required",  },
-                        { name: "Name5", width: 200, type: "text", title : "문의 전화 번호",  validate: "required",  },
-                        { name: "Name6", width: 200, type: "text", title : "열람 여부",  validate: "required", sorting : false, },
-                      ],
-                      pagerContainer: "#externalPager_3",
-                      
-                    });
-                  });
-                </script>
-                 <!-- v1.4 수정 -->
-
-                <!-- 마스킹 없는경우 -->
-                <!-- <div id="main_grid_3_1" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
-                <div id="externalPager3_1" class="external-pager"></div>
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    
-                    var clients = [
-                      { "Name1": '(주)신한은행1',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-24',
-                        "Name6": '<a href="#" class="lnk">제안서 보기</a>',
-                      }, 
-                      { "Name1": '(주)신한은행2',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '2023-07-25',
-                        "Name6": '<a href="#" class="lnk">제안서 보기</a>',
-                      },
-                    ];
-                    
-                    $("#main_grid_3_1").jsGrid({
-                      data: clients,
-                      sorting : true,
-                      fields: [
-                        { name: "Name1", width: 200,  type: "text", title : "제안 금융기관",  validate: "required",  },
-                        { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                        { name: "Name3", width: 200, type: "text", title : "제안 대출 금액",  validate: "required",  },
-                        { name: "Name4", width: 200, type: "text", title : "제안서 제출일",  validate: "required",  },
-                        { name: "Name6", width: 200, type: "text", title : "공개 유무",  validate: "required", sorting : false, },
-                      ],
-                      pagerContainer: "#externalPager3_1",
-                      
-                    });
-                  });
-                </script> -->
-
-              </div>
-
-
-              <!-- 채택된 제안서 -->
-              <!-- 채택된 제안서 -->
-              <div class="tabContent" id="main_loan_list_3_2" role="tabpanel">
-                <div class="titBox">
-                  <strong>고객님께서 채택한 제안서 입니다.</strong><!-- v1.6 워딩 수정 -->
-                  <p>자세한 상담은 금융기관 담당자에게 문의해 주세요.</p><!-- v1.4 워딩 수정 --><!-- v1.6 워딩 수정 -->
-                </div>
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-
-                <div id="main_grid_44" class="bbs" caption="선택한 제안서 목록"></div>
-                <div id="externalPager_44" class="external-pager"></div>
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    
-                    var clients = [
-                      { "Name1": '(주)신한은행',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '고길동',//v1.4 수정 
-                        "Name5": '02-1234-5678',
-                        "Name6": '<a href="#;" class="lnk">채택</a>',//v1.6 수정 
-                      },
-                      { "Name1": '(주)신한은행',
-                        "Name2": '7.1%',
-                        "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name4": '고길동',//v1.4 수정 
-                        "Name5": '02-1234-5678',
-                        "Name6": '<a href="#;" class="lnk">채택</a>',//v1.6 수정 
-                      },
-                    ];
-                    
-                    $("#main_grid_44").jsGrid({
-                      data: clients,
-                      sorting : true,
-                      fields: [
-                        { name: "Name1", width: 200,  type: "text", title : "금융 기관",  validate: "required", sorting : false,  },//v1.6 수정 
-                        { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                        { name: "Name3", width: 200, type: "text", title : "제안 금액 ",  validate: "required",  },//v1.6 수정 
-                        { name: "Name4", width: 150, type: "text", title : "담당자",  validate: "required", sorting : false,  }, //v1.6 수정 
-                        { name: "Name5", width: 150, type: "text", title : "문의 전화 번호",  validate: "required", sorting : false,  },
-                        { name: "Name6", width: 200, type: "text", title : "채택 여부",  validate: "required", sorting : false,  }, //v1.6 수정 
-                      ],
-                      pagerContainer: "#externalPager_44",
-                      
-                    });
-                  });
-                </script>
-              </div>
-
-
-              <!-- 마감 기한 연장 요청 -->
-              <!-- 마감 기한 연장 요청 -->
-              <!-- <div class="tabContent" id="main_loan_list_3_3" role="tabpanel">
-                
-                <div class="titBox">
-                  <strong>회원님에게 마감 기한 연장을 요청한 목록입니다.</strong>
-                  <p>금융기관 요청한 마감 기한 연장은 <a href="#;" class="lnkLine">심사 현황 페이지</a>심사 현황 페이지에서 승인이 가능해요.</p><!-- v1.4 추가 --
-                </div>
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-
-                
-                <div id="main_grid_4" class="bbs" caption=" 마감 기한 연장을 요청한 목록"></div>
-                
-                <!-- <div class="table_bt">
-                  <div class="btn_r">
-                    <button type="button" class="btnSuccess">승인</button>
-                    <button type="button" class="btnSuccess">거절</button>
-                  </div> --
-                </div>
-
-                <div id="externalPager_4" class="external-pager"></div>
-                <script>
-                  /* jsgrid sample */
-                  $(function() {
-                    
-                    var clients = [
-                      { 
-                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_1" name="CheckBox" title="선택" ><label for="chk_1_1"><span></span></label></span>',
-                        "Name1": '<span class="goLink">농협중앙회<span>',
-                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name2": '2023-07-25',
-                        // "Name5": '<button type="button" class="btnWhite">승인</button> <button type="button" class="btnGray">거절</button>',
-                      },
-                      { 
-                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_2" name="CheckBox" title="선택" ><label for="chk_1_2"><span></span></label></span>',
-                        "Name1": '<span class="goLink">OK 저축은행<span>',
-                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name2": '2023-07-25',
-                        // "Name5": '<span>거절</span>',
-                      },
-                      { 
-                        // "Name1": '<span class="checkbox"><input type="checkbox" id="chk_1_3" name="CheckBox" title="선택" ><label for="chk_1_3"><span></span></label></span>',
-                        "Name1": '<span class="goLink">OK 저축은행<span>',
-                        // "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                        "Name2": '2023-07-25',
-                        // "Name5": '<strong>승인완료</strong>',
-                      },
-                    ];
-                    
-                    $("#main_grid_4").jsGrid({
-                      data: clients,
-                      sorting:true,
-                      fields: [
-                        // { name: "Name1", width: 80, type: "text", title : '<span class="checkbox"><input type="checkbox" id="chk_all_1" name="CheckBox" title="전체선택" ><label for="chk_all_1"><span></span></label></span>' ,  validate: "required", sorting:false, },
-                        { name: "Name1", width: 'auto',  type: "text", title : '연장 요청 금융기관',  validate: "required", sorting:false, },
-                        // { name: "Name3", width: 200, type: "text", title : '요청 사유',  validate: "required",  sorting:false,},
-                        { name: "Name2", width: 500, type: "text", title : '연장 요청일',  validate: "required",  },
-                        // { name: "Name5", width: 200, type: "text", title : '승인',  validate: "required", css:"status",  sorting:false,},
-                      ],
-                      pagerContainer: "#externalPager_4",
-                      
-                    });
-                  });
-                </script>
-              </div> -->
-
-
-
-
-
-
-            </section>
           </div>
-        </div>
-        <div class="main_loan_cont step_4" id="main_loan_cont_4" aria-labelledby="main_loan_tab_4" role="tabpanel">
-          <section class=""> 
-            <div class="list">
-              <div class="status tabScript" id="main_loan_tab_5" role="tablist">
-                <button type="button" role="tab" aria-controls="main_loan_list_4_1" >
-                  <span>제안서 채택</span><!-- v1.6 워딩 수정 -->
-                  <em>5건</em>
-                </button>
+          <div class="jsGridWrap">
+            <div id="main_grid_2" class="bbs" caption="추가서류 요청한 금융회사 목록"></div>
+            <div class="table_bt">
+              <div id="externalPager2" class="external-pager"></div>
+              <div class="btn_r">
+                <button type="button" class="btnSuccess link">추가 서류 제출 하기</button>
               </div>
             </div>
-          </section>
-          <div class="bgWrap">
-            <section class="" id="main_loan_list_4">
-              
-              <div class="tabContent" id="main_loan_list_4_1" role="tabpanel">
-                <!-- 채택된 제안서 -->
-                <!-- 채택된 제안서 -->
-                <div class="titBox">
-                  <strong>고객님께서 채택한 제안서 입니다.</strong><!-- v1.4 수정 --><!-- v1.6 워딩수정 -->
-                  <p>자세한 상담은 금융기관 담당자에게 문의해 주세요.</p><!-- v1.4 수정 --><!-- v1.6 워딩수정 -->
-                </div>
-                <div class="table_top">
-                  <div class="total">
-                    총 <strong>15</strong>건
-                  </div>
-                </div>
-              </div>
+          </div>
+          <script>
+            /* jsgrid sample */
+            $(function() {
+              var clients = [
+                { "Name1": '2023-07-11', 
+                  "Name2": '롯데캐피탈',
+                  "Name3": '종합소득세',
+                  "Name4": '2023-07-12',
+                  "Name5": '<button type="button" class="ico_down black">다운로드</button>',
+                },
+                { "Name1": '2023-07-11', 
+                  "Name2": '롯데캐피탈',
+                  "Name3": '종합소득세',
+                  "Name4": '미제출',
+                  "Name5": '<button type="button" class="ico_send">제출하기</button>',
+                },
+              ];
+              $("#main_grid_2").jsGrid({
+                data: clients,
+                sorting : true,
+                fields: [
+                  { name: "Name1", width: 200,  type: "text", title : "요청일", sorting: false,},
+                  { name: "Name2", width: 200, type: "text", title : "심사 참여 금융 회사", sorting: false},
+                  { name: "Name3", width: 200, type: "text", title : "필요 서류 안내", sorting: false},
+                  { name: "Name4", width: 200, type: "text", title : "제출일"},
+                  { name: "Name5", width: 200, type: "text", title : "제출 서류",sorting: false, },
+                ],
+                pagerContainer: "#externalPager_2",
+              });
+            });
+          </script>
+        </section>
 
-              <div id="main_grid_5" class="bbs" caption="선택한 제안서 목록"></div>
-              <div id="externalPager_5" class="external-pager"></div>
-              <script>
-                /* jsgrid sample */
-                $(function() {
+        <!-- 제안서 마감일 연장 -->
+        <section class="main_loan_cont step_3" id="main_loan_cont_3" aria-labelledby="main_loan_tab_3" role="tabpanel">
+          <div class="no_data bg_reviewing">
+            <span class="tit">Loan&Biz와 제휴된 금융회사들이 고객님의 신청 건을 검토 중에 있어요.</span>
+          </div>
+          <div class="no_data bg_reviewing">
+            <span class="tit">00곳의 금융회사에서 고객님의 신청 건을 심사 중에 있어요</span>
+          </div>
+          <div class="no_data bg_more">
+            <span class="tit">
+              제안서 접수 마감일을 연장했지만 아쉽게도 도착한 제안서가 없어요.<br/>
+            다른 조건으로 대출 비교하기를 신청 하시겠어요?
+             <span class="btn">
+                <button type="button" class="btnSuccess">추가 대출 비교하기</button>
+              </span>
+            </span>
+          </div>
+        </section>
+
+        <!-- 제안서 접수 및 채택 -->
+        <section class="main_loan_cont step_4" id="main_loan_cont_4" aria-labelledby="main_loan_tab_4" role="tabpanel">
+          <div class="no_data bg_regist">
+            <div class="tit">
+              <p class="">아쉽게도 제안서를 채택하지 않으셨네요.</p>
+              <p>제안서를 선택하지 않은 이유를 공유해 주시면, 더 나은 Loan&Biz가 되도록 할게요.</p>
+              <div class="btn">
+                <button type="button" class="btnSuccess">이어서 작성하기</button>
+              </div>
+            </div>
+          </div>
+          <!-- 제안서 도착 -->
+          <div class="tabContent">
+            <div class="titBox">
+              <strong>금융 회사로부터 제안서가 도착했어요.</strong>
+              <p>제안 내용을 확인해 주세요.</p>
+            </div>
+            <div class="table_top">
+              <div class="total">
+                총 <strong>15</strong>건
+              </div>
+            </div>
+            <div class="jsGridWrap">
+              <!-- 열람 마스킹 없음/ 미열람 마스킹 있음 -->
+              <div id="main_grid_3" class="bbs" caption="제안서를 제출한 금융회사 목록"></div>
+              <div id="externalPager_3" class="external-pager"></div>
+            </div>
+            <script>
+              /* jsgrid sample */
+              $(function() {
+                var clients = [
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '열람',
+                    "Name8": '2023-10-15',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '회수',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray" disabled>보기</button>',
+                  }, 
+                ];
+                
+                $("#main_grid_3").jsGrid({
+                  data: clients,
+                  sorting : false,
+                  fields: [
+                    { name: "Name1", width: 150,  type: "text", title : "금융 회사", },
+                    { name: "Name2", width: 80, type: "text", title : "제안<br/>금리", },
+                    { name: "Name3", width: 150, type: "text", title : "제안 대출 금액", },
+                    { name: "Name4", width: 110, type: "text", title : "담당자", },
+                    { name: "Name5", width: 140, type: "text", title : "문의 전화<br/>번호", },
+                    { name: "Name6", width: 120, type: "text", title : "제안서<br/>유효기간" },
+                    { name: "Name7", width: 90, type: "text", title : "제안서<br/>열람 여부" },
+                    { name: "Name8", width: 110, type: "text", title : "제안서<br/>열람일" },
+                    { name: "Name9", width: 110, type: "text", title : "제안서<br/>상태" },
+                    { name: "Name10", width: 110, type: "text", title : "제안서<br/>채택 여부" },
+                    { name: "Name11", width: 110, type: "text", title : "제안서<br/>채택일" },
+                    { name: "Name12", width: 110, type: "text", title : "제안서<br/>열람" },
+                  ],
+                  pagerContainer: "#externalPager_3",
                   
-                  var clients = [
-                    { "Name1": '(주)신한은행',
-                      "Name2": '7.1%',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '고길동', //v1.4 수정
-                      "Name5": '02-1234-5678', //v1.4 수정
-                      "Name6": '<a href="#;" class="lnk">채택</a>', //v1.4 수정
-                    },
-                    { "Name1": '(주)신한은행',
-                      "Name2": '7.1%',
-                      "Name3": '<div class="moneyTxt"><em>230,000,000원</em><span>(이억 삼천만원)</span></div>',
-                      "Name4": '고길동',
-                      "Name5": '02-1234-5678',
-                      "Name6": '<a href="#;" class="lnk">채택</a>',
-                    },
-                  ];
-                  
-                  $("#main_grid_5").jsGrid({
-                    data: clients,
-                    fields: [
-                      { name: "Name1", width: 200,  type: "text", title : "금융기관",  validate: "required",  }, // v1.6 워딩 수정 
-                      { name: "Name2", width: 200, type: "text", title : "제안 금리",  validate: "required",  },
-                      { name: "Name3", width: 200, type: "text", title : "제안 금액",  validate: "required",  }, // v1.6 워딩 수정 
-                      { name: "Name4", width: 200, type: "text", title : "담당자",  validate: "required",  }, //v1.4 수정 // v1.6 워딩 수정 
-                      { name: "Name5", width: 200, type: "text", title : "문의전화번호",  validate: "required",  }, //v1.4 수정
-                      { name: "Name6", width: 200, type: "text", title : "상세보기",  validate: "required",  },
-                    ],
-                    pagerContainer: "#externalPager_5",
-                    
-                  });
                 });
-              </script>
-
-                
-
-            </section>
+              });
+            </script>
           </div>
-        </div>
-        <div class="main_loan_cont step_5" id="main_loan_cont_5" aria-labelledby="main_loan_tab_5" role="tabpanel">
-          <section class=""> 
-            <div class="list">
+          <!-- 채택된 제안서 -->
+          <div class="tabContent">
+            <div class="titBox">
+              <strong>고객님이 채택한 제안서예요.</strong>
+              <p>채택한 제안서와 관련한 자세한 상담은 금융 회사 담당자에게 문의해주세요.</p>
             </div>
-          </section>
-          <div class="bgWrap">
-            <section class="" id="main_loan_list_5">
-
-              <div class="titBox">
-                <strong>대출이 실행되었습니다. 🎉</strong><!-- v1.6 워딩수정 -->
-                <p>Loan&Biz에서의 경험은 어떠셨나요?</p><!-- v1.6 워딩수정 -->
+            <div class="table_top">
+              <div class="total">
+                총 <strong>15</strong>건
               </div>
-
-              <div class="main_survey">
-                <dl>
-                  <!-- v1.6 위치이동 및 수정 -->
-                  <dt>·  금융기관이 제출한 제안서와 실제 대출이 일치 했나요? <span class="blue">(필수)</span></dt>
-                  <dd>
-                    <div class="formRow">
-                      <span class="radio">
-                        <input type="radio" id="surveyChk_1" name="surveyQ_1" value="A" />
-                        <label for="surveyChk_1"><span></span>네</label>
-                      </span>
-                      <span class="radio">
-                        <input type="radio" id="surveyChk_2" name="surveyQ_1" value="A" />
-                        <label for="surveyChk_2"><span></span>아니오</label>
-                      </span>
-                    </div>
-                  </dd>
+            </div>
+            <div class="jsGridWrap">
+              <div id="main_grid_44" class="bbs" caption="선택한 제안서 목록"></div>
+              <div id="externalPager_44" class="external-pager"></div>
+            </div>
+            <script>
+              /* jsgrid sample */
+              $(function() {
+                
+                var clients = [
+                { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '열람',
+                    "Name8": '2023-10-15',
+                    "Name9": '정상',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray">보기</button>',
+                  }, 
+                  { "Name1": '신한저축은행',
+                    "Name2": '7.1%',
+                    "Name3": '<div class="moneyTxt"><em>320,000,000</em><span>(삼억이천만원)</span></div>',
+                    "Name4": '고길동',
+                    "Name5": '02-1234-5**8',
+                    "Name6": '2023-10-15',
+                    "Name7": '미열람',
+                    "Name8": '-',
+                    "Name9": '회수',
+                    "Name10": '미채택',
+                    "Name11": '-',
+                    "Name12": '<button type="button" class="btnGray" disabled>보기</button>',
+                  }, 
+                ];
+                
+                $("#main_grid_44").jsGrid({
+                  data: clients,
+                  sorting : false,
+                  fields: [
+                    { name: "Name1", width: 150,  type: "text", title : "금융 회사", },
+                    { name: "Name2", width: 80, type: "text", title : "제안<br/>금리", },
+                    { name: "Name3", width: 150, type: "text", title : "제안 대출 금액", },
+                    { name: "Name4", width: 110, type: "text", title : "담당자", },
+                    { name: "Name5", width: 140, type: "text", title : "문의 전화<br/>번호", },
+                    { name: "Name6", width: 120, type: "text", title : "제안서<br/>유효기간" },
+                    { name: "Name7", width: 90, type: "text", title : "제안서<br/>열람 여부" },
+                    { name: "Name8", width: 110, type: "text", title : "제안서<br/>열람일" },
+                    { name: "Name9", width: 110, type: "text", title : "제안서<br/>상태" },
+                    { name: "Name10", width: 110, type: "text", title : "제안서<br/>채택 여부" },
+                    { name: "Name11", width: 110, type: "text", title : "제안서<br/>채택일" },
+                    { name: "Name12", width: 110, type: "text", title : "제안서<br/>열람" },
+                  ],
+                  pagerContainer: "#externalPager_44",
                   
-                  <dt>·  금융기관 선택 기준 <span class="blue">(필수)</span> (복수 선택 가능)</dt>
-                  <dd>
-                    <div class="formRow">
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_1_1" name="CheckBox" ><label for="chk_1_1"><span></span>대출 금액(한도)</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_1_2" name="CheckBox" ><label for="chk_1_2"><span></span>대출 금리</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_1_5" name="CheckBox" ><label for="chk_1_5"><span></span>기타</label>
-                      </span>
-                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요."  >
-                    </div>
-                  </dd>
-
-                  <dt>·  대출을 진행한 금융회사에 대한 만족도를 평가해 주세요. <span class="blue">(필수)</span></dt>
-                  <dd>
-                    <div class="formRow starChkWrap">
-                      <input type='radio' id="starChk_1" class='starChk starChk_1' name="starChk" title='별점1' />
-                      <input type='radio' id="starChk_2" class='starChk starChk_2' name="starChk" title='별점2' />
-                      <input type='radio' id="starChk_3" class='starChk starChk_3' name="starChk" title='별점3' />
-                      <input type='radio' id="starChk_4" class='starChk starChk_4' name="starChk" title='별점4' />
-                      <input type='radio' id="starChk_5" class='starChk starChk_5' name="starChk" title='별점5' />
-                      <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
-                      <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
-                      <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
-                      <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
-                      <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
-                    </div>
-                  </dd>
-
-                  <dt>·  향후 Loan&Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요? <span class="blue">(필수)</span></dt>
-                  <dd>
-                    <div class="formRow">
-                      <span class="radio">
-                        <input type="radio" id="surveyChk2_1" name="surveyChk2" value="A" />
-                        <label for="surveyChk2_1"><span></span>네</label>
-                      </span>
-                      <span class="radio">
-                        <input type="radio" id="surveyChk2_2" name="surveyChk2" value="A" />
-                        <label for="surveyChk2_2"><span></span>아니오</label>
-                      </span>
-                    </div>
-                  </dd>
-
-                  <dt>·  Loan&Biz의 서비스 중 어떤 부분에 만족하셨나요? <span class="blue">(필수)</span> </dt>
-                  <dd>
-                    <div class="formRow">
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_2_1" name="CheckBox" ><label for="chk_2_1"><span></span>제휴된 금융기관이 많아서</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_2_2" name="CheckBox" ><label for="chk_2_2"><span></span>대출 탐색 시간이 줄어서</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_2_5" name="CheckBox" ><label for="chk_2_5"><span></span>기타</label>
-                      </span>
-                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
-                    </div>
-                  </dd>
-                  <dt>·  Loan&Biz의 서비스 중 어떤 부분에 아쉬우셨나요? <span class="blue">(필수)</span></dt>
-                  <dd>
-                    
-                    <div class="formRow">
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_3_1" name="CheckBox" ><label for="chk_3_1"><span></span>복잡한 절차</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_3_2" name="CheckBox" ><label for="chk_3_2"><span></span>플랫폼 속도</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="chk_3_5" name="CheckBox" ><label for="chk_3_5"><span></span>기타</label>
-                      </span>
-                      <input type="text" class="input wid260" title="기타 내용 입력" placeholder="정보를 입력해 주세요." >
-                    </div>
-                  </dd>
-                </dl>
-                <div class="table_bt">
-                  <div class="btn_c">
-                    <button type="button" class="btnSuccess">평가 완료</button>
-                  </div>
-                </div>
-                 <!-- //v1.6 위치이동 및 수정 -->
-              </div>
-            </section>
+                });
+              });
+            </script>
           </div>
-        </div>
+        </section>
+
       </div>
 
 
@@ -887,6 +511,8 @@
     <!-- footer : end -->
     <!-- **************** -->
   </div>
+
+
 
 
 </body>
