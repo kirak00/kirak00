@@ -179,14 +179,14 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_progress ol.status_tab li.step_2   {background-image:url(../images/COP/main/no_data_main_2.png); }
 .loan_progress .stepBox li.step_3,
 .main_loan_progress ol.status_tab li.step_3   {background-image:url(../images/COP/main/no_data_main_3.png); }
-.loan_progress .stepBox li.step_4,
-.main_loan_progress ol.status_tab li.step_4   {background-image:url(../images/COP/main/no_data_main_4.png); }
+.loan_progress .stepBox li.step_4 {background-image:url(../images/COP/main/no_data_main_4.png); }
+.main_loan_progress ol.status_tab li.step_4   {background-image:url(../images/COP/main/no_data_main_4_new.png); }
 .loan_progress .stepBox li.step_5,
 .main_loan_progress ol.status_tab li.step_5   {background-image:url(../images/COP/main/no_data_main_5.png); }
 .main_loan_progress ol.status_tab li.step_1.disabled   {background-image:url(../images/COP/main/no_data_main_1_off.png); }
 .main_loan_progress ol.status_tab li.step_2.disabled   {background-image:url(../images/COP/main/no_data_main_2_off.png); }
 .main_loan_progress ol.status_tab li.step_3.disabled   {background-image:url(../images/COP/main/no_data_main_3_off.png); }
-.main_loan_progress ol.status_tab li.step_4.disabled   {background-image:url(../images/COP/main/no_data_main_4_off.png); }
+.main_loan_progress ol.status_tab li.step_4.disabled   {background-image:url(../images/COP/main/no_data_main_4_new_off.png); }
 .main_loan_progress ol.status_tab li.step_5.disabled   {background-image:url(../images/COP/main/no_data_main_5_off.png); }
 
 .main_loan_progress ol.status_tab li.disabled .subInfo .info { background: #eef0f1; color: #888; }
@@ -227,6 +227,7 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_cont .no_data .tit     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0 / 80px 80px; } 
 .main_loan_cont .no_data .tit .mainTxt { font-size: 20px; font-weight: bold;}
 .main_loan_cont .no_data .tit .mainTxt + .subTxt { margin-top: 10px;}
+.main_loan_cont .no_data .tit .subTxt { font-size: 16px; font-weight: 400;}
 .main_loan_cont .no_data span.btn {display:block; background:none !important; padding:0; display:block; text-align: center; padding:30px 0 0; }   
 .main_loan_cont .no_data span.btn button { min-width: 214px;}
 /* .main_loan_cont .no_data span.btn button.btnSuccess {width:210px; }  */
@@ -236,13 +237,16 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_cont .no_data.bg_more .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); } 
 .main_loan_cont .no_data.bg_survey .box { width: 832px; margin: 0 auto; padding: 40px; background: #fff; border-radius: 16px; border: 1px solid #ddd; }
 .main_loan_cont .no_data.bg_survey .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_05.png); } 
+.main_loan_cont .no_data.bg_none .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_06.png); } 
+.main_loan_cont .no_data.bg_done .tit      {background-image:url(../images/COP/main/ico_80_log_process_nodata_07.png); } 
 .main_loan_cont .no_data.bg_survey .formVertical { width: 440px; margin: 0 auto; align-items: flex-start; margin-top: 40px; gap: 30px; }
 .main_loan_cont .no_data.bg_survey .tit { font-size: 18px; font-weight: 700;}
 /* .main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); }  */
 .main_loan_cont .table_top .total     {font-weight: 700;} 
 .main_loan_cont .titBox     {padding:40px 0 20px; text-align: center; }
 .main_loan_cont .titBox strong  {font-size: 24px; }
-.main_loan_cont .titBox p       {color:#555; font-weight: 400; margin-top:10px; font-size: 16px ; }
+.main_loan_cont .titBox strong + p {  margin-top:10px; color: #555; }
+.main_loan_cont .titBox p       {color:#333; font-weight: 400; font-size: 16px ; }
 .main_loan_cont .bbs_list td    {font-weight: 400;}
 
 .moneyTxt     {}

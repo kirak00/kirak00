@@ -380,7 +380,8 @@ table.bbs_list a.btnLine,
 .btnSky:disabled,
 .btnWhite:disabled,
 .btnBlack:disabled,
-.btnWhiteLine:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
+.btnWhiteLine:disabled,
+.btnGray:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
 .btnBlack:disabled {border:1px solid #ddd;}
 
 .btnSuccess.lg { width: 216px ;}

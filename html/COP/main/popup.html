@@ -216,6 +216,31 @@
           }
         </script>
 
+        
+        <!-- 기본형 -->
+        <button type="button" class="btnSuccess" onclick='sample_alert_options3_2(this)'>마감일 연장완료</button>
+        <script>
+          function sample_alert_options3_2(obj){
+            layer_alert(
+              "제안서 마감일이 <br/><strong>[0000-00-00]</strong>으로 연장 되었습니다.", 
+              obj, 
+              {
+                confirm : {
+                  txt : "확인",
+                  callback : function(){
+                  }
+                },
+                closebtn : {
+                  show: true, // default :  false
+                  callback : function(){
+                    // alert("닫기")
+                  }
+                }
+              }
+            )
+          }
+        </script>
+
 
       </section>
       <section style="margin-top: 20px;">
@@ -306,6 +331,32 @@
               {
                 // tit:"비밀번호를 변경해 주세요", 
                 ment:"신청 중인 대출 비교 건이 있어요.<br/>신청을 완료하여 다양한 금융기관으로부터<br/>고객님께 최적화된 대출 제안을 받아보세요.<br/>이어서 작성 하시겠어요?"
+              }, 
+              obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "네", 
+                  callback : function(){ 
+                    // alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "아니요",
+                  callback : function(){
+                    // alert(2)
+                  }
+                }
+              })
+            }
+        </script>
+
+        <button type="button" class="btnSuccess" onclick='sample_alert_options2_9(this)'>마감일 변경 확인</button>
+        <script>
+          function sample_alert_options2_9(obj){
+            layer_confirm(
+              {
+                tit:"제안서 마감일 변경은 1회 가능하며<br/>최대 1개월까지 가능해요", 
+                ment:"변경하시겠습니까?"
               }, 
               obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
               {
