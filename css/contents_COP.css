@@ -225,6 +225,8 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_cont .list .status button.on em     {background:#069B66; color:#fff; font-weight: 700;}
 .main_loan_cont .no_data        { background:transparent; padding:60px 0 0; font-size: 16px; height:auto; text-align: center;  }   
 .main_loan_cont .no_data .tit     {display:block; padding-top:100px; background:url(../images/COP/main/no_data_main_1.png) no-repeat 50% 0 / 80px 80px; } 
+.main_loan_cont .no_data .tit .mainTxt { font-size: 20px; font-weight: bold;}
+.main_loan_cont .no_data .tit .mainTxt + .subTxt { margin-top: 10px;}
 .main_loan_cont .no_data span.btn {display:block; background:none !important; padding:0; display:block; text-align: center; padding:30px 0 0; }   
 .main_loan_cont .no_data span.btn button { min-width: 214px;}
 /* .main_loan_cont .no_data span.btn button.btnSuccess {width:210px; }  */
