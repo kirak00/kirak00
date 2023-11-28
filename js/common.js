@@ -252,7 +252,7 @@ function tabScript(){
     var wrap = $(o);
     var initChk = wrap.hasClass("noInit");
     var initTab = $("#"+wrap.attr("initTab")); 
-    var tab = wrap.find("[role=tab]").each(function(n){this.n=n});
+    var tab = wrap.find("[role=tab]").not(":disabled").each(function(n){this.n=n});
     var contArr = [];
     var liArr = [];
 
