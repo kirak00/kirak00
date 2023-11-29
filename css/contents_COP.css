@@ -103,7 +103,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .bnr_associate    { margin-top:80px; }
 .bnr_associate .tit    { text-align: center;}
 .bnr_associate .tit strong    { display:block; font-size:24px; font-weight: 700;}
-.bnr_associate .tit p    {margin-top:10px; }
+.bnr_associate .tit p    {margin-top:10px; color: #555; }
 
 .main_bnr_list               { display:flex; justify-content: space-between; margin-top:30px; margin-bottom:100px;  gap:40px; flex-wrap: wrap; }
 .main_bnr_list span.btnItem        { width:200px; height:70px; display:flex; border-radius:8px; margin:auto 0; box-shadow: 0px 2px 8px 0px #DDD;   }
@@ -272,8 +272,20 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 
 .layerCont .main_survey { padding: 0;}
 .layerCont .main_survey dl:first-child dt { padding-top: 0;}
+.layerCont .main_survey .formRow { flex-wrap: wrap;}
 .layerCont .main_survey .formRow .checkbox + .checkbox { margin-left: 32px;}
-.layerCont .main_survey .formRow .radio + .radio { margin-left: 32px;}
+.layerCont .main_survey .formRow .radio + .radio {margin-left: 32px;}
+
+.layerCont .notiBox + .main_survey.type2 { margin-top: 30px;}
+.layerCont .main_survey.type2 .formRow.full .checkbox { flex: 1;}
+.layerCont .main_survey.type2 .formRow .checkbox { margin-left: 0; margin-right: 40px;}
+.layerCont .main_survey.type2 .formRow .radio {margin-left: 0;  margin-right: 40px;}
+.layerCont .main_survey.type2 .textarea { height: 184px;}
+.layerCont .main_survey.type2 .formSet { flex-direction: column; align-items: flex-start; margin-left: 0; width: 100%;}
+.layerCont .main_survey dt.dot { position: relative; padding-left: 8px;}
+.layerCont .main_survey dt.dot::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
+
+
 /* 약관 */
 .content_terms    { margin-top:60px; }
 /* .content_terms .titH3 { margin-top: 80px; min-height:20px; padding-bottom:12px; } */
@@ -314,8 +326,8 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .tremsWrap      {}
 .tremsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;}
 .tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
-.tremsWrap .searchControlBox      {margin-top:60px; }
-.tremsWrap .terms_cont      {margin-top:40px; background:#FAFAFA; padding:40px; border-radius: 16px; }
+.tremsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; }
+.tremsWrap .tabLine.fullType { margin-bottom: 40px;}
 .tremsWrap .terms_style_1      {font-size:18px; }
 .tremsWrap .terms_style_1 strong  {display:block;  }
 .tremsWrap .terms_style_1 p     {margin-top:20px;}

@@ -1121,6 +1121,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeItem + .agreeItem { margin-top: 40px;}
 .agreeForm .agreeTitle { display: flex; justify-content: space-between; align-items: center; height: 60px; padding: 0 60px; border-bottom: 1px solid #ddd; }
 .agreeForm .agreeTitle:last-child { border-bottom: 0;}
+.agreeForm .agreeTitle .tit {font-weight: 700;}
+.agreeForm .agreeTitle .tit .blue { vertical-align: 0;}
 .agreeForm .agreeTitle .checkbox label { font-weight: 700;}
 .agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
 .agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
@@ -1901,6 +1903,8 @@ button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_2
 .layerWrap .layerBody.wid400 .layerFoot button    {min-width:165px; width:100%; }
 .layerWrap .layerBody.wid640 .layerFoot button    {min-width:214px; }
 .layerWrap .layerBody.wid640 .layerFoot { padding-top: 40px;}
+
+.layerWrap .layerBody.wid1000 .layerFoot button    {min-width:214px; }
 
 /* .layerWrap .layerBody .layerFoot button    {min-width:208px; } */
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}

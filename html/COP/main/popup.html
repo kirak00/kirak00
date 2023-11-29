@@ -387,7 +387,9 @@
         aria-controls="레이어 ID" // 접근성 팝업 알림용
         -->
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">제안서 마감일 연장</button>
-        
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey1">설문 참여하기1</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey2">설문 참여하기2</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey3">설문 참여하기3</button>
       </section>
 
     </div>
@@ -465,6 +467,348 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerSurvey1" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>설문 참여</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerSurvey1" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="notiBox textCenter">
+          <p class="gray5">제안서를 선택하지 않은 이유를 공유해주세요.<br/>
+          더 나은 Loan&Biz가 되도록 노력 할게요</p>
+        </div>
+        <div class="main_survey type2">
+          <dl>
+            <dt class="dot">제안서를 선택하지 않은 이유를 모두 선택해 주세요.</dt>
+            <dd>
+              <div class="formRow full">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>제안 금리가 전부 높아서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>제안 대출 한도가 부족해서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>대출 조건이 까다로워서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_4" name="CheckBox"><label for="chk_1_4"><span></span>다른 곳에서 자금을 구해서</label>
+                </span>
+               </div>
+            </dd>
+           
+            <dt class="dot">향후 Loan&amp;Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chk_2_1" name="chk_2" checked>
+                  <label for="chk_2_1"><span></span>네</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="chk_2_2" name="chk_2">
+                  <label for="chk_2_2"><span></span>아니오</label>
+                </span>
+              </div>
+            </dd>
+           
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_3_1" name="CheckBox"><label for="chk_3_1"><span></span>제휴된 금융회사가 많아서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_3_2" name="CheckBox"><label for="chk_3_2"><span></span>대출 탐색시간이 줄어서</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk_3_3" name="CheckBox"><label for="chk_3_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_4_1" name="CheckBox"><label for="chk_4_1"><span></span>복잡한 절차</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_4_2" name="CheckBox"><label for="chk_4_2"><span></span>플랫폼 속도</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk_4_3" name="CheckBox"><label for="chk_4_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnSuccess">제출</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerSurvey2" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>설문 참여</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerSurvey2" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="notiBox textCenter">
+          <p class="gray5">대출 비교 신청 진행과정을 공유해 주세요.<br/>
+          더 나은 Loan&Biz가 되도록 노력 할게요</p>
+        </div>
+        <div class="main_survey type2">
+          <dl>
+                 
+            <dt class="dot">제안서를 채택한 금융 회사와 대출 실행 여부가 아직 확인되지 않았어요.<br/>현재 채택한 제안서를 제출한 금융회사와 대출을 진행중 이신가요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chkSur_1_1" name="chkSur_1" value="A">
+                  <label for="chkSur_1_1"><span></span>예 진행중 이에요.</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="chkSur_1_2" name="chkSur_1" value="A">
+                  <label for="chkSur_1_2"><span></span>아니오. 대출을 진행하지 않았어요.</label>
+                </span>
+              </div>
+            </dd>
+           
+
+            <dt class="dot">대출이 진행되지 않은 이유를 모두 알려주시겠어요? (중복 가능)</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_2_1" name="chkSur_2"><label for="chkSur_2_1"><span></span>금융 회사의 대출 조건 변경</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_2_2" name="chkSur_2"><label for="chkSur_2_2"><span></span>자금이 필요하지 않게 되어서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_2_3" name="chkSur_2"><label for="chkSur_2_3"><span></span>내부 사정에 의해</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSur_2_4" name="chkSur_2"><label for="chkSur_2_4"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+               </div>
+            </dd>
+
+            <dt class="dot">향후 Loan&amp;Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chkSur_3_1" name="chkSur_3" value="A">
+                  <label for="chkSur_3_1"><span></span>예 진행중 이에요.</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="chkSur_3_2" name="chkSur_3" value="A">
+                  <label for="chkSur_3_2"><span></span>아니오. 대출을 진행하지 않았어요.</label>
+                </span>
+              </div>
+            </dd>
+           
+      
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_4_1" name="chkSur_4"><label for="chkSur_4_1"><span></span>제휴된 금융회사가 많아서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_4_2" name="chkSur_4"><label for="chkSur_4_2"><span></span>대출 탐색시간이 줄어서</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSur_4_3" name="chkSur_4"><label for="chkSur_4_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_5_1" name="chkSur_5"><label for="chkSur_5_1"><span></span>복잡한 절차</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSur_5_2" name="chkSur_5"><label for="chkSur_5_2"><span></span>플랫폼 속도</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSur_5_3" name="chkSur_5"><label for="chkSur_5_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnSuccess">제출</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+    <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerSurvey3" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>설문 참여</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerSurvey3" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="notiBox textCenter">
+          <p class="gray5">Loan&Biz를 사용하신 경험을 공유해주세요.<br/>
+            더 나은 Loan&Biz가 되도록 노력 할게요</p>
+        </div>
+        <div class="main_survey type2">
+          <dl>
+                 
+            <dt class="dot">금융 회사가 제출한 제안서와 실제 대출이 일치 했나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chkSurvey_1_1" name="chkSurvey_1" value="A">
+                  <label for="chkSurvey_1_1"><span></span>네</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="chkSurvey_1_2" name="chkSurvey_1" value="A">
+                  <label for="chkSurvey_1_2"><span></span>아니오</label>
+                </span>
+              </div>
+            </dd>
+           
+
+            <dt class="dot">금융 회사 선택 기준 (복수 선택 가능)</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_2_1" name="chkSurvey_2"><label for="chkSurvey_2_1"><span></span>대출 금액(한도)</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_2_2" name="chkSurvey_2"><label for="chkSurvey_2_2"><span></span>대출 금리</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSurvey_2_3" name="chkSurvey_2"><label for="chkSurvey_2_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+               </div>
+            </dd>
+
+            <dt class="dot">대출을 진행한 금융 회사에 대한 만족도를 평가해 주세요.</dt>
+            <dd>
+              <div class="formRow starChkWrap">
+                <input type="radio" id="starChk_1" class="starChk starChk_1" name="starChk" title="별점1">
+                <input type="radio" id="starChk_2" class="starChk starChk_2" name="starChk" title="별점2">
+                <input type="radio" id="starChk_3" class="starChk starChk_3" name="starChk" title="별점3">
+                <input type="radio" id="starChk_4" class="starChk starChk_4" name="starChk" title="별점4">
+                <input type="radio" id="starChk_5" class="starChk starChk_5" name="starChk" title="별점5">
+                <label for="starChk_1" class="starChk_1"><span class="hide">별점1</span></label>
+                <label for="starChk_2" class="starChk_2"><span class="hide">별점2</span></label>
+                <label for="starChk_3" class="starChk_3"><span class="hide">별점3</span></label>
+                <label for="starChk_4" class="starChk_4"><span class="hide">별점4</span></label>
+                <label for="starChk_5" class="starChk_5"><span class="hide">별점5</span></label>
+              </div>
+            </dd>
+
+            <dt class="dot">향후 Loan&amp;Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chkSurvey_4_1" name="chkSurvey_4" value="A">
+                  <label for="chkSurvey_4_1"><span></span>네</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="chkSurvey_4_2" name="chkSurvey_4" value="A">
+                  <label for="chkSurvey_4_2"><span></span>아니오</label>
+                </span>
+              </div>
+            </dd>
+           
+      
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_5_1" name="chkSurvey_5"><label for="chkSurvey_5_1"><span></span>제휴된 금융회사가 많아서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_5_2" name="chkSurvey_5"><label for="chkSurvey_5_2"><span></span>대출 탐색시간이 줄어서</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSurvey_5_3" name="chkSurvey_5"><label for="chkSurvey_5_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_6_1" name="chkSurvey_6"><label for="chkSurvey_6_1"><span></span>복잡한 절차</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chkSurvey_6_2" name="chkSurvey_6"><label for="chkSurvey_6_2"><span></span>플랫폼 속도</label>
+                </span>
+                <div class="formSet">
+                  <span class="checkbox">
+                    <input type="checkbox" id="chkSurvey_6_3" name="chkSurvey_6"><label for="chkSurvey_6_3"><span></span>기타</label>
+                  </span>
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnSuccess">제출</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
 
 </body>
 </html>

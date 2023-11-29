@@ -107,7 +107,7 @@
                 <span>안녕하세요!</span>
                 <strong>(주)신한은행 고객님😊</strong>
               </div>
-              <button type="button" class="btnWhite">추가 대출 비교하기</button><!-- v1.8 워딩 수정 -->
+              <button type="button" class="btnWhite">추가 대출 비교하기</button>
             </div>
             <div class="msgBox on">
               <span class="ico_msg"><span class="hide">메세지함</span><em>12</em></span>
@@ -216,31 +216,25 @@
             </div>
           </div>
           <script>
-            /* jsgrid sample */
+            /* jsgrid sample */ //v2.0 수정
             $(function() {
               var clients = [
                 { "Name1": '2023-07-11', 
                   "Name2": '롯데캐피탈',
                   "Name3": '종합소득세',
-                  "Name4": '2023-07-12',
-                  "Name5": '<button type="button" class="ico_down black">다운로드</button>',
                 },
                 { "Name1": '2023-07-11', 
                   "Name2": '롯데캐피탈',
                   "Name3": '종합소득세',
-                  "Name4": '미제출',
-                  "Name5": '<button type="button" class="ico_send">제출하기</button>',
                 },
               ];
               $("#main_grid_2").jsGrid({
                 data: clients,
                 sorting : true,
                 fields: [
-                  { name: "Name1", width: 200,  type: "text", title : "요청일", sorting: false,},
-                  { name: "Name2", width: 200, type: "text", title : "심사 참여 금융 회사", sorting: false},
-                  { name: "Name3", width: 200, type: "text", title : "필요 서류 안내", sorting: false},
-                  { name: "Name4", width: 200, type: "text", title : "제출일"},
-                  { name: "Name5", width: 200, type: "text", title : "제출 서류",sorting: false, },
+                  { name: "Name1", width: 260,  type: "text", title : "요청일", sorting: false,},
+                  { name: "Name2", width: 230, type: "text", title : "심사 참여 금융 회사", sorting: false},
+                  { name: "Name3", width: 900, type: "text", title : "필요 서류 안내", sorting: false},
                 ],
                 pagerContainer: "#externalPager_2",
               });
@@ -248,7 +242,7 @@
           </script>
         </section>
 
-        <!-- 제안서 마감일 연장 -->
+        <!-- 제안서 접수 마감일 연장 -->
         <section class="main_loan_cont" id="main_loan_tab_3" role="tabpanel">
           <div class="no_data bg_reviewing">
             <span class="tit">Loan&Biz와 제휴된 금융회사들이 고객님의 신청 건을 검토 중에 있어요.</span>
@@ -265,32 +259,15 @@
               </span>
             </span>
           </div>
-          <div class="no_data bg_more">
-            <span class="tit">
-              제안서 접수 마감일을 연장했지만 아쉽게도 도착한 제안서가 없어요.<br/>
-            다른 조건으로 대출 비교하기를 신청 하시겠어요?
-             <span class="btn">
-                <button type="button" class="btnSuccess">추가 대출 비교하기</button>
-              </span>
-            </span>
-          </div>
         </section>
 
         <!-- 제안서 접수 및 채택 -->
         <section class="main_loan_cont"  id="main_loan_tab_4" role="tabpanel">
-          <div class="no_data bg_survey">
-            <div class="tit">
-              <p class="mainTxt">아쉽게도 제안서를 채택하지 않으셨네요.</p>
-              <p class="subTxt">제안서를 선택하지 않은 이유를 공유해 주시면, 더 나은 Loan&Biz가 되도록 할게요.</p>
-              <span class="btn">
-                <button type="button" class="btnSuccess">설문 참여하기</button>
-              </span>
-            </div>
-          </div>
           <div class="contentBox">
+            <!-- v2.0 워딩 수정 -->
             <div class="titBox">
-              <strong>금융 회사로부터 제안서가 도착했어요.</strong>
-              <p>제안 내용을 확인해 주세요.</p>
+              <strong>금융 회사로부터 제안서가 도착했어요. 제안서 확인 후 채택 하실 수 있어요.</strong>
+              <p>자세한 상담은 금융회사 담당자에게 문의해 주세요</p>
             </div>
             <div class="table_top">
               <div class="total">
@@ -480,9 +457,34 @@
           </div>
         </section>
 
-        <!-- 대출약정 -->
-        <section class="main_loan_cont show"><!-- v1.9 show 추가 -->
+        <!-- step2 모든 버튼 disabled 상태 --><!-- .show 추가 시 보여짐 -->
+        <section class="main_loan_cont"><!-- v2.0 추가 -->
+        <div class="no_data bg_more">
+          <span class="tit">
+            제안서 접수 마감일을 연장했지만 아쉽게도 도착한 제안서가 없어요.<br/>
+          다른 조건으로 대출 비교하기를 신청 하시겠어요?
+          <span class="btn">
+              <button type="button" class="btnSuccess">추가 대출 비교하기</button>
+            </span>
+          </span>
+        </div>
+        </section>
 
+        <!-- step3 모든 버튼 disabled 상태 -->
+        <section class="main_loan_cont"><!-- v2.0 추가 -->
+          <div class="no_data bg_survey">
+            <div class="tit">
+              <p class="mainTxt">아쉽게도 제안서를 채택하지 않으셨네요.</p>
+              <p class="subTxt">제안서를 선택하지 않은 이유를 공유해 주시면, 더 나은 Loan&Biz가 되도록 할게요.</p>
+              <span class="btn">
+                <button type="button" class="btnSuccess">설문 참여하기</button>
+              </span>
+            </div>
+          </div>
+        </section>
+        
+        <!-- step4 모든 버튼 disabled 상태 -->
+        <section class="main_loan_cont show">
           <div class="contentBox">
             <div class="titBox">
               <p>채택한 제안서와 관련한 자세한 상담은 <span class="textBold">금융 회사 담당자에게 문의해주세요.</span></p>
@@ -592,9 +594,8 @@
               </span>
             </div>
           </div>
-
-          
         </section>
+
       </div>
 
 
