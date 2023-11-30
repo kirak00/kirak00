@@ -380,16 +380,24 @@ table.bbs_list a.btnLine,
 .btnSky:disabled,
 .btnWhite:disabled,
 .btnBlack:disabled,
-.btnWhiteLine:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
+.btnWhiteLine:disabled,
+.btnGray:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
 .btnBlack:disabled {border:1px solid #ddd;}
 
 .btnSuccess.lg { width: 216px ;}
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
 a.ico_down       {color:#069B66; }
+.ico_down.black       {color:#333;}
 .ico_down::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_24_download_blue.png) no-repeat 50% 50% / contain; }
+.ico_down.black::after       { background-image:url(../images/common/ico_18_download_primary.png); }
 .ico_down:disabled       {color:#333; opacity: .4; }
 .ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
+
+.ico_send {padding:0 32px; color:#069B66; font-weight: 700;}
+.ico_send::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_18_blank_primary.png) no-repeat 50% 50% / contain; }
+/* .ico_send:disabled       {color:#333; opacity: .4; } */
+/* .ico_send:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; } */
 
 
 .ico_check::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -4px; background:url(../images/common/ico_18_check_primary.png) no-repeat 50% 50% / contain; }
@@ -1115,6 +1123,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeItem + .agreeItem { margin-top: 40px;}
 .agreeForm .agreeTitle { display: flex; justify-content: space-between; align-items: center; height: 60px; padding: 0 60px; border-bottom: 1px solid #ddd; }
 .agreeForm .agreeTitle:last-child { border-bottom: 0;}
+.agreeForm .agreeTitle .tit {font-weight: 700;}
+.agreeForm .agreeTitle .tit .blue { vertical-align: 0;}
 .agreeForm .agreeTitle .checkbox label { font-weight: 700;}
 .agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
 .agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
@@ -1906,6 +1916,8 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .layerWrap .layerBody.wid640 .layerFoot button    {min-width:214px; }
 .layerWrap .layerBody.wid640 .layerFoot { padding-top: 40px;}
 
+.layerWrap .layerBody.wid1000 .layerFoot button    {min-width:214px; }
+
 /* .layerWrap .layerBody .layerFoot button    {min-width:208px; } */
 .layerWrap .layerBody .layerFoot.fullType button { width: 100%;}
 .layerWrap .layerBody .layerFoot.fullType button + button { margin-top: 8px;}
@@ -2233,7 +2245,7 @@ ul.guideBox li.bul::before {content:"·"; position:absolute; left:0; top:0px; }
 .main_myInfo .welcomeBox .welcometit        {padding-left:40px;  }
 .main_myInfo .welcomeBox .welcometit span   {font-size:18px; }
 .main_myInfo .welcomeBox .welcometit strong {display:block; font-size:30px; margin-top:3px;  }
-.main_myInfo .welcomeBox button        { height:40px; padding: 0 30px;}
+.main_myInfo .welcomeBox button        { height:40px; padding: 0 20px;}
 .main_myInfo .msgBox        {position:relative; width:40px; height:40px; top:31px; right:30px;  }
 .main_myInfo .msgBox span.ico_msg        {display:block; width:40px; height:40px; background:url(../images/FIN/ico_msg.png) no-repeat 0 0 / 26px auto ; }
 .main_myInfo .msgBox span.ico_msg em     {position:absolute; width:18px; height:18px; right:7px; top:-3px; background:#FE5050; color:#fff; font-size:12px; line-height:18px; font-weight: 700; text-align: center; border-radius:50%;  }
