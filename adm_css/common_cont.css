@@ -1571,6 +1571,17 @@ button.ui-datepicker-trigger img  {opacity:0; }
 button.ui-datepicker-trigger:hover {background-image: url(../adm_images/common/ico_24_calendar_w.png); background-color:#148159}
 .lg button.ui-datepicker-trigger { width: 50px; height: 50px;}
 
+
+
+button.ui-monthpicker-trigger      { align-items: center; justify-content: center; min-width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../adm_images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff; }
+button.ui-monthpicker-trigger img  {opacity:0; }
+button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/ico_24_calendar_w.png); background-color:#148159}
+.lg button.ui-monthpicker-trigger { width: 50px; height: 50px;}
+
+#ui-monthpicker-div .ui-state-default  {display:block; width:100%; text-align: center;}
+
+
+
 .rangeControl .input { min-height: 50px; padding: 0 16px; width:140px; letter-spacing: -1px; }
 .rangeControl span.uit { line-height:50px; }
 .rangeControl .ui-datepicker-trigger img  {opacity:0; }

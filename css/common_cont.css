@@ -791,7 +791,9 @@ input[type=text].innerTxt_2.wid135  { width:135px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:50px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:50px;padding-right:20px; text-align: right;  }
+input[type=text].wid114 {width:114px; }
 input[type=text].innerTxt_1.wid114 {width:114px; }
+input[type=text].innerTxt_1.wid100 {width:100px; }
 input[type=text].innerTxt_1.wid155 {width:155px; }
 
 
@@ -1794,6 +1796,16 @@ button.ui-datepicker-trigger      { align-items: center; justify-content: center
 button.ui-datepicker-trigger img  {opacity:0; }
 button.ui-datepicker-trigger:hover {background-image: url(../images/common/ico_24_calendar_w.png); background-color:#148159}
 .lg button.ui-datepicker-trigger { width: 50px; height: 50px;}
+
+
+button.ui-monthpicker-trigger      { align-items: center; justify-content: center; min-width: 50px; height: 50px; padding: 0; border:1px solid #069B66; border-radius: 8px; background: url(../adm_images/common/ico_24_calendar_primary.png) no-repeat 50% 50% #fff; }
+button.ui-monthpicker-trigger img  {opacity:0; }
+button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/ico_24_calendar_w.png); background-color:#148159}
+.lg button.ui-monthpicker-trigger { width: 50px; height: 50px;}
+
+#ui-monthpicker-div .ui-state-default  {display:block; width:100%; text-align: center;}
+
+
 
 .rangeControl .input { min-height: 50px; padding: 0 16px; width:140px; letter-spacing: -1px; }
 .rangeControl span.uit { line-height:50px; }
