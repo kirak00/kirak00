@@ -404,8 +404,8 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 
 .suggestLoanList { background: #d9d9d9; border-radius: 15px; }
 
-
-.boardTit .barList { margin-top: 8px;} 
+.boardTit .barLis .tit { font-size: 18px; font-weight: 700;}
+.boardTit .barList { margin-top: 12px;} 
 .boardTit .barList .list { font-size: 14px;}
 .boardTit .barList .list + .list::before { height: 12px; margin-top: -7px; }
 .boardCont { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; }

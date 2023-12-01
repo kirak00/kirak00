@@ -50,58 +50,29 @@
           )
         }
       </script>
-      <button type="button" class="btnSuccess" onclick='sample_alert_2(this)'>탈퇴 완료</button>
-      <script>
-        function sample_alert_2(obj){
-          layer_alert(
-            {
-              tit:"회원탈퇴가 완료되었습니다.", 
-              ment:"그동안 Loan&Biz를 이용해 주셔서 감사합니다.<br/>귀사의 대출관련정보는 000법에 의거하여<br/>00년간 보관됩니다."
-            }, 
-            obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
-            {
-              confirm:{
-                txt:"확인",  // 버튼 문구 변경
-                callback:function(){   // 버튼 callback func
-                  alert(3)
-                }
-              },
-              // cancel:{
-              //   callback:function(){   // 버튼 callback func
-              //     alert('취소')
-              //   }
-              // },
-              closebtn : {
-                show: true, // default :  false
-                callback : function(){
-                  alert("닫기")
-                }
-              }
-            })
-        }
-      </script>
+      
     </section>
     <section style="margin-top: 20px;">
       <h3 style="margin-bottom: 10px">버튼 2개</h3>
-      <button type="button" class="btnSuccess" onclick='sample_confirm_options(this)'>탈퇴 컨펌</button>
-      <button type="button" class="btnSuccess" onclick='layer_confirm({tit:"진행중인 대출 비교 건이 있습니다.", ment:"탈퇴 시 진행 중인 대출 비교 건이 자동 종료됩니다.<br/>계속 진행하시겠습니까?"}, this , {confirm:{txt:"네", callback:function(){alert(3)}},cancel:{txt: "아니오"} })'>진행중인 대출 비교건 있음</button>
-      <script>
+      <button type="button" class="btnSuccess" onclick='sample_confirm_options(this)'>컨펌 메시지</button>
+      <button type="button" class="btnSuccess" onclick='layer_confirm({ ment:"변경된 정보가 있습니다.<br/><br/>변경된 내용을 저장하지 않고<br/>이전 화면으로 돌아가시겠습니까?"}, this , {confirm:{txt:"확인"},cancel:{txt: "취소"} })'>변경 정보 있음</button>
+      <script> 
         function sample_confirm_options(obj){
           layer_confirm(
-            "진행중인 대출 비교 건이 있습니다.", 
+            "선택한 메시지를 삭제하시겠습니까?", 
             obj, 
             {
               confirm : {
-                txt : "회원탈퇴",
-                callback : function(){
-                  alert("확인")
-                }
+                txt : "네",
+                // callback : function(){
+                //   alert("확인")
+                // }
               },
               cancel : {
-                txt : "취소",
-                callback : function(){
-                  alert("취소")
-                }
+                txt : "아니오",
+                // callback : function(){
+                //   alert("취소")
+                // }
               },
               closebtn : {
                 show: true, // default : true
@@ -144,9 +115,8 @@
             <div class="formRow">
               <input class="input wid120" type="text" id="formLabel1" title="이메일 아이디" placeholder="hong" value="hong" maxlength="50">
               <span class="unit mail">@</span>
-              <input class="input" title="도메인주소" type="text" placeholder="gmail.com" value="">
+              <input class="input" title="도메인주소" type="text" placeholder="" value="gmail.com">
               <select title="도메인주소 선택" class="wid160" >
-                <option>gmail.com</option>
                 <option>직접 입력</option>
               </select>
             </div>

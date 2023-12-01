@@ -21,15 +21,49 @@
   <!-- **************** -->
   <hr/>
   <div class="container" id="skip_content"  aria-label="컨텐츠">
-   
-    <section>
-      <button type="button" class="btnSuccess">대출 비교하기 신청 준비가 되셨나요?</button>
+    <section class="">
+      <h3 style="margin-bottom: 10px">알럿</h3>
     </section>
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">버튼 2개</h3>
+      <button type="button" class="btnSuccess" id="confirmClick">비로그인 접근</button>
+      <script>
+        $("#confirmClick").on("click",function(){
+          // layer alert
+          layer_confirm(
+            "대출 비교 서비스를 이용하기 위해선<br/>로그인 또는 회원가입이 필요합니다.",
+            this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+            {
+              confirm:{ //  확인 
+                txt : "로그인", 
+                callback : function(){ 
+                  alert(3)
+                }
+              },
+              cancel:{ //  취소 
+                txt : "회원가입",
+                callback : function(){
+                  alert(2)
+                }
+              }
+            }
+          )
+          // layer alert
+
+        })
+      </script>
+    </section>
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">팝업</h3>
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">대출 비교하기 신청 준비가 되셨나요?</button>
+    </section>
+    
   </div>
   
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
+
   <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
@@ -45,14 +79,20 @@
           <li><em>1</em>대출 비교 신청을 위해서는 법인공동인증서가 반드시 필요해요.</li>
           <li>
             <em>2</em>대출비교신청정보는 정확한 내용으로 작성해 주세요.
-            <p class="notiTxt">작성 내용과 실제 내용이 불일치 하는 경우, 진행이 어려울 수 있습니다.</p>
+            <p class="notiTxt noIcon">작성 내용과 실제 내용이 불일치 하는 경우, 진행이 어려울 수 있습니다.</p>
           </li>
           <li><em>3</em>중간 저장 기능이 있어 언제든 이어서 작성하실 수 있어요.</li>
           <li><em>4</em>금융 회사의 제안 조건(대출 금액, 금리)은 실제 대출과정에서 일부 변경될 수 있어요.</li>
         </ol>
+        <div class="guideBox mt30">
+          <p class="notiTxt">유의사항</p>
+          <ul class="guideList dot">
+            <li class="list">향후 정의 (1,000자 이상 기재 예상)</li>
+          </ul>
+        </div>
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">확인</button>
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">다음</button>
       </div>
     </div>
     <div class="layerDimm"></div>
@@ -60,6 +100,7 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
 
 </body>
 </html>

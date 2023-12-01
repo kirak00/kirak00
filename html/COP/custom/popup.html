@@ -23,33 +23,8 @@
 
   <div class="wrap">
     <div class="container" id="skip_content"  aria-label="콘텐츠">
-      <section>
-
-        <button type="button" class="btnSuccess"  id="confirmClick">로그인 알럿</button>
-        <script>
-          $("#confirmClick").on("click",function(){
-            layer_confirm(
-              // 비로그인
-              "1:1 문의는 로그인 후 이용해주세요.",
-              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
-              {
-                confirm:{ //  확인 
-                  txt : "로그인", 
-                  callback : function(){ 
-                    // alert(3)
-                  }
-                },
-                cancel:{ //  취소 
-                  txt : "닫기",
-                  callback : function(){
-                    // alert(2)
-                  }
-                }
-              }
-            )
-          });
-        </script>
-        
+      <section class="">
+        <h3 style="margin-bottom: 10px">알럿</h3>
         <!-- 기본형 -->
         <button type="button" class="btnSuccess" onclick='sample_alert_options2_1(this)'>기본 알럿 문구</button>
         <script>
@@ -80,15 +55,19 @@
             )
           }
         </script>
+      </section>
 
-
-        <button type="button" class="btnSuccess" onclick='sample_alert_options2_7(this)'>파일 재업로드</button>
+      <section style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px">버튼 2개</h3>
+        <button type="button" class="btnSuccess" onclick='sample_alert_options2_7(this)'>문의 삭제</button>
         <script>
           function sample_alert_options2_7(obj){
             layer_confirm(
               {
                 // tit:"비밀번호를 변경해 주세요", 
-                ment:"제출된 첨부파일이 삭제됩니다.<br/>파일을 다시 올리시겠습니까?"
+                ment:`해당 문의를 삭제하시겠습니까?<br/>
+                      (문의 삭제 시 문의 내용과 관리자 답변 내용들이<br/>
+                      전부 삭제됩니다.)`
               }, 
               obj,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
               {
@@ -107,15 +86,6 @@
               })
             }
         </script>
-
-
-      </section>
-      <section style="margin-top: 20px;">
-      
-      </section>
-
-      <section style="margin-top: 20px;">
-       
       </section>
 
 
@@ -157,43 +127,6 @@
     <!-- **************** -->
   </div>
 
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap modal" id="sampleLayer" role="dialog" aria-modal="true" ><!-- show class 삭제 하면 숨김처리 -->
-    <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid500">
-      <div class="layerHead ">
-        <h3>제안서 마감일 연장</h3>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
-      </div>
-      <div class="layerCont">
-        <div class="guideBox mt0">
-          <ul class="guideList dot">
-            <li class="list">제안서 마감일 연장은 1회 가능해요.</li>
-            <li class="list">연장할 제안서 마감일은 최대 30일까지 가능해요.</li>
-            <li class="list">제안서 마감일을 연장하시면 심사중인 금융 회사에게 알림을 보내요.</li>
-          </ul>
-        </div>
-        <div class="sectionBlock20">
-          <h4 class="titH6 textRegular">연장하실 제안서 마감일을 선택하세요</h4>
-          <div class="formList">
-            <div class="rangeControl fullType">
-              <input type="text" class="input calendar" title="기간선택 시작" value="2023-07-01" aria-label="달력 입력(예시:2023-09-01)">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">변경</button>
-        <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">취소</button>
-      </div>
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
 
 </body>
 </html>

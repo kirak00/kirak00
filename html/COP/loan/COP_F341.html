@@ -23,41 +23,110 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
       <h2 class="pageTit">대출 비교하기</h2>
+      <p class="pageSub">(주)신한은행 고객님이 진행하신 대출 비교 진행 내용입니다.</p>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><strong>대출 비교하기</strong></a></li>
       </ul>
     </section>
     <section>
-      <fieldset>
-        <legend>게시물 검색</legend>
-        <div class="bbsSearch">
-          <!--  v1.4 수정 -->
-          <div class="formList">
-            <label class="label">자금 용도 선택</label>
-            <span class="formRow">
-              <span class="radio">
-                <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
-                <label class="label" for="formLabel1_1"><span></span>시설 자금</label>
-                <em class="tooltip_q" title="공장 구입, 생산설비 등의 도입에 소요되는 자금"><span class="txt"></span></em><!-- v1.6 추가 -->
-              </span>        
-              <span class="radio">
-                <input type="radio" id="formLabel1_2" name="formLabel1" value="" checked/>
-                <label class="label" for="formLabel1_2"><span></span>운전 자금</label>
-                <em class="tooltip_q" title="원자재 구입 비용 등 기업 운영에 소요되는 자금"><span class="txt"></span></em><!-- v1.6 수정 -->
-              </span>   
+
+      <div class="loanSelect">
+        <div class="list">
+          <span class="radio radioBtn">
+            <input type="radio" id="selectLabel1" name="selectLabel" checked>
+            <label for="selectLabel1">
+              <span class="tt">시설자금 대출</span>
+              <span class="dd">공장 구입, 생산 설비 등의 도입에 <br>
+                소요되는 자금</span>
+            </label>
+          </span>
+          <button type="button" class="btnSuccess ico_right">새로운 대출 비교 신청하기</button>
+        </div>
+        <div class="list">
+          <span class="radio radioBtn">
+            <input type="radio" id="selectLabel2" name="selectLabel">
+            <label for="selectLabel2">
+              <span class="tt">운전자금 대출</span>
+              <span class="dd">기업의 생산과 고유의 판매활동 등에 소요되는<br>
+                자금을 지원하는 대출</span>
+            </label>
+          </span>
+          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+        </div>
+        <div class="list">
+          <span class="radio radioBtn">
+            <input type="radio" id="selectLabel3" name="selectLabel">
+            <label for="selectLabel3">
+              <span class="tt">기계설비 리스</span>
+              <span class="dd">추후 정의<br>
+                추후 정의</span>
+            </label>
+          </span>
+          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+        </div>
+        <div class="list">
+          <span class="radio radioBtn">
+            <input type="radio" id="selectLabel4" name="selectLabel">
+            <label for="selectLabel4">
+              <span class="tt">할부금융</span>
+              <span class="dd">추후정의<br>
+                추후정의</span>
+            </label>
+          </span>
+          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+        </div>
+      </div>
+    
+      <section class="sectionBlock40">
+        <!--  v1.4 수정반영 -->
+        <div class="titH6">상세 용도를 선택해 주세요.</div>
+        <div class="checkBoxScroll number4" role="group" aria-labelledby="accLabel1_2">
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox">
+            <label for="searchCheckBox_1"><span></span>공장의 신설, 매입, 보수</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_2" name="searchCheckBox">
+            <label for="searchCheckBox_2"><span></span>기계기구 등의 신, 증설 개보수</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_3" name="searchCheckBox">
+            <label for="searchCheckBox_3"><span></span>공장 등 건설 목적의 토지 매입 자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_4" name="searchCheckBox">
+            <label for="searchCheckBox_4"><span></span>다른회사 인수자금(지분 50% 초과)</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_5" name="searchCheckBox">
+            <label for="searchCheckBox_5"><span></span>업무용 부동산 임차보증금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_6" name="searchCheckBox">
+            <label for="searchCheckBox_6"><span></span>업무용 건물 신, 증설 매입자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_7" name="searchCheckBox">
+            <label for="searchCheckBox_7"><span></span>SOC 사업자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox_8" name="searchCheckBox">
+            <label for="searchCheckBox_8"><span></span>다른 은행 시설자금대출 상환</label>
+          </span>
+          <div class="formSet">
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox_9" name="searchCheckBox">
+              <label for="searchCheckBox_9"><span></span>기타</label>
             </span>
-          </div>
-          <!--  v1.4 수정반영 .right 추가 -->
-          <div class="searchBtns right">
-            <button type="button" class="btnSuccess">대출 비교하기</button>
+            <input class="input wid400" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
           </div>
         </div>
-      </fieldset>
+      </section>
     
-      <section class="">
+      <section class="sectionBlock40">
         <!--  v1.4 수정반영 -->
-        <div class="titH6">(주)신한은행 고객님이 진행하신 대출 비교 진행 내용 입니다.</div>
+        <div class="titH6">진행 중인 대출 비교 신청 목록</div>
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs" caption="대출 비교 목록"></div>   
           <div id="externalPager2" class="external-pager"></div>
@@ -67,64 +136,40 @@
             
             var clients = [
               { 
-                "Name1": "진행중",// v1.4 수정반영
-                "Name2": "w_230809_0001", //v.16 .goLink 삭제 
-                "Name3": "2023-08-01", 
-                "Name4": "시설자금", 
+                "Name1": "220230915001",// v1.4 수정반영
+                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name3": "시설 자금", 
+                "Name4": "<span class='textBold'>신청중</span>", 
                 // "Name5": "고정", <!-- v1.6 삭제 -->
                 // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
                 // "Name7": "2023-08-01", 
                 // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
                 // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid120'>이어 작성 하기</a>",  // v1.6 수정반영
+                "Name10": "<a href='#;' class='btnWhite wid160'>이어 작성 하기</a>",  // v1.6 수정반영
               },
               { 
-                "Name1": "진행중",
-                "Name2": "w_230809_0001", //v.16 .goLink 삭제 
-                "Name3": "2023-08-01", 
-                "Name4": "시설자금", 
-                // "Name5": "고정", 
+                "Name1": "220230915001",// v1.4 수정반영
+                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name3": "시설 자금", 
+                "Name4": "<span class='textBold'>금융 회사 확인 중</span>", 
+                // "Name5": "고정", <!-- v1.6 삭제 -->
                 // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
                 // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold'>심사중</sapn>", 
+                // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
                 // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid120'>이어 작성 하기</a>", 
+                "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>",  // v1.6 수정반영
               },
               { 
-                "Name1": "종료",
-                "Name2": "w_230809_0001", //v.16 .goLink 삭제 
-                "Name3": "2023-08-01", 
-                "Name4": "시설자금", 
-                // "Name5": "고정", 
+                "Name1": "220230915001",// v1.4 수정반영
+                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name3": "시설 자금", 
+                "Name4": "<span class='textBold blue'>제안서 확인 및 채택</span>", 
+                // "Name5": "고정", <!-- v1.6 삭제 -->
                 // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
                 // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold'>심사중</sapn>", 
+                // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
                 // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid120'>이어 작성 하기</a>", 
-              },
-              { 
-                "Name1": "종료",
-                "Name2": "w_230809_0001", //v.16 .goLink 삭제 
-                "Name3": "2023-08-01", 
-                "Name4": "시설자금", 
-                // "Name5": "고정", 
-                // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
-                // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold blue'>대출실행</sapn>", 
-                // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid120'>이어 작성 하기</a>", 
-              },
-              { 
-                "Name1": "종료",
-                "Name2": "w_230809_0001", //v.16 .goLink 삭제 
-                "Name3": "2023-08-01", 
-                "Name4": "시설자금", 
-                // "Name5": "고정", 
-                // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
-                // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class=''>대출 미실행</sapn>", 
-                // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid120'>이어 작성 하기</a>", 
+                "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  // v1.6 수정반영
               },
             ]; 
   
@@ -133,16 +178,16 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
   
               fields: [
-                { name: "Name1",  type: "text", title : "상태", width: 230},
-                { name: "Name2",  type: "text", title : "대출 신청 번호", width: 320},
-                { name: "Name3",  type: "text", title : "대출 비교 신청일", width: 270},
-                { name: "Name4",  type: "text", title : "자금 용도", width: 270},
+                { name: "Name1",  type: "text", title : "대출 신청 번호", width: 230},
+                { name: "Name2",  type: "text", title : "대출 비교 신청일", width: 320},
+                { name: "Name3",  type: "text", title : "자금 용도", width: 270},
+                { name: "Name4",  type: "text", title : "상세 상태", width: 270},
                 // { name: "Name5",  type: "text", title : "희망 금리<br/>유형", width: 90},<!-- v1.6 삭제 -->
                 // { name: "Name6",  type: "text", title : "대출 희망 신청 금액<br/>(최대금액)", width: 180},
                 // { name: "Name7",  type: "text", title : "제안서 마감일", width: 140},
                 // { name: "Name8",  type: "text", title : "상세 상태", width: 100},
                 // { name: "Name9",  type: "text", title : "제안서<br/>접수건", width: 140},// v1.4 수정반영
-                { name: "Name10",  type: "text", title : "제안서 상세보기", width: 270},
+                { name: "Name10",  type: "text", title : "비고", width: 270},
               ],
               
               pagerContainer: "#externalPager2",
