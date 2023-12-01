@@ -953,6 +953,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .label::after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -9px; width: 1px; height: 18px; background: #ddd;}
 .searchControlItem .input:not(.calendar), 
 .searchControlItem select { border-width: 1px 1px 1px 0px; border-style: solid; border-color: #ddd; border-radius: 0 8px 8px 0;} 
+.searchControlItem .input.calendarMonth{ border-width: 1px; border-radius: 8px;}  
 .searchControlItem select { height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
 .searchControlItem select.wid640 { width: 640px; }
 .searchControlItem .input { height: 100%; padding: 0 16px 0 16px; color: #333; }
@@ -1910,6 +1911,8 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .layerWrap .layerBody .layerCont    {padding:40px 40px 0; position:relative; top:0;  }
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; margin-top:40px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
+.layerWrap .layerBody .layerCont .btnBox.full button    {min-width:100%; height:50px;   }
+.layerWrap .layerBody .layerCont .btnBox.full button + button    {margin-top:5px; }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
 .layerWrap .layerBody.wid400 .layerFoot     {display:flex; gap:10px; justify-content: space-between;}
 .layerWrap .layerBody.wid400 .layerFoot button    {min-width:165px; width:100%; }
@@ -1970,6 +1973,9 @@ body.popup          {min-width: auto;}
 
 
 .layerWrap .center_ment     {text-align: center; padding-top:40px; }
+.layerWrap .proposal_add     {font-size: 16px; }
+.layerWrap .proposal_add .bgBox     {background:#EAFAEB; padding:18px 0; color:#069B66; font-weight: 700; border-radius: 8px; text-align: center; }
+.layerWrap .proposal_add .center_ment {margin-top:20px; }
 
 /****************************
 **********  content  **********
@@ -2193,11 +2199,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
   .companytabContentPrint h4.hide {position: static; border-bottom:1px solid #ccc; width: auto;  height: auto;  padding: 0;  margin: -1px; margin-top:50px; color:#069B66; border:0; padding-bottom:10px; overflow: hidden; font-size:20px;  clip: rect(0, 0, 0, 0); }
   .companytabContentPrint .innerTab  {display:none;  }
   .loadDetailBox .detailCont .companyInfo {margin-top:40px; }
-  .watermark      {display:block; position:absolute; width:100%;  overflow: hidden; border:1px solid #ddd; border-radius: 40%;  } 
-  .watermark      {display:block; position:absolute; top:0; left:0; width:100%; font-size:20px; line-height:180px; opacity: .3; font-weight: 700; transform: rotate(-45deg) translateX(100px) translateY(-200px);    } 
-  .watermark span       {margin:0 50px;} 
-  
-
+ 
   .container  {padding:0; }
   header {display:none;}
   .mainTop {display:none; }
@@ -2206,6 +2208,12 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
   header  {display:none; }
 
 }
+.watermark      {display:block; position:absolute; width:100%; z-index:10000; overflow: hidden;  } 
+.watermark      {display:block; display:flex; position:absolute; top:0; left:0; width:100%; height:100%; font-size:20px; line-height:180px; opacity: .1; font-weight: 700;    } 
+.watermark div      {width:320px; display:flex;  height:380px; margin:auto; background:#ddd; transform: rotate(-30deg); text-align: center; /* */  background:url(../images/common/Group.png) no-repeat 50% 0 / 320px auto;} 
+.watermark span     {width:100%; margin:auto 0 0; text-align: center; color:#000} 
+
+
 
 
 
@@ -2418,6 +2426,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .formListTable th { padding-right: 60px;}
 .suggestPg .viewNolineTable th:first-child,
 .suggestPg .formListTable th:first-child { padding-left: 0;}
+.suggestPg .formListTable .gray th { padding: 0px; text-align: center;}
+.suggestPg .formListTable .gray th:first-child { padding: 0px; }
 
 .suggestPg .table_wrap { margin-top: 0;}
 .suggestPg .table_wrap.mt10 { margin-top: 10px;}

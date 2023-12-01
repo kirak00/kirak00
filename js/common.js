@@ -295,8 +295,13 @@ function tabScript(){
     }else if(initChk){
       tabCont.hide()
     }
+
     
     tab.click(function(){
+      if(this.closest(".main.login") != null){
+        $("html").animate({scrollTop:240})
+      }
+
       if(this.parent.hasClass("disabled")) return false;
       initTab.hide()
       

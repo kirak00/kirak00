@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script> 
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+    <section class="pageTop">
+      <h2 class="pageTit">제안서 제출</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>제안서 등록</span></a></li>
+          <li><a href="#none"><span>제안서 제출 가능 목록</span></a></li>
+          <li><a href="#none"><strong>제안서 제출</strong></a></li>
+      </ul>
+    </section> 
+ 
+    <section class="suggestPg">
+      <div class="titBg flexBetween">
+        <div>
+           <h3>(주)길동건설</h3><span class="info">마포지부</span>
+        </div>
+        <p class="sub">대출 신청 번호  S_230809_0001</p>
+      </div>
+      <div class="divideCon">
+        <div class="left">
+        </div>
+        <div class="right">
+          <div class="totalInfoBox">
+            <div class="head">제안 대출 정보 합계</div>
+            <div class="cont">
+              <span class="label">제안 대출 금액</span>
+              <p class="desc">500,000,000원(오억원)</p>
+              <span class="label">제안 대출 금리</span>
+              <p class="desc">연 6.00%</p>
+              <span class="label">제안 대출 수</span>
+              <p class="desc">2건</p>
+            </div>
+            <div class="foot">
+              <button type="button" class="btnWhite">중간저장</button>
+              <button type="button" class="btnSuccess">제출하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_bt">
+        <div class="btn_c">
+          <button type="button" class="btnWhite">목록</button>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal show" id="layer_proposalAdd" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid600">
+      <div class="layerHead">
+        <h3>제안 대출 추가</h3>
+        <button type="butt on" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="proposal_add">
+          <div class="bgBox">
+            <p class="">제안 대출 추가하시기 전에 꼭 참고하세요!</p>
+          </div>
+
+          <div class="center_ment">
+            제안 대출 추가는 법인 회원에게 추가 대출 상품을 소개 시켜드리는게 아닌, <br>
+            법인 회원이 요청한 대출 금액을 나눠서<br>
+            최대한 합리적인 금리로 안내드릴 수 있는 기능입니다.<br>
+            해당 기능으로 많은 제안서 채택 받아보세요!<br><br>
+            
+            (제안 대출 추가는 최대 5개까지 추가가 가능합니다.)
+          </div>
+
+        </div>
+        <div class="btnBox full">
+          <button type="button" class="btnSuccess " onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">제안 대출 추가하기</button>
+          <button type="button" class="btnWhite " onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">추가하지 않기</button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
+
+</body>
+</html>

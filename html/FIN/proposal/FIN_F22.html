@@ -186,7 +186,7 @@
                   <table>
                     <caption>제안서 기본 정보</caption>
                     <colgroup>
-                      <col width="200px">
+                      <col width="220px"><!-- 수정2.0 -->
                       <col width="auto">
                     </colgroup>
                     <tbody>
@@ -425,14 +425,11 @@
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div class="notiBox">
-                  <h4 class="titH4 hasLine">유의사항 입력</h4>
-                  <div class="textTable">
+                  <div class="textTable"><!-- 수정2.0 -->
                     <table>
                       <caption>업체개요</caption>
                       <colgroup>
-                        <col width="200px" />
+                        <col width="220px" />
                         <col />
                       </colgroup>
                       <tbody>
@@ -471,6 +468,17 @@
                               <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
                               <span class="unit">%</span>
                               <input class="input " type="text" name="inpPeriod" id="inpPeriod" placeholder="추가 입력 사항" title="추가 입력 사항">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr><!-- 수정2.0 -->
+                          <th scope="row">
+                            <label class="label" for="notiLabel3">한도 약정 수수료(율)</label>
+                          </th> 
+                          <td>
+                            <div class="formRow">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
+                              <span class="unit">%</span>
                             </div>
                           </td>
                         </tr>
@@ -538,8 +546,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">
-                            <label class="label" for="notiLabel5"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>참고 사항</label>
+                          <th scope="row"><!-- 수정2.0 -->
+                            <label class="label" for="notiLabel5">참고 사항</label>
                           </th> 
                           <td><textarea class="textarea" id="notiLabel5">2023년 08월 자 기준으로 작성되었으며 예고 없이 변동될 수 있습니다.</textarea></td>
                         </tr>

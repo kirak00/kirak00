@@ -8,6 +8,7 @@
   <link href="../../../css/contents_FIN.css" rel="stylesheet" >
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery.ui.monthpicker.js"></script>
 
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
   <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
@@ -63,9 +64,9 @@
               <div class="searchControlItem">
                 <label id="inputLabel1" class="label srOnly">기간선택</label>
                 <div class="rangeControl" aria-labelledby="inputLabel1">
-                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <input type="text" class="input calendarMonth" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
                   <span class="uit">~</span>
-                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                  <input type="text" class="input calendarMonth" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
                 </div>
               </div>
               <div class="searchControlItem expand">
@@ -167,7 +168,6 @@
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
-                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
                 { 
                   "Name11": "sh000001",
@@ -180,7 +180,6 @@
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
-                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
                 { 
                   "Name11": "sh000001",
@@ -193,7 +192,6 @@
                   "Name6": "시설자금", 
                   "Name7": "우", 
                   "Name8": "9.82%", 
-                  "Name9": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
               ]; 
               
@@ -214,7 +212,6 @@
                   { name: "Name6", type: "text", title : "용도", width: 100 },
                   { name: "Name7", type: "text", title : "담보 유무", width: 100 },
                   { name: "Name8", type: "text", title : "금리", width: 105 },
-                  { name: "Name9", type: "text", title : "제안서 상세보기", width: 150 },
                 ],
                 
                 pagerContainer: "#externalPager2",
