@@ -30,102 +30,216 @@
       </ul>
     </section>
     <section>
-
+      <!--  v2.0 전체수정 -->
       <div class="loanSelect">
-        <div class="list">
-          <span class="radio radioBtn">
-            <input type="radio" id="selectLabel1" name="selectLabel" checked>
-            <label for="selectLabel1">
+        <div class="list active">
+          <div class="radio radioBtn">
+            <input type="radio" id="loanSelectId1" name="loanSelectId" checked>
+            <label for="loanSelectId1">
               <span class="tt">시설자금 대출</span>
               <span class="dd">공장 구입, 생산 설비 등의 도입에 <br>
                 소요되는 자금</span>
             </label>
-          </span>
-          <button type="button" class="btnSuccess ico_right">새로운 대출 비교 신청하기</button>
+          </div>
+          <button type="button" class="btnWhite ico_right">새로운 대출 비교 신청하기</button>
         </div>
         <div class="list">
-          <span class="radio radioBtn">
-            <input type="radio" id="selectLabel2" name="selectLabel">
-            <label for="selectLabel2">
+          <div class="radio radioBtn">
+            <input type="radio" id="loanSelectId2" name="loanSelectId">
+            <label for="loanSelectId2">
               <span class="tt">운전자금 대출</span>
               <span class="dd">기업의 생산과 고유의 판매활동 등에 소요되는<br>
                 자금을 지원하는 대출</span>
             </label>
-          </span>
-          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+          </div>
+          <button type="button" class="btnWhite ico_right">새로운 대출 비교 신청하기</button>
         </div>
         <div class="list">
-          <span class="radio radioBtn">
-            <input type="radio" id="selectLabel3" name="selectLabel">
-            <label for="selectLabel3">
+          <div class="radio radioBtn">
+            <input type="radio" id="loanSelectId3" name="loanSelectId">
+            <label for="loanSelectId3">
               <span class="tt">기계설비 리스</span>
               <span class="dd">추후 정의<br>
                 추후 정의</span>
             </label>
-          </span>
-          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+          </div>
+          <button type="button" class="btnWhite ico_right">새로운 대출 비교 신청하기</button>
         </div>
         <div class="list">
-          <span class="radio radioBtn">
-            <input type="radio" id="selectLabel4" name="selectLabel">
-            <label for="selectLabel4">
+          <div class="radio radioBtn">
+            <input type="radio" id="loanSelectId4" name="loanSelectId">
+            <label for="loanSelectId4">
               <span class="tt">할부금융</span>
               <span class="dd">추후정의<br>
                 추후정의</span>
             </label>
-          </span>
-          <button type="button" class="btnSuccess ico_right" disabled>새로운 대출 비교 신청하기</button>
+          </div>
+          <button type="button" class="btnWhite ico_right" disabled>새로운 대출 비교 신청하기</button>
         </div>
       </div>
     
-      <section class="sectionBlock40">
-        <!--  v1.4 수정반영 -->
+      <!-- 시설자금 대출 -->
+      <section class="radiotTabCont on loanSelectId1">
         <div class="titH6">상세 용도를 선택해 주세요.</div>
-        <div class="checkBoxScroll number4" role="group" aria-labelledby="accLabel1_2">
+        <div class="checkBoxScroll number4">
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox">
-            <label for="searchCheckBox_1"><span></span>공장의 신설, 매입, 보수</label>
+            <input type="checkbox" id="searchCheckBox1_1" name="searchCheckBox1">
+            <label for="searchCheckBox1_1"><span></span>공장의 신설, 매입, 보수</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_2" name="searchCheckBox">
-            <label for="searchCheckBox_2"><span></span>기계기구 등의 신, 증설 개보수</label>
+            <input type="checkbox" id="searchCheckBox1_2" name="searchCheckBox1">
+            <label for="searchCheckBox1_2"><span></span>기계기구 등의 신, 증설 개보수</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_3" name="searchCheckBox">
-            <label for="searchCheckBox_3"><span></span>공장 등 건설 목적의 토지 매입 자금</label>
+            <input type="checkbox" id="searchCheckBox1_3" name="searchCheckBox1">
+            <label for="searchCheckBox1_3"><span></span>공장 등 건설 목적의 토지 매입 자금</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_4" name="searchCheckBox">
-            <label for="searchCheckBox_4"><span></span>다른회사 인수자금(지분 50% 초과)</label>
+            <input type="checkbox" id="searchCheckBox1_4" name="searchCheckBox1">
+            <label for="searchCheckBox1_4"><span></span>다른회사 인수자금(지분 50% 초과)</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_5" name="searchCheckBox">
-            <label for="searchCheckBox_5"><span></span>업무용 부동산 임차보증금</label>
+            <input type="checkbox" id="searchCheckBox1_5" name="searchCheckBox1">
+            <label for="searchCheckBox1_5"><span></span>업무용 부동산 임차보증금</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_6" name="searchCheckBox">
-            <label for="searchCheckBox_6"><span></span>업무용 건물 신, 증설 매입자금</label>
+            <input type="checkbox" id="searchCheckBox1_6" name="searchCheckBox1">
+            <label for="searchCheckBox1_6"><span></span>업무용 건물 신, 증설 매입자금</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_7" name="searchCheckBox">
-            <label for="searchCheckBox_7"><span></span>SOC 사업자금</label>
+            <input type="checkbox" id="searchCheckBox1_7" name="searchCheckBox1">
+            <label for="searchCheckBox1_7"><span></span>SOC 사업자금</label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" id="searchCheckBox_8" name="searchCheckBox">
-            <label for="searchCheckBox_8"><span></span>다른 은행 시설자금대출 상환</label>
+            <input type="checkbox" id="searchCheckBox1_8" name="searchCheckBox1">
+            <label for="searchCheckBox1_8"><span></span>다른 은행 시설자금대출 상환</label>
           </span>
           <div class="formSet">
             <span class="checkbox">
-              <input type="checkbox" id="searchCheckBox_9" name="searchCheckBox">
-              <label for="searchCheckBox_9"><span></span>기타</label>
+              <input type="checkbox" id="searchCheckBox1_9" name="searchCheckBox1">
+              <label for="searchCheckBox1_9"><span></span>기타</label>
             </span>
-            <input class="input wid400" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
+            <input class="input" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
+          </div>
+        </div>
+      </section>
+      
+      <!-- 운전자금 대출 -->
+      <section class="radiotTabCont loanSelectId2">
+        <div class="titH6">상세 용도를 선택해 주세요.</div>
+        <div class="checkBoxScroll number4">
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_1" name="searchCheckBox2">
+            <label for="searchCheckBox2_1"><span></span>인건비(급여 등)</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_2" name="searchCheckBox2">
+            <label for="searchCheckBox2_2"><span></span>공과금 납부</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_3" name="searchCheckBox2">
+            <label for="searchCheckBox2_3"><span></span>원자재 구입 자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_4" name="searchCheckBox2">
+            <label for="searchCheckBox2_4"><span></span>예비 운영 자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_5" name="searchCheckBox2">
+            <label for="searchCheckBox2_5"><span></span>다른 회사 인수 자금</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_6" name="searchCheckBox2">
+            <label for="searchCheckBox2_6"><span></span>분양 목적 부동산 구입</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_7" name="searchCheckBox2">
+            <label for="searchCheckBox2_7"><span></span>임대보증금 반환</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_8" name="searchCheckBox2">
+            <label for="searchCheckBox2_8"><span></span>판매 활동비</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox2_8" name="searchCheckBox2">
+            <label for="searchCheckBox2_8"><span></span>다른 은행 운전자금대출 상환</label>
+          </span>
+          <div class="formSet">
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox2_9" name="searchCheckBox2">
+              <label for="searchCheckBox2_9"><span></span>기타</label>
+            </span>
+            <input class="input" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
+          </div>
+        </div>
+      </section>
+
+      <!-- 기계설비 리스 -->
+      <section class="radiotTabCont loanSelectId3">
+        <div class="titH6">상세 용도를 선택해 주세요.</div>
+        <div class="checkBoxScroll number2">
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox3_1" name="searchCheckBox3">
+            <label for="searchCheckBox3_1">
+              <span></span>산업용 기계
+              <span class="subTxt">금속가공기계, 섬유기계,<br/>
+                식품가공기계, 제지기계, 인쇄기계, 목공기계, 제철설비 등</span>
+            </label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox3_2" name="searchCheckBox3">
+            <label for="searchCheckBox3_2">
+              <span></span>의료기기
+              <span class="subTxt">MRI, CT, 초음파 진단기 등</span>
+            </label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox3_3" name="searchCheckBox3">
+            <label for="searchCheckBox3_3">
+              <span></span>컴퓨터 및 사무용 기기
+              <span class="subTxt">컴퓨터, 복사기 등 OA기기, POS 시스템, CAD, CAM 시스템 등</span>
+            </label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox3_4" name="searchCheckBox3">
+            <label for="searchCheckBox3_4">
+              <span></span>교육, 연구용 기기
+              <span class="subTxt">교육용 기기 및 과학기술개발에 필요한 시설, 기계, 기구 등</span>
+            </label>
+          </span>
+          <div class="formSet">
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox3_9" name="searchCheckBox3">
+              <label for="searchCheckBox3_9"><span></span>기타</label>
+            </span>
+            <input class="input wid350" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
+          </div>
+        </div>
+      </section>
+
+      <!-- 할부금융 -->
+      <section class="radiotTabCont loanSelectId4">
+        <div class="titH6">상세 용도를 선택해 주세요.</div>
+        <div class="checkBoxScroll number4">
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox4_1" name="searchCheckBox4">
+            <label for="searchCheckBox4_1"><span></span>미정</label>
+          </span>
+          <span class="checkbox">
+            <input type="checkbox" id="searchCheckBox4_2" name="searchCheckBox4">
+            <label for="searchCheckBox4_2"><span></span>미정</label>
+          </span>
+          <div class="formSet">
+            <span class="checkbox">
+              <input type="checkbox" id="searchCheckBox4_9" name="searchCheckBox4">
+              <label for="searchCheckBox4_9"><span></span>기타</label>
+            </span>
+            <input class="input" type="text" placeholder="정보를 입력해 주세요." value="" title="기타정보를 입력해주세요.">
           </div>
         </div>
       </section>
     
       <section class="sectionBlock40">
-        <!--  v1.4 수정반영 -->
         <div class="titH6">진행 중인 대출 비교 신청 목록</div>
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs" caption="대출 비교 목록"></div>   
@@ -133,65 +247,40 @@
         </div>
         <script>
           $(function() {
-            
             var clients = [
               { 
-                "Name1": "220230915001",// v1.4 수정반영
-                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name1": "220230915001",
+                "Name2": "2023-08-09", 
                 "Name3": "시설 자금", 
                 "Name4": "<span class='textBold'>신청중</span>", 
-                // "Name5": "고정", <!-- v1.6 삭제 -->
-                // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
-                // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
-                // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>이어 작성 하기</a>",  // v1.6 수정반영
+                "Name10": "<a href='#;' class='btnWhite wid160'>이어 작성 하기</a>",  
               },
               { 
-                "Name1": "220230915001",// v1.4 수정반영
-                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name1": "220230915001",
+                "Name2": "2023-08-09", 
                 "Name3": "시설 자금", 
                 "Name4": "<span class='textBold'>금융 회사 확인 중</span>", 
-                // "Name5": "고정", <!-- v1.6 삭제 -->
-                // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
-                // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
-                // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>",  // v1.6 수정반영
+                "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>", 
               },
               { 
-                "Name1": "220230915001",// v1.4 수정반영
-                "Name2": "2023-08-09", //v.16 .goLink 삭제 
+                "Name1": "220230915001",
+                "Name2": "2023-08-09", 
                 "Name3": "시설 자금", 
                 "Name4": "<span class='textBold blue'>제안서 확인 및 채택</span>", 
-                // "Name5": "고정", <!-- v1.6 삭제 -->
-                // "Name6": "230,000,000원<p class='sub'>(이억 삼천만원)</p>", 
-                // "Name7": "2023-08-01", 
-                // "Name8": "<sapn class='textBold'>심사중</sapn>", // v1.4 수정반영
-                // "Name9": "0건", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  // v1.6 수정반영
+                "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  
               },
             ]; 
-  
             $("#jsGrid2").jsGrid({
               data: clients,
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
-  
-              fields: [
+                fields: [
                 { name: "Name1",  type: "text", title : "대출 신청 번호", width: 230},
                 { name: "Name2",  type: "text", title : "대출 비교 신청일", width: 320},
                 { name: "Name3",  type: "text", title : "자금 용도", width: 270},
                 { name: "Name4",  type: "text", title : "상세 상태", width: 270},
-                // { name: "Name5",  type: "text", title : "희망 금리<br/>유형", width: 90},<!-- v1.6 삭제 -->
-                // { name: "Name6",  type: "text", title : "대출 희망 신청 금액<br/>(최대금액)", width: 180},
-                // { name: "Name7",  type: "text", title : "제안서 마감일", width: 140},
-                // { name: "Name8",  type: "text", title : "상세 상태", width: 100},
-                // { name: "Name9",  type: "text", title : "제안서<br/>접수건", width: 140},// v1.4 수정반영
                 { name: "Name10",  type: "text", title : "비고", width: 270},
               ],
-              
               pagerContainer: "#externalPager2",
-  
             });
           });
         </script>

@@ -7,11 +7,14 @@ $(function(){
 function loanSelect(){
   var rado =  $(".loanSelect input[type=radio]");
   rado.on("click",function(){
-    $(".loanSelect .list .btnSuccess").attr("disabled", "disabled");
+    // $(".loanSelect .list .btnSuccess").removeClass("disabled", "disabled");
+    $(".loanSelect .list").removeClass("active")
+    $(".radiotTabCont").removeClass("on")
     if(this.checked){
-      console.log("click")
-      console.log('$(this).parent(".list")',$(this).parents(".list"))
-      $(this).closest(".list").find(".btnSuccess").removeAttr('disabled');
+      // $(this).closest(".list").find(".btnSuccess").removeAttr('disabled');
+      $(this).closest(".list").addClass("active")
+      var checkedId = $(this).prop("checked",true).attr("id");
+      $("."+checkedId).addClass("on");
     }
   })
 }
