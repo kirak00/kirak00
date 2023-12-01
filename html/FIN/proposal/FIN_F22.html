@@ -9,7 +9,7 @@
 
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
-  <script src="../../../js/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery.ui.monthpicker.js"></script>
 
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
   <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
@@ -19,6 +19,8 @@
   <script src="../../../js/common.js"></script>
   <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
+
+
 <style>
 
 
@@ -110,7 +112,7 @@
                   </th> 
                   <td>
                     <div class="dateControl lg">
-                      <input id="formLabel4" class="input calendar " type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
+                      <input id="formLabel4" class="input calendar2 " type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
                       <!-- <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button> -->
                       까지 유효
                     </div>
@@ -324,15 +326,20 @@
                             <p class="notiTxt">대출 기간과 기준금리물 기간이 일치할 경우 고정으로 선택해 주세요.</p>
                           </div>
                           
-                          <div class="formRow wid470" role="group" aria-labelledby="inpLabel6">
+                          <div class="formRow " role="group" aria-labelledby="inpLabel6">
                             <select class="wid220" title="기준금리 선택">
                               <option value="">기준금리</option>
                               <option value="">3.50%</option>
                             </select>
                             <!-- <strong class="result mainGreen">3.50%</strong> -->
-                            <label for="inpLabelRate" class="label">가산금리</label>
-                            <input class="input innerTxt_1 wid114" id="inpLabelRate" type="text" placeholder="" value="0.50">
+                            <input class="input wid100" id="inpLabelRate" type="text" placeholder="직접입력" value="" title="기준금리명">
+                            <input class="input innerTxt_1 wid100" id="inpLabelRate" type="text" placeholder="" value="0.50" title="기준금리">
                             <span class="unit">%</span>
+                            <label for="inpLabelRate" class="label">가산금리</label>
+                            <input class="input innerTxt_1 wid100" id="inpLabelRate" type="text" placeholder="" value="0.50">
+                            <span class="unit">%</span>
+                          </div>
+                          <div class="formRow " role="group" aria-labelledby="inpLabel6">
                           </div>
                           <div class="formRow wid470">
                             <div class="readonlyForm">
@@ -595,6 +602,8 @@
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
+
+                
 
 
 </body>

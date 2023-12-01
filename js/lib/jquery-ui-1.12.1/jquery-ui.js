@@ -3418,7 +3418,7 @@ $.extend( Datepicker.prototype, {
 
 		//to avoid flashes on Firefox
 		inst.dpDiv.empty();
-
+		
 		// determine sizing offscreen
 		inst.dpDiv.css( { position: "absolute", display: "block", top: "-1000px" } );
 		$.datepicker._updateDatepicker( inst );

@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link rel="stylesheet" href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+
   <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
   <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jquery.ui.monthpicker.js"></script>
+
   <script src="../../../adm_js/lib/fecha.js"></script>
   <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
   <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
@@ -48,12 +52,7 @@
               <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >기간 설정</button>
             </div>
             <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
-              <select id="selectLabelState" class="wid200">
-                <option>2023년</option>
-              </select>
-              <select id="selectLabelState" class="wid200">
-                <option>7월</option>
-              </select> 
+              <input type="text" class="input calendarMonth" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
             </div>
             <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
               <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
@@ -158,6 +157,10 @@
   <!-- **************** -->
 
 <script>
+  
+
+
+
 </script>
  
 
