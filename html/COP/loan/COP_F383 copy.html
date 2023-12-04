@@ -81,7 +81,7 @@
         </li>
         <li>
           <span class="circle">11</span>
-          <p class="name"><span>매출/매입 현황</span></p>
+          <p class="name"><span>세금 계산서 합계표</span></p>
         </li>
         <li>
           <span class="circle">12</span>
@@ -89,11 +89,13 @@
         </li>
         <li>
           <span class="circle">13</span>
-          <p class="name"><span>금융 회사 선택</span></p>
+          <p class="name top"><span>대출 진행 완료</span></p>
+          <p class="name"><span>대출 신청 정보 확인</span></p>
         </li>
         <li>
           <span class="circle">14</span>
-          <p class="name"><span>정보 확인</span></p>
+          <p class="name top"><span>대출 진행 완료</span></p>
+          <p class="name"><span>대출 제외 금융기관 선택</span></p>
         </li>
       </ol>
     </div>
@@ -123,119 +125,90 @@
             </thead>
             <tbody>
               <tr>
-                <td class="hasborder" rowspan="6">2022</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>재무상태표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>재무상태표표(최근 3년)</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>손익계산서</td>
+                <td><input type="text" class="input textCenter" placeholder="수집년도를 입력하세요." title="수집년도를 입력하세요."/></td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>손익계산서(최근 3년)</td>
                 <td><span class="textBold pntCol_1">미수집</span></td>
                 <td>-</td>
                 <td><button type="button" class="btnSuccess">파일 업로드</button></td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>제조(공사) 원가명세서</td>
-                <td><span class="textBold pntCol_1">수집실패</span></td>
-                <td><button type="button" class="btnRefresh">재수집</button></td>
-                <td><button type="button" class="btnSuccess">파일 업로드</button></td>
+                <td><input type="text" class="input textCenter" placeholder="수집년도를 입력하세요." title="2023"/></td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>제조(공사) 원가명세서</td>
+                <td><span class="textBold gray">직접등록</span></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
+                <td><button type="button" class="btnGray">파일 삭제</button></td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>이익잉여금처분계산서</td>
-                <td><span class="textBold blue">제출</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
-                <td><button type="button" class="btnBlack">파일 삭제</button></td>
-              </tr>
-              <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>현금흐름표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>이익잉여금처분계산서</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>자본변동표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>현금흐름표</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="hasborder" rowspan="6">2021</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>재무상태표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>자본변동표</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>손익계산서</td>
-                <td><span class="textBold pntCol_1">미수집</span></td>
-                <td>-</td>
-                <td><button type="button" class="btnSuccess">파일 업로드</button></td>
-              </tr>
-              <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>제조(공사) 원가명세서</td>
-                <td><span class="textBold">수집완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>이익잉여금처분계산서</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>사업자등록증명원</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>현금흐름표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>국세청 납세증명서</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>자본변동표</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft"><span aria-hidden="true" class="required">*</span>지방세 납세증명원</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
               <tr>
-                <td class="hasborder">2023</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>사업자등록증명원(사업자등록증)</td>
+                <td>2021,2022,2023</td>
+                <td class="textLeft">부가가치세표준증명원(최근년도 또는 최근 분기)</td>
                 <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="hasborder">2023</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>(국세청) 납세증명서</td>
-                <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="hasborder">2023</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>지방세납세증명서</td>
-                <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="hasborder">2023</td>
-                <td class="tit"><span aria-hidden="true" class="required">*</span>부가가치세표준증명원</td>
-                <td><span class="textBold">수집 완료</span></td>
-                <td><button type="button" class="btnWhite">제출 완료</button></td>
+                <td><button type="button" class="ico_down">다운로드</button></td>
                 <td>-</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="notiTxt">‘제출 완료’를 통해 등록된 서류를 확인할 수 있습니다.</p>
+        <div class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
+          <ul class="guideList dot">
+            <li class="list blue">필수 항목 중 ‘스크래핑 서비스’를 통해 수집되지 않은 경우 미수집 항목을 직접 업로드 하셔야 합니다.</li>
+            <li class="list blue">재무상태표 및 손익계산서는 3개년도 자료를 기본을 합니다. 단 개업한지 3년 미만의 기업의 경우 1개년도, 2개년도 자료도 가능합니다.</li><!-- v1.6 워딩수정 -->
+            <li class="list blue">제조(공사)원가명세서가 존재하지 않는 법인의 경우 예외로 미등록이 가능합니다.</li><!-- v1.6 워딩수정 -->
+          </ul>
+        </div>
       </section>
     </div>
     <div class="table_bt">
       <div class="btn_l">
         <a href="#" class="btnWhite ico_prev">이전</a>
-      </div>
-      <div class="btn_c">
-        <button type="button" class="btnSuccess">중간 저장</button>
       </div>
       <div class="btn_r">
         <a href="#" class="btnWhite ico_next">다음</a>

@@ -276,12 +276,12 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .layerCont .main_survey .formRow .checkbox + .checkbox { margin-left: 32px;}
 .layerCont .main_survey .formRow .radio + .radio {margin-left: 32px;}
 
-.layerCont .notiBox + .main_survey.type2 { margin-top: 30px;}
-.layerCont .main_survey.type2 .formRow.full .checkbox { flex: 1;}
-.layerCont .main_survey.type2 .formRow .checkbox { margin-left: 0; margin-right: 40px;}
-.layerCont .main_survey.type2 .formRow .radio {margin-left: 0;  margin-right: 40px;}
-.layerCont .main_survey.type2 .textarea { height: 184px;}
-.layerCont .main_survey.type2 .formSet { flex-direction: column; align-items: flex-start; margin-left: 0; width: 100%;}
+.layerCont .notiBox + .main_survey { margin-top: 30px;}
+.layerCont .main_survey .formRow.full .checkbox { flex: 1;}
+.layerCont .main_survey .formRow .checkbox { margin-left: 0; margin-right: 40px;}
+.layerCont .main_survey .formRow .radio {margin-left: 0;  margin-right: 40px;}
+.layerCont .main_survey .textarea { height: 184px;}
+.layerCont .main_survey .formSet { flex-direction: column; align-items: flex-start; margin-left: 0; width: 100%;}
 .layerCont .main_survey dt.dot { position: relative; padding-left: 8px;}
 .layerCont .main_survey dt.dot::before { content: ''; display: block; position: absolute; top: 10px; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #555; }
 
