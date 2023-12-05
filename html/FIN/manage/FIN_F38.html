@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../../../css/contents_FIN.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
@@ -40,6 +42,18 @@
         <fieldset>
           <legend>게시물 검색</legend>
           <div class="searchControlBox">
+            <div class="searchControlGroup"><!-- 수정2.0 -->
+              <div class="searchControlItem">
+                <label for="selectLabelState1_3" class="label srOnly">기간선택</label>
+                <div class="formRow">
+                  <div class="rangeControl">
+                    <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                    <span class="uit">~</span>
+                    <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="searchControlGroup">
               <div class="searchControlItem expand">
                 <label for="" class="label">소속 지점 조회</label>
@@ -90,41 +104,10 @@
                   "Name2": "마포본점", 
                   "Name3": "가좌지점", 
                   "Name4": "5건", 
-                  "Name5": "62.8%", 
-                  "Name6": "<button type='button' class='btnWhite'>실적 보기</button>", 
-                }, 
-                { 
-                  "Name1": "서울지역본부",
-                  "Name2": "마포본점", 
-                  "Name3": "가좌지점", 
-                  "Name4": "5건", 
-                  "Name5": "62.8%", 
-                  "Name6": "<button type='button' class='btnWhite'>실적 보기</button>", 
-                },
-                { 
-                  "Name1": "서울지역본부",
-                  "Name2": "마포본점", 
-                  "Name3": "가좌지점", 
-                  "Name4": "5건", 
-                  "Name5": "62.8%", 
-                  "Name6": "<button type='button' class='btnWhite'>실적 보기</button>", 
-                },
-                { 
-                  "Name1": "서울지역본부",
-                  "Name2": "마포본점", 
-                  "Name3": "가좌지점", 
-                  "Name4": "5건", 
-                  "Name5": "62.8%", 
-                  "Name6": "<button type='button' class='btnWhite'>실적 보기</button>", 
-                },
-                { 
-                  "Name1": "서울지역본부",
-                  "Name2": "마포본점", 
-                  "Name3": "가좌지점", 
-                  "Name4": "5건", 
-                  "Name5": "62.8%", 
-                  "Name6": "<button type='button' class='btnWhite'>실적 보기</button>", 
-                },
+                  "Name5": "5건", 
+                  "Name6": "62.8%", 
+                  "Name7": "<button type='button' class='btnWhite'>실적 보기</button>", 
+                }
               ]; 
 
               $("#jsGrid2").jsGrid({
@@ -132,12 +115,13 @@
                 noDataContent: "<div class='noTableData'><i class='icoNomal'></i><p class='txt'>소속 금융 회사를 선택해 주세요.</p></div>",
 
                 fields: [
-                  { name: "Name1",  type: "text", title : "지역본부", width: 280},
-                  { name: "Name2",  type: "text", title : "금고본점", width: 260},
-                  { name: "Name3", type: "text", title : "지점", width: 280 },
-                  { name: "Name4", type: "button", title : "취급 중인 대출", width: 140 },
-                  { name: "Name5", type: "button", title : "거래성사율", width: 140 },
-                  { name: "Name6", type: "button", title : "실적 보기", width: 160 },
+                  { name: "Name1",  type: "text", title : "지역본부", width: 140},
+                  { name: "Name2",  type: "text", title : "금고본점", width: 140},
+                  { name: "Name3", type: "text", title : "지점", width: 140 },
+                  { name: "Name4", type: "button", title : "심사 횟수", width: 140 },
+                  { name: "Name5", type: "button", title : "대출 실행", width: 140 },
+                  { name: "Name6", type: "button", title : "거래성사율", width: 140 },
+                  { name: "Name7", type: "button", title : "실적 보기", width: 160 },
                 ],
                 
                 pagerContainer: "#externalPager2",
