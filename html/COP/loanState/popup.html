@@ -76,11 +76,17 @@
       </script>
     </section>
     <section style="margin-top: 20px;">
-      <h3 style="margin-bottom: 10px">팝업</h3>
+      <h3 style="margin-bottom: 10px">알럿타입 레이어</h3>
       <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">제출 여부 확인</button>
-      <button type="button" class="btnSuccess open_layer" aria-controls="changeDateLayer">제안서 마감일 연장</button>
       <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer2">현장실사 여부 확인</button>
-      <button type="button" class="btnSuccess open_layer" aria-controls="scheduleLayer">예상 상환 스케줄</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="sendLayer">제안서 채택결과전달</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="cancelLayer">제안서 채택취소</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="cancelLayer2">대출 비교하기 취소</button>
+    </section>
+    <section style="margin-top: 20px;">
+      <h3 style="margin-bottom: 10px">팝업</h3>
+      <button type="button" class="btnSuccess open_layer" aria-controls="changeDateLayer">제안서 마감일 연장</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="scheduleLayer">예상 상환 스케줄(FIN_F31_001 동일)</button>
     </section>
   </div>
   <!-- **************** -->
@@ -115,6 +121,125 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap modal typeAlert" id="sampleLayer2" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <!-- 디자인 수정 .wid870 -> wid500 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>현장실사 여부 확인</h3>
+        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
+      </div>
+      <div class="layerCont">
+        <div class="guideBox point">
+          <strong>[농협은행 신촌지점]</strong>에서<br/>현장실사를 진행하셨나요?<!-- v1.6 수정 -->
+        </div>
+        <!-- <p class="guidTxt">본 질문에 대한 답변은 제안서 제출 가능 여부와는 상관이 없습니다.</p> -->
+      </div>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnSuccess layerClose" popup-close="sampleLayer2">네, 현장실사를 완료했습니다.</button>
+        <button type="button" class="btnWhite layerClose" popup-close="sampleLayer2">아니오, 현장실사는 하지 않았습니다.</button>
+      </div>
+
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+    <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap modal typeAlert" id="sendLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <!-- <div class="layerHead">
+        <h3>선택한 제안서가 담당자에게 전달 됩니다.</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div> -->
+      <div class="layerCont">
+        <div class="guideBox point mt14">
+          <strong>농협은행 신촌지점</strong>
+          <ul class="infoList">
+            <li>담당자 : <span>고길동</span></li>
+            <li>연락처 : <span>02-1234-1234</span></li>
+          </ul>
+        </div>
+
+        <p class="msg">금융 회사 담당자에게 제안서 채택 결과를 전달합니다.</p>
+  
+      </div>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnSuccess layerClose" popup-close="sendLayer">확인</button>
+      </div>
+
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap modal typeAlert" id="cancelLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>제안서 채택 취소</h3>
+        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
+      </div>
+      <div class="layerCont">
+        <p class="msg">제안서 채택을 취소하시겠습니까?<br/>
+          제안서 채택을 취소하는 경우,<br/>
+          금융 회사에 담당자에게 제안서 채택 취소 결과를 전달합니다.</p>
+      </div>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnSuccess layerClose" popup-close="cancelLayer">네, 제안서 채택을 취소합니다.</button>
+        <button type="button" class="btnWhite layerClose" popup-close="cancelLayer">아니요, 취소하지 않겠습니다.</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap modal typeAlert" id="cancelLayer2" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>대출 비교하기 취소</h3>
+        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
+      </div>
+      <div class="layerCont">
+        <p class="msg">대출 비교하기를 취소하시겠습니까?<br/>
+          심사 중인 모든 금융 회사의 심사가 중단됩니다.</p>
+      </div>
+      <div class="layerFoot fullType">
+        <button type="button" class="btnSuccess layerClose" popup-close="cancelLayer2">네, 취소하겠습니다.</button>
+        <button type="button" class="btnWhite layerClose" popup-close="cancelLayer2">아니요, 취소하지 않겠습니다.</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
 
   <!-- **************** -->
   <!-- layer : start -->
@@ -156,40 +281,11 @@
   <!-- layer : end -->
   <!-- **************** -->
 
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-  <div class="layerWrap modal typeAlert" id="sampleLayer2" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <!-- 디자인 수정 .wid870 -> wid500 -->
-    <div class="layerBody wid500">
-      <div class="layerHead">
-        <h3>현장실사 여부 확인</h3>
-        <!-- <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button> -->
-      </div>
-      <div class="layerCont">
-        <div class="guideBox point">
-          <strong>[농협은행 신촌지점]</strong>에서<br/>현장실사를 진행하셨나요?<!-- v1.6 수정 -->
-        </div>
-        <!-- <p class="guidTxt">본 질문에 대한 답변은 제안서 제출 가능 여부와는 상관이 없습니다.</p> -->
-      </div>
-      <div class="layerFoot fullType">
-        <button type="button" class="btnSuccess layerClose" popup-close="sampleLayer2">네, 현장실사를 완료했습니다.</button>
-        <button type="button" class="btnWhite layerClose" popup-close="sampleLayer2">아니오, 현장실사는 하지 않았습니다.</button>
-      </div>
-
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
 
     <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show" id="scheduleLayer" role="dialog" aria-modal="true" >
+  <div class="layerWrap modal" id="scheduleLayer" role="dialog" aria-modal="true" >
     <!-- 너비 800px 경우 .sizeM 추가 -->
     <div class="layerBody wid640">
       <div class="layerHead">
@@ -197,12 +293,12 @@
         <button type="button" class="layerClose" popup-close="scheduleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <p class="notiTxt">본 스케줄은 제안서 제출일 기준으로 집계되었으며, 일별 금리 변동율에 따라 내용이  변동될 수 있습니다.</p>
-        <div class="textTable mt32"><!-- v1.4 .mt32 추가 -->
+        <p class="notiTxt">본 상환 스케줄은 제안서 제출일 기준으로 계산되었으며, 대출 실행일의 금리에 따라 상환 금액이 변경될 수 있습니다.</p>
+        <div class="textTable mt30">
           <table>
             <caption>업체개요</caption>
             <colgroup>
-              <col width="205px" />
+              <col width="160px" />
               <col />
             </colgroup>
             <tbody>
@@ -224,72 +320,69 @@
         
         <div class="table_wrap mt40">
           <table class="bbs_list">
-            <caption>
-              제안서 제출 가능 목록
-            </caption>
-            <!-- v1.4 수정 -->
+            <caption>예상 상환 스케줄</caption>
             <colgroup>
-              <col width="120px"/>
-              <col width="160px"/>
+              <col width="140px"/>
+              <col width="240px"/>
               <col width=""/>
             </colgroup>
             <thead>
               <tr>
                 <th scope="col">회차</th>
-                <th scope="col">대출 이자</th>
                 <th scope="col">월 상환금</th>
+                <th scope="col">대출 이자</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="textBold">1</td><!-- v1.4 .textBold 추가 -->
-                <td>123,456</td><!-- v1.4 .tit 삭제 -->
+                <td class="textBold">1</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">2</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">3</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">4</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">5</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">6</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">7</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">8</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">9</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
               <tr>
                 <td class="textBold">10</td>
-                <td>123,456</td>
                 <td>20,000,000</td>
+                <td>123,456</td>
               </tr>
             </tbody>
           </table>
@@ -303,6 +396,8 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
+
 
 
 </body>

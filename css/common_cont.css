@@ -123,7 +123,7 @@
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
 .hasLine .inner .right { margin-left: auto; }
 .barStepWrap + .titBg,
-.titBg.resultType { height: 90px; background: #1EA885;}
+.titBg.resultType { min-height: 90px; background: #1EA885; text-align: center; line-height: 1.5;}
 .barStepWrap + .titBg h3,
 .titBg.resultType h3 { font-size: 24px }
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
@@ -210,6 +210,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox.mt60 { margin-top: 60px;}
 .guideBox.point { color: #069B66; }
 .layerCont .guideBox.point { background: #EAFAEB}
+.layerCont .guideBox.point.mt14 { margin-top: 14px;}
 .guideBox.type2 { background: #EAFAEB; }
 .guideBox .notiTxt + .guideList { margin-top: 10px;}
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
@@ -222,6 +223,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /* .guideBox .infoList { font-size: 18px;} */
 .layerCont .guideBox .infoList { margin-top: 16px;}
 .layerCont .guideBox .infoList.type2 { width: 120px; text-align: left; margin: 16px auto 0;}
+.layerCont .guideBox + .msg { margin-top: 20px;} 
 
 .agreeLineBox { padding: 40px 40px 0; border-radius: 16px; border: 1px solid #ddd;} 
 .notiBox + .agreeLineBox { margin-top: 40px; }
@@ -283,6 +285,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .sectionLine { padding: 40px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .sectionLine.pd40 { padding: 40px;}
 .sectionLine + .notiTxt { margin-top: 20px;}
+.sectionInner { max-width: 1044px; margin: 0 auto; padding-top: 40px;}
+.sectionInner .main_survey { padding-bottom: 20px;}
 .sectionIndent .titH3.hasLine { padding: 0 40px}
 .sectionIndent .formListTable { padding: 0 40px}
 .sectionIndent .titH3.hasLine + .formListTable { margin-top: 40px;}
@@ -1527,6 +1531,7 @@ table.bbs_list .widFix { display: inline-block; width: 1000px; text-align: left;
 table.bbs_list thead tr:only-child th:first-child,
 table.bbs_list td:first-child { padding-left: 28px;}
 table.bbs_list tr:has(>[rowspan]) ~ tr td:not([rowspan]) {padding-left: 10px;}
+table.bbs_list tr:has(>[rowspan]) ~ tr td.tit { padding-left: 30px;}
 table.bbs_list td.hasborder { border-right: 1px solid #ddd;}
 table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 28px;}
@@ -1717,6 +1722,7 @@ table { width: 100%;}
 .textTable.boxType.pointTable td {  line-height:40px; }
 .textTable.hasLine { padding: 40px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
 .textTable { margin-top: 20px;}
+.textTable.mt30 { margin-top: 30px;}
 .textTable.mt32 { margin-top: 32px;}
 .textTable + .notiTxt { margin-top: 20px; }
 .table_wrap + .notiTxt { margin-top: 10px; }
