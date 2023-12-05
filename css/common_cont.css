@@ -41,7 +41,10 @@
 .wid130 { width: 130px;} 
 .wid140 { width: 140px;} 
 .wid160 { width: 160px;} 
+.btnDkGreen.wid185,
+.btnBlack.wid185 { width: 185px; padding: 0;} 
 
+.mt20 { margin-top: 20px; }
 .ml30 { margin-left: 30px;}
 /****************************
 **********  align  **********
@@ -57,16 +60,22 @@
 
 
 .goLink { color: #333; text-decoration: underline; }
+.goLink.disabled { color: #888; font-weight: 500; text-decoration: none;}
 .goLink.ml20 { margin-left: 20px;}
 .jsgrid .goLink,
 .jsGridWrap .goLink,
 .bbs_list .goLink { color: #069B66; font-weight: 700; text-underline-offset: 3px; }
+.jsgrid .goLink.disabled,
+.jsGridWrap .goLink.disabled,
+.bbs_list .goLink.disabled { color: #888; font-weight: 500; text-decoration: none;}
 
 .inner { max-width: 1400px; margin: 0 auto;}
 
 /****************************
 **********  title  **********
 *****************************/
+.titWrap { display: flex; align-items: center;}
+.titWrap.flexBetween {justify-content: space-between;  align-items: flex-end;}
 .titH2 { font-size: 30px; font-weight: 700;}
 .titH3 { display: flex; justify-content: space-between; align-items: center; min-height: 50px;font-size: 24px; font-weight: 700;}
 .titH3 h3 { font-size: inherit;}
@@ -75,12 +84,15 @@
 .titH41 { font-size:18px; font-weight: 700; border-bottom:1px solid #ddd; padding:0 0 13px 0; }
 .titH4 .desc { margin-left: 40px; font-size: 14px; font-weight: 400;}
 .titH3 + .notiBox { margin-top: 20px;}
+.titWrap + .lineBox,
+.titH3 + .lineBox { margin-top: 20px;}
 .titH4 + .pageTxt { margin-top: 16px;}
 .pageTxt {margin-bottom: 20px; font-size: 16px; font-weight: 500;}
 .pageTxt.mb10 { margin-bottom: 10px;}
 .pageTxt.textBold { font-weight: 700;}
 .pageTxt.flex {  display: flex; align-items: center; }
 .pageTxt.flex .right { margin-left: auto;}
+.titWrap .sub { margin-left: 20px;}
 .pageTxt .sub { margin-left: 20px; color: #555; font-size: 14px; font-weight: 400;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
@@ -168,6 +180,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /****************************
 **********  noti  **********
 *****************************/
+.notiList .notiTxt + .notiTxt { margin-top: 10px;}
 .notiTxt { display: block; color: #4C9DA2; padding-left: 22px; text-indent: -22px; font-size: 16px; font-weight: 400; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt40 { margin-top: 40px;}
@@ -200,6 +213,11 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiBox .notiTxt::before { width: 20px; height: 20px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / contain; vertical-align: -4px;}
 .notiBox ~ .viewLineTable { margin-top: 20px; }
 .notiBox .titH5.hasLine { height: 50px;}
+.notiBox .titH5 + .textTable { margin-top: 30px;}
+.notiBox .titH5 + .guideList { margin-top: 30px;}
+
+.layerCont .topResultBox { margin-top: -20px; padding: 24px 30px; background: #F6FBF7; border-radius: 16px; color: #333; text-align: center;}
+
 
 .resultCont + .guideBox { max-width: 920px; margin: 40px auto 0; padding: 40px 30px;}
 
@@ -399,7 +417,7 @@ table.bbs_list a.btnLine,
 .btnLine:hover       { color:#069B66; border:1px solid #069B66;}
 .btnLine:active       { color:#069B66 }
 
- 
+.btnDkGreen:disabled,
 .btnSuccess:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
@@ -794,6 +812,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow ~ .formRow { margin-top: 10px;}
 .formRow.wid150 { width: 150px;}
 .formRow.wid350 { width: 350px;}
+.formRow.wid410 { width: 410px;}
 .formRow.wid425 { width: 425px;}
 .formRow.wid425 select { width: 100%;}
 .formRow.wid470 { width:470px; }
@@ -836,7 +855,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* input */
 .input { width: 100%; min-height: 50px; padding: 0 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; vertical-align: middle;}
 .input::placeholder { color: #888; line-height: normal; font-size: 16px; }
-.input:disabled, .input:read-only { background: #EEF0F1; color: #888; }
+.input:disabled, .input:read-only { background: #EEF0F1; color: #555; }
 .input::-webkit-resizer { display: none;}
 .input.auto { width: auto;}
 .input.full { flex: 1;}
@@ -998,7 +1017,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .layerWrap .searchControlBox .searchBtns { position: absolute; right: 40px; bottom: 36px;}
 
 
-
+.searchControlBox.lineType { padding: 32px 40px; border-radius: 16px; border: 1px solid #ddd; background: #fff;}
+.searchControlBox.lineType .searchControlGroup { column-gap: 30px;}
 .searchControlBox .searchBtns { display:flex; gap:8px; margin-left: auto; }
 .searchControlBox .searchBtns.fl { margin-left: 0;}
 .main .searchControlBox .searchBtns { position: absolute; bottom: 32px; right: 36px;  }
@@ -1021,6 +1041,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
+.searchControlItem.disabled .label { background: #EEF0F1; color: #555;}
 .searchControlItem .searchBtns { margin-left: 8px;}
 .searchControlItem .rangeControl .input { width: 142px;}
 .searchControlItem .label.srOnly  { display: none;}
@@ -1032,7 +1053,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlItem .input.calendarMonth{ border-width: 1px; border-radius: 8px;}  
 .searchControlItem select { height: 100%; padding: 0 60px 0 16px; background: #fff url('../images/COP/select_down.png') calc(100% - 16px) center no-repeat; color: #333;  }
 .searchControlItem select.wid640 { width: 640px; }
-.searchControlItem .input { height: 100%; padding: 0 16px 0 16px; color: #333; }
+.searchControlItem .input { height: 100%; padding: 0 16px 0 16px; }
 .searchControlItem .input.inputXs { width: 100px;}
 .searchControlItem .input.wid360 { width: 360px;}
 .searchControlItem .input.wid480 { width: 480px;}
@@ -1101,6 +1122,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formListWrap { margin: 20px 0;}
 .formListWrap .formList:first-child { margin-top: 0;}
 .formListWrap .formList:last-child { margin-bottom: 0;}
+.formListRow.lineBox { gap: 100px;}
 .formListRow { display: flex; align-items: flex-start; gap: 40px;} 
 .formListRow .formList { width: 100%; margin: 0;}
 .formList { display: flex; align-items: center; flex-wrap: wrap; margin: 40px 0 20px; }
@@ -1108,12 +1130,14 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formList .radio .label,
 .formList .checkbox .label { margin-right: 0;}  
 .formList .btnSuccess,
-.formList .btnWhite{ padding: 0 32px;}
+.formList .btnWhite{ padding: 0 32px; flex-shrink: 0;}
 .formList .formRow { flex: 1;}
 .formList .formRow .item + .item { margin-left: 60px;}
 .formList .resultTitle { width: 100%; height: 60px; line-height: 60px; margin-top: 20px; background: #069B66; border-radius: 16px; color: #fff; font-size: 18px; font-weight: 700px; text-align: center; }
-
-.layerWrap .formList.ver .label { width: auto; margin-bottom: 8px;}
+.formList.ver { flex-direction: column; align-items: flex-start}
+.formList.ver .formRow { width: 100%; }
+.formList.ver .label { margin-bottom: 20px;}
+.layerWrap .formList.ver .label { margin-bottom: 8px;}
 
 .layerWrap .formList:first-child { margin-top: 0;}
 .layerWrap .formList:last-child { margin-bottom: 0;}
@@ -1456,6 +1480,9 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt.small .btn_l * + *,
 .table_bt.small .btn_r * + * { margin-left: 4px;}
 
+.table_bt.small.mt40 { margin-top: 40px;}
+.table_bt.small .btn_c button { min-width: 165px;}
+
 .table_bt.auto button,
 .table_bt.auto a,
 .table_bt.auto .btn_c button, 
@@ -1728,7 +1755,7 @@ table { width: 100%;}
 .table_wrap + .notiTxt { margin-top: 10px; }
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 15px 0; min-height: 58px; text-align: left; vertical-align: top;}
-.notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;}
+/* .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;} */
 .textTable tr:first-child th, 
 .textTable tr:first-child td { padding-top: 0px; }
 .textTable tr:last-child th, 
@@ -2001,6 +2028,7 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 
 
 .layerWrap .layerBody .layerHead    {padding:24px 0;  background:#EAFAEB;   }
+.layerWrap .layerBody .layerHead span { vertical-align: 0;}
 .layerWrap .layerBody .layerHead h3 {text-align: center; font-size: 20px; font-weight: 700;}
 .layerWrap .layerBody .layerHead.bgChk h3    {padding:66px 0 0px; background: url(../images/common/ico_80_alert.png) no-repeat 50% 0 / 56px; }
 .layerWrap .layerBody .layerHead p { margin-top: 10px; color: #555; text-align: center; font-weight: 500;}
@@ -2160,6 +2188,7 @@ ul.innerTab li .required { margin-right: 4px; color: #FE5050; }
 .tabLineWrap .inner .btnGray { height: 40px; padding: 0 30px;}
 
 .tabLineWrap .update { position: absolute; bottom: 18px; right: 0; color: #888; font-size: 14px;}
+
 
 /* 라인있는 탭 너비 100% */ 
 .tabLine.fullType { width: 100%; border-bottom: 1px solid #ddd;}
@@ -2503,6 +2532,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .left .formListTable { padding-left:40px; }
 .suggestPg .right {width: 372px;}
 
+.suggestPg .tabLineWrap + .accordionItem { margin-top: 30px;}
+
 .suggestPg .titH3 { padding-left: 40px;}
 .suggestPg .titH3.hasLine + .viewNolineTable.wide { padding-top: 60px;}
 
@@ -2540,7 +2571,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .table_wrap.mt10 { margin-top: 10px;}
 .suggestPg .viewNolineTable .bbs_list th,
 .suggestPg .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
-.suggestPg .notiBox { margin: 40px 0px 0; padding: 20px 30px}
+.suggestPg .notiBox { margin: 40px 0px 0; padding: 20px 30px 30px;}
 .suggestPg .viewNolineTable .tableNoti { margin-top: 8px;}
 .suggestPg .radio { padding-top: 15px; height:auto; }
 .suggestPg .radio.inline { padding-top: 0; }
@@ -2735,10 +2766,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .doneWrap .ico.icoDone { display: inline-block; width: 96px; height: 96px; background: url(../images/common/ico_done.png) no-repeat center 0 / contain}
 .doneWrap .ico.icoCheck { display: inline-block; width: 182px; height: 130px; background: url(../images/common/ico_check.png) no-repeat center 0 / contain}
 .doneWrap .ico.icoMovie { display: inline-block; width: 120px; height: 120px; background: url(../images/common/ico_movie.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoAlarm { display: inline-block; width: 118px; height: 124px; background: url(../images/common/ico_alarm.png) no-repeat center 0 / contain}
+.doneWrap .ico.icoQuest { display: inline-block; width: 80px; height: 80px; background: url(../images/common/ico_quest.png) no-repeat center 0 / contain}
 .doneWrap .ico + .subTit { margin-top: 40px;}
 .doneWrap .ico + .subTxt { margin-top: 40px;}
+
 .doneWrap .tit { margin-top: 30px; font-size: 30px; font-weight: 700;}
 .doneWrap .subTit { margin-top: 30px; font-size: 18px; }
+.doneWrap .subTit + .subTxt { margin-top: 10px;}
 .doneWrap .pointTxt { margin-top: 20px; font-size: 18px; color: #069B66; font-weight: 700;}
 .doneWrap .pointTxt + .subTxt { margin-top: 4px;}
 .doneWrap .tit + .info { margin-top: 10px;}
@@ -2748,7 +2783,10 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .doneWrap .btnBox { margin-top: 60px;}
 .doneWrap .btnBox button,
 .doneWrap .btnBox a { min-width: 214px;}
+.doneWrap .btnBox * + * { margin-left: 4px; }
 .doneWrap.type2 { margin-top: 220px;}
+.doneWrap.type3 { margin-top: 160px;}
+.doneWrap.type3 .ico + .subTxt { margin-top: 20px;}
 
 /* 스크래핑 */
 .loadImg { display: flex; align-items: center; justify-content:center; gap: 26px;  margin: 20px auto;}

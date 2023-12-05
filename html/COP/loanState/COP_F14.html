@@ -38,31 +38,30 @@
       
       <fieldset>
         <legend>게시물 검색</legend>
-        <div class="searchControlBox">
+        <div class="searchControlBox lineType">
           <div class="searchControlGroup">
-            <div class="searchControlItem">
+            <!-- <div class="searchControlItem">
               <div class="rangeControl">
                 <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
                 <span class="uit">~</span>
                 <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
               </div>     
             </div>
-                
-            <!-- v1.6 삭제 -->
-            <!-- <div class="searchControlItem expand">v1.4 .expand 추가
-              <label for="selectLabelOption1" class="label">신청 유형</label>
-              <div class="formRow">
-                <select id="selectLabelOption1">
-                  <option>선택해주세요</option>
-                  <option>선택해주세요</option>
-                </select>
+            -->
+            <!-- disabled -->
+            <div class="searchControlItem disabled">
+              <label for="selectLabelOption1" class="label">조회 기간</label>
+              <div class="formRow wid410">
+                <input type="text" class="input" placeholder="" value="2023-06-10 ~ 2023-10-10" readonly>
               </div>
-            </div> -->
-            <div class="searchBtns fl"><!-- v1.6 fl 추가 -->
-              <button type="button" class="btnSuccess">조회</button><!-- v1.6 auto 삭제 -->
+            </div>
+            <div class="searchControlItem">
+              <div class="notiList">
+                <p class="notiTxt">조회 기간은 당일 기준 4개월 전 대출 비교 신청 건만 제공됩니다.</p>     
+                <p class="notiTxt">다른 기간의 대출 비교 신청 정보는 [대출 비교 신청 이력]에서 확인해 주세요.</p>     
+              </div>
             </div>
           </div>
-          <p class="notiTxt">상기 기간 이전 신청 건은 [대출 비교 진행 결과]에서 확인해주세요.</p>     
         </div>
       </fieldset>
       <!-- 디자인 수정 : sectionBlock40 -->
@@ -86,135 +85,54 @@
           /* jsgrid sample */
           $(function() {       
           var clients = [
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", //v1.4 .goLink 추가
-              "Name6": "<a href='#' class='goLink'>2건</a>", //v1.4 .goLink 추가
-              "Name7": "<a href='#' class='goLink'>1건</a>", //v1.4 .goLink 추가
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
+            { "Name1" : "202308090001", 
+              "Name2": "시설 자금",
+              "Name3": "2023-08-10", 
               "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
               "Name5": "<a href='#' class='goLink'>3건</a>", 
               "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
+              "Name7": "<a href='#' class='btnWhite'>상세보기</a>", 
             },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
+            { "Name1" : "202308090001", 
+              "Name2": "시설 자금",
+              "Name3": "2023-08-10", 
               "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
+              "Name5": "<a href='#' class='goLink disabled'>0건</a>", 
+              "Name6": "<a href='#' class='goLink disabled'>0건</a>", 
+              "Name7": "<a href='#' class='btnWhite'>상세보기</a>", 
             },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
-            { "Name9" : "S_20230809_0001", //v1.6 추가
-              "Name1": "시설 자금",
-              "Name2": "2023-08-10", 
-              "Name4": "600,000,000원<p class='sub'>(육십억원)</p>", 
-              "Name5": "<a href='#' class='goLink'>3건</a>", 
-              "Name6": "<a href='#' class='goLink'>2건</a>", 
-              "Name7": "<a href='#' class='goLink'>1건</a>", 
-              "Name8": "<a href='#' class='btnWhite'>상세보기</a>", 
-            },
+        
           ];
           $("#jsGrid").jsGrid({
             data: clients,
             fields: [
               //디자인 수정 : 워딩 수정
               //v1.6 워딩 및 너비수정 
-              { name: "Name9",  type: "button", title : "대출 신청 번호", width: 190 },
-              { name: "Name1",  type: "button", title : "자금 용도", width: 180 },
-              { name: "Name2", type: "text", title : "신청일", width: 160},
-              // { name: "Name3", type: "text", title : "진행 여부", width: 120},
-              { name: "Name4", type: "text", title : "희망 신청 금액", width: 250},
-              { name: "Name5", type: "text", title : "심사", width: 140},
-              { name: "Name6", type: "text", title : "받은 제안서", width: 140},
-              { name: "Name7", type: "text", title : "제안서 채택", width: 140},
-              { name: "Name8", type: "text", title : "대출 신청정보<br>상세보기", width: 150},
+              { name: "Name1",  type: "button", title : "대출 신청 번호", width: 200 },
+              { name: "Name2",  type: "button", title : "자금 용도", width: 180 },
+              { name: "Name3", type: "text", title : "신청일", width: 160},
+              { name: "Name4", type: "text", title : "희망 신청 금액(최대)", width: 260},
+              { name: "Name5", type: "text", title : "받은 제안서", width: 150},
+              { name: "Name6", type: "text", title : "제안서 채택", width: 150},
+              { name: "Name7", type: "text", title : "대출 신청 정보 상세보기", width: 280},
             ],
             pagerContainer: "#externalPager",
           });
           });
         </script>
       </section>
+
+      <div class="doneWrap type3">
+        <i class="ico icoQuest"></i>
+        <p class="subTxt">
+          해당 조회 기간에 진행된 대출 비교 신청 건이 없습니다.
+        </p>
+        <div class="btnBox"> 
+          <button type="button" class="btnSuccess">대출 비교 신청하기 바로 가기</button>
+          <button type="button" class="btnWhite">대출 비교 신청 이력 보기</button>
+        </div>
+      </div>
+  
 
     </section>
 

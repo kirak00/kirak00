@@ -30,46 +30,40 @@
           <li><a href="#none"><strong>제안서 접수 현황</strong></a></li>
       </ul>
     </section>
-    <section>
-      <fieldset>
+    <section class="">
+      <div class="mainLoanSelct">
+        <select name="" id="">
+          <option value="">20230101001 시설자금대출</option>
+        </select>
+        <button class="search"><span class="">선택</span></button>
+      </div>
+      <fieldset class="mt20">
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="selectLabelState" class="label">비교 신청 건</label>
+            <div class="searchControlItem">
+              <label for="selectLabelState" class="label">대출 비교 신청일</label>
               <div class="formRow">
-                <select id="selectLabelState">
-                  <option>S_230401_0001 시설 자금 대출</option>
-                  <option>S_230401_0001 시설 자금 대출</option>
-                </select>
-                <button type="button" class="btnSuccess">대출 비교 신청 정보</button>
-                <!-- <button type="button" class="btnDkGreen">추가 서류 관리</button>
-                <button type="button" class="btnBlack">제안서 즉시 마감</button> --><!-- v1.6 삭제 -->
+                <input type="text" class="input" id="selectLabelState" value="2023-07-01">
               </div>
             </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState2" class="label">희망 대출 금액(최대)</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState2" value="600,000,000 (육억원)">
+              </div>
+            </div>
+            <button type="button" class="btnSuccess link">대출 비교 신청 정보</button>
           </div>
           <div class="searchControlGroup">
-            <div class="searchControlItem"><!-- v1.6 expand 삭제 -->
-              <label for="selectLabelState2" class="label">대출 비교 신청일</label>
-              <div class="formRow wid150"><!-- v1.6 wid150 추가 -->
-                <input type="text" class="input" id="selectLabelState2" value="2023-07-01">
-              </div>
-            </div>
-            <div class="searchControlItem"><!-- v1.6 expand 삭제 -->
+            <div class="searchControlItem expand">
               <label for="selectLabelState3" class="label">제안서 마감일</label>
-              <div class="formRow wid150"><!-- v1.6 wid150 추가 -->
+              <div class="formRow">
                 <input type="text" class="input" id="selectLabelState3" value="2023-07-01">
               </div>
             </div>
-            <!-- v1.6 수정 -->
-            <div class="searchControlItem expand">
-              <label for="selectLabelState4" class="label">희망 대출 금액(최대)</label>
-              <div class="formRow">
-                <input type="text" class="input" id="selectLabelState4" value="600,000,000 (육억원)">
-              </div>
-            </div>
-            <button type="button" class="btnDkGreen">제안서 마감일 연장</button>
-            <button type="button" class="btnBlack">제안서 당일 마감</button>
+            <button type="button" class="btnDkGreen wid185">제안서 마감일 연장</button>
+            <button type="button" class="btnBlack wid185">제안서 마감</button>
           </div>
         </div>
       </fieldset>
@@ -77,53 +71,86 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem expand">
-              <label for="selectLabelState2_1" class="label">비교 신청 건</label>
+            <div class="searchControlItem">
+              <label for="selectLabelState2_1" class="label">대출 비교 신청일</label>
               <div class="formRow">
-                <select id="selectLabelState2_1">
-                  <option>S_230401_0001 시설 자금 대출</option>
-                  <option>S_230401_0001 시설 자금 대출</option>
-                </select>
-                <button type="button" class="btnSuccess">대출 비교 신청 정보</button>
+                <input type="text" class="input" id="selectLabelState2_1" value="2023-07-01">
               </div>
             </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState2_2" class="label">희망 대출 금액(최대)</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState2_2" value="600,000,000 (육억원)">
+              </div>
+            </div>
+            <button type="button" class="btnSuccess link">대출 비교 신청 정보</button>
           </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState2_3" class="label">제안서 마감일</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState2_3" value="2023-07-01">
+              </div>
+            </div>
+            <div class="searchControlItem expand">
+              <label for="selectLabelState2_4" class="label">변경된 마감일</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState2_4" value="2023-07-01">
+              </div>
+            </div>
+            <button type="button" class="btnDkGreen wid185" disabled>제안서 마감일 연장</button>
+            <button type="button" class="btnBlack wid185">제안서 마감</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
           <div class="searchControlGroup">
             <div class="searchControlItem">
-              <label for="selectLabelState2_2" class="label">대출 비교 신청일</label>
-              <div class="formRow wid150">
-                <input type="text" class="input" id="selectLabelState2_2" value="2023-07-01">
+              <label for="selectLabelState3_1" class="label">대출 비교 신청일</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState3_1" value="2023-07-01">
               </div>
             </div>
             <div class="searchControlItem expand">
-              <label for="selectLabelState2_4" class="label">희망 대출 금액(최대)</label>
+              <label for="selectLabelState3_2" class="label">희망 대출 금액(최대)</label>
               <div class="formRow">
-                <input type="text" class="input" id="selectLabelState2_4" value="600,000,000 (육억원)">
+                <input type="text" class="input" id="selectLabelState3_2" value="600,000,000 (육억원)">
               </div>
             </div>
-            <button type="button" class="btnDkGreen">제안서 마감일 연장</button>
-            <button type="button" class="btnBlack">제안서 당일 마감</button>
+            <button type="button" class="btnSuccess link">대출 비교 신청 정보</button>
           </div>
           <div class="searchControlGroup">
             <div class="searchControlItem expand">
-              <label for="selectLabelState2_6" class="label">제안서 마감일</label>
-              <div class="formRow wid150">
-                <input type="text" class="input" id="selectLabelState2_6" value="2023-07-01">
+              <label for="selectLabelState3_3" class="label">제안서 마감일</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState3_3" value="2023-07-01">
               </div>
             </div>
             <div class="searchControlItem expand">
-              <label for="selectLabelState2_7" class="label">희망 대출 금액(최대)</label>
+              <label for="selectLabelState3_4" class="label">변경된 마감일</label>
               <div class="formRow">
-                <input type="text" class="input" id="selectLabelState2_7" value="600,000,000 (육억원)">
+                <input type="text" class="input" id="selectLabelState3_4" value="2023-07-01">
+              </div>
+            </div>
+            <button type="button" class="btnDkGreen wid185" disabled>제안서 마감일 연장</button>
+            <button type="button" class="btnBlack wid185" disabled>제안서 마감</button>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="selectLabelState3_5" class="label">제안서 마감 처리 등록일</label>
+              <div class="formRow">
+                <input type="text" class="input" id="selectLabelState3_5" value="2023-07-01">
               </div>
             </div>
           </div>
         </div>
       </fieldset>
     </section>
-      
-    <div class="titH3 hasLine fullType"><h3 class="inner">보증기관 예비심사 결과</h3></div>
+
     <section class="">
+      <div class="titH3 hasLine fullType"><h3 class="inner">금융 회사 제안서</h3></div>
       <fieldset class="tableFilterGroup">
         <span class="count">총 <strong>0</strong>건</span>
         <div class="formRow" role="group">
@@ -135,143 +162,159 @@
         </div>
       </fieldset>
       <div class="jsGridWrap">
-        <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
-        <div id="externalPager" class="external-pager"></div>
+        <div id="jsGrid2" class="bbs" caption="제안서 비교신청 목록"></div>
+        <div id="externalPager2" class="external-pager"></div>
         <script>
-                
-          /* jsgrid sample */
-          $(function() {
-            var clients = [
-              { "Name1": "신용보증기관 신촌지점", //v1.6 br 제거
-                "Name2": "2023-08-10", 
-                // "Name3": "600,000,000<p class='sub'>(육억원)</p>", //v1.6 삭제
-                "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
-                "Name5": "85%", 
-                "Name6": "홍길동", 
-                "Name7": "02-4589-7584", 
-                "Name8": "<button type='button' class='btnWhite wid92'>열람</button>", // v1.4 .wid92추가
-              },
-              { "Name1": "신용보증기관 신촌지점",
-                "Name2": "2023-08-10", 
-                // "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
-                "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
-                "Name5": "85%", 
-                "Name6": "홍길동", 
-                "Name7": "02-4589-7584", 
-                "Name8": "<button type='button' class='btnWhite wid92'>열람</button>", 
-              },
-              { "Name1": "신용보증기관 신촌지점",
-                "Name2": "2023-08-10", 
-                // "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
-                "Name4": "600,000,000<p class='sub'>(육억원)</p>", 
-                "Name5": "85%", 
-                "Name6": "홍*동", 
-                "Name7": "02-4**9-7**4", 
-                "Name8": "<button type='button' class='btnGray wid92'>미열람</button>", 
-              },
-            ];
-            $("#jsGrid").jsGrid({
-              data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 보증 기관들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
-              fields: [
-                //v1.6 너비 및 워딩 수정
-                { name: "Name1",  type: "text", title : "보증기관", width: 280},
-                { name: "Name2", type: "text", title : "예비 심사 제출일", width: 170 },
-                // { name: "Name3", type: "text", title : "희망 신청 금액 (최대)", width: 270 }, //v1.6 삭제
-                { name: "Name4", type: "text", title : "보증 예상 금액", width: 270 },
-                { name: "Name5", type: "text", title : "보증 비율", width: 160 },
-                { name: "Name6", type: "text", title : "심사 담당자", width: 160 },
-                { name: "Name7", type: "text", title : "문의 전화번호", width: 160 },
-                { name: "Name8", type: "text", title : "심사결과 상세보기", width: 190 }, 
-              ],
-              pagerContainer: "#externalPager",
-            });
+        /* jsgrid sample */
+        $(function() {
+        var clients = [
+          { 
+            "Name1": "신한저축은행", 
+            "Name2": "7.1%", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "고길동", 
+            "Name5": "02-1234-5678", 
+            "Name6": "2023-10-15", 
+            "Name7": "열람", 
+            "Name8": "2023-10-15",  
+            "Name9": "정상",  
+            "Name10": "채택",  
+            "Name11": "2023-10-20",  
+            "Name12": "<button type='button' class='btnGray'>보기</button>",  
+          },
+          { 
+            "Name1": "신한저축은행", 
+            "Name2": "7.1%", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "고길동", 
+            "Name5": "02-1234-5678", 
+            "Name6": "2023-10-15", 
+            "Name7": "열람", 
+            "Name8": "2023-10-15",  
+            "Name9": "회수",  
+            "Name10": "채택",  
+            "Name11": "2023-10-20",  
+            "Name12": "<button type='button' class='btnGray' disabled>보기</button>",  
+          },
+          { 
+            "Name1": "신한저축은행", 
+            "Name2": "7.1%", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "고*동", 
+            "Name5": "02-1234-5678", 
+            "Name6": "2023-10-15", 
+            "Name7": "미열람", 
+            "Name8": "2023-10-15",  
+            "Name9": "정상",  
+            "Name10": "채택",  
+            "Name11": "2023-10-20",  
+            "Name12": "<button type='button' class='btnGray'>보기</button>",  
+          },
+          { 
+            "Name1": "신한저축은행", 
+            "Name2": "7.1%", 
+            "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
+            "Name4": "고*동", 
+            "Name5": "02-1234-5678", 
+            "Name6": "2023-10-15", 
+            "Name7": "미열람", 
+            "Name8": "2023-10-15",  
+            "Name9": "정상",  
+            "Name10": "미채택",  
+            "Name11": "-",  
+            "Name12": "<button type='button' class='btnGray'>보기</button>",  
+          },
+        ];
+        $("#jsGrid2").jsGrid({
+          data: clients,
+          noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융 회사사들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
+          fields: [
+            { name: "Name1", type: "text", title : "금융 회사", width: 150},
+            { name: "Name2", type: "text", title : "제안<br/>금리", width: 80},
+            { name: "Name3", type: "text", title : "제안 대출 금액", width: 140},
+            { name: "Name4", type: "text", title : "담당자", width: 80},
+            { name: "Name5", type: "text", title : "문의 전화<br/>번호", width: 135},
+            { name: "Name6", type: "text", title : "제안서<br/>유효기간", width: 120},
+            { name: "Name7", type: "text", title : "제안서<br/>열람 여부", width: 90}, 
+            { name: "Name8", type: "text", title : "제안서<br/>열람일", width: 120}, 
+            { name: "Name9", type: "text", title : "제안서<br/>상태", width: 70}, 
+            { name: "Name10", type: "text", title : "제안서<br/>채택 여부", width: 100}, 
+            { name: "Name11", type: "text", title : "제안서<br/>채택일", width: 120}, 
+            { name: "Name12", type: "text", title : "제안서<br/>열람", width: 110}, 
+          ],
+          pagerContainer: "#externalPager2",
           });
-  
-          </script>
+        });
+
+        </script>
       </div>
     </section>
 
-    <div class="titH3 hasLine fullType"><h3 class="inner">금융 기관 제안서</h3></div>
-    <section class="">
-      <fieldset class="tableFilterGroup">
-        <span class="count">총 <strong>0</strong>건</span>
-        <div class="formRow" role="group">
-          <select title="정렬" class="wid200">
-            <option>전체</option>
-            <option>옵션</option> 
-          </select>
-          <button type="button" class="btnDkGreen">적용</button>
-        </div>
-      </fieldset>
-      <div class="jsGridWrap">
-        <div id="jsGrid2" class="bbs" caption="심사 요청관리 목록"></div>
-        <div id="externalPager2" class="external-pager"></div>
+    <div class="doneWrap">
+      <i class="ico icoAlarm"></i>
+      <p class="subTit textBold">아직 제출된 제안서가 없어요.</p>
+      <p class="subTxt">
+        Loan&Biz는 금융 회사의 제안서가 도착하면 알림 메시지를 보내드려요.<br/>
+        혹시 아직 알림톡을 신청하지 않으셨나요?<br/>
+        ‘마이페이지’에서 알림톡 설정을 해주시면 제안서 접수 현황을 빠르게 알 수 있어요.
+      </p>
+      <div class="btnBox"> 
+        <button type="button" class="btnSuccess">마이페이지 이동</button>
       </div>
-      <script> 
-        /* jsgrid sample */
-        $(function() {
-          var clients = [
-            { "Name1": "신한저축은행 광교 영업점",//v1.6 br 제거
-              "Name2": "2023-08-10", 
-              // "Name3": "450,000,000<p class='sub'>(사억오천만원)</p>", //v1.6 삭제
-              "Name4": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name5": "4.6%", 
-              "Name6": "홍*동", 
-              "Name7": "02-1**4-6**7", 
-              "Name8": "-", 
-              "Name9": "<button type='button' class='btnGray wid80'>미열람</button>", // v1.4 .wid80추가 , v1.6 클래스 수정
-            },
-            { "Name1": "신한저축은행 광교 영업점",
-              "Name2": "2023-08-10", 
-              "Name3": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name4": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name5": "4.6%", 
-              "Name6": "홍길동", 
-              "Name7": "02-1234-6117", 
-              "Name8": "<strong class='gray'>N</strong>", 
-              "Name9": "<button type='button' class='btnWhite wid80'>열람</button>", 
-            },
-            { "Name1": "신한저축은행 광교 영업점",
-              "Name2": "2023-08-10", 
-              "Name3": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name4": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name5": "4.6%", 
-              "Name6": "홍길동", 
-              "Name7": "02-1234-6117", 
-              "Name8": "<strong class='blue'>Y</strong> (2023-09-01)", 
-              "Name9": "<button type='button' class='btnSuccess wid80'>채택</button>", 
-            },
-            { "Name1": "신한저축은행 광교 영업점",
-              "Name2": "2023-08-10", 
-              "Name3": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name4": "450,000,000<p class='sub'>(사억오천만원)</p>", 
-              "Name5": "4.6%", 
-              "Name6": "홍*동", 
-              "Name7": "02-1**4-6**7", 
-              "Name8": "-", 
-              "Name9": "<button type='button' class='btnBlack wid80'>회수</button>", 
-            },
-          ];
-          $("#jsGrid2").jsGrid({
-            data: clients,
-            noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 보증 기관들이 고객님의 대출 정보를 분석 중에 있어요.</p></div>",
-            fields: [
-              //v1.6 너비 및 워딩 수정
-              { name: "Name1",  type: "text", title : "보증 기관", width: 285},
-              { name: "Name2", type: "text", title : "제안서 제출일", width: 150 },
-              // { name: "Name3", type: "text", title : "희망 신청 금액<br/>(최대)", width: 150 }, //v1.6 삭제
-              { name: "Name4", type: "text", title : "제안 대출 금액", width: 170 },
-              { name: "Name5", type: "text", title : "제안 금리", width: 150 },
-              { name: "Name6", type: "text", title : "제안 담당자", width: 150 },
-              { name: "Name7", type: "text", title : "문의 전화번호", width: 150 },
-              { name: "Name8", type: "text", title : "제안서 채택여부", width: 150 },
-              { name: "Name9", type: "text", title : "심사 결과 보기", width: 160 },
-            ],
-            pagerContainer: "#externalPager2",
-          });
-        });
-      </script>
+    </div>
+
+
+    <div class="doneWrap">
+      <i class="ico icoCheck"></i>
+      <p class="subTit">고객님께 적합한 대출을 제안하기 위해 금융회사에서 대출 심사를 위한 시간이 필요해요.</p>
+      <p class="pointTxt">제안서 열람 가능일: 2023년 11월 14일</p>
+    </div>
+    <section class="sectionBlock60">
+      <h4 class="titH4">금융회사 심사 기간에 따른 열람 가능일</h4>
+      <div class="table_wrap">
+        <table class="bbs_list">
+          <caption>금융회사 심사 기간에 따른 열람 가능일</caption>
+          <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">신청 금액</th>
+              <th scope="col">열람 가능일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">신용 대출</td>
+              <td>대출 신청 금액 1억 미만</td>
+              <td>대출 비교 신청 완료 후 <strong>+1일</strong> 부터</td>
+            </tr>
+            <tr>
+              <td>대출 신청 금액 1억 이상</td>
+              <td>대출 비교 신청 완료 후 <strong>+3일</strong> 부터</td>
+            </tr>
+            <tr>
+              <td rowspan="2">담보 대출</td>
+              <td>대출 신청 금액 5억 미만</td>
+              <td>대출 비교 신청 완료 후 <strong>+5일</strong> 부터</td>
+            </tr>
+            <tr>
+              <td>대출 신청 금액 5억 이상</td>
+              <td>대출 비교 신청 완료 후 <strong>+15일</strong> 부터</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="guideBox">
+        <ul class="guideList dot">
+          <li class="list">열람 가능일은 금융 회사가 제안서를 제출한 경우 적용돼요.</li>
+          <li class="list">제안서 제출은 금융 회사별 내부 심사일에 따라 차이가 있으며 등록하신 제안서 마감일까지 접수 돼요.</li>
+          <li class="list">금융 회사가 심사 중 필요에 따라 유선 연락 또는 현장 방문을 요청할 수 있어요.</li>
+        </ul>
+      </div>
     </section>
 
   </div>

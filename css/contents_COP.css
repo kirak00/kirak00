@@ -273,10 +273,10 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .layerCont .main_survey { padding: 0;}
 .layerCont .main_survey dl:first-child dt { padding-top: 0;}
 .layerCont .main_survey .formRow { flex-wrap: wrap;}
-.layerCont .main_survey .formRow .checkbox + .checkbox { margin-left: 32px;}
+/* .layerCont .main_survey .formRow .checkbox + .checkbox { margin-left: 32px;} */
 .layerCont .main_survey .formRow .radio + .radio {margin-left: 32px;}
 
-.layerCont .notiBox + .main_survey { margin-top: 30px;}
+.layerCont .topResultBox + .main_survey { margin-top: 30px;}
 .layerCont .main_survey .formRow.full .checkbox { flex: 1;}
 .layerCont .main_survey .formRow .checkbox { margin-left: 0; margin-right: 40px;}
 .layerCont .main_survey .formRow .radio {margin-left: 0;  margin-right: 40px;}
