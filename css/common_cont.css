@@ -123,7 +123,7 @@
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
 .hasLine .inner .right { margin-left: auto; }
 .barStepWrap + .titBg,
-.titBg.resultType { height: 90px; background: #1EA885;}
+.titBg.resultType { min-height: 90px; background: #1EA885; text-align: center; line-height: 1.5;}
 .barStepWrap + .titBg h3,
 .titBg.resultType h3 { font-size: 24px }
 .titBg {display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
@@ -285,6 +285,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .sectionLine { padding: 40px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .sectionLine.pd40 { padding: 40px;}
 .sectionLine + .notiTxt { margin-top: 20px;}
+.sectionInner { max-width: 1044px; margin: 0 auto; padding-top: 40px;}
+.sectionInner .main_survey { padding-bottom: 20px;}
 .sectionIndent .titH3.hasLine { padding: 0 40px}
 .sectionIndent .formListTable { padding: 0 40px}
 .sectionIndent .titH3.hasLine + .formListTable { margin-top: 40px;}
@@ -1529,6 +1531,7 @@ table.bbs_list .widFix { display: inline-block; width: 1000px; text-align: left;
 table.bbs_list thead tr:only-child th:first-child,
 table.bbs_list td:first-child { padding-left: 28px;}
 table.bbs_list tr:has(>[rowspan]) ~ tr td:not([rowspan]) {padding-left: 10px;}
+table.bbs_list tr:has(>[rowspan]) ~ tr td.tit { padding-left: 30px;}
 table.bbs_list td.hasborder { border-right: 1px solid #ddd;}
 table.bbs_list thead tr:only-child th:last-child,
 table.bbs_list td:last-child { padding-right: 28px;}
