@@ -24,7 +24,8 @@
   <hr/>
   <div class="container" id="skip_content"  aria-label="콘텐츠">
     <section>
-      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">정부 지원 사업 안내 상세</button>
+      <h3 style="margin-bottom: 10px">팝업</h3>
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">만족도 평가(메인 팝업과 유사)</button>
     </section>    
   </div>
   <!-- **************** -->
@@ -35,14 +36,18 @@
   <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+  <div class="layerWrap modal" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid640">
       <div class="layerHead">
         <h3>만족도 평가</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="main_survey">
+        <div class="notiBox textCenter">
+          <p class="gray5">Loan&Biz를 사용하신 경험을 공유해주세요.<br/>
+            더 나은 Loan&Biz가 되도록 노력 할게요</p>
+        </div>
+        <div class="main_survey type2">
           <dl>
             <dt>· 금융 회사가 제출한 제안서와 실제 대출이 일치 했나요?</dt>
             <dd>
@@ -67,11 +72,11 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>대출 금리</label>
                 </span>
-                <div class="formSet full">
+                <div class="formSet">
                   <span class="checkbox">
                     <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>기타</label>
                   </span>
-                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
                 </div>
                </div>
              </dd>
@@ -113,11 +118,11 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_3_2" name="CheckBox"><label for="chk_3_2"><span></span>대출 탐색시간이 줄어서</label>
                 </span>
-                <div class="formSet full">
+                <div class="formSet">
                   <span class="checkbox">
                     <input type="checkbox" id="chk_3_3" name="CheckBox"><label for="chk_3_3"><span></span>기타</label>
                   </span>
-                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
                 </div>
               </div>
             <dt>·  Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
@@ -129,11 +134,11 @@
                 <span class="checkbox">
                   <input type="checkbox" id="chk_4_2" name="CheckBox"><label for="chk_4_2"><span></span>플랫폼 속도</label>
                 </span>
-                <div class="formSet full">
+                <div class="formSet">
                   <span class="checkbox">
                     <input type="checkbox" id="chk_4_3" name="CheckBox"><label for="chk_4_3"><span></span>기타</label>
                   </span>
-                  <input type="text" class="input" title="기타 내용 입력" placeholder="정보를 입력해 주세요.">
+                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
                 </div>
               </div>
             </dd>
@@ -141,7 +146,7 @@
         </div>
         <div class="table_bt">
           <div class="btn_c">
-            <button type="button" class="btnSuccess">평가 완료</button>
+            <button type="button" class="btnSuccess">제출</button><!-- v2.0 -->
             <!-- 수정일 경우 -->
             <!-- <button type="button" class="btnWhite">수정</button> -->
           </div>

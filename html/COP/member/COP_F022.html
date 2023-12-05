@@ -56,13 +56,13 @@
                 <label class="label" id="inpBizNum">사업자등록번호</label>
               </th>
               <td>
-                <div class="formRow hasError textCenter" role="group" aria-labelledby="inpBizNum">
+                <div class="formRow hasError textCenter inputBizNumber" role="group" aria-labelledby="inpBizNum">
                   <input class="input wid100" type="text" title="사업자등록번호(1/3)" maxlength="3" size="3" placeholder="000" value=""><!-- v1.4 수정 .wid100 -->
                   <span class="unit">-</span>
                   <input class="input wid100" type="text" title="사업자등록번호(2/3)" maxlength="2" size="2" placeholder="00" value=""><!-- v1.4 수정 .wid100 -->
                   <span class="unit">-</span>
                   <input class="input wid100" type="text" title="사업자등록번호(3/3)" maxlength="5" size="5" placeholder="00000" value=""><!-- v1.4 수정 .wid100 -->
-                  <button type="button" class="btnWhite">사업자등록번호 검증</button>
+                  <button type="button" class="btnWhite">사업자 등록번호 검증</button>
                 </div>
                 <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
               </td>
@@ -72,7 +72,7 @@
                 <label class="label" for="inpBrdName">법인명</label><!-- v1.6 수정 -->
               </th>
               <td>
-                <div class="formRow hasError">
+                <div class="formRow wid510 hasError"> <!-- v2.0 wid510 -->
                   <input id="inpBrdName" class="input" type="text" placeholder="사업자등록증의 법인명과 동일하게 작성해주세요." value="">
                 </div>
                 <p class="errorTxt">에러입니다. 다시 입력해주세요.</p>
@@ -80,7 +80,7 @@
             </tr>
             <tr>
               <th scope="row">
-                <label class="label" for="inpBizTel">회사대표 전화번호</label><!-- v1.4 워딩수정 -->
+                <label class="label" for="inpBizTel">회사 대표 전화 번호</label><!-- v2.0 워딩수정 -->
               </th>
               <td>
                 <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
@@ -96,13 +96,16 @@
             <!-- v1.4 위치이동 -->
             <tr>
               <th scope="row">
-                <label class="label" id="inpEmail">회사대표 이메일</label><!-- v1.4 워딩수정 -->
+                <label class="label" id="inpEmail">회사 대표 이메일</label><!-- v1.4 워딩수정 -->
               </th>
               <td>
                 <div class="formRow" role="group" aria-labelledby="inpEmail">
                   <input class="input wid180" type="text" title="이메일 아이디" placeholder="hong" value="" maxlength="50">
                   <span class="unit mail">@</span>
                   <input class="input wid200" title="도메인주소" type="text" placeholder="gmail.com" value="">
+                  <select title="도메인주소 선택" class="wid200">
+                    <option>직접 입력</option>
+                  </select>
                 </div>
               </td>
             </tr>
@@ -113,7 +116,10 @@
               </th>
               <td role="group" aria-labelledby="inpBizAdd">
                 <div class="formRow">
-                  <input class="input " type="text" title="주소" placeholder="주소를 검색해 주세요." value="">
+                  <select title="지역선택" class="wid180"> <!-- v2.0 추가 -->
+                    <option>서울</option>
+                  </select>
+                  <input class="input " type="text" title="주소" placeholder="" value="">
                   <button type="button" class="btnBlack">주소검색</button>
                 </div>
                 <div class="formRow">
@@ -128,18 +134,19 @@
               </th>
               <td>
                 <div class="formRow">
-                  <input id="inpCeo" class="input" type="text" placeholder="대표자명을 입력해 주세요." value="">
+                  <input id="inpCeo" class="input" type="text" placeholder="사업자등록증의 대표자명과 동일하게 작성해주세요." value=""> <!-- v2.0 수정 -->
                   <!-- <button type="button" class="btnWhite">본인 확인</button> --><!-- v1.4 삭제 -->
                 </div>
               </td>
             </tr>
             <!-- v1.6 대표자 유형 따로 분리 -->
-            <tr>
+            <!-- v2.0  삭제 -->
+            <!-- <tr>
               <th scope="row" class="pt15">
                 <label class="label" for="inpCeo">대표자 유형</label>
               </th>
               <td>
-                <div class="formRow"><!-- v1.4 mt20 삭제 -->
+                <div class="formRow">
                   <span class="radio">
                     <input type="radio" id="testRdoBoxA" name="testRdoBox" value="" checked/>
                     <label class="label" for="testRdoBoxA"><span></span>1인 대표</label>
@@ -154,13 +161,13 @@
                   </span>
                 </div>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
     </section>
     <section class="sectionBlock60 sectionIndent"><!-- v1.4 .sectionIndent.sectionBlock60 -->
-      <div class="titH3 hasLine"><h3>기본정보 입력 <strong class="blue">(필수)</strong></h3></div> 
+      <div class="titH3 hasLine"><h3>기본정보 입력<strong class="blue">(필수)</strong></h3></div> 
       <div class="formListTable formMdTable">
         <table>
           <caption>회원가입정보 기본정보</caption>
@@ -175,8 +182,8 @@
               </th>
               <td>
                 <div class="formRow">
-                  <input id="inpId" class="input" type="text" placeholder="영문, 숫자포함 20자내, 비속어 금지" value="">
-                  <button type="button" class="btnWhite">중복 체크</button>
+                  <input id="inpId" class="input wid500" type="text" placeholder="영문, 숫자 포함 최소 8자, 최대 20자 이내" value="">
+                  <button type="button" class="btnWhite full">아이디 확인</button><!-- v2.0 -->
                   <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
                 </div>
               </td>
@@ -187,7 +194,7 @@
               </th>
               <td>
                 <div class="formRow">
-                  <input id="inpPw" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
+                  <input id="inpPw" class="input wid500" type="text" placeholder="영문, 숫자, 특수문자 포함 / 최소 8자, 최대 30자 이내" value="">
                 </div>
               </td>
             </tr>
@@ -197,298 +204,69 @@
               </th>
               <td>
                 <div class="formRow">
-                  <input id="inpPwCheck" class="input" type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" value="">
-                  <button type="button" class="btnWhite">비밀번호 확인</button> 
+                  <input id="inpPwCheck" class="input wid500" type="text" placeholder="영문, 숫자, 특수문자 포함 / 최소 8자, 최대 30자 이내" value="">
+                  <button type="button" class="btnWhite full">비밀번호 확인</button> <!-- v2.0 -->
                 </div>
               </td>
             </tr>
-            <!-- v1.4 삭제 -->
-            <!-- <tr>
-              <th scope="row">
-                <label class="label" for="inpTel">대표자 휴대전화</label>
-              </th>
-              <td>
-                <div class="formRow textCenter" role="group" aria-labelledby="inpTel">
-                  <input class="input" type="text" title="대표자 휴대전화(1/3)" placeholder="000" value="" readonly>
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="대표자 휴대전화(2/3)" placeholder="0000" value="" readonly>
-                  <span class="unit">-</span>
-                  <input class="input" type="text" title="대표자 휴대전화(3/3)" placeholder="0000" value="" readonly>
-                </div>
-              </td>
-            </tr> -->
-            <!-- <tr>
-              <th scope="row">
-                <label class="label" id="inpEmail2">대표자 이메일</label>
-              </th>
-              <td>
-                <div class="formRow" role="group" aria-labelledby="inpEmail2">
-                  <input class="input" type="text" title="이메일 아이디" placeholder="hong" value="" maxlength="50">
-                  <span class="unit mail">@</span>
-                  <input class="input" title="도메인주소" type="text" placeholder="gmail.com" value="">
-                </div>
-              </td>
-            </tr>
-            -->
-            <!-- v1.4 삭제 -->
-            <!-- <tr>
-              <td colspan="2">
-                <strong class="label">담당자 정보</strong>
-                <div class="formGrayBox">
-                  <div class="list">
-                    <div class="addControl">
-                      <span class="checkbox">
-                        <input type="checkbox" id="ckbMember1_1" name="ckbMember" />
-                        <label class="label" for="ckbMember1_1"><span></span>대표자 동일</label>
-                      </span>
-                      <div class="addBtnSet">
-                        <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
-                        <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
-                      </div>
-                    </div>
-                    <div class="formListTable">
-                      <table>
-                        <caption>회원가입정보 법인회사정보</caption>
-                        <colgroup>
-                          <col width="186px">
-                          <col width="auto">
-                          <col width="186px">
-                          <col width="auto">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" for="inpIdBox1">담당자 명</label>
-                            </th>
-                            <td>
-                              <div class="formRow">
-                                <input id="inpIdBox1" class="input" type="text" placeholder="" value="">
-                              </div>
-                            </td>
-                            <th scope="row">
-                              <label class="label" for="inpIdBox2">직함</label>
-                            </th>
-                            <td>
-                              <div class="formRow">
-                                <input id="inpIdBox2" class="input" type="text" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" id="inpIdBox3">담당자 이메일</label>
-                            </th>
-                            <td colspan="3">
-                              <div class="formRow" role="group" aria-labelledby="inpIdBox3">
-                                <input class="input wid240" type="text" title="이메일 아이디" placeholder="" value="" maxlength="50">
-                                <span class="unit mail">@</span>
-                                <input class="input" type="text" title="도메인주소" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" id="inpIdBox4">유선번호</label>
-                            </th>
-                            <td>
-                              <div class="formRow textCenter" role="group" aria-labelledby="inpIdBox4">
-                                <input class="input" type="text" title="유선번호(1/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="유선번호(2/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="유선번호(3/3)" placeholder="" value="">
-                              </div>
-                            </td>
-                            <th scope="row">
-                              <span class="checkbox">
-                                <input type="checkbox" id="ckbCell1" name="ckbCell" />
-                                <label class="label" for="ckbCell1"><span></span>휴대전화</label>
-                              </span>
-                            </th>
-                            <td>
-                              <div class="formRow textCenter" role="group">
-                                <input class="input" type="text" title="휴대전화(1/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="휴대전화(2/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="휴대전화(3/3)" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="list">
-                    <div class="addControl">
-                      <span class="checkbox">
-                        <input type="checkbox" id="ckbMember2_1" name="ckbMember" />
-                        <label class="label" for="ckbMember2_1"><span></span>대표자 동일</label>
-                      </span>
-                      <div class="addBtnSet">
-                        <button type="button" class="btnPlus"><span class="hide">리스트 추가</span></button>
-                        <button type="button" class="btnMinus"><span class="hide">리스트 삭제</span></button>
-                      </div>
-                    </div>
-                    <div class="formListTable">
-                      <table>
-                        <caption>회원가입정보 법인회사정보</caption>
-                        <colgroup>
-                          <col width="186px">
-                          <col width="auto">
-                          <col width="186px">
-                          <col width="auto">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" for="inpIdBox2_1">담당자 명</label>
-                            </th>
-                            <td>
-                              <div class="formRow">
-                                <input id="inpIdBox2_1" class="input" type="text" placeholder="" value="">
-                              </div>
-                            </td>
-                            <th scope="row">
-                              <label class="label" for="inpIdBox2_2">직함</label>
-                            </th>
-                            <td>
-                              <div class="formRow">
-                                <input id="inpIdBox2_2" class="input" type="text" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" id="inpIdBox2_3">담당자 이메일</label>
-                            </th>
-                            <td colspan="3">
-                              <div class="formRow" role="group" aria-labelledby="inpIdBox2_3">
-                                <input class="input wid240" type="text" title="이메일 아이디" placeholder="" value="" maxlength="50">
-                                <span class="unit mail">@</span>
-                                <input class="input" type="text" title="도메인주소" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <label class="label" for="inpIdBox2_4">유선번호</label>
-                            </th>
-                            <td>
-                              <div class="formRow textCenter" role="group" aria-labelledby="inpIdBox2_4">
-                                <input class="input" type="text" title="유선번호(1/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="유선번호(2/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="유선번호(3/3)" placeholder="" value="">
-                              </div>
-                            </td>
-                            <th scope="row">
-                              <span class="checkbox">
-                                <input type="checkbox" id="ckbCell2" name="ckbCell2" />
-                                <label class="label" for="ckbCell2"><span></span>휴대전화</label>
-                              </span>
-                            </th>
-                            <td>
-                              <div class="formRow textCenter" role="group">
-                                <input class="input" type="text" title="휴대전화(1/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="휴대전화(2/3)" placeholder="" value="">
-                                <span class="unit">-</span>
-                                <input class="input" type="text" title="휴대전화(3/3)" placeholder="" value="">
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <script>
-                    $(function(){
-                      $(document).on("click", ".btnPlus", function() {
-                        var $listblock = $('.list').eq(0).clone();
-                        $('.formGrayBox').append($listblock);
-                      });
-                      $(document).on("click", ".btnMinus", function() {
-                        $(this).closest(".list").detach();
-                      });
-                    });
-                </script>
-              </td>
-            </tr> -->
             <tr>
               <th scope="row">
                 <label class="label">가입경로</label>
               </th>
-              <!-- v1.4 수정 -->
+              <!-- v2.0 수정 -->
               <td>
-                <div class="formRow">
-                  <select title="" class="wid200">
-                    <!-- <option>선택해주세요</option> -->
-                    <option>인터넷 검색</option>
-                  </select>
-                </div>
-                <div class="formRow">
-                  <span class="radio">
-                    <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
-                    <label for="testRdoSns1"><span></span>유튜브</label>
-                  </span>
-                  <span class="radio">
-                    <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
-                    <label for="testRdoSns2"><span></span>네이버</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
-                    <label for="testRdoSns3"><span></span>다음</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoSns4" name="testRdoSns" value="" />
-                    <label for="testRdoSns4"><span></span>구글</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoSns5" name="testRdoSns" value="" />
-                    <label for="testRdoSns5"><span></span>기타</label>
-                  </span>
-                  <input class="input" type="text" placeholder="Ex) 지인추천" value="">
-                </div>
-                <div class="formRow">
-                  <select title="" class="wid200">
-                    <!-- <option>선택해주세요</option> -->
-                    <option>광고</option>
-                  </select>
-                </div>
-                <div class="formRow">
-                  <span class="radio">
-                    <input type="radio" id="whereRdo1" name="whereRdo" value="" />
-                    <label for="whereRdo1"><span></span>라디오 광고</label>
-                  </span>
-                  <span class="radio">
-                    <input type="radio" id="whereRdo2" name="whereRdo" value="" />
-                    <label for="whereRdo2"><span></span>블로그</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="whereRdo3" name="whereRdo" value="" />
-                    <label for="whereRdo3"><span></span>카페</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="whereRdo4" name="whereRdo" value="" />
-                    <label for="whereRdo4"><span></span>기타</label>
-                  </span>
-                  <input class="input" type="text" placeholder="Ex) 지인추천" value="">
-                </div>
-                <div class="formRow">
-                  <select title="" class="wid200">
-                    <!-- <option>선택해주세요</option> -->
-                    <option>신한은행 직원 소개</option>
-                  </select>
-                </div>
-                <div class="formRow"><!-- v1.6 추가 -->
-                  <input class="input" type="text" placeholder="신한은행 직원의 행번을 입력해주세요." value="">
-                  <button type="button" class="btnWhite">조회</button>
+                <div class="formSurvey">
+                  <label class="label">인터넷 검색</label>
+                  <div class="formRow">
+                    <span class="radio">
+                      <input type="radio" id="testRdoSns1" name="testRdoSns" value="" />
+                      <label for="testRdoSns1"><span></span>유튜브</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="testRdoSns2" name="testRdoSns" value="" />
+                      <label for="testRdoSns2"><span></span>네이버</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="testRdoSns3" name="testRdoSns" value="" />
+                      <label for="testRdoSns3"><span></span>다음</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="testRdoSns4" name="testRdoSns" value="" />
+                      <label for="testRdoSns4"><span></span>구글</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="testRdoSns5" name="testRdoSns" value="" />
+                      <label for="testRdoSns5"><span></span>기타</label>
+                    </span>
+                    <input class="input" type="text" placeholder="Ex) 지인추천" value="">
+                  </div>
+                  <label class="label">광고</label>
+                  <div class="formRow">
+                    <span class="radio">
+                      <input type="radio" id="whereRdo1" name="whereRdo" value="" />
+                      <label for="whereRdo1"><span></span>라디오 광고</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="whereRdo2" name="whereRdo" value="" />
+                      <label for="whereRdo2"><span></span>블로그</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="whereRdo3" name="whereRdo" value="" />
+                      <label for="whereRdo3"><span></span>카페</label>
+                    </span>
+                    <span class="radio"> 
+                      <input type="radio" id="whereRdo4" name="whereRdo" value="" />
+                      <label for="whereRdo4"><span></span>기타</label>
+                    </span>
+                    <input class="input" type="text" placeholder="ex) 지하철 광고" value="">
+                  </div>
+                  <label class="label">신한은행 직원 소개</label>
+                  <div class="formRow">
+                    <input class="input" type="text" placeholder="가입을 추천한 직원명을 입력해 주세요." value="">
+                    <button type="button" class="btnBlack">직원명 조회</button>
+                  </div>
                 </div>
               </td>
-              <!-- //v1.4 수정 -->
             </tr>
           </tbody>
         </table>

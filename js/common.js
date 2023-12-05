@@ -256,6 +256,7 @@ function messageList(){
 }
 
 
+
 function tabScript(){
   
 
@@ -726,12 +727,24 @@ $.fn.fileAttach = function() {
 		$(item).on('change', function(){			
 			if(window.FileReader){
 				var filename = $(this)[0].files[0].name;
+        if($(this).siblings('.attached').length > 0) {
+          var fileWithBtn = "";
+          fileWithBtn += `<span class="attach_box">`;
+          fileWithBtn += `<span class="txt">${filename}</span>`;
+          fileWithBtn += `<button type="button" class="btn_delete"><span class="srOnly">삭제</span></button>`;
+          fileWithBtn += `</span>`;
+          $(this).siblings('.attached').append(fileWithBtn);
+        }else {
+          $(this).siblings('.input').val(filename);
+        }
 			} else {
 				var filename = $(this).val().split('/').pop().split('\\').pop();
 			}
-			$(this).siblings('.input').val(filename);
 		});
 	});
+  $(document).on("click", ".attached .btn_delete", function () {
+    $(this).parents(".attach_box").remove();
+  });
 };
 
 $.fn.calcTextareaHeight = function(e) {
