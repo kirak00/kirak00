@@ -210,6 +210,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .guideBox.mt60 { margin-top: 60px;}
 .guideBox.point { color: #069B66; }
 .layerCont .guideBox.point { background: #EAFAEB}
+.layerCont .guideBox.point.mt14 { margin-top: 14px;}
 .guideBox.type2 { background: #EAFAEB; }
 .guideBox .notiTxt + .guideList { margin-top: 10px;}
 .guideBox .desc { margin-top: 10px; color: #555; font-size: 14px;}
@@ -222,6 +223,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 /* .guideBox .infoList { font-size: 18px;} */
 .layerCont .guideBox .infoList { margin-top: 16px;}
 .layerCont .guideBox .infoList.type2 { width: 120px; text-align: left; margin: 16px auto 0;}
+.layerCont .guideBox + .msg { margin-top: 20px;} 
 
 .agreeLineBox { padding: 40px 40px 0; border-radius: 16px; border: 1px solid #ddd;} 
 .notiBox + .agreeLineBox { margin-top: 40px; }
@@ -1714,6 +1716,7 @@ table { width: 100%;}
 .textTable.boxType.pointTable td {  line-height:40px; }
 .textTable.hasLine { padding: 40px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
 .textTable { margin-top: 20px;}
+.textTable.mt30 { margin-top: 30px;}
 .textTable.mt32 { margin-top: 32px;}
 .textTable + .notiTxt { margin-top: 20px; }
 .table_wrap + .notiTxt { margin-top: 10px; }
