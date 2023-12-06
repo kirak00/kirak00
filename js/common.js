@@ -267,15 +267,14 @@ function tabScript(){
     var tab = wrap.find("[role=tab]").each(function(n){this.n=n});
     var contArr = [];
     var liArr = [];
-
-    if(tab[0] && tab[0].tagName.toLowerCase() == "button"){
+    if( tab[0].tagName.toLowerCase() == "button" ){
       tab.each(function(i,o){
         this.parent = $(this.parentNode)
         var cont = document.querySelector("#"+o.getAttribute("aria-controls"));
         liArr.push(o.parentNode)
         if(cont) contArr.push(cont)
       })
-    }else if(tab[0] && tab[0].tagName.toLowerCase() == "a"){
+    }else if( tab[0].tagName.toLowerCase() == "a"){
       tab.each(function(i,o){
         this.parent = $(this.parentNode)
         var cont = document.querySelector(o.getAttribute("href"));
@@ -303,7 +302,7 @@ function tabScript(){
         $("html").animate({scrollTop:240})
       }
 
-      if(this.parent.hasClass("disabled")) return false;
+      if($(this.parentNode).hasClass("disabled")) return false;
       initTab.hide()
       
       if(tabCont.length == tab.length ){
