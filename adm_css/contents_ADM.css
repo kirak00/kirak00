@@ -478,7 +478,7 @@ fieldset .searchControlBox { width: 100%;}
 .comment .commentBody { display: flex; }
 .comment .commentBody .btnSuccess { margin-left: 20px; align-self: flex-end;}
 .comment .filebox { width:600px; margin-top:20px;  }
-
+.comment .filebox.multi { width: 100%; }
 
 
 /* 엑셀 업로드 */
