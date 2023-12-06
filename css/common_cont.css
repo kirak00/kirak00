@@ -356,7 +356,7 @@ button.btnSuccess    {padding:0 50px; height:50px; background:#069B66; border-ra
 .btnGray:hover       { background:#ddd; text-decoration: none; border-color: #ddd;}
 .btnWhiteLine:hover       { background:#069B66; text-decoration: none;  color:#fff }
 .btnWhiteLine2:hover       { background:#ffffff; text-decoration: none; color:#069B66;  }
-.btnBlack:hover       { background:#333; text-decoration: none; color:#ffff;  }
+.btnBlack:hover       { background:#333; text-decoration: none; color:#ffff; border-color: #333; }
 
 /* .btnSuccess:active        { background:#069B66; text-decoration: none;  } */
 /* .btnSky:focus, */
@@ -1659,6 +1659,7 @@ table { width: 100%;}
 .viewNolineTable tr:last-child td { padding-bottom: 0; }
 .viewNolineTable th { font-weight: 700; text-align: left; vertical-align: top;}
 .viewNolineTable td { text-align: left;}
+.viewNolineTable .filebox.multi { margin-top: 10px; }
 
 /* 라인 YES */
 .viewLineTable .tableTit { margin-top: 40px;}
@@ -2494,13 +2495,16 @@ ul.youtubeList li .titBox p   {margin-top:8px; color: #888; }
 *****************************/
 .layerCont .filebox .label { width: 72px; font-weight: 700;}
 .filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
-.filebox input[type="file"]:focus + .btnBlack { border: 2px dashed #069B66 }
+.filebox input[type="file"]:focus { outline: none }
+.filebox input[type="file"]:focus + .btnBlack { outline: 2px dashed #069B66 }
 .filebox .input { flex: 1; }
 .filebox .input:disabled { color: #333; background-color: #fff;}
 .filebox .attached { padding-left: 16px}
 .filebox .attached .btn_delete:focus { outline: 2px dashed #069B66;}
 .filebox .attached .btn_delete::after  {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_18_close_circle.png) no-repeat 50% 50% / contain; }
 .filebox .attached .attach_box + .attach_box { margin-left: 16px}
+.filebox .attached .txt { color: #555;}
+.filebox.multi .btnBlack { height: 36px; padding: 0 20px; line-height: 34px;}
 
 .layerCont .filebox .btnWhite, 
 .layerCont .filebox .btnSuccess { width: 116px; padding: 0;} 
