@@ -468,6 +468,13 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 /* .ico_drag { color: #555;} */
 .icoDrag::before{ content:""; display:inline-block; width:32px; height:40px; background: url('../adm_images/common/ico_drag.png')  no-repeat center / 32px 40px; }
+/* .moveBtn { display: flex; flex-direction: column;} */
+.icoUp { display: block; width: 100%; padding-top: 10px; padding-bottom: 4px;}
+.icoUp::before{ content:""; display:inline-block; width:28px; height:14px; background: url('../adm_images/common/ico_dragUp.png')  no-repeat center / 18px 11px; }
+.icoUp:disabled::before{  background-image: url('../adm_images/common/ico_dragUp_disabled.png'); }
+.icoDown { display: block; width: 100%; padding-top: 4px; padding-bottom: 10px; }
+.icoDown::before{ content:""; display:inline-block; width:28px; height:14px; background: url('../adm_images/common/ico_dragDown.png')  no-repeat center / 18px 11px; }
+.icoDown:disabled::before{ background-image: url('../adm_images/common/ico_dragDown_disabled.png'); }
 
 /****************************
 **********  list  **********
