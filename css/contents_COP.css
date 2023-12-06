@@ -216,6 +216,7 @@ ul.main_loan_info .main_btn button { width: auto; padding: 0 32px;}
 .main_loan_progress .list .tit::before { content: ''; display: inline-block; width: 27px; height: 27px; margin-right: 8px; background: url(../images/COP/main/ico_log_process_tit.png) no-repeat 50% 50% / contain ; vertical-align: -6px; }
 .main_loan_progress .list .btnWrap { display: flex; gap: 20px;}
 .main_loan_progress .list .btnWrap button { min-width: 227px;}
+.main_loan_progress .list .btnWrap button.btnWhite.on {  background:#069B66; color: #fff;}
 
 .main_loan_cont .list .status   {}  
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:18px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
