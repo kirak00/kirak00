@@ -48,7 +48,7 @@
           }
         </script>
       </section>
-      <section style="margin-top: 20px;">
+      <!-- <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">버튼 2개</h3>
         <button type="button" class="btnSuccess"  id="confirmClick">직원명 조회 알럿</button>
         <script>
@@ -85,11 +85,12 @@
             )
           });
         </script>
-      </section>
+      </section> -->
       <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">팝업</h3>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerAll">전체(필수) 동의</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">이용약관 동의</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="searchLayer">직원명 조회</button>
       </section>
 
 
@@ -161,6 +162,69 @@ pdf 약관<br/>
         </div>
         <div class="layerFoot">
           <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')" aria-label="레이어 닫기">동의</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <div class="layerWrap modal" id="searchLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+      <div class="layerBody wid500 noScroll">
+        <div class="layerHead">
+          <h3>직원명 조회</h3>
+          <button type="button" class="layerClose" popup-close="searchLayer" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <div class="radioList">
+            <span class="radio">
+              <input type="radio" id="rdoLabel1" name="rdoName" value="" checked="">
+              <label class="label" for="rdoLabel1"><span></span>홍길동 / 서소문점</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="rdoLabel2" name="rdoName" value="">
+              <label class="label" for="rdoLabel2"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel3" name="rdoName" value="">
+              <label class="label" for="rdoLabel3"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel4" name="rdoName" value="">
+              <label class="label" for="rdoLabel4"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel5" name="rdoName" value="">
+              <label class="label" for="rdoLabel5"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel6" name="rdoName" value="" checked="">
+              <label class="label" for="rdoLabel6"><span></span>홍길동 / 서소문점</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="rdoLabel7" name="rdoName" value="">
+              <label class="label" for="rdoLabel7"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel8" name="rdoName" value="">
+              <label class="label" for="rdoLabel8"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel9" name="rdoName" value="">
+              <label class="label" for="rdoLabel9"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel10" name="rdoName" value="">
+              <label class="label" for="rdoLabel10"><span></span>홍길동 / 광교지점</label>
+            </span> 
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('searchLayer')" aria-label="레이어 닫기">선택</button>
         </div>
       </div>
       <div class="layerDimm"></div>

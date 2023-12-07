@@ -986,7 +986,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formRow.mt30 { margin-top: 30px; }
 .formRow.py15 { padding-top: 15px; padding-bottom: 15px; }
 
-.radioList { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 20px;}
+.radioList { display: flex; flex-direction: column; gap: 30px; height: 240px; margin-bottom: 8px; overflow: auto;}
 .radioList .radio + .radio { margin: 0;}
 
 .formSurvey { padding-top: 15px}
@@ -2005,6 +2005,8 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 }
 
 .layerCont        { max-height: calc(100vh - 300px); overflow: auto; }
+.noScroll .layerCont {overflow: hidden;}
+
 .typeAlert .layerCont > :first-child { margin-top: 0;}
 .typeAlert .layerCont .msg { padding-bottom: 12px; }
 .layerCont .msg + .guideBox { margin-top: 32px;}
