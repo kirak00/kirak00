@@ -77,6 +77,8 @@ footer    {width:100%; }
 .searchControlBox   {border:1px solid #ddd; background:#f4f4f4; }
 .tabLineWrap .inner  {max-width:1920px; position:relative; padding:0 60px; }
 .tabLineWrap p.info_txt  {position:absolute; right:0; bottom:20px }
+.tabLineWrap p.info_txt span  {}
+.tabLineWrap p.info_txt span + span  {border-left:1px solid #ddd; padding-left:16px; margin-left:12px;  }
 .tabLine    {max-width:1920px; }
 /* body  { background:rgba(244, 246, 248, 1)} */
 
