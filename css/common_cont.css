@@ -741,8 +741,13 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 
 /* 라디오 버튼 */
-.loanSelect { display: flex; gap: 20px;}
+.loanSelect { display: flex; gap: 20px; margin-top: 20px;}
 .loanSelect .list { position: relative; display: block; width: 100%;}
+.loanSelect .list .tt::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_60_log2_process_01.png') no-repeat 50% 50% / contain; vertical-align: -3px; }
+.loanSelect .list:nth-child(2) .tt::before { background-image: url('../images/common/ico_60_log2_process_02.png')}
+.loanSelect .list:nth-child(3) .tt::before { background-image: url('../images/common/ico_60_log2_process_03.png')}
+.loanSelect .list:nth-child(4) .tt::before { background-image: url('../images/common/ico_60_log2_process_04.png')}
+
 .loanSelect .list.active .btnWhite { padding:0; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; }
 .loanSelect .list.active .btnWhite::after {  background-image:url(../images/common/ico_18_right_w.png);}
 .loanSelect .list .btnWhite { position: absolute; bottom: 40px; left: 40px; right: 40px; padding: 0;}
@@ -750,7 +755,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .loanSelect .radioBtn + input[type="text"] { margin-left: 0px;}
 .loanSelect .radioBtn input[type=radio]{ display: none; }
 .loanSelect .radioBtn input[type=radio]+label{ display: block; height: auto; text-align: left; cursor: pointer;}
-.loanSelect .radioBtn input[type=radio]+label{  padding: 40px 40px 120px; outline: 1px solid #ddd; border-radius: 16px; color: #333; text-indent: 0;}
+.loanSelect .radioBtn input[type=radio]+label{  padding: 40px 40px; outline: 1px solid #ddd; border-radius: 16px; color: #333; text-indent: 0;}
 .loanSelect .radioBtn input[type=radio]:checked+label{ background: #fff; outline: 3px solid #069B66; color: #333; }
 .loanSelect .radioBtn input[type=radio]:disabled+label { color: #888;}
 .loanSelect .radioBtn input[type=radio] + label span { width: auto; height: auto; vertical-align: 0; margin: 0; background: none; white-space: initial;}
@@ -2005,7 +2010,6 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 }
 
 .layerCont        { max-height: calc(100vh - 300px); overflow: auto; }
-.noScroll .layerCont {overflow: hidden;}
 
 .typeAlert .layerCont > :first-child { margin-top: 0;}
 .typeAlert .layerCont .msg { padding-bottom: 12px; }
