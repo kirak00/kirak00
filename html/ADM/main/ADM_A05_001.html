@@ -386,141 +386,264 @@
           </ul>
 
           
-          <ul role="tablist" class="tabBtn fullType tabScript">
-            <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1_1">조회 기간</button></li>
-            <li><button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_1_2">기간 설정</button></li>
-          </ul>
 
-          <div id="tabpanel_1_1">
-            <div class="fullYear">
-              <select name="" id="">
-                <option value="">2023년</option>
-              </select>
-              <select name="" id="">
-                <option value="">7월</option>
-              </select>
+          <div class="" id="tabpanel_1">
+            
+            <fieldset>
+              <legend>게시물 검색</legend>
+              <div class="layerSearch">
+  
+
+                <div class="tabScriptRadio" >
+                  <span class="radio">
+                    <input role="tab" type="radio" id="testRdoBoxOnly1" name="testRdoBoxOnly1" value="A"  aria-controls="tabpanel_1_1" checked />
+                    <label for="testRdoBoxOnly1"><span></span>조회 기간</label>
+                  </span>
+                  <span class="radio">
+                    <input role="tab" type="radio" id="testRdoBoxOnly2" name="testRdoBoxOnly1" value="A"  aria-controls="tabpanel_1_2" />
+                    <label for="testRdoBoxOnly2"><span></span>기간 설정</label>
+                  </span>
+                </div>
+                <div id="tabpanel_1_1">
+                  <div class="fullYear">
+                    <select name="" id="">
+                      <option value="">2023년</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="">7월</option>
+                    </select>
+                    <button type="button" class="btnSuccess">조회</button>
+                  </div>
+                </div>
+                <div id="tabpanel_1_2">
+                  <div class="rangeControl">
+                    <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                    <span class="uit">~</span>
+                    <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                    <button type="button" class="btnSuccess">조회</button>
+                  </div>
+                </div> 
+
+              </div>
+            </fieldset>
+
+            <div id="jsGrid1_1" class="bbs" caption=""></div>    
+            <div class="btn_r">
+              <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
             </div>
+            
+            <script>
+              $(function() {
+                
+
+                var clients = [
+                  { 
+                    "Name1": "10",
+                    "Name2": "10",
+                    "Name3": "1,321", 
+                  },
+                  { 
+                    "Name1": "10",
+                    "Name2": "10",
+                    "Name3": "1,321", 
+                  },
+                ];
+                
+
+                $("#jsGrid1_1").jsGrid({
+                  data: clients,
+                  paging:false,
+                  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                  fields: [
+                    { name: "Name1", type: "text", title : "월", width: "auto", validate: "required", sorting: false },
+                    { name: "Name2", type: "text", title : "일", width: "auto", validate: "required", sorting: false },
+                    { name: "Name3", type: "text", title : "방문자수", width: 200, validate: "required" },
+                  ],
+
+                });
+              });
+            </script>
           </div>
-          <div id="tabpanel_1_2">
-            <div class="rangeControl">
-              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-              <span class="uit">~</span>
-              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+
+
+          <div class="" id="tabpanel_2">
+            
+            <fieldset>
+              <legend>게시물 검색</legend>
+              <div class="layerSearch">
+  
+
+                <div class="tabScriptRadio" >
+                  <span class="radio">
+                    <input role="tab" type="radio" id="testRdoBoxOnly2_1" name="testRdoBoxOnly" value="A"  aria-controls="tabpanel_2_1" checked />
+                    <label for="testRdoBoxOnly2_1"><span></span>조회 기간</label>
+                  </span>
+                  <span class="radio">
+                    <input role="tab" type="radio" id="testRdoBoxOnly2_2" name="testRdoBoxOnly" value="A"  aria-controls="tabpanel_2_2" />
+                    <label for="testRdoBoxOnly2_2"><span></span>기간 설정</label>
+                  </span>
+                </div>
+                <div id="tabpanel_2_1">
+                  <div class="fullYear">
+                    <select name="" id="">
+                      <option value="">2023년</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="">7월</option>
+                    </select>
+                    <button type="button" class="btnSuccess">조회</button>
+                  </div>
+                </div>
+                <div id="tabpanel_2_2">
+                  <div class="rangeControl">
+                    <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                    <span class="uit">~</span>
+                    <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                    <button type="button" class="btnSuccess">조회</button>
+                  </div>
+                </div> 
+
+              </div>
+            </fieldset> 
+            <div id="jsGrid1_2" class="bbs" caption=""></div>    
+            <div class="btn_r">
+              <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
             </div>
+            
+
+            <script>
+              $(function() {
+                
+
+                var clients2 = [
+                  { "Name1": "1주/(2023-01-01~2023-01-07)",
+                    "Name2": "123", 
+                  },
+                  { "Name1": "1주/(2023-01-01~2023-01-07)",
+                    "Name2": "1,321", 
+                  },
+                ];
+                
+
+                $("#jsGrid1_2").jsGrid({
+                  data: clients2,
+                  paging:false,
+                  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                  fields: [
+                    { name: "Name1", type: "text", title : "주/(수집기간)", width: "auto", validate: "required", sorting: false },
+                    { name: "Name2", type: "text", title : "방문자수", width:200, validate: "required" },
+                  ],
+                  
+
+                });
+              });
+            </script>
+
           </div>
 
-          <div class="btn_r">
-            <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
+          <div class="" id="tabpanel_3">
+            
+            <fieldset>
+              <legend>게시물 검색</legend>
+              <div class="layerSearch">
+  
+                <div id="tabpanel_1_1">
+                  <div class="fullYear">
+                    <select name="" id="">
+                      <option value="">2023년</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="">7월</option>
+                    </select>
+                    <button type="button" class="btnSuccess">조회</button>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+            <div id="jsGrid1_3" class="bbs" caption=""></div>    
+            <div class="btn_r">
+              <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
+            </div>
+            
+
+            <script>
+              $(function() {
+                
+
+                var clients3 = [
+                  { "Name1": "1월",
+                    "Name2": "123", 
+                  },
+                  { "Name1": "2월",
+                    "Name2": "1,321", 
+                  },
+                  { "Name1": "2월",
+                    "Name2": "1,321", 
+                  },
+                ];
+                
+
+                $("#jsGrid1_3").jsGrid({
+                  data: clients3,
+                  paging:false,
+                  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                  fields: [
+                    { name: "Name1", type: "text", title : "월", width: "auto", validate: "required", sorting: false },
+                    { name: "Name2", type: "text", title : "방문자수", width: 200, validate: "required" },
+                  ],
+                  
+
+                });
+              });
+            </script>
+
           </div>
-          <div id="jsGrid1_1" class="bbs" caption=""></div>    
-          <div id="externalPager1" class="external-pager"></div>
-          
-          <script>
-            $(function() {
+
+          <div id="tabpanel_4">
+            <div id="jsGrid1_4" class="bbs" caption=""></div>  
+            <div class="btn_r">
+              <button type="button" class="btnSky mm ico_down">엑셀 다운로드</button>
+            </div>
               
 
-              var clients = [
-                { "Name1": "1주/(2023-01-01~2023-01-07)",
-                  "Name2": "123", 
-                },
-                { "Name1": "1주/(2023-01-01~2023-01-07)",
-                  "Name2": "1,321", 
-                },
-              ];
-              
-
-              $("#jsGrid1_1").jsGrid({
-                data: clients,
-                paging:false,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
-
-                fields: [
-                  { name: "Name1", type: "text", title : "주/(수집기간)", width: "auto", validate: "required", sorting: false },
-                  { name: "Name2", type: "text", title : "방문자수", width:200, validate: "required" },
-                ],
+            <script>
+              $(function() {
                 
-                pagerContainer: "#externalPager1",
 
-              });
-            });
-          </script>
-
-                    
-          <div id="jsGrid1_2" class="bbs" caption=""></div>    
-          <div id="externalPager2" class="external-pager"></div>
-
-          <script>
-            $(function() {
-              
-
-              var clients2 = [
-                { "Name1": "1월",
-                  "Name2": "123", 
-                },
-                { "Name1": "2월",
-                  "Name2": "1,321", 
-                },
-              ];
-              
-
-              $("#jsGrid1_2").jsGrid({
-                data: clients2,
-                paging:false,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
-
-                fields: [
-                  { name: "Name1", type: "text", title : "월", width: "auto", validate: "required", sorting: false },
-                  { name: "Name2", type: "text", title : "방문자수", width: 200, validate: "required" },
-                ],
+                var clients3 = [
+                  { "Name1": "2022년",
+                    "Name2": "123", 
+                  },
+                  { "Name1": "2023년",
+                    "Name2": "1,321", 
+                  },
+                ];
                 
-                pagerContainer: "#externalPager2",
 
+                $("#jsGrid1_4 ").jsGrid({
+                  data: clients3,
+                  paging:false,
+                  noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                  fields: [
+                    { name: "Name1", type: "text", title : "연도", width: "auto", validate: "required", sorting: false },
+                    { name: "Name2", type: "text", title : "방문자수", width: 200, validate: "required" },
+                  ],
+                  
+
+                });
               });
-            });
-          </script>
+            </script>
 
-                              
-          <div id="jsGrid1_3" class="bbs" caption=""></div>    
-          <div id="externalPager3" class="external-pager"></div>
-
-          <script>
-            $(function() {
-              
-
-              var clients3 = [
-                { "Name1": "2022년",
-                  "Name2": "123", 
-                },
-                { "Name1": "2023년",
-                  "Name2": "1,321", 
-                },
-              ];
-              
-
-              $("#jsGrid1_3").jsGrid({
-                data: clients3,
-                paging:false,
-                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
-
-                fields: [
-                  { name: "Name1", type: "text", title : "일", width: "auto", validate: "required", sorting: false },
-                  { name: "Name2", type: "text", title : "방문자수", width: 200, validate: "required" },
-                ],
-                
-                pagerContainer: "#externalPager3",
-
-              });
-            });
-          </script>
-
-
+          </div>
         </div>
 
 
 
-      </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" onclick="layer_close('sampleLayer')"  aria-label="레이어 닫기">닫기</button>
       </div>
     </div>
     <div class="layerDimm"></div>

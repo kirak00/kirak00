@@ -256,6 +256,33 @@ function messageList(){
 function tabScript(){
   
 
+  $(".tabScriptRadio").each(function(i,o){
+    var wrap = $(o);
+    var tab = wrap.find("[role=tab]").each(function(n){this.n=n});
+    var contArr = [];
+    tab.each(function(i,o){
+      this.parent = $(this.parentNode)
+      var cont = document.querySelector("#"+o.getAttribute("aria-controls"));
+      if(cont) contArr.push(cont)
+    })
+
+    var tabCont = $(contArr);
+    
+    if(tabCont.length == tab.length){
+      tabCont.hide().eq(0).show()
+      tab.removeClass("on").eq(0).addClass("on")
+    }
+
+    tab.on("change",function(){
+      if(tabCont.length == tab.length ){
+        tabCont.hide()
+        tabCont.eq(this.n).show()
+      }
+      return false;
+    })
+
+  });
+
   $(".tabScript").each(function(i,o){
     var wrap = $(o);
     var initChk = wrap.hasClass("noInit");

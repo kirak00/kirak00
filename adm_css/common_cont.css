@@ -2401,3 +2401,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .boxTableWrap .box .sub {  color: #888; margin-left: auto;}
 .boxTableWrap .box .formRow + .sub { margin-top: 12px;}
 .boxTableWrap .table_bt { margin-top: 20px;}
+
+
+
+.layerSearch          {width:100%; padding:20px; margin-top:20px; border:1px solid #ddd; background:#FAFAFA; border-radius: 16px;  } 
+.visitViewCont .layerSearch .fullYear          { padding:0px 0 0; } 
+.visitViewCont .layerSearch .tabScriptRadio ~ div .fullYear          { padding:20px 0 0; } 
+.visitViewCont .layerSearch .fullYear select   { width:33%; } 
+.visitViewCont .layerSearch .rangeControl          { padding:20px 0 0; } 
+.visitViewCont .layerSearch .rangeControl .input    { width:80px  } 
+
+
