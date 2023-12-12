@@ -2074,6 +2074,11 @@ body.popup          {min-width: auto;}
 
 .layerWrap .layerBody.sizeM { width: 640px;}
 
+.layerWrap .layerBody.sizeS { width: 400px;}
+.layerWrap .layerBody.sizeS .layerHead    {background:none; }
+.layerWrap .layerBody.sizeS .layerCont    {padding-top:20px; }
+
+
 /* alert 스타일 layer */
 .layerWrap.typeAlert .layerBody       {width:610px;  }
 .layerWrap.typeAlert .layerBody.wid400 { width: 400px; text-align: center; }
@@ -2882,6 +2887,10 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
   border-bottom: 0;
 }
 
+.layerCont .deactivateAccount      {text-align: center ;}
+.layerCont .deactivateAccount strong      {font-size: 20px;}
+.layerCont .deactivateAccount .radioBox   {margin:30px 0; padding:16px 0; background:#EAFAEB; border-radius: 8px; }
+.layerCont .deactivateAccount p      {}
 
 
 /****************************
