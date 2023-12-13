@@ -168,7 +168,7 @@ ul.boxWrap li.memCount span.ico_2  {padding-left:30px; background:url(../adm_ima
 ul.boxWrap li.memCount span.ico_3  {padding-left:30px; background:url(../adm_images/adm/user-heart-alt-1.png) no-repeat 0 50%; }
 ul.boxWrap li.memCount span.ico_4  {padding-left:30px; background:url(../adm_images/adm/poll-people.png) no-repeat 0 50%; }
 ul.boxWrap li.memCount strong  {display:block; margin-top:30px; font-size:30px; color:#069B66 }
-
+strong em {vertical-align: top;}
 ul.boxWrap li.usageStatus:first-child       {max-width:585px; }
 ul.boxWrap li.bgRed             {max-width:300px; background:linear-gradient(0deg, rgba(254, 80, 80, 0.05) 0%, rgba(254, 80, 80, 0.05) 100%), rgba(255, 255, 255, 0.20); }
 ul.boxWrap li.bgRed ul li strong  {color:#FE5050}

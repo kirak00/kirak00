@@ -119,7 +119,7 @@
                   "Name7": "1층", 
                   "Name8": "02-455-1234", 
                   "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120'>비활성화</button>", //v1.6 btnLine -> wid120
+                  "Name10": "<button type='button' class='btnWhite wid120' onclick='chkLayer(this)' aria-controls='layer_deactivate'>비활성화</button>", //v1.6 btnLine -> wid120
                 },
                 { 
                   "Name1": "0851013",
@@ -143,7 +143,7 @@
                   "Name7": "1층", 
                   "Name8": "02-455-1234", 
                   "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120'>비활성화</button>", //v1.6 btnLine -> wid120
+                  "Name10": "<button type='button' class='btnWhite wid120' disabled>퇴사</button>", //v1.6 btnLine -> wid120
                 },
                 { 
                   "Name1": "0851013",
@@ -167,7 +167,7 @@
                   "Name7": "1층", 
                   "Name8": "02-455-1234", 
                   "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120'>비활성화</button>", //v1.6 btnLine -> wid120
+                  "Name10": "<button type='button' class='btnWhite wid120' onclick='chkLayer(this)' aria-controls='layer_deactivate'>비활성화</button>", //v1.6 btnLine -> wid120
                 },
                 { 
                   "Name1": "0851013",
@@ -204,6 +204,12 @@
 
               });
             });
+
+
+            function chkLayer(obj){
+
+              layer_open('layer_deactivate',obj)
+            }
           </script>
         </section>
       </section>
@@ -216,6 +222,46 @@
 <script>
 </script>
    
+
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal " id="layer_deactivate" role="dialog" aria-modal="true" >
+    <div class="layerBody sizeS">
+      <div class="layerHead">
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="deactivateAccount">
+          <strong>해당 계정을 비활성화 처리 <br>하시겠습니까?</strong>
+          <div class="radioBox">
+            <span class="radio">
+              <input type="radio" id="layerRadio_1" name="testRdoBoxOnly" value="A" />
+              <label for="layerRadio_1"><span></span>퇴사</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="layerRadio_2" name="testRdoBoxOnly" value="A" />
+              <label for="layerRadio_2"><span></span>기타 사유</label>
+            </span>
+          </div>
+          <p>비활성화 계정은 로그인이 불가합니다.</p>
+        </div>
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess xl" onclick="layer_close('layer_deactivate')"  aria-label="레이어 닫기">비활성화</button>
+        <button type="button" class="btnWhite xl" onclick="layer_close('layer_deactivate')"  aria-label="레이어 닫기">닫기</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
 
 </body>
 </html>

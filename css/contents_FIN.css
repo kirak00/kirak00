@@ -62,6 +62,7 @@ ul.loginTab li div.loginBtn   { position:static; margin-top:30px; }
 ul.loginTab .hasError .errorTxt { display: block;}   
 ul.loginTab li div.login_form p.info_txt  { position:absolute; left:50%; top:-180px; width:700px; transform: translateX(-50%); text-align: center;   }
 
+.login_form .formBox        {padding-left:140px; }
 ul.loginTab.searchId div.login_form .formBox  { padding-left:160px; }
 ul.loginTab li p.notiTxt   {padding-left:180px; margin-top:16px; }
 ul.loginTab li #cont_certificate_login .formBox { padding-left:150px; }
@@ -404,7 +405,7 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .uploadResult .resutlBox em.total  {}
 
 
-.managerRegistTit     {width:720px; margin:20px auto 0; border-radius:16px; padding:20px 20px 20px 68px; background:url(../images/common/ico_24_notice_primary.png) no-repeat 30px 50% #F4F4F4 ; background-size:20px;   }
+.managerRegistTit     {width:720px; margin:20px auto 0; border-radius:16px; padding:24px 30px; background:#F6FBF7 ;    }
 .managerRegistTit li + li  {margin-top:6px; }
 .managerRegistForm    {width:460px; margin:60px auto 0;   }
 .agreeChk    {padding:30px 0; }
