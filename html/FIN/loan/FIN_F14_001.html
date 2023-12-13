@@ -195,11 +195,11 @@
                         <td colspan="3">123-89-12345</td>
                       </tr>
                       <tr>
-                        <th scope="row">회사 대표 전화번호</th> 
+                        <th scope="row">회사 전화번호</th> 
                         <td colspan="3">02-1234-4567</td>
                       </tr>
                       <tr>
-                        <th scope="row">회사 대표 이메일</th> 
+                        <th scope="row">회사 메일</th> 
                         <td colspan="3">shinhan@shinhan.co.kr</td>
                       </tr>
                       <tr>
@@ -1112,6 +1112,7 @@
             <div class="table_bt">
               <div class="btn_c">
                 <a href="#;" class="btnSuccess" onclick="viewConfirm_layer(this)" >열람하기</a>
+                <a href="#;" class="btnSuccess" onclick="layer_cancelList_show(this)" >심사 취소내역</a>
               </div>
                             
               <script>
@@ -1188,6 +1189,100 @@
 
 <script>
 </script>
+
+
+
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal show" id="layer_cancelList" role="dialog" aria-modal="true" ><!-- show class 삭제 하면 숨김처리 -->
+    <!-- 너비 800px 경우 .sizeM 추가 -->
+    <div class="layerBody wid720">
+      <div class="layerHead ">
+        <h3>심사 취소내역</h3>
+        <button type="button" class="layerClose" popup-close="layer_cancelList" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        
+        <div class="jsGridWrap">
+          <div id="jsGrid2" class="bbs" caption="심사 취소내역"></div>   
+        </div>
+
+                
+        <script>
+          $(function() {
+
+            var clients = [
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+              { 
+                "Name1": "가회지점", 
+                "Name2": "한도부족", 
+                "Name3": "2023-08-01", 
+              },
+            ]; 
+            
+
+
+            $("#jsGrid2").jsGrid({
+              data: clients,
+              paging : false,
+              fields: [
+                { name: "Name1",  type: "text", title : "기관명", width: 120},
+                { name: "Name2",  type: "text", title : "심사 취소사유", width: 120},
+                { name: "Name3",  type: "text", title : "취소일자", width: 150},
+              ],
+              
+              pagerContainer: "#externalPager2",
+
+            });
+          });
+        </script>
+
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess xl" aria-label="레이어 닫기" onclick="llayer_close('layer_cancelList')">닫기</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+
    
 
 </body>
