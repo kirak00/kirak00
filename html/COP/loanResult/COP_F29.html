@@ -47,10 +47,10 @@
             "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name4": "운전자금", 
             "Name5": "15건", 
-            "Name6": "Y", 
+            // "Name6": "Y", 
             "Name7": "2023-11-01", 
-            "Name8": "Y", 
-            "Name9": "<button type='button' class='btnCheck'>평가하기</button>", 
+            // "Name8": "Y", 
+            "Name9": "<button type='button' class='btnCheck'>참여하기</button>", 
           },
           { 
             "Name1": "<a href='#;' class='goLink'>202303010001</a>", 
@@ -58,10 +58,10 @@
             "Name3": "600,000,000<p class='sub'>(육억원)</p>", 
             "Name4": "운전자금", 
             "Name5": "2건", 
-            "Name6": "N", 
+            // "Name6": "N", 
             "Name7": "-", 
-            "Name8": "N", 
-            "Name9": "<span class='textBold'>평가 완료</span>", 
+            // "Name8": "N", 
+            "Name9": "<span class='textBold'>참여 완료</span>", 
           },
         ];
         $("#jsGrid").jsGrid({
@@ -72,11 +72,11 @@
             { name: "Name2", type: "text", title : "대출 비교 신청일", width: 160}, 
             { name: "Name3", type: "text", title : "희망 대출 금액(최대)", width: 220},
             { name: "Name4", type: "text", title : "자금 용도", width: 120}, 
-            { name: "Name5", type: "text", title : "받은 제안서수", width: 130},
-            { name: "Name6", type: "text", title : "대출 비교 신청<br/>취소 유무", width: 130},
-            { name: "Name7", type: "text", title : "대출 비교 신청<br/>취소일", width: 150},
-            { name: "Name8", type: "text", title : "만족도 평가<br/>유무", width: 120},
-            { name: "Name9", type: "text", title : "평가 참여", width: 160},
+            { name: "Name5", type: "text", title : "받은 제안서 수", width: 130},
+            // { name: "Name6", type: "text", title : "대출 비교 신청<br/>취소 유무", width: 130},//<!-- v2.1 삭제 -->
+            { name: "Name7", type: "text", title : "대출 비교 신청 취소일", width: 150},
+            // { name: "Name8", type: "text", title : "만족도 평가<br/>유무", width: 120},//<!-- v2.1 삭제 -->
+            { name: "Name9", type: "text", title : "만족도 조사", width: 160},//<!-- v2.1 워딩 수정 -->
           ],
           pagerContainer: "#externalPager",
           });

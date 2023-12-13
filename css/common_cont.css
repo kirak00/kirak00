@@ -94,6 +94,7 @@
 .pageTxt.flex .right { margin-left: auto;}
 .titWrap .sub { margin-left: 20px;}
 .pageTxt .sub { margin-left: 20px; color: #555; font-size: 14px; font-weight: 400;}
+.pageTxt .sub.ml8 { margin-left: 8px;}
 .pageTxt span, .pageTxt strong { vertical-align: baseline;}
 .pointDesc { margin-left: 30px; color: #069B66; font-size: 16px; font-weight: 400;}
 /* .pageTxt + .textTable.boxType { margin-top: 40px;} */
@@ -318,6 +319,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .badgeOrange { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  font-size: 14px; }
 .badgeGray { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #888; border-radius: 30px; text-align: center; font-weight: 700; color:#888; font-size: 14px; }
 .badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
+
+.bracket { display: inline-block; margin-right: 4px; font-weight: 700; }
 /****************************
 **********  button  **********
 *****************************/
@@ -1243,7 +1246,8 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeTitle:last-child { border-bottom: 0;}
 .agreeForm .agreeTitle .tit {font-weight: 700;}
 .agreeForm .agreeTitle .tit .blue { vertical-align: 0;}
-.agreeForm .agreeTitle .checkbox label { font-weight: 700;}
+.agreeForm .agreeTitle .checkbox label { font-size: 18px; font-weight: 700;}
+.agreeForm .agreeTitle .checkbox input[type=checkbox] + label span:first-child { vertical-align: -6px;}
 .agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
 .agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
 .agreeForm .agreeTitle.main { background: #F6FBF7; padding: 0 60px 0 40px; }
@@ -1392,6 +1396,9 @@ header.on .line  {display:block; }
 .container.member section.login  {}
 .bgGray { background: #FAFAFA; padding: 30px 0 40px; border-bottom: 1px solid #ddd;}
 .bgGray .titH3.hasLine { margin-top: 40px;}
+.bgGray.sectionLine { margin-top: 40px; border: none;}
+.bgGray.sectionLine section { padding-top: 10px;}
+.bgGray.sectionLine section + section { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
 
 footer    {position:relative; z-index:1; background:#333 }
 footer::before    {content:""; position:absolute; width:100%; top:67px; border-top:1px solid #555}
@@ -1552,7 +1559,7 @@ table.bbs_list td   {height:60px; padding: 0 10px; border-bottom:1px solid #ddd;
 table.bbs_list td.tit   {text-align: left; padding-left:30px;
 overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
 table.bbs_list .tit { padding: 20px 0; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
-table.bbs_list .tit a { padding: 20px 0;}
+/* table.bbs_list .tit a { padding: 20px 0; } */
 table.bbs_list .tit [class^='badge'] {width: 95px; height: 24px; line-height: 22px; margin: 0 20px 0 0; font-size: 14px; vertical-align: middle; }
 table.bbs_list td.num   {text-align: right; padding-right:30px;}
 table.bbs_list thead tr.top th { background: #EFF5EF;}
@@ -2680,12 +2687,14 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .processStepWrap.main .step { background: #fff; box-shadow: 3px 3px 8px 0px #ECF0F4;}
 
 .processStepWrap .left { width: 860px;}
+.processStepWrap .left .tit { background: #1EA885; }
 .processStepWrap .left ol { display: flex; gap: 20px; margin-top: 16px;}
+.processStepWrap .left .step { background: #fafafa; }
 .processStepWrap .left .step:last-child .icoWrap [class^="ico"]::after { display: none;}
 
 .processStepWrap .right { width: 520px;}
-.processStepWrap .right .tit {  background: #4C9DA2;}
-.processStepWrap .right .step { margin-top: 16px;}
+.processStepWrap .right .tit {  background: #6197C5;}
+.processStepWrap .right .step { margin-top: 16px; background: #F5F9FA; }
 .processStepWrap .right .step .icoWrap [class^="ico"]::after { right: unset; left: -33px;}
 .processStepWrap .right ol li:last-child .icoWrap [class^="ico"]::after { left: -23px;}
 .processStepWrap .right ol { display: flex;}
@@ -2715,7 +2724,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .processStepWrap .ico5::before { width: 105px; height: 84px; background: url('../images/common/ico_loan5.png') no-repeat center / cover;}
 /* .processStepWrap .ico6::before { background: url('../images/common/ico_loan6.png')  no-repeat center / contain;} */
 
-.processStepWrap .number {color: #4C9DA2; font-size: 14px; font-weight: 500; }
+.processStepWrap .number {font-size: 14px; font-weight: 500; }
+.processStepWrap .left .number {color: #4C9DA2;}
+.processStepWrap .right .number {color: #6197C5;}
 .processStepWrap .name {  font-weight: 700; }
 
 
@@ -2787,6 +2798,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .doneWrap .pointTxt { margin-top: 20px; font-size: 18px; color: #069B66; font-weight: 700;}
 .doneWrap .pointTxt + .subTxt { margin-top: 4px;}
 .doneWrap .tit + .info { margin-top: 10px;}
+.doneWrap .tit + .subTxt { margin-top: 10px;}
 .doneWrap .info { color: #555; font-size: 14px;}
 .doneWrap .subTit { color: #555; font-size: 18px;}
 .doneWrap .subTxt { color: #555; }

@@ -47,77 +47,36 @@
             )
           }
         </script>
-        <!-- 기본형 -->
-        <button type="button" class="btnSuccess" onclick='sample_alert_options1_2(this)'>비밀번호 3회 오류</button>
-        <script>
-          function sample_alert_options1_2(obj){
-            layer_alert(
-              `아이디 또는 비밀번호 <strong>5회 오류</strong>로<br/>
-              로그인이 제한됩니다.<br/>
-              ‘아이디 찾기’ 또는 ‘비밀번호 재설정’을<br/>
-              진행해주세요.`, 
-              obj, 
-              {
-                confirm : {
-                  txt : "확인",
-                  callback : function(){
-                  }
-                },
-                closebtn : {
-                  show: true, // default :  false
-                  callback : function(){
-                    // alert("닫기")
-                  }
-                }
-              }
-            )
-          }
-        </script>
-        <!-- 기본형 -->
-        <button type="button" class="btnSuccess" onclick='sample_alert_options1_3(this)'>사용 제한</button>
-        <script>
-          function sample_alert_options1_3(obj){
-            layer_alert(
-              `<strong>운영자로부터 사용이 제한되었어요.</strong><br/>
-                관련 내용은 마이페이지 > 메시지함에서<br/>
-                확인 할 수 있어요.`, 
-              obj, 
-              {
-                confirm : {
-                  txt : "확인",
-                  callback : function(){
-                  }
-                },
-                closebtn : {
-                  show: true, // default :  false
-                  callback : function(){
-                    // alert("닫기")
-                  }
-                }
-              }
-            )
-          }
-        </script>
       </section>
-      <section style="margin-top: 20px;">
+      <!-- <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">버튼 2개</h3>
-        <button type="button" class="btnSuccess"  id="confirmClick">비밀번호 변경</button>
+        <button type="button" class="btnSuccess"  id="confirmClick">직원명 조회 알럿</button>
         <script>
           $("#confirmClick").on("click",function(){
             layer_confirm(
               // 비로그인
-              `비밀번호를 <strong>3개월</strong> 동안 변경하지 않으셨어요.<br/>
-              지금 비밀번호를 변경하시겠어요?`,
+              `
+              <div class="radioList">
+                <span class="radio">
+                  <input type="radio" id="rdoLabel1" name="rdoName" value="" checked="">
+                  <label class="label" for="rdoLabel1"><span></span>홍길동 / 서소문점</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="rdoLabel2" name="rdoName" value="">
+                  <label class="label" for="rdoLabel2"><span></span>홍길동 / 마포구청점</label>
+                </span> 
+              </div>
+              `,
               this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
               {
                 confirm:{ //  확인 
-                  txt : "지금 변경하기", 
+                  txt : "선택", 
                   callback : function(){ 
                     // alert(3)
                   }
                 },
                 cancel:{ //  취소 
-                  txt : "90일 연장하기",
+                  txt : "취소",
                   callback : function(){
                     // alert(2)
                   }
@@ -126,6 +85,12 @@
             )
           });
         </script>
+      </section> -->
+      <section style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px">팝업</h3>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerAll">전체(필수) 동의</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">이용약관 동의</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="searchLayer">직원명 조회</button>
       </section>
 
 
@@ -134,7 +99,139 @@
     <!-- contents : end -->
     <!-- **************** -->
  
- 
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <div class="layerWrap modal" id="sampleLayerAll" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+      <div class="layerBody wid1000">
+        <div class="layerHead">
+          <h3>전체<span class="blue">(필수)</span> 동의</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayerAll" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <ul class="tabLine fullType tabScript" role="tablist">
+            <li><button type="button" role="tab" aria-selected="false">이용약관 동의</button></li>
+            <li><button type="button" role="tab" aria-selected="false">개인정보 수집 및 이용동의</button></li>
+            <li class="on"><button type="button" role="tab" aria-selected="true">제 3자 제공 동의</button></li>
+          </ul>
+          <div class="agreeCont">
+            pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerAll')"  aria-label="레이어 닫기">전체 동의 하기</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <div class="layerWrap modal" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+      <div class="layerBody wid1000">
+        <div class="layerHead">
+          <h3>이용약관 동의</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <div class="agreeCont">
+            pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+pdf 약관<br/>
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')" aria-label="레이어 닫기">동의</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <div class="layerWrap modal" id="searchLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+      <div class="layerBody wid500">
+        <div class="layerHead">
+          <h3>직원명 조회</h3>
+          <!-- <button type="button" class="layerClose" popup-close="searchLayer" aria-label="레이어 닫기"></button> --><!-- 삭제 -->
+        </div>
+        <div class="layerCont">
+          <div class="radioList">
+            <span class="radio">
+              <input type="radio" id="rdoLabel1" name="rdoName" value="" checked="">
+              <label class="label" for="rdoLabel1"><span></span>홍길동 / 서소문점</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="rdoLabel2" name="rdoName" value="">
+              <label class="label" for="rdoLabel2"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel3" name="rdoName" value="">
+              <label class="label" for="rdoLabel3"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel4" name="rdoName" value="">
+              <label class="label" for="rdoLabel4"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel5" name="rdoName" value="">
+              <label class="label" for="rdoLabel5"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel6" name="rdoName" value="" checked="">
+              <label class="label" for="rdoLabel6"><span></span>홍길동 / 서소문점</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="rdoLabel7" name="rdoName" value="">
+              <label class="label" for="rdoLabel7"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel8" name="rdoName" value="">
+              <label class="label" for="rdoLabel8"><span></span>홍길동 / 광교지점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel9" name="rdoName" value="">
+              <label class="label" for="rdoLabel9"><span></span>홍길동 / 마포구청점</label>
+            </span> 
+            <span class="radio">
+              <input type="radio" id="rdoLabel10" name="rdoName" value="">
+              <label class="label" for="rdoLabel10"><span></span>홍길동 / 광교지점</label>
+            </span> 
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('searchLayer')" aria-label="레이어 닫기">선택</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
 
 </body>
 </html>
