@@ -61,6 +61,7 @@ td .tit { padding: 0 30px;}
 
 
 .goLink { color: #333; text-decoration: underline; }
+.goLink.blue { color: #069B66}
 .goLink.disabled { color: #888; font-weight: 500; text-decoration: none; cursor: default;}
 .goLink.ml20 { margin-left: 20px;}
 .jsgrid .goLink,
@@ -1237,12 +1238,12 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 **********  accordion  **********
 *****************************/
 .faqPage .accordion { display: flex; flex-direction: column; gap: 20px;}
-.faqPage .accordionTrigger { height: 70px;}
+.faqPage .accordionTrigger { height: auto; padding: 20px 80px 20px 40px; white-space: wrap; line-height: 1.5;}
 .faqPage .accordionPanel { margin-bottom: 20px; border-radius: 8px; }
 .accordion .accordionItem { border: 1px solid #ddd; border-radius: 16px;  }
 .accordion .accordionItem.noAccordion .accordionPanel { display: block; margin: 0 20px 20px;}
 .accordion .accordionTitle { position:relative; font-weight: 700; }
-.accordion .accordionTitle .q { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; }
+.accordion .accordionTitle .q {  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 30px; height: 30px; background: #069B66; border-radius: 50%; margin-right: 8px; color: #fff; }
 .accordionTrigger { position: relative; display: flex; align-items: center; width: 100%; height: 72px; padding: 0px 40px; text-align: left; font-weight: inherit;}
 .accordionTrigger:focus { outline: 2px dashed #069B66; }
 .isOpen .accordionTrigger .accordionIcon { transform: translateY(-50%) rotate(180deg) ; }

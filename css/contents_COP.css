@@ -209,7 +209,8 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .loan_progress .stepBox li { width:100%;  background:#FAFAFA; text-align: center; border:1px solid #ddd; border-radius:16px; background-repeat: no-repeat; background-position: 50% 45px;  background-size:105px 75px; }
 .loan_progress .stepBox li div {display:block; padding-top:130px; height:226px; text-decoration: none;  }
 .loan_progress .stepBox li em {display:inline-block; color:#069B66; font-size: 16px; font-weight: 700;  } 
-.loan_progress .stepBox li strong {display:block; margin-top: 10px; font-size: 18px; font-weight: 700;  }
+.loan_progress .stepBox li strong,
+.loan_progress .stepBox li .goLink {display:block; margin: 10px auto 0; font-size: 18px; font-weight: 700;  }
 .loan_progress .stepBox li strong .star { display: inline-block; color: #069B66; vertical-align: -1px;}
 .loan_progress .infoTxt { margin-top: 18px; }
 
@@ -448,7 +449,9 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .boardCont .attachBox li + li { margin-top: 4px;}
 
 
+.alarmSelect { padding: 30px 45px; background: #FAFAFA; border-radius: 16px; }
 .alarmOpt1,
 .alarmOpt2{ display: none;}
 .alarmOpt1.show,
 .alarmOpt2.show{display:block;}
+

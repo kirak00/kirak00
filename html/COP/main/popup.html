@@ -240,6 +240,35 @@
             )
           }
         </script>
+          
+        <!-- 기본형 -->
+        <button type="button" class="btnSuccess" onclick='sample_alert_options3_3(this)'>유의사항</button>
+        <script>
+          function sample_alert_options3_3(obj){
+            layer_alert(
+              {
+                tit:"유의사항", 
+                ment:`채택하신 제안서를 제출한 금융 회사와<br/>
+승인 심사과정이 진행되는 단계 에요.<br/>
+상황에 따라 실제 대출 조건이 달라질 수 있어요.`
+              },
+                obj, 
+              {
+                confirm : {
+                  txt : "확인",
+                  callback : function(){
+                  }
+                },
+                closebtn : {
+                  show: true, // default :  false
+                  callback : function(){
+                    // alert("닫기")
+                  }
+                }
+              }
+            )
+          }
+        </script>
 
 
       </section>
@@ -387,8 +416,9 @@
         aria-controls="레이어 ID" // 접근성 팝업 알림용
         -->
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">제안서 마감일 연장</button>
-        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey1">설문 참여하기1</button>
-        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey2">설문 참여하기2</button>
+        <div style="margin: 10px 0"></div>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey1">설문 참여하기1(대출 비교하기 신청 후 : 제안서 확인 및 채택)</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey2">설문 참여하기2(대출 비교하기 신청 후 : 금융회사 진행_마감일 종료 전)</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey3">설문 참여하기(대출 비교하기 신청 후 : 대출실행_대출 평가 전)</button>
       </section>
 
@@ -480,12 +510,12 @@
       </div>
       <div class="layerCont">
         <div class="topResultBox">
-          <p class="gray5">제안서를 선택하지 않은 이유를 공유해주세요.<br/>
-          더 나은 Loan&Biz가 되도록 노력 할게요</p>
+          <p class="gray5">Loan&Biz에서의 경험을 공유해주세요.<br/>
+            더 나은 Loan&Biz가 되도록 노력 할게요.</p>
         </div>
         <div class="main_survey">
           <dl>
-            <dt class="dot">·  금융회사에서 별도 유선 등의 연락을 받으셨나요?</dt>
+            <dt class="dot">금융회사에서 별도 유선 등의 연락을 받으셨나요?</dt>
             <dd>
               <div class="formRow">
                 <span class="radio">
