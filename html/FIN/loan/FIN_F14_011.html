@@ -62,7 +62,7 @@
             </div>
             
             <ul class="tabLine tabScript" role="tablist">
-              <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="loan_company_cont_1">대출 신청 정보</button></li>
+              <li class="on"><button type="button" role="tab" aria-selected="true"  aria-controls="loan_company_cont_1">희망 리스 정보</button></li>
               <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_2">기업 일반 정보</button></li>
               <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_3">재무 현황</button></li><!-- 수정2.0 -->
               <li><button type="button" role="tab" aria-selected="false"  aria-controls="loan_company_cont_4">추가  제출 서류</button></li>
@@ -82,22 +82,27 @@
                   <tbody>
                     <tr>
                       <th scope="row">자금 용도</th> 
-                      <td>시설자금</td>
+                      <td>기계설비 리스</td>
                     </tr>
                     <tr>
                       <th scope="row">상세 용도</th> 
                       <td>공장의 신설, 매입 보수</td>
                     </tr>
                     <tr>
-                      <th scope="row">희망 신청 금액</th> 
-                      <td>1억 2000만원~2억원</td>
+                      <th scope="row">신규 기기 여부</th> 
+                      <td>중고 기기</td>
                     </tr>
                     <tr>
-                      <th scope="row">담보 유무</th> 
-                      <td>담보 있음 
+                      <th scope="row">내수 구분</th> 
+                      <td>국내</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">신청 물건 정보</th> 
+                      <td>
+                        총 금액(취득원가): KRW 100,000,000원(일억원)
                         <div class="table_wrap">
                           <table class="bbs_list">
-                            <caption>담보 리스트</caption>
+                            <caption>신청 물건 정보</caption>
                             <colgroup>
                               <col width="15%" />
                               <col width="15%" />
@@ -106,18 +111,22 @@
                             </colgroup>
                             <thead>
                               <tr>
-                                <th scope="col">담보 종류</th>
-                                <th scope="col">부동산 종류</th>
-                                <th scope="col">담보물 상세 정보</th>
-                                <th scope="col">소유자</th>
+                                <th scope="col">리스 물건 명</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">제조사</th>
+                                <th scope="col">제조일자</th>
+                                <th scope="col">공급업체</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>부동산</td>
-                                <td>아파트</td>
-                                <td>서울특별시 마포구 길동로 1길 89</td>
-                                <td>대표자 지인</td>
+                                <td>리스 물건 1</td>
+                                <td>10</td>
+                                <td>1,000,000</td>
+                                <td>리스 제조사 1</td>
+                                <td>2023-08-10</td>
+                                <td>리스 공급업체 1</td>
                               </tr>
                             </thead>
                             <tbody>
@@ -126,37 +135,37 @@
                       
                       </td>
                     </tr>
-                    <tr><!-- 수정2.0 -->
-                      <th scope="row">대표자 연대 보증인 제공 가능 유무</th> 
+                    <tr>
+                      <th scope="row">보증금</th> 
                       <td>가능</td>
                     </tr>
-                    <!-- <tr>
-                      <th scope="row">연대보증인 제공 여부</th> 
-                      <td>연대보증인 있음</td>
-                    </tr> -->
                     <tr>
-                      <th scope="row">희망 대출 금리 유형</th> 
+                      <th scope="row">희망 금리 유형</th> 
                       <td>고정금리</td>
                     </tr>
                     <tr>
-                      <th scope="row">희망 대출 기간</th> 
+                      <th scope="row">희망 리스 기간</th> 
                       <td>24개월</td>
                     </tr>
-                    <tr><!-- 수정2.1 추가 -->
+                    <tr> 
                       <th scope="row">희망 거치 기간</th> 
                       <td>24개월</td>
                     </tr>
-                    <tr><!-- 수정2.0 -->
-                      <th scope="row">희망 대출 상환 방식</th> 
+                    <tr> 
+                      <th scope="row">상환 방식</th> 
                       <td>원리분할상환</td>
                     </tr>
                     <tr>
-                      <th scope="row">희망 대출일</th> 
-                      <td>2023-07-25</td>
+                      <th scope="row">대표자 연대 보증인 제공 가능 유무</th> 
+                      <td>가능</td>
                     </tr>
                     <tr>
-                      <th scope="row">금융소비자 유형</th> 
-                      <td>전문금융소비자</td>
+                      <th scope="row">양도 담보 제공 기능 여부</th> 
+                      <td>담보 있음</td>
+                    </tr> 
+                    <tr>
+                      <th scope="row">희망 실행일</th> 
+                      <td>2023-11-30</td>
                     </tr> 
                     <tr>
                       <th scope="row">메모</th> 
@@ -1172,10 +1181,10 @@
                 function viewConfirm_layer(obj){
                     layer_confirm(
                       `<span class="layerCont_viewConfirm">
-                        <strong class="tit">대출 신청 내용 상세 정보를 <br> 열람하시겠습니까?</strong>
+                        <strong class="tit">리스 신청 내용 상세 정보를 <br> 열람하시겠습니까?</strong>
                         열람 이력 발생 시 일정 기간 동안<br>
-                        대출 실행 여부 확인 및 수수료 정산을 위해<br>
-                        플랫폼에서 <strong>대출 열람 내역이 보존 및 관리</strong>됩니다.
+                        리스 실행 여부 확인 및 수수료 정산을 위해<br>
+                        플랫폼에서 <strong>리스 열람 내역이 보존 및 관리</strong>됩니다.
                       </span>`, 
                       obj, 
                       {
@@ -1245,92 +1254,6 @@
 
 
 
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap modal show" id="layer_cancelList" role="dialog" aria-modal="true" ><!-- show class 삭제 하면 숨김처리 -->
-    <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid720">
-      <div class="layerHead ">
-        <h3>심사 취소내역</h3>
-        <button type="button" class="layerClose" popup-close="layer_cancelList" aria-label="레이어 닫기"></button>
-      </div>
-      <div class="layerCont">
-        
-        <div class="jsGridWrap">
-          <div id="jsGrid2" class="bbs" caption="심사 취소내역"></div>   
-        </div>
-
-                
-        <script>
-          $(function() {
-
-            var clients = [
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-              { 
-                "Name1": "가회지점", 
-                "Name2": "한도부족", 
-                "Name3": "2023-08-01", 
-              },
-            ]; 
-            
-
-
-            $("#jsGrid2").jsGrid({
-              data: clients,
-              paging : false,
-              fields: [
-                { name: "Name1",  type: "text", title : "기관명", width: 120},
-                { name: "Name2",  type: "text", title : "심사 취소사유", width: 120},
-                { name: "Name3",  type: "text", title : "취소일자", width: 150},
-              ],
-              
-              pagerContainer: "#externalPager2",
-
-            });
-          });
-        </script>
-
-
-      </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" aria-label="레이어 닫기" onclick="llayer_close('layer_cancelList')">닫기</button>
-      </div>
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
 
 
 

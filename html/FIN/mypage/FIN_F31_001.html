@@ -83,33 +83,44 @@
   <!-- **************** -->
   <div class="layerWrap modal show" id="sampleLayer" role="dialog" aria-modal="true" >
     <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid640">
+    <div class="layerBody wid1100">
       <div class="layerHead">
         <h3>대출 예상 상환 스케줄</h3>
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
         <p class="notiTxt">본 스케줄은 제안서 제출일 기준으로 집계되었으며, 일별 금리 변동율에 따라 내용이  변동될 수 있습니다.</p>
-        <div class="textTable mt32"><!-- v1.4 .mt32 추가 -->
-          <table>
-            <caption>업체개요</caption>
+        
+        <div class="table_wrap mt40">
+          <table class="bbs_list">
+            <caption>
+              제안서 제출 가능 목록
+            </caption>
             <colgroup>
-              <col width="205px" />
-              <col />
+              <col width="120px"/>
+              <col width="160px"/>
+              <col width=""/>
             </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">상환 방식</th>
+                <th scope="col">월 평균 납입금</th>
+                <th scope="col">월 납입 이자</th>
+                <th scope="col">월 평균 이자</th>
+                <th scope="col">총 납입 이자</th>
+                <th scope="col">총 상환 금액</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <th scope="row">상환방식</th> 
-                <td>만기일시상환</td>
+                <td>원금균등</td>
+                <td>8,560,748</td>
+                <td>20,000,000</td>
+                <td>20,000,000</td>
+                <td>20,000,000</td>
+                <td>20,000,000</td>
               </tr>
-              <tr>
-                <th scope="row">첫 달 납부 금액</th> 
-                <td>20,023,456원</td>
-              </tr>
-              <tr>
-                <th scope="row">총 납부 이자</th> 
-                <td>5,925,888원</td>
-              </tr>
+
             </tbody>
           </table>
         </div>
