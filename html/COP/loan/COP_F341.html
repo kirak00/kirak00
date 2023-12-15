@@ -30,7 +30,7 @@
       </ul>
     </section>
     <section>
-      <h3 class="titH6">필요하신 자금의 용도가 무엇인가요?</h3>
+      <h3 class="titH5">필요하신 자금의 용도가 무엇인가요?</h3><!-- v2.1 titH6 -> titH5-->
       <!--  v2.0 전체수정 -->
       <div class="loanSelect">
         <div class="list active">
@@ -49,8 +49,8 @@
             <input type="radio" id="loanSelectId2" name="loanSelectId">
             <label for="loanSelectId2">
               <span class="tt">운전자금 대출</span>
-              <span class="dd">기업의 생산과 고유의 판매활동 등에 소요되는<br>
-                자금을 지원하는 대출</span>
+              <span class="dd">기업의 생산과 고유의 판매활동 등에 
+                소요되는 자금을 지원하는 대출</span><!-- v2.1 -->
             </label>
           </div>
           <!-- <button type="button" class="btnWhite ico_right">새로운 대출 비교 신청하기</button> -->
@@ -59,9 +59,9 @@
           <div class="radio radioBtn">
             <input type="radio" id="loanSelectId3" name="loanSelectId">
             <label for="loanSelectId3">
-              <span class="tt">기계설비 리스</span>
-              <span class="dd">추후 정의<br>
-                추후 정의</span>
+              <span class="tt">기계기구 리스</span><!-- v2.1 워딩수정-->
+              <span class="dd">법인에서 필요한 기계기구를 리스하기 위한<br><!-- v2.1 -->
+                금융비용 대출</span>
             </label>
           </div>
           <!-- <button type="button" class="btnWhite ico_right">새로운 대출 비교 신청하기</button> -->
@@ -87,7 +87,7 @@
     
       <!-- 시설자금 대출 -->
       <section class="radiotTabCont on loanSelectId1">
-        <h3 class="titH6">상세 용도를 선택해 주세요.</h3>
+        <h3 class="titH5">상세 용도를 선택해 주세요.</h3><!-- v2.1 titH6 -> titH5-->
         <div class="checkBoxScroll number4">
           <span class="checkbox">
             <input type="checkbox" id="searchCheckBox1_1" name="searchCheckBox1">
@@ -133,7 +133,7 @@
       
       <!-- 운전자금 대출 -->
       <section class="radiotTabCont loanSelectId2">
-        <h3 class="titH6">상세 용도를 선택해 주세요.</h3>
+        <h3 class="titH5">상세 용도를 선택해 주세요.</h3><!-- v2.1 titH6 -> titH5-->
         <div class="checkBoxScroll number4">
           <span class="checkbox">
             <input type="checkbox" id="searchCheckBox2_1" name="searchCheckBox2">
@@ -183,7 +183,7 @@
 
       <!-- 기계설비 리스 -->
       <section class="radiotTabCont loanSelectId3">
-        <h3 class="titH6">상세 용도를 선택해 주세요.</h3>
+        <h3 class="titH5">상세 용도를 선택해 주세요.</h3><!-- v2.1 titH6 -> titH5-->
         <div class="checkBoxScroll number2">
           <span class="checkbox">
             <input type="checkbox" id="searchCheckBox3_1" name="searchCheckBox3">
@@ -226,7 +226,7 @@
 
       <!-- 할부금융 -->
       <section class="radiotTabCont loanSelectId4">
-        <h3 class="titH6">상세 용도를 선택해 주세요.</h3>
+        <h3 class="titH5">상세 용도를 선택해 주세요.</h3><!-- v2.1 titH6 -> titH5-->
         <div class="checkBoxScroll number4">
           <span class="checkbox">
             <input type="checkbox" id="searchCheckBox4_1" name="searchCheckBox4">
@@ -247,26 +247,27 @@
       </section>
     
       <section class="sectionBlock40">
-        <h3 class="titH6">진행 중인 대출 비교 신청 목록</h3>
+        <h3 class="titH5">진행 중인 대출 비교 신청 목록</h3><!-- v2.1 titH6 -> titH5-->
         <div class="jsGridWrap">
           <div id="jsGrid2" class="bbs" caption="대출 비교 목록"></div>   
           <div id="externalPager2" class="external-pager"></div>
         </div>
         <script>
           $(function() {
+            //v2.1 수정 
             var clients = [
               { 
                 "Name1": "220230915001",
                 "Name2": "2023-08-09", 
                 "Name3": "시설 자금", 
-                "Name4": "<span class='textBold'>신청중</span>", 
+                "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
                 "Name10": "<a href='#;' class='btnWhite wid160'>이어 작성 하기</a>",  
               },
               { 
                 "Name1": "220230915001",
                 "Name2": "2023-08-09", 
                 "Name3": "시설 자금", 
-                "Name4": "<span class='textBold'>금융 회사 확인 중</span>", 
+                "Name4": "<span class='textBold'>금융 회사 심사 중</span>", 
                 "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>", 
               },
               { 
@@ -275,6 +276,13 @@
                 "Name3": "시설 자금", 
                 "Name4": "<span class='textBold blue'>제안서 확인 및 채택</span>", 
                 "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  
+              },
+              { 
+                "Name1": "220230915001",
+                "Name2": "2023-08-09", 
+                "Name3": "기계기구 리스", 
+                "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
+                "Name10": "<a href='#;' class='btnWhite wid160'>이어서 신청 하기</a>", 
               },
             ]; 
             $("#jsGrid2").jsGrid({

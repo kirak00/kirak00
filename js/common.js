@@ -32,6 +32,14 @@ try {
 /* init action */
 $(function(){
 
+  $(".status_tab li").each(function(index, item){
+    var stepIndex = $(".status_tab li.on").index();
+    $(".main_loan_progress .list").addClass("list_"+(stepIndex+1))
+    if(stepIndex+1 == 4) { 
+      $(".main_loan_progress .list").remove();
+    }
+  });
+
   gnbAction(); // gnb hover
 
   skip_navi();
@@ -212,14 +220,11 @@ function loginTab(){
 }
 
 
-
-
-
 function tooltip_q(){
   $(".tooltip_q").each(function(i,o){
     var obj = $(o)
     obj.hover(function(){
-      var layer = $("<span class='tooltipLayer'>");
+      var layer = $("<span class='tooltipLayer'>"); 
       layer.html(o.title.replace(/\\n/g,"<br>"))
       obj.append(layer)
     },function(){

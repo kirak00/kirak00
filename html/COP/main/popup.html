@@ -389,7 +389,7 @@
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">제안서 마감일 연장</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey1">설문 참여하기1</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey2">설문 참여하기2</button>
-        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey3">설문 참여하기3</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey3">설문 참여하기(대출 비교하기 신청 후 : 대출실행_대출 평가 전)</button>
       </section>
 
     </div>
@@ -441,7 +441,7 @@
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="topResultBox"><strong class="blue">설정된 마감일: 2023-11-04</strong></div>
+        <div class="topResultBox"><strong class="blue">제안서 마감일: 2023-11-04</strong></div><!-- v2.1 워딩수정 -->
         <div class="sectionBlock30">
           <h4 class="titH6 textRegular">연장하실 제안서 마감일을 선택하세요</h4>
           <div class="formList">
@@ -485,22 +485,18 @@
         </div>
         <div class="main_survey">
           <dl>
-            <dt class="dot">제안서를 선택하지 않은 이유를 모두 선택해 주세요.</dt>
+            <dt class="dot">·  금융회사에서 별도 유선 등의 연락을 받으셨나요?</dt>
             <dd>
-              <div class="formRow full">
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>제안 금리가 전부 높아서</label>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="chk_1_1" name="chk_1" checked>
+                  <label for="chk_1_1"><span></span>네</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>제안 대출 한도가 부족해서</label>
+                <span class="radio">
+                  <input type="radio" id="chk_1_2" name="chk_1">
+                  <label for="chk_1_2"><span></span>아니오</label>
                 </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>대출 조건이 까다로워서</label>
-                </span>
-                <span class="checkbox">
-                  <input type="checkbox" id="chk_1_4" name="CheckBox"><label for="chk_1_4"><span></span>다른 곳에서 자금을 구해서</label>
-                </span>
-               </div>
+              </div>
             </dd>
            
             <dt class="dot">향후 Loan&amp;Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
@@ -519,7 +515,7 @@
            
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chk_3_1" name="CheckBox"><label for="chk_3_1"><span></span>제휴된 금융회사가 많아서</label>
                 </span>
@@ -530,12 +526,15 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chk_3_3" name="CheckBox"><label for="chk_3_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chk_4_1" name="CheckBox"><label for="chk_4_1"><span></span>복잡한 절차</label>
                 </span>
@@ -546,7 +545,10 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chk_4_3" name="CheckBox"><label for="chk_4_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             </dd>
@@ -599,7 +601,7 @@
 
             <dt class="dot">대출이 진행되지 않은 이유를 모두 알려주시겠어요? (중복 가능)</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSur_2_1" name="chkSur_2"><label for="chkSur_2_1"><span></span>금융 회사의 대출 조건 변경</label>
                 </span>
@@ -613,7 +615,10 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSur_2_4" name="chkSur_2"><label for="chkSur_2_4"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
                </div>
             </dd>
@@ -635,7 +640,7 @@
       
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSur_4_1" name="chkSur_4"><label for="chkSur_4_1"><span></span>제휴된 금융회사가 많아서</label>
                 </span>
@@ -646,12 +651,15 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSur_4_3" name="chkSur_4"><label for="chkSur_4_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSur_5_1" name="chkSur_5"><label for="chkSur_5_1"><span></span>복잡한 절차</label>
                 </span>
@@ -662,7 +670,10 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSur_5_3" name="chkSur_5"><label for="chkSur_5_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             </dd>
@@ -697,6 +708,17 @@
         </div>
         <div class="main_survey type2">
           <dl>
+            <dt class="dot">바우처 등록 회원님 이에요. 대출이자 지원 혜택을 위한 신한은행 계좌번호를 입력해 주세요</dt>
+            <dd>
+              <div class="formList">
+                <label class="label wid140" for="">신한은행 계좌번호<br/>(법인게좌)</label>
+                <div class="formRow">
+                  <input id="" class="input" type="text" value="" readonly>
+                  <button type="button" class="btnBlack">조회</button>
+                </div>
+              </div>
+            </dd>
+           
             <dt class="dot">금융 회사가 제출한 제안서와 실제 대출이 일치 했나요?</dt>
             <dd>
               <div class="formRow">
@@ -714,7 +736,7 @@
 
             <dt class="dot">금융 회사 선택 기준 (복수 선택 가능)</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSurvey_2_1" name="chkSurvey_2"><label for="chkSurvey_2_1"><span></span>대출 금액(한도)</label>
                 </span>
@@ -725,7 +747,10 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSurvey_2_3" name="chkSurvey_2"><label for="chkSurvey_2_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
                </div>
             </dd>
@@ -763,7 +788,7 @@
       
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 만족하셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSurvey_5_1" name="chkSurvey_5"><label for="chkSurvey_5_1"><span></span>제휴된 금융회사가 많아서</label>
                 </span>
@@ -774,12 +799,15 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSurvey_5_3" name="chkSurvey_5"><label for="chkSurvey_5_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             <dt class="dot">Loan&amp;Biz의 서비스 중 어떤 부분에 아쉬우셨나요?</dt>
             <dd>
-              <div class="formRow">
+              <div class="formRow flexWrap">
                 <span class="checkbox">
                   <input type="checkbox" id="chkSurvey_6_1" name="chkSurvey_6"><label for="chkSurvey_6_1"><span></span>복잡한 절차</label>
                 </span>
@@ -790,7 +818,10 @@
                   <span class="checkbox">
                     <input type="checkbox" id="chkSurvey_6_3" name="chkSurvey_6"><label for="chkSurvey_6_3"><span></span>기타</label>
                   </span>
-                  <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
                 </div>
               </div>
             </dd>

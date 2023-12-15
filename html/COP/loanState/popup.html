@@ -87,6 +87,7 @@
       <h3 style="margin-bottom: 10px">팝업</h3>
       <button type="button" class="btnSuccess open_layer" aria-controls="changeDateLayer">제안서 마감일 연장(메인팝업과 동일)</button>
       <button type="button" class="btnSuccess open_layer" aria-controls="scheduleLayer">예상 상환 스케줄(FIN_F31_001 동일)</button>
+      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey">설문 참여하기</button>
     </section>
   </div>
   <!-- **************** -->
@@ -264,9 +265,8 @@
         <div class="guideBox mt30">
           <ul class="guideList dot">
             <li class="list">제안서 마감일 연장은 1회 가능해요.</li>
-            <li class="list">연장할 제안서 마감일은 최대 30일까지 가능해요.</li>
-            <li class="list">제안서 마감일을 연장하시면 심사중인 금융 회사에게
-              알림을 보내요.</li>
+            <li class="list">연장할 제안서 마감일은 최대 1개월까지 가능해요.</li><!-- v2.1 -->
+            <li class="list">제안서 마감일을 연장 하시면 심사중인 금융회사에게 알림을 보내요.</li><!-- v2.1 -->
           </ul>
         </div>
       </div>
@@ -398,7 +398,69 @@
   <!-- **************** -->
 
 
-
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerSurvey" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>설문 참여</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerSurvey" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="topResultBox">
+          <p class="gray5">아쉽게도 대출 비교 신청을 취소하셨네요.<br/>
+            더 나은 서비스를 위해 고객님의 의견을 부탁드려요.</p>
+        </div>
+        <div class="main_survey type2">
+          <dl>
+            <dt>·  대출 비교 신청을 취소하신 이유는 무엇인가요?</dt>
+            <dd>
+              <div class="formRow flexWrap">
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_1" name="CheckBox"><label for="chk_1_1"><span></span>다른 곳에서 자금을 구해서</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="chk_1_2" name="CheckBox"><label for="chk_1_2"><span></span>적합한 제안을 받지 못해서</label>
+                </span>
+                <div class="formSet"><!-- v2.1 수정 -->
+                  <span class="checkbox">
+                    <input type="checkbox" id="chk_1_3" name="CheckBox"><label for="chk_1_3"><span></span>기타</label>
+                  </span>
+                  <div class="textareaWrap">
+                    <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
+                    <span class="countSet"><span class="count">0</span>/1000</span>
+                  </div>
+                </div>
+               </div>
+             </dd>
+            <dt>·  향후 Loan&Biz를 다시 이용하거나 다른 분께 추천할 의향이 있으신가요?</dt>
+            <dd>
+              <div class="formRow">
+                <span class="radio">
+                  <input type="radio" id="surveyChk_1" name="surveyQ_1" value="A">
+                  <label for="surveyChk_1"><span></span>네</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" id="surveyChk_2" name="surveyQ_1" value="A">
+                  <label for="surveyChk_2"><span></span>아니오</label>
+                </span>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="table_bt">
+          <div class="btn_c">
+            <button type="button" class="btnSuccess">제출</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
 
 </body>
 </html>
