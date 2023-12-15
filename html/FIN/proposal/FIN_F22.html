@@ -120,11 +120,11 @@
                 </tr>
                 <tr> 
                   <th scope="row">
-                    <label for="formLabel5" class="label">메모</label>
+                    <label for="formLabel5" class="label">메모 및 참고사항</label>
                   </th> 
                   <td>
                     <div class="formRow">
-                      <textarea class="textarea" id="formLabel5" title="메모내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
+                      <textarea class="textarea" id="formLabel5" title="고객에게 전달할 내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
                     </div>
                   </td>
                 </tr>
@@ -250,7 +250,7 @@
                             <div class="detailForm">
                               <h5 class="titH5">자금 용도 변경 사유</h5>
                               <div class="formVertical mt10">
-                                <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요.(500자 이내)" disabled></textarea>
+                                <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요. ex) 실 자금 용도 서류 확인(500자 이내)" disabled></textarea>
                               </div>
                             </div>
                           </div>
@@ -293,6 +293,17 @@
                       <tr> 
                         <th scope="row">
                           <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
+                            <span class="unit">개월</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>거치 기간</label>
                         </th> 
                         <td>
                           <div class="formRow">
@@ -419,10 +430,10 @@
                           </script>
                         </td>
                       </tr>
-                      <tr> 
+                      <!-- <tr> 
                         <th scope="row">기타 조건</th> 
                         <td><input class="input" type="text" name="" id="accLabel1" placeholder="상환 조건 등 조건을 입력해 주세요." value="" /></td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
                   <div class="textTable"><!-- 수정2.0 -->
@@ -544,13 +555,25 @@
                               </table>
                             </div>
                           </td>
+                        </tr><tr>
+                          <th scope="row">
+                            <label for="notiLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상품 안내 자료 등록</label><br>
+                            (pdf, jpg, png만 가능)
+                          </th> 
+                          <td>
+                            <div class="formRow filebox multi">
+                              <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+                              <label for="exFilename" class="btnBlack">파일 선택</label>
+                              <div class="attached"></div>
+                            </div>
+                          </td>
                         </tr>
-                        <tr>
-                          <th scope="row"><!-- 수정2.0 -->
+                        <!-- <tr>
+                          <th scope="row">
                             <label class="label" for="notiLabel5">참고 사항</label>
                           </th> 
                           <td><textarea class="textarea" id="notiLabel5">2023년 08월 자 기준으로 작성되었으며 예고 없이 변동될 수 있습니다.</textarea></td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>

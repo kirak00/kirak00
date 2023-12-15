@@ -23,10 +23,10 @@
     <div class="container" id="skip_content"  aria-label="컨텐츠">
 
       <section class="pageTop">
-        <h2 class="pageTit">대출 비교 신청 목록</h2>
+        <h2 class="pageTit">리스 비교 신청 목록</h2>
         <ul class="breadcrumb"><!-- 1.7 링크 제거 -->
            <li class="home"><span class="hide">홈</span></li>
-           <li><strong>대출 신청 업체 목록</strong></li>
+           <li><strong>리스 비교 신청 목록</strong></li>
         </ul>
       </section>
 
@@ -37,9 +37,9 @@
           <div class="searchControlBox">
             <div class="searchControlGroup">
               <div class="searchControlItem expand">
-                <label for="label_tit_1" class="label">대출 신청 번호 </label>
+                <label for="label_tit_1" class="label">리스 신청 번호 </label>
                 <div class="formRow">
-                  <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
+                  <input type="text" class="input" id="label_tit_1" placeholder="리스 신청 번호를 입력해 주세요">
                 </div>
               </div>
               <div class="searchControlItem">
@@ -49,7 +49,7 @@
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
-                  <span class="line"></span><!-- 1.9 수정  -->
+                  <span class="line"></span>
                   <span class="checkbox">
                     <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
                     <label for="searchCheckBox"><span></span>다른 직원 심사 건 제외</label><!-- 2.1 수정-->
@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">희망 신청 금액</label>
+                <label id="selectLabelPay" class="label">희망 리스 금액</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
                   <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
                   <span class="unit">억</span>
@@ -89,16 +89,19 @@
                 </div>
               </div>
               <div class="searchControlItem expand">
-                <label for="selectLabelArea3" class="label">담보 유무</label>
-                <div class="formRow">
-                  <select id="selectLabelArea3">
-                    <option>전체</option>
-                    <option>셀렉트</option>
+                <label for="selectLabelArea3" class="label">보증금 비율</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea3">
+                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">%</span>
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
                   </select>
                 </div>
               </div>
               <div class="searchControlItem expand">
-                <label for="selectLabelPatent" class="label">특허 보유 여부</label>
+                <label for="selectLabelPatent" class="label">보증인 가능 여부</label>
                 <div class="formRow">
                   <select id="selectLabelPatent">
                     <option>전체</option>
@@ -129,7 +132,11 @@
               </div>
               <span class="checkbox">
                 <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
-                <label for="searchCheckBox"><span></span>관심 대출만 보기</label>
+                <label for="searchCheckBox"><span></span>등급 없음 포함</label>
+              </span>
+              <span class="checkbox">
+                <input type="checkbox" id="searchCheckBox" name="searchCheckBox" />
+                <label for="searchCheckBox"><span></span>관심 리스만 보기</label>
               </span>
               <div class="searchBtns">
                 <button type="button" class="btnReset">초기화</button>
@@ -248,15 +255,15 @@
 
               fields: [
                 { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은<br>목록 상단에 고정됩니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
-                { name: "Name1",  type: "text", title : "대출 신청 번호",  validate: "required", },
+                { name: "Name1",  type: "text", title : "리스 신청 번호",  validate: "required", },
                 { name: "Name3", type: "text", title : "기업명", width: 100, validate: "required" },
                 { name: "Name2", type: "text", title : "상태", width: 80, validate: "required" },
-                { name: "Name4", type: "text", title : "희망 신청 금액", width: 120, validate: "required" },
+                { name: "Name4", type: "text", title : "희망 리스 금액", width: 120, validate: "required" },
                 { name: "Name5", type: "text", title : "지역", width: 60, validate: "required" },
                 { name: "Name6", type: "text", title : "업종", width: 60, validate: "required" },
-                { name: "Name7", type: "text", title : "자금 용도", width: 80, validate: "required" },
-                { name: "Name8", type: "text", title : "담보<br> 유무", width: 80, validate: "required" },
-                { name: "Name9", type: "text", title : "특허 보유<br>여부", width: 80, validate: "required" },
+                { name: "Name7", type: "text", title : "상세용도", width: 80, validate: "required" },
+                { name: "Name8", type: "text", title : "보증금<br> 비율", width: 80, validate: "required" },
+                { name: "Name9", type: "text", title : "보증인<br>가능 여부", width: 80, validate: "required" },
                 { name: "Name10", type: "text", title : "CRETOP <br>등급", width: 100, validate: "required" },
                 { name: "Name11", type: "text", title : "제안서 마감일", width: 100, validate: "required" },
                 { name: "Name12", type: "text", title : "상세보기", width: 130, validate: "required" },
@@ -280,45 +287,6 @@
 
 
 
- <!-- 샘플 -->
-    
-<button type="button" class="btnSuccess" onclick="cancelHistory_layer(this)" >심사취소 있는경우 샘플 </button>
-
-<script>
-  
-  function cancelHistory_layer(obj){
-      layer_confirm(
-        `<span class="layerCont_cancelHistory">
-          해당 대출 신청 건은 이미 <br>
-          <strong>{ID가 속한 금융회사명}</strong>에서  <strong>심사 취소</strong>를 한 <br> 이력이 있습니다. <br> 
-          <strong class="point">(촐 n건, 최근 취소 사유: {심사 시간 부족})</strong><br><br>
-          대출 신청 정보를 확인하시겠습니까?
-        </span>`, 
-        obj, 
-        {
-          confirm : {
-            txt : "상세보기",
-            callback : function(){
-              alert("확인")
-            }
-          },
-          cancel : {
-            txt : "닫기",
-            callback : function(){
-              alert("취소")
-            }
-          },
-          closebtn : {
-            show: true, // default : true
-            callback : function(){
-              alert("닫기")
-            }
-          }
-        }
-      )
-    }
-    
-</script>
    
 
 
