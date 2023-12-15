@@ -108,7 +108,25 @@
         <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
+        <!-- v2.1 추가 -->
         <section>
+          <h4 class="titH6 textRegular">서비스 알림을 받으실 매체를 선택해 주세요.</h4>
+          <div class="formList alarmSelect">
+            <span class="radio">
+              <input type="radio" id="alarmOpt1" name="alarmOpt"  value="">
+              <label for="alarmOpt1"><span></span>이메일 수신</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="alarmOpt2" name="alarmOpt" value="">
+              <label for="alarmOpt2"><span></span>알림톡 수신</label>
+            </span>
+            <span class="radio">
+              <input type="radio" id="alarmOptAll" name="alarmOpt" value="" checked>
+              <label for="alarmOptAll"><span></span>이메일 + 알림톡 수신</label>
+            </span>
+          </div>
+        </section>
+        <section class="sectionBlock40 alarmOpt1 show">
           <h4 class="titH6 textRegular">서비스 알림을 받으실 이메일을 입력해주세요.</h4>
           <div class="formList">
             <label class="label wid80" for="formLabel1">이메일</label>
@@ -122,7 +140,7 @@
             </div>
           </div>
         </section>
-        <section class="sectionBlock40">
+        <section class="sectionBlock40 alarmOpt2 show">
           <h4 class="titH textRegular">알림톡을 통한 서비스 알림 수신을 위해 본인 확인 절차가 필요합니다.</h4>
           <div class="formList">
             <label class="label wid80" for="formLabel2">성명</label>
@@ -144,7 +162,7 @@
           <div class="formList">
             <span class="checkbox">
               <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
-              <label class="label" for="ckbMember1_1"><span></span>개인 정보 수집 이용 동의 <strong class="blue">(필수)</strong></label>
+              <label class="label" for="ckbMember1_1"><span></span>서비스 알림 수신 동의 <strong class="blue">(필수)</strong></label><!-- v2.1 워딩수정 -->
             </span>
             <a href="" class="goLink ml20">자세히 보기</a>
           </div>
@@ -156,6 +174,22 @@
             <a href="" class="goLink ml20">자세히 보기</a>
           </div>
         </section>
+
+        <script>
+          alarmSelect();
+          function alarmSelect(){
+            var rado =  $(".alarmSelect input[type=radio]");
+            rado.on("click",function(){
+              $(".alarmOpt1, .alarmOpt2").removeClass("show");
+              var checkedId = $(this).prop("checked",true).attr("id");
+              if(checkedId == "alarmOpt1" || checkedId == "alarmOpt2"){
+                $("."+checkedId).addClass("show");
+              } else {
+                $(".alarmOpt1, .alarmOpt2").addClass("show");
+              }
+            })
+          }
+        </script>
       </div>
       <div class="layerFoot">
         <button type="button" class="btnSuccess">확인</button>

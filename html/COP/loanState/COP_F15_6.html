@@ -49,17 +49,17 @@
           <!-- <li><button type="button" role="tab" id="innerTab_2" aria-selected="false">대표자 인적 사항</button></li> -->
           <li><button type="button" role="tab" id="innerTab_3" aria-selected="false">경영진 현황</button></li><!-- v2.0 워딩수정 -->
           <li><button type="button" role="tab" id="innerTab_4" aria-selected="false">주주 현황</button></li> <!-- v2.0 워딩수정 -->
-          <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 연혁</button></li> 
+          <li><button type="button" role="tab" id="innerTab_5" aria-selected="false">노사 관계 및 회사 연혁</button></li> <!-- v2.1 워딩수정 -->
           <li class="on"><button type="button" role="tab" id="innerTab_6" aria-selected="true">법인 서류 등록</button></li> <!-- v1.4 워딩수정 -->
         </ul>  
         <!-- 디자인 수정 : sectionBlock60 -> sectionBlock20 -->
         <section class="sectionBlock20">
           <p class="tableLabel">대출 신청 번호 <span class="num">S_20230809-0001</span></p>
           <!-- 디자인 수정 : 워딩 수정 -->
-          <h3 class="titH5">주요 추가 서류</h3> 
+          <h3 class="titH5">주요 필수 서류</h3> <!-- v2.1 -->
           <div class="table_wrap">
             <table class="bbs_list">
-              <caption>주요 추가 서류</caption>
+              <caption>주요 필수 서류</caption>
               <colgroup>
                 <col />
                 <col width="320px">
@@ -67,9 +67,9 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">증빙서류</th>
+                  <th scope="col">서류명</th><!-- v2.1 -->
                   <th scope="col">자료</th> <!-- v2.0 워딩수정 -->
-                  <th scope="col">등록 일자</th>
+                  <th scope="col">제출 일자</th> <!-- v2.1 -->
                 </tr>
               </thead>
               <tbody>
@@ -79,7 +79,17 @@
                   <td>2023-08-15</td>
                 </tr>
                 <tr>
-                  <td>법인등기부등본.pdf</td>
+                  <td>법인등기부등본(법인등기사항전부증명서).pdf</td>
+                  <td><button type="button" class="ico_down">다운로드</button></td>
+                  <td>2023-08-15</td>
+                </tr>
+                <tr>
+                  <td>리스 견적서.pdf</td>
+                  <td><button type="button" class="ico_down">다운로드</button></td>
+                  <td>2023-08-15</td>
+                </tr>
+                <tr>
+                  <td>의사 면허증.pdf</td>
                   <td><button type="button" class="ico_down">다운로드</button></td>
                   <td>2023-08-15</td>
                 </tr>
@@ -88,13 +98,25 @@
           </div>
         </section>
         
-        
+        <!-- v2.1 추가 -->
+        <section class="sectionBlock40">
+          <h3 class="titH5">소상공인 여부</h3> 
+          <span class="radio">
+            <input type="radio" id="formLabel4_1" name="formLabel4" value="" checked disabled/>
+            <label class="label" for="formLabel4_1"><span></span>예</label>
+          </span>
+          <span class="radio">
+            <input type="radio" id="formLabel4_2" name="formLabel4" value="" disabled/>
+            <label class="label" for="formLabel4_2"><span></span>아니오</label>
+          </span>
+        </section>
+        </section>
 
-        <section class="sectionBlock60">
-          <h3 class="titH5">기술 인증 서류</h3> 
+        <section class="sectionBlock40"><!-- v2.1 section60 -> section40 -->
+          <h3 class="titH5">기술 인증 및 기관 정보</h3>  <!-- v2.1 -->
           <div class="table_wrap">
             <table class="bbs_list">
-              <caption>기술 인증 서류</caption>
+              <caption>기술 인증 및 기관 정보</caption>
               <colgroup>
                 <col width="260px">
                 <col />
@@ -107,7 +129,7 @@
                   <th scope="col">증빙서류</th>
                   <!-- 디자인 수정 : 워딩수정 -->
                   <th scope="col">자료</th>
-                  <th scope="col">등록 일자</th>
+                  <th scope="col">제출 일자</th> <!-- v2.1 -->
                 </tr>
               </thead>
               <tbody>
@@ -129,7 +151,7 @@
         </section>
 
         <!-- v1.6 위치 수정 -->
-        <section class="sectionBlock60">
+        <section class="sectionBlock40"><!-- v2.1 section60 -> section40 -->
           <h3 class="titH5">특허 정보</h3> <!-- v2.0 워딩수정 -->
           <div class="table_wrap">
             <table class="bbs_list">
@@ -182,7 +204,7 @@
           </div>
         </section>
         
-        <section class="sectionBlock60">
+        <section class="sectionBlock40"><!-- v2.1 sectionBlock60 -> sectionBlock40 -->
           <!-- 디자인 수정 : 워딩 수정 -->
           <h3 class="titH5">기타 추가 서류</h3> 
           <div class="table_wrap">
