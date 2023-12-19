@@ -182,7 +182,7 @@ ul.boxWrap li.usageStatus:nth-child(3) span.tit       {background:url(../adm_ima
 ul.boxWrap li.usageStatus ul            {margin-top:35px; display:flex; width:100%;  }
 ul.boxWrap li.usageStatus ul li         {text-align: center; width:100%; }
 ul.boxWrap li.usageStatus ul li span    {display:inline-block; font-weight: 500; }
-ul.boxWrap li.usageStatus ul li span span {color:#888; vertical-align: 0; font-size: 14px; }
+ul.boxWrap li.usageStatus ul li span span {color:#888;  font-size: 14px; }
 ul.boxWrap li.usageStatus ul li strong  {display:block; margin-top:10px; font-size: 24px; }
 ul.boxWrap li.usageStatus button.btnSuccess {position:absolute; top:24px; right:30px;  }
 
@@ -261,7 +261,7 @@ ul.boxWrap.detail li.box.detail_4 ul li.total strong  {display:block; margin-top
 ul.boxWrap.detail li.box.detail_4 ul li.avr   {}
 ul.boxWrap.detail li.box.detail_4 ul li .starChkWrap {margin:0 auto; width:150px; height:90px; margin-top:20px;  align-items: flex-start; }
 ul.boxWrap.detail li.box.detail_4 ul li.avr strong   {display:block; font-size:18px; }
-ul.boxWrap.detail li.box.detail_4 ul li.avr strong em   {font-size:30px; color:#069B66; vertical-align: 0;  }
+ul.boxWrap.detail li.box.detail_4 ul li.avr strong em   {font-size:30px; color:#069B66;   }
 
 ul.boxWrap.chartBox li.box { }
 ul.boxWrap.chartBox li.box span.tit  {display:block; padding:40px 0 0; font-size: 18px; font-weight: 700; text-align: center;  }
@@ -382,8 +382,8 @@ ul.dashboardWrap li .barChart2 + span.dataSize   { margin:30px 0 auto; }
 
 span.dataSize      { position:relative; display:inline-block; padding:0 10px; font-size:30px;  }
 span.dataSize::after    { content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(24, 167, 116, 0.15); }
-span.dataSize strong    { position:relative; z-index:2; display:inline-block; font-size: 24px; vertical-align: 0; }
-span.dataSize span      { position:relative; z-index:2; display:inline-block;  font-size: 24px; font-weight: 700; vertical-align: 0}
+span.dataSize strong    { position:relative; z-index:2; display:inline-block; font-size: 24px;  }
+span.dataSize span      { position:relative; z-index:2; display:inline-block;  font-size: 24px; font-weight: 700; }
 
 
 .boxWrap.boxWrap.dateChartBox       {}
@@ -486,7 +486,7 @@ fieldset .searchControlBox { width: 100%;}
 /* 엑셀 업로드 */
 .uploadResult         {border:1px solid #069B66; padding:20px; border-radius:16px; margin-top:20px;  }
 .uploadResult .resutlBox         {margin-bottom:20px; }
-.uploadResult .resutlBox strong  {font-size: 26px; vertical-align: 0; }
+.uploadResult .resutlBox strong  {font-size: 26px;  }
 .uploadResult .resutlBox em {font-size:20px; margin-left:20px;  }
 .uploadResult .resutlBox em strong {font-size:20px;  color:#069B66 }
 .uploadResult .resutlBox em.total  {color:#069B66 }

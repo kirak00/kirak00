@@ -93,7 +93,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
-.main_visual_logout .txtBox strong { color:#02C37E;  vertical-align: 0;  }
+.main_visual_logout .txtBox strong { color:#02C37E;    }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -183,25 +183,35 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_loan_progress ol.status_tab li .subInfo { display: flex; align-items: center; justify-content: center; margin-top: 10px; }
 .main_loan_progress ol.status_tab li .subInfo .info { position: relative; display: inline-block; padding: 0 16px; font-size: 14px; }
 .main_loan_progress ol.status_tab li .subInfo .info + .info::before { position: absolute; top: 50%; left: 0; content: ''; display: block; width: 1px; height: 10px; background: #ddd; transform: translate(0, -50%); }
-.main_loan_progress ol.status_tab li.on {box-shadow: none; border:3px solid #069B66; }
+.main_loan_progress ol.status_tab.step_1 li:nth-child(1),
+.main_loan_progress ol.status_tab.step_2 li:nth-child(2),
+.main_loan_progress ol.status_tab.step_3 li:nth-child(3),
+.main_loan_progress ol.status_tab.step_4 li:nth-child(4) {box-shadow: none; border:3px solid #069B66; }
 .main_loan_progress ol.status_tab li.disabled { background-color: #fafafa; border-color: #fafafa;}
 .main_loan_progress ol.status_tab li.disabled em,
 .main_loan_progress ol.status_tab li.disabled strong {color:#888}
 .loan_progress .stepBox li.step_1,
-.main_loan_progress ol.status_tab li.step_1   {background-image:url(../images/COP/main/no_data_main_1.png); }
+.main_loan_progress ol.status_tab li:nth-child(1)   {background-image:url(../images/COP/main/no_data_main_1.png); }
 .loan_progress .stepBox li.step_2,
-.main_loan_progress ol.status_tab li.step_2   {background-image:url(../images/COP/main/no_data_main_2.png); }
+.main_loan_progress ol.status_tab li:nth-child(2)   {background-image:url(../images/COP/main/no_data_main_2.png); }
 .loan_progress .stepBox li.step_3,
-.main_loan_progress ol.status_tab li.step_3   {background-image:url(../images/COP/main/no_data_main_3.png); }
+.main_loan_progress ol.status_tab li:nth-child(3)   {background-image:url(../images/COP/main/no_data_main_3.png); }
 .loan_progress .stepBox li.step_4 {background-image:url(../images/COP/main/no_data_main_4.png); }
-.main_loan_progress ol.status_tab li.step_4   {background-image:url(../images/COP/main/no_data_main_4_new.png); }
+.main_loan_progress ol.status_tab li:nth-child(4)   {background-image:url(../images/COP/main/no_data_main_4_new.png); }
 .loan_progress .stepBox li.step_5,
-.main_loan_progress ol.status_tab li.step_5   {background-image:url(../images/COP/main/no_data_main_5.png); }
-.main_loan_progress ol.status_tab li.step_1.disabled   {background-image:url(../images/COP/main/no_data_main_1_off.png); }
-.main_loan_progress ol.status_tab li.step_2.disabled   {background-image:url(../images/COP/main/no_data_main_2_off.png); }
-.main_loan_progress ol.status_tab li.step_3.disabled   {background-image:url(../images/COP/main/no_data_main_3_off.png); }
-.main_loan_progress ol.status_tab li.step_4.disabled   {background-image:url(../images/COP/main/no_data_main_4_new_off.png); }
-.main_loan_progress ol.status_tab li.step_5.disabled   {background-image:url(../images/COP/main/no_data_main_5_off.png); }
+.main_loan_progress ol.status_tab.step_5 li   {background-image:url(../images/COP/main/no_data_main_5.png); }
+
+.main_loan_progress .status_tab.step_1 + .list { margin-left: 0;}
+.main_loan_progress .status_tab.step_2 + .list { margin-left: 355px;}
+.main_loan_progress .status_tab.step_3 + .list { margin-left: 710px;}
+.main_loan_progress .status_tab.step_4 + .list { display: none; }
+
+.main_loan_progress ol.status_tab li:nth-child(1).disabled   {background-image:url(../images/COP/main/no_data_main_1_off.png); }
+.main_loan_progress ol.status_tab li:nth-child(2).disabled   {background-image:url(../images/COP/main/no_data_main_2_off.png); }
+.main_loan_progress ol.status_tab li:nth-child(3).disabled   {background-image:url(../images/COP/main/no_data_main_3_off.png); }
+.main_loan_progress ol.status_tab li:nth-child(4).disabled   {background-image:url(../images/COP/main/no_data_main_4_new_off.png); }
+
+
 
 .main_loan_progress ol.status_tab li.disabled .subInfo .info { background: #eef0f1; color: #888; }
 
@@ -209,7 +219,8 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .loan_progress .stepBox li { width:100%;  background:#FAFAFA; text-align: center; border:1px solid #ddd; border-radius:16px; background-repeat: no-repeat; background-position: 50% 45px;  background-size:105px 75px; }
 .loan_progress .stepBox li div {display:block; padding-top:130px; height:226px; text-decoration: none;  }
 .loan_progress .stepBox li em {display:inline-block; color:#069B66; font-size: 16px; font-weight: 700;  } 
-.loan_progress .stepBox li strong {display:block; margin-top: 10px; font-size: 18px; font-weight: 700;  }
+.loan_progress .stepBox li strong,
+.loan_progress .stepBox li .goLink {display:block; margin: 10px auto 0; font-size: 18px; font-weight: 700;  }
 .loan_progress .stepBox li strong .star { display: inline-block; color: #069B66; vertical-align: -1px;}
 .loan_progress .infoTxt { margin-top: 18px; }
 
@@ -233,9 +244,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_loan_progress .list .btnWrap button { flex: 1; height: 36px; padding: 0; font-size: 14px;}
 /* .main_loan_progress .list .btnWrap button { min-width: 227px;} */
 .main_loan_progress .list .btnWrap button.btnWhite.on {  background:#069B66; color: #fff;}
-.main_loan_progress .list.list_1 { margin-left: 0;}
-.main_loan_progress .list.list_2 { margin-left: 355px;}
-.main_loan_progress .list.list_3 { margin-left: 710px;}
+
 
 .main_loan_cont .list .status   {}  
 .main_loan_cont .list .status button   {display:flex; width:100%; padding:18px 10px; line-height:28px; border-bottom:1px solid #ddd; justify-content: space-between; }  
@@ -285,7 +294,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .bgWrap .main_survey { border: 1px solid #ddd; }
 .main_survey      { background:#fff; padding:40px; border-radius: 16px;  }
 .main_survey dt   { padding:0px 0 20px; font-weight: 500; }
-.main_survey dt .blue { vertical-align: 0;}
+.main_survey dt .blue { }
 .main_survey dt ~ dt   {margin-top:30px; }
 .main_survey dd   {padding-left:8px; }
 .main_survey dd input[type=radio].starChk ~ label   {height:24px; }
@@ -349,7 +358,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
 .serviceInfo_txt dl dd      { padding-left:150px; line-height: 1.5;}
 .serviceInfo_txt dl dd strong,
-.serviceInfo_txt dl dd span { vertical-align: 0;}
+.serviceInfo_txt dl dd span { }
 
 .main_btn     {padding:40px 0 0px; text-align: center;}
 .main_btn button     {width:220px; }
@@ -448,7 +457,9 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .boardCont .attachBox li + li { margin-top: 4px;}
 
 
+.alarmSelect { padding: 30px 45px; background: #FAFAFA; border-radius: 16px; }
 .alarmOpt1,
 .alarmOpt2{ display: none;}
 .alarmOpt1.show,
 .alarmOpt2.show{display:block;}
+

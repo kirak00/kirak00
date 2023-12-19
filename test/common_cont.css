@@ -1227,7 +1227,7 @@ table { width: 100%;}
 /* .jsgrid-row > .jsgrid-cell { padding: 0 10px;} */
 .jsgrid-table tr td:first-child {padding-left: 15px}
 .jsgrid-table tr td:last-child {padding-right: 15px}
-th .checkbox     {vertical-align: 0;}
+th .checkbox     {}
 
 
 .jsgrid input, .jsgrid textarea, .jsgrid select { height: 64px; border: 1px solid #ddd; border-radius: 8px;}
@@ -1734,7 +1734,7 @@ ul.youtubeList li .titBox p   {margin-top:20px; }
 /* 심사안내 */
 ol.auditInfo      {}
 ol.auditInfo li      {position:relative; line-height:34px; margin:20px 0 0; padding-left:45px; }
-ol.auditInfo li strong  {color:#069B66; vertical-align: 0; }
+ol.auditInfo li strong  {color:#069B66;  }
 ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:34px; height:34px; font-size:20px; font-weight: 700; background:#069B66; color:#fff; text-align: center; border-radius: 50%;   }
 
 .suggestPg .divideCon { padding: 40px 0; border-bottom: 1px solid #ddd; }

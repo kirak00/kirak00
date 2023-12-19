@@ -25,8 +25,7 @@
 
     <section class="pageTop">
       <h2 class="pageTit">제안서 상세보기</h2>
-      <p class="pageSub">제안서에 표시된 대출금액 및 금리 등은 추가 심사 과정에서 변경 될 수 있습니다.</p><!-- v2.0 -->
-      <!-- v1.4 수정 -->
+      <p class="pageSub">제안서에 표시된 리스금액 및 금리 등은 추가 심사 과정에서 변경 될 수 있습니다.</p>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>대출 비교 진행 현황</span></a></li>
@@ -34,40 +33,39 @@
           <li><a href="#none"><strong>제안서 상세보기</strong></a></li>
       </ul>
     </section>
-    <!-- v2.0 전체 수정 -->
     <section class="suggestPg">
       <div class="titBg flexBetween">
         <div>
           <h3>길동중앙회 서교동지점</h3>
           <ul class="barList">
-            <li class="list">담당 직원명: 고길동 (02-123-4567)</li><!-- v2.0 -->
-            <li class="list">제안서 유효기일 : 2023-07-31</li><!-- v2.0 -->
+            <li class="list">담당 직원명: 고길동 (02-123-4567)</li>
+            <li class="list">제안서 유효기일 : 2023-07-31</li>
           </ul>
         </div>
         <p class="sub">대출 신청 번호 202308090001</p>
       </div>
-      <div class="divideCon"><!-- v2.1 divideCon 추가 -->
-        <div class="left"><!-- v2.1 left 추가 -->
+      <div class="divideCon">
+        <div class="left">
           <section class="sectionBlock40">
-            <h4 class="titH3 hasLine">제안서 요약 내용</h4>
+            <h4 class="titH3 hasLine">제안서 요약 내용<span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span></h4>
             <div class="viewNolineTable">
               <table>
                 <caption>제안서 요약 내용</caption>
                 <colgroup>
-                  <col width="180px" /><!-- v1.4 수정 -->
+                  <col width="180px" />
                   <col />
                 </colgroup>
                 <tbody>
                   <tr>
-                    <th scope="row">제안 대출 금액</th> 
+                    <th scope="row">제안 리스 금액</th> 
                     <td>10,000,000,000원 <span class="sub">(일백억원)</span></td>
                   </tr>
                   <tr>
-                    <th scope="row">제안 대출 금리</th> 
+                    <th scope="row">제안 리스 금리</th> 
                     <td>연 6.01%</td>
                   </tr>
                   <tr>
-                    <th scope="row">제안 대출 건수</th> 
+                    <th scope="row">제안 리스 건수</th> 
                     <td>2건</td>
                   </tr>
                   <tr>
@@ -84,22 +82,21 @@
             <div class="tabLineWrap">
               <div class="inner">
                 <ul class="tabLine tabScript" role="tablist">
-                  <li class="on"><button type="button" role="tab" aria-selected="true">상품명 1</button></li>
-                  <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li>
+                  <li class="on"><button type="button" role="tab" aria-selected="true">조건 1</button></li>
+                  <li><button type="button" role="tab" aria-selected="false">조건 2</button></li>
                 </ul>
               </div>
             </div>
             <!-- 제안내용 -->
-            <!-- v2.1 전체 수정 -->
             <div class="accordionItem noAccordion">
               <h3 class="accordionTitle">
                 <div class="accordionTrigger">
-                  <span class="label">상품명 1</span><strong class="tit blue">길동바로론</strong>
+                  <span class="label">조건 1</span><strong class="tit blue">길동바로론</strong>
                   <span class="num">202308090011</span>
                 </div>
               </h3>
               <div id="sect1" class="accordionPanel">
-                <span class="srOnly">제안 대출1 상세보기</span>
+                <span class="srOnly">제안 리스1 상세보기</span>
                 <div class="textTable">
                   <table>
                     <caption>제안서 기본 정보</caption>
@@ -109,34 +106,82 @@
                     </colgroup>
                     <tbody>
                       <tr> 
-                        <th scope="row">제안 자금 용도</th> 
+                        <th scope="row">리스 구분</th> 
                         <td>
-                          <strong class="blue">운전자금</strong> (기계기구 등의 신,중설 개보수 / 기타: 다른 은행 운전자금 상환)<br/>
-                          <p class="info">- 자금 용도 변경 사유: 고객님 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경</p>
+                          <strong class="blue">기계기구 리스</strong> 
                         </td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 금액</th> 
-                        <td><div class="formRow">4,500,000,000<strong>사십오억원</strong></div></td>
+                        <th scope="row">신규기기 여부</th> 
+                        <td>신규 기기</td>
                       </tr>
                       <tr> 
-                        <th scope="row">가장 빠른 대출<br/>실행 가능일</th> 
-                        <td>제안서 채택 후 3일 이후</td>
+                        <th scope="row">내수 구분</th> 
+                        <td>국내</td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 기간</th> 
-                        <td><strong>48</strong> 개월 </td>
+                        <th scope="row">상세 용도</th> 
+                        <td>산업용 기계
+                          <p class="info">(금속가공기계, 섬유기계, 식품가공기계, 제지기계, 인쇄기계, 목공기계, 제철설비 등)</p>
+                        </td>
                       </tr>
                       <tr> 
-                        <th scope="row">상환 방식</th> 
-                        <td>원금균등</td>
+                        <th scope="row">리스 금액 (취득원가)</th> 
+                        <td><div class="formRow">1,000,000,000<strong>일십억원</strong></div></td>
                       </tr>
                       <tr> 
-                        <th scope="row">거치 기간</th> 
-                        <td>10개월</td>
+                        <th scope="row">보증금</th> 
+                        <td><div class="formRow"><span class="unit">KRW</span>100,000,000<strong>일억원</strong></div>
                       </tr>
                       <tr> 
-                        <th scope="row">제안 금리</th> 
+                        <th scope="row">취득원가 비율</th> 
+                        <td>10%</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">신청 물건 정보</th> 
+                        <td>
+                          <div class="table_wrap">
+                            <table class="bbs_list">
+                              <caption>신청 물건 정보</caption>
+                              <colgroup>
+                                <col width="140px">
+                                <col width="100px">
+                                <col width="140px">
+                                <col width="140px">
+                                <col width="">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">리스 물건명</th>
+                                  <th scope="col">수량</th>
+                                  <th scope="col">가격</th>
+                                  <th scope="col">제조사</th>
+                                  <th scope="col">공급업체</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>리스 물건 1  </td>
+                                  <td>10</td>
+                                  <td>10,000,000</td>
+                                  <td>리스 제조사 1</td>
+                                  <td>리스 공급업체 1</td>
+                                </tr>
+                                <tr>
+                                  <td>리스 물건 1  </td>
+                                  <td>10</td>
+                                  <td>10,000,000</td>
+                                  <td>리스 제조사 1</td>
+                                  <td>리스 공급업체 1</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">제안 금리<br/>
+                          (제안서 제출일 기준)</th> 
                         <td>
                           <div class="table_wrap">
                             <table class="bbs_list">
@@ -167,6 +212,14 @@
                           </div>
                           <p class="notiTxt">기준금리, 당일 기준 합산 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
                         </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">리스 기간</th> 
+                        <td><strong>48</strong> 개월 </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">상환 방식</th> 
+                        <td>원금균등</td>
                       </tr>
                       <tr> 
                         <th scope="row">담보 유무</th> 
@@ -322,13 +375,13 @@
         <!-- v2.1 right 추가 -->
         <div class="right">
           <div class="totalInfoBox">
-            <div class="head">제안 대출 정보 합계</div>
+            <div class="head">제안 리스 정보 합계</div>
             <div class="cont">
-              <span class="label">제안 대출 금액</span>
-              <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p><!-- v2.1 total priceKr 추가 -->
-              <span class="label">제안 대출 금리(가중 평균 금리)</span>
+              <span class="label">제안 리스 금액</span>
+              <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p>
+              <span class="label">제안 리스 금리</span>
               <p class="desc">연 6.00%</p>
-              <span class="label">제안 대출 수</span>
+              <span class="label">제안 리스 수</span>
               <p class="desc">2건</p>
             </div>
             <div class="foot">
