@@ -58,7 +58,8 @@ td .tit { padding: 0 30px;}
 .textBold { font-weight: 700;}
 .required.rightTxt { text-align: right; padding:20px 0; }
 
-
+.flex { display: flex}
+.flexBetween { justify-content: space-between; align-items: center;}
 
 .goLink { color: #333; text-decoration: underline; }
 .goLink.blue { color: #069B66}
@@ -459,6 +460,7 @@ a.ico_down       {color:#069B66; }
 .ico_down:disabled       {color:#333; opacity: .4; }
 .ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
 
+
 .ico_send {padding:0 32px; color:#069B66; font-weight: 700;}
 .ico_send::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -2px; background:url(../images/common/ico_18_blank_primary.png) no-repeat 50% 50% / contain; }
 /* .ico_send:disabled       {color:#333; opacity: .4; } */
@@ -493,6 +495,15 @@ a.ico_down       {color:#069B66; }
 
 .btnSuccess.ico_refresh::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_refresh_primary_w.png) no-repeat 50% 50% / contain; }
 /* .btnSuccess:disabled.ico_refresh::after {background-image: url(../images/common/ico_18_refresh_primary_disabled.png); } */
+
+
+.btnWhite.ico_refresh     { padding:0 30px;  }
+.btnWhite.ico_refresh::after   {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_refresh_green.png) no-repeat 50% 50% / contain;}
+.btnWhite.ico_refresh:focus::after ,
+.btnWhite.ico_refresh:hover::after  { background-image:url(../images/common/ico_18_refresh_w.png); background-size: 18px 18px;}
+
+
+
 
 .btnWhite.ico_calendar::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_calendar_primary.png) no-repeat 50% 50% / contain; }
 .btnWhite:hover.ico_calendar::after { background-image: url(../images/common/ico_18_calendar_w.png); }
@@ -931,6 +942,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* 단위가 존재하는 input ex.개월, 원 */
 input[type=text].innerTxt_2         { margin-right:-74px;  padding: 0 64px 0 20px; }
 input[type=text].innerTxt_2.wid135  { width:135px; }
+input[type=text].innerTxt_2.wid155  { width:155px; }
 input[type=text].innerTxt_2 + .unit { display: inline-block; width:56px; line-height:50px;padding-right:20px; text-align: right;  }
 input[type=text].innerTxt_1         { margin-right:-44px;  padding: 0 44px 0 20px; }
 input[type=text].innerTxt_1 + .unit { display: inline-block; width:36px; line-height:50px;padding-right:20px; text-align: right;  }
@@ -1172,6 +1184,10 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .msgPg .divTable .row .cell[aria-rowspan='2'] { width: 409px; padding: 0 20px; border: none;}
 .msgPg .divTable .row .cell[aria-rowspan='2']::after { display: none;}
 
+.tableControl { display: flex; justify-content: space-between; margin: 10px 0;}
+.tableControl .formList { margin: 0;}
+.tableControl .btnWhite { padding: 0 30px;}
+
 .formListWrap { margin: 20px 0;}
 .formListWrap .formList:first-child { margin-top: 0;}
 .formListWrap .formList:last-child { margin-bottom: 0;}
@@ -1179,6 +1195,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formListRow { display: flex; align-items: flex-start; gap: 40px;} 
 .formListRow .formList { width: 100%; margin: 0;}
 .formList { display: flex; align-items: center; flex-wrap: wrap; margin: 40px 0 20px; }
+.formList.mt10 { margin-top: 10px; }
 .formList .label { display: inline-flex; font-weight: 700; flex-shrink: 0;}
 .formList .radio .label,
 .formList .checkbox .label { margin-right: 0;}  
@@ -1829,8 +1846,11 @@ table { width: 100%;}
 .textTable.mt32 { margin-top: 32px;}
 .textTable + .notiTxt { margin-top: 20px; }
 .table_wrap + .notiTxt { margin-top: 10px; }
+.textTable .tableControl + .table_wrap { margin-top: 10px;}
+
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 15px 0; min-height: 58px; text-align: left; vertical-align: top;}
+.textTable th.pt30 { padding-top: 30px;}
 /* .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;} */
 .textTable td strong, .textTable td span { }
 .textTable tr:first-child th, 
@@ -1846,7 +1866,7 @@ table { width: 100%;}
 
 /* 이중 테이블 */
 .textTable .bbs_list th,
-.textTable .bbs_list td { padding: 0; vertical-align:middle; text-align: center;}
+.textTable .bbs_list td { vertical-align:middle; text-align: center;}
 .textTable .bbs_list td.textLeft { text-align: left;}
 /* 페이지 테이블 - 제안서 제출 */
 .formFullTable .textarea,
