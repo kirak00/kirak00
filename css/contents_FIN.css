@@ -106,7 +106,7 @@ ul.loginTab li .searchIdResult   {height:116px; text-align: center; font-size: 1
 
 .main_visual_logout     { padding:10px 0 60px 40px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   {width:1220px; height:220px; padding:53px 0 0px; margin:0 auto; font-size:30px; line-height:1.5; font-weight: 700; background:url(../images/FIN/main_visual_bg_logout.png) no-repeat 100% 0;      }
-.main_visual_logout .txtBox em{color:#02C37E; vertical-align: 0; }
+.main_visual_logout .txtBox em{color:#02C37E;  }
 
 .main_progress        {height:308px; background:url(../images/FIN/main_process.png) no-repeat 0 0; }
 
@@ -149,7 +149,7 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 .main_list_status a em.tit        { display:block; margin:16px 0 0; font-size:16px; font-weight: 700; color:#069B66; }
 .main_list_status a span.size     { position:relative; display:inline-block; margin:20px 0 0; padding:0 10px;  color:#333;  }
 .main_list_status a span.size::after    { content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(24, 167, 116, 0.15); }
-.main_list_status a span.size strong    { position:relative; z-index:2; display:inline-block; vertical-align: 0; font-size: 30px; }
+.main_list_status a span.size strong    { position:relative; z-index:2; display:inline-block;  font-size: 30px; }
 .main_list_status a span.size span      { position:relative; z-index:2; display:inline-block; vertical-align: 2px; font-size: 20px; font-weight: 700;}
 
 .main_list_status a.item_1 span.icon    { background-image:url(../images/FIN/main_status_1.png)}
@@ -198,7 +198,7 @@ section.main_dashboard .table_top       {margin-top:-40px; }
 
 span.dataSize      { position:relative; display:inline-block; padding:0 10px;  }
 span.dataSize::after    { content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(24, 167, 116, 0.15); }
-span.dataSize strong    { position:relative; z-index:2; display:inline-block; vertical-align: 0; font-size: 30px; }
+span.dataSize strong    { position:relative; z-index:2; display:inline-block;  font-size: 30px; }
 span.dataSize span      { position:relative; z-index:2; display:inline-block; vertical-align: 2px; font-size: 20px; font-weight: 700;}
 
 
@@ -317,7 +317,7 @@ ul.employeeSelect li + li  {margin-top:20px; }
 .printSetting .chart_lineBox {padding:40px 20px 0;}
 
 .printSetting span.dataSize strong    {font-size:24px;}
-.printSetting span.dataSize span    {font-size:24px; vertical-align: 0;}
+.printSetting span.dataSize span    {font-size:24px; }
 
 .printSetting .chart_lineBox .legendBg          {width:240px; right:20px; }
 .printSetting .chart_lineBox .legendBg.size_1   {width:140px; }
@@ -401,7 +401,7 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 /* 엑셀 업로드 */
 .uploadResult         {border:1px solid #069B66; padding:20px; border-radius:16px; margin-top:20px;  }
 .uploadResult .resutlBox         {margin-bottom:20px; }
-.uploadResult .resutlBox strong  {font-size: 26px; vertical-align: 0; }
+.uploadResult .resutlBox strong  {font-size: 26px;  }
 .uploadResult .resutlBox em {font-size:20px; margin-left:20px;  }
 .uploadResult .resutlBox em strong {font-size:20px;  color:#069B66 }
 .uploadResult .resutlBox em.total  {color:#069B66 }
@@ -414,7 +414,7 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 .agreeChk    {padding:30px 0; }
 .managerRegistForm .agreeChk    {padding:30px 0; margin:0 -50px; }
 .managerRegistForm .agreeChk .checkbox    {white-space:unset;}
-.managerRegistForm .agreeChk .checkbox .blue    {font-weight: 700; vertical-align: 0;  }
+.managerRegistForm .agreeChk .checkbox .blue    {font-weight: 700;   }
 .layerCont ul.guideBox:first-child    {margin-top:0; }
 
 .layer_alarm .searchControlItem      {min-width:100%; max-width:100%;  }

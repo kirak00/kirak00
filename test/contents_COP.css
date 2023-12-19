@@ -91,7 +91,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 .main_visual_logout     { padding:0px 0 0 40px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { padding:40px 0 3px; font-size:38px; font-weight: 700; height:325px; background:url(../images/COP/banner_main.png) no-repeat right 40px top 0; }
-.main_visual_logout .txtBox strong { font-size:52px; vertical-align: 0;  }
+.main_visual_logout .txtBox strong { font-size:52px;   }
 .main_visual_logout button   { margin-top:20px; }
 
 

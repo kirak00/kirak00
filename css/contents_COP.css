@@ -93,7 +93,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 
 .main_visual_logout     { padding:0px 0 60px  0px ; width:100%; margin:0 auto; }
 .main_visual_logout .txtBox   { width:1214px; margin:0 auto; padding:40px 0 0; font-size:30px; font-weight: 700; height:171px; background:url(../images/COP/banner_main.png) no-repeat right 40px bottom 0; }
-.main_visual_logout .txtBox strong { color:#02C37E;  vertical-align: 0;  }
+.main_visual_logout .txtBox strong { color:#02C37E;    }
 .main_visual_logout button   { margin-top:20px; }
 
 
@@ -294,7 +294,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .bgWrap .main_survey { border: 1px solid #ddd; }
 .main_survey      { background:#fff; padding:40px; border-radius: 16px;  }
 .main_survey dt   { padding:0px 0 20px; font-weight: 500; }
-.main_survey dt .blue { vertical-align: 0;}
+.main_survey dt .blue { }
 .main_survey dt ~ dt   {margin-top:30px; }
 .main_survey dd   {padding-left:8px; }
 .main_survey dd input[type=radio].starChk ~ label   {height:24px; }
@@ -358,7 +358,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .serviceInfo_txt dl dt      { position:absolute; top:50%; transform: translateY(-50%);  font-weight: 700;   }
 .serviceInfo_txt dl dd      { padding-left:150px; line-height: 1.5;}
 .serviceInfo_txt dl dd strong,
-.serviceInfo_txt dl dd span { vertical-align: 0;}
+.serviceInfo_txt dl dd span { }
 
 .main_btn     {padding:40px 0 0px; text-align: center;}
 .main_btn button     {width:220px; }
