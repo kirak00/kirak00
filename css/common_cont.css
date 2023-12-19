@@ -138,9 +138,9 @@ td .tit { padding: 0 30px;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
 .hasLine .inner .right { margin-left: auto; }
-.barStepWrap + .titBg,
+.barStepWrap ~ .titBg,
 .titBg.resultType { min-height: 90px; background: #1EA885; text-align: center; line-height: 1.5;}
-.barStepWrap + .titBg h3,
+.barStepWrap ~ .titBg h3,
 .titBg.resultType h3 { font-size: 24px }
 .titBg { position: relative; display: flex; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;  min-height: 72px; padding: 24px 40px; background: #069B66; border-radius: 16px;}
 .titBg.lightGreen { min-height: 80px; background: #EFF5EF; font-size: 18px;}
