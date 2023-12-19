@@ -1777,9 +1777,9 @@ table { width: 100%;}
 .formListTable.fullType select { flex: 1; }
 .formListTable.mt40 { margin-top: 40px;}
 .formListTable table { display: table; width: 100%; table-layout: fixed; } 
-.formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
+.formListTable th { padding: 20px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 .formListTable th .checkbox { font-weight: 400; }
-.formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
+.formListTable td { padding: 10px 0; text-align: left; vertical-align: top;}
 .formListTable tr.sub > td { padding:0;  }
 .formListTable.addFile th { padding: 15px 0 15px; }
 .formListTable.addFile td { padding: 5px 0 ; }
@@ -2687,10 +2687,11 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
 .suggestPg .notiBox { margin: 40px 0px 0; padding: 20px 30px 30px;}
 .suggestPg .viewNolineTable .tableNoti { margin-top: 8px;}
-.suggestPg .radio { padding-top: 15px; height:auto; }
+.suggestPg .radio { padding-top: 10px; height:auto; }
+.suggestPg .formGroup .radio { padding-top: 0px; }
 .suggestPg .radio.inline { padding-top: 0; }
 .suggestPg .radio.inline ~ .radio { margin-left:40px; }
-.suggestPg .formListTable .radioBtn { height: auto; padding-top: 12px;}
+.suggestPg .formListTable .radioBtn { height: auto; padding-top: 10px;}
 /* .suggestPg .textTable th,  */
 /* .suggestPg .textTable td { vertical-align: top;} */
 /* .suggestPg .textTable tr:first-child th,
