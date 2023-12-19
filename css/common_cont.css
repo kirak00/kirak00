@@ -212,6 +212,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .formRow + .notiTxt { margin-top :10px; }
 
 .formListTable .notiTxt { margin-top: 8px; }
+.formListTable .notiTxt.mt0 { margin-top: 0px; }
 
 .tableNoti { margin-top: 10px; color: #4C9DA2; }
 .tableNoti::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px;  vertical-align: text-top;}
@@ -583,6 +584,7 @@ a.lnkLine { padding-right: 22px; border-bottom: 1px solid #069B66; font-weight: 
 /* .btnPlus:focus, */
 .btnPlus:hover    {background-color:#148159;}
 .btnPlus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
+.btnPlus.w50 {width:50px; height:50px;}
 
 select:disabled       { background-color:#EEF0F1 !important; color:#888 !important; border:1px solid #ddd; cursor:unset; opacity: 1; }
 
@@ -620,6 +622,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 /* grid 안 아이콘 */
 .icoFile::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_nonelist_g.png')  no-repeat center / 36px 36px; }
 .icoReview::after { content:""; display:inline-block; width:36px; height:36px; background: url('../images/common/ico_36_search_g.png')  no-repeat center / 36px 36px; }
+.icoNodata::after { content:""; display:inline-block; width:80px; height:80px; background: url('../images/common/log_process_02_disabled.png')  no-repeat center / 100%; }
 .icoReceipt::after { content:""; display:inline-block; width: 111px; height:92px; background: url('../images/common/ico_suggest.png')  no-repeat center / 111px 92px; }
 .icoReply { display: inline-flex; align-items: center; color: #069B66}
 .icoReply::before{ content:""; display:inline-block; width:18px; height:18px; margin-right: 4px; background: url('../images/common/ico_24_chat.png')  no-repeat center / contain; }
@@ -1642,6 +1645,10 @@ table.bbs_list .addBtnSet {  gap: 4px;}
 table.bbs_list .input, 
 table.bbs_list select { height: 50px; min-height: 50px;}
 
+
+table.bbs_list.sm td { padding:0 5px; }
+
+
 /* .table_wrap.formFullType .input,
 .table_wrap.formFullType select { width: 100%; } */
 .table_wrap.formFullType .input.wid160 { width: 160px; }
@@ -1768,6 +1775,7 @@ table { width: 100%;}
 .formListTable th { padding: 30px 0 15px; font-weight: 700; text-align: left; vertical-align: top; }
 .formListTable th .checkbox { font-weight: 400; }
 .formListTable td { padding: 15px 0; text-align: left; vertical-align: top;}
+.formListTable tr.sub > td { padding:0;  }
 .formListTable.addFile th { padding: 15px 0 15px; }
 .formListTable.addFile td { padding: 5px 0 ; }
 .formListTable td span.txt {display:inline-block; padding: 15px 0; }
@@ -2037,6 +2045,7 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .btnCalendar::after { content: ""; display: inline-block; margin-left: 0px; width: 24px; height: 24px; background: url(../images/common/ico_24_calendar_primary.png) no-repeat 50% 50%; }
 .btnCalendar:hover::after { background-image: url(../images/common/ico_24_calendar_w.png)} 
 
+.dateControl .input.wid130 { width: 110px; padding:0 6px; }
 
 /* lib override */
 .datepicker { top: 50px;}
@@ -2622,6 +2631,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .divideCon { padding: 40px 0; border-bottom: 1px solid #ddd; display: flex; gap: 60px;}
 .suggestPg .left {width: 968px;  }
 .suggestPg .left .formListTable { padding-left:40px; }
+.suggestPg .left .formListTable.pl0 { padding-left:0px; }
 .suggestPg .right {width: 372px;}
 
 .suggestPg .tabLineWrap + .accordionItem { margin-top: 30px;}
