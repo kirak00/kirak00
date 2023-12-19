@@ -493,7 +493,8 @@ a.ico_down       {color:#069B66; }
 /* .btnSuccess:disabled.ico_refresh::after {background-image: url(../images/common/ico_18_refresh_primary_disabled.png); } */
 
 .btnWhite.ico_calendar::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_calendar_primary.png) no-repeat 50% 50% / contain; }
-/* .btnWhite:disabled.ico_calendar::after {background-image: url(../images/common/ico_18_right_w_disabled.png); } */
+.btnWhite:hover.ico_calendar::after { background-image: url(../images/common/ico_18_calendar_w.png); }
+.btnWhite:disabled.ico_calendar::after { background-image: url(../images/common/ico_18_calendar.png); }
 
 
 .ico_chart       {padding:0 32px;}
