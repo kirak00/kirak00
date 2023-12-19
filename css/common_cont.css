@@ -221,6 +221,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .notiBox.lineType { background: #fff; text-align: center; border: 1px solid #ddd; }
 .notiBox.lineType .notiTxt { justify-content: center;}
 .notiBox.grayType { background: #F4F4F4;}
+.notiBox.bgWhite { background: #fff; }
 .notiBox .notiTxt { color: #333;}
 .notiBox .notiTxt.blue { color: #069B66}
 .notiBox .notiTxt::before { width: 20px; height: 20px; margin-right: 8px; background: url('../images/common/ico_24_notice_primary.png') no-repeat center / contain; vertical-align: -4px;}
@@ -302,6 +303,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 
 
 .textList .list + .list { margin-top: 16px;}
+.textList.md .list + .list { margin-top: 12px;}
 
 /****************************
 **********  section  **********
@@ -1600,6 +1602,7 @@ table.bbs_list.disabled th { background: #EEF0F1;}
 table.bbs_list.disabled th { color: #555; }
 table.bbs_list.disabled td { color: #888; }
 table.bbs_list.gray th { background: #fafafa; color: #333;}
+table.bbs_list.gray td .sub { font-size: 14px; }
 table.bbs_list.hasBorder tbody th,
 table.bbs_list.hasBorder tbody td { border: 1px solid #ddd; }
 table.bbs_list.hasBorder tr.require th,
@@ -1821,6 +1824,7 @@ table { width: 100%;}
 .textTable.boxType.pointTable td {  line-height:40px; }
 .textTable.hasLine { padding: 40px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
 .textTable { margin-top: 20px;}
+.textTable .info { margin-top: 12px;}
 .textTable.mt30 { margin-top: 30px;}
 .textTable.mt32 { margin-top: 32px;}
 .textTable + .notiTxt { margin-top: 20px; }
@@ -1828,6 +1832,7 @@ table { width: 100%;}
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 15px 0; min-height: 58px; text-align: left; vertical-align: top;}
 /* .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;} */
+.textTable td strong, .textTable td span { vertical-align: 0;}
 .textTable tr:first-child th, 
 .textTable tr:first-child td { padding-top: 0px; }
 .textTable tr:last-child th, 
@@ -2621,10 +2626,11 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .layerWrap .layerBody.wid640 .auditInfo li { margin-top: 0; padding-left: 32px;}
 .layerWrap .layerBody.wid640 .auditInfo li + li { margin-top: 30px;}
 
-.suggestPg .divideCon { padding: 40px 0; border-bottom: 1px solid #ddd; display: flex; gap: 60px;}
-.suggestPg .left {width: 968px;  }
+.suggestPg .divideCon { padding: 40px 0; border-bottom: 1px solid #ddd; display: flex; gap: 40px;}
+.suggestPg .left {width: 1020px;  }
 .suggestPg .left .formListTable { padding-left:40px; }
-.suggestPg .right {width: 372px;}
+.suggestPg .left .accordionItem .formListTable{ padding-left:0px; }
+.suggestPg .right {width: 340px;}
 
 .suggestPg .tabLineWrap + .accordionItem { margin-top: 30px;}
 
@@ -2645,7 +2651,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .accordionItem { margin-top: 20px; border: 1px solid #ddd; border-radius: 16px; }
 .suggestPg .accordionItem.isOpen {border: 1px solid #069B66; }
 .suggestPg .accordionItem.isOpen .accordionPanel {border-top: 1px solid #069B66; }
-.suggestPg .accordionItem.noAccordion .accordionPanel { display: block;}
+.suggestPg .accordionItem.noAccordion { border: none;}
+.suggestPg .accordionItem.noAccordion .accordionTrigger { background: #F6FBF7; border-radius: 16px; }
+.suggestPg .accordionItem.noAccordion .accordionTrigger .label { color: #069B66; }
+.suggestPg .accordionItem.noAccordion .accordionPanel { display: block; border: none; padding-top: 10px; padding-bottom: 0;}
+.suggestPg .accordionItem.noAccordion  .accordionTrigger .tit { font-weight: 400;}
+.suggestPg .accordionItem.noAccordion  .accordionTrigger .num { color: #069B66; font-size: 16px; font-weight: 400;}
 .suggestPg .accordionItem + .accordionItem { margin-top: 40px;}
 .suggestPg .accordionTrigger { display: flex; align-items: center; padding-left: 40px; padding-right: 40px; font-weight: 400; }
 .suggestPg .accordionTrigger .label { flex-shrink: 0; width: 160px; font-size: 18px; font-weight: 700;}
@@ -2691,7 +2702,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .totalInfoBox .cont { padding: 30px 0; }
 .totalInfoBox .label { display: inline-block;}
 .totalInfoBox .label ~ .label { margin-top: 20px; }
-.totalInfoBox .desc { margin-top: 10px; color: #069B66; font-size: 24px; font-weight: 700; }
+.totalInfoBox .desc { margin-top: 10px; color: #069B66; font-size: 18px; font-weight: 700; }
+.totalInfoBox .desc.total { font-size: 24px; }
+.totalInfoBox .desc .priceKr { margin-left: 0;}
 
 .totalInfoBox .foot {}
 .totalInfoBox .foot button { width: 100%; }
