@@ -45,6 +45,7 @@ table tr td img{vertical-align:middle; }
 
 th *,
 td *    {vertical-align: middle;}
+td strong    {vertical-align: top;}
 /* ---[ links ]------------------------------- */
 a  { box-sizing:border-box; }
 a img {border: none;}
