@@ -1105,7 +1105,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .searchControlGroup .btnBlack{ padding: 0 30px;} 
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; } 
-.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 50px; white-space: nowrap;
+.searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 16px; line-height: 48px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }
 .searchControlItem.disabled .label { background: #EEF0F1; color: #555;}
