@@ -318,7 +318,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .layerCont .main_survey .formRow.full .checkbox { flex: 1;}
 .layerCont .main_survey .formRow .checkbox { margin-left: 0; margin-right: 40px;}
 .layerCont .main_survey .formRow .radio {margin-left: 0;  margin-right: 40px;}
-.layerCont .main_survey .textarea { height: 134px;}
+.layerCont .main_survey .textarea { height: 120px;}
 /* .main_survey .formRow { flex-wrap: wrap;} */
 .main_survey .formRow .checkbox + .formSet { margin-left: 0;}
 .main_survey .formSet { flex-direction: column; align-items: flex-start; margin-left: 0; width: 100%;}

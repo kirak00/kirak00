@@ -1006,7 +1006,7 @@ select.wid430 { min-width: 430px;}
 select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff url('../images/common/sorting_down.png') right center no-repeat}
 
 /* textarea */
-.textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px;  }
+.textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px;  }
 .textareaWrap { position: relative; display: flex; flex-direction: column; align-items: end; }
 .textareaWrap .count {display:block; text-align: right;}
 
@@ -1017,6 +1017,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .textareaWrap.isActive .countSet .count { color: #069B66;}
 
 .textarea { width: 100%; min-height: 50px; height: 180px; padding: 13px 20px; border: 1px solid #ddd; border-radius: 8px; resize: none; line-height: 1.5; }
+.textarea.h56 { height: 56px; } /* 100, 200자의 경우 */
 .textarea.h105 { height: 105px; }
 .textarea.h120 { height: 120px; }
 .textarea.h140 { height: 140px; }
