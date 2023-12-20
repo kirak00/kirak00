@@ -799,16 +799,16 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .loanSelect .list.active .btnWhite { padding:0; background:#069B66; border-radius: 8px; font-size: 16px; text-align: center; font-weight: 700; color:#fff; }
 .loanSelect .list.active .btnWhite::after {  background-image:url(../images/common/ico_18_right_w.png);}
 .loanSelect .list .btnWhite { position: absolute; bottom: 40px; left: 40px; right: 40px; padding: 0;}
-.loanSelect .radioBtn { display: block; margin: 0;}
+.loanSelect .radioBtn { display: block; height: 100%; margin: 0;}
 .loanSelect .radioBtn + input[type="text"] { margin-left: 0px;}
 .loanSelect .radioBtn input[type=radio]{ display: none; }
-.loanSelect .radioBtn input[type=radio]+label{ display: block; height: auto; text-align: left; cursor: pointer;}
-.loanSelect .radioBtn input[type=radio]+label{  padding: 40px 58px 40px 40px; outline: 1px solid #ddd; border-radius: 16px; color: #333; text-indent: 0;}
+.loanSelect .radioBtn input[type=radio]+label{ display: block; height: 100%; text-align: left; cursor: pointer;}
+.loanSelect .radioBtn input[type=radio]+label{  padding: 40px 44px 40px 40px; outline: 1px solid #ddd; border-radius: 16px; color: #333; text-indent: 0;}
 .loanSelect .radioBtn input[type=radio]:checked+label{ background: #fff; outline: 3px solid #069B66; color: #333; }
 .loanSelect .radioBtn input[type=radio]:disabled+label { color: #888;}
 .loanSelect .radioBtn input[type=radio] + label span { width: auto; height: auto;  margin: 0; background: none; white-space: initial;}
 .loanSelect .radioBtn input[type=radio] + label .tt { display: block; color: #069B66; font-size: 20px; font-weight: 700; }
-.loanSelect .radioBtn input[type=radio] + label .dd { max-width: 248px; margin-top: 8px; font-size: 14px; font-weight: 500; line-height: 1.5; word-break: keep-all;}
+.loanSelect .radioBtn input[type=radio] + label .dd { margin-top: 8px; font-size: 14px; font-weight: 500; line-height: 1.5; word-break: keep-all;}
 
 
 
@@ -1614,7 +1614,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_wrap.mt60 { margin-top: 60px;}
 .table_wrap.mb30 { margin-bottom: 30px;}
 
-
+.table_wrap.income .input { max-width: 320px; }
 
 .grayBox table.bbs_list th { background: #fafafa; color: #333; }
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden; table-layout: fixed;}
