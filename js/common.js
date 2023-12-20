@@ -56,6 +56,7 @@ $(function(){
   },100)
 
   loginTab();
+  loginCOPTab();
 
   if($(".filebox").length >0) $('.filebox .uploadHidden').fileAttach();
 
@@ -210,6 +211,14 @@ function loginTab(){
   //   $(this).closest("li").addClass("on fast")
   // })
 }
+function loginCOPTab(){
+  var tab = $(".loginWrap .tabScript button").each(function(n){this.n=n});
+  var titBox = $(".pageTop")
+  tab.click(function(){
+    titBox.hide().eq(this.n).show()
+  });
+}
+
 
 
 function tooltip_q(){

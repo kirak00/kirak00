@@ -226,7 +226,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 *****************************/
 
 button    {background:none; cursor: pointer; transition: background .2s; white-space: nowrap;}
-
+button:focus,
+a:focus { outline: 2px dashed #069B66;}
 /* MAIN 버튼 */ 
 label.btnSuccess   ,
 a.btnSuccess   ,
@@ -268,6 +269,17 @@ table a.btnGray       { line-height: 36px;}
 table a.btnWhiteLine       { line-height: 36px;}
 table a.btnDkGreen       { line-height: 36px;}
 table a.btnLine       { line-height: 36px;}
+
+
+.btnSuccess:focus,
+.btnSky:focus, .btnDkGreen:focus,
+.btnWhite:focus,
+.btnGray:focus,  
+/* .btnGray2:focus, */
+.btnWhiteLine:focus ,
+.btnWhiteLine2:focus ,
+.btnBlack:focus { outline: 2px dashed #069B66; }
+.btnRoundWhite:focus { outline: 2px dashed #fff;}
 
 /* .btnSuccess:focus,
 .btnSuccess:hover        { background:#148159; text-decoration: none;  }
@@ -819,7 +831,7 @@ select.wid430 { min-width: 430px;}
 
 .searchControlBox .dateTab + [role="tabpanel"] select{ width: 206px;}
 
-.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px; overflow: hidden;} 
+.searchControlItem {display: inline-flex; height: 50px; border-radius: 8px;} 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 20px; line-height: 50px; white-space: nowrap;
   border-width: 1px 0px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 8px 0 0 8px; background: #fff; 
 }

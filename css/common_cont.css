@@ -1226,6 +1226,10 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 
 .layerWrap .formList .label { margin-right: 0;}
 
+.formList .label ~ .formDesc,
+.formList .label ~ .formRow + * { width: 100%;}
+
+
 .formList .label.wid62 { width: 62px;}
 /* .formList .label.wid62 ~ .formRow { max-width: calc(100% - 62px);} */
 .formList .label.wid62 ~ .formDesc,
@@ -1241,6 +1245,12 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 /* .formList .label.wid120 ~ .formRow { max-width: calc(100% - 120px);} */
 .formList .label.wid120 ~ .formDesc,
 .formList .label.wid120 ~ .formRow + *{ margin-left: 120px; }
+
+
+.formList .label.wid130 { width: 130px;}
+/* .formList .label.wid130 ~ .formRow { max-width: calc(100% - 130px);} */
+.formList .label.wid130 ~ .formDesc,
+.formList .label.wid130 ~ .formRow + *{ margin-left: 130px; }
 
 .formList .label.wid140 { width: 140px;}
 /* .formList .label.wid140 ~ .formRow { max-width: calc(100% - 140px);} */
@@ -2124,6 +2134,7 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 
 .layerWrap .layerBody.wid1400       {width:1400px;  }
 .layerWrap .layerBody.wid1100       {width:1100px;  }
+.layerWrap .layerBody.wid1080       {width:1080px;  }
 .layerWrap .layerBody.wid1000       {width:1000px;  }
 .layerWrap .layerBody.wid870       {width:870px;  }
 .layerWrap .layerBody.wid800       {width:800px;  }
@@ -3027,24 +3038,35 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 /* 진 */
 /* 공통 */
 .loginWrap { position: relative; margin-top: 20px;}
-.loginWrap .formList { flex-wrap: wrap;}
+.loginWrap .formList { flex-wrap: wrap; margin-top: 0;}
+
+.loginWrap .loginBtn { width: 460px; margin: 60px auto 0; }
+.loginWrap .loginBtn button,
+.loginWrap .loginBtn a { width: 100%; height: 70px; line-height: 70px;}
+.loginWrap .label { font-weight: 700;}
+
+.loginWrap .btnBox button,
+.loginWrap .btnBox a     {width:100%; height: 50px; line-height: 50px; font-size: 16px; }
+
+.loginWrap .notiTxtBoxWrap { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+.loginWrap .notiTxtBoxWrap .notiTxt { white-space: nowrap;}
 
 /* 탭이 있는 경우 */ 
-/* .tabpanel .pageTop { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); margin: 0;}
-.loginWrap .tabWrap { width: 530px; margin: 40px auto 0;}
-.loginWrap .input { width: 100%;}
-.loginWrap .inputBizNumber .input { width: auto;}
-.loginWrap .inputBizNumber .input:nth-of-type(1) { width: 80px;}
-.loginWrap .inputBizNumber .input:nth-of-type(2) { width: 68px;}
-.loginWrap .inputBizNumber .input:nth-of-type(3) { width: 100%;}
-.loginWrap .tabpanel { display: none; padding: 40px 0 0;}
-.loginWrap .tabpanel.isShow { display: block; }
-.loginWrap .formCont { display: flex; flex-direction: column; min-height: 254px; }
-.loginWrap .pageTop[data-tabTitle].isHidden { display: none;}
-.tabWrap.fixHeight .tabpanel{ position: relative; height: 318px;}
-.tabWrap.fixHeight .loginBtn { position: absolute; bottom: 0;} */
+.loginWrap .pageTop .notiTxt { margin-top: 20px;}
+.loginWrap .tabWrap { width: 460px; margin: 40px auto 0;}
+/* .loginWrap .tabLine,
+.loginWrap .formListWrap,
+.loginWrap .btnBox {  margin: 0 auto;} */
+.loginWrap .tabpanel { position: relative; display: none; padding: 30px 0 0;}
+.loginWrap .pageTop.isHidden { display: none;}
+.tabWrap.fixHeight .formListWrap{ display: flex; flex-direction: column; justify-content: center; position: relative; min-height: 120px; margin: 0;}
+.tabWrap.fixHeight .loginBtn { position: absolute; bottom: 0;}
+
+
+.loginWrap .btnBox { margin-top: 30px;}
 
 .inputTxt     {display:inline-block; line-height:50px;  }
+
 
 /* 탭이 없는 경우 */
 .loginCon { width: 460px; margin: 60px auto 0;}
@@ -3057,3 +3079,5 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 /* .loginCon .loginLink a:hover { color: #069B66; } */
 /* .loginCon .loginLink .tooltip_q { margin-left: 4px; vertical-align: -3px; background-image: url(../images/common/ico_q_inactive.png)}
 .loginCon .loginLink .tooltip_q:hover { background-image: url(../images/common/ico_q.png) } */
+
+
