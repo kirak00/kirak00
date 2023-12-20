@@ -32,12 +32,12 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">제안서 제출</h2>
+      <h2 class="pageTit">제출 리스 제안서 상세</h2>
       <ul class="breadcrumb">
-          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
-          <li><a href="#none"><span>제출 제안서 관리</span></a></li>
-          <li><a href="#none"><span>제출 제안서 목록</span></a></li>
-          <li><a href="#none"><strong>제출 제안서 상세</strong></a></li>
+          <li class="home"><span class="hide">홈</span></li>
+          <li><span>제출 제안서 관리</span></li>
+          <li><span>제출 제안서 목록</span></li>
+          <li><strong>제출 제안서 상세</strong></li>
       </ul>
     </section> 
  
@@ -46,7 +46,10 @@
         <div>
            <h3>(주)길동건설</h3><span class="info">마포지부</span>
         </div>
-        <p class="sub">대출 신청 번호  S_230809_0001</p>
+        <p class="sub">
+          <span class="cancelInfo">리스 신청 취소 2023-01-01(14:21) </span>
+          <span>리스 신청 번호 202308090001 </span>
+        </p>
       </div>
       <div class="divideCon">
         <div class="left">
@@ -63,11 +66,7 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <th scope="row">현장실사 여부</th>
-                    <td><strong class="blue">완료</strong></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제출자</th> 
+                    <th scope="row">제안 직원명</th> 
                     <td>김길동</td>
                   </tr>
                   <tr>
@@ -79,7 +78,7 @@
                     <td><strong>2023-07-31</strong> 까지 유효</td>
                   </tr>
                   <tr>
-                    <th scope="row">메모</th> 
+                    <th scope="row">메모 및 참고사항</th> 
                     <td>유선상으로 말씀드렸다시피 2건의 대출을 함께 받으시면 원하시는 금액을 받으실 수 있을 것으로 판단되어 <br>2건의 대출을 제안드립니다.</td>
                   </tr>
                 </tbody>
@@ -88,54 +87,22 @@
           </div>
 
 
-          <div class="employeeInfo">
-            <div class="titBox">
-              <div class="tit">
-                <h4>제안 직원 정보</h4>
-                <p class="notiTxt">기업 고객에게는 ‘제안 직원명’ 정보만 노출되며, 대출 관련 소통은 ‘문의 전화 번호’를 통해 이루어집니다.</p>
-              </div>
-            </div>
 
-            
-            <div class="textTable">
-              <table>
-                <caption>제안서 기본 정보 입력</caption>
-                <colgroup>
-                  <col width="240px">
-                  <col width="auto">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">제안 직원명</th>
-                    <td>홍길동</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">알림 수신 휴대전화</th>
-                    <td>010-1234-5678</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">알림 수신 이메일</th>
-                    <td>gildong@shinhan.com</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-          </div>
-
-
-          <div id="accordionGroup" class="accordion formAccordion" accordion-option="only">
-            <div class="accordionItem isOpen">
-              <h3 class="accordionTitle">
-                <span class="label"  >상품명1</span>
+          <div class="proposalDetail"><!-- 1.9 수정-->
+            <ul class="tabLine tabScript" role="tablist">
+              <li class="on"><button role="tab" type="button" id="" aria-selected="false" aria-controls="proposalDetail_tabcont_1">조건 1</button></li>
+              <li><button role="tab" type="button" id="" aria-selected="false" aria-controls="proposalDetail_tabcont_2">조건 2</button></li>
+            </ul>
+            <div class="ppsTabCont" id="proposalDetail_tabcont_1" role="tabpanel" tabindex="0">
+              <h3 class="ppsTit">
+                <span class="label"  >조건 1</span>
                 <div class="productTit">
                   <em>길동바로론</em>
-                  <span>S_230809_00011</span>
+                  <!-- <span>S_230809_00011</span> -->
                 </div>
-                <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id"><span class="accordionIcon"></span></button>
               </h3>
-              <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel view" hidden="">
-                <span class="srOnly">상품명1 상세보기</span>
+              <div >
+                <span class="srOnly">조건 1 상세보기</span>
                 <div class="textTable ">
                   <table>
                     <caption>제안서 기본 정보</caption>
@@ -145,20 +112,28 @@
                     </colgroup>
                     <tbody>
                       <tr>
-                        <th scope="row">제안 자금 용도</th> 
-                        <td>시설자금</td>
+                        <th scope="row">리스 구분</th> 
+                        <td><strong class="blue">금융리스</strong></td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 금액</th> 
-                        <td>300,000,000 <strong>삼억 원</strong></td>
+                        <th scope="row">신규기기 여부</th> 
+                        <td>중고기기</td>
                       </tr>
                       <tr> 
-                        <th scope="row">가장 빠른 대출 <br> 실행 가능일</th> 
-                        <td>제안서 채택 후 5일 이후</td>
+                        <th scope="row">내수구분</th> 
+                        <td>국내</td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 기간</th> 
-                        <td><strong>24</strong> 개월</td>
+                        <th scope="row">상세용도</th> 
+                        <td>기타
+                          <p>
+                            기타 내용이 나오는 영역입니다.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">거치 기간</th> 
+                        <td><strong>10</strong> 개월</td>
                       </tr>
                       <tr> 
                         <th scope="row">상환 방식</th> 
@@ -189,7 +164,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <p class="notiTxt">기준금리, 당일 기준 합산 금리는 제안서 제출일 기준의 금리입니다.</p>
+                          <p class="notiTxt">기준금리, 당일 기준 합산 금리는 제안서 최종 업데이트일 기준의 금리입니다.</p>
                         </td>
                       </tr>
                       <tr> 
@@ -236,71 +211,115 @@
                         <th scope="row">기타 조건</th> 
                         <td>-</td>
                       </tr>
+                      <tr><!-- 수정2.0 -->
+                        <th scope="row">이자 부과 시기 및 방법</th> 
+                        <td>1개월 후취</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">연체 금리</th> 
+                        <td>3.56%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">중도 상환 수수료</th> 
+                        <td>
+                          5.0% (3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음)
+                        </td>
+                      </tr>
+                      <tr><!-- 1.9 수정-->
+                        <th scope="row">한도 약정 수수료(율)</th> 
+                        <td>
+                          65,000원
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">대출 시 부대 비용</th> 
+                        <td>부대비용 대출금액 1% 부과 됩니다.</td>
+                      </tr>
+                      <tr><!-- 1.9 수정-->
+                        <th scope="row">인지세</th> 
+                        <td>
+                          인지세법에 따라 대출 신규약정시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융기관과 고객이 각각 50%씩 부담
+                          <div class="table_wrap mt10">
+                            <table class="bbs_list gray">
+                              <caption>인지세 정보</caption>
+                              <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">대출 금액</th>
+                                  <th scope="col">5천만원 이하</th>
+                                  <th scope="col">5천만원 초과~ 1억원 이하</th>
+                                  <th scope="col">1억원 초과 ~ 10억원 이하</th>
+                                  <th scope="col">10억원 초과</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>인지세액</th>
+                                  <td>비과세</td>
+                                  <td>7만원</td>
+                                  <td>15만원</td>
+                                  <td>35만원</td>
+                                </tr>
+                                <tr>
+                                  <th>고객 부담</th>
+                                  <td>-</td>
+                                  <td>3만 5천원</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                                <tr>
+                                  <th>금융 회사 부담</th>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">참고 사항</th> 
+                        <td>2023년 08월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="notiBox">
-                  <h4 class="titH4 hasLine">유의사항 입력</h4>
-                  <div class="textTable">
-                    <table>
-                      <caption>업체개요</caption>
-                      <colgroup>
-                        <col width="200px" />
-                        <col />
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row">이자 부과 시기 및 방법</th> 
-                          <td>1개월 후취</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">연체 금리</th> 
-                          <td>3.56%</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">중도 상환 수수료</th> 
-                          <td>
-                            5.0% (3년 남은 경우 5%, 2년 남은 경우 3%, 1년 이후 중도 상환 수수료 없음)
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">대출 시 부대 비용</th> 
-                          <td>부대비용 대출금액 1% 부과 됩니다.</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">유의사항</th> 
-                          <td>2023년 08월 자 기준으로 작성되었으며 예고 없이 변동 될 수 있습니다.</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
               
                 <div class="table_bt mt20">
-                  <div class="btn_c">
-                    <button type="button" class="btnSuccess mm">상품 안내</button>
-                    <button type="button" class="btnDkGreen mm">상품 스케줄</button>
+                  <div class="btn_c"><!-- 1.9 수정-->
+                    <button type="button" class="btnSuccess mm">상품 안내 자료</button>
+                    <button type="button" class="btnDkGreen mm">예상 상환 스케줄</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordionItem">
-              <h3 class="accordionTitle">
-                <span class="label" for="formLabel_tit_2" >상품명1</span>
+
+
+
+            <!-- 1.9 수정-->
+            <div class="ppsTabCont" id="proposalDetail_tabcont_2" role="tabpanel" tabindex="0">
+              <h3 class="ppsTit">
+                <span class="label" >상품명1</span>
                 <div class="productTit">
                   <em>길동바로론</em>
                   <span>S_230809_00011</span>
                 </div>
-                <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2" id="accordion2id"><span class="accordionIcon"></span></button>
               </h3>
-              <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordionPanel" hidden="">
+              <div >
                 <span class="srOnly">제안 대출1 상세보기</span>
-              
               </div>
             </div>
-            <script>
-            </script>
           </div>
+
+
         </div>
         <div class="right">
           <div class="totalInfoBox">
@@ -314,7 +333,7 @@
               <p class="desc">2건</p>
             </div>
             <div class="foot">
-              <button type="button" class="btnWhite">수정하기 <em class="tooltip_q" title="제안서는 기업고객의 <br>제안서 열람 가능일 이전까지만<br>수정이 가능합니다." ><span class="hide">?</span></em></button>
+              <button type="button" class="btnWhite">수정하기 <em class="tooltip_q tc" title="제안서는 기업고객의 <br>제안서 열람 가능일 이전까지만<br>수정이 가능합니다." ><span class="hide">?</span></em></button><!-- 1.9 수정-->
               <button type="button" class="btnSuccess">제출하기</button>
             </div>
           </div>
@@ -332,83 +351,6 @@
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
-
-
-
-  
-
-
-  <!-- **************** -->
-  <!-- layer : start -->
-  <!-- **************** -->
-  <div class="layerWrap modal show" id="sampleLayer_file" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <div class="layerBody wid640">
-      <div class="layerHead">
-        <h3>제출 제안서 회수</h3>
-        <p>제출한 제안서를 회수합니다.</p>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
-      </div>
-      <div class="layerCont">
-        <p class="tableLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p>
-        <table class="textTable">
-          <caption>제출 제안서 회수</caption>
-          <colgroup>
-            <col width="150">
-            <col width="">
-          </colgroup>
-          <tbody>
-            <tr>
-              <th>기업명</th>
-              <td>
-                (주)길동건설
-              </td>
-            </tr>
-            <tr>
-              <th>제안서 제출일</th>
-              <td>
-                2023-07-10
-              </td>
-            </tr>
-            <tr>
-              <th><em class="required">*</em>제출 회수 사유</th>
-              <td>
-                
-                <div class="formVertical " id="tabpanel_1">
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
-                    <label class="label" for="testRdoBoxC"><span></span>내부 정책 변경</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
-                    <label class="label" for="testRdoBoxC"><span></span>제안서 수정 목적</label>
-                  </span>
-                  <span class="radio"> 
-                    <input type="radio" id="testRdoBoxC" name="testRdoBox" value="" disabled>
-                    <label class="label" for="testRdoBoxC"><span></span>기타</label>
-                  </span>
-                </div>
-                <div class="formVertical mt10">
-                  <textarea class="textarea" placeholder="기타 사유를 입력해주세요.(500자 이내)"></textarea>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="bgMent">
-          동일 대출 건 대상 제안서 회수는 1회만 가능합니다.
-        </div>
-        
-      </div>
-      <div class="layerFoot">
-        <button type="button" class="btnSuccess " onclick="layer_close('layer_proposalChkForm')"  aria-label="레이어 닫기">제출 회수하기</button>
-      </div>
-    </div>
-    <div class="layerDimm"></div>
-  </div>
-  <!-- **************** -->
-  <!-- layer : end -->
-  <!-- **************** -->
-
 
 
 </body>

@@ -372,6 +372,31 @@
                         </td>
                       </tr>
 
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 기간</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
+                            <span class="unit">개월</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 기간</label>
+                        </th> 
+                        <td>
+                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
+                            
+                            <select class="wid200" title="리스 기간" id="accLabel3" >
+                              <option>기타</option>
+                            </select>
+                            <input class="input" type="text" name="inpPeriod" id="notiLabel2"  >
+                          </div>
+                        </td>
+                      </tr>
 
 
                       <tr> 
@@ -409,82 +434,28 @@
                       </tr>
                       <tr> 
                         <th scope="row">
-                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
+                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>양도 담보 정보</label>
                         </th> 
                         <td>
                           <div class="formRow" >
                             <span class="radio">
-                              <input type="radio" id="testRdoBank1" name="testRdoBank" title="담보유무 선택" checked value="">
-                              <label for="testRdoBank1"><span></span>담보 없음</label>
+                              <input type="radio" id="testRdoBank1" name="testRdoBank" title="양도 담보유무 선택" checked value="">
+                              <label for="testRdoBank1"><span></span>유</label>
                             </span>
                             <span class="radio">
-                              <input type="radio" id="testRdoBank2" name="testRdoBank" title="담보유무 선택" value="">
-                              <label for="testRdoBank2"><span></span>담보 있음</label>
+                              <input type="radio" id="testRdoBank2" name="testRdoBank" title="양도 담보유무 선택" value="">
+                              <label for="testRdoBank2"><span></span>무</label>
                             </span>
                           </div>
-                          <div id="damboHasChkCont" class="formRowWrap">
-                            <div class="formRow" >
-                              <select class="wid180" title="담보종류 선택" disabled>
-                                <option value="부동산">부동산</option>
-                                <option value="옵션">옵션</option>
-                              </select>
-                              <select class="wid240" title="담보종류 선택" disabled>
-                                <option value="부동산">부동산</option>
-                                <option value="옵션">옵션</option>
-                              </select>
-                            </div>
-                            <div class="formAdd">
-                              <div class="formRow">
-                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
-                                <button type="button" class="btnBlack p30" disabled>주소검색</button>
-                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
-                              </div>
-                              <div class="formRow">
-                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
-                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
-                              </div>
-                            </div>
-                          </div>
-                          <script>
-                            $(function(){
-                              
-                              $("[name=testRdoBank]").on("click", function(){
-                                if(this.id =="testRdoBank2"){
-                                  $("#damboHasChkCont").find("input,select,button").each(function(){
-                                    this.disabled = false;
-                                  })
-                                }else{
-                                  $("#damboHasChkCont").find("input,select,button").each(function(){
-                                    this.disabled = true;
-                                  })
-                                }
-                              })
-                              
-                              var damboListIdx = 100;
-                              $(document).on("click", ".btnPlus", function() {
-                                var $listblock = $(this).closest(".formRow").clone().removeClass("none");
-                                damboListIdx++
-                                $listblock.attr({id: "damboList_"+ damboListIdx})
-                                $listblock.find(".btnPlus")[0].className = "btnMinus";
-                                $listblock.find(".btnMinus")[0].value = "";
-                                $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
-                                $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
-                                $(this).closest('.formAdd').append($listblock);
-                              });
-                              $(document).on("click", ".btnMinus", function() {
-                                $(this).closest(".formAdd .formRow").detach();
-                              });
-                            });
-                          </script>
                         </td>
                       </tr>
-                      <!-- <tr> 
+                      <tr> 
                         <th scope="row">기타 조건</th> 
                         <td><input class="input" type="text" name="" id="accLabel1" placeholder="상환 조건 등 조건을 입력해 주세요." value="" /></td>
-                      </tr> -->
+                      </tr>
                     </tbody>
                   </table>
-                  <div class=""><!-- 수정2.0 -->
+                  <div class="mt10"><!-- 수정2.0 -->
                     <table>
                       <caption>업체개요</caption>
                       <colgroup>
@@ -527,17 +498,6 @@
                               <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
                               <span class="unit">%</span>
                               <input class="input " type="text" name="inpPeriod" id="inpPeriod" placeholder="추가 입력 사항" title="추가 입력 사항">
-                            </div>
-                          </td>
-                        </tr>
-                        <tr><!-- 수정2.0 -->
-                          <th scope="row">
-                            <label class="label" for="notiLabel3">한도 약정 수수료(율)</label>
-                          </th> 
-                          <td>
-                            <div class="formRow">
-                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
-                              <span class="unit">%</span>
                             </div>
                           </td>
                         </tr>
@@ -648,18 +608,18 @@
             </script>
           </div>
           <div class="table_bt fullType">
-            <button type="button" class="btnGray">+제안 대출 추가</button>
+            <button type="button" class="btnGray">+조건 추가</button>
           </div>
         </div>
         <div class="right">
           <div class="totalInfoBox">
-            <div class="head">제안 대출 정보 합계</div>
+            <div class="head">리스 제안서 정보 합계</div>
             <div class="cont">
-              <span class="label">제안 대출 금액</span>
+              <span class="label">제안 리스 금액</span>
               <p class="desc">500,000,000원(오억원)</p>
-              <span class="label">제안 대출 금리(가중 평균 금리)</span>
+              <span class="label">제안 리스 금리(가중 평균 금리)</span>
               <p class="desc">연 6.00%</p>
-              <span class="label">제안 대출 수</span>
+              <span class="label">제안 리스 건수</span>
               <p class="desc">2건</p>
             </div>
             <div class="foot">

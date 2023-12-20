@@ -1768,7 +1768,7 @@ table { width: 100%;}
 .detailCont .viewNolineTable th:first-child { padding-left:0px; }
 
 /* 폼 테이블 */
-
+.mt10   {margin-top:10px; }
 .formGrayBox.boxType { padding: 40px; background: #fff; border: 1px solid #ddd; border-radius: 16px;}
 .formGrayBox .line + .line { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd;}
 .formGrayBox.boxType .formListTable input,
