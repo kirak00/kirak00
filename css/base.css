@@ -43,6 +43,8 @@ table caption {width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibi
 table tr td span{white-space: normal;}
 table tr td img{vertical-align:middle; }
 
+th *,
+td *    {vertical-align: middle;}
 /* ---[ links ]------------------------------- */
 a  { box-sizing:border-box; }
 a img {border: none;}
