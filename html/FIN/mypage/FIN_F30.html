@@ -28,7 +28,7 @@
     <div class="container" id="skip_content"  aria-label="컨텐츠">
 
       <section class="pageTop">
-        <h2 class="pageTit">제출 제안서 목록</h2>
+        <h2 class="pageTit">나의 제안서 목록</h2>
         <ul class="breadcrumb">
            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
            <li><a href="#none"><span>마이페이지</span></a></li>
@@ -43,85 +43,64 @@
           <div class="searchControlBox">
             <div class="searchControlGroup">
               <div class="searchControlItem expand">
-                <label for="label_tit_1" class="label">대출 신청 번호 </label>
-                <div class="formRow">
-                  <input type="text" class="input" id="label_tit_1" placeholder="대출 신청 번호를 입력해 주세요">
-                </div>
-              </div>
-              <div class="searchControlItem">
-                <label for="selectLabelStatus" class="label">상태</label>
-                <div class="formRow">
-                  <select id="selectLabelStatus">
-                    <option>전체</option>
+                <label id="formLabel1_4" class="label">소속 지점 조회 </label>
+                <div class="formRow formGroup" role="group" aria-labelledby="formLabel1_4">
+                  <select id="selectLabelArea1_1">
+                    <option>지역본부</option>
                     <option>셀렉트</option>
                   </select>
-                </div>
-              </div>
-              <div class="searchControlItem expand">
-                <label for="selectLabelState" class="label">기업명</label>
-                <div class="formRow">
-                  <input type="text" class="input" id="selectLabelState" placeholder="기업명을 입력해 주세요">
-                </div>
-              </div>
-            </div>
-            <div class="searchControlGroup">
-              <div class="searchControlItem expand">
-                <label for="selectLabelOption1" class="label">제안 형태</label>
-                <div class="formRow">
-                  <select id="selectLabelOption1">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-              <div class="searchControlItem">
-                <label id="selectLabelPay" class="label">제안 대출 금액</label>
-                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
-                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
-                  <span class="unit">억</span>
                   <span class="line"></span>
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
+                  <select id="selectLabelArea1_2">
+                    <option>금고본점</option>
+                    <option>셀렉트</option>
                   </select>
-                </div>
-              </div>
-              <div class="searchControlItem expand">
-                <label for="selectLabelOption2" class="label">제안 자금 용도</label>
-                <div class="formRow">
-                  <select id="selectLabelOption2">
-                    <option>전체</option>
+                  <span class="line"></span>
+                  <select id="selectLabelArea1_3">
+                    <option>지점</option>
                     <option>셀렉트</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="searchControlGroup">
-              <div class="searchControlItem">
-                <label for="selectLabelOption3" class="label">담보 유무</label>
+
+              <div class="searchControlItem expand">
+                <label for="selectLabel_1_3" class="label">신청 번호</label>
                 <div class="formRow">
-                  <select id="selectLabelOption3">
+                  <input type="text" class="input wid240" id="selectLabel_1_3" placeholder="기업명을 입력해 주세요">
+                </div>
+              </div>
+              <div class="searchControlItem expand">
+                <label for="selectLabelArea2_1" class="label">기업명</label>
+                <div class="formRow">
+                  <input type="text" class="input wid240" id="selectLabelArea2_1" placeholder="기업명을 입력해 주세요">
+                </div>
+              </div>
+              <div class="searchControlItem expand">
+                <label for="selectLabelArea2_2" class="label">사업자등록번호</label>
+                <div class="formRow">
+                  <input type="text" class="input wid240" id="selectLabelArea2_2" placeholder="사업자등록번호를 입력해 주세요">
+                </div>
+              </div>
+            </div>
+            <div class="searchControlGroup">
+
+              <div class="searchControlItem ">
+                <label for="selectLabelArea2_3" class="label">제안서 상태</label>
+                <div class="formRow">
+                  <select id="selectLabelArea2_3">
                     <option>전체</option>
                     <option>셀렉트</option>
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
-                <label id="selectLabelPeriod" class="label">대출 기간</label>
-                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPeriod">
-                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="00" value="">
-                  <span class="unit">개월</span>
-                  <span class="line"></span>
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
+              <div class="searchControlItem ">
+                <label for="selectLabelArea2_4" class="label">제안 유형</label>
+                <div class="formRow">
+                  <select id="selectLabelArea2_4">
+                    <option>전체</option>
+                    <option>셀렉트</option>
                   </select>
-                </div>
-              </div>
-              <div class="searchControlItem expand">
-                <label id="selectLabelArea" class="label">제출자</label>
-                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
-                  <input type="text" class="input" placeholder="제출자를 입력해 주세요">
                 </div>
               </div>
               <div class="searchBtns">
@@ -137,14 +116,6 @@
           <fieldset class="tableFilterGroup">
             <span class="count">총 <strong>15</strong>건</span>
             <div class="formRow" role="group">
-              <select title="정렬 선택 (대출 금액)">
-                <option>대출 금액 높은순</option>
-                <option>본부2</option>
-              </select>
-              <select title="정렬 선택 (금리)">
-                <option>금리 높은순</option>
-                <option>본부2</option>
-              </select>
               <select title="정렬 선택 (제출일)">
                 <option>제출일 최신순</option>
                 <option>본부2</option>
@@ -173,88 +144,16 @@
 
               var clients = [
                 { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-                },
-                { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-                },
-                { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-                },
-                { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-                },
-                { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
-                },
-                { 
-                  "Name1": "S_230809_0001",
-                  "Name2": "채택",
-                  "Name3": "(주)길동건설", 
-                  "Name4": "단일", 
-                  "Name5": "12억 5000만원", 
-                  "Name6": "시설자금", 
-                  "Name7": "유", 
-                  "Name8": "24개월", 
-                  "Name9": "연 8.65%", 
-                  "Name10": "홍길동", 
-                  "Name11": "2023-08-30", 
-                  "Name12": "<button type='button' class='btnWhite'>상세보기</button>", 
+                  "Name1": "서울지역본부",
+                  "Name2": "마포본점",
+                  "Name3": "가좌지점", 
+                  "Name4": "리스 제안서", 
+                  "Name5": "2023-06-25", 
+                  "Name6": "1235431031", 
+                  "Name7": "(주)길동건설", 
+                  "Name8": "123-45-5674789", 
+                  "Name9": "채택", 
+                  "Name10": "<button type='button' class='btnWhite'>상세보기</button>", 
                 },
               
               ]; 
@@ -266,18 +165,16 @@
                 noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
 
                 fields: [
-                  { name: "Name1",  type: "text", title : "대출<br/>신청 번호", width: 110},
-                  { name: "Name2",  type: "text", title : "상태", width: 90},
-                  { name: "Name3", type: "text", title : "기업명", width: 120 },
-                  { name: "Name4", type: "text", title : "제안<br/>형태", width: 70 },
-                  { name: "Name5", type: "text", title : "제안 대출 금액", width: 158 },
-                  { name: "Name6", type: "text", title : "제안<br/>자금 용도", width: 90 },
-                  { name: "Name7", type: "text", title : "딤보<br/>유무", width: 50 },
-                  { name: "Name8", type: "text", title : "대출 기간", width: 110 },
-                  { name: "Name9", type: "text", title : "제안 금리", width: 110 },
-                  { name: "Name10", type: "text", title : "제출자", width: 110 },
-                  { name: "Name11", type: "text", title : "제안서 마감일", width: 134 },
-                  { name: "Name12", type: "button", title : "상세보기", width: 160 },
+                  { name: "Name1",  type: "text", title : "지역본부", width: 110},
+                  { name: "Name2",  type: "text", title : "금고본점", width: 90},
+                  { name: "Name3", type: "text", title : "지점명", width: 120 },
+                  { name: "Name4", type: "text", title : "제안서 유형", width: 110 },
+                  { name: "Name5", type: "text", title : "제출일", width: 158 },
+                  { name: "Name6", type: "text", title : "신청 번호", width: 110 },
+                  { name: "Name7", type: "text", title : "기업명", width: 110 },
+                  { name: "Name8", type: "text", title : "사업자등록번호", width: 130 },
+                  { name: "Name9", type: "text", title : "제안서 상태", width: 110 },
+                  { name: "Name10", type: "button", title : "상세보기", width: 140 },
                 ],
                 
                 pagerContainer: "#externalPager2",

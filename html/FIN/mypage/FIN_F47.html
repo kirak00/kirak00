@@ -54,24 +54,8 @@
                 <col width="auto">
               </colgroup>
               <tbody>
-                <tr>
-                  <th scope="row">심사 시작일</th> 
-                  <td>2023-07-10</td>
-                </tr>
                 <tr> 
-                  <th scope="row">제안서 제출일</th> 
-                  <td>2023-07-17</td>
-                </tr>
-                <tr> 
-                  <th scope="row">제안 대출 금액</th> 
-                  <td>450,000,000<strong class="priceKr">사억오천만 원</strong></td>
-                </tr>
-                <tr> 
-                  <th scope="row">제안서 채택일</th> 
-                  <td>2023-07-17</td>
-                </tr>
-                <tr> 
-                  <th scope="row">대출 실행일</th> 
+                  <th scope="row">기업정보 열람일</th> 
                   <td>2023-07-17</td>
                 </tr>
                 <tr> 
@@ -79,13 +63,13 @@
                   <td>450,000,000<strong class="priceKr">사억오천만 원</strong></td>
                 </tr>
                 <tr> 
-                  <th scope="row">플랫폼 수수료율</th> 
-                  <td>0.3%</td>
+                  <th scope="row">대출 실행일</th> 
+                  <td>2023-07-17</td>
                 </tr>
                 <tr> 
                   <th scope="row">청구 금액</th> <!-- 1.6 -->
                   <td>
-                    450,000,000<strong class="priceKr">사억오천만 원</strong>
+                    <span class="blue">450,000,000<strong class="priceKr">사억오천만 원</strong></span>
                     <div class="table_wrap"><!--1.5 -->
                       <table class="bbs_list">
                         <caption>청구액 수수료율</caption>
@@ -113,10 +97,6 @@
                   </td>
                 </tr>
                 <tr> 
-                  <th scope="row">청구일</th> 
-                  <td>2023-09-01</td>
-                </tr>
-                <tr> 
                   <th scope="row">이의 신청 기일</th> 
                   <td>2023-09-06</td>
                 </tr>
@@ -128,7 +108,7 @@
           <div class="lineBlock">
             <p class="resultTxt">
               위와 같이 수수료를 청구합니다. <br>
-              본 플랫폼을 통해 진행하신 대출 건이 아닐 경우 이의 신청을 할 수 있으며 <br>
+              본 플랫폼을 통해 진행하신 실행 건이 아닐 경우 이의 신청을 할 수 있으며 <br>
               별도의 이의 신청이 없는 경우 5 영업일 이후 세금계산서가 자동 발행됩니다.
             </p>
               
@@ -145,10 +125,10 @@
                 <label class="label" for="labelExtraOpi1_1">이의 신청 내용을 입력해 주세요.</label>
                 <textarea id="labelExtraOpi1_1" class="textarea" placeholder="내용을 입력해 주세요."></textarea>
               </div>
-              <div class="formRow filebox sectionBlock20"><!--1.5 -->
-                <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
-                <label for="exFilename" class="btnDkGray">파일 첨부</label>
+              <div class="formRow filebox multi">
                 <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+                <label for="exFilename" class="btnBlack">파일 선택</label>
+                <div class="attached"></div>
               </div>
               <p class="notiTxt">지원하는 파일 형식: .xlsx</p>
               <!-- Comment 1 -->

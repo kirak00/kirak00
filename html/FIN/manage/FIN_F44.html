@@ -110,76 +110,12 @@
 
               var clients = [
                 { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120' onclick='chkLayer(this)' aria-controls='layer_deactivate'>비활성화</button>", //v1.6 btnLine -> wid120
-                },
-                { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnGray wid120'>비활성화 해제</button>", //v1.6 btnLine -> btnGray, wid120
-                },
-                { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120' disabled>퇴사</button>", //v1.6 btnLine -> wid120
-                },
-                { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnGray wid120'>비활성화 해제</button>", //v1.6 btnLine -> btnGray, wid120
-                },
-                { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnWhite wid120' onclick='chkLayer(this)' aria-controls='layer_deactivate'>비활성화</button>", //v1.6 btnLine -> wid120
-                },
-                { 
-                  "Name1": "0851013",
-                  "Name2": "MG_0851013", 
-                  "Name3": "서울", 
-                  "Name4": "강남구", 
-                  "Name5": "도곡로173", 
-                  "Name6": "행신로151", 
-                  "Name7": "1층", 
-                  "Name8": "02-455-1234", 
-                  "Name9": "king@shinhan.com", 
-                  "Name10": "<button type='button' class='btnGray wid120'>비활성화 해제</button>", //v1.6 btnLine -> btnGray, wid120
+                  "Name1": "MG_0851013", 
+                  "Name2": "서울", 
+                  "Name3": "강남구 도곡로173 행신로151", 
+                  "Name4": "02-455-1234", 
+                  "Name5": "king@shinhan.com", 
+                  "Name6": "<button type='button' class='btnWhite wid120' onclick='chkLayer(this)' aria-controls='layer_deactivate'>비활성화</button>", //v1.6 btnLine -> wid120
                 },
               ]; 
 
@@ -188,16 +124,12 @@
                 noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
 
                 fields: [
-                  { name: "Name1",  type: "text", title : "지점코드", width: 140},
-                  { name: "Name2",  type: "text", title : "아이디", width: 120},
-                  { name: "Name3",  type: "text", title : "주소1", width: 85},
-                  { name: "Name4",  type: "text", title : "주소2", width: 120},
-                  { name: "Name5",  type: "text", title : "주소3", width: 160},
-                  { name: "Name6",  type: "text", title : "주소4", width: 110},
-                  { name: "Name7", type: "text", title : "주소5", width: 150 },
-                  { name: "Name8", type: "button", title : "대표전화", width: 150 },
-                  { name: "Name9", type: "button", title : "부서(또는 지점) 대표 이메일", width: 200 },
-                  { name: "Name10", type: "button", title : "비활성화", width: 150 },
+                  { name: "Name1",  type: "text", title : "아이디", width: 120},
+                  { name: "Name2",  type: "text", title : "지역", width: 85},
+                  { name: "Name3",  type: "text", title : "주소", width: 400},
+                  { name: "Name4", type: "button", title : "대표전화", width: 150 },
+                  { name: "Name5", type: "button", title : "부서(또는 지점) 대표 이메일", width: 200 },
+                  { name: "Name6", type: "button", title : "비활성화", width: 150 },
                 ],
                 
                 pagerContainer: "#externalPager2",

@@ -109,6 +109,18 @@
               
           </div>
         </fieldset>
+        
+        <div class="table_top dashboard">
+          <div class="sortBox">
+            <select name="" id="" title="리스/ 대출">
+              <option value="">리스 제안 건</option>
+              <option value=""></option>
+            </select>
+            <button type="button" class="btnSky sm">적용</button>
+          </div>
+        </div>
+        
+        
         <ul class="dashboardWrap">
           <li class="box wid50">
             <div class="chart_lineBox size_2">
@@ -362,7 +374,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 자금 용도 비율</strong>
+            <strong class="tit">실행 리스 상세 용도 비율</strong>
             <div class="pie" id="pieChart_1"></div>
             <script>
               var chartDom = document.getElementById('pieChart_1');
@@ -470,7 +482,7 @@
             </ul>
           </li> -->
           <li class="chart_pie">
-            <strong class="tit">제안 대출 자금 용도 비율</strong>
+            <strong class="tit">제안 리스 자금 용도 비율</strong>
             <div class="pie" id="pieChart_3"></div>
             <script>
               var myChart_pie3 = echarts.init(document.getElementById('pieChart_3'));
@@ -519,7 +531,7 @@
             </ul>
           </li>
           <li class="chart_pie"><!-- 1.9 수정-->
-            <strong class="tit">제안 대출 업종 비율</strong>
+            <strong class="tit">제안 리스 업종 비율</strong>
             <div class="pie" id="pieChart_4"></div>
             <script>
               var myChart_pie4 = echarts.init(document.getElementById('pieChart_4'));
@@ -622,7 +634,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 담보/신용 비율</strong>
+            <strong class="tit">실행 리스 보증인 비율</strong>
             <div class="pie" id="pieChart_51"></div>
             <script>
               var myChart_pie51 = echarts.init(document.getElementById('pieChart_51'));
@@ -685,8 +697,8 @@
             </div>
           </li>
           <li class="itemTxt long">
-            <strong class="tit">대출 성사율</strong>
-            <div class="dash_data">
+            <strong class="tit">평균 성사율</strong>
+            <div class="dash_data"> 
               <span class="dataSize">
                 <strong>125</strong>
                 <span>%</span> 
@@ -1061,7 +1073,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 자금 용도 비율</strong>
+            <strong class="tit">실행 리스 상세 용도 비율</strong>
             <div class="pie" id="pieChart2_1"></div>
             <script>
               var chartDom = document.getElementById('pieChart2_1');
@@ -1114,7 +1126,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안 대출 자금 용도 비율</strong>
+            <strong class="tit">제안 리스 자금 용도 비율</strong>
             <div class="pie" id="pieChart2_2"></div>
             <script>
               var myChart_pie2 = echarts.init(document.getElementById('pieChart2_2'));
@@ -1169,7 +1181,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안 대출 업종 비율</strong>
+            <strong class="tit">제안 리스 업종 비율</strong>
             <div class="pie" id="pieChart2_3"></div>
             <script>
               var myChart_pie3 = echarts.init(document.getElementById('pieChart2_3'));
@@ -1270,7 +1282,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 담보/신용 비율</strong>
+            <strong class="tit">실행 리스 보증인 비율</strong>
             <div class="pie" id="pieChart2_41"></div>
             <script>
               var myChart_pie41 = echarts.init(document.getElementById('pieChart2_41'));

@@ -167,6 +167,7 @@ ol.main_step_guide li.step_5::before      { background-image:url(../images/FIN/i
 
 section.main_dashboard       {position:relative; overflow: visible; }
 section.main_dashboard .table_top       {margin-top:-40px; }
+section.main_dashboard .table_top.dashboard       {margin:0; margin-top:0px; }
 .main_dashboard .mng_btns           { padding:140px 0 40px; text-align: right;}
 .main_dashboard ul.dashboardWrap:first-child    {padding-top:0px; } 
 .main_dashboard .tabLine ~ div ul.dashboardWrap:first-child    {padding-top:30px; } 
@@ -176,6 +177,8 @@ section.main_dashboard .table_top       {margin-top:-40px; }
 .main_dashboard ul.dashboardWrap li .dash_data    { padding:20px 0 0; margin:auto}
 .main_dashboard ul.dashboardWrap li .dash_data span.dataSize { margin:auto;}
 .main_dashboard ul.dashboardWrap li.items::before   { content:""; display:block; width:56px; height:56px; margin:30px auto 0; border-radius: 50%; background:url(../images/FIN/main/ico_type_F01.png) no-repeat 50% 50% #069B66; background-size:25px;  }
+.main_dashboard ul.dashboardWrap li.long .dash_data span.dataSize { margin:100px 0 0;}
+.main_dashboard ul.dashboardWrap li.long .dash_data .barChart ~  span.dataSize { margin:60px 0 0;}
 
 .main_dashboard ul.dashboardWrap li.box    { width:335px; height:315px; border:1px solid #ddd; border-radius:16px; text-align: center; }
 .main_dashboard ul.dashboardWrap li.wid50   {width:calc(50% - 10px); }
@@ -187,24 +190,26 @@ section.main_dashboard .table_top       {margin-top:-40px; }
 
 
 .main_dashboard ul.dashboardWrap li .barChart   { width: 215px; margin: 15px 0 0; }
-.main_dashboard ul.dashboardWrap li .barChart + span.dataSize   { margin:40px 0 auto; }
+.main_dashboard ul.dashboardWrap li .barChart + span.dataSize   { margin:10px 0 auto; }
 .main_dashboard ul.dashboardWrap li.itemTxt    { width:calc(25% - 15px); height:215px; border:1px solid #ddd; border-radius:16px; text-align: center; }
 .main_dashboard ul.dashboardWrap li.itemTxt.long    {height:auto}
 .main_dashboard ul.dashboardWrap li.itemTxt strong.tit    { display:block; font-size:18px; color:#333; padding:30px 0 0;  }
 .main_dashboard ul.dashboardWrap li.itemTxt .dash_data    {height:160px; display: flex; flex-wrap: wrap; justify-content: center; }
-.main_dashboard ul.dashboardWrap li.itemTxt .dash_data .barChart    {margin-top:40px; }
+.main_dashboard ul.dashboardWrap li.itemTxt.long .dash_data .barChart    {margin-top:40px; }
 
 
 
 span.dataSize      { position:relative; display:inline-block; padding:0 10px;  }
 span.dataSize::after    { content:""; position:absolute; left:0; bottom:6px; width:100%; height:18px; background:rgba(24, 167, 116, 0.15); }
-span.dataSize strong    { position:relative; z-index:2; display:inline-block;  font-size: 30px; }
-span.dataSize span      { position:relative; z-index:2; display:inline-block; vertical-align: 2px; font-size: 20px; font-weight: 700;}
+span.dataSize strong    { position:relative; vertical-align: top; z-index:2; display:inline-block;  font-size: 30px; }
+span.dataSize span      { position:relative; vertical-align: -13px; z-index:2; display:inline-block; font-size: 20px; font-weight: 700;}
 
 
 
 .main_dashboard ul.dashboardWrap.rank          {overflow: hidden; display:block; gap:20px; }
 .main_dashboard ul.dashboardWrap li.rankItem   {float:left; margin-left:20px; width:calc(25% - 15px); padding:30px 20px 0; border:1px solid #ddd; border-radius:16px;  }
+.main_dashboard ul.dashboardWrap.size3    {display:flex; flex-wrap: nowrap; }
+.main_dashboard ul.dashboardWrap.size3 li.rankItem   {float:none; margin-left:0; width:100%; }
 .main_dashboard ul.dashboardWrap li.rankItem:nth-child(4n+1)   {margin-left:0px; }
 .main_dashboard ul.dashboardWrap li.rankItem.right   {float:right; }
 .main_dashboard ul.dashboardWrap li.rankItem.long     { height: 390px;  }
@@ -236,7 +241,7 @@ span.dataSize span      { position:relative; z-index:2; display:inline-block; ve
 .main_dashboard ul li.chart_pie div.pie      {width:160px; height:160px; margin:0 auto; }
 .main_dashboard ul li.chart_pie ul.legend      { background:#F6FBF7; padding:18px 30px; display:flex; justify-content: left; flex-wrap: wrap; border-radius:8px;     }
 .main_dashboard ul li.chart_pie ul.legend li   {width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;  border-radius: 8px;}
-.main_dashboard ul li.chart_pie ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;  }
+.main_dashboard ul li.chart_pie ul.legend li em   {display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align: middle;  }
 
 .main_dashboard ul.slideTab          {width:100%; margin-top:30px; text-align: center; gap:16px; }
 .main_dashboard ul.slideTab li       {display:inline-block; width:14px; height:14px;   }

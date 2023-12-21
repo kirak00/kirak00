@@ -148,7 +148,7 @@ var clients = [
     "Name7": "1,350,000<p class='sub'>(일백삼십오만원)</p>", 
     "Name8": "2023-08-05", 
     "Name9": "정산금액 확인", 
-    "Name10": "<a href='#' class='lnkLine2'>전액 환불</a>", 
+    "Name10": "<a href='#layer_refundInfo'  onclick='layer_open(\"layer_refundInfo\"),this' class='lnkLine2'>전액 환불</a>", 
     "Name11": "<button type='button' class='btnWhite'>상세보기</button>", 
   },
 ];
@@ -188,6 +188,105 @@ $("#jsGrid").jsGrid({
   <!-- **************** -->
   <!-- contents : end -->
   <!-- **************** -->
+
+
+
+  
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+
+
+  <!-- 'show' class 추가하면 레이어 오픈 -->
+  <div class="layerWrap modal show" id="layer_refundInfo" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid1400">
+      <div class="layerHead">
+        <h3>환출 정보 </h3>
+        <button type="button" class="layerClose" popup-close="layer_employeeSelect" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <h4 class="titH4">환출 대상 내역</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>알림 받는 제안서 목록</caption>
+            <colgroup>
+              <col width="">
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">금융 회사 정보</th>
+                <th scope="col">대상 기업 정보</th>
+                <th scope="col">실행일</th>
+                <th scope="col">실행 금액</th>
+                <th scope="col">수수료율</th>
+                <th scope="col">청구액</th>
+                <th scope="col">정산 완료일</th>
+                <th scope="col">정산액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>새마을금고/ <br>가회지점 <br>(105-99-78745)</td>
+                <td>아이코스 <br>(105-86-78945)</td>
+                <td>2023-08-12</td>
+                <td>400,000,000 <br> (사억원)</td>
+                <td>0.5%</td>
+                <td>2,000,000 <br>(이백만원)</td>
+                <td>2023-12-14</td>
+                <td>2,000,000 <br>(이백만원)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="titH4 mt30">환출 정보</h4>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>알림 받는 제안서 목록</caption>
+            <colgroup>
+              <col width="">
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">환출 등록일</th>
+                <th scope="col">환출 사유</th>
+                <th scope="col">증빙자료</th>
+                <th scope="col">환출액</th>
+                <th scope="col">등록자</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-08-12</td>
+                <td class="tit">금융 회원의 증빙 서류 확인 결과 환출 대상임이 증빙됨</td>
+                <td>Noname.jpg</td>
+                <td>400,000,000 <br> (사억원)</td>
+                <td>홍길동 <br>(14789632)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="centerNoti">
+          <p class="notiTxt">환출 관련 문의사항은 1:1 문의를 통해 진행 하실 수 있습니다.</p>
+        </div>
+
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('layer_refundInfo')">확인</button>
+      </div>
+      
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
 
 
 </body>
