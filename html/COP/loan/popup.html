@@ -122,13 +122,13 @@
               confirm:{ //  확인 
                 txt : "로그인", 
                 callback : function(){ 
-                  alert(3)
+                  // alert(3)
                 }
               },
               cancel:{ //  취소 
                 txt : "회원가입",
                 callback : function(){
-                  alert(2)
+                  // alert(2)
                 }
               }
             }
@@ -148,13 +148,44 @@
               confirm:{ //  확인 
                 txt : "로그인", 
                 callback : function(){ 
-                  alert(3)
+                  // alert(3)
                 }
               },
               cancel:{ //  취소 
                 txt : "회원가입",
                 callback : function(){
-                  alert(2)
+                  // alert(2)
+                }
+              }
+            }
+          )
+          // layer alert
+
+        })
+      </script>
+      <button type="button" class="btnSuccess" id="confirmClick3">바우처 쿠폰 입력</button>
+      <script>
+        $("#confirmClick3").on("click",function(){
+          // layer alert
+          layer_confirm(
+            `
+            <div class="formRow formVertical">
+              <label class="label">바우처 쿠폰 입력</label>
+              <input type="text" class="input" placeholder="" title="바우처 쿠폰을 입력해주세요."/>
+            </div>
+            `,
+            this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+            {
+              confirm:{ //  확인 
+                txt : "등록", 
+                callback : function(){ 
+                  // alert(3)
+                }
+              },
+              cancel:{ //  취소 
+                txt : "취소",
+                callback : function(){
+                  // alert(2)
                 }
               }
             }

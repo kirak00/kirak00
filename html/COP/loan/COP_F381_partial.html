@@ -99,37 +99,13 @@
     <div class="titH3 hasLine mb0"><h3 class="inner">재무상태표 <span class="blue">(필수)</span></h3></div>
     <div class="bgGray">
       <section class="">
-        <div class="divTable periodInfo">
-          <div class="row">
-            <!-- <div class="cell">
-              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
-            </div> -->
-            
-            <div class="cell">
-              <span class="period">2022(당)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
-            </div>
-          </div>
-          <div class="row">
-            <!-- <div class="cell">
-              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
-            </div> -->
-            <div class="cell">
-              <span class="period">2021(전)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
-            </div>
-          </div>
-          <div class="row">
-            <div class="cell">
-              <span class="period">2020(전전)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
-            </div>
-          </div>
+        <div class="guideBox type2">
+          <ul class="guideList dot">
+            <li class="list">2022(당)기  2022년 1월 1일부터 2022년 12월 31일까지</li>
+            <li class="list">2021(전)기  2021년 1월 1부터 2021년 12월 31일까지</li>
+            <li class="list">2020(전전)기  2020년 1월 1일부터 2020년 12월 31일까지</li>
+          </ul>
         </div>
-        <!-- 디자인 수정 .mt40 삭제 -->
         <div class="table_wrap income"><!-- v2.1 income-->
           <table class="bbs_list">
             <caption>재무 현황 자료 수집 정보</caption>
@@ -142,9 +118,9 @@
             <thead class="double2">
               <tr>
                 <th scope="col" rowspan="2">계정과목</th>
-                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>(당)기</div></th>
-                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>(전)기</div></th>
-                <th scope="col"><div class="formRow"><input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>(전전)기</div></th>
+                <th scope="col">2022(당)기</th>
+                <th scope="col">2021(전)기</th>
+                <th scope="col">2020(전전)기</th>
               </tr>
               <tr>
                 <th scope="col">금액</th>
@@ -155,84 +131,74 @@
             <tbody>
               <tr>
                 <td>자산총계</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>40,000,000</td>
+                <td>66,000,000</td>
+                <td>140,000,000</td>
               </tr>
               <tr>
                 <td>부채총계</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>21,000,000</td>
+                <td>11,000,000</td>
+                <td>21,000,000</td>
               </tr>
               <tr>
                 <td>자본총계</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
+                <td>140,000,000</td>
               </tr>
               <tr>
                 <td>매출채권</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
+                <td>21,000,000</td>
               </tr>
               <tr>
                 <td>자본금</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
+                <td>161,000,000</td>
               </tr>
               <tr>
-                <td>자산총장기차입금계</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>장기차입금</td>
+                <td>1,000,000</td>
                 <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
                 <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
               </tr>
               <tr>
                 <td>단기차입금</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
               </tr>
               <tr>
                 <td>현금및현금성자산</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
               </tr>
               <tr>
                 <td>장기(성)예금</td>
                 <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
                 <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>90,000</td>
               </tr>
               <tr>
                 <td>단기(성)예금</td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
-                <td><input type="text" class="input textCenter" placeholder="000,000,000" title="금액을 입력해 주세요."/></td>
+                <td>1,000,000</td>
+                <td>800,000</td>
+                <td>90,000</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
-      <!-- 디자인 수정 .type2 추가 -->
-      <section class="guideBox type2">
-        <ul class="guideList dot">
-          <li class="list">모든 항목은 숫자만 입력해 주세요.</li><!-- v2.0 .blue 제거 -->
-          <li class="list">금액은 원 단위로 입력해 주세요.</li>
-          <li class="list">음수의 경우는 - 로 표기해 주세요. ( [예] 양수 2,000,000 / 음수 -2,000,000 )</li><!-- v2.0 워딩수정 -->
-          <li class="list">창업 2년 미만 & 결산 내역이 없는 경우에는 미입력이 가능합니다.</li><!-- v2.0 추가 -->
-        </ul>
-      </section>
+   
+
       <div class="titH3 hasLine"><h3 class="inner">손익계산서 <span class="blue">(필수)</span></h3></div>
       <section class="sectionBlock20">
         <div class="divTable periodInfo">
           <div class="row">
-            <!-- <div class="cell">
-              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
-            </div> -->
             <div class="cell">
               <span class="period">2022(당)기</span>
               <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
@@ -240,9 +206,6 @@
             </div>
           </div>
           <div class="row">
-            <!-- <div class="cell">
-              제<input type="text" class="input wid82 textCenter" placeholder="0" title="당기를 차수를 입력해주세요."/>(당)기
-            </div> -->
             <div class="cell">
               <span class="period">2021(전)기</span>
               <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
@@ -302,12 +265,12 @@
           </table>
         </div>
       </section>
-      <section class="guideBox type2"><!-- 디자인 수정 .type2 추가 -->
+      <section class="guideBox type2">
         <ul class="guideList dot">
-          <li class="list">모든 항목은 숫자만 입력해 주세요.</li><!-- v2.0 .blue 제거 -->
+          <li class="list">모든 항목은 숫자만 입력해 주세요.</li>
           <li class="list">금액은 원 단위로 입력해 주세요.</li>
-          <li class="list">음수의 경우는 - 로 표기해 주세요. ( [예] 양수 2,000,000 / 음수 -2,000,000 )</li><!-- v2.0 워딩수정 -->
-          <li class="list">창업 2년 미만 & 결산 내역이 없는 경우에는 미입력이 가능합니다.</li><!-- v2.0 추가 -->
+          <li class="list">음수의 경우는 - 로 표기해 주세요. ( [예] 양수 2,000,000 / 음수 -2,000,000 )</li>
+          <li class="list">창업 2년 미만 & 결산 내역이 없는 경우에는 미입력이 가능합니다.</li>
         </ul>
       </section>
     </div>

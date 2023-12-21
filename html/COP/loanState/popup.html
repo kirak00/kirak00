@@ -283,37 +283,64 @@
   <!-- **************** -->
 
 
-    <!-- **************** -->
+  <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
   <div class="layerWrap modal" id="scheduleLayer" role="dialog" aria-modal="true" >
     <!-- 너비 800px 경우 .sizeM 추가 -->
-    <div class="layerBody wid640">
+    <div class="layerBody wid1080">
       <div class="layerHead">
-        <h3>대출 예상 상환 스케줄</h3>
+        <h3>예상 상환 스케줄</h3>
         <button type="button" class="layerClose" popup-close="scheduleLayer" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <p class="notiTxt">본 상환 스케줄은 제안서 제출일 기준으로 계산되었으며, 대출 실행일의 금리에 따라 상환 금액이 변경될 수 있습니다.</p>
-        <div class="textTable mt30">
-          <table>
-            <caption>업체개요</caption>
+        <p class="notiTxt textCenter">본본 예상 상환 스케줄은 제안서 제출일 기준으로 계산되었으며, 대출 실행일의 금리에 따라 상환 금액이 변경될 수 있습니다.</p><!-- v2.1 -->
+        <!-- v2.1 전체 테이블 수정 -->
+        <div class="table_wrap mt40">
+          <table class="bbs_list">
+            <caption>예상 상환 스케줄</caption>
             <colgroup>
-              <col width="160px" />
-              <col />
+              <col width="125px"/>
+              <col width="170px"/>
+              <col width="170px"/>
+              <col width="170px"/>
+              <col width="170px"/>
+              <col width=""/>
             </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">상환 방식</th>
+                <th scope="col">월 평균 납입금</th>
+                <th scope="col">월 납입 이자</th>
+                <th scope="col">월 평균 이자</th>
+                <th scope="col">총 납입 이자</th>
+                <th scope="col">총 상환 금액</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <th scope="row">상환방식</th> 
-                <td>만기일시상환</td>
+                <td>원금균등</td>
+                <td>8,560,748</td>
+                <td>0</td>
+                <td>227,414</td>
+                <td>2,728,979</td>
+                <td>102,728,979</td>
               </tr>
               <tr>
-                <th scope="row">첫 달 납부 금액</th> 
-                <td>20,023,456원</td>
+                <td>원금균등</td>
+                <td>8,560,748</td>
+                <td>0</td>
+                <td>227,414</td>
+                <td>2,728,979</td>
+                <td>102,728,979</td>
               </tr>
               <tr>
-                <th scope="row">총 납부 이자</th> 
-                <td>5,925,888원</td>
+                <td>원금균등</td>
+                <td>8,560,748</td>
+                <td>0</td>
+                <td>227,414</td>
+                <td>2,728,979</td>
+                <td>102,728,979</td>
               </tr>
             </tbody>
           </table>
@@ -323,67 +350,63 @@
           <table class="bbs_list">
             <caption>예상 상환 스케줄</caption>
             <colgroup>
-              <col width="140px"/>
-              <col width="240px"/>
+              <col width="85px"/>
+              <col width="175px"/>
+              <col width="175px"/>
+              <col width="175px"/>
+              <col width="175px"/>
               <col width=""/>
             </colgroup>
             <thead>
               <tr>
                 <th scope="col">회차</th>
-                <th scope="col">월 상환금</th>
-                <th scope="col">대출 이자</th>
+                <th scope="col">총 상환금(원금+이자)</th>
+                <th scope="col">납입 원금</th>
+                <th scope="col">이자</th>
+                <th scope="col">납입 원금 합계</th>
+                <th scope="col">잔금</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="textBold">1</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
+                <td>8,560,748</td>
+                <td>8,419,543</td>
+                <td>141,205</td>
+                <td>74,530,295</td>
+                <td>25,759,705</td>
               </tr>
               <tr>
                 <td class="textBold">2</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
+                <td>8,560,748</td>
+                <td>8,419,543</td>
+                <td>141,205</td>
+                <td>74,530,295</td>
+                <td>25,759,705</td>
               </tr>
               <tr>
                 <td class="textBold">3</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
+                <td>8,560,748</td>
+                <td>8,419,543</td>
+                <td>141,205</td>
+                <td>74,530,295</td>
+                <td>25,759,705</td>
               </tr>
               <tr>
                 <td class="textBold">4</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
+                <td>8,560,748</td>
+                <td>8,419,543</td>
+                <td>141,205</td>
+                <td>74,530,295</td>
+                <td>25,759,705</td>
               </tr>
               <tr>
                 <td class="textBold">5</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
-              </tr>
-              <tr>
-                <td class="textBold">6</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
-              </tr>
-              <tr>
-                <td class="textBold">7</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
-              </tr>
-              <tr>
-                <td class="textBold">8</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
-              </tr>
-              <tr>
-                <td class="textBold">9</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
-              </tr>
-              <tr>
-                <td class="textBold">10</td>
-                <td>20,000,000</td>
-                <td>123,456</td>
+                <td>8,560,748</td>
+                <td>8,419,543</td>
+                <td>141,205</td>
+                <td>74,530,295</td>
+                <td>25,759,705</td>
               </tr>
             </tbody>
           </table>
@@ -430,7 +453,7 @@
                   </span>
                   <div class="textareaWrap">
                     <textarea type="text" class="textarea" title="기타 내용 입력(최대 1,000자 이내)" placeholder="내용을 입력해 주세요. (최대 1,000자 이내)"></textarea>
-                    <span class="countSet"><span class="count">0</span>/1000</span>
+                    <span class="countSet"><span class="count">0</span>/1,000</span>
                   </div>
                 </div>
                </div>
