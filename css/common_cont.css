@@ -2701,7 +2701,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .accordionItem.isOpen .accordionPanel {border-top: 1px solid #069B66; }
 .suggestPg .accordionItem.noAccordion { border: none;}
 .suggestPg .accordionItem.noAccordion .accordionTrigger { background: #F6FBF7; border-radius: 16px; }
-.suggestPg .accordionItem.noAccordion .accordionTrigger .label { color: #069B66; }
+.suggestPg .accordionItem.noAccordion .accordionTrigger .label { width: 220px; color: #069B66; }
 .suggestPg .accordionItem.noAccordion .accordionPanel { display: block; border: none; padding-top: 10px; padding-bottom: 0;}
 .suggestPg .accordionItem.noAccordion  .accordionTrigger .tit { font-weight: 400;}
 .suggestPg .accordionItem.noAccordion  .accordionTrigger .num { color: #069B66; font-size: 16px; font-weight: 400;}
@@ -2725,6 +2725,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .suggestPg .viewNolineTable .bbs_list th,
 .suggestPg .viewNolineTable .bbs_list td { padding: 0; vertical-align: middle; text-align: center;}
 .suggestPg .notiBox { margin: 40px 0px 0; padding: 20px 30px 30px;}
+.suggestPg .notiBox.bgWhite { padding: 20px 0 0 ;}
 .suggestPg .viewNolineTable .tableNoti { margin-top: 8px;}
 .suggestPg .radio { padding-top: 10px; height:auto; }
 .suggestPg .formGroup .radio { padding-top: 0px; }
