@@ -448,6 +448,12 @@ function alert_control(alertBody ,focusObj , btnObj){
       close(alertBody);
       if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
     }
+    if(e.keyCode == 13 || e.keyCode == 32){
+      if(alertArr[alertArr.length-1].find(".confirmCont").length == 0){
+        close(alertArr[alertArr.length-1]);
+        if(btnObj?.confirm?.callback) eval(btnObj.confirm.callback)();
+      }
+    }
   })
 }
 
