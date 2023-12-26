@@ -1875,6 +1875,7 @@ table { width: 100%;}
 
 .textTable table { table-layout: fixed;}
 .textTable th, .textTable td { padding: 15px 0; min-height: 58px; text-align: left; vertical-align: top;}
+.textTable .textTable { margin-top: 0;}
 .textTable th.pt30 { padding-top: 30px;}
 /* .notiBox .textTable th, .notiBox .textTable td { padding: 10px 0; min-height: 58px;} */
 .textTable td strong, .textTable td span { }
