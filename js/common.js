@@ -429,13 +429,22 @@ function alert_control(alertBody ,focusObj , btnObj){
     if(focusObj) focusObj.focus();
     $(".wrap").removeAttr("aria-hidden"); 
     alertArr.pop();
+    $(".alertWrap").off("keyup.alertClose")
   }
 
-  $("body").one("keydown",function(e){
+  $(".alertWrap").one("keyup.alertClose",function(e){
     if(e.keyCode == 27){
       close(alertBody);
       if(btnObj?.calcel?.callback) eval(btnObj.cancel.callback)();
     }
+    //  *** 접근성 검사 시 삭제 필요
+    if(e.keyCode == 13 || e.keyCode == 32){
+      if(alertArr[alertArr.length-1].find(".confirmCont").length == 0){
+        close(alertArr[alertArr.length-1]);
+        if(btnObj?.confirm?.callback) eval(btnObj.confirm.callback)();
+      }
+    }
+    //  *** 접근성 검사 시 삭제 필요
   })
 }
 

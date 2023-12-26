@@ -215,6 +215,11 @@ ul.boxWrap.float li.box.loanIngStatus ul li strong{display:block; margin-top:30p
 ul.boxWrap.float li.box.loanIngStatus ul li span.icon_1  {background:url(../adm_images/adm/ico_18_ing_1.png) no-repeat 50% 100%; }
 ul.boxWrap.float li.box.loanIngStatus ul li span.icon_2  {background:url(../adm_images/adm/ico_18_ing_2.png) no-repeat 50% 100%; }
 ul.boxWrap.float li.box.loanIngStatus ul li span.icon_3  {background:url(../adm_images/adm/ico_18_ing_3.png) no-repeat 50% 100%; }
+ul.boxWrap.float li.box.loanIngStatus .tableBox  {padding:30px 40px 0}
+ul.boxWrap.float li.box.loanIngStatus .tableBox table  {}
+ul.boxWrap.float li.box.loanIngStatus .tableBox table ~ table  {margin-top:15px; }
+ul.boxWrap.float li.box.loanIngStatus .tableBox table th  {height:54px; font-size: 14px; font-weight: 400; border:1px solid #DDD; background:#EFF5EF; color:#069B66 }
+ul.boxWrap.float li.box.loanIngStatus .tableBox table td  {height:50px; border:1px solid #DDD;  font-size: 16px; font-weight: 700;}
 ul.boxWrap.float li.box.loadMoney     {width:420px; margin-left:20px; overflow: hidden; }
 ul.boxWrap.float li.box.loadMoney ul     {}
 ul.boxWrap.float li.box.loadMoney ul li  {overflow: hidden; border-top:1px solid #ddd; margin-top:-1px; }
@@ -492,3 +497,6 @@ fieldset .searchControlBox { width: 100%;}
 .uploadResult .resutlBox em.total  {color:#069B66 }
 .uploadResult .resutlBox em.err strong  {color:#FE5050}
 
+
+.member_disabledChk .sTit     {margin-top:20px; height:40px;  }   
+.member_disabledChk .textarea     {height:80px;  }   

@@ -337,6 +337,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .badgeOrange { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #FF8D4D; border-radius: 30px; text-align: center; font-weight: 700; color:#FF8D4D;  font-size: 14px; }
 .badgeGray { display: inline-block; min-width: 94px; height: 24px; line-height: 22px; padding: 0 14px; background:#ffffff; border:1px solid #888; border-radius: 30px; text-align: center; font-weight: 700; color:#888; font-size: 14px; }
 .badgeWhite.badgeLg {padding: 2px 14px; border-radius: 60px; font-size: 24px;}
+.badgeWhite.badgeM {padding: 2px 14px; border-radius: 60px; font-size: 16px;}
 
 .bracket { display: inline-block; margin-right: 4px; font-weight: 700; }
 /****************************
@@ -2171,7 +2172,7 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .layerWrap .layerBody.wid640 .layerFoot button    {min-width:214px; }
 .layerWrap .layerBody.wid640 .layerFoot { padding-top: 40px;}
 
-.layerWrap .layerBody.wid720 .layerFoot button {width: 156px;}
+.layerWrap .layerBody.wid720 .layerFoot button {min-width: 156px;}
 
 .layerWrap .layerBody.wid1000 .layerFoot button    {min-width:214px; }
 .layerWrap .layerBody.wid1400 .layerFoot button    {min-width:214px; }
@@ -2379,14 +2380,15 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox       {  overflow: hidden; }
 /* .tabLine ~ .bbsDetailBox       {margin-top:40px; } */
 .bbsDetailBox .titBox     {width:100%; padding:24px 40px; border: 1px solid #ddd; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
-.bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
-.bbsDetailBox .titBox .mainTit  { font-size: 30px; font-weight: 700;}
+.bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff; font-size: 14px;}
+.bbsDetailBox .titBox .mainTit  { font-size: 24px; line-height:40px; font-weight: 700;}
 .bbsDetailBox .titBox h3.tit  { display: inline-flex; align-items: center; font-size:18px; font-weight: 700; }
 .bbsDetailBox .titBox [class^="badge"] { margin-right: 20px; }
-.bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; padding: 0 24px; height: 46px; line-height: 46px;}
+.bbsDetailBox .titBox .badgeWhite.badgeLg { margin-right: 16px; font-size: 16px; padding: 0 24px; height: 40px; line-height: 40px;}
+.bbsDetailBox .titBox .badgeWhite.badgeM { margin-right: 16px; padding: 0 24px; height: 40px; line-height: 40px;}
 .bbsDetailBox .titBox .date { margin-top: 16px; color: #888; font-weight: 500; }
 .bbsDetailBox .titBox .date .bar { display: inline-block; width: 1px; height: 14px; margin-left: 8px; margin-right: 8px; background: #888; vertical-align: -2px;}
-.bbsDetailBox .titBox .sub { font-size: 18px; }
+.bbsDetailBox .titBox .sub { font-size: 14px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px;  border-top:0; border-radius:0 0 16px 16px;  }
 .bbsDetailBox .detailCont > .cont { min-height: 170px;}
 .bbsDetailBox .detailCont > .cont .attachBox{ margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
