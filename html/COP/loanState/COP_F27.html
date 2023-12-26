@@ -49,7 +49,7 @@
       <div class="divideCon"><!-- v2.1 divideCon 추가 -->
         <div class="left"><!-- v2.1 left 추가 -->
           <section class="sectionBlock40">
-            <h4 class="titH3 hasLine">제안서 요약 내용</h4>
+            <h4 class="titH3 hasLine">제안서 요약 내용<span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span></h4> <!-- v2.1 notiTxt 다건인 경우 노출 -->
             <div class="viewNolineTable">
               <table>
                 <caption>제안서 요약 내용</caption>
@@ -85,7 +85,7 @@
               <div class="inner">
                 <ul class="tabLine tabScript" role="tablist">
                   <li class="on"><button type="button" role="tab" aria-selected="true">상품명 1</button></li>
-                  <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li>
+                  <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li><!-- 다건일 경우 노출 -->
                 </ul>
               </div>
             </div>
@@ -95,7 +95,7 @@
               <h3 class="accordionTitle">
                 <div class="accordionTrigger">
                   <span class="label">상품명 1</span><strong class="tit blue">길동바로론</strong>
-                  <span class="num">202308090011</span>
+                  <!-- <span class="num">202308090011</span> --> <!-- v2.1 삭제 -->
                 </div>
               </h3>
               <div id="sect1" class="accordionPanel">
@@ -111,9 +111,18 @@
                       <tr> 
                         <th scope="row">제안 자금 용도</th> 
                         <td>
-                          <strong class="blue">운전자금</strong> (기계기구 등의 신,중설 개보수 / 기타: 다른 은행 운전자금 상환)<br/>
-                          <p class="info">- 자금 용도 변경 사유: 고객님 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경</p>
+                          <strong class="blue">운전자금</strong>
+                          <p class="info">· 인건비(급여 등)</p>
+                          <p class="info">· 공과금 납부</p>
+                          <p class="info">· 원자재 구입 자금</p>
+                          <p class="info">· 예비 운영 자금</p>
+                          <p class="info">· 다른 회사 인수 자금</p>
+                          <p class="info">· 기타: 기타사유 기타사유....</p>
                         </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">자금 용도 변경 사유</th> 
+                        <td>고객님 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경</td>
                       </tr>
                       <tr> 
                         <th scope="row">대출 금액</th> 
@@ -121,7 +130,7 @@
                       </tr>
                       <tr> 
                         <th scope="row">가장 빠른 대출<br/>실행 가능일</th> 
-                        <td>제안서 채택 후 3일 이후</td>
+                        <td>제안서 채택 후 <strong>3</strong>일 이후</td>
                       </tr>
                       <tr> 
                         <th scope="row">대출 기간</th> 
@@ -236,7 +245,7 @@
                           </tr>
                           <tr>
                             <th scope="row">한도 약정 수수료(율)</th> 
-                            <td class="">10% / 000,000원</td>
+                            <td class="">10% / 1,000,000원</td>
                           </tr>
                           <tr>
                             <th scope="row">대출시 부대 비용</th> 
@@ -311,7 +320,6 @@
                   <div class="btn_c">
                     <button type="button" class="btnSuccess ico_down">상품 안내 자료</button>
                     <button type="button" class="btnDkGreen">예상 상환 스케줄</button>
-                    <!-- <button type="button" class="btnSuccess">제안서 채택</button> -->
                   </div>
                 </div>
               </div>
@@ -326,13 +334,14 @@
             <div class="cont">
               <span class="label">제안 대출 금액</span>
               <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p><!-- v2.1 total priceKr 추가 -->
-              <span class="label">제안 대출 금리(가중 평균 금리)</span>
+              <span class="label">제안 대출 금리</span>
               <p class="desc">연 6.00%</p>
               <span class="label">제안 대출 수</span>
               <p class="desc">2건</p>
             </div>
             <div class="foot">
-              <button type="button" class="btnSuccess">제안서 채택</button>
+              <button type="button" class="btnSuccess">제안서 채택</button><!-- 미채택 제안서의 경우 노출 -->
+              <button type="button" class="btnSuccess">제안서 채택 취소</button><!-- 채택된 제안서의 경우 노출 -->
             </div>
           </div>
         </div>
