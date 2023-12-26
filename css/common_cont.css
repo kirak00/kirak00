@@ -1335,6 +1335,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeTitle .checkbox input[type=checkbox] + label span:first-child { vertical-align: -6px;}
 .agreeForm .agreeTitle .formRow .checkbox label { font-weight: 400;}
 .agreeForm .agreeTitle .btnWhite { width: 128px; height: 36px; padding: 0 20px; font-size: 14px;}
+.agreeForm .agreeTitle .btnWhite:hover{ background-color: #fff; color: #069B66}
 .agreeForm .agreeTitle.main { background: #F6FBF7; padding: 0 60px 0 40px; }
 .agreeForm .agreeTitle.main .btnWhite { width: 150px; }
 .layerWrap .layerBody.wid1000 .layerCont .tabLine { margin-top: -20px}
@@ -2583,8 +2584,9 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 
 
 /* tooltip */
-.tooltip_q        {position:relative; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_q.png) no-repeat 0 0 / 18px 18px; cursor: pointer; vertical-align: -1px; }
+.tooltip_q        {position:relative; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_q_inactive.png) no-repeat 0 0 / 18px 18px; cursor: pointer; vertical-align: -1px; }
 .tooltip_q.on     {}
+.tooltip_q:hover { background-image:url(../images/common/ico_q_active.png) }    
 .tooltip_q .tooltipLayer     {position:absolute; bottom:35px; left:0;  padding:10px 24px 8px; margin-left: 8px; text-align: left; color:#333; font-weight: 500; background:#FFD43C; border-radius: 8px; display:flex; white-space: nowrap; transform: translate(-50%, 0); line-height: 1.5;  z-index: 2; }
 .tooltip_q.tc .tooltipLayer     {text-align: center;}
 .tooltip_q .tooltipLayer::before     {content:""; position:absolute; left:50%; margin-left: -14px;  bottom:-14px;
@@ -2595,7 +2597,7 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
   border-right: 14px solid transparent; }
 .tooltip_q.textCenter .tooltipLayer { text-align: center;}
 
-.bbsSearch .tooltip_q { background-image: url(../images/common/ico_q_bg_no.png); vertical-align: -2px;}
+/* .bbsSearch .tooltip_q { background-image: url(../images/common/ico_q_bg_no.png); vertical-align: -2px;} */
 .radio .tooltip_q  { vertical-align: -3px;}
 button .tooltip_q        { vertical-align: -3px;  background:url(../images/common/ico_q2.png) no-repeat 0 0 / 18px; cursor: pointer; }
 button .tooltip_q span.txt   {position:absolute; display:block; overflow: hidden; text-indent: -100px; line-height: 1;}
