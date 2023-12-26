@@ -1571,7 +1571,7 @@ section   {margin:0 auto; max-width: 1400px;}
 /* .bgGray + .table_bt      { margin-top:20px; } */
 
 .jsGridWrap .table_bt,
-.table_bt.small { min-height: 40px; margin-top: 20px;}
+.table_bt.small { min-height: unset; margin-top: 20px;}
 .jsGridWrap .table_bt button,
 .table_bt.small button,
 .jsGridWrap .table_bt a,
