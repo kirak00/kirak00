@@ -3095,3 +3095,18 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .loginCon .loginLink .tooltip_q:hover { background-image: url(../images/common/ico_q.png) } */
 
 
+
+.taxWrap      {padding:60px; }
+.taxBill      {overflow: hidden;  border:1px solid #ddd; border-radius: 16px; }
+.taxBill table      { table-layout: fixed; border-collapse: collapse;  }
+.taxBill table.boxBody { margin-top:-1px; margin-left:-1px; border-radius: 16px; overflow: hidden; }
+.taxBill table.boxBody .wrap {border:0; }
+.taxBill table th   { background:#EFF5EF; }
+.taxBill table th,
+.taxBill table td   { height:35px; border-top: 1px solid #ddd; border-left: 1px solid #ddd; }
+.taxBill table td   { font-weight: 400;}
+.taxBill table td th   { background: #fff;}
+
+
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body class="popup">
+  <!-- **************** -->
+  <!-- popup : start -->
+  <!-- **************** -->
+  
+  <div class="taxWrap">
+    <div class="taxBill">
+      <table class="boxBody">
+        <caption>전자세금계산서(공금자 보관용)</caption>
+        <thead>
+          <tr>
+            <th class="wrap">
+              <table>
+                <colgroup>
+                  <col width="50%">
+                  <col width="16.6%" span="3">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="3">전자세금계산서 (공급자 보관용)</th>
+                    <th>책번호</th>
+                    <th>권</th>
+                    <th>호</th>
+                  </tr>
+                  <tr>
+                    <th>일련번호</th>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <th>승인번호</th>
+                    <td colspan="2">12345678901234567890</td>
+                  </tr>
+                </thead>
+              </table>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="wrap">
+  
+              <table>
+                <colgroup>
+                  <col width="2%">
+                  <col width="12%" span="4">
+                  <col width="2%">
+                  <col width="12%" span="4">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th rowspan="5">공<br>급<br>자</th>
+                    <th>등록번호</th>
+                    <td>202-81-02637</td>
+                    <th>종사업장번호</th>
+                    <td></td>
+                    <th rowspan="5">공<br>급<br>자</th>
+                    <th>등록번호</th>
+                    <td>202-81-02637</td>
+                    <th>종사업장번호</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>상호</th>
+                    <td>(주)신한은행</td>
+                    <th>성명</th>
+                    <td>진옥동 &nbsp; 인</td>
+                    <th>상호</th>
+                    <td>(주)신한은행</td>
+                    <th>성명</th>
+                    <td>진옥동 &nbsp; 인</td>
+                  </tr>
+                  <tr>
+                    <th>사업장 주소</th>
+                    <td colspan="4">서울시 중구 세종대로9길 20</td>
+                    <th>사업장 주소</th>
+                    <td colspan="4">서울시 중구 세종대로9길 20</td>
+                  </tr>
+                  <tr>
+                    <th>업태</th>
+                    <td>금융 및 보험업</td>
+                    <th>종목</th>
+                    <td>국내은행</td>
+                    <th>업태</th>
+                    <td>금융 및 보험업</td>
+                    <th>종목</th>
+                    <td>국내은행</td>
+                  </tr>
+                  <tr>
+                    <th>E-Mail</th>
+                    <td colspan="4">hwang@shinhan.com</td>
+                    <th>E-Mail</th>
+                    <td colspan="4">hwang@shinhan.com</td>
+                  </tr>
+                </tbody>
+              </table>
+  
+            </td>
+          </tr>
+          <tr>
+            <td class="wrap">
+              
+              <table>
+                <colgroup>
+                  <col width="25%" span="4">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>작성일자</th>
+                    <th>공급가액</th>
+                    <th>세액</th>
+                    <th>수정 사유</th>
+                  </tr>
+                  <tr>
+                    <td>2023-05-01</td>
+                    <td>2,800,000</td>
+                    <td>280,000</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>비고</td>
+                    <td colspan="3">계좌번호: 1234-5678-91234 / 예금주: 신한은행(론앤비즈)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="wrap">
+              
+              <table>
+                <colgroup>
+                  <col width="3%">
+                  <col width="3%">
+                  <col width="">
+                  <col width="4%">
+                  <col width="4%">
+                  <col width="17%">
+                  <col width="18%">
+                  <col width="18%">
+                  <col width="18%">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>월</th>
+                    <th>일</th>
+                    <th>품목</th>
+                    <th>규격</th>
+                    <th>수량</th>
+                    <th>단가</th>
+                    <th>공급가액</th>
+                    <th>세액</th>
+                    <th>비고</th>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>23</td>
+                    <td>Loan&Biz 수수료</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2,800,000</td>
+                    <td>2,800,000</td>
+                    <td>2,800,00</td>
+                    <td>20230101_0001</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="wrap">
+              
+              <table>
+                <colgroup>
+                  <col width="12.8%">
+                  <col width="12.8%">
+                  <col width="12.8%">
+                  <col width="12.8%">
+                  <col width="12.8%">
+                  <col width="">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>합계금액</th>
+                    <th>현금</th>
+                    <th>수표</th>
+                    <th>어음</th>
+                    <th>외상미수금</th>
+                    <th>이 금액을 청구함</th>
+                  </tr>
+                  <tr>
+                    <td>3,080,000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- **************** -->
+  <!-- popup : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
