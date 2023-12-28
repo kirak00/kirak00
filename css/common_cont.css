@@ -134,11 +134,13 @@ td .tit { padding: 0 30px;}
 .bgGray > section:only-child > :first-child,
 .titH3.fullType + * { margin-top: 0;}
 .titLabel { font-size: 14px; font-weight: 400;}
-.hasLine .inner { display: flex; align-items: center; max-width: 1400px; width: 100%; margin: 0 auto;}
+.hasLine .inner { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; width: 100%; margin: 0 auto;}
 .hasLine .inner.flexBetween { justify-content: space-between;}
 .hasLine .inner .btnSuccess,
 .hasLine .inner .btnDkGreen { height: 40px; margin-left: 30px; padding: 0 32px;}
 .hasLine .inner .right { margin-left: auto; }
+.hasLine .inner h3 { display: inline-flex; align-items: center; }
+.hasLine .inner h3 .titLabel { margin-left: 20px; }
 .barStepWrap ~ .titBg,
 .titBg.resultType { min-height: 90px; background: #1EA885; text-align: center; line-height: 1.5;}
 .barStepWrap ~ .titBg h3,
@@ -147,6 +149,10 @@ td .tit { padding: 0 30px;}
 .titBg.lightGreen { min-height: 80px; background: #EFF5EF; font-size: 18px;}
 .titBg.flexBetween { justify-content: space-between; }
 .titBg.flexBetween h3 { font-size: 24px;}
+.titBg.disabled { background: #EEF0F1;}
+.titBg.disabled select:disabled { border: none;}
+.titBg.disabled .barList .list { color: #888; }
+
 .titBg h3 { display: inline-block; vertical-align: middle; color: #fff; font-weight: 700; } 
 .titBg .info { display: inline-block; vertical-align: middle; margin-left: 16px; color: #fff;}
 .titBg h3 + .barList { margin-top: 8px;} /* font-size 18px 16px 혼재 - 16px 통일 */
@@ -165,6 +171,7 @@ td .tit { padding: 0 30px;}
 
 .titBg select       { height: 30px; text-align: center; color:#fff; border:0; padding-left:0; background:url(../images/common/ico_24_down_w.png) no-repeat top 50% right 0 #069B66; }
 .titBg select:focus { outline-color: #fff;}
+.titBg select:disabled {  background-image:url(../images/common/ico_24_down_gray.png); background-size: 24px 24px; }
 .titBg select option  {background:#fff; color:#333;  }
 
 
@@ -449,10 +456,11 @@ table.bbs_list a.btnLine,
 .btnSuccess:disabled,
 .btnSky:disabled,
 .btnWhite:disabled,
-.btnBlack:disabled,
+.btnBlack:disabled, a.btnBlack:disabled,label:disabled,
 .btnWhiteLine:disabled,
-.btnGray:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
-.btnBlack:disabled {border:1px solid #ddd;}
+.btnGray:disabled,
+.btnRoundWhite:disabled       { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
+.btnRoundWhite:disabled { border-color: #888;  color: #888}
 
 .btnSuccess.lg { width: 216px ;}
 
@@ -629,6 +637,8 @@ button.xl      {height:50px; }
 button.mm       {height:40px; padding:0 30px; }
 button.sm       {height:36px; padding:0 20px; }
 .wid530      {min-width:530px;}
+
+.formListTable .btnWhite.mm, .formListTable .btnSuccess.mm  {height:40px; padding:0 30px; }
 
 /****************************
 **********  아이콘  **********
@@ -898,6 +908,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow .bar { width: 1px; height: 50px; margin: 0 12px; background: #ddd;}
 
 .formRow .txt { display: inline-block; padding:0 4px; vertical-align: middle;}
+.formRow .desc { margin-left: 20px; color: #888;}
 .formRow .result { margin: 0 22px;}
 
 .formRow .label.th { margin-left: 120px; margin-right: 50px; font-weight: 700;}
@@ -1176,7 +1187,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
 
 /* .divTable .row .cell .wid62 { width: 62px;} */
-.divTable .row .cell .period { width: 118px; text-align: center;}
+.divTable .row .cell .period { width: 130px; text-align: center;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
 
@@ -1567,6 +1578,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox button.btnSky { min-width:90px; padding:0 10px; height:40px;  }
 
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
+.table_bt.mt80 { margin-top: 80px;}
 .table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .table_bt.hasLine .icoLink { display: block; margin-top: -10px;}
 /* .bgGray + .table_bt      { margin-top:20px; } */
@@ -1635,7 +1647,9 @@ section   {margin:0 auto; max-width: 1400px;}
 
 .grayBox table.bbs_list th { background: #fafafa; color: #333; }
 table.bbs_list    { width:100%; border-collapse: collapse; border-style: hidden; table-layout: fixed;}
-table.bbs_list.disabled th { background: #EEF0F1;}
+table.bbs_list.disabled th,
+table.bbs_list tr.disabled th,
+table.bbs_list tr.disabled td { background: #EEF0F1;}
 table.bbs_list.disabled th { color: #555; }
 table.bbs_list.disabled td { color: #888; }
 table.bbs_list.gray th { background: #fafafa; color: #333;}
@@ -1835,7 +1849,7 @@ table { width: 100%;}
 .formListTable a.btnSuccess { line-height: 50px; }
 .formListTable .btnWhite.px32,
 .formListTable .btnSuccess.px32 { padding-left: 32px; padding-right: 32px;}
-.formListTable .table_bt { padding-top: 45px;}
+/* .formListTable .table_bt { padding-top: 45px;} */
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
 
 .formListTable.wid365 .formRow { width: 365px;}
@@ -2498,7 +2512,7 @@ ul.guideBox li.bul::before {content:"·"; position:absolute; left:0; top:0px; }
 .bbsDetailBox .viewLineTable .table_bt { padding-top: 60px;}
 
 
-
+.titH4 + .lineBox { margin-top: 20px; }
 .lineBox { padding: 40px; border: 1px solid #ddd; border-radius: 16px;}
 .lineBox.type2 { padding: 30px;}
 .lineBox .formList { margin: 0;}
@@ -2602,7 +2616,7 @@ ul.evtThumList li.end::before    { content:"종료된 이벤트 입니다."; pos
 
 /* .bbsSearch .tooltip_q { background-image: url(../images/common/ico_q_bg_no.png); vertical-align: -2px;} */
 .radio .tooltip_q  { vertical-align: -3px;}
-button .tooltip_q        { vertical-align: -3px;  background:url(../images/common/ico_q2.png) no-repeat 0 0 / 18px; cursor: pointer; }
+.btnWhite .tooltip_q        { vertical-align: -3px;  background-image:url(../images/common/ico_q2.png); }
 button .tooltip_q span.txt   {position:absolute; display:block; overflow: hidden; text-indent: -100px; line-height: 1;}
 button .tooltip_q.on     {}
 button .tooltip_q .tooltipLayer { bottom: 30px;}
@@ -2644,6 +2658,7 @@ ul.youtubeList li .titBox p   {margin-top:8px; color: #888; }
 .filebox input[type="file"] {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
 .filebox input[type="file"]:focus { outline: none }
 .filebox input[type="file"]:focus + .btnBlack { outline: 2px dashed #069B66 }
+.filebox input[type="file"]:disabled + .btnBlack  { background:#EEF0F1; color:#555; border:0; cursor:unset;  border:1px solid #ddd; }
 .filebox .input { flex: 1; }
 .filebox .input:disabled { color: #333; background-color: #fff;}
 .filebox .attached { padding-left: 16px}

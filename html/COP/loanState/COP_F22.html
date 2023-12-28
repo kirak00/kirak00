@@ -44,6 +44,17 @@
         </div>
         <button type="button" class="btnRoundWhite">선택</button>
       </div>
+      <div class="titBg flexBetween disabled">
+        <div>
+          <select name="" id="" disabled>
+            <option value="">조회된 대출 신청 건이 없습니다</option>
+          </select>
+          <ul class="barList">
+            <li class="list">제안서 접수 마감일 : -</li>
+          </ul>
+        </div>
+        <button type="button" class="btnRoundWhite" disabled>선택</button>
+      </div>
     </section>
 
     <section class="sectionBlock40">
@@ -125,8 +136,8 @@
           <label class="label" for="labelExtraOp1">제출하실 서류를 선택해 주세요.</label>
           <div class="formRow filebox">
             <input type="text" class="input" placeholder="파일을 첨부해 주세요." value="사업장부동산등기부등본.pdf" disabled="disabled" title="선택 파일">
-            <label for="exFilename" class="btnBlack wid160">파일 찾기</label>
             <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            <label for="exFilename" class="btnBlack wid160">파일 찾기</label>
           </div>
           <p class="notiTxt">업로드 가능한 파일 형식은 ppt, pdf, jpg, png이며 파일당 용량은 최대 10mb까지 가능해요.</p>
         </div>
@@ -154,7 +165,6 @@
         </div>
       </div>
       <script> 
-        /* jsgrid sample */
         $(function() {
           var clients = [
             { "Name1": "",

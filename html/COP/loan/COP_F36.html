@@ -94,12 +94,21 @@
         </li>
       </ol>
     </div>
-    <!-- v1.4 반영 --><!-- v1.6 right 추가, 워딩수정 -->
-    <div class="titH3 hasLine mb0"><h3 class="inner">업체 개요<span class="blue">(필수)</span><button type="button" class="btnSuccess right">이전 정보 불러 오기</button></h3></div>
+    <!-- v2.1 반영 -->
+    <div class="titH3 hasLine mb0">
+      <div class="inner">
+        <h3>업체 개요<span class="blue">(필수)</span></h3>
+        <div class="btnBox">
+          <button type="button" class="btnSuccess mm">이전 정보 불러 오기</button>
+          <button type="button" class="btnGray mm">대출 비교하기 취소</button>
+        </div>
+      </div>
+    </div>
+     <!-- //v2.1 반영 -->
     <div class="bgGray">
       <section class="sectionBlock20">
         <h3 class="pageTxt">기업 정보를 입력해주세요.</h3> <!-- v1.4 반영 --><!-- v1.6 워딩수정 -->
-        <div class="formListTable"><!-- v2.0 mt40 삭제 -->
+        <div class="formListTable"><!-- v2.0 mt40 삭제 --> 
           <table>
             <caption>법인회사정보</caption>
             <colgroup>
@@ -353,7 +362,7 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th scope="row">
                   <label class="label" for="inputLabel9">대표자명</label>
                 </th>
@@ -365,20 +374,18 @@
               </tr>
               <tr>
                 <th scope="row">
-                  <label class="label" id="inputLabel10">대표자 휴대전화번호</label><!-- v1.6 워딩수정 -->
+                  <label class="label" id="inputLabel10">대표자 휴대전화번호</label>
                 </th>
                 <td>
                   <div class="formRow wid600 textCenter" role="group" aria-labelledby="inputLabel10">
-                    <input class="input wid100" type="text" title="법인 담당자 전화번호(1/3)" placeholder="" value="010" readonly><!-- v2.0 wid100 -->
+                    <input class="input wid100" type="text" title="법인 담당자 전화번호(1/3)" placeholder="" value="010" readonly>
                     <span class="unit">-</span>
                     <input class="input wid100" type="text" title="법인 담당자 전화번호(2/3)" placeholder="" value="1234" readonly>
                     <span class="unit">-</span>
                     <input class="input wid100" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" readonly>
-                    <!-- <button type="button" class="btnWhite" disabled>본인 확인</button> --><!-- v2.0 -->
                   </div>
                 </td>
               </tr>
-              <!-- v2.1 추가 -->
               <tr>
                 <th scope="row">
                   <label class="label" id="inputLabel10_2">대표자 주민등록번호</label>
@@ -389,13 +396,57 @@
                     <span class="unit">-</span>
                     <input class="input" type="text" title="대표자 주민등록번호(뒷 7자리)" placeholder="" value="2******" readonly>
                   </div>
-                  <p class="notiTxt noIcon">대표자 정보와 법인등기상 정보가 다를 경우, ‘대출 비교 하기’ 진행이 어려울 수 있습니다.</p><!-- v2.0 noIcon -->
+                  <p class="notiTxt noIcon">대표자 정보와 법인등기상 정보가 다를 경우, ‘대출 비교 하기’ 진행이 어려울 수 있습니다.</p>
+                </td>
+              </tr> -->
+              <tr>
+                <th scope="row">
+                  <label class="label">대표자 정보</label>
+                </th>
+                <td>
+                  <div class="table_wrap">
+                    <table class="bbs_list">
+                      <caption>신청 물건 정보</caption>
+                      <colgroup>
+                        <col width="230px">
+                        <col width="320px">
+                        <col width="">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">대표자명</th>
+                          <th scope="col">대표자 휴대전화</th>
+                          <th scope="col">대표자 주민등록번호</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="disabled">
+                          <td>박충일</td>
+                          <td>010-1234-5678</td>
+                          <td>701204-1******</td>
+                        </tr>
+                        <tr>
+                          <td><input type="text" class="input wid160" placeholder="대표자명" value="" title=""></td>
+                          <td>-</td>
+                          <td>-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> 
+                  <div class="table_bt mt20">
+                    <div class="btn_l">
+                      <p class="notiTxt noIcon">대표자 정보와 법인등기상 정보가 다를 경우, ‘대출 비교 하기’ 진행이 어려울 수 있습니다.</p>
+                    </div>
+                    <div class="btn_r">
+                      <button type="button" class="btnSuccess mm">대표자명 추가</button>
+                    </div>
+                  </div>                        
                 </td>
               </tr>
               <!-- v1.4 추가 -->
               <tr>
                 <th scope="row">
-                  <label class="label" for="inputLabel11">동업계 종사년수</label>
+                  <label class="label" for="inputLabel11">대표자의 동업계<br/> 종사년수</label><!-- v2.1 -->
                 </th>
                 <td>
                   <div class="formRow">
