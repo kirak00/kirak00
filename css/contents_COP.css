@@ -150,7 +150,8 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .mainLoanSelct select:focus { outline-color: #fff;}
 .mainLoanSelct select option {background:#fff; color:#333;  }
 .mainLoanSelct button.search {position:absolute; top: 50%; right:40px; margin-top: -20px; padding:0 30px; border:1px solid #ddd; color:#fff; height:36px; border-radius:25px; font-weight: 700;  }
-.mainLoanSelct button:hover {background:#fff; color:#1EA885}
+/* .mainLoanSelct button:hover {background:#fff; color:#1EA885}
+.mainLoanSelct .btnWhite:hover.ico_calendar::after { background-image: url(../images/common/ico_18_calendar_primary.png); } */
 .mainLoanSelct button::-moz-focus-outer{ outline: 2px dashed #fff;}
 .mainLoanSelct button.prev      {left:0;  width:80px; height:80px; background:url(../images/COP/main/ico_34_left_w.png) no-repeat 50% 50%;  }
 .mainLoanSelct button.next      {right:0; width:80px; height:80px; background:url(../images/COP/main/ico_34_right_w.png) no-repeat 50% 50%;   }
