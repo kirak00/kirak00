@@ -791,23 +791,30 @@ pdf 약관<br/>
               <input class="input" type="text" title="법인 담당자 전화번호(2/3)" placeholder="" value="1234" >
               <span class="unit">-</span>
               <input class="input" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" >
-              <button type="button" class="btnBlack">본인 확인</button>
+              <!-- <button type="button" class="btnBlack">본인 확인</button> --><!-- v2.1 삭제 -->
             </div>
           </div>
         </section>
-        <div class="formList">
-          <span class="checkbox">
-            <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
-            <label class="label" for="ckbMember1_1"><span></span>서비스 알림 수신 동의 <strong class="blue">(필수)</strong></label><!-- v2.1 워딩수정 -->
-          </span>
-          <a href="" class="goLink ml20">자세히 보기</a>
+        <!-- v2.1 추가 -->
+        <div class="btnBox full mt30">
+          <button type="button" class="btnBlack">본인확인</button>
         </div>
-        <div class="formList">
-          <span class="checkbox">
-            <input type="checkbox" id="ckbMember1_2" name="ckbMember" checked/>
-            <label class="label" for="ckbMember1_2"><span></span>고유식별정보처리 동의 <strong class="blue">(필수)</strong></label>
-          </span>
-          <a href="" class="goLink ml20">자세히 보기</a>
+        <!-- //v2.1 추가 -->
+        <div class="sectionTopLine">
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_1"><span></span>서비스 알림 수신 동의 <strong class="blue">(필수)</strong></label><!-- v2.1 워딩수정 -->
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_2" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_2"><span></span>고유식별정보처리 동의 <strong class="blue">(필수)</strong></label>
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
         </div>
 
         <script>

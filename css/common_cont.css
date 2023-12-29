@@ -330,6 +330,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 .sectionLine { padding: 40px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 .sectionLine.pd40 { padding: 40px;}
 .sectionLine + .notiTxt { margin-top: 20px;}
+.sectionTopLine { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd; }
 .sectionInner { margin-top: 40px;}
 .sectionIndent .titH3.hasLine { padding: 0 40px}
 .sectionIndent .formListTable { padding: 0 40px}
@@ -463,6 +464,8 @@ table.bbs_list a.btnLine,
 .btnRoundWhite:disabled { border-color: #888;  color: #888}
 
 .btnSuccess.lg { width: 216px ;}
+
+button.px32 { padding-left: 32px; padding-right: 32px; }
 
 
 .ico_down       {padding:0 32px; color:#069B66; font-weight: 700;}
@@ -612,6 +615,7 @@ a.lnkLine2 { border-bottom: 1px solid #069B66; font-weight: 700; color:#069B66; 
 /* .btnPlus:focus, */
 .btnPlus:hover    {background-color:#148159;}
 .btnPlus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
+.btnPlus:disabled::after     { background-image:url(../images/common/ico_24_plus.png)}
 .btnPlus.w50 {width:50px; height:50px;}
 
 select:disabled       { background-color:#EEF0F1 !important; color:#888 !important; border:1px solid #ddd; cursor:unset; opacity: 1; }
@@ -619,8 +623,10 @@ select:disabled       { background-color:#EEF0F1 !important; color:#888 !importa
 .btnMinus { width: 36px; height: 36px; flex-shrink: 0; background: #fff; border: 1px solid #069B66; border-radius: 8px; font-weight: 700; color:#555}
 .btnMinus::after { content:""; display:inline-block; width:18px; height:18px; background:url(../images/common/ico_24_minus_w.png) no-repeat 50% 50%; vertical-align: top;}
 /* .btnMinus:focus, */
+.btnMinus.hide { display: none;}
 .btnMinus:hover    {background-color:#148159; }
 .btnMinus:disabled       { background:#dddddd; color:#555; border:0; cursor:unset;  }
+.btnMinus:disabled::after     { background-image:url(../images/common/ico_24_minus.png)}
 
 .btnMinus.w50 { width: 50px; height: 50px;}
 
@@ -866,6 +872,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .formRow .formDesc { margin-left: 30px; color: #888; font-size: 14px;}
 .formRow .checkbox + .checkbox,
 .formRow .checkbox + .formSet  { margin-left: 22px;}
+.formRow .list + .list { margin-left: 60px; }
+.formRow .list .sub { margin-left: 8px; color: #888;}
 
 .formRow.multiRadio { flex-wrap: wrap; row-gap: 20px; column-gap: 40px;}
 .formRow.multiRadio .radio + .radio { margin: 0; }
@@ -936,24 +944,26 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .input.auto { width: auto;}
 .input.full { flex: 1;}
 .input.wid32 { width: 32px; padding: 0;}
-.input.wid82 { width: 82px;}
-.input.wid100 { width: 100px;}
-.input.wid120 { width: 120px;}
-.input.wid160 { width: 160px;}
-.input.wid180 { width: 180px;}
-.input.wid200 { width: 200px;}
-.input.wid210 { width: 210px;}
-.input.wid220 { width: 220px;}
-.input.wid240 { width: 240px;}
-.input.wid260 { width: 260px;}
-.input.wid300 { width: 300px;}
-.input.wid350 { width: 350px;}
-.input.wid360 { width: 360px;}
-.input.wid380 { width: 380px;}
-.input.wid400 { width: 400px;}
-.input.wid600 { width: 600px;}
-.input.wid770 { width: 770px;}
-.input.wid950 { width: 950px;}
+.input.wid48 { width: 48px; padding: 0;}
+.input.wid82 { width: 82px; flex-shrink: 0;}
+.input.wid100 { width: 100px; flex-shrink: 0;}
+.input.wid120 { width: 120px; flex-shrink: 0;}
+.input.wid160 { width: 160px; flex-shrink: 0;}
+.input.wid180 { width: 180px; flex-shrink: 0;}
+.input.wid200 { width: 200px; flex-shrink: 0;}
+.input.wid210 { width: 210px; flex-shrink: 0;}
+.input.wid220 { width: 220px; flex-shrink: 0;}
+.input.wid240 { width: 240px; flex-shrink: 0;}
+.input.wid260 { width: 260px; flex-shrink: 0;}
+.input.wid300 { width: 300px; flex-shrink: 0;}
+.input.wid350 { width: 350px; flex-shrink: 0;}
+.input.wid360 { width: 360px; flex-shrink: 0;}
+.input.wid380 { width: 380px; flex-shrink: 0;}
+.input.wid400 { width: 400px; flex-shrink: 0;}
+.input.wid568 { width: 568px; flex-shrink: 0;}
+.input.wid600 { width: 600px; flex-shrink: 0;}
+.input.wid770 { width: 770px; flex-shrink: 0;}
+.input.wid950 { width: 950px; flex-shrink: 0;}
 
 
 .input.h50 { min-height: 50px;}
@@ -1009,7 +1019,7 @@ select.wid100 { min-width: 100px;}
 select.wid145 { min-width: 145px !important;}
 select.wid160 { min-width: 160px;}
 select.wid180 { min-width: 180px;}
-select.wid200 { min-width: 200px;}
+select.wid200 { min-width: 200px; }
 /* select.wid210 { min-width: 210px;} */
 select.wid220 { min-width: 220px;}
 select.wid240 { min-width: 240px;}
@@ -1062,8 +1072,10 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formVertical .checkbox + .formRow { margin-top: -10px;}
 .formVertical.lineBox  { margin-top:10px; padding:30px; border:1px solid #ddd; border-radius:16px;  }
 .formVertical.lineBox .detailForm  {width:100%; padding:30px 30px 0; margin:0 -30px; border-top:1px solid #ddd; box-sizing: content-box; }
+.formRowWrap .formAdd { margin-top: 20px; }
+.formRowWrap .formAdd + .formAdd { margin-top: 10px;}
 .formRow + .formAdd { margin-top: 10px; }
-.formAdd select { width: 186px;}
+/* .formAdd select { width: 186px;} */
 .formAdd .btnPlus,
 .formAdd .btnMinus { width: 50px; height: 50px; }
 .formAdd .btnBlack { height: 50px;}
@@ -1187,7 +1199,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
 
 /* .divTable .row .cell .wid62 { width: 62px;} */
-.divTable .row .cell .period { width: 130px; text-align: center;}
+.divTable .row .cell .period { width: 72px; text-align: right;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
 
@@ -2179,8 +2191,9 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .layerWrap .layerBody .layerHead button.layerClose:focus {outline: 2px dashed #069B66; border-radius: 5px;}
 .layerWrap .layerBody .layerCont    {padding:40px 40px 0; position:relative; top:0;  }
 .layerWrap .layerBody .layerCont .btnBox    {text-align: center; margin-top:40px; }
+.layerWrap .layerBody .layerCont .btnBox.mt30 { margin-top: 30px; }
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
-.layerWrap .layerBody .layerCont .btnBox.full button    {min-width:100%; height:50px;   }
+.layerWrap .layerBody .layerCont .btnBox.full button    {min-width:100%; height:50px; margin-left: 0; margin-right: 0;   }
 .layerWrap .layerBody .layerCont .btnBox.full button + button    {margin-top:5px; }
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
 .layerWrap .layerBody.wid400 .layerFoot     {display:flex; gap:10px; justify-content: space-between;}

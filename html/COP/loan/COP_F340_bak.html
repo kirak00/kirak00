@@ -336,46 +336,33 @@
                       <input type="radio" id="testRdoBank2" name="testRdoBank" title="담보유무 선택" checked value="">
                       <label for="testRdoBank2"><span></span>담보 없음</label><!-- v2.0 워딩 -->
                     </span>
-                    <button type="button" class="btnWhite px32 ml30">적용</button>
                   </div>
-                  <div id="damboHasChkCont" class="formRowWrap"><!-- v1.6 wid830 -->
-                    <!-- v2.1 -->
-                    <div class="formAdd">
-                      <div class="formRow" >
-                        <select class="wid160" title="담보종류 선택" disabled>
-                          <option value="부동산">부동산</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                        <select class="wid200" title="부동산 종류 선택" disabled>
-                          <option value="부동산">부동산 종류</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                        <select class="wid200" title="소유자 선택" disabled>
-                          <option value="부동산">소유자</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                        <input id="inpRoute" class="input wid360" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
-                        <button type="button" class="btnBlack" disabled>주소검색</button>
-                        <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
-                        <button type="button" class="btnMinus hide" disabled><span class="hide">담보상세 입력 폼 삭제</span></button>
-                      </div>
+                  <div id="damboHasChkCont" class="formRowWrap wid830"><!-- v1.6 wid830 -->
+                    <div class="formRow" >
+                      <select class="wid160" title="담보종류 선택" disabled>
+                        <option value="부동산">부동산</option>
+                        <option value="옵션">옵션</option>
+                      </select>
+                      <select class="wid200" title="부동산 종류 선택" disabled>
+                        <option value="부동산">부동산 종류</option>
+                        <option value="옵션">옵션</option>
+                      </select>
+                      <select class="wid200" title="소유자 선택" disabled>
+                        <option value="부동산">소유자</option>
+                        <option value="옵션">옵션</option>
+                      </select>
                     </div>
                     <div class="formAdd">
-                      <div class="formRow" >
-                        <select class="wid160" title="보증서 선택" disabled>
-                          <option value="보증서">보증서</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                        <select class="wid200" title="소유자 선택" disabled>
-                          <option value="소유자">소유자</option>
-                          <option value="옵션">옵션</option>
-                        </select>
-                        <input id="inpRoute" class="input wid568" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                      <div class="formRow">
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                        <button type="button" class="btnBlack p30" disabled>주소검색</button>
                         <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
-                        <button type="button" class="btnMinus hide" disabled><span class="hide">담보상세 입력 폼 삭제</span></button>
+                      </div>
+                      <div class="formRow">
+                        <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                        <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
                       </div>
                     </div>
-                    <!-- //v2.1 -->
                   </div>
                   <script>
                     $(function(){
@@ -392,20 +379,20 @@
                         }
                       })
                       
-                      //<!-- v2.1 수정 시작 -->
                       var damboListIdx = 100;
                       $(document).on("click", ".btnPlus", function() {
-                        var $listblock = $(this).closest(".formAdd").clone();
+                        var $listblock = $(this).closest(".formRow").clone().removeClass("none");
                         damboListIdx++
                         $listblock.attr({id: "damboList_"+ damboListIdx})
-                        $listblock.find('.btnMinus').removeClass('hide');
+                        $listblock.find(".btnPlus")[0].className = "btnMinus";
+                        $listblock.find(".btnMinus")[0].value = "";
+                        $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
                         $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
-                        $('#damboHasChkCont').append($listblock);
+                        $(this).closest('.formAdd').append($listblock);
                       });
                       $(document).on("click", ".btnMinus", function() {
-                        $(this).closest(".formAdd").detach();
+                        $(this).closest(".formAdd .formRow").detach();
                       });
-                      //<!-- v2.1 수정 끝 -->
                     });
                   </script>
                 </td>
