@@ -365,17 +365,18 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_btn button     {width:220px; }
 
 /*  약관  */
-.tremsWrap      {}
-.tremsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;}
-.tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
-.tremsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; }
-.tremsWrap .tabLine.fullType { margin-bottom: 40px;}
-.tremsWrap .terms_style_1      {font-size:18px; }
-.tremsWrap .terms_style_1 strong  {display:block;  }
-.tremsWrap .terms_style_1 p     {margin-top:20px;}
-.tremsWrap .terms_style_1 p + strong     {margin-top:40px;}
-
-
+.layerWrap .termsWrap { margin-top: -20px;}
+/* .termsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;} */
+/* .termsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;} */
+/* .termsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; } */
+/* .termsWrap .terms_style_1      {font-size:18px; }
+.termsWrap .terms_style_1 strong  {display:block;  }
+.termsWrap .terms_style_1 p     {margin-top:20px;}
+.termsWrap .terms_style_1 p + strong     {margin-top:40px;} */
+.layerWrap .termsWrap fieldset { margin-bottom: 20px; }
+.termsWrap .searchControlBox { padding: 20px 40px; background: #EAFAEB; border-radius: 16px;}
+.termsWrap .searchControlBox .searchBtns { position: relative; right: unset; bottom: unset}
+.termsWrap .agreeCont .cont { max-width: 100%;}
 /* 진희 */
 
 /* 회원가입 */
