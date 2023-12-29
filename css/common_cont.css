@@ -1364,7 +1364,31 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeTitle.main .btnWhite { width: 150px; }
 .layerWrap .layerBody.wid1000 .layerCont .tabLine { margin-top: -20px}
 .layerCont .tabLine + .agreeCont { margin-top: 20px;}
-.layerCont .agreeCont { padding: 20px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px;}
+.layerCont .agreeCont { max-height: 500px; height: 500px; overflow: auto;}
+.layerCont .agreeCont .cont { max-width: 900px; min-height: 100%; margin: 0 auto; padding: 20px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px;}
+.layerCont .agreeCont .prev,
+.layerCont .agreeCont .next { position: absolute; top: 50%;}
+.layerCont .agreeCont .prev::after,
+.layerCont .agreeCont .next::after {  content: ''; display: block; width: 80px; height: 80px; background: url('../images/common/ico_80_right_g.png') no-repeat 50% 50% / contain; }
+.layerCont .agreeCont .prev:disabled::after,
+.layerCont .agreeCont .next:disabled::after {  content: ''; display: block; width: 80px; height: 80px; background: url('../images/common/ico_80_left_disabled.png') no-repeat 50% 50% / contain; }
+.layerCont .agreeCont .prev { left: 10px;}
+.layerCont .agreeCont .prev::after { transform: rotate(-180deg);}
+.layerCont .agreeCont .prev:disabled::after { transform: none }
+.layerCont .agreeCont .next:disabled::after { transform: rotate(-180deg); }
+.layerCont .agreeCont .next { right: 10px;}
+.layerCont .agreeCont::-webkit-scrollbar {
+  width: 10px;
+}
+.layerCont .agreeCont::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.layerCont .agreeCont::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
 
 /****************************
 **********  paging  **********
@@ -2195,6 +2219,7 @@ button.ui-monthpicker-trigger:hover {background-image: url(../adm_images/common/
 .layerWrap .layerBody .layerCont .btnBox button    {min-width:150px; height:50px; margin:0 6px;  }
 .layerWrap .layerBody .layerCont .btnBox.full button    {min-width:100%; height:50px; margin-left: 0; margin-right: 0;   }
 .layerWrap .layerBody .layerCont .btnBox.full button + button    {margin-top:5px; }
+.layerWrap .layerBody .layerCont .tabLine:first-child { margin-top: -20px;}
 .layerWrap .layerBody .layerFoot    {padding:32px 40px 0; text-align: center; }
 .layerWrap .layerBody.wid400 .layerFoot     {display:flex; gap:10px; justify-content: space-between;}
 .layerWrap .layerBody.wid400 .layerFoot button    {min-width:165px; width:100%; }
