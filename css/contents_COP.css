@@ -150,7 +150,8 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .mainLoanSelct select:focus { outline-color: #fff;}
 .mainLoanSelct select option {background:#fff; color:#333;  }
 .mainLoanSelct button.search {position:absolute; top: 50%; right:40px; margin-top: -20px; padding:0 30px; border:1px solid #ddd; color:#fff; height:36px; border-radius:25px; font-weight: 700;  }
-.mainLoanSelct button:hover {background:#fff; color:#1EA885}
+/* .mainLoanSelct button:hover {background:#fff; color:#1EA885}
+.mainLoanSelct .btnWhite:hover.ico_calendar::after { background-image: url(../images/common/ico_18_calendar_primary.png); } */
 .mainLoanSelct button::-moz-focus-outer{ outline: 2px dashed #fff;}
 .mainLoanSelct button.prev      {left:0;  width:80px; height:80px; background:url(../images/COP/main/ico_34_left_w.png) no-repeat 50% 50%;  }
 .mainLoanSelct button.next      {right:0; width:80px; height:80px; background:url(../images/COP/main/ico_34_right_w.png) no-repeat 50% 50%;   }
@@ -364,17 +365,18 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_btn button     {width:220px; }
 
 /*  약관  */
-.tremsWrap      {}
-.tremsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;}
-.tremsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;}
-.tremsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; }
-.tremsWrap .tabLine.fullType { margin-bottom: 40px;}
-.tremsWrap .terms_style_1      {font-size:18px; }
-.tremsWrap .terms_style_1 strong  {display:block;  }
-.tremsWrap .terms_style_1 p     {margin-top:20px;}
-.tremsWrap .terms_style_1 p + strong     {margin-top:40px;}
-
-
+.layerWrap .termsWrap { margin-top: -20px;}
+/* .termsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;} */
+/* .termsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;} */
+/* .termsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; } */
+/* .termsWrap .terms_style_1      {font-size:18px; }
+.termsWrap .terms_style_1 strong  {display:block;  }
+.termsWrap .terms_style_1 p     {margin-top:20px;}
+.termsWrap .terms_style_1 p + strong     {margin-top:40px;} */
+.layerWrap .termsWrap fieldset { margin-bottom: 20px; }
+.termsWrap .searchControlBox { padding: 20px 40px; background: #EAFAEB; border-radius: 16px;}
+.termsWrap .searchControlBox .searchBtns { position: relative; right: unset; bottom: unset}
+.termsWrap .agreeCont .cont { max-width: 100%;}
 /* 진희 */
 
 /* 회원가입 */

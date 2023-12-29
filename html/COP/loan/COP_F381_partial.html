@@ -96,14 +96,21 @@
         </li>
       </ol>
     </div>
-    <div class="titH3 hasLine mb0"><h3 class="inner">재무상태표 <span class="blue">(필수)</span></h3></div>
+    <!-- v2.1 반영 -->
+    <div class="titH3 hasLine mb0">
+      <div class="inner">
+        <h3>재무상태표 <span class="blue">(필수)</span></h3>
+        <button type="button" class="btnGray mm">대출 비교하기 취소</button>
+      </div>
+    </div>
+    <!-- //v2.1 반영 -->
     <div class="bgGray">
       <section class="">
-        <div class="guideBox type2">
+        <div class="guideBox type2 mt0"><!-- v2.1 -->
           <ul class="guideList dot">
-            <li class="list">2022(당)기  2022년 1월 1일부터 2022년 12월 31일까지</li>
-            <li class="list">2021(전)기  2021년 1월 1부터 2021년 12월 31일까지</li>
-            <li class="list">2020(전전)기  2020년 1월 1일부터 2020년 12월 31일까지</li>
+            <li class="list">2022년 (당)기  2022년 1월 1일부터 2022년 12월 31일까지</li>
+            <li class="list">2021년 (전)기  2021년 1월 1부터 2021년 12월 31일까지</li>
+            <li class="list">2020년 (전전)기  2020년 1월 1일부터 2020년 12월 31일까지</li>
           </ul>
         </div>
         <div class="table_wrap income"><!-- v2.1 income-->
@@ -118,9 +125,9 @@
             <thead class="double2">
               <tr>
                 <th scope="col" rowspan="2">계정과목</th>
-                <th scope="col">2022(당)기</th>
-                <th scope="col">2021(전)기</th>
-                <th scope="col">2020(전전)기</th>
+                <th scope="col">2022년 (당)기</th>
+                <th scope="col">2021년 (전)기</th>
+                <th scope="col">2020년 (전전)기</th>
               </tr>
               <tr>
                 <th scope="col">금액</th>
@@ -194,31 +201,50 @@
         </div>
       </section>
    
-
-      <div class="titH3 hasLine"><h3 class="inner">손익계산서 <span class="blue">(필수)</span></h3></div>
+      <!-- v2.1 반영 -->
+      <div class="titH3 hasLine">
+        <div class="inner">
+          <h3>손익계산서 <span class="blue">(필수)</span></h3>
+        </div>
+      </div>
+      <!-- //v2.1 반영 -->
       <section class="sectionBlock20">
         <div class="divTable periodInfo">
+          <!-- v2.1 수정 -->
           <div class="row">
             <div class="cell">
-              <span class="period">2022(당)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2023" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+              <span class="period">(당)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 까지
             </div>
           </div>
           <div class="row">
             <div class="cell">
-              <span class="period">2021(전)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2022" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+              <span class="period">(전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 까지
             </div>
           </div>
           <div class="row">
             <div class="cell">
-              <span class="period">2020(전전)기</span>
-              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 1월 1일 부터
-              <input type="text" class="input wid82 textCenter" placeholder="2021" title="당기를 차수를 입력해주세요."/>년 12월 31일 까지
+              <span class="period">(전전)기</span>
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 부터
+              <input type="text" class="input wid82 textCenter" placeholder="" title="당기 년도를 입력해주세요."/>년 
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 월을 입력해주세요."/>월
+              <input type="text" class="input wid48 textCenter" placeholder="" title="당기 일알 입력해주세요."/>일 까지
             </div>
           </div>
+          <!-- //v2.1 수정 -->
         </div>
         <div class="table_wrap">
           <table class="bbs_list">

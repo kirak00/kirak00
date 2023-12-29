@@ -421,6 +421,9 @@
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey1_1">설문 참여하기1(대출 비교하기 신청 후 : 제안서 미채택)</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey2">설문 참여하기2(대출 비교하기 신청 후 : 금융회사 진행_마감일 종료 후)</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerSurvey3">설문 참여하기(대출 비교하기 신청 후 : 대출실행_대출 평가 전)</button>
+        <div style="margin: 10px 0"></div>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerTerms1">Loan&Biz 이용약관</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerTerms2">Loan&Biz 개인정보 처리방침</button>
       </section>
 
     </div>
@@ -613,14 +616,14 @@
         </div>
         <div class="main_survey">
           <dl>
-            <dt class="dot">금융회사에서 별도 유선 등의 연락을 받으셨나요?</dt>
+            <dt class="dot">제안서를 선택하지 않은 이유를 모두 선택해 주세요.</dt><!-- v2.1 -->
             <dd>
               <div class="formRow flexWrap full">
                 <span class="checkbox">
                   <input type="checkbox" id="chk2_1_1" name="CheckBox"><label for="chk2_1_1"><span></span>제안 금리가 전부 높아서</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" id="chk2_1_2" name="CheckBox"><label for="chk2_1_2"><span></span>제안 대출 한도가 부족해서</label>
+                  <input type="checkbox" id="chk2_1_2" name="CheckBox"><label for="chk2_1_2"><span></span>제안 대출한도가 부족해서</label>
                 </span>
                 <span class="checkbox">
                   <input type="checkbox" id="chk2_1_3" name="CheckBox"><label for="chk2_1_3"><span></span>대출 조건이 까다로워서</label>
@@ -709,13 +712,12 @@
       </div>
       <div class="layerCont">
         <div class="topResultBox">
-          <p class="gray5">대출 비교 신청 진행과정을 공유해 주세요.<br/>
-          더 나은 Loan&Biz가 되도록 노력 할게요</p>
+          <p class="gray5">Loan&Biz에서의 경험을 공유해 주시면 더 나은  Loan&Biz가 되도록 할게요.</p><!-- v2.1 -->
         </div>
         <div class="main_survey type2">
           <dl>
                  
-            <dt class="dot">제안서를 채택한 금융 회사와 대출 실행 여부가 아직 확인되지 않았어요.<br/>현재 채택한 제안서를 제출한 금융회사와 대출을 진행중 이신가요?</dt>
+            <dt class="dot">현재 채택한 제안서를 제출한 금융회사와 대출을 진행중 이신가요?</dt><!-- v2.1 -->
             <dd>
               <div class="formRow">
                 <span class="radio">
@@ -834,8 +836,7 @@
       </div>
       <div class="layerCont">
         <div class="topResultBox">
-          <p class="gray5">Loan&Biz를 사용하신 경험을 공유해주세요.<br/>
-            더 나은 Loan&Biz가 되도록 노력 할게요</p>
+          <p class="gray5">Loan&Biz에서의 경험을 공유해 주시면 더 나은  Loan&Biz가 되도록 할게요.</p><!-- v2.1 -->
         </div>
         <div class="main_survey type2">
           <dl>
@@ -970,7 +971,121 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+  
 
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerTerms1" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid1080">
+      <div class="layerHead">
+        <h3>Loan&Biz 이용약관</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerTerms1" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="termsWrap">
+          <fieldset>
+            <legend>게시물 검색</legend>
+            <div class="searchControlBox">
+              <div class="searchControlGroup">
+                <div class="searchControlItem expand">
+                  <label for="selectLabelState" class="label">현행 시행 일자</label>
+                  <div class="formRow">
+                    <select id="selectLabelState">
+                      <option>2023-12-31</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="searchBtns">
+                  <button type="button" class="btnSuccess">조회</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <ul class="tabLine fullType tabScript" role="tablist">
+            <li class="on"><button type="button" role="tab" aria-selected="true">Loan&Biz 이용약관</button></li>
+            <li><button type="button" role="tab" aria-selected="false">Loan&Biz 운영 정책</button></li>
+          </ul>
+          <div class="agreeCont">
+            <div class="cont">
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerTerms1')"  aria-label="레이어 닫기">동의 하기</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal" id="sampleLayerTerms2" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid1080">
+      <div class="layerHead">
+        <h3>Loan&Biz 이용약관</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayerTerms2" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="termsWrap">
+          <fieldset>
+            <legend>게시물 검색</legend>
+            <div class="searchControlBox">
+              <div class="searchControlGroup">
+                <div class="searchControlItem expand">
+                  <label for="selectLabelState" class="label">현행 시행 일자</label>
+                  <div class="formRow">
+                    <select id="selectLabelState">
+                      <option>2023-12-31</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="searchBtns">
+                  <button type="button" class="btnSuccess">조회</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="agreeCont">
+            <div class="cont">
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerTerms2')"  aria-label="레이어 닫기">동의 하기</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
 
 </body>
 </html>

@@ -83,14 +83,15 @@
             )
           }
       </script>
-      <button type="button" class="btnSuccess" onclick='sample_alert_3(this)'>비외감법인 선택 시</button>
+   
+      <button type="button" class="btnSuccess" onclick='sample_alert_3(this)'>외감법인 선택 시</button>
       <script>
         function sample_alert_3(obj){
             layer_alert(
-              `[비외감 법인] 선택 시 <br/>
-                대표자 유형이 [공동대표]인 경우,<br/>
-                <strong>모든 대표</strong>의 [대표자 정보제공 동의]를 받아야<br/>
-                대출신청 진행이 가능합니다.`,
+              ` <strong>외감법인</strong>의 경우 대표자 정보제공 및 동의없이<br/>
+                다음 단계를 진행할 수 있습니다.<br/>
+                <p class="mt10">대표자 정보 제공 시, 더 많은 금융회사로부터<br/>
+                제안을 받을 수 있습니다.</p>`,
               obj, 
               {
                 confirm : {
@@ -263,30 +264,36 @@
   <!-- layer : start -->
   <!-- **************** -->
   <div class="layerWrap modal" id="sampleLayerAll" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <div class="layerBody wid1000">
+    <div class="layerBody wid1080">
       <div class="layerHead">
         <h3>법인 정보 제공 및 조회 동의</h3>
         <button type="button" class="layerClose" popup-close="sampleLayerAll" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <ul class="tabLine fullType tabScript" role="tablist">
-          <li><button type="button" role="tab" aria-selected="false">법인 정보 제공 동의</button></li>
-          <li><button type="button" role="tab" aria-selected="false">법인 정보 조회 동의</button></li>
-          <li class="on"><button type="button" role="tab" aria-selected="true">법인 정보 제3자 정보 제공 동의</button></li>
-        </ul>
-        <div class="agreeCont">
-          pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
+        <div class="termsWrap"><!-- v2.1 -->
+          <ul class="tabLine fullType tabScript" role="tablist">
+            <li><button type="button" role="tab" aria-selected="false">법인 정보 제공 동의</button></li>
+            <li><button type="button" role="tab" aria-selected="false">법인 정보 조회 동의</button></li>
+            <li class="on"><button type="button" role="tab" aria-selected="true">법인 정보 제3자 정보 제공 동의</button></li>
+          </ul>
+          <div class="agreeCont">
+            <div class="cont"><!-- v2.1 -->
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+            </div>
+            <button type="button" class="prev"><span class="srOnly">이전</span></button><!-- v2.1 -->
+            <button type="button" class="next"><span class="srOnly">다음</span></button><!-- v2.1 -->
+          </div>
         </div>
       </div>
+      
       <div class="layerFoot">
         <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerAll')"  aria-label="레이어 닫기">전체 동의 하기</button>
       </div>
@@ -301,27 +308,31 @@ pdf 약관<br/>
   <!-- layer : start -->
   <!-- **************** -->
   <div class="layerWrap modal" id="sampleLayerOne" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-    <div class="layerBody wid1000">
+    <div class="layerBody wid1080">
       <div class="layerHead">
         <h3>스크래핑 서비스 신청 동의</h3>
         <button type="button" class="layerClose" popup-close="sampleLayerOne" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="agreeCont">
-          pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
+        <div class="termsWrap"><!-- v2.1 -->
+          <div class="agreeCont">
+            <div class="cont"><!-- v2.1 -->
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+              pdf 약관<br/>
+            </div>
+          </div>
         </div>
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerOne')" aria-label="레이어 닫기">동의</button>
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayerOne')" aria-label="레이어 닫기">동의 하기</button>
       </div>
     </div>
     <div class="layerDimm"></div>
@@ -644,7 +655,7 @@ pdf 약관<br/>
             <button type="button" class="btnSuccess">등록</button>
           </div>
           <div class="formDesc">
-            <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF, JPG, PNG 입니다.</p>
+            <p class="notiTxt">업로드 가능한 파일 포맷은 PDF, JPG, PNG 입니다.</p><!-- v2.1 PPT 삭제 -->
             <p class="notiTxt">업로드는 최대 10MB까지 가능합니다.</p>
           </div>
         </div>
@@ -673,12 +684,12 @@ pdf 약관<br/>
           <label class="label wid62">파일명</label>
           <div class="formRow filebox">
             <input type="text" class="input" placeholder="파일을 첨부해 주세요." disabled="disabled" title="선택 파일">
-            <label for="exFilename" class="btnBlack">파일 찾기</label>
             <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            <label for="exFilename" class="btnBlack">파일 찾기</label><!-- v2.1 위치 수정 -->
             <button type="button" class="btnSuccess">등록</button>
           </div>
           <div class="formDesc">
-            <p class="notiTxt">업로드 가능한 파일 포맷은 PPT, PDF, JPG, PNG 입니다.</p>
+            <p class="notiTxt">업로드 가능한 파일 포맷은 PDF, JPG, PNG 입니다.</p><!-- v2.1 ppt 삭제 -->
             <p class="notiTxt">업로드는 최대 10MB까지 가능합니다.</p>
           </div>
         </div>
@@ -790,23 +801,30 @@ pdf 약관<br/>
               <input class="input" type="text" title="법인 담당자 전화번호(2/3)" placeholder="" value="1234" >
               <span class="unit">-</span>
               <input class="input" type="text" title="법인 담당자 전화번호(3/3)" placeholder="" value="5678" >
-              <button type="button" class="btnBlack">본인 확인</button>
+              <!-- <button type="button" class="btnBlack">본인 확인</button> --><!-- v2.1 삭제 -->
             </div>
           </div>
         </section>
-        <div class="formList">
-          <span class="checkbox">
-            <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
-            <label class="label" for="ckbMember1_1"><span></span>서비스 알림 수신 동의 <strong class="blue">(필수)</strong></label><!-- v2.1 워딩수정 -->
-          </span>
-          <a href="" class="goLink ml20">자세히 보기</a>
+        <!-- v2.1 추가 -->
+        <div class="btnBox full mt30">
+          <button type="button" class="btnBlack">본인확인</button>
         </div>
-        <div class="formList">
-          <span class="checkbox">
-            <input type="checkbox" id="ckbMember1_2" name="ckbMember" checked/>
-            <label class="label" for="ckbMember1_2"><span></span>고유식별정보처리 동의 <strong class="blue">(필수)</strong></label>
-          </span>
-          <a href="" class="goLink ml20">자세히 보기</a>
+        <!-- //v2.1 추가 -->
+        <div class="sectionTopLine">
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_1" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_1"><span></span>서비스 알림 수신 동의 <strong class="blue">(필수)</strong></label><!-- v2.1 워딩수정 -->
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
+          <div class="formList">
+            <span class="checkbox">
+              <input type="checkbox" id="ckbMember1_2" name="ckbMember" checked/>
+              <label class="label" for="ckbMember1_2"><span></span>고유식별정보처리 동의 <strong class="blue">(필수)</strong></label>
+            </span>
+            <a href="" class="goLink ml20">자세히 보기</a>
+          </div>
         </div>
 
         <script>
