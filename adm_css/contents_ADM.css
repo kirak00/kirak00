@@ -61,6 +61,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 .container      {padding-top:60px; }
 .bgWrap       {padding:40px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#FAFAFA; }
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
+.bgWrap .formBorderBox table.bbs_list td      {background:#fff; }
 
 section       {max-width:1820px; padding: 0 10px;  }
 .bgWrap section { padding: 0 70px}
@@ -97,6 +98,7 @@ footer    {width:100%; }
 .memberMent div     {margin-top:10px; }
 
 section.detail      {padding:0 120px; }
+section.form      {padding:0 ; }
 ul.innerTab     {max-width:1920px; margin-bottom:40px; margin-top:-20px; }
 
 
@@ -500,3 +502,14 @@ fieldset .searchControlBox { width: 100%;}
 
 .member_disabledChk .sTit     {margin-top:20px; height:40px;  }   
 .member_disabledChk .textarea     {height:80px;  }   
+
+
+
+.formBorderBox        {border:1px solid #ddd; background:#fff; border-radius: 16px; padding:40px;  }
+.formBorderBox ~ .formBorderBox        {margin-top:40px; }
+.formBorderBox .titH4  {margin-bottom:20px; position:relative }
+.formBorderBox .titH4 button  {position:absolute; right:0; padding:0 30px }
+
+.layer_adminManage      {}
+.layer_adminManage .formListWrap      {margin-top:30px; }
+.layer_adminManage h4 ~ h4      {border-top:1px solid #ddd; margin-top:40px; padding-top:40px;   }

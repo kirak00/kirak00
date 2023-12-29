@@ -91,41 +91,74 @@
             var clients = [
               { 
                 "Name1": "새마을금고/삼청지점",
-                // "Name2": "A", //v1.0 삭제 
+                "Name2": "계약중",
                 "Name3": "홍길동", 
                 "Name4": "02-998-8547", 
-                "Name5": "0.5%", 
+                "Name51": "0.5%", 
+                "Name52": "0.5%", 
+                "Name53": "0.5%", 
+                "Name54": "0.5%", 
                 "Name6": "125", 
                 "Name7": "33", 
                 "Name8": "33억 4000만원", 
-                "Name9": "<button type='button' class='btnWhite wid110'>변경하기</button>",  //v1.0 wid110 추가  
+                "Name9": "<button type='button' class='btnWhite wid110'>변경하기</button>",
               },
               { 
-                "Name1": "농협/무교동지점",
-                // "Name2": "B", //v1.0 삭제 
+                "Name1": "새마을금고/삼청지점",
+                "Name2": "계약중",
                 "Name3": "홍길동", 
                 "Name4": "02-998-8547", 
-                "Name5": "0.5%", 
+                "Name51": "0.5%", 
+                "Name52": "0.5%", 
+                "Name53": "0.5%", 
+                "Name54": "0.5%", 
                 "Name6": "125", 
                 "Name7": "33", 
                 "Name8": "33억 4000만원", 
-                "Name9": "<button type='button' class='btnWhite wid110'>변경하기</button>", 
+                "Name9": "<button type='button' class='btnWhite wid80'>변경하기</button> <button type='button' class='btnGray wid80'>이력보기</button>",
               },
             ]; 
 
             $("#jsGrid2").jsGrid({
               data: clients,
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+              gridBodyClass : 'jsgrid-grid-body double',
+              headerRowRenderer: function () { 
+                var $result = $("<tr class='jsgrid-header-row'>")
+                $result.append(`
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">금융기관명</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">상태</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">담당자</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">담당자 연락처</th>
+                    <th scope='col' class='jsgrid-header-cell' colspan="2">적용 수수료율</th>
+                    <th scope='col' class='jsgrid-header-cell' colspan="2">리스 수수료율</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">총 제안 건 수</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">총 대출 실행 건 수</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">총 대출 실행 액</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2" style="width:230px">수수료율 변경</th>
+                  `); 
+                  var $tr = $("<tr class='jsgrid-header-row'>");   
+                  var grid = this;
+                  grid._eachField(function(field, index) {
+                      if (4 <= index && index<=7) {
+                        var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
+                      } 
+                  });
+                  return $result.add($tr);
+              },
               fields: [
                 { name: "Name1",  type: "text", title : "금융기관명", width: 230}, 
-                // { name: "Name2",  type: "text", title : "심사 유형", width: 120}, //v1.0 삭제 
-                { name: "Name3",  type: "text", title : "담당자", width: 130}, //v1.0 워딩수정
-                { name: "Name4",  type: "text", title : "담당자 연락처", width: 200}, //v1.0 워딩수정
-                { name: "Name5",  type: "text", title : "적용 수수료율", width: 200},
+                { name: "Name2",  type: "text", title : "상태", width: 120}, 
+                { name: "Name3",  type: "text", title : "담당자", width: 130},
+                { name: "Name4",  type: "text", title : "담당자 연락처", width: 200},
+                { name: "Name51",  type: "text", title : "담보", width: 200},
+                { name: "Name52",  type: "text", title : "신용", width: 200},
+                { name: "Name53",  type: "text", title : "담보", width: 200},
+                { name: "Name54",  type: "text", title : "신용", width: 200},
                 { name: "Name6",  type: "text", title : "총 제안 건 수", width: 200},
                 { name: "Name7",  type: "text", title : "총 대출 실행 건 수", width: 200},
                 { name: "Name8",  type: "text", title : "총 대출 실행 액", width: 230},
-                { name: "Name9", type: "text", title : "적용 수수료율 변경", width: 230 },
+                { name: "Name9", type: "text", title : "수수료율 변경", width: 300 },
               ],
               pagerContainer: "#externalPager2",
             });

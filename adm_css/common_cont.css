@@ -939,6 +939,8 @@ select.wid430 { min-width: 430px;}
 .layerCont .formList:last-child { margin-bottom: 0;}
 .layerCont .formList { width: 100%; margin: 30px 0; }
 .layerCont .formList .label { width: 100px; margin-right: 0px;}
+.layerCont .longLabel .formList .label { width: 160px;}
+.layerCont .longLabel .formList .formRow { width: calc(100% - 160px);}
 .layerCont .formList .radio .label { width: auto;}
 .layerCont .formList .formRow { max-width: calc(100% - 100px);}
 .layerCont .formList .notiTxt { margin-left: 100px;}
@@ -1397,6 +1399,13 @@ table { width: 100%;}
 .formListTable .btnSuccess.px32 { padding-left: 32px; padding-right: 32px;}
 .formListTable .table_bt { padding-top: 45px;}
 .formListTable .titH4.hasLine + table { margin-top: 25px; }
+
+
+.formListTable td table.bbs_list thead tr:only-child th:first-child,
+.formListTable td table.bbs_list thead tr:only-child th:last-child  {padding:0;  }
+.formListTable td .bbs_list th,
+.formListTable td .bbs_list td  {vertical-align: middle; text-align: center; padding:0;  }
+
 
 .formListTable.wid365 .formRow { width: 365px;}
 .formListTable.wid365 .formRow .input,
@@ -2423,4 +2432,13 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .visitViewCont .layerSearch .rangeControl          { padding:20px 0 0; } 
 .visitViewCont .layerSearch .rangeControl .input    { width:80px  } 
 
+.unit.prev    {position:absolute; padding-left:20px; color:#333;  }
+.unit.prev + .input    {padding-left:40px; width:500px; }
+.unit.prev ~ .notiTxt    {margin:0; margin-left:16px;  }
 
+.txt2Box + .txt2Box   {margin-left:20px; }
+.txt2Box .unit.prev2    {position:absolute; padding-left:20px; color:#333; line-height:50px;   }
+.txt2Box .unit.prev2 + .input    {padding-left:70px; width:100%; text-align: right; }
+.txt2Box .unit.prev2 ~ .notiTxt    {margin:0; margin-left:16px;  }
+
+.layerCont .tabConts .resultBox   {margin-top:20px; }

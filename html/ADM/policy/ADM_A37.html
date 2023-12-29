@@ -33,7 +33,8 @@
       class="open_layer"  // 팝업 호출
       aria-controls="레이어 ID" // 접근성 팝업 알림용
       -->
-      <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">수수료율 변경</button>
+      <button type="button" class="btnSuccess " onclick="layer_open('sampleLayer1',this)" >수수료율 변경</button>
+      <button type="button" class="btnSuccess " onclick="layer_open('sampleLayer2',this)" >수수료율 변경 이력</button>
     </section>
 
   </div>
@@ -44,63 +45,87 @@
   <!-- layer : start -->
   <!-- **************** -->
   <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-  <div class="layerWrap show" id="sampleLayer" role="dialog" aria-modal="true" ><!-- v1.0 typeAlert 삭제 -->
+  <div class="layerWrap " id="sampleLayer1" role="dialog" aria-modal="true" ><!-- v1.0 typeAlert 삭제 -->
     <div class="layerBody wid600">
       <div class="layerHead">
         <h3>새마을금고의 적용 수수료율 변경</h3>
-        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+        <button type="button" class="layerClose" popup-close="sampleLayer1" aria-label="레이어 닫기"></button>
       </div>
       <div class="layerCont">
-        <div class="resultBox">
-          <p class="blue">현재 적용 수수료율 <strong>0.5%</strong>
-          </p>
-        </div>
-        <div class="radioIndent">
-          <span class="radio">
-            <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
-            <label class="label" for="formLabel1_1"><span></span>한시적 수수료율 변경 </label>
-          </span>
-          <p class="pntCol_1 mt6">(적용 기한이 지나면 원래의 수수료율이 반영됩니다)</p>
-        </div>
-        <div class="formLisLine">
-          <div class="formList">
-            <label class="label" for="labelExtraOp1">적용 기한</label>
-            <div class="formRow">
-              <div class="rangeControl">
-                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                <span class="uit">~</span>
-                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-              </div>           
+
+        <ul role="tablist" class="tabLine fullType tabScript">
+          <li class="on"><button id="tab_1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">대출</button></li>
+          <li><button id="tab_2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">리스</button></li>
+        </ul>
+        <div class="tabConts">
+          <div class="resultBox">
+            <p class="blue">현재 적용 수수료율 <strong>0.5%</strong>
+            </p>
+          </div>
+          <div class="radioIndent">
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_1"><span></span>한시적 수수료율 변경 </label>
+            </span>
+            <p class="pntCol_1 mt6">(적용 기한이 지나면 원래의 수수료율이 반영됩니다)</p>
+          </div>
+          <div class="formLisLine">
+            <div class="formList">
+              <label class="label" for="labelExtraOp1">적용 기한</label>
+              <div class="formRow">
+                <div class="rangeControl">
+                  <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>           
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label" for="labelExtraOp2">적용<br>수수료율</label>
+              <div class="formRow">
+                <div class="txt2Box">
+                  <span class="unit prev2">신용</span>
+                  <input class="input innerTxt_1 wid300" type="text" placeholder="0.0" value="" title="">
+                  <span class="unit">%</span>
+                </div>
+                <div class="txt2Box">
+                  <span class="unit prev2">담보</span>
+                  <input class="input innerTxt_1 wid300" type="text" placeholder="0.0" value="" title="">
+                  <span class="unit">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="formList">
+              <label class="label" for="labelExtraOp3">적용 사유</label>
+              <div class="formRow">
+                <textarea id="labelExtraOp3" class="textarea h100" placeholder=""></textarea>
+              </div>
             </div>
           </div>
-          <div class="formList">
-            <label class="label" for="labelExtraOp2">적용<br>수수료율</label>
-            <div class="formRow">
-              <input class="input innerTxt_1 wid155" id="inpLabelRate" type="text" placeholder="" value="0.50">
-              <span class="unit">%</span>
-            </div>
-          </div>
-          <div class="formList">
-            <label class="label" for="labelExtraOp3">적용 사유</label>
-            <div class="formRow">
-              <textarea id="labelExtraOp3" class="textarea h100" placeholder=""></textarea>
+          <div class="radioIndent">
+            <span class="radio">
+              <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+              <label class="label" for="formLabel1_1"><span></span>계약 변경에 의한 수수료율 변경</label>
+            </span>
+            <p class="pntCol_1 mt6">(적용 후 새롭게 생성되는 청구 내역서부터 반영됩니다)</p>
+            <div class="formRow mt20">
+              <div class="txt2Box">
+                <span class="unit prev2">신용</span>
+                <input class="input innerTxt_1 wid300" type="text" placeholder="0.0" value="" title="">
+                <span class="unit">%</span>
+              </div>
+              <div class="txt2Box">
+                <span class="unit prev2">담보</span>
+                <input class="input innerTxt_1 wid300" type="text" placeholder="0.0" value="" title="">
+                <span class="unit">%</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="radioIndent">
-          <span class="radio">
-            <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
-            <label class="label" for="formLabel1_1"><span></span>계약 변경에 의한 수수료율 변경</label>
-          </span>
-          <p class="pntCol_1 mt6">(적용 후 새롭게 생성되는 청구 내역서부터 반영됩니다)</p>
-          <div class="formRow mt20">
-            <input class="input innerTxt_1 wid135" type="text" placeholder="000" value="" title="">
-            <span class="unit">%</span>
-          </div>
-        </div>
+
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">적용</button>
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer1')">적용</button>
       </div>
     </div>
     <div class="layerDimm"></div>
@@ -108,6 +133,112 @@
   <!-- **************** -->
   <!-- layer : end -->
   <!-- **************** -->
+
+
+  
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+  <div class="layerWrap show" id="sampleLayer2" role="dialog" aria-modal="true" ><!-- v1.0 typeAlert 삭제 -->
+    <div class="layerBody wid1400">
+      <div class="layerHead">
+        <h3>수수료율 변경 이력</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer2" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        
+          <h4 class="titH4">계약에 의한 변경 이력</h4>
+          
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>계약에 의한 변경 이력</caption>
+              <colgroup>
+                <col />
+                <col width="200px" />
+                <col width="200px" />
+                <col width="200px" />
+                <col width="200px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">변경일</th>
+                  <th scope="col">적용 항목</th>
+                  <th scope="col">신용</th>
+                  <th scope="col">담보</th>
+                  <th scope="col">변경 운영자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023-11-14</td>
+                  <td>대출</td>
+                  <td>0.4%</td>
+                  <td>0.5%</td>
+                  <td>박*일</td>
+                </tr>
+              </thead>
+              <tbody>
+            </table>
+          </div>
+
+
+          <h4 class="titH4">한시적 변경 이력</h4>
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>한시적 변경 이력</caption>
+              <colgroup>
+                <col />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="100px" />
+                <col width="250px" />
+                <col width="200px" />
+                <col width="150px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">변경일</th>
+                  <th scope="col">사유</th>
+                  <th scope="col" colspan="2">적용 항목</th>
+                  <th scope="col">변경 전</th>
+                  <th scope="col">변경 후</th>
+                  <th scope="col">한시적 수수료율 적용 기간</th>
+                  <th scope="col">한시적 수수료율 변경 사유</th>
+                  <th scope="col">변경 운영자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023-11-14</td>
+                  <td>한시적</td>
+                  <td>리스</td>
+                  <td>담보</td>
+                  <td>0.4%</td>
+                  <td>0.5%</td>
+                  <td>2023-01-01 ~ 2023-05-14</td>
+                  <td>프로모션 방향성 변경</td>
+                  <td>박*일</td>
+                </tr>
+              </thead>
+              <tbody>
+            </table>
+          </div>
+        
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer2')">적용</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
 
 
 </body>

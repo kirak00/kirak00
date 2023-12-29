@@ -1297,17 +1297,19 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .layerCont .accordionItem + .accordionItem { margin-top: 20px;}
 
 .formAccordion .accordionTitle  { display: flex; align-items: center;  padding: 20px 42px 20px 40px}
-.formAccordion .accordionTitle .accordionTrigger { width: 60px; height: 60px; margin-left: 2px; padding: 0; flex-shrink: 0; }
+.formAccordion .accordionTitle .accordionTrigger { width: 50px; height: 50px; margin-left: 2px; padding: 0; flex-shrink: 0; margin-bottom:auto }
 .formAccordion .isOpen .accordionTrigger .accordionIcon { transform: rotate(180deg) ;}
 .formAccordion .accordionTitle .label { width: 200px; flex-shrink: 0;}
 .formAccordion .accordionTitle select { flex:1}
-.formAccordion .accordionTitle input[type=text] { flex:1}
+.formAccordion .accordionTitle input[type=text] { flex:1; }
 .formAccordion .accordionTitle .productTit { flex:1; display:flex; justify-content: space-between; font-weight: 400;}
 .formAccordion .accordionTitle .productTit em {font-size:18px; color:#333;   }
 .formAccordion .accordionTitle .productTit span { font-size:16px; color:#888;   }
-.formAccordion .accordionIcon { position: relative; top: 0; right: 0; width: 60px; height: 60px; flex-shrink: 0; transform: none;}
+.formAccordion .accordionIcon { position: relative; top: 0; right: 0; width: 50px; height: 50px; flex-shrink: 0; transform: none;}
 .formAccordion .accordionTitle .btnDelete + .label { width: 146px;}
 .formAccordion .accordionTitle .btnDelete::after { content:""; display:inline-block; width:34px; height:34px; margin-right: 20px; background: url('../images/common/ico_34_close.png')  no-repeat center / cover; }
+.formAccordion .accordionTitle .inputWrap { width:100% }
+.formAccordion .accordionTitle .inputWrap { }
 
 
 .agreeContent + .titH3{ margin-top: 60px}

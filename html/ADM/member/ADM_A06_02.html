@@ -127,7 +127,7 @@
                   <th scope="row">
                     <label class="label" id="inpBizAdd">본사 주소</label>
                   </th>
-                  <td role="group" aria-labelledby="inpBizAdd">
+                  <!-- <td role="group" aria-labelledby="inpBizAdd">
                     <div class="formRow">
                       <input class="input " type="text" title="주소" placeholder="주소를 검색해 주세요." value="" readonly>
                       <button type="button" class="btnBlack" disabled>주소검색</button>
@@ -135,6 +135,32 @@
                     <div class="formRow">
                       <input class="input" type="text" title="상세주소" placeholder="상세 주소를 입력해 주세요." value="" readonly>
                     </div>
+                  </td> -->
+                  <td>
+                    
+                    <div class="formRow">
+                      <div class="table_wrap">
+                        <table class="bbs_list">
+                          <colgroup>
+                            <col width="20%" />
+                            <col />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>지역</th>
+                              <th>주소</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>서울</td>
+                              <td>마포구 양화로 10길 50 마이빌딩 5층</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    
                   </td>
                 </tr>
 
@@ -166,7 +192,7 @@
                     <label class="label" for="inpBizTel">알림 수신자</label>
                   </th>
                   <td>
-                    <div class="formRow long" role="group" aria-labelledby="inpBizTel">
+                    <!-- <div class="formRow long" role="group" aria-labelledby="inpBizTel">
                       <input class="input" type="text"  readonly value="홍길동">
                       <span class="bar"></span>
 
@@ -186,49 +212,34 @@
 
                       <input class="input" type="text"  readonly value="수신 동의일 2023-01-22">
 
+                    </div> -->
+                    
+                    <div class="formRow">
+                      <div class="table_wrap">
+                        <table class="bbs_list">
+                          <colgroup>
+                            <col width="30%" />
+                            <col width="30%" />
+                            <col />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>성명</th>
+                              <th>휴대 전화 번호</th>
+                              <th>수신 동의일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>홍길동</td>
+                              <td>010-1245-4**8</td>
+                              <td>2023-01-04</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <div class="formRow long" role="group" aria-labelledby="inpBizTel">
-                      <input class="input" type="text"  readonly value="홍길동">
-                      <span class="bar"></span>
-
-                      <input class="input num" type="text" title="수신자번호(1/3)" readonly value="0000">
-                      <span class="unit">-</span>
-                      <input class="input num" type="text" title="수신자번호(2/3)" readonly value="0000">
-                      <span class="unit">-</span>
-                      <input class="input num" type="text" title="수신자번호(3/3)" readonly value="0000">
-                      
-                      <span class="bar"></span>
-
-                      <input class="input" type="text" title="" readonly value="0000">
-                      <span class="unit">@</span>
-                      <input class="input" type="text" title="" readonly value="0000">
-
-                      <span class="bar"></span>
-
-                      <input class="input" type="text"  readonly value="수신 동의일 2023-01-22">
-
-                    </div>
-                    <div class="formRow long" role="group" aria-labelledby="inpBizTel">
-                      <input class="input" type="text"  readonly value="홍길동">
-                      <span class="bar"></span>
-
-                      <input class="input num" type="text" title="수신자번호(1/3)" readonly value="0000">
-                      <span class="unit">-</span>
-                      <input class="input num" type="text" title="수신자번호(2/3)" readonly value="0000">
-                      <span class="unit">-</span>
-                      <input class="input num" type="text" title="수신자번호(3/3)" readonly value="0000">
-                      
-                      <span class="bar"></span>
-
-                      <input class="input" type="text" title="" readonly value="0000">
-                      <span class="unit">@</span>
-                      <input class="input" type="text" title="" readonly value="0000">
-
-                      <span class="bar"></span>
-
-                      <input class="input" type="text"  readonly value="수신 동의일 2023-01-22">
-
-                    </div>
+                    
                   </td>
                 </tr>
 
@@ -263,7 +274,7 @@
   <!-- **************** -->
   <!-- layer : start -->
   <!-- **************** -->
-  <div class="layerWrap modal show " id="member_disabled" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+  <div class="layerWrap modal  " id="member_disabled" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid500">
       <div class="layerHead">
         <h3>계정 비활성화</h3>
