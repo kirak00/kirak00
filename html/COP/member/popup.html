@@ -103,28 +103,34 @@
     <!-- layer : start -->
     <!-- **************** -->
     <div class="layerWrap modal" id="sampleLayerAll" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-      <div class="layerBody wid1000">
+      <div class="layerBody wid1080"><!-- v2.1 -->
         <div class="layerHead">
           <h3>전체<span class="blue">(필수)</span> 동의</h3>
           <button type="button" class="layerClose" popup-close="sampleLayerAll" aria-label="레이어 닫기"></button>
         </div>
         <div class="layerCont">
-          <ul class="tabLine fullType tabScript" role="tablist">
-            <li><button type="button" role="tab" aria-selected="false">이용약관 동의</button></li>
-            <li><button type="button" role="tab" aria-selected="false">개인정보 수집 및 이용동의</button></li>
-            <li class="on"><button type="button" role="tab" aria-selected="true">제 3자 제공 동의</button></li>
-          </ul>
-          <div class="agreeCont">
-            pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
+          <div class="termsWrap hasBtn"><!-- v2.1 -->
+            <ul class="tabLine fullType tabScript" role="tablist">
+              <li><button type="button" role="tab" aria-selected="false">이용약관 동의</button></li>
+              <li><button type="button" role="tab" aria-selected="false">개인정보 수집 및 이용동의</button></li>
+              <li class="on"><button type="button" role="tab" aria-selected="true">제 3자 제공 동의</button></li>
+            </ul>
+            <div class="agreeCont">
+              <div class="cont"><!-- v2.1 -->
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+              </div>
+              <button type="button" class="prev"><span class="srOnly">이전</span></button><!-- v2.1 -->
+              <button type="button" class="next"><span class="srOnly">다음</span></button><!-- v2.1 -->
+            </div>
           </div>
         </div>
         <div class="layerFoot">
@@ -141,27 +147,31 @@ pdf 약관<br/>
     <!-- layer : start -->
     <!-- **************** -->
     <div class="layerWrap modal" id="sampleLayer" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
-      <div class="layerBody wid1000">
+      <div class="layerBody wid1080"><!-- v2.1 -->
         <div class="layerHead">
           <h3>이용약관 동의</h3>
           <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
         </div>
         <div class="layerCont">
-          <div class="agreeCont">
-            pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
-pdf 약관<br/>
+          <div class="termsWrap"><!-- v2.1 -->
+            <div class="agreeCont">
+              <div class="cont"><!-- v2.1 -->
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+                pdf 약관<br/>
+              </div>
+            </div>
           </div>
         </div>
         <div class="layerFoot">
-          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')" aria-label="레이어 닫기">동의</button>
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')" aria-label="레이어 닫기">동의 하기</button><!-- v2.1 -->
         </div>
       </div>
       <div class="layerDimm"></div>
@@ -183,43 +193,43 @@ pdf 약관<br/>
           <div class="radioList">
             <span class="radio">
               <input type="radio" id="rdoLabel1" name="rdoName" value="" checked="">
-              <label class="label" for="rdoLabel1"><span></span>홍길동 / 서소문점</label>
+              <label class="label" for="rdoLabel1"><span></span>홍*동 / 서소문점</label>
             </span>
             <span class="radio">
               <input type="radio" id="rdoLabel2" name="rdoName" value="">
-              <label class="label" for="rdoLabel2"><span></span>홍길동 / 마포구청점</label>
+              <label class="label" for="rdoLabel2"><span></span>홍*동 / 마포구청점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel3" name="rdoName" value="">
-              <label class="label" for="rdoLabel3"><span></span>홍길동 / 광교지점</label>
+              <label class="label" for="rdoLabel3"><span></span>홍*동 / 광교지점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel4" name="rdoName" value="">
-              <label class="label" for="rdoLabel4"><span></span>홍길동 / 마포구청점</label>
+              <label class="label" for="rdoLabel4"><span></span>홍*동 / 마포구청점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel5" name="rdoName" value="">
-              <label class="label" for="rdoLabel5"><span></span>홍길동 / 광교지점</label>
+              <label class="label" for="rdoLabel5"><span></span>홍*동 / 광교지점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel6" name="rdoName" value="" checked="">
-              <label class="label" for="rdoLabel6"><span></span>홍길동 / 서소문점</label>
+              <label class="label" for="rdoLabel6"><span></span>홍*동 / 서소문점</label>
             </span>
             <span class="radio">
               <input type="radio" id="rdoLabel7" name="rdoName" value="">
-              <label class="label" for="rdoLabel7"><span></span>홍길동 / 마포구청점</label>
+              <label class="label" for="rdoLabel7"><span></span>홍*동 / 마포구청점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel8" name="rdoName" value="">
-              <label class="label" for="rdoLabel8"><span></span>홍길동 / 광교지점</label>
+              <label class="label" for="rdoLabel8"><span></span>홍*동 / 광교지점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel9" name="rdoName" value="">
-              <label class="label" for="rdoLabel9"><span></span>홍길동 / 마포구청점</label>
+              <label class="label" for="rdoLabel9"><span></span>홍*동 / 마포구청점</label>
             </span> 
             <span class="radio">
               <input type="radio" id="rdoLabel10" name="rdoName" value="">
-              <label class="label" for="rdoLabel10"><span></span>홍길동 / 광교지점</label>
+              <label class="label" for="rdoLabel10"><span></span>홍*동 / 광교지점</label>
             </span> 
           </div>
         </div>

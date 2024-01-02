@@ -1199,7 +1199,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .divTable .row .cell { position: relative; display: flex; padding: 0 20px; justify-content: center; }
 
 /* .divTable .row .cell .wid62 { width: 62px;} */
-.divTable .row .cell .period { width: 72px; text-align: right;}
+.divTable .row .cell .period { width: 80px; text-align: right;}
 .divTable .head .row { min-height: 60px; padding: 10px 60px; background: #EFF5EF;}
 .divTable .body { padding: 20px 60px 40px; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #ddd; border-radius: 0 0 16px 16px;}
 
@@ -1363,6 +1363,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .agreeForm .agreeTitle.main { background: #F6FBF7; padding: 0 60px 0 40px; }
 .agreeForm .agreeTitle.main .btnWhite { width: 150px; }
 .layerCont .tabLine + .agreeCont { margin-top: 20px;}
+
 .layerCont .agreeCont { max-height: 500px; height: 500px; overflow: auto;}
 .layerCont .agreeCont .cont { max-width: 900px; min-height: 100%; margin: 0 auto; padding: 20px 40px; background: #fafafa; border: 1px solid #ddd; border-radius: 16px;}
 .layerCont .agreeCont .prev,
@@ -1617,6 +1618,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .table_bt.hasLine .icoLink { display: block; margin-top: -10px;}
 /* .bgGray + .table_bt      { margin-top:20px; } */
+.table_bt .notiTxt { margin-top: 0; }
 
 .jsGridWrap .table_bt,
 .table_bt.small { min-height: unset; margin-top: 20px;}
