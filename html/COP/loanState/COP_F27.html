@@ -132,14 +132,16 @@
                         <th scope="row">가장 빠른 대출<br/>실행 가능일</th> 
                         <td>제안서 채택 후 <strong>3</strong>일 이후</td>
                       </tr>
-                      <tr> 
-                        <th scope="row">대출 기간</th> 
-                        <td><strong>48</strong> 개월 </td>
-                      </tr>
+                      <!-- v2.1 상환 방식,대출 기간 순서변경 -->
                       <tr> 
                         <th scope="row">상환 방식</th> 
                         <td>원금균등</td>
                       </tr>
+                      <tr> 
+                        <th scope="row">대출 기간</th> 
+                        <td><strong>48</strong> 개월 </td>
+                      </tr>
+                      <!-- //v2.1 상환 방식,대출 기간 순서변경 -->
                       <tr> 
                         <th scope="row">거치 기간</th> 
                         <td>10개월</td>
@@ -174,7 +176,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <p class="notiTxt">기준금리, 당일 기준 합산 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
+                          <p class="notiTxt">기준금리, 최종 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
                         </td>
                       </tr>
                       <tr> 
@@ -216,104 +218,102 @@
                           </div>
                         </td>
                       </tr>
+                      <!-- v2.1 수정 -->
+                      <tr>
+                        <th scope="row">이자 부과 시기 및 방법</th> 
+                        <td>1개월 / 후취</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">연체 금리</th> 
+                        <td class="">4.5%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">중도 상환 수수료</th> 
+                        <td class="">4.2% / 3개월 단위로 변경될 수 있음</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">한도 약정 수수료(율)</th> 
+                        <td class="">10%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">대출시 부대 비용</th> 
+                        <td>대출 시 부대 비용 상세 내용 제공</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">인지세</th> 
+                        <td>
+                          인지 세법에 따라 대출 신규 약정 시 납부하는 세금으로 대출 금액에 따라 세액이 자동 적용되며, 금융 회사와 고객이 각각 50%씩 부담합니다.
+                          <div class="table_wrap mt10"><!-- 1.9 수정  -->
+                            <table class="bbs_list gray">
+                              <caption>인지세</caption>
+                              <colgroup>
+                                <col width="140px" />
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">대출 금액</th>
+                                  <th scope="col">5천만원 이하</th>
+                                  <th scope="col">5천만원 초과<br/>~ 1억원 이하</th>
+                                  <th scope="col">1억원 초과<br/> ~ 10억원 이하</th>
+                                  <th scope="col">10억원 초과</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>인지세액</th>
+                                  <td>비과세</td>
+                                  <td>7만원</td>
+                                  <td>15만원</td>
+                                  <td>35만원</td>
+                                </tr>
+                                <tr>
+                                  <th>고객부담</th>
+                                  <td>-</td>
+                                  <td>3만 5천원</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                                <tr>
+                                  <th>금융 회사 부담</th>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                              <tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- //v2.1 수정 -->
                     </tbody>
                   </table>
                 </div>
-
-                <div class="notiBox bgWhite">
-                  <div class="">
-                    <h4 class="titH5 hasLine">유의사항 (금융 회사)</h4>
-                    <div class="textTable">
-                      <table>
-                        <caption>업체개요</caption>
-                        <colgroup>
-                          <col width="200px" /><!-- v1.4 수정 -->
-                          <col />
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">이자 부과 시기 및 방법</th> 
-                            <td>1개월 / 후취</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">연체 금리</th> 
-                            <td class="">4.5%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">중도 상환 수수료</th> 
-                            <td class="">4.2% / 3개월 단위로 변경될 수 있음</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">한도 약정 수수료(율)</th> 
-                            <td class="">10% / 1,000,000원</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">대출시 부대 비용</th> 
-                            <td>부대비용 대출금액 1% 부과 됩니다.</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">인지세</th> 
-                            <td>
-                              인지 세법에 의해 대출 약정 체결시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융 회사와 고객이 
-                              각각 50%씩 부담
-                              <div class="table_wrap mt10"><!-- 1.9 수정  -->
-                                <table class="bbs_list gray">
-                                  <caption>인지세</caption>
-                                  <colgroup>
-                                    <col width="140px" />
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                  </colgroup>
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">대출 금액</th>
-                                      <th scope="col">5천만원 이하</th>
-                                      <th scope="col">5천만원 초과<br/>~ 1억원 이하</th>
-                                      <th scope="col">1억원 초과<br/> ~ 10억원 이하</th>
-                                      <th scope="col">10억원 초과</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th>인지세액</th>
-                                      <td>비과세</td>
-                                      <td>7만원<p class="sub">(각각 3만 5천원)</p></td>
-                                      <td>15만원<p class="sub">(각각 7만 5천원)</p></td>
-                                      <td>35만원<p class="sub">(각각 17만 5천원)</p></td>
-                                    </tr>
-                                  <tbody>
-                                </table>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="sectionBlock40">
-                    <h4 class="titH5 hasLine">유의사항 (Loan&Biz)</h4>
-                    <ul class="guideList dot">
-                      <li class="list">$신한은행$의 심사기준과 기업의 신용도 등에 따라 대출 여부 및 대출 한도가 결정됩니다.</li>
-                      <li class="list">상기 상품 내용은 $신한은행$ 내부 기준에 따라 대출조건이 변경 또는 제한될 수 있습니다.</li>
-                      <li class="list">실제 상품의 계약은 &nbsp;<strong>계약 시점</strong>의 여신거래기본약관 및 대출거래약정서의 적용을 받습니다.</li>
-                      <li class="list">실제 대출 조건과 제안 조건은 다를 수 있습니다.</li>
-                      <li class="list">과도한 대출은 기업의 신용등급에 영향을 미칠 수 있습니다.</li>
-                      <li class="list">기간 연장시점에는 해당 시점의 기업 신용도 등에 따라 대출금의 일부 또는 전부가 회수될 수 있습니다.</li>
-                      <li class="list">대출금의 상환 또는 이자 납입이 지연된 경우 연체 이율이 적용되며, 예금 등 기타채권과의 상계나 법척 절차 등으로 재산상의 불이익이 발생할 수 있습니다.</li>
-                      <li class="list">연체 시 계약기한 만료 전 원리금 변제 의무가 발생할 수 있습니다.</li>
-                      <li class="list">해당상품에 대한 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
-                    </ul>
-                  </div>
-                  <div class="sectionBlock40">
-                    <h4 class="titH5 hasLine">안내 사항</h4>
-                    <ul class="guideList dot">
-                      <li class="list">기타 자세한 내용은 제안서 상단에 기재된 $신한은행 세종로기업금융센터$ 담당자에게 연락해주세요.</li>
-                      <li class="list">연락 가능 시간: 평일 09:00 - 17:00 (휴무일 제외)</li>
-                      <li class="list">주소: $신한은행 세종로기업금융센터 서울특별시 종로구 새문안로3길 23$</li>
-                    </ul>
-                  </div>
+                <div class="sectionBlock40">
+                  <h4 class="titH5 hasLine">유의사항 (Loan&Biz)</h4>
+                  <ul class="guideList dot">
+                    <li class="list">$신한은행$의 심사기준과 기업의 신용도 등에 따라 대출 여부 및 대출 한도가 결정됩니다.</li>
+                    <li class="list">상기 상품 내용은 $신한은행$ 내부 기준에 따라 대출조건이 변경 또는 제한될 수 있습니다.</li>
+                    <li class="list">실제 상품의 계약은 &nbsp;<strong>계약 시점</strong>의 여신거래기본약관 및 대출거래약정서의 적용을 받습니다.</li>
+                    <li class="list">실제 대출 조건과 제안 조건은 다를 수 있습니다.</li>
+                    <li class="list">과도한 대출은 기업의 신용등급에 영향을 미칠 수 있습니다.</li>
+                    <li class="list">기간 연장시점에는 해당 시점의 기업 신용도 등에 따라 대출금의 일부 또는 전부가 회수될 수 있습니다.</li>
+                    <li class="list">대출금의 상환 또는 이자 납입이 지연된 경우 연체 이율이 적용되며, 예금 등 기타채권과의 상계나 법척 절차 등으로 재산상의 불이익이 발생할 수 있습니다.</li>
+                    <li class="list">연체 시 계약기한 만료 전 원리금 변제 의무가 발생할 수 있습니다.</li>
+                    <li class="list">해당상품에 대한 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
+                  </ul>
+                </div>
+                <div class="sectionBlock40">
+                  <h4 class="titH5 hasLine">안내 사항</h4>
+                  <ul class="guideList dot">
+                    <li class="list">기타 자세한 내용은 제안서 상단에 기재된 $신한은행 세종로기업금융센터$ 담당자에게 연락해주세요.</li>
+                    <li class="list">연락 가능 시간: 평일 09:00 - 17:00 (휴무일 제외)</li>
+                    <li class="list">주소: $신한은행 세종로기업금융센터 서울특별시 종로구 새문안로3길 23$</li>
+                  </ul>
                 </div>
                 <!-- v2.0 -->
                 <div class="table_bt small mt40">

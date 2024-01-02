@@ -146,10 +146,11 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 
 /*  메인 대출 진행 */
 .mainLoanSelct     { display: flex; align-items: center; position:relative; width:100%; padding: 15px 40px; color:#fff; font-size:26px; border-radius: 16px; background:#069B66; }
-.mainLoanSelct select { height: 30px; text-align: center; color:#fff; font-size:18px; border:0; padding-left:0; background:url(../images/common/ico_24_down_w.png) no-repeat top 50% right 0 #069B66; }
+.mainLoanSelct select { height: 30px; text-align: center; color:#fff; font-size:18px; border:0; padding-left:0; background:url(../images/common/ico_24_down_w.png) no-repeat top 50% right 0 #069B66; font-weight: 700; }
 .mainLoanSelct select:focus { outline-color: #fff;}
 .mainLoanSelct select option {background:#fff; color:#333;  }
 .mainLoanSelct button.search {position:absolute; top: 50%; right:40px; margin-top: -20px; padding:0 30px; border:1px solid #ddd; color:#fff; height:36px; border-radius:25px; font-weight: 700;  }
+.mainLoanSelct button.btnRoundWhite {position:absolute; top: 50%; right:40px; margin-top: -18px;}
 /* .mainLoanSelct button:hover {background:#fff; color:#1EA885}
 .mainLoanSelct .btnWhite:hover.ico_calendar::after { background-image: url(../images/common/ico_18_calendar_primary.png); } */
 .mainLoanSelct button::-moz-focus-outer{ outline: 2px dashed #fff;}
