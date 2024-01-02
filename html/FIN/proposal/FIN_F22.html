@@ -174,10 +174,16 @@
             <div class="accordionItem isOpen">
               <h3 class="accordionTitle">
                 <span class="label" for="formLabel_tit_1" >상품명1</span>
-                <!-- <select name="" id=" " title="대출 상품 선택" >
-                  <option value="">대출 상품을 선택해 주세요.</option>
-                </select> -->
+                <div class="inputWrap">
                   <input type="text" class="input" id="formLabel_tit_1" placeholder="상품명을 입력해 주세요." >
+                  <div class="formRow filebox single">
+                    <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+                    <label for="exFilename" class="btnBlack">상품 안내 자료 첨부</label>  
+                    <div class="attached">
+                      <p class="notiTxt"> 상품 안내 자료를 등록해 주세요. (pdf, jpg, png만 가능)</p>
+                    </div>
+                  </div>
+                </div>
                 <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id"><span class="accordionIcon"></span></button>
               </h3>
               <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
@@ -200,7 +206,7 @@
                               <option>시설자금</option>
                               <option>운영자금</option>
                             </select>
-                            <button type="button" class="btnSuccess" aria-controls="tabpanel_1" >선택 </button>
+                            <button type="button" class="btnWhite" aria-controls="tabpanel_1" >적용 </button>
                           </div>
                           <div class="formVertical lineBox" id="tabpanel_1" title="시설자금/운영자금 자금용도 선택">
                             <h5 class="titH5 detail">자금 상세 용도</h5>

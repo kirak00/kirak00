@@ -482,4 +482,11 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
 .searchControlItem .unit.txt {font-size: 16px;}
 
+
+.formAccordion .accordionTitle      {background:#F6FBF7; border-radius:16px 16px 0 0}
+.formAccordion .accordionTitle .accordionTrigger    {border:1px solid #069B66; border-radius: 8px; background-color:#fff;  }
+.formAccordion .accordionIcon   {width:100%;}
+.formAccordion .accordionTitle .filebox    {margin-top:12px; }
+
+.filebox.single label.btnBlack { height:40px; line-height:40px; padding:0 30px; }
 /* 진희 */

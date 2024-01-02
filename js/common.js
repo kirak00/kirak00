@@ -73,15 +73,15 @@ $(function(){
   $( ".calendar" ).datepicker({
   });
   
-  $(".calendarMonth").monthpicker({
-      monthNames: ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)', '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)'],
-      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      showOn: "button",
-      buttonImage: "../../Images/Goods/calendar.jpg",
-      changeYear: false,
-      yearRange: 'c-2:c+2',
-      dateFormat: 'yy-mm'
-  });
+  // $(".calendarMonth").monthpicker({
+  //     monthNames: ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)', '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)'],
+  //     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+  //     showOn: "button",
+  //     buttonImage: "../../Images/Goods/calendar.jpg",
+  //     changeYear: false,
+  //     yearRange: 'c-2:c+2',
+  //     dateFormat: 'yy-mm'
+  // });
 
 
   } catch (error) {
@@ -669,6 +669,7 @@ function accordion() {
     constructor(domNode) {
       this.rootEl = domNode;
       this.buttonEl = this.rootEl.querySelector('[aria-expanded]');
+      console.log(this.buttonEl)
       const controlsId = this.buttonEl.getAttribute('aria-controls');
       this.contentEl = document.getElementById(controlsId);
       this.open = this.buttonEl.getAttribute('aria-expanded') === 'true';
@@ -726,7 +727,7 @@ function accordion() {
   //   new Accordion(accordionEl);
   // });
   
-  $(document).on('click', '.accordion .accordionTitle button',  function(e){
+  $(document).on('click', '.accordion .accordionTitle button.accordionTrigger',  function(e){
     if(!e.target.This){
       new Accordion(e.target.parentNode);
     }
@@ -740,6 +741,9 @@ $.fn.fileAttach = function() {
 	$(this).each(function(i, item) {
 		$(item).on('change', function(){			
 			if(window.FileReader){
+        if(this.parentNode.classList.contains('single')){
+          $(this).siblings('.attached').html("")
+        }
 				var filename = $(this)[0].files[0].name;
         if($(this).siblings('.attached').length > 0) {
           var fileWithBtn = "";
@@ -757,6 +761,7 @@ $.fn.fileAttach = function() {
 		});
 	});
   $(document).on("click", ".attached .btn_delete", function () {
+    console.log(1)
     $(this).parents(".attach_box").remove();
   });
 };

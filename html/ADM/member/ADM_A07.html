@@ -81,7 +81,8 @@
                 </div>
               </div>
               <div class="searchBtns">
-                <button type="button" class="btnSuccess">검색</button>
+                <button type="button" class="btnReset">초기화</button>
+                <button type="button" class="btnSuccess">조회</button>
               </div>
             </div>
           </div>
@@ -89,7 +90,7 @@
 
 
         <fieldset class="tableFilterGroup">
-          <span class="count"></span>
+          <span class="count">총 회원수 <strong>000</strong>명</span>
           <div class="formRow" role="group">
 
             <select title="보기갯수 선택">
@@ -117,7 +118,104 @@
 
             var clients = [
               { 
-                "Name1": "156",
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
+                "Name2": "(주)길동건설", 
+                "Name3": "새마을금고", 
+                "Name4": "종로지점", 
+                "Name5": "0850123",  
+                "Name6": "유", 
+                "Name7": "MG_1234567",
+                "Name8": "2023-10-02",  
+                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
+                "Name10": "홍길동", 
+                "Name11": "홍길동", 
+                "Name12": "홍길동", 
+                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
+              },
+              { 
                 "Name2": "(주)길동건설", 
                 "Name3": "새마을금고", 
                 "Name4": "종로지점", 
@@ -143,7 +241,6 @@
               headerRowRenderer: function () { //
                 var $result = $("<tr class='jsgrid-header-row'>")
                 $result.append(`
-                    <th scope='col' class='jsgrid-header-cell' rowspan="2">번호</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">금융기관 명</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">지점명</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">사업자등록번호</th>
@@ -152,20 +249,19 @@
                     <th scope='col' class='jsgrid-header-cell' colspan="2">심사</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">가입일</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">인증일</th>
-                    <th scope='col' class='jsgrid-header-cell' rowspan="2">관리자</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">담당자</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">비밀번호 관리</th>
                   `); 
                   var $tr = $("<tr class='jsgrid-header-row'>");   
                   var grid = this;
                   grid._eachField(function(field, index) {
-                      if (6 < index && index<9) {
+                      if (4 < index && index<7) {
                         var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
                       } 
                   });
                   return $result.add($tr);
               },
               fields: [
-                { name: "Name1",  type: "text", title : "번호", width: 110},
                 { name: "Name2",  type: "text", title : "금융기관 명", width: 110},
                 { name: "Name3", type: "text", title : "지점명", width: 110 },
                 { name: "Name4", type: "text", title : "사업자등록번호", width: 110 },
@@ -176,7 +272,7 @@
                 { name: "Name9", type: "text", title : "초기화", width: 110 },
                 { name: "Name10", type: "text", title : "가입일", width: 110 },
                 { name: "Name11", type: "text", title : "인증일  ", width: 110 },
-                { name: "Name12", type: "text", title : "관리자", width: 110 },
+                { name: "Name12", type: "text", title : "담당자", width: 110 },
                 { name: "Name13", type: "text", title : "비밀번호 관리", width: 110 },
               ],
               
