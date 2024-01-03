@@ -366,7 +366,8 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_btn button     {width:220px; }
 
 /*  약관  */
-.layerWrap .termsWrap { margin-top: -20px;}
+/* .layerWrap .termsWrap { margin-top: -20px;}
+.layerWrap .termsWrap fieldset { margin-bottom: 20px; } */
 /* .termsWrap .titH3.textCenter { min-height: unset; margin-bottom: 0;} */
 /* .termsWrap .titBox      {font-size:40px; font-weight: 700; text-align: center;} */
 /* .termsWrap .terms_cont      {background:#FAFAFA; padding:40px; border-radius: 16px; } */
@@ -374,11 +375,47 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .termsWrap .terms_style_1 strong  {display:block;  }
 .termsWrap .terms_style_1 p     {margin-top:20px;}
 .termsWrap .terms_style_1 p + strong     {margin-top:40px;} */
-.layerWrap .termsWrap fieldset { margin-bottom: 20px; }
+
 .termsWrap .searchControlBox { padding: 20px 40px; background: #EAFAEB; border-radius: 16px;}
 .termsWrap .searchControlBox .searchBtns { position: relative; right: unset; bottom: unset}
-.termsWrap .agreeCont .cont { max-width: 100%;}
-.termsWrap.hasBtn .agreeCont .cont { max-width: 900px; }
+.termsWrap .agreeCont { margin-top: 40px; border: 1px solid #ddd; border-radius: 16px; }
+.termsWrap .agreeCont .cont { height: 900px; margin: 0 auto; padding: 20px 40px; background: #fafafa; border-radius: 16px; overflow: auto;}
+
+
+.layerCont .tabLine + .agreeCont { margin-top: 20px;}
+
+
+.layerWrap .termsWrap { margin-top: -20px;}
+.layerWrap .termsWrap fieldset { margin-bottom: 20px; }
+.layerCont .termsWrap .agreeCont .cont { max-width: 100%; height: auto;}
+
+.layerCont .termsWrap.hasBtn .agreeCont { margin-left: 45px;  margin-right: 45px }
+
+.layerCont .agreeCont { max-height: 500px; height: 500px; margin-top: 0; overflow: auto;}
+.layerCont .agreeCont .cont { max-width: 900px; min-height: 100%;}
+.layerCont .agreeCont .prev,
+.layerCont .agreeCont .next { position: absolute; top: 50%;}
+.layerCont .agreeCont .prev::after,
+.layerCont .agreeCont .next::after {  content: ''; display: block; width: 80px; height: 80px; background: url('../images/common/ico_80_right_g.png') no-repeat 50% 50% / contain; }
+.layerCont .agreeCont .prev:disabled::after,
+.layerCont .agreeCont .next:disabled::after {  content: ''; display: block; width: 80px; height: 80px; background: url('../images/common/ico_80_left_disabled.png') no-repeat 50% 50% / contain; }
+.layerCont .agreeCont .prev { left: 10px;}
+.layerCont .agreeCont .prev::after { transform: rotate(-180deg);}
+.layerCont .agreeCont .prev:disabled::after { transform: none }
+.layerCont .agreeCont .next:disabled::after { transform: rotate(-180deg); }
+.layerCont .agreeCont .next { right: 10px;}
+.layerCont .agreeCont::-webkit-scrollbar {
+  width: 10px;
+}
+.layerCont .agreeCont::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.layerCont .agreeCont::-webkit-scrollbar-track {
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px #fafafa;
+}
 
 /* 진희 */
 

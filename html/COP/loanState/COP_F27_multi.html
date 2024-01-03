@@ -37,7 +37,7 @@
     <!-- v2.0 전체 수정 -->
     <section class="suggestPg">
       <!-- 단건의 경우, 소상공인 여부 Y일 경우 노출 -->
-      <section class="suggestTop">
+      <!-- <section class="suggestTop">
         <h4 class="titH3 hasLine">혹시 소상공인 이자 비용 지원 바우처를 갖고 계신가요?</h4>
         <p>바우처가 있으시면 제안서 채택 전 바우처를 등록해 주셔야 혜택을 받으실 수 있어요.</p>
         <div class="table_wrap">
@@ -76,9 +76,10 @@
           </table>
         </div>
       </section>
+      -->
       <!-- //단건의 경우, 소상공인 여부 Y일 경우 노출 -->
       <!-- 다건의 경우, 소상공인 여부 Y일 경우 노출 -->
-      <!-- <section class="suggestTop">
+      <section class="suggestTop">
         <h4 class="titH3 hasLine">혹시 소상공인 이자 비용 지원 바우처를 갖고 계신가요?</h4>
         <p>바우처가 있으시면 제안서 채택 전 바우처를 등록해 주셔야 혜택을 받으실 수 있어요.</p>
         <div class="table_wrap">
@@ -120,7 +121,7 @@
             </tfoot>
           </table>
         </div>
-      </section> -->
+      </section>
       <!-- //다건의 경우, 소상공인 여부 Y일 경우 노출 -->
       <div class="titBg flexBetween">
         <div>
@@ -137,8 +138,8 @@
           <section class="">
             <h4 class="titH3 hasLine">제안서 요약 내용
               <!-- 다건인 경우 notiTxt 노출 -->
-              <!-- <span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span> -->
-            </h4> 
+              <span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span>
+            </h4>
             <div class="viewNolineTable">
               <table>
                 <caption>제안서 요약 내용</caption>
@@ -175,7 +176,7 @@
                 <ul class="tabLine tabScript" role="tablist">
                   <li class="on"><button type="button" role="tab" aria-selected="true">상품명 1</button></li>
                   <!-- 다건일 경우 노출 -->
-                  <!-- <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li> -->
+                  <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li>
                 </ul>
               </div>
             </div>
@@ -189,12 +190,13 @@
                 </div>
               </h3>
               <div id="sect1" class="accordionPanel">
+                <span class="srOnly">제안 대출1 상세보기</span>
                 <div class="textTable">
                   <table>
                     <caption>제안서 기본 정보</caption>
                     <colgroup>
-                      <col width="220px" />
-                      <col/>
+                      <col width="220px">
+                      <col width="auto">
                     </colgroup>
                     <tbody>
                       <tr> 
