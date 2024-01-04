@@ -34,6 +34,51 @@
       </ul>
     </section>
     <section class="suggestPg">
+       <!-- 다건의 경우, 소상공인 여부 Y일 경우 노출 -->
+       <!-- <section class="suggestTop">
+        <h4 class="titH3 hasLine">혹시 소상공인 이자 비용 지원 바우처를 갖고 계신가요?</h4>
+        <p>바우처가 있으시면 제안서 채택 전 바우처를 등록해 주셔야 혜택을 받으실 수 있어요.</p>
+        <div class="table_wrap">
+          <table class="bbs_list">
+            <caption>바우처 현황</caption>
+            <colgroup>
+               <col width="33.3%" />
+               <col width="33.3%" />
+               <col width="33.3%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">사용 가능한 바우처</th>
+                <th scope="col">바우처 번호</th>
+                <th scope="col">이자 지원 비율</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>공공기관 바우처</td>
+                <td>KO1244</td>
+                <td>0.1%</td>
+              </tr>
+              <tr>
+                <td>
+                  <select class="wid270">
+                    <option>금융기관 바우처 (신한 캐피탈)</option>
+                  </select>
+                </td>
+                <td>SH0005</td>
+                <td>0.4%</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="point">
+                <th scope="row" colspan="2">총 이자 지원 비율</th>
+                <td>0.5%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section> -->
+      <!-- //다건의 경우, 소상공인 여부 Y일 경우 노출 -->
       <div class="titBg flexBetween">
         <div>
           <h3>길동중앙회 서교동지점</h3>
@@ -46,44 +91,30 @@
       </div>
       <div class="divideCon">
         <div class="left">
-          <section class="sectionBlock40">
-            <h4 class="titH3 hasLine">제안서 요약 내용<span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span></h4> <!-- v2.1 notiTxt 다건인 경우 노출 -->
-            <div class="viewNolineTable">
-              <table>
-                <caption>제안서 요약 내용</caption>
-                <colgroup>
-                  <col width="180px" />
-                  <col />
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">제안 리스 금액</th> 
-                    <td>10,000,000,000원 <span class="sub">(일백억원)</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제안 리스 금리</th> 
-                    <td>연 6.01%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제안 리스 건수</th> 
-                    <td>2건</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">메모 및 참고사항</th> 
-                    <td>담보 물건 확인 후 대출 금리 변동될 수 있습니다.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-          <!-- 디자인 수정 아코디언 삭제 -->
-          
+          <!-- v2.1 수정 -->
+          <div class="textTable mt0">
+            <table>
+              <caption>제안서 요약 내용</caption>
+              <colgroup>
+                <col width="180px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">메모 및 참고사항</th> 
+                  <td>담보 물건 확인 후 대출 금리 변동될 수 있습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //v2.1 수정 -->
           <section class="sectionBlock40">
             <div class="tabLineWrap">
               <div class="inner">
                 <ul class="tabLine tabScript" role="tablist">
                   <li class="on"><button type="button" role="tab" aria-selected="true">조건 1</button></li>
-                  <li><button type="button" role="tab" aria-selected="false">조건 2</button></li> <!-- 다건인 경우 노출 -->
+                  <!-- 다건인 경우 노출 -->
+                  <!-- <li><button type="button" role="tab" aria-selected="false">조건 2</button></li>  -->
                 </ul>
               </div>
             </div>
@@ -108,7 +139,7 @@
                       <tr> 
                         <th scope="row">리스 구분</th> 
                         <td>
-                          <strong class="blue">기계기구 리스</strong> 
+                          <strong class="blue">운용 리스</strong> 
                         </td>
                       </tr>
                       <tr> 
@@ -125,18 +156,20 @@
                           <p class="info">(금속가공기계, 섬유기계, 식품가공기계, 제지기계, 인쇄기계, 목공기계, 제철설비 등)</p>
                         </td>
                       </tr>
+                      <!-- v2.1 -->
                       <tr> 
-                        <th scope="row">리스 금액 (취득원가)</th> 
+                        <th scope="row">취득원가</th> 
                         <td><div class="formRow">1,000,000,000<strong>일십억원</strong></div></td>
                       </tr>
                       <tr> 
-                        <th scope="row">보증금</th> 
+                        <th scope="row">제안 리스 금액</th> 
                         <td><div class="formRow"><span class="unit">KRW</span>100,000,000<strong>일억원</strong></div>
                       </tr>
                       <tr> 
-                        <th scope="row">취득원가 비율</th> 
+                        <th scope="row">보증금 비율</th> 
                         <td>10%</td>
                       </tr>
+                      <!-- //v2.1 -->
                       <tr> 
                         <th scope="row">신청 물건 정보</th> 
                         <td>
@@ -144,10 +177,11 @@
                             <table class="bbs_list">
                               <caption>신청 물건 정보</caption>
                               <colgroup>
-                                <col width="140px">
+                                <!-- v2.1 -->
+                                <col width="120px">
                                 <col width="100px">
-                                <col width="140px">
-                                <col width="140px">
+                                <col width="110px">
+                                <col width="110px">
                                 <col width="">
                               </colgroup>
                               <thead>
@@ -156,6 +190,7 @@
                                   <th scope="col">수량</th>
                                   <th scope="col">가격</th>
                                   <th scope="col">제조사</th>
+                                  <th scope="col">제조일자</th><!-- v2.1 추가 -->
                                   <th scope="col">공급업체</th>
                                 </tr>
                               </thead>
@@ -165,6 +200,7 @@
                                   <td>10</td>
                                   <td>10,000,000</td>
                                   <td>리스 제조사 1</td>
+                                  <td>2021-10-11</td>
                                   <td>리스 공급업체 1</td>
                                 </tr>
                                 <tr>
@@ -172,12 +208,29 @@
                                   <td>10</td>
                                   <td>10,000,000</td>
                                   <td>리스 제조사 1</td>
+                                  <td>-</td>
                                   <td>리스 공급업체 1</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
                         </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">상환 방식</th> 
+                        <td>기타 (기타 내용 제공)</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">리스 기간</th> 
+                        <td><strong>48</strong> 개월 </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">거치 기간</th> 
+                        <td>11개월</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">보증인</th> 
+                        <td>필요 (기타: 기타 내용 제공)</td>
                       </tr>
                       <tr> 
                         <th scope="row">제안 금리<br/>
@@ -210,18 +263,10 @@
                               </tbody>
                             </table>
                           </div>
-                          <p class="notiTxt">기준금리, 당일 기준 합산 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
+                          <p class="notiTxt">기준금리, 최종 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
                         </td>
                       </tr>
-                      <tr> 
-                        <th scope="row">리스 기간</th> 
-                        <td><strong>48</strong> 개월 </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">상환 방식</th> 
-                        <td>원금균등</td>
-                      </tr>
-                      <tr> 
+                      <!-- <tr> 
                         <th scope="row">담보 유무</th> 
                         <td>
                           담보 있음
@@ -245,97 +290,97 @@
                               <tbody>
                                 <tr>
                                   <td>부동산</td>
-                                  <td>아파트</td><!-- v1.4 추가 -->
+                                  <td>아파트</td>
                                   <td>대표자 지인</td>
-                                  <td class="textLeft">서울 마포구 합정동 서교아파트 101동</td><!-- v1.4 .textLeft 추가 -->
+                                  <td class="textLeft">서울 마포구 합정동 서교아파트 101동</td>
                                 </tr>
                                 <tr>
                                   <td>동산</td>
-                                  <td>-</td><!-- v1.4 추가 -->
+                                  <td>-</td>
                                   <td>대표자 지인</td>
-                                  <td class="textLeft">삼성전자 주식 50,000주</td><!-- v1.4 .textLeft 추가 -->
+                                  <td class="textLeft">삼성전자 주식 50,000주</td>
                                 </tr>
                               </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr> -->
+                      <tr>
+                        <th scope="row">양도 담보 제공</th> 
+                        <td>필요</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">기타 조건</th> 
+                        <td>기타 조건을 입력한 내용 제공</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">이자 부과 시기 및 방법</th> 
+                        <td>1개월 / 후취</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">연체 금리</th> 
+                        <td class="">4.5%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">중도 상환 수수료</th> 
+                        <td class="">4.2% / 추가 입력 사항 내용 제공</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">리스 취급 시 부대 비용</th> 
+                        <td class="">리스 취급 시 부대 비용 상세 내용 제공</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">인지세</th> 
+                        <td>
+                          인지 세법에 따라 대출 신규 약정 시 납부하는 세금으로 대출 금액에 따라 세액이 자동 적용되며, 금융 회사와 고객이 각각 50%씩 부담합니다.
+                          <div class="table_wrap mt10"><!-- 1.9 수정  -->
+                            <table class="bbs_list gray">
+                              <caption>인지세</caption>
+                              <colgroup>
+                                <col width="140px" />
+                                <col/>
+                                <col/>
+                                <col/>
+                                <col/>
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">대출 금액</th>
+                                  <th scope="col">5천만원 이하</th>
+                                  <th scope="col">5천만원 초과<br/>~ 1억원 이하</th>
+                                  <th scope="col">1억원 초과<br/> ~ 10억원 이하</th>
+                                  <th scope="col">10억원 초과</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">인지세액</th>
+                                  <td>비과세</td>
+                                  <td>7만원</td>
+                                  <td>15만원</td>
+                                  <td>35만원</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">고객부담</th>
+                                  <td>-</td>
+                                  <td>3만 5천원</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">금융 회사 부담</th>
+                                  <td>-</td>
+                                  <td>-</td>
+                                  <td>7만 5천원</td>
+                                  <td>17만 5천원</td>
+                                </tr>
+                              <tbody>
                             </table>
                           </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-
-                <div class="notiBox bgWhite">
-                  <div class="">
-                    <h4 class="titH5 hasLine">유의사항 (금융 회사)</h4>
-                    <div class="textTable">
-                      <table>
-                        <caption>업체개요</caption>
-                        <colgroup>
-                          <col width="200px" /><!-- v1.4 수정 -->
-                          <col />
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">이자 부과 시기 및 방법</th> 
-                            <td>1개월 / 후취</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">연체 금리</th> 
-                            <td class="">4.5%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">중도 상환 수수료</th> 
-                            <td class="">4.2% / 3개월 단위로 변경될 수 있음</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">한도 약정 수수료(율)</th> 
-                            <td class="">10% / 1,000,000원</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">대출시 부대 비용</th> 
-                            <td>부대비용 대출금액 1% 부과 됩니다.</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">인지세</th> 
-                            <td>
-                              인지 세법에 의해 대출 약정 체결시 납부하는 세금으로 대출 금액에 따라 세액이 차등 적용되며, 금융 회사와 고객이 
-                              각각 50%씩 부담
-                              <div class="table_wrap mt10"><!-- 1.9 수정  -->
-                                <table class="bbs_list gray">
-                                  <caption>인지세</caption>
-                                  <colgroup>
-                                    <col width="140px" />
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                    <col/>
-                                  </colgroup>
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">대출 금액</th>
-                                      <th scope="col">5천만원 이하</th>
-                                      <th scope="col">5천만원 초과<br/>~ 1억원 이하</th>
-                                      <th scope="col">1억원 초과<br/> ~ 10억원 이하</th>
-                                      <th scope="col">10억원 초과</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th>인지세액</th>
-                                      <td>비과세</td>
-                                      <td>7만원<p class="sub">(각각 3만 5천원)</p></td>
-                                      <td>15만원<p class="sub">(각각 7만 5천원)</p></td>
-                                      <td>35만원<p class="sub">(각각 17만 5천원)</p></td>
-                                    </tr>
-                                  <tbody>
-                                </table>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
                   <div class="sectionBlock40">
                     <h4 class="titH5 hasLine">유의사항 (Loan&Biz)</h4>
                     <ul class="guideList dot">
@@ -374,14 +419,14 @@
         <!-- v2.1 right 추가 -->
         <div class="right">
           <div class="totalInfoBox">
-            <div class="head">제안 리스 정보 합계</div>
+            <div class="head">조건 1 리스 정보</div>
             <div class="cont">
-              <span class="label">제안 리스 금액</span>
+              <span class="label">취득원가</span>
               <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p>
-              <span class="label">제안 리스 금리</span>
-              <p class="desc">연 6.00%</p>
-              <span class="label">제안 리스 수</span>
-              <p class="desc">2건</p>
+              <span class="label">제안 리스 금액</span>
+              <p class="desc">KRW 100,000,000 <span class="priceKr">(일억 원)</span></p>
+              <span class="label">보증금 비율</span>
+              <p class="desc">10%</p>
             </div>
             <div class="foot">
               <button type="button" class="btnSuccess">제안서 채택</button> <!-- 미채택 제안서의 경우 노출 -->

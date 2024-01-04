@@ -118,23 +118,31 @@
                   </div>
                 </td>
               </tr>
+              <!-- v2.1 수정 -->
               <tr>
                 <th scope="row">
                   <label id="formLabel7">본사 주소</label>
                 </th>
-                <td role="group" aria-labelledby="formLabel7">
-                  <div class="formRow wid600"><!-- v1.6 wid600 추가 -->
-                    <select title="지역선택" class="wid120"> <!-- v1.8 추가 -->
-                      <option>서울</option>
-                    </select>
-                    <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54">
-                    <button type="button" class="btnBlack">주소검색</button>
+                <td>
+                  <div class="formList">
+                    <label class="label wid100" for="labelAddSel">지역</label>
+                    <div class="formRow">
+                      <select title="지역선택" id="labelAddSel" class="wid120">
+                        <option>서울</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="formRow wid600"><!-- v1.6 wid600 추가 -->
-                    <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="">
+                  <div class="formList">
+                    <label class="label wid100">상세 주소</label>
+                    <div class="formRow">
+                      <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54">
+                      <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="">
+                      <button type="button" class="btnBlack">주소검색</button>
+                    </div>
                   </div>
                 </td>
               </tr>
+              <!-- //v2.1 수정 -->
               <tr>
                 <th scope="row">
                   <label id="formLabel8">대표자명</label>
@@ -146,10 +154,24 @@
                   </div>
                 </td>
               </tr>
-              <!-- v1.8 수정 -->
+              <tr>
+                <th scope="row">
+                  <label id="formLabel10">가입 경로</label>
+                </th>
+                <td>
+                  <div class="formRow">
+                    <input type="text" class="input textCenter wid200" value="인터넷 검색" disabled/>
+                    <span class="bar"></span>
+                    <input type="text" class="input textCenter wid120" value="기타" disabled/>
+                    <span class="bar"></span>
+                    <input type="text" class="input" value="지하철 광고" disabled/>
+                  </div>
+                </td>
+              </tr>
+              <!-- v2.1 수정 -->
               <tr>
                 <th scope="row" class="pt15">
-                  <label id="formLabel9">마케팅 수신 동의</label>
+                  <label id="formLabel9">기업 회원<br/>마케팅 수신 동의</label><!-- v2.1 -->
                 </th>
                 <td>
                   <div class="table_wrap mt0">
@@ -177,13 +199,13 @@
                           <td>2023-09-15</td>
                           <td>-</td>
                           <td>
-                            <span class="radio">
+                            <span class="radio only">
                               <input type="radio" id="radioLabel1_1" name="radioLabel1" value="" checked>
                               <label class="label" for="radioLabel1_1"><span></span></label>
                             </span>
                           </td>
                           <td>
-                            <span class="radio">
+                            <span class="radio only">
                               <input type="radio" id="radioLabel1_2" name="radioLabel1" value="" >
                               <label class="label" for="radioLabel1_2"><span></span></label>
                             </span>
@@ -194,174 +216,154 @@
                           <td>2023-09-15</td>
                           <td>-</td>
                           <td>
-                            <span class="radio">
+                            <span class="radio only">
                               <input type="radio" id="radioLabel2_1" name="radioLabel2" value="" checked>
                               <label class="label" for="radioLabel2_1"><span></span></label>
                             </span>
                           </td>
                           <td>
-                            <span class="radio">
+                            <span class="radio only">
                               <input type="radio" id="radioLabel2_2" name="radioLabel2" value="" >
                               <label class="label" for="radioLabel2_2"><span></span></label>
                             </span>
                           </td>
                         </tr>
+                        <!-- v2.1 추가 -->
                         <tr>
-                          <td>문자</td>
-                          <td>-</td>
+                          <td>알림 메시지</td>
                           <td>2023-09-15</td>
+                          <td>-</td>
                           <td>
-                            <span class="radio">
-                              <input type="radio" id="radioLabel3_1" name="radioLabel3" value="">
+                            <span class="radio only">
+                              <input type="radio" id="radioLabel3_1" name="radioLabel3" value="" checked>
                               <label class="label" for="radioLabel3_1"><span></span></label>
                             </span>
                           </td>
                           <td>
-                            <span class="radio">
-                              <input type="radio" id="radioLabel3_2" name="radioLabel3" value="" checked>
+                            <span class="radio only">
+                              <input type="radio" id="radioLabel3_2" name="radioLabel3" value="" disabled>
                               <label class="label" for="radioLabel3_2"><span></span></label>
                             </span>
                           </td>
                         </tr>
+                        <!-- //v2.1 추가 -->
                       </tbody>
                     </table>
                   </div>
                 </td>
               </tr>
-              <!-- v1.8 수정 -->
-              <tr>
-                <th scope="row">
-                  <label id="formLabel10">가입 경로</label>
-                </th>
-                <td>
-                  <div class="formRow">
-                    <input type="text" class="input textCenter wid200" value="인터넷 검색" disabled/>
-                    <span class="bar"></span>
-                    <input type="text" class="input textCenter wid120" value="기타" disabled/>
-                    <span class="bar"></span>
-                    <input type="text" class="input" value="지하철 광고" disabled/>
-                  </div>
-                </td>
-              </tr>
-              <!-- v1.8 수정 -->
               <tr>
                 <th scope="row" class="pt15">
-                  <label id="formLabel11">서비스 알림<br/>수신 동의</label>
+                  <label id="formLabel11">담담자 서비스 알림<br/>수신 동의</label><!-- v2.1 -->
                 </th>
                 <td>
                   <div class="table_wrap mt0">
                     <table class="bbs_list"><!-- disabled 상태일 경우 추가 -->
-                      <caption>메시지 알림설정</caption>
+                      <caption>담담자 서비스 알림 수신 동의</caption>
                       <colgroup>
-                        <col width="16.66%">
-                        <col width="16.66%">
-                        <col width="16.66%">
-                        <col width="16.66%">
-                        <col width="16.66%">
-                        <col width="16.66%">
+                        <col width="130px">
+                        <col width="130px">
+                        <col width="">
+                        <col width="150px">
+                        <col width="110px">
+                        <col width="110px">
+                        <col width="110px">
+                        <col width="110px">
+                        <col width="130px">
                       </colgroup>
-                      <thead>
+                      <thead class="double">
                         <tr>
-                          <th scope="col">담당자 지정</th>
-                          <th scope="col">이름</th>
-                          <th scope="col">등록일자</th>
-                          <th scope="col">이메일 주소</th>
-                          <th scope="col">휴대폰 번호</th>
-                          <th scope="col">관리</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <span class="radio">
-                              <input type="radio" id="rdoLabel1_1" name="rdoLabel1" value="" checked>
-                              <label class="label" for="rdoLabel1_1"><span></span></label>
-                            </span>
-                          </td>
-                          <td>홍길동</td>
-                          <td>2023-09-15</td>
-                          <td>shinhan**1@gmail.com</td>
-                          <td>010-1234-2**4</td>
-                          <td>
-                            <button type="button" class="btnGray">삭제</button>
-                          </td>
+                          <th scope="col" rowspan="2">이름</th>
+                          <th scope="col" rowspan="2">등록일자</th>
+                          <th scope="col" rowspan="2">이메일 주소</th>
+                          <th scope="col" rowspan="2">휴대폰 번호</th>
+                          <th scope="col" colspan="2">대출 비교 신청 진행 안내</th>
+                          <th scope="col" colspan="2">1:1 답변 등록</th>
+                          <th scope="col" rowspan="2">관리</th>
                         </tr>
                         <tr>
-                          <td>
-                            <span class="radio">
-                              <input type="radio" id="rdoLabel1_2" name="rdoLabel1" value="" >
-                              <label class="label" for="rdoLabel1_2"><span></span></label>
-                            </span>
-                          </td>
-                          <td>윤학길</td>
-                          <td>2023-09-15</td>
-                          <td>shinhan**1@gmail.com</td>
-                          <td>010-1234-2**4</td>
-                          <td>
-                            <button type="button" class="btnGray">삭제</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="table_wrap">
-                    <table class="bbs_list"><!-- disabled 상태일 경우 추가 -->
-                      <caption>메시지 알림설정</caption>
-                      <colgroup>
-                        <col width="620px">
-                        <col/>
-                        <col/>
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th scope="col">메시지</th>
+                          <th scope="col">이메일 알림</th>
+                          <th scope="col">알림톡 수신</th>
                           <th scope="col">이메일 알림</th>
                           <th scope="col">알림톡 수신</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td scope="row">대출 비교 신청 진행 안내</td>
+                          <td>홍길동</td>
+                          <td>2023-09-25</td>
+                          <td>shinhan**1@gmail.com</td>
+                          <td>010-1234-2**4</td>
                           <td>
-                            <span class="checkbox">
+                            <span class="checkbox only">
                               <input type="checkbox" id="checkLabel1_1" name="checkLabel1" checked/>
                               <label for="checkLabel1_1"><span></span></label>
                             </span>
                           </td>
                           <td>
-                            <span class="checkbox">
+                            <span class="checkbox only">
                               <input type="checkbox" id="checkLabel1_2" name="checkLabel1" checked/>
                               <label for="checkLabel1_2"><span></span></label>
                             </span>
                           </td>
+                          <td>
+                            <span class="checkbox only">
+                              <input type="checkbox" id="checkLabel1_3" name="checkLabel1" checked/>
+                              <label for="checkLabel1_3"><span></span></label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="checkbox only">
+                              <input type="checkbox" id="checkLabel1_4" name="checkLabel1" checked/>
+                              <label for="checkLabel1_4"><span></span></label>
+                            </span>
+                          </td>
+                          <td><button type="button" class="btnGray">삭제</button></td>
                         </tr>
                         <tr>
-                          <td scope="row">1:1 답변 등록</td>
+                          <td>김길동</td>
+                          <td>2023-09-25</td>
+                          <td>shinhan**1@gmail.com</td>
+                          <td>010-1234-2**4</td>
                           <td>
-                            <span class="checkbox">
+                            <span class="checkbox only">
                               <input type="checkbox" id="checkLabel2_1" name="checkLabel2" checked/>
                               <label for="checkLabel2_1"><span></span></label>
                             </span>
                           </td>
                           <td>
-                            <span class="checkbox">
+                            <span class="checkbox only">
                               <input type="checkbox" id="checkLabel2_2" name="checkLabel2" checked/>
                               <label for="checkLabel2_2"><span></span></label>
                             </span>
                           </td>
+                          <td>
+                            <span class="checkbox only">
+                              <input type="checkbox" id="checkLabel2_3" name="checkLabel2" checked/>
+                              <label for="checkLabel2_3"><span></span></label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="checkbox only">
+                              <input type="checkbox" id="checkLabel2_4" name="checkLabel2" checked/>
+                              <label for="checkLabel2_4"><span></span></label>
+                            </span>
+                          </td>
+                          <td><button type="button" class="btnGray">삭제</button></td>
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                  <!-- v2.1 위치이동 -->
+                  <div class="table_bt small">
+                    <div class="btn_r">
+                      <button type="button" class="btnSuccess">서비스 알림 수신 담당자 추가</button>
+                    </div>
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="table_bt small">
-          <div class="btn_r">
-            <button type="button" class="btnSuccess">서비스 알림 수신 담당자 추가</button>
-          </div>
         </div>
       </section>
     </div>

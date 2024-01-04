@@ -253,38 +253,38 @@
           $(function() {
             //v2.1 수정 
             var clients = [
-              { 
-                "Name1": "220230915001",
-                "Name2": "2023-08-09", 
-                "Name3": "시설 자금", 
-                "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>이어 작성 하기</a>",  
-              },
-              { 
-                "Name1": "220230915001",
-                "Name2": "2023-08-09", 
-                "Name3": "시설 자금", 
-                "Name4": "<span class='textBold'>금융 회사 심사 중</span>", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>", 
-              },
-              { 
-                "Name1": "220230915001",
-                "Name2": "2023-08-09", 
-                "Name3": "시설 자금", 
-                "Name4": "<span class='textBold blue'>제안서 확인 및 채택</span>", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  
-              },
-              { 
-                "Name1": "220230915001",
-                "Name2": "2023-08-09", 
-                "Name3": "기계기구 리스", 
-                "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
-                "Name10": "<a href='#;' class='btnWhite wid160'>이어서 신청 하기</a>", 
-              },
+              // { 
+              //   "Name1": "220230915001",
+              //   "Name2": "2023-08-09", 
+              //   "Name3": "시설 자금", 
+              //   "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
+              //   "Name10": "<a href='#;' class='btnWhite wid160'>이어서 신청 하기</a>",  
+              // },
+              // { 
+              //   "Name1": "220230915001",
+              //   "Name2": "2023-08-09", 
+              //   "Name3": "시설 자금", 
+              //   "Name4": "<span class='textBold'>금융 회사 심사 중</span>", 
+              //   "Name10": "<a href='#;' class='btnWhite wid160'>신청 내용 보기</a>", 
+              // },
+              // { 
+              //   "Name1": "220230915001",
+              //   "Name2": "2023-08-09", 
+              //   "Name3": "시설 자금", 
+              //   "Name4": "<span class='textBold blue'>제안서 확인 및 채택</span>", 
+              //   "Name10": "<a href='#;' class='btnWhite wid160'>제안서 목록 보기</a>",  
+              // },
+              // { 
+              //   "Name1": "220230915001",
+              //   "Name2": "2023-08-09", 
+              //   "Name3": "기계기구 리스", 
+              //   "Name4": "<span class='textBold'>대출 비교 신청 중</span>", 
+              //   "Name10": "<a href='#;' class='btnWhite wid160'>이어서 신청 하기</a>", 
+              // },
             ]; 
             $("#jsGrid2").jsGrid({
               data: clients,
-              noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
+              noDataContent: "<div class='noTableData'><i class='icoNodata'></i><p class='txt'>해당 조회 기간에 진행된 대출 비교 신청 건이 없습니다.</p></div>",//<!-- v2.1 -->
                 fields: [
                 { name: "Name1",  type: "text", title : "대출 신청 번호", width: 230},
                 { name: "Name2",  type: "text", title : "대출 비교 신청일", width: 320},

@@ -25,8 +25,7 @@
 
     <section class="pageTop">
       <h2 class="pageTit">제안서 상세보기</h2>
-      <p class="pageSub">제안서에 표시된 대출금액 및 금리 등은 추가 심사 과정에서 변경 될 수 있습니다.</p>
-      <!-- v1.4 수정 -->
+      <p class="pageSub">제안서에 표시된 리스금액 및 금리 등은 추가 심사 과정에서 변경 될 수 있습니다.</p>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>대출 비교 진행 현황</span></a></li>
@@ -34,51 +33,9 @@
           <li><a href="#none"><strong>제안서 상세보기</strong></a></li>
       </ul>
     </section>
-    <!-- v2.0 전체 수정 -->
     <section class="suggestPg">
-      <!-- 단건의 경우, 소상공인 여부 Y일 경우 노출 -->
-      <section class="suggestTop">
-        <h4 class="titH3 hasLine">혹시 소상공인 이자 비용 지원 바우처를 갖고 계신가요?</h4>
-        <p>바우처가 있으시면 제안서 채택 전 바우처를 등록해 주셔야 혜택을 받으실 수 있어요.</p>
-        <div class="table_wrap">
-          <table class="bbs_list">
-            <caption>바우처 현황</caption>
-            <colgroup>
-               <col width="33.3%" />
-               <col width="33.3%" />
-               <col width="33.3%" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">사용 가능한 바우처</th>
-                <th scope="col">바우처 번호</th>
-                <th scope="col">이자 지원 비율</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>공공기관 바우처</td>
-                <td>KO1244</td>
-                <td>0.1%</td>
-              </tr>
-              <tr>
-                <td>금융기관 바우처</td>
-                <td><button type="button" class="btnSuccess link">바우처 등록하기</button></td>
-                <td>-</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr class="point">
-                <th scope="row" colspan="2">총 이자 지원 비율</th>
-                <td>0.5%</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
-      <!-- //단건의 경우, 소상공인 여부 Y일 경우 노출 -->
       <!-- 다건의 경우, 소상공인 여부 Y일 경우 노출 -->
-      <!-- <section class="suggestTop">
+      <section class="suggestTop">
         <h4 class="titH3 hasLine">혹시 소상공인 이자 비용 지원 바우처를 갖고 계신가요?</h4>
         <p>바우처가 있으시면 제안서 채택 전 바우처를 등록해 주셔야 혜택을 받으실 수 있어요.</p>
         <div class="table_wrap">
@@ -120,7 +77,7 @@
             </tfoot>
           </table>
         </div>
-      </section> -->
+      </section>
       <!-- //다건의 경우, 소상공인 여부 Y일 경우 노출 -->
       <div class="titBg flexBetween">
         <div>
@@ -132,111 +89,152 @@
         </div>
         <p class="sub">대출 신청 번호 202308090001</p>
       </div>
-      <div class="divideCon"><!-- v2.1 divideCon 추가 -->
-        <div class="left"><!-- v2.1 left 추가 -->
-          <section class="">
-            <h4 class="titH3 hasLine">제안서 요약 내용
-              <!-- 다건인 경우 notiTxt 노출 -->
-              <!-- <span class="notiTxt">제안대출금액은 N개의 제안 대출 금액의 총합이며, 제안 대출금리는 제안서 금리들의 가중평균 금리입니다.</span> -->
-            </h4> 
-            <div class="viewNolineTable">
-              <table>
-                <caption>제안서 요약 내용</caption>
-                <colgroup>
-                  <col width="180px" /><!-- v1.4 수정 -->
-                  <col />
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">제안 대출 금액</th> 
-                    <td>10,000,000,000원 <span class="sub">(일백억원)</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제안 대출 금리</th> 
-                    <td>연 6.01%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제안 대출 건수</th> 
-                    <td>2건</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">메모 및 참고사항</th> 
-                    <td>담보 물건 확인 후 대출 금리 변동될 수 있습니다.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-          <!-- 디자인 수정 아코디언 삭제 -->
-          
+      <div class="divideCon">
+        <div class="left">
+          <!-- v2.1 수정 -->
+          <div class="textTable mt0">
+            <table>
+              <caption>제안서 요약 내용</caption>
+              <colgroup>
+                <col width="180px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">메모 및 참고사항</th> 
+                  <td>담보 물건 확인 후 대출 금리 변동될 수 있습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //v2.1 수정 -->
           <section class="sectionBlock40">
             <div class="tabLineWrap">
               <div class="inner">
                 <ul class="tabLine tabScript" role="tablist">
-                  <li class="on"><button type="button" role="tab" aria-selected="true">상품명 1</button></li>
-                  <!-- 다건일 경우 노출 -->
-                  <!-- <li><button type="button" role="tab" aria-selected="false">상품명 2</button></li> -->
+                  <li class="on"><button type="button" role="tab" aria-selected="true">조건 1</button></li>
+                  <!-- 다건인 경우 노출 -->
+                  <li><button type="button" role="tab" aria-selected="false">조건 2</button></li> 
                 </ul>
               </div>
             </div>
             <!-- 제안내용 -->
-            <!-- v2.1 전체 수정 -->
             <div class="accordionItem noAccordion">
               <h3 class="accordionTitle">
                 <div class="accordionTrigger">
-                  <span class="label">상품명 1</span><strong class="tit blue">길동바로론</strong>
-                  <!-- <span class="num">202308090011</span> --> <!-- v2.1 삭제 -->
+                  <span class="label">조건 1</span><strong class="tit blue">길동바로론</strong>
+                  <!-- <span class="num">202308090011</span> --><!-- v2.1 삭제 -->
                 </div>
               </h3>
               <div id="sect1" class="accordionPanel">
+                <span class="srOnly">제안 리스1 상세보기</span>
                 <div class="textTable">
                   <table>
                     <caption>제안서 기본 정보</caption>
                     <colgroup>
-                      <col width="220px" />
-                      <col/>
+                      <col width="220px">
+                      <col width="auto">
                     </colgroup>
                     <tbody>
                       <tr> 
-                        <th scope="row">제안 자금 용도</th> 
+                        <th scope="row">리스 구분</th> 
                         <td>
-                          <strong class="blue">운전자금</strong>
-                          <p class="info">· 인건비(급여 등)</p>
-                          <p class="info">· 공과금 납부</p>
-                          <p class="info">· 원자재 구입 자금</p>
-                          <p class="info">· 예비 운영 자금</p>
-                          <p class="info">· 다른 회사 인수 자금</p>
-                          <p class="info">· 기타: 기타사유 기타사유....</p>
+                          <strong class="blue">운용 리스</strong> 
                         </td>
                       </tr>
                       <tr> 
-                        <th scope="row">자금 용도 변경 사유</th> 
-                        <td>고객님 시설자금 대출 보다 운전 자금 대출이 적합한 상품으로 확인되어 변경</td>
+                        <th scope="row">신규기기 여부</th> 
+                        <td>신규 기기</td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 금액</th> 
-                        <td><div class="formRow">4,500,000,000<strong>사십오억원</strong></div></td>
+                        <th scope="row">내수 구분</th> 
+                        <td>국내</td>
                       </tr>
                       <tr> 
-                        <th scope="row">가장 빠른 대출<br/>실행 가능일</th> 
-                        <td>제안서 채택 후 <strong>3</strong>일 이후</td>
+                        <th scope="row">상세 용도</th> 
+                        <td>산업용 기계
+                          <p class="info">(금속가공기계, 섬유기계, 식품가공기계, 제지기계, 인쇄기계, 목공기계, 제철설비 등)</p>
+                        </td>
                       </tr>
-                      <!-- v2.1 상환 방식,대출 기간 순서변경 -->
+                      <!-- v2.1 -->
+                      <tr> 
+                        <th scope="row">취득원가</th> 
+                        <td><div class="formRow">1,000,000,000<strong>일십억원</strong></div></td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">제안 리스 금액</th> 
+                        <td><div class="formRow"><span class="unit">KRW</span>100,000,000<strong>일억원</strong></div>
+                      </tr>
+                      <tr> 
+                        <th scope="row">보증금 비율</th> 
+                        <td>10%</td>
+                      </tr>
+                      <!-- //v2.1 -->
+                      <tr> 
+                        <th scope="row">신청 물건 정보</th> 
+                        <td>
+                          <div class="table_wrap">
+                            <table class="bbs_list">
+                              <caption>신청 물건 정보</caption>
+                              <colgroup>
+                                <!-- v2.1 -->
+                                <col width="120px">
+                                <col width="100px">
+                                <col width="110px">
+                                <col width="110px">
+                                <col width="">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">리스 물건명</th>
+                                  <th scope="col">수량</th>
+                                  <th scope="col">가격</th>
+                                  <th scope="col">제조사</th>
+                                  <th scope="col">제조일자</th><!-- v2.1 추가 -->
+                                  <th scope="col">공급업체</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>리스 물건 1  </td>
+                                  <td>10</td>
+                                  <td>10,000,000</td>
+                                  <td>리스 제조사 1</td>
+                                  <td>2021-10-11</td>
+                                  <td>리스 공급업체 1</td>
+                                </tr>
+                                <tr>
+                                  <td>리스 물건 1  </td>
+                                  <td>10</td>
+                                  <td>10,000,000</td>
+                                  <td>리스 제조사 1</td>
+                                  <td>-</td>
+                                  <td>리스 공급업체 1</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
                       <tr> 
                         <th scope="row">상환 방식</th> 
-                        <td>원금균등</td>
+                        <td>기타 (기타 내용 제공)</td>
                       </tr>
                       <tr> 
-                        <th scope="row">대출 기간</th> 
+                        <th scope="row">리스 기간</th> 
                         <td><strong>48</strong> 개월 </td>
                       </tr>
-                      <!-- //v2.1 상환 방식,대출 기간 순서변경 -->
                       <tr> 
                         <th scope="row">거치 기간</th> 
-                        <td>10개월</td>
+                        <td>11개월</td>
                       </tr>
                       <tr> 
-                        <th scope="row">제안 금리</th> 
+                        <th scope="row">보증인</th> 
+                        <td>필요 (기타: 기타 내용 제공)</td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">제안 금리<br/>
+                          (제안서 제출일 기준)</th> 
                         <td>
                           <div class="table_wrap">
                             <table class="bbs_list">
@@ -268,7 +266,7 @@
                           <p class="notiTxt">기준금리, 최종 금리는 제안서 제출일인 0000-00-00 기준의 금리입니다.</p><!-- v2.1 수정 -->
                         </td>
                       </tr>
-                      <tr> 
+                      <!-- <tr> 
                         <th scope="row">담보 유무</th> 
                         <td>
                           담보 있음
@@ -292,22 +290,29 @@
                               <tbody>
                                 <tr>
                                   <td>부동산</td>
-                                  <td>아파트</td><!-- v1.4 추가 -->
+                                  <td>아파트</td>
                                   <td>대표자 지인</td>
-                                  <td class="textLeft">서울 마포구 합정동 서교아파트 101동</td><!-- v1.4 .textLeft 추가 -->
+                                  <td class="textLeft">서울 마포구 합정동 서교아파트 101동</td>
                                 </tr>
                                 <tr>
                                   <td>동산</td>
-                                  <td>-</td><!-- v1.4 추가 -->
+                                  <td>-</td>
                                   <td>대표자 지인</td>
-                                  <td class="textLeft">삼성전자 주식 50,000주</td><!-- v1.4 .textLeft 추가 -->
+                                  <td class="textLeft">삼성전자 주식 50,000주</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
                         </td>
+                      </tr> -->
+                      <tr>
+                        <th scope="row">양도 담보 제공</th> 
+                        <td>필요</td>
                       </tr>
-                      <!-- v2.1 수정 -->
+                      <tr>
+                        <th scope="row">기타 조건</th> 
+                        <td>기타 조건을 입력한 내용 제공</td>
+                      </tr>
                       <tr>
                         <th scope="row">이자 부과 시기 및 방법</th> 
                         <td>1개월 / 후취</td>
@@ -318,15 +323,11 @@
                       </tr>
                       <tr>
                         <th scope="row">중도 상환 수수료</th> 
-                        <td class="">4.2% / 3개월 단위로 변경될 수 있음</td>
+                        <td class="">4.2% / 추가 입력 사항 내용 제공</td>
                       </tr>
                       <tr>
-                        <th scope="row">한도 약정 수수료(율)</th> 
-                        <td class="">10%</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">대출시 부대 비용</th> 
-                        <td>대출 시 부대 비용 상세 내용 제공</td>
+                        <th scope="row">리스 취급 시 부대 비용</th> 
+                        <td class="">리스 취급 시 부대 비용 상세 내용 제공</td>
                       </tr>
                       <tr>
                         <th scope="row">인지세</th> 
@@ -353,21 +354,21 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th>인지세액</th>
+                                  <th scope="row">인지세액</th>
                                   <td>비과세</td>
                                   <td>7만원</td>
                                   <td>15만원</td>
                                   <td>35만원</td>
                                 </tr>
                                 <tr>
-                                  <th>고객부담</th>
+                                  <th scope="row">고객부담</th>
                                   <td>-</td>
                                   <td>3만 5천원</td>
                                   <td>7만 5천원</td>
                                   <td>17만 5천원</td>
                                 </tr>
                                 <tr>
-                                  <th>금융 회사 부담</th>
+                                  <th scope="row">금융 회사 부담</th>
                                   <td>-</td>
                                   <td>-</td>
                                   <td>7만 5천원</td>
@@ -378,31 +379,30 @@
                           </div>
                         </td>
                       </tr>
-                      <!-- //v2.1 수정 -->
                     </tbody>
                   </table>
-                </div>
-                <div class="sectionBlock40">
-                  <h4 class="titH5 hasLine">유의사항 (Loan&Biz)</h4>
-                  <ul class="guideList dot">
-                    <li class="list">$신한은행$의 심사기준과 기업의 신용도 등에 따라 대출 여부 및 대출 한도가 결정됩니다.</li>
-                    <li class="list">상기 상품 내용은 $신한은행$ 내부 기준에 따라 대출조건이 변경 또는 제한될 수 있습니다.</li>
-                    <li class="list">실제 상품의 계약은 &nbsp;<strong>계약 시점</strong>의 여신거래기본약관 및 대출거래약정서의 적용을 받습니다.</li>
-                    <li class="list">실제 대출 조건과 제안 조건은 다를 수 있습니다.</li>
-                    <li class="list">과도한 대출은 기업의 신용등급에 영향을 미칠 수 있습니다.</li>
-                    <li class="list">기간 연장시점에는 해당 시점의 기업 신용도 등에 따라 대출금의 일부 또는 전부가 회수될 수 있습니다.</li>
-                    <li class="list">대출금의 상환 또는 이자 납입이 지연된 경우 연체 이율이 적용되며, 예금 등 기타채권과의 상계나 법척 절차 등으로 재산상의 불이익이 발생할 수 있습니다.</li>
-                    <li class="list">연체 시 계약기한 만료 전 원리금 변제 의무가 발생할 수 있습니다.</li>
-                    <li class="list">해당상품에 대한 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
-                  </ul>
-                </div>
-                <div class="sectionBlock40">
-                  <h4 class="titH5 hasLine">안내 사항</h4>
-                  <ul class="guideList dot">
-                    <li class="list">기타 자세한 내용은 제안서 상단에 기재된 $신한은행 세종로기업금융센터$ 담당자에게 연락해주세요.</li>
-                    <li class="list">연락 가능 시간: 평일 09:00 - 17:00 (휴무일 제외)</li>
-                    <li class="list">주소: $신한은행 세종로기업금융센터 서울특별시 종로구 새문안로3길 23$</li>
-                  </ul>
+                  <div class="sectionBlock40">
+                    <h4 class="titH5 hasLine">유의사항 (Loan&Biz)</h4>
+                    <ul class="guideList dot">
+                      <li class="list">$신한은행$의 심사기준과 기업의 신용도 등에 따라 대출 여부 및 대출 한도가 결정됩니다.</li>
+                      <li class="list">상기 상품 내용은 $신한은행$ 내부 기준에 따라 대출조건이 변경 또는 제한될 수 있습니다.</li>
+                      <li class="list">실제 상품의 계약은 &nbsp;<strong>계약 시점</strong>의 여신거래기본약관 및 대출거래약정서의 적용을 받습니다.</li>
+                      <li class="list">실제 대출 조건과 제안 조건은 다를 수 있습니다.</li>
+                      <li class="list">과도한 대출은 기업의 신용등급에 영향을 미칠 수 있습니다.</li>
+                      <li class="list">기간 연장시점에는 해당 시점의 기업 신용도 등에 따라 대출금의 일부 또는 전부가 회수될 수 있습니다.</li>
+                      <li class="list">대출금의 상환 또는 이자 납입이 지연된 경우 연체 이율이 적용되며, 예금 등 기타채권과의 상계나 법척 절차 등으로 재산상의 불이익이 발생할 수 있습니다.</li>
+                      <li class="list">연체 시 계약기한 만료 전 원리금 변제 의무가 발생할 수 있습니다.</li>
+                      <li class="list">해당상품에 대한 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
+                    </ul>
+                  </div>
+                  <div class="sectionBlock40">
+                    <h4 class="titH5 hasLine">안내 사항</h4>
+                    <ul class="guideList dot">
+                      <li class="list">기타 자세한 내용은 제안서 상단에 기재된 $신한은행 세종로기업금융센터$ 담당자에게 연락해주세요.</li>
+                      <li class="list">연락 가능 시간: 평일 09:00 - 17:00 (휴무일 제외)</li>
+                      <li class="list">주소: $신한은행 세종로기업금융센터 서울특별시 종로구 새문안로3길 23$</li>
+                    </ul>
+                  </div>
                 </div>
                 <!-- v2.0 -->
                 <div class="table_bt small mt40">
@@ -419,17 +419,17 @@
         <!-- v2.1 right 추가 -->
         <div class="right">
           <div class="totalInfoBox">
-            <div class="head">제안 대출 정보 합계</div>
+            <div class="head">조건 1 리스 정보</div>
             <div class="cont">
-              <span class="label">제안 대출 금액</span>
-              <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p><!-- v2.1 total priceKr 추가 -->
-              <span class="label">제안 대출 금리</span>
-              <p class="desc">연 6.00%</p>
-              <span class="label">제안 대출 수</span>
-              <p class="desc">2건</p>
+              <span class="label">취득원가</span>
+              <p class="desc total">1,000,000,000원<span class="priceKr">(일십억 원)</span></p>
+              <span class="label">제안 리스 금액</span>
+              <p class="desc">KRW 100,000,000 <span class="priceKr">(일억 원)</span></p>
+              <span class="label">보증금 비율</span>
+              <p class="desc">10%</p>
             </div>
             <div class="foot">
-              <button type="button" class="btnSuccess">제안서 채택</button><!-- 미채택 제안서의 경우 노출 -->
+              <button type="button" class="btnSuccess">제안서 채택</button> <!-- 미채택 제안서의 경우 노출 -->
               <button type="button" class="btnSuccess">제안서 채택 취소</button><!-- 채택된 제안서의 경우 노출 -->
             </div>
           </div>

@@ -23,8 +23,7 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
     <section class="pageTop">
       <h2 class="pageTit">추가 서류 관리</h2>
-      <p class="pageSub">관리할 대출 비교 신청 건을 선택하세요. <br/>
-        추가 서류 제출은 접수 마감일(2023-10-25)까지만 가능합니다. 기 제출된 서류 확인은 [대출 비교 진행 현황 > 대출 비교 신청 정보]에서 가능해요.</p><!-- v2.1 -->
+      <p class="pageSub">관리할 대출 비교 신청 건을 선택하세요.</p><!-- v2.1 -->
         
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
@@ -136,10 +135,10 @@
           <label class="label" for="labelExtraOp1">제출하실 서류를 선택해 주세요.</label>
           <div class="formRow filebox">
             <input type="text" class="input" placeholder="파일을 첨부해 주세요." value="사업장부동산등기부등본.pdf" disabled="disabled" title="선택 파일">
-            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일" disabled><!-- 버튼 비활성화 : disabled -->
             <label for="exFilename" class="btnBlack wid160">파일 찾기</label>
           </div>
-          <p class="notiTxt">업로드 가능한 파일 형식은 ppt, pdf, jpg, png이며 파일당 용량은 최대 10mb까지 가능해요.</p>
+          <p class="notiTxt">업로드 가능한 파일 형식은 PDF, JPG, PNG이며 파일당 용량은 최대 10MB까지 가능해요.</p><!-- v2.1 -->
         </div>
         <div class="formList ver">
           <label class="label" for="labelExtraOp1">제출하실 서류명을 입력해 주세요.</label>
