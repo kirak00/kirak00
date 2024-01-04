@@ -280,7 +280,7 @@ ul.main_loan_info.type2 li .main_btn button { width: 100%;}
 .main_loan_cont .no_data.bg_survey .tit { font-size: 18px; font-weight: 700;}
 /* .main_loan_cont .no_data.bg_timeover span     {background-image:url(../images/COP/main/ico_80_log_process_nodata_04.png); }  */
 .main_loan_cont .table_top .total     {font-weight: 700;} 
-.main_loan_cont .titBox     {padding:40px 0 20px; text-align: center; }
+.main_loan_cont .titBox     {padding:40px 0 40px; text-align: center; }
 .main_loan_cont .titBox strong  {font-size: 24px; }
 .main_loan_cont .titBox strong + p {  margin-top:10px; color: #555; }
 .main_loan_cont .titBox p       {color:#333; font-weight: 400; font-size: 16px ; }

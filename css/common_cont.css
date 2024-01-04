@@ -937,6 +937,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 
 .formRow .radio + input[type="text"] { margin-left: 6px;}
 .formRow .radio + .radio { margin-left: 20px;}
+.formRow .radio + .btnBlack { margin-left: 32px;}
 .formRow .radioBtn + .radioBtn { margin-left: -2px;}
 
 .tipTxt     {color:#4C9DA2; margin-top:10px; padding-left:32px; background:url(../images/common/ico_24_notice_secondary.png) no-repeat 0 0; background-size: 24px 24px;  }
@@ -1236,8 +1237,11 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .formListRow.lineBox { gap: 100px;}
 .formListRow { display: flex; align-items: flex-start; gap: 40px;} 
 .formListRow .formList { width: 100%; margin: 0;}
+
 .formList { display: flex; align-items: center; flex-wrap: wrap; margin: 40px 0 20px; }
 .formList.mt10 { margin-top: 10px; }
+td .formList { margin: 0;}
+td .formList + .formList { margin-top: 20px;}
 .formList .label { display: inline-flex; font-weight: 700; flex-shrink: 0;}
 .formList .radio .label,
 .formList .checkbox .label { margin-right: 0;}  
@@ -1277,6 +1281,11 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 /* .formList .label.wid80 ~ .formRow { max-width: calc(100% - 80px);} */
 .formList .label.wid80 ~ .formDesc,
 .formList .label.wid80 ~ .formRow + * { margin-left: 80px; }
+
+.formList .label.wid100 { width: 100px;}
+/* .formList .label.wid100 ~ .formRow { max-width: calc(100% - 80px);} */
+.formList .label.wid100 ~ .formDesc,
+.formList .label.wid100 ~ .formRow + * { margin-left: 100px; }
 
 
 .formList .label.wid120 { width: 120px;}
@@ -1585,6 +1594,10 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup .bbsTip { padding:0; padding-right:12px; }
 .tableFilterGroup .filterLabel {margin:auto 0; }
 .tableFilterGroup .notiTxt { margin-right: 12px}
+.tableFilterGroup .accountList + select { margin-left: 22px;}
+.accountList .list { display: inline-flex; align-items: center; color: #069B66;}
+.accountList .list + .list { margin-left: 20px;}
+.accountList .list .bank { margin-left: 10px; font-size: 14px;}
 .filterLabel { margin-bottom: 20px; color: #4C9DA2; text-align: right;}
 
 .table_top     {position:relative; margin-bottom:20px;  }

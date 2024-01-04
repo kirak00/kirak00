@@ -118,23 +118,31 @@
                   </div>
                 </td>
               </tr>
+              <!-- v2.1 수정 -->
               <tr>
                 <th scope="row">
                   <label id="formLabel7">본사 주소</label>
                 </th>
-                <td role="group" aria-labelledby="formLabel7">
-                  <div class="formRow wid600"><!-- v1.6 wid600 추가 -->
-                    <select title="지역선택" class="wid120" disabled> <!-- v1.8 추가 -->
-                      <option>서울</option>
-                    </select>
-                    <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
-                    <button type="button" class="btnBlack" disabled>주소검색</button>
+                <td>
+                  <div class="formList">
+                    <label class="label wid100" for="labelAddSel">지역</label>
+                    <div class="formRow">
+                      <select title="지역선택" id="labelAddSel" class="wid120" disabled>
+                        <option>서울</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="formRow wid600"><!-- v1.6 wid600 추가 -->
-                    <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="" readonly>
+                  <div class="formList">
+                    <label class="label wid100">상세 주소</label>
+                    <div class="formRow">
+                      <input class="input" title="주소" type="text" placeholder="" value="서울 중구 청계천로 54" readonly>
+                      <input class="input" title="상세주소" type="text" placeholder="상세 주소를 입력해 주세요." value="" readonly>
+                      <button type="button" class="btnBlack" disabled>주소검색</button>
+                    </div>
                   </div>
                 </td>
               </tr>
+              <!-- //v2.1 수정 -->
               <tr>
                 <th scope="row">
                   <label id="formLabel8">대표자명</label>
@@ -220,6 +228,25 @@
                             </span>
                           </td>
                         </tr>
+                        <!-- v2.1 추가 -->
+                        <tr>
+                          <td>알림 메시지</td>
+                          <td>2023-09-15</td>
+                          <td>-</td>
+                          <td>
+                            <span class="radio only">
+                              <input type="radio" id="radioLabel3_1" name="radioLabel3" value="" checked disabled>
+                              <label class="label" for="radioLabel3_1"><span></span></label>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="radio only">
+                              <input type="radio" id="radioLabel3_2" name="radioLabel3" value="" disabled>
+                              <label class="label" for="radioLabel3_2"><span></span></label>
+                            </span>
+                          </td>
+                        </tr>
+                        <!-- //v2.1 추가 -->
                       </tbody>
                     </table>
                   </div>
