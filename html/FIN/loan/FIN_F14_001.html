@@ -51,7 +51,7 @@
             <div class="titBox">
               <div class="tit">
                 <input type="checkbox" class="star" id="testCheckBoxB" name="testCheckBox" title="관심대출 여부" checked>
-                <span class="name">법인명</span><!-- 수정2.0 -->
+                <span class="name">기업명</span><!-- 수정2.0 -->
                 ****(주)길동건설
               </div>
 
@@ -93,7 +93,7 @@
                       <td>1억 2000만원~2억원</td>
                     </tr>
                     <tr>
-                      <th scope="row">담보 유무</th> 
+                      <th scope="row">담보 제공 유무</th> 
                       <td>담보 있음 
                         <div class="table_wrap">
                           <table class="bbs_list">
@@ -101,23 +101,23 @@
                             <colgroup>
                               <col width="15%" />
                               <col width="15%" />
-                              <col />
                               <col width="15%" />
+                              <col />
                             </colgroup>
                             <thead>
                               <tr>
                                 <th scope="col">담보 종류</th>
                                 <th scope="col">부동산 종류</th>
-                                <th scope="col">담보물 상세 정보</th>
                                 <th scope="col">소유자</th>
+                                <th scope="col">담보물 상세 정보</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>부동산</td>
                                 <td>아파트</td>
-                                <td>서울특별시 마포구 길동로 1길 89</td>
                                 <td>대표자 지인</td>
+                                <td>서울특별시 마포구 길동로 1길 89</td>
                               </tr>
                             </thead>
                             <tbody>
@@ -127,16 +127,16 @@
                       </td>
                     </tr>
                     <tr><!-- 수정2.0 -->
-                      <th scope="row">대표자 연대 보증인 제공 가능 유무</th> 
+                      <th scope="row">대표자 연대 보증 가능 유무</th> 
                       <td>가능</td>
                     </tr>
                     <!-- <tr>
                       <th scope="row">연대보증인 제공 여부</th> 
                       <td>연대보증인 있음</td>
                     </tr> -->
-                    <tr>
-                      <th scope="row">희망 대출 금리 유형</th> 
-                      <td>고정금리</td>
+                    <tr><!-- 수정2.0 -->
+                      <th scope="row">희망 대출 상환 방식</th> 
+                      <td>원리분할상환</td>
                     </tr>
                     <tr>
                       <th scope="row">희망 대출 기간</th> 
@@ -146,9 +146,9 @@
                       <th scope="row">희망 거치 기간</th> 
                       <td>24개월</td>
                     </tr>
-                    <tr><!-- 수정2.0 -->
-                      <th scope="row">희망 대출 상환 방식</th> 
-                      <td>원리분할상환</td>
+                    <tr>
+                      <th scope="row">희망 대출 금리 유형</th> 
+                      <td>고정금리</td>
                     </tr>
                     <tr>
                       <th scope="row">희망 대출일</th> 
@@ -195,6 +195,10 @@
                     </colgroup>
                     <tbody>
                       <tr>
+                        <th scope="row">법인명</th> 
+                        <td colspan="3">(주)길동건설</td>
+                      </tr>
+                      <tr>
                         <th scope="row">사업자등록번호</th> 
                         <td colspan="3">123-89-12345</td>
                       </tr>
@@ -239,6 +243,10 @@
                         <td colspan="3">임대-전세 120,000,000원</td>
                       </tr>
                       <tr>
+                        <th scope="row">대표자 유형</th> 
+                        <td colspan="3">단독 대표</td>
+                      </tr>
+                      <tr>
                         <th scope="row">대표자 정보</th> <!-- 1.9 수정-->
                         <td colspan="2">
                             
@@ -280,10 +288,6 @@
                         
                       
                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">대표자 유형</th> 
-                        <td colspan="3">단독 대표</td>
                       </tr>
                       <!-- <tr>
                         <th scope="row">법인 담당자 전화번호</th> 
@@ -517,6 +521,22 @@
                     </table>
                   </div>
                 </div>
+                
+                <div class="textTable companyInfo">
+                  <table>
+                    <caption>소상공인 여부</caption>
+                    <colgroup>
+                      <col width="230px" /><!-- 수정2.0 -->
+                      <col />
+                    </colgroup> 
+                    <tbody>
+                      <tr>
+                        <th scope="row">소상공인 여부</th> 
+                        <td>예</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div class="companyInfo">
                   
@@ -530,25 +550,34 @@
                     <table class="bbs_list">
                       <caption>기술 인증 및 특허 정보</caption>
                       <colgroup>
-                        <col width="15%" />
+                        <col width="10%" />
+                        <col width="17%" />
+                        <col width="10%" />
                         <col />
-                        <col width="20%" />
-                        <col width="20%" />
+                        <col width="10%" />
+                        <col width="10%" />
+                        <col width="10%" />
                       </colgroup>
                       <thead>
                         <tr>
                           <th scope="col">특허 유형</th> <!-- 수정2.0 -->
-                          <th scope="col">증빙 서류</th>
+                          <th scope="col">출원 번호</th>
+                          <th scope="col">등록 상태</th>
+                          <th scope="col">발명의 명칭</th>
+                          <th scope="col">출원인</th>
+                          <th scope="col">특허청 정보</th> 
                           <th scope="col">등록 일자</th> 
-                          <th scope="col">다운로드</th> 
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>이노버즈</td> 
-                          <td>기술혁신 중소기업 확인서</td> 
+                          <td>상표권</td> 
+                          <td>10-1234-1234567</td> 
+                          <td>등록</td> 
+                          <td>그래핀을 함유한 고강도 경량과 복합소재 및 이의....</td> 
+                          <td>(주)신한은행</td> 
+                          <td>연동</td> 
                           <td>2023-08-10</td>
-                          <td><a href="#none" class="download2">다운로드</a></td>
                         </tr>
                       </tbody>
                     </table>
@@ -816,7 +845,7 @@
                         <tr>
                           <td class="tit">재무상태표</td> 
                           <td>2022,2021, 2023</td>
-                          <td>수집 자료</td>
+                          <td>스크래핑 자료</td>
                           <td><a href="#none" class="download2">다운로드</a></td>
                         </tr>
                         <tr>
@@ -866,10 +895,10 @@
                 </div>
                   
                 <div class="companyInfo">
-                  <h4 class="titH5">최근 년도 매출처별 매출 세금계산서 합계표</h4>
+                  <h4 class="titH5">최근 년도 매출처별 매출 현황</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>최근 년도 매출처별 매출 세금계산서 합계표</caption>
+                      <caption>최근 년도 매출처별 매출 현황</caption>
                       <colgroup>
                         <col />
                         <col width="25%" />
@@ -896,10 +925,10 @@
                 </div>
                   
                 <div class="companyInfo">
-                  <h4 class="titH5">최근 년도 매입처별 매입 세금계산서 합계표</h4>
+                  <h4 class="titH5">최근 년도 매입처별 매입 현황</h4>
                   <div class="table_wrap">
                     <table class="bbs_list">
-                      <caption>최근 년도 매입처별 매입 세금계산서 합계표</caption>
+                      <caption>최근 년도 매입처별 매입 현황</caption>
                       <colgroup>
                         <col />
                         <col width="25%" />
@@ -1323,7 +1352,7 @@
 
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess xl" aria-label="레이어 닫기" onclick="llayer_close('layer_cancelList')">닫기</button>
+        <button type="button" class="btnSuccess xl" aria-label="레이어 닫기" onclick="layer_close('layer_cancelList')">닫기</button>
       </div>
     </div>
     <div class="layerDimm"></div>

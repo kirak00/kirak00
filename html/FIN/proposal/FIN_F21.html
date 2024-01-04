@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../css/contents_COP.css">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
   <script src="../../../js/juqery-3.7.0.min.js"></script>
   <script src="../../../js/jquery-ui.js"></script>
   <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
   <script src="../../../js/common.js"></script>
-  <script src="../../../js/common_COP.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
   <title>SHINHAN</title>
 <style>
 
@@ -154,7 +154,7 @@
 
     var clients = [
       { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-        "Name2": "S_230809_0001", 
+        "Name2": "<a href='#' class='goLink'>S_230809_0001</a>", 
         "Name3": "제출가능", 
         "Name4": "<button type='button' class='btnWhite'>이어작성</button>", 
         "Name5": "<button type='button' class='btnWhite'>마감 기한 연장 요청</button>", 
@@ -167,7 +167,7 @@
         "Name12": "123-12-123413", 
       },
       { "Name1": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
-        "Name2": "S_230809_0001", 
+        "Name2": "<a href='#' class='goLink'>S_230809_0001</a>", 
         "Name3": "제출가능", 
         "Name4": "<button type='button' class='btnWhite' disabled>이어작성</button>", 
         "Name5": "<button type='button' class='btnWhite' disabled>마감 기한 연장 요청</button>", 
@@ -187,7 +187,7 @@
     data: clients,
 
     fields: [
-      { name: "Name1", width: 120,  type: "button", title : "관심 대출", },
+      { name: "Name1", width: 120,  type: "button", title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은<br>목록 상단에 고정됩니다.'><span class='txt'>?</span></em>", },
       { name: "Name2", width: 130, type: "text", title : "대출 신청 번호", },
       { name: "Name6", width: 140, type: "text", title : "기업명", },
       { name: "Name12", width: 140, type: "text", title : "사업자등록번호", },

@@ -501,6 +501,7 @@ a.ico_down       {color:#069B66; }
 .btnWhiteLine:hover.ico_down::after   {background-image:url(../images/common/ico_24_download_white.png); }
 .btnWhiteLine.ico_down::after  {background-image:url(../images/common/ico_24_download_blue.png); }
 
+.btnSky.link::after{content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w3.png) no-repeat 50% 50% / contain; }
 .btnSuccess.link::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_blank_w2.png) no-repeat 50% 50% / contain; }
 
 .btnSuccess.ico_right::after {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../images/common/ico_18_right_w.png) no-repeat 50% 50% / contain; }
@@ -574,7 +575,7 @@ a.lnkLine2 { border-bottom: 1px solid #069B66; font-weight: 700; color:#069B66; 
 .icoLink { padding-right: 22px; font-weight: 700; color:#888;  background:url(../images/common/ico_18_right_g.png) no-repeat 100% 50% / 18px 18px; }
 
 .ico_print       {padding:0 32px;}
-.ico_print::after       {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../images/common/ico_24_printer_w.png) no-repeat 50% 50%; }
+.ico_print::after       {content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -5px; background:url(../images/common/ico_24_printer_w.png) no-repeat 50% 50%; }
 .btnWhite.ico_print::after  {background:url(../images/common/ico_24_printer_primary.png) no-repeat 50% 50%; }
 .btnWhite:focus.ico_print::after,
 .btnWhite:active.ico_print::after,
@@ -2065,6 +2066,7 @@ th{word-break: break-all;}
 
 .noTableData  { margin: 60px 0; padding: 40px 0; text-align: center;}
 .noTableData .txt { margin-top:10px; color: #555;}  
+.noTableData i.icoReview::after    { width:80px; height:80px; background:url(../images/common/log_process_02_disabled.png) no-repeat 0 0;  }  
 
 .jsgrid-control-field   {padding:0 10px; }
 .jsgrid-control-field .jsgrid-cancel-edit-button,
@@ -2485,7 +2487,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .loadDetailBox .detailCont .companyInfo .titH4   { margin-bottom:20px; }
 .loadDetailBox .detailCont .companyInfo .stitBox   { display:flex; justify-content: space-between; }
 .loadDetailBox .detailCont .companyInfo .stitBox h4 { padding:13px 0 0; }
-.loadDetailBox .detailCont .companyInfo ul.txtH42  {margin-top:20px; padding:40px; border-radius: 16px; background:#F6FBF7;}
+.loadDetailBox .detailCont .companyInfo ul.txtH42  {margin-top:20px; padding:24px 30px; border-radius: 16px; background:#F6FBF7;}
 .loadDetailBox .detailCont .companyInfo ul.txtH42 li   {}
 .loadDetailBox .detailCont .companyInfo ul.txtH42 li::before   {content:"·"; margin-right:10px;  }
 .loadDetailBox .detailCont .companyInfo .table_wrap   {content:"·"; margin-right:10px; margin-top: 10px; padding: 0; }

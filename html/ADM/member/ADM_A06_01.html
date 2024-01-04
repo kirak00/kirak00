@@ -53,20 +53,20 @@
                 </div>
               </div>
             </div>
-            <div class="searchControlGroup">
+            <div class="searchControlGroup expand">
               <div class="searchControlItem">
                 <label for="selectLabelOption3" class="label">상호명</label>
                 <div class="formRow">
                   <input type="text" class="input" placeholder="기업명을 입력해 주세요">
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="selectLabelOption3" class="label">대표자명</label>
                 <div class="formRow">
                   <input type="text" class="input" placeholder="대표자명을 입력해 주세요">
                 </div>
               </div>
-              <div class="searchControlItem">
+              <div class="searchControlItem expand">
                 <label for="selectLabelOption3" class="label">사업자등록번호</label>
                 <div class="formRow">
                   <input type="text" class="input" placeholder="사업자등록번호를 입력해 주세요">
@@ -74,7 +74,7 @@
               </div>
             </div>
             <div class="searchControlGroup">
-              <div class="searchControlItem ">
+              <div class="searchControlItem expand">
                 <label id="selectLabelArea" class="label">대출/리스 신청</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
                   <select title="범위">
@@ -82,7 +82,7 @@
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem ">
+              <div class="searchControlItem expand">
                 <label id="selectLabelArea" class="label">대출/리스 실행</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
                   <select title="범위">
@@ -90,7 +90,7 @@
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem ">
+              <div class="searchControlItem expand">
                 <label id="selectLabelArea" class="label">회원 상태</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
                   <select title="범위">
@@ -99,6 +99,7 @@
                 </div>
               </div>
               <div class="searchBtns">
+                <button type="button" class="btnReset">검색</button>
                 <button type="button" class="btnSuccess">검색</button>
               </div>
             </div>
@@ -165,7 +166,6 @@
               },
               { 
                 "Name1": "S_230809_0001",
-                "Name2": "채택",
                 "Name3": "(주)길동건설", 
                 "Name4": "단일", 
                 "Name5": "12억 5000만원", 
@@ -175,7 +175,6 @@
               },
               { 
                 "Name1": "S_230809_0001",
-                "Name2": "채택",
                 "Name3": "(주)길동건설", 
                 "Name4": "단일", 
                 "Name5": "12억 5000만원", 
@@ -185,7 +184,6 @@
               },
               { 
                 "Name1": "S_230809_0001",
-                "Name2": "채택",
                 "Name3": "(주)길동건설", 
                 "Name4": "단일", 
                 "Name5": "12억 5000만원", 
@@ -203,12 +201,11 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
               fields: [
                 { name: "Name1",  type: "text", title : "번호", width: 110},
-                { name: "Name2",  type: "text", title : "상호명", width: 90},
                 { name: "Name3", type: "text", title : "대표자명", width: 120 },
                 { name: "Name4", type: "text", title : "사업자등록번호", width: 70 },
                 { name: "Name5", type: "text", title : "가입일", width: 158 },
                 { name: "Name6", type: "text", title : "회원 상태", width: 90 },
-                { name: "Name7", type: "text", title : "대출/리스 비교 신청일", width: 50 },
+                { name: "Name7", type: "text", title : "대출/리스 비교 신청일", width: 110 },
                 { name: "Name8", type: "text", title : "대출/리스 실행일", width: 110 },
               ],
               

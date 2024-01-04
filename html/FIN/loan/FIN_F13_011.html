@@ -101,7 +101,7 @@
                 </div>
               </div>
               <div class="searchControlItem expand">
-                <label for="selectLabelPatent" class="label">보증인 가능 여부</label>
+                <label for="selectLabelPatent" class="label">보증인 제공</label>
                 <div class="formRow">
                   <select id="selectLabelPatent">
                     <option>전체</option>
@@ -140,7 +140,7 @@
               </span>
               <div class="searchBtns">
                 <button type="button" class="btnReset">초기화</button>
-                <button type="button" class="btnWhite">알림 희망 조건으로 설정 <em class="tooltip_q" title="선택한 조건이 충족하는 법인의 대출 신청이 등록되면 \n 알림톡을 발송해 드립니다."><span class="txt">?</span></em></button>
+                <button type="button" class="btnWhite">검색한 조건으로 알림 받기 <em class="tooltip_q" title="선택한 조건이 충족하는 법인의 대출 신청이 등록되면 \n 알림톡을 발송해 드립니다."><span class="txt">?</span></em></button>
                 <button type="button" class="btnSuccess">조회</button>
               </div>
             </div>
@@ -199,48 +199,48 @@
             var clients = [
               { 
                 "disabled" : false ,
-                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name0": "<input type='checkbox' class='star' title='관심리스 선택'></input>",
                 "Name1": "S_230809_0001",
                 "Name2": "심사중<br>[가회지점]", 
                 "Name3": "(주)길동건설", 
                 "Name31": "123-12-126456", 
-                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
+                "Name4": "KRW 1,245,000,000", 
                 "Name5": "서울", 
                 "Name6": "농업.", 
                 "Name7": "시설자금", 
-                "Name8": "유", 
+                "Name8": "불가", 
                 "Name9": "보유", 
                 "Name10": "AA+", 
                 "Name11": "2023-08-30", 
               },
               { 
                 "disabled" : false ,
-                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name0": "<input type='checkbox' class='star' title='관심리스 선택'></input>",
                 "Name1": "S_230809_0001",
                 "Name2": "심사중<br>[가회지점]", 
                 "Name3": "(주)길동건설", 
                 "Name31": "123-12-126456", 
-                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
+                "Name4": "KRW 1,245,000,000", 
                 "Name5": "서울", 
                 "Name6": "농업.", 
                 "Name7": "시설자금", 
-                "Name8": "유", 
+                "Name8": "가능", 
                 "Name9": "보유", 
                 "Name10": "AA+", 
                 "Name11": "2023-08-30", 
               },
               { 
                 "disabled" : true ,
-                "Name0": "<input type='checkbox' class='star' title='관심대출 선택'></input>",
+                "Name0": "<input type='checkbox' class='star' title='관심리스 선택'></input>",
                 "Name1": "S_230809_0001",
                 "Name2": "심사중<br>[가회지점]", 
                 "Name3": "(주)길동건설", 
                 "Name31": "123-12-126456", 
-                "Name4": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>", 
+                "Name4": "KRW 1,245,000,000", 
                 "Name5": "서울", 
                 "Name6": "농업.", 
                 "Name7": "시설자금", 
-                "Name8": "유", 
+                "Name8": "가능", 
                 "Name9": "보유", 
                 "Name10": "AA+", 
                 "Name11": "2023-08-30", 
@@ -254,7 +254,7 @@
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>일치하는 검색결과가 없습니다.</p></div>",
 
               fields: [
-                { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>대출</span>  <em class='tooltip_q' title='관심 대출로 설정된 건은<br>목록 상단에 고정됩니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
+                { name: "Name0",  type: "text", width: 160, title : "<span class='inbox'>관심<br>리스</span>  <em class='tooltip_q' title='관심 리스로 설정된 건은<br>목록 상단에 고정됩니다.'><span class='txt'>?</span></em>", width: "80", validate: "required", },
                 { name: "Name1",  type: "text", title : "리스 신청 번호",  validate: "required", },
                 { name: "Name3", type: "text", title : "기업명", width: 100, validate: "required" },
                 { name: "Name31", type: "text", title : "사업자등록번호", width: 100, validate: "required" },
@@ -263,7 +263,7 @@
                 { name: "Name5", type: "text", title : "지역", width: 70, validate: "required" },
                 { name: "Name6", type: "text", title : "업종", width: 70, validate: "required" },
                 { name: "Name7", type: "text", title : "상세용도", width: 70, validate: "required" },
-                { name: "Name8", type: "text", title : "보증금<br> 비율", width: 70, validate: "required" },
+                { name: "Name8", type: "text", title : "보증금<br> 제공", width: 70, validate: "required" },
                 { name: "Name9", type: "text", title : "보증인<br>가능 여부", width: 70, validate: "required" },
                 { name: "Name10", type: "text", title : "CRETOP <br>등급", width: 70, validate: "required" },
                 { name: "Name11", type: "text", title : "제안서 마감일", width: 100, validate: "required" },

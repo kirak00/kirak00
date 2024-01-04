@@ -157,6 +157,7 @@ ul.loginTab li .formRow .textCenter input  { width:100%; }
 .memoHistory table + table tr:first-child td      {padding-top:40px;}
 .memoHistory table td.btns      {text-align: right; padding:14px 0 0;  } 
 .memoHistory table td.btns button   {height:40px; } 
+.memoHistory p.file   {text-decoration: underline;} 
 
 /* dashboard */
 ul.boxWrap        {display:flex; row-gap: 20px; margin-top:20px; }
@@ -260,15 +261,28 @@ ul.boxWrap.detail li.box.detail_3 strong {display:block; font-size:30px; text-al
 ul.boxWrap.detail li.box.detail_3 strong::before {display:block; content:""; width:80px; height:80px; margin:70px auto 50px; background:url(../adm_images/adm/ph_hand-coins-light.png) no-repeat 50% 50% #EAFAEB; border-radius: 50%;   }
 
 ul.boxWrap.detail li.box.detail_4 {}
+ul.boxWrap.detail li.box.detail_4 span.tit  {height:70px; }
 ul.boxWrap.detail li.box.detail_4 ul {display:flex; margin-top:60px; text-align: center; }
 ul.boxWrap.detail li.box.detail_4 ul li {width:100%; }
 ul.boxWrap.detail li.box.detail_4 ul li.total   {}
 ul.boxWrap.detail li.box.detail_4 ul li.total span    {display:block; }
-ul.boxWrap.detail li.box.detail_4 ul li.total strong  {display:block; margin-top:30px; font-size:30px; color:#069B66; padding-top:80px; background:url(../adm_images/adm/iconoir_user-star.png) no-repeat 50% 0;}
+ul.boxWrap.detail li.box.detail_4 ul li.total strong  {display:block; margin-top:30px;  font-size:24px; color:#069B66; padding-top:80px; background:url(../adm_images/adm/iconoir_user-star.png) no-repeat 50% 0;}
 ul.boxWrap.detail li.box.detail_4 ul li.avr   {}
 ul.boxWrap.detail li.box.detail_4 ul li .starChkWrap {margin:0 auto; width:150px; height:90px; margin-top:20px;  align-items: flex-start; }
-ul.boxWrap.detail li.box.detail_4 ul li.avr strong   {display:block; font-size:18px; }
-ul.boxWrap.detail li.box.detail_4 ul li.avr strong em   {font-size:30px; color:#069B66;   }
+ul.boxWrap.detail li.box.detail_4 ul li.avr strong   {display:block;font-size:24px; }
+ul.boxWrap.detail li.box.detail_4 ul li.avr strong em   {font-size:24px; color:#069B66;   }
+
+
+ul.boxWrap.detail li.box.detail_4 {}
+ul.boxWrap.detail li.box.detail_4 span.tit  {height:70px; }
+ul.boxWrap.detail li.box.detail_4 ul {display:flex; margin-top:40px; text-align: center; }
+ul.boxWrap.detail li.box.detail_4 ul li.qna_1   {}
+ul.boxWrap.detail li.box.detail_4 ul li.qna_1 span    {display:block; }
+ul.boxWrap.detail li.box.detail_4 ul li.qna_1 strong  {display:block; margin-top:30px; font-size:24px; color:#069B66; padding-top:80px; background:url(../adm_images/adm/iconoir_user-star.png) no-repeat 50% 0;}
+ul.boxWrap.detail li.box.detail_4 ul li.qna_2   {}
+ul.boxWrap.detail li.box.detail_4 ul li.qna_2 strong   {display:block; margin-top:30px;  font-size:24px; color:#333;  padding-top:80px; background:url(../adm_images/adm/iconoir_user-star.png) no-repeat 50% 0; }
+ul.boxWrap.detail li.box.detail_4 ul li.qna_2 strong em   {font-size:24px; color:#069B66;   }
+
 
 ul.boxWrap.chartBox li.box { }
 ul.boxWrap.chartBox li.box span.tit  {display:block; padding:40px 0 0; font-size: 18px; font-weight: 700; text-align: center;  }
@@ -428,6 +442,17 @@ ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 .visitViewCont .jsgrid-grid-body   {max-height:400px; }
 
 
+.table_wrap .bbs_list.authority      {}
+.table_wrap .bbs_list.authority tr.main td      {font-weight: 700; color:#069B66; text-align: center !important;}
+.table_wrap .bbs_list.authority tbody tr th      {background: #FAFAFA; border-right:1px solid #ddd;border-bottom:1px solid #ddd; }
+.table_wrap .bbs_list.authority tbody tr th + td,
+.table_wrap .bbs_list.authority tbody tr td:first-child      {text-align: left; padding-left:30px; }
+.table_wrap .bbs_list.authority td .checkbox label span      {margin:0; }
+
+
+.table_wrap .bbs_list.authority td input[type=checkbox] {margin:0; -webkit-appearance:none; position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; background: no-repeat center / 24px 24px url("../adm_images/common/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
+.table_wrap .bbs_list.authority td input[type=checkbox]:checked { background-image: url("../adm_images/common/checkbox_active.png")}
+
 /* */
 
 
@@ -513,3 +538,7 @@ fieldset .searchControlBox { width: 100%;}
 .layer_adminManage      {}
 .layer_adminManage .formListWrap      {margin-top:30px; }
 .layer_adminManage h4 ~ h4      {border-top:1px solid #ddd; margin-top:40px; padding-top:40px;   }
+
+
+
+
