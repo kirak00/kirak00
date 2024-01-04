@@ -1046,6 +1046,7 @@ select.arrow { min-width: 0; padding-right: 20px; border: none; background:#fff 
 .textareaWrap { width: 100%; min-height: 50px;  height:auto; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px;  }
 .textareaWrap { position: relative; display: flex; flex-direction: column; align-items: end; }
 .textareaWrap .count {display:block; text-align: right;}
+.textareaWrap.disabled { background: #f4f6f8;color: #999;  }
 
 
 .textareaWrap .textarea { width: 100%; min-height: 50px;  padding:0; border: 0;  }
