@@ -34,7 +34,7 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">리스 제안서 제출</h2>
+      <h2 class="pageTit">제안서 제출</h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>제안서 등록</span></a></li>
@@ -42,13 +42,19 @@
           <li><a href="#none"><strong>제안서 제출</strong></a></li>
       </ul>
     </section> 
- 
+ <script>
+
+  $(function(){
+    $("input, textarea, button, select").attr("disabled",true);
+    $(".table_bt button").attr("disabled",false);
+  })
+ </script>
     <section class="suggestPg">
       <div class="titBg flexBetween">
         <div>
            <h3>(주)길동건설</h3><span class="info">마포지부</span>
         </div>
-        <p class="sub">리스 신청 번호  S_230809_0001</p>
+        <p class="sub">대출 신청 번호  S_230809_0001</p>
       </div>
       <div class="divideCon">
         <div class="left">
@@ -64,9 +70,27 @@
                 <col width="auto">
               </colgroup>
               <tbody>
+                <tr>
+                  <th scope="row">
+                    <label id="formLabel1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>현장실사 여부</label>
+                  </th>
+                  <td>
+                    <div class="formRow" role="group" aria-labelledby="formLabel1">
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxA" name="testRdoBox" value="A" />
+                        <label for="testRdoBoxA"><span></span>미완료</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="testRdoBoxB" name="testRdoBox" value="B" />
+                        <label for="testRdoBoxB"><span></span>완료</label>
+                      </span>
+                    </div>
+                    <p class="notiTxt">현장실사 완료 여부는 제안서 제출 가능 여부 또는 제안서 채택에 영향을 주지 않습니다.</p>
+                  </td>
+                </tr>
                 <tr> 
                   <th scope="row">
-                    <label for="formLabel2" class="label">제안 직원명</label>
+                    <label for="formLabel2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 직원명</label>
                   </th> 
                   <td>
                     <div class="formRow "><!-- 1.9 수정-->
@@ -94,7 +118,7 @@
                   </th> 
                   <td>
                     <div class="dateControl lg">
-                      <input id="formLabel4" class="input calendar" type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
+                      <input id="formLabel4" class="input calendar2 " type="text" placeholder="" value="2023-10-24" title="선택된 날짜" readonly>
                       <!-- <button type="button" class="btnCalendar"><span class="srOnly">달력열기</span></button> -->
                       까지 유효
                     </div>
@@ -106,10 +130,11 @@
                   </th> 
                   <td>
                     <div class="formRow">
-                      <div class="textareaWrap ">
+                      <div class="textareaWrap disabled">
                         <textarea class="textarea" id="formLabel5" title="고객에게 전달할 내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
                         <span class="count">0/500</span>
                       </div>
+                      
                     </div>
                   </td>
                 </tr>
@@ -158,22 +183,15 @@
           <div id="accordionGroup" class="accordion formAccordion" accordion-option="only">
             <div class="accordionItem isOpen">
               <h3 class="accordionTitle">
-                <span class="label" for="formLabel_tit_1" >조건 1</span>
+                <span class="label" for="formLabel_tit_1" >상품명1</span>
                 <div class="inputWrap">
                   <input type="text" class="input" id="formLabel_tit_1" placeholder="상품명을 입력해 주세요." >
-                  <div class="formRow filebox single">
-                    <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
-                    <label for="exFilename" class="btnBlack">상품 안내 자료 첨부</label>  
-                    <div class="attached">
-                      <p class="notiTxt"> 상품 안내 자료를 등록해 주세요. (pdf, jpg, png만 가능)</p>
-                    </div>
-                  </div>
                 </div>
                 <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect1" id="accordion1id"><span class="accordionIcon"></span></button>
               </h3>
               <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordionPanel" hidden="">
                 <span class="srOnly">제안 대출1 상세보기</span>
-                <div class="formListTable  pl0">
+                <div class="formListTable">
                   <table>
                     <caption>제안서 기본 정보</caption>
                     <colgroup>
@@ -181,282 +199,145 @@
                       <col width="auto">
                     </colgroup>
                     <tbody>
-                      <tr> 
+                      <tr>
                         <th scope="row">
-                          <label id="leaseForm_1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 구분</label>
+                          <label for="accLabel1" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 자금 용도</label>
                         </th> 
                         <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_1">
-                            <span class="radio">
-                              <input type="radio" id="leaseForm_1_1" name="leaseForm_1" title="리스 구분 - 금융리스"  value="">
-                              <label for="leaseForm_1_1"><span></span>금융리스</label>
+                          <div class="formRow">
+                            <select class="wid220" title="자금용도 선택">
+                              <option>시설자금</option>
+                              <option>운영자금</option>
+                            </select>
+                            <button type="button" class="btnWhite" aria-controls="tabpanel_1" >적용 </button>
+                          </div>
+                          <div class="formVertical lineBox" id="tabpanel_1" title="시설자금/운영자금 자금용도 선택">
+                            <h5 class="titH5 detail">자금 상세 용도</h5>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_1" name="searchCheckBox" />
+                              <label for="searchCheckBox_1"><span></span>인건비(급여 등)</label>
                             </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_1_2" name="leaseForm_1" title="리스 구분 - 운용리스"  value="">
-                              <label for="leaseForm_1_2"><span></span>운용리스</label>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_2" name="searchCheckBox" />
+                              <label for="searchCheckBox_2"><span></span>공과금 납부</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_3" name="searchCheckBox" />
+                              <label for="searchCheckBox_3"><span></span>원자재 구입 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_4" name="searchCheckBox" />
+                              <label for="searchCheckBox_4"><span></span>예비운영 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_5" name="searchCheckBox" />
+                              <label for="searchCheckBox_5"><span></span>다른회사 인수 자금</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_6" name="searchCheckBox" />
+                              <label for="searchCheckBox_6"><span></span>분양목적 부동산 구입</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_7" name="searchCheckBox" />
+                              <label for="searchCheckBox_7"><span></span>임대보증금 반환</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_8" name="searchCheckBox" />
+                              <label for="searchCheckBox_8"><span></span>판매활동비</label>
+                            </span>
+                            <span class="checkbox">
+                              <input type="checkbox" id="searchCheckBox_9" name="searchCheckBox" />
+                              <label for="searchCheckBox_9"><span></span>다른 운행 운전자금 상환</label>
+                            </span>
+                            <div class="formRow ">
+                              <span class="checkbox">
+                                <input type="checkbox" id="searchCheckBox_10" name="searchCheckBox" onchange="$('#searchCheckBox_10_1')[0].disabled = !this.checked" />
+                                <label for="searchCheckBox_10"><span></span>기타</label>
+                              </span>
+                              <input type="text" class="input" id="searchCheckBox_10_1" title="기타 내용 입력" placeholder="기타 상세 용도를 입력해 주세요." disabled>
+                            </div>
+                            <div class="detailForm">
+                              <h5 class="titH5">자금 용도 변경 사유</h5>
+                              <div class="formVertical mt10">
+                                <div class="textareaWrap disabled">
+                                  <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요. ex) 실 자금 용도 서류 확인(500자 이내)" disabled></textarea>
+                                  <span class="count">0/500</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 금액</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            <input class="input wid400" type="text" name="" id="accLabel2" placeholder="대출 금액을 입력해 주세요." value="" />
+                            <strong class="unit">원</strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
+                          <label for="accLabel3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>가장 빠른 대출 <br> 실행 가능일</label>
+                        </th> 
+                        <td>
+                          <div class="formRow">
+                            
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect1" name="telSelect" title="유선안내 선택" checked value="">
+                              <label for="telSelect1"><span></span>제안서 채택 후 약</label>
+                              <select class="wid100" title="범위" id="accLabel3">
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                              <span class="unit">일 이후</span>
+                            </span>
+                            <span class="radio inline">
+                              <input type="radio" id="telSelect2" name="telSelect" title="유선안내 선택"  value="">
+                              <label for="telSelect2"><span></span>유선안내</label>
                             </span>
                           </div>
                         </td>
                       </tr>
                       <tr> 
                         <th scope="row">
-                          <label id="leaseForm_2" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>신규기기 여부</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_2">
-                            <span class="radio">
-                              <input type="radio" id="leaseForm_2_1" name="leaseForm_2" title="신규기기 여부 - 신규기기"  value="">
-                              <label for="leaseForm_2_1"><span></span>신규기기</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_2_2" name="leaseForm_2" title="신규기기 여부 - 중고기기"  value="">
-                              <label for="leaseForm_2_2"><span></span>중고기기</label>
-                            </span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label id="leaseForm_3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>내수구분</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
-                            <span class="radio">
-                              <input type="radio" id="leaseForm_3_1" name="leaseForm_3" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_3_1"><span></span>국내</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_3_2" name="leaseForm_3" title="내수구분 - 해외(수입)"  value="">
-                              <label for="leaseForm_3_2"><span></span>해외(수입)</label>
-                            </span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label id="accLabel5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상세 용도</label>
+                          <label id="accLabel5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상환 방식</label>
                         </th> 
                         <td>
                           <div class="formRow" role="group" aria-labelledby="accLabel5">
-                            <select class="wid220" title="상세 용도 선택">
+                            <select class="wid220" title="상환방식 선택">
                               <option>기타</option>
                               <option>셀렉트</option>
                             </select>
-                            <input class="input" type="text" name="" id="accLabel1" placeholder="한글, 영문, 숫자 입력 가능" value="" />
+                            <input class="input" type="text" name="" id="accLabel1" placeholder="기타 상환 방식을 입력해 주세요." value="" />
                           </div>
                         </td>
                       </tr>
-                      
-                      
                       <tr> 
                         <th scope="row">
-                          <label id="leaseForm_5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 금액</label>
+                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
                         </th> 
                         <td>
                           <div class="formRow">
-                            <input class="input wid180" type="text" name="" id="leaseForm_5" placeholder="" value="" readonly /> <span class="unit">원</span>
-                            <p class="notiTxt mt0">하단에 입력하신 리스 가격의 총 합 금액입니다.</p>
-                          </div>
-                        </td>
-                      </tr>
-                      
-                      <tr> 
-                        <th scope="row">
-                          <label id="leaseForm_5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 물건</label>
-                        </th> 
-                        <td>
-                        </td>
-                      </tr>
-                      <tr class="sub"> 
-                        <td colspan="2">
-                          
-                          <div class="table_wrap ">
-                            <table class="bbs_list gray sm">
-                              <caption>인지세</caption>
-                              <colgroup>
-                                <col width="13%"/>
-                                <col width="12%"/>
-                                <col width="" />
-                                <col width="12%" />
-                                <col width="20%" />
-                                <col width="14%" />
-                                <col width="8%" />
-                              </colgroup>
-                              <thead>
-                                <tr>
-                                  <th scope="col">리스 물건명</th>
-                                  <th scope="col">수량</th>
-                                  <th scope="col">가격</th>
-                                  <th scope="col">제조사</th>
-                                  <th scope="col">제조일자</th>
-                                  <th scope="col">공급업체</th>
-                                  <th scope="col"></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td><input class="input" type="text" name="inpPeriod" title="리스 물건명" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="수량" value="1,000" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="가격" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="제조사" ></td>
-                                  <td>
-                                    <div class="dateControl ">
-                                      <input type="text" class="input wid130 calendar" title="제조일자" value="2023-07-01" title="날짜선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                                    </div>
-                                  </td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="공급업체" ></td>
-                                  <td><button type="button" class="btnPlus w50"><span class="hide">+</span></button></td>
-                                </tr>
-                                <tr>
-                                  <td><input class="input" type="text" name="inpPeriod" title="리스 물건명" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="수량" value="1,000" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="가격" ></td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="제조사" ></td>
-                                  <td>
-                                    <div class="dateControl ">
-                                      <input type="text" class="input wid130 calendar" title="제조일자" value="2023-07-01" title="날짜선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-                                    </div>
-                                  </td>
-                                  <td><input class="input" type="text" name="inpPeriod" title="공급업체" ></td>
-                                  <td><button type="button" class="btnMinus w50"><span class="hide">+</span></button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-
-                        </td>
-                      </tr>
-
-                      
-                      <tr> 
-                        <th scope="row">
-                          <label id="leaseForm_3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>취득원가</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
-                            
-                            <select class="wid100" title="범위" id="accLabel3" >
-                              <option>KRW</option>
-                            </select>
-                            <input class="input wid200" type="text" name="inpPeriod" id="notiLabel21" placeholder="직접입력" >
-                            <input class="input" type="text" name="inpPeriod" id="notiLabel22" readonly value="0" >
-                          </div>
-                          <p class="notiTxt">상단에 입력하신 리스 가격의 총 합 금액입니다.</p>
-                          <p class="notiTxt">취득원가의 통화는 1개만 선택 가능함으로 다수의 통화 등록 방식은 불가능합니다.</p>
-                        </td>
-                      </tr>
-
-                      <tr> 
-                        <th scope="row">
-                          <label id="leaseForm_3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>보증금 비율</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_1" name="leaseForm_6" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_6_1"><span></span>0%</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_2" name="leaseForm_6" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_6_2"><span></span>10%</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_3" name="leaseForm_6" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_6_3"><span></span>20%</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_4" name="leaseForm_6" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_6_4"><span></span>30%</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_5" name="leaseForm_6" title="내수구분 - 국내"  value="">
-                              <label for="leaseForm_6_5"><span></span>50%</label>
-                            </span>
-                            <span class="radio ">
-                              <input type="radio" id="leaseForm_6_6" name="leaseForm_6" title="" checked value="">
-                              <label for="leaseForm_6_6"><span></span>기타</label>
-                              <input class="input innerTxt_1 wid120" type="text" name="inpPeriod" id="notiLabel2" >
-                              <span class="unit">%</span>
-                            </span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label id="leaseForm_3" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 리스 금액</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
-                            
-                            <input class="input wid100" type="text" name="inpPeriod" id="notiLabel211" readonly placeholder="KRW" >
-                            <input class="input" type="text" name="inpPeriod" id="notiLabel221" readonly value="0" >
-                          </div>
-                          <p class="notiTxt">취득원가 x 선택한 보증금 비율 금액입니다.</p>
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label for="" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>보증인</label>
-                        </th> 
-                        <td>
-                          <div class="formRow" >
-                            <span class="radio">
-                              <input type="radio" id="testRdoBank11" name="testRdoBank" title="보증인 선택" checked value="">
-                              <label for="testRdoBank1"><span></span>필요하지 않음</label>
-                            </span>
-                            <span class="radio">
-                              <input type="radio" id="testRdoBank12" name="testRdoBank" title="보증인 선택" value="">
-                              <label for="testRdoBank2"><span></span>필요</label>
-                            </span>
-                            <select class="wid220" title="보증인 선택">
-                              <option value="">기타</option>
-                              <option value=""></option>
-                            </select>
-                            <input class="input wid100" id="inpLabelRate13" type="text" placeholder="직접입력" value="" title="보증인 명">
-                          </div>
-                          
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상환 방식</label>
-                        </th> 
-                        <td>
-                          <div class="formRow formGroup" role="group" aria-labelledby="leaseForm_3">
-                            
-                            <select class="wid200" title="리스 기간" id="accLabel3" >
-                              <option>기타</option>
-                            </select>
-                            <input class="input" type="text" name="inpPeriod" id="notiLabel2"  >
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr> 
-                        <th scope="row">
-                          <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 기간</label>
-                        </th> 
-                        <td>
-                          <div class="formRow">
-                            <input id="accLabel41" class="input wid82" type="text" placeholder="000" value="">
+                            <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
                             <span class="unit">개월</span>
                           </div>
                         </td>
                       </tr>
-
                       <tr> 
                         <th scope="row">
                           <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>거치 기간</label>
                         </th> 
                         <td>
                           <div class="formRow">
-                            <input id="accLabel42" class="input wid82" type="text" placeholder="000" value="">
+                            <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
                             <span class="unit">개월</span>
                           </div>
                         </td>
                       </tr>
-
-
                       <tr> 
                         <th scope="row">
                           <label for="" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제안 금리</label>
@@ -492,25 +373,79 @@
                       </tr>
                       <tr> 
                         <th scope="row">
-                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>양도 담보 정보</label>
+                          <label class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>담보 정보</label>
                         </th> 
                         <td>
                           <div class="formRow" >
                             <span class="radio">
-                              <input type="radio" id="testRdoBank1" name="testRdoBank" title="양도 담보유무 선택" checked value="">
-                              <label for="testRdoBank1"><span></span>유</label>
+                              <input type="radio" id="testRdoBank1" name="testRdoBank" title="담보유무 선택" checked value="">
+                              <label for="testRdoBank1"><span></span>담보 없음</label>
                             </span>
                             <span class="radio">
-                              <input type="radio" id="testRdoBank2" name="testRdoBank" title="양도 담보유무 선택" value="">
-                              <label for="testRdoBank2"><span></span>무</label>
+                              <input type="radio" id="testRdoBank2" name="testRdoBank" title="담보유무 선택" value="">
+                              <label for="testRdoBank2"><span></span>담보 있음</label>
                             </span>
                           </div>
+                          <div id="damboHasChkCont" class="formRowWrap">
+                            <div class="formRow" >
+                              <select class="wid180" title="담보종류 선택" disabled>
+                                <option value="부동산">부동산</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                              <select class="wid240" title="담보종류 선택" disabled>
+                                <option value="부동산">부동산</option>
+                                <option value="옵션">옵션</option>
+                              </select>
+                            </div>
+                            <div class="formAdd">
+                              <div class="formRow">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                                <button type="button" class="btnBlack p30" disabled>주소검색</button>
+                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                              </div>
+                              <div class="formRow">
+                                <input id="inpRoute" class="input" type="text" title="담보상세 정보" placeholder="담보 상세정보를 입력해주세요." value="" disabled>
+                                <button type="button" class="btnPlus" disabled><span class="hide">담보상세 입력 폼 추가</span></button>
+                              </div>
+                            </div>
+                          </div>
+                          <script>
+                            $(function(){
+                              
+                              $("[name=testRdoBank]").on("click", function(){
+                                if(this.id =="testRdoBank2"){
+                                  $("#damboHasChkCont").find("input,select,button").each(function(){
+                                    this.disabled = false;
+                                  })
+                                }else{
+                                  $("#damboHasChkCont").find("input,select,button").each(function(){
+                                    this.disabled = true;
+                                  })
+                                }
+                              })
+                              
+                              var damboListIdx = 100;
+                              $(document).on("click", ".btnPlus", function() {
+                                var $listblock = $(this).closest(".formRow").clone().removeClass("none");
+                                damboListIdx++
+                                $listblock.attr({id: "damboList_"+ damboListIdx})
+                                $listblock.find(".btnPlus")[0].className = "btnMinus";
+                                $listblock.find(".btnMinus")[0].value = "";
+                                $listblock.find(".hide")[0].innerHTML = "담보상세 입력 삭제";
+                                $listblock.find("button").attr({'aria-controls' : "damboList_"+ damboListIdx })
+                                $(this).closest('.formAdd').append($listblock);
+                              });
+                              $(document).on("click", ".btnMinus", function() {
+                                $(this).closest(".formAdd .formRow").detach();
+                              });
+                            });
+                          </script>
                         </td>
                       </tr>
-                      <tr> 
+                      <!-- <tr> 
                         <th scope="row">기타 조건</th> 
                         <td><input class="input" type="text" name="" id="accLabel1" placeholder="상환 조건 등 조건을 입력해 주세요." value="" /></td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
                   <div class="mt10"><!-- 수정2.0 -->
@@ -559,13 +494,24 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr><!-- 수정2.0 -->
                           <th scope="row">
-                            <label class="label" for="notiLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>리스 취급 시 부대 비용</label>
+                            <label class="label" for="notiLabel3">한도 약정 수수료(율)</label>
                           </th> 
                           <td>
                             <div class="formRow">
-                              <input class="input  " type="text" name="inpPeriod" id="notiLabel4" placeholder="리스 취급 시 부대 비용을 입력해 주세요.">
+                              <input class="input innerTxt_1 wid180 " type="text" name="inpPeriod" id="inpPeriod" placeholder="000">
+                              <span class="unit">%</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="label" for="notiLabel4"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 시 부대 비용</label>
+                          </th> 
+                          <td>
+                            <div class="formRow">
+                              <input class="input  " type="text" name="inpPeriod" id="notiLabel4" placeholder="인지세, 보증료 등">
                             </div>
                           </td>
                         </tr>
@@ -621,8 +567,7 @@
                               </table>
                             </div>
                           </td>
-                        </tr>
-                        <!-- <tr>
+                        </tr><tr>
                           <th scope="row">
                             <label for="notiLabel6"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상품 안내 자료 등록</label><br>
                             (pdf, jpg, png만 가능)
@@ -634,7 +579,7 @@
                               <div class="attached"></div>
                             </div>
                           </td>
-                        </tr> -->
+                        </tr>
                         <!-- <tr>
                           <th scope="row">
                             <label class="label" for="notiLabel5">참고 사항</label>
@@ -648,42 +593,22 @@
               
               </div>
             </div>
-            <div class="accordionItem">
-              <h3 class="accordionTitle">
-                <button type="button" class="btnDelete"><span class="srOnly">삭제</span></button>
-                <span class="label" for="formLabel_tit_2" >상품명1</span>
-                <select name="" id="formLabel_tit_2" title="대출 상품 선택" >
-                  <option value="">대출 상품을 선택해 주세요.</option>
-                </select>
-                <button type="button" aria-expanded="false" class="accordionTrigger" aria-controls="sect2" id="accordion2id"><span class="accordionIcon"></span></button>
-              </h3>
-              <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordionPanel" hidden="">
-                <span class="srOnly">제안 대출1 상세보기</span>
-                
-              
-              </div>
-            </div>
             <script>
             </script>
-          </div>
-          <div class="table_bt fullType">
-            <button type="button" class="btnGray">+조건 추가</button>
           </div>
         </div>
         <div class="right">
           <div class="totalInfoBox">
-            <div class="head">리스 제안서 정보 합계</div>
+            <div class="head">제안 대출 정보 합계</div>
             <div class="cont">
-              <span class="label">제안 리스 금액</span>
-              <p class="desc">500,000,000원(오억원)</p>
-              <span class="label">보증금 비율</span>
-              <p class="desc">0%</p>
-              <span class="label">금리</span>
-              <p class="desc">연 0.00%</p>
+              <span class="label">제안 대출 금액</span>
+              <p class="desc total">500,000,000원<span class="priceKr">(오억원)</span></p><!-- v2.1 total priceKr 추가 -->
+              <span class="label">제안 대출 금리(가중 평균 금리)</span>
+              <p class="desc">연 6.00%</p>
+              <span class="label">제안 대출 수</span>
+              <p class="desc">2건</p>
             </div>
             <div class="foot">
-              <button type="button" class="btnWhite">중간저장</button>
-              <button type="button" class="btnSuccess">제출하기</button>
             </div>
           </div>
         </div>

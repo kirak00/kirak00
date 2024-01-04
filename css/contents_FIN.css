@@ -96,6 +96,8 @@ ul.loginTab li .searchIdResult   {height:116px; text-align: center; font-size: 1
 
 .center .searchControlBox .searchBtns { width:190px; flex-direction: column; }
 .searchControlBox .searchBtns button { min-width:120px; padding:0 10px; text-align: center; }
+.searchControlBox .searchBtns button.btnWhite.ico_print { position:absolute; width:190px; right:204px; }
+.searchControlBox .searchBtns button.btnWhite.ico_print::after { background:url(../images/common/ico_18_chart_primary.png) no-repeat 0 0 / contain; }
 .searchControlBox .dateTab          {height:50px; border:1px solid #ddd; border-radius: 8px;   display:flex; flex-direction: row; background:#fff; }
 .searchControlBox .dateTab button    {border:0; width:130px; height:50px; border-radius: 8px; margin:-1px 0 0 -1px; }
 .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
@@ -297,7 +299,7 @@ ul.employeeSelect li + li  {margin-top:20px; }
 .employeeInfo .textTable  {margin-top:40px; margin-bottom:40px; padding-left:40px;   }
 
 .proposal_preview .tit45    {margin-top:40px; }
-.proposal_preview .tit45_g    {color:#069B66; MARGIN-TOP:20px;   }
+.proposal_preview .tit45_g    {color:#069B66; margin-top:20px; display:flex; justify-content: space-between;   }
 .proposal_preview .txtCenter    {text-align: center; padding-bottom:20px; }
 .proposal_preview .txtCenter p  {display:inline-block; }
 .proposal_preview .prevTit      {overflow:hidden; padding:24px 40px; background:#069B66; border-radius:16px; color:#fff;   }
@@ -482,11 +484,17 @@ tr.ui-sortable-helper td { opacity:0.8;  background: #f0f0f0; }
 
 .searchControlItem .unit.txt {font-size: 16px;}
 
-
+.suggestPg .accordionItem {overflow: hidden;}
 .formAccordion .accordionTitle      {background:#F6FBF7; border-radius:16px 16px 0 0}
 .formAccordion .accordionTitle .accordionTrigger    {border:1px solid #069B66; border-radius: 8px; background-color:#fff;  }
 .formAccordion .accordionIcon   {width:100%;}
 .formAccordion .accordionTitle .filebox    {margin-top:12px; }
 
 .filebox.single label.btnBlack { height:40px; line-height:40px; padding:0 30px; }
+
+.memoView     {margin-top:20px; }
+
+.proposalDetail .textTable th, .proposalDetail .textTable td    {padding:10px 0; }
+
+
 /* 진희 */

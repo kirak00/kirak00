@@ -389,6 +389,9 @@ a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:ur
 .btnReset:focus::after ,
 .btnReset:hover::after  { background-image:url(../adm_images/common/ico_24_refresh_w.png) }
 
+.btnReset     {display:inline-block; padding:0 0px; width:50px !important; min-width: 50px !important; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66;  overflow: hidden; text-indent: -200px; }
+
+
 .btnFile      {font-size: 18px; font-weight: 700; color:#069B66; text-decoration: underline;}
 .btnFile::after  {content:""; display:inline-block; margin-left:8px; width:24px; height:24px; vertical-align: -5px; background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 50% 50%; }
 
@@ -1132,7 +1135,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .loginCont .loginBtn button,
 .loginCont .loginBtn a     {width:100%; height: 50px; line-height: 50px; font-size: 16px; }
 
-.loginUtilBtn     {text-align: center; padding:20px 0 0; }
+.loginUtilBtn     { display: flex; width:530px; margin:0 auto; justify-content: space-between; text-align: center; padding:20px 0 0; }
 .loginUtilBtn a  {color:#555; font-size: 14px; }
 .loginUtilBtn a + a::before {content:'·'; display:inline-block; margin:0 10px; }
 
@@ -1181,6 +1184,11 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_top .sortBox   {float:right; display:flex; gap:10px;    }
 .table_top .sortBox select { width: 100%; height: 50px; flex-shrink:unset;  }
 .table_top .sortBox button.btnSky { min-width:120px; padding:0 10px; }
+
+.table_top .total input[type=checkbox] {margin:0; -webkit-appearance:none; position: relative; display: inline-block; vertical-align: middle; width: 24px; height: 24px; background: no-repeat center / 24px 24px url("../adm_images/common/checkbox_inactive.png"); vertical-align: -6px; cursor: pointer}
+.table_top .total input[type=checkbox]:checked { background-image: url("../adm_images/common/checkbox_active.png")}
+
+
 
 .table_bt      { position: relative; width:100%; max-width: 1400px;  margin:40px auto 0px; box-sizing: content-box; min-height:50px; }
 .table_bt.mt40      { margin-top:40px; }
@@ -2431,6 +2439,9 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .visitViewCont .layerSearch .fullYear select   { width:33%; } 
 .visitViewCont .layerSearch .rangeControl          { padding:20px 0 0; } 
 .visitViewCont .layerSearch .rangeControl .input    { width:80px  } 
+.layerSearch                  {position:relative} 
+.layerSearch .btnRefresh      {position:absolute; right:47px; top:22px;  } 
+.layerSearch .rangeControl .btnRefresh      {top:-22px; right:27px;  } 
 
 .unit.prev    {position:absolute; padding-left:20px; color:#333;  }
 .unit.prev + .input    {padding-left:40px; width:500px; }

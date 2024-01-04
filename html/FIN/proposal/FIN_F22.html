@@ -124,7 +124,10 @@
                   </th> 
                   <td>
                     <div class="formRow">
-                      <textarea class="textarea" id="formLabel5" title="고객에게 전달할 내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
+                      <div class="textareaWrap ">
+                        <textarea class="textarea" id="formLabel5" title="고객에게 전달할 내용을 입력해주세요" placeholder="고객에게 전달할 내용을 입력해 주세요.(500자 이내)"></textarea>
+                        <span class="count">0/500</span>
+                      </div>
                     </div>
                   </td>
                 </tr>
@@ -256,7 +259,10 @@
                             <div class="detailForm">
                               <h5 class="titH5">자금 용도 변경 사유</h5>
                               <div class="formVertical mt10">
-                                <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요. ex) 실 자금 용도 서류 확인(500자 이내)" disabled></textarea>
+                                <div class="textareaWrap disabled">
+                                  <textarea class="textarea" title="자금 용도 변경 시 사유를 입력" placeholder="제안 자금 용도가 가입고객의 희망 자금 용도와 다를 경우 변경 사유를 입력해 주세요. ex) 실 자금 용도 서류 확인(500자 이내)" disabled></textarea>
+                                  <span class="count">0/500</span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -298,6 +304,20 @@
                       </tr>
                       <tr> 
                         <th scope="row">
+                          <label id="accLabel5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상환 방식</label>
+                        </th> 
+                        <td>
+                          <div class="formRow" role="group" aria-labelledby="accLabel5">
+                            <select class="wid220" title="상환방식 선택">
+                              <option>기타</option>
+                              <option>셀렉트</option>
+                            </select>
+                            <input class="input" type="text" name="" id="accLabel1" placeholder="기타 상환 방식을 입력해 주세요." value="" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <th scope="row">
                           <label for="accLabel4" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>대출 기간</label>
                         </th> 
                         <td>
@@ -315,20 +335,6 @@
                           <div class="formRow">
                             <input id="accLabel4" class="input wid82" type="text" placeholder="000" value="">
                             <span class="unit">개월</span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr> 
-                        <th scope="row">
-                          <label id="accLabel5" class="label"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상환 방식</label>
-                        </th> 
-                        <td>
-                          <div class="formRow" role="group" aria-labelledby="accLabel5">
-                            <select class="wid220" title="상환방식 선택">
-                              <option>기타</option>
-                              <option>셀렉트</option>
-                            </select>
-                            <input class="input" type="text" name="" id="accLabel1" placeholder="기타 상환 방식을 입력해 주세요." value="" />
                           </div>
                         </td>
                       </tr>

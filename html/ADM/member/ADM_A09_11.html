@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+</style>
+</head>
+<body class="adm">
+
+
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** --> 
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="콘텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">금융 회사 관리</h2>
+        <ul class="breadcrumb">
+            <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+            <li><a href="#none">회원 관리</a></li>
+            <li><a href="#none"><strong>금융 회사 관리</strong></a></li>
+        </ul>
+      </section>
+
+
+      <h2 class="hide">콘텐츠 영역</h2>
+      
+      <section>
+          
+
+        <div class="table_top">
+          <div class="total">
+            <input type="checkbox" name="" id="" disabled checked> 메뉴 노출
+            <input type="checkbox" name="" id="" disabled > 메뉴 비노출
+          </div>
+          <div class="sortBox">
+            <button type="button" class="btnSuccess ">저장</button>
+          </div>
+        </div>
+      
+        <div class="table_wrap">
+          <table class="bbs_list authority">
+            <colgroup>
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">1 Depth 메뉴명</th>
+                <th scope="col">2 Depth 메뉴명</th>
+                <th scope="col">조회 권한(A)</th>
+                <th scope="col">대출 관리 권한(B-1)</th>
+                <th scope="col">리스 관리 권한(B-2)</th>
+                <th scope="col">제안 권한(C)</th>
+                <th scope="col">제안 권한(D)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="main">
+                <td>메인</td>
+                <td>메인 유형</td>
+                <td>D</td>
+                <td>D</td>
+                <td>D</td>
+                <td>D/W</td>
+                <td>D/W</td>
+              </tr>
+              <tr>
+                <th rowspan="2">대출 심사</th>
+                <td>대출 신청 업체 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>리스 신청 업체 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <th rowspan="4">제안서 제출 관리</th>
+                <td>대출 신청 업체 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>제안서 제출 가능 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>리스 제안서 제출 가능 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>리스 제출 제안서 목록</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <th rowspan="2">제안 이력 관리</th>
+                <td>제안 이력 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>리스 제안 이력 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <th rowspan="3">현황 관리</th>
+                <td>대출 실적 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>리스 실적 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>소속 금융사 계정 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <th rowspan="8">마이 페이지</th>
+                <td>대시보드</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>회원 정보</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>메시지함</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>나의 제안서 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>희망 업체 알림 설정</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>공지사항</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>1:1 문의</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+              <tr>
+                <td>정산 관리</td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+                <td><input type="checkbox" name="chk12" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+             
+      </section>
+
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+</body>
+</html>
