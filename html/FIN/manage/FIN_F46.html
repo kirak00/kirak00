@@ -35,7 +35,7 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
-            <div class="searchControlItem "><!-- 1.9 수정-->
+            <div class="searchControlItem expand"><!-- 1.9 수정-->
               <label for="labelLoan" class="label">소속 지점 조회 </label>
               <div class="formRow formGroup">
                 <select id="selectLabelState">
@@ -60,36 +60,31 @@
                 </select>
               </div>
             </div>
-            <div class="searchControlItem expand">
-              <label for="labelLoan1" class="label">사업자등록번호 </label>
-              <div class="formRow">
-                <input type="text" class="input" id="labelLoan1" placeholder="기업명을 입력해 주세요">
-              </div>
-            </div>
           </div>
           <div class="searchControlGroup">
-            <div class="dateTab tabScript" role="tablist">
-              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_2_1" class="on">년/월 선택</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2_2" >직접 선택</button>
-            </div>
 
-            <div class="formRow" id="search_tab_date_2_1" role="tabpanel" tabindex="0">
-              <input type="text" class="input calendarMonth" title="달력 월 선택" aria-label="달력 월 선택">
-            </div>
 
-            <div class="rangeControl" id="search_tab_date_2_2" role="tabpanel" tabindex="0">
+            <div class="rangeControl" id="search_tab_date_2_2" >
               <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
               <span class="uit">~</span>
               <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
             </div>
 
-            <div class="searchControlItem ">
+            <div class="searchControlItem expand">
               <label for="labelLoan" class="label">기업명 </label>
               <div class="formRow">
                 <input type="text" class="input" id="labelLoan" placeholder="기업명을 입력해 주세요">
               </div>
             </div>
-            <div class="searchControlItem expand" >
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="labelLoan2" class="label">사업자등록번호 </label>
+              <div class="formRow">
+                <input type="text" class="input" id="labelLoan2" placeholder="기업명을 입력해 주세요">
+              </div>
+            </div>
+            <div class="searchControlItem " >
               <div class="formRow">
                 <span class="checkbox">
                   <input type="checkbox" id="testCheckBoxC" name="testCheckBox" value="A" />
@@ -148,7 +143,7 @@ var clients = [
     "Name7": "1,350,000<p class='sub'>(일백삼십오만원)</p>", 
     "Name8": "2023-08-05", 
     "Name9": "정산금액 확인", 
-    "Name10": "<a href='#' class='lnkLine2'>전액 환불</a>", 
+    // "Name10": "<a href='#' class='lnkLine2'>전액 환불</a>", 
     "Name11": "<button type='button' class='btnWhite'>상세보기</button>", 
   },
 ];
@@ -167,8 +162,8 @@ $("#jsGrid").jsGrid({
     { name: "Name7", type: "text", title : "청구 금액", width: 180},
     { name: "Name8", type: "text", title : "청구일", width: 130},
     { name: "Name9", type: "text", title : "정산 상태", width: 120},
-    { name: "Name10", type: "text", title : "환출 여부", width: 100},
-    { name: "Name11", type: "button", title : "청구 내역서 보기", width: 140},
+    // { name: "Name10", type: "text", title : "환출 여부", width: 100},
+    { name: "Name11", type: "button", title : "청구 내역서", width: 140},
   ],
       
   pagerContainer: "#externalPager",

@@ -194,11 +194,11 @@
               var clients = [
                 { 
                   "Name1": "2023-07-22", 
-                  "Name2": "S_230809_0001",
+                  "Name2": "<a href='#' class='goLink'>S_230809_0001</a>",
                   "Name3": "(주)길동건설",
                   "Name4": "123-45-213132", 
                   "Name5": "단일", 
-                  "Name6": "1,250,000,000<p class='sub'>(일십이억오천만원)</p>",  
+                  "Name6": "KRW  <br>1,250,000,000",  
                   "Name7": "시설자금", 
                   "Name12": "10%", 
                   "Name8": "연 8.65%", 
@@ -219,7 +219,7 @@
                   var $result = $("<tr class='jsgrid-header-row'>")
                   $result.append(`
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">제출일</th>
-                    <th scope='col' class='jsgrid-header-cell' rowspan="2">리스 신청 번호</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2" width="180">리스 신청 번호</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">기업명</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">사업자등록번호</th>
                     <th scope='col' class='jsgrid-header-cell' colspan="5">제안 정보</th>
@@ -242,12 +242,12 @@
                   { name: "Name3", type: "text", title : "기업명", width: 100 },
                   { name: "Name4", type: "text", title : "사업자등록번호", width: 110 },
                   { name: "Name5", type: "text", title : "제안 형태 <em class='tooltip_q' title='단일: 하나의 제안서 내에 단건의 제안을 한 경우<br>복합: 하나의 제안어 내에 다건의 제안을 한 경우'><span class='txt'>?</span></em>", width: 100 },
-                  { name: "Name6", type: "text", title : "제안 금액", width: 130 },
-                  { name: "Name7", type: "text", title : "상세용도", width: 120 },
-                  { name: "Name12", type: "text", title : "보증금 비율", width: 100 },
-                  { name: "Name8", type: "text", title : "금리", width: 100 },
+                  { name: "Name6", type: "text", title : "제안 리스 금액", width: 180 },
+                  { name: "Name7", type: "text", title : "상세용도", width: 100 },
+                  { name: "Name12", type: "text", title : "보증금 비율", width: 80 },
+                  { name: "Name8", type: "text", title : "금리", width: 80 },
                   { name: "Name9", type: "text", title : "제안 직원명", width: 100 },
-                  { name: "Name10", type: "text", title : "제안서 상태", width: 100 },
+                  { name: "Name10", type: "text", title : "제안서 상태", width: 80 },
                   { name: "Name11", type: "text", title : "상세보기", width: 160 },
                 ],
                 

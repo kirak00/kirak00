@@ -229,7 +229,7 @@
           <li class="box wid50">
             <div class="chart_lineBox">
               <div class="titBox">
-                <strong>월 건수 실적 변동 추이</strong>
+                <strong>월 금액 실적 변동 추이</strong>
                 <div class="legendBg size_1"></div>
               </div>
               <div class="chartBox" style="width:100%; height:250px;" id="dashChart_2">
@@ -362,7 +362,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 자금 용도 비율</strong>
+            <strong class="tit">고객 업종 비율 (신청)</strong>
             <div class="pie" id="pieChart_1"></div>
             <script>
               var chartDom = document.getElementById('pieChart_1');
@@ -470,7 +470,7 @@
             </ul>
           </li> -->
           <li class="chart_pie">
-            <strong class="tit">제안 대출 자금 용도 비율</strong>
+            <strong class="tit">고객 업종 비율 (제안)</strong>
             <div class="pie" id="pieChart_3"></div>
             <script>
               var myChart_pie3 = echarts.init(document.getElementById('pieChart_3'));
@@ -518,8 +518,8 @@
               <li> <em style="background:#46B9B2"></em> 변동</li>
             </ul>
           </li>
-          <li class="chart_pie"><!-- 1.9 수정-->
-            <strong class="tit">제안 대출 업종 비율</strong>
+          <li class="chart_pie">
+            <strong class="tit">자금 용도 (제안)</strong>
             <div class="pie" id="pieChart_4"></div>
             <script>
               var myChart_pie4 = echarts.init(document.getElementById('pieChart_4'));
@@ -568,7 +568,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안한 고정/변동 비율</strong>
+            <strong class="tit">자금 용도 (실행)</strong>
             <div class="pie" id="pieChart_41"></div>
             <script>
               var myChart_pie41 = echarts.init(document.getElementById('pieChart_41'));
@@ -619,13 +619,114 @@
         </ul>
 
         
-
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 담보/신용 비율</strong>
-            <div class="pie" id="pieChart_51"></div>
+            <strong class="tit">담보/신용 (제안)</strong>
+            <div class="pie" id="pieChart_10"></div>
             <script>
-              var myChart_pie51 = echarts.init(document.getElementById('pieChart_51'));
+              var chartDom = document.getElementById('pieChart_10');
+              var myChart_pie11 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '대출 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                      { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
+                      { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie11.setOption(option);
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 시설</li>
+              <li> <em style="background:#46B9B2"></em> 운전</li>
+              <li> <em style="background:#55D6B6"></em> 리스</li>
+              <li> <em style="background:#89E3CD"></em> 렌탈</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">담보/신용 (실행)</strong>
+            <div class="pie" id="pieChart_12"></div>
+            <script>
+              var myChart_pie13 = echarts.init(document.getElementById('pieChart_12'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '고정/변동 비율',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '고정' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '변동'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie13.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 고정</li>
+              <li> <em style="background:#46B9B2"></em> 변동</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">고정/변동 금리 (신청)</strong>
+            <div class="pie" id="pieChart_14"></div>
+            <script>
+              var myChart_pie14 = echarts.init(document.getElementById('pieChart_14'));
               var option = {
                 tooltip: {
                   trigger: 'item'
@@ -662,7 +763,7 @@
                   }
                 ]
               };
-              myChart_pie51.setOption(option);
+              myChart_pie14.setOption(option);
             </script>
             <ul class="legend">
 
@@ -670,7 +771,68 @@
               <li> <em style="background:#46B9B2"></em> 신용</li>
             </ul>
           </li>
-          <li class="itemTxt long">
+          <li class="chart_pie">
+            <strong class="tit">고정/변동 금리 (제안)</strong>
+            <div class="pie" id="pieChart_15"></div>
+            <script>
+              var myChart_pie41 = echarts.init(document.getElementById('pieChart_15'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '담보/신용 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '담보' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '신용'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie41.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 담보</li>
+              <li> <em style="background:#46B9B2"></em> 신용</li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <ul class="dashboardWrap">
+          <li class="itemTxt ">
+            <strong class="tit">제안한 평균 금리</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>연 9.93%</strong>
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt ">
             <strong class="tit">청구 비율</strong>
             <div class="dash_data">
               <div class="barChart">
@@ -684,20 +846,12 @@
               </span>
             </div>
           </li>
-          <li class="itemTxt long">
-            <strong class="tit">대출 성사율</strong>
+          <li class="itemTxt ">
+            <strong class="tit">평균 성사율</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>125</strong>
                 <span>%</span> 
-              </span>
-            </div>
-          </li>
-          <li class="itemTxt long">
-            <strong class="tit">제안한 평균 금리</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <strong>연 9.93%</strong>
               </span>
             </div>
           </li>
@@ -880,7 +1034,7 @@
           <li class="box wid50">
             <div class="chart_lineBox">
               <div class="titBox">
-                <strong>월 건수 실적 변동 추이</strong>
+                <strong>월 금액 실적 변동 추이</strong>
                 <div class="legendBg size_1"></div>
               </div>
               <div class="chartBox" style="width:100%; height:250px;" id="dashChart_21">
@@ -971,7 +1125,7 @@
         
         <ul class="dashboardWrap">
           <li class="items type_1">
-            <strong class="tit">총 취급 건수</strong>
+            <strong class="tit">실행 건수</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>238</strong>
@@ -980,7 +1134,7 @@
             </div>
           </li>
           <li class="items type_2">
-            <strong class="tit">총 취급액</strong>
+            <strong class="tit">실행 금액</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>125</strong>
@@ -991,7 +1145,7 @@
             </div>
           </li> 
           <li class="items type_3">
-            <strong class="tit">총 제안 건수</strong>
+            <strong class="tit">제안 건수</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>125</strong>
@@ -1000,7 +1154,7 @@
             </div>
           </li>
           <li class="items type_4">
-            <strong class="tit">총 제안 금액</strong>
+            <strong class="tit">제안 금액</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>125</strong>
@@ -1015,8 +1169,8 @@
           
         <ul class="dashboardWrap rank size3">
           <li class="rankItem long" id="rankTabCont_1">
-            <div class="rankTitBox"><!-- 수정2.0 -->
-              <strong class="on">최다 제안서 제출 지점</strong>
+            <div class="rankTitBox">
+              <strong class="on">최다 제안 지점/부서</strong>
             </div> 
             <div class="rankTabCont">
               <ol class="on">
@@ -1030,7 +1184,7 @@
           </li>
           <li class="rankItem long">
             <div class="rankTitBox">
-              <strong class="on">최다 대출 실행 지점</strong>
+              <strong class="on">최다 실행 지점/부서</strong>
             </div> 
             <div class="rankTabCont">
               <ol class="on">
@@ -1044,7 +1198,7 @@
           </li>
           <li class="rankItem long">
             <div class="rankTitBox">
-              <strong class="on">최대 대출액 지점</strong>
+              <strong class="on">최대 실행 금액 지점/부서</strong>
             </div> 
             <div class="rankTabCont">
               <ol class="on" >
@@ -1061,7 +1215,7 @@
 
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 자금 용도 비율</strong>
+            <strong class="tit">고객 업종 비율 (신청)</strong>
             <div class="pie" id="pieChart2_1"></div>
             <script>
               var chartDom = document.getElementById('pieChart2_1');
@@ -1114,7 +1268,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안 대출 자금 용도 비율</strong>
+            <strong class="tit">고객 업종 비율 (제안)</strong>
             <div class="pie" id="pieChart2_2"></div>
             <script>
               var myChart_pie2 = echarts.init(document.getElementById('pieChart2_2'));
@@ -1169,7 +1323,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안 대출 업종 비율</strong>
+            <strong class="tit">자금 용도 (제안)</strong>
             <div class="pie" id="pieChart2_3"></div>
             <script>
               var myChart_pie3 = echarts.init(document.getElementById('pieChart2_3'));
@@ -1218,7 +1372,7 @@
             </ul>
           </li>
           <li class="chart_pie">
-            <strong class="tit">제안한 고정/변동 비율</strong>
+            <strong class="tit">자금 용도 (실행)</strong>
             <div class="pie" id="pieChart2_4"></div>
             <script>
               var myChart_pie4 = echarts.init(document.getElementById('pieChart2_4'));
@@ -1268,12 +1422,172 @@
           </li>
         </ul>
 
+        
+
+
         <ul class="dashboardWrap">
           <li class="chart_pie">
-            <strong class="tit">실행 대출 담보/신용 비율</strong>
-            <div class="pie" id="pieChart2_41"></div>
+            <strong class="tit">담보/신용 (제안)</strong>
+            <div class="pie" id="pieChart2_11"></div>
             <script>
-              var myChart_pie41 = echarts.init(document.getElementById('pieChart2_41'));
+              var chartDom = document.getElementById('pieChart2_11');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '대출 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '시설' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '운전'  , itemStyle : {color:'#46B9B2'}},
+                      { value: 580, name: '리스'  , itemStyle : {color:'#55D6B6'}},
+                      { value: 484, name: '렌탈'  , itemStyle : {color:'#89E3CD'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 시설</li>
+              <li> <em style="background:#46B9B2"></em> 운전</li>
+              <li> <em style="background:#55D6B6"></em> 리스</li>
+              <li> <em style="background:#89E3CD"></em> 렌탈</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">담보/신용 (실행)</strong>
+            <div class="pie" id="pieChart2_12"></div>
+            <script>
+              var myChart_pie2 = echarts.init(document.getElementById('pieChart2_12'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '실행 업종',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '건설업' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '농업,임업'  , itemStyle : {color:'#46B9B2'}},
+                      { value: 580, name: '제조업'  , itemStyle : {color:'#55C6D6'}},
+                      { value: 484, name: '농업,임업'  , itemStyle : {color:'#8BDCE7'}},
+                      { value: 484, name: '제조업'  , itemStyle : {color:'#BEE2A2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie2.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 건설업</li>
+              <li> <em style="background:#46B9B2"></em> 농업,임업</li>
+              <li> <em style="background:#55C6D6"></em> 제조업</li>
+              <li> <em style="background:#8BDCE7"></em> 농업,임업</li>
+              <li> <em style="background:#BEE2A2"></em> 제조업</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">고정/변동 금리 (신청)</strong>
+            <div class="pie" id="pieChart2_13"></div>
+            <script>
+              var myChart_pie3 = echarts.init(document.getElementById('pieChart2_13'));
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '고정/변동 비율',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '고정' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '변동'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie3.setOption(option);
+            </script>
+            <ul class="legend">
+
+              <li> <em style="background:#5066B6"></em> 고정</li>
+              <li> <em style="background:#46B9B2"></em> 변동</li>
+            </ul>
+          </li>
+          <li class="chart_pie">
+            <strong class="tit">고정/변동 금리 (제안)</strong>
+            <div class="pie" id="pieChart2_14"></div>
+            <script>
+              var myChart_pie4 = echarts.init(document.getElementById('pieChart2_14'));
               var option = {
                 tooltip: {
                   trigger: 'item'
@@ -1310,7 +1624,7 @@
                   }
                 ]
               };
-              myChart_pie41.setOption(option);
+              myChart_pie4.setOption(option);
             </script>
             <ul class="legend">
 
@@ -1318,21 +1632,11 @@
               <li> <em style="background:#46B9B2"></em> 신용</li>
             </ul>
           </li>
-          <li class="itemTxt long">
-            <strong class="tit">청구 비율</strong>
-            <div class="dash_data">
-              <div class="barChart">
-                <span style="width:50%"><strong class="hide">50%</strong><em></em></span>
-                <em class="l">청구</em>
-                <em class="r">미청구</em>
-              </div>
-              <span class="dataSize">
-                <span>정산 대상 수</span> 
-                <strong>10</strong>
-              </span>
-            </div>
-          </li>
-          <li class="itemTxt long">
+        </ul>
+
+
+        <ul class="dashboardWrap">
+          <li class="itemTxt ">
             <strong class="tit">평균 실행 수</strong>
             <div class="dash_data">
               <span class="dataSize">
@@ -1341,8 +1645,19 @@
               </span>
             </div>
           </li>
-          <li class="itemTxt long">
+          <li class="itemTxt ">
             <strong class="tit">평균 실행액</strong>
+            <div class="dash_data">
+              <span class="dataSize">
+                <strong>10</strong>
+                <span>억</span> 
+                <strong>4800</strong>
+                <span>만원</span> 
+              </span>
+            </div>
+          </li>
+          <li class="itemTxt">
+            <strong class="tit">평균 제안액</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>10</strong>
@@ -1362,18 +1677,7 @@
             </div>
           </li>
           <li class="itemTxt">
-            <strong class="tit">평균 제안액</strong>
-            <div class="dash_data">
-              <span class="dataSize">
-                <strong>10</strong>
-                <span>억</span> 
-                <strong>4800</strong>
-                <span>만원</span> 
-              </span>
-            </div>
-          </li>
-          <li class="itemTxt">
-            <strong class="tit">평균 성사율</strong>
+            <strong class="tit">제안한 평균 금리</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>67.8</strong>
@@ -1381,8 +1685,22 @@
               </span>
             </div>
           </li>
+          <li class="itemTxt ">
+            <strong class="tit">청구 비율</strong>
+            <div class="dash_data">
+              <div class="barChart">
+                <span style="width:50%"><strong class="hide">50%</strong><em></em></span>
+                <em class="l">청구</em>
+                <em class="r">미청구</em>
+              </div>
+              <span class="dataSize">
+                <span>정산 대상 수</span> 
+                <strong>10</strong>
+              </span>
+            </div>
+          </li>
           <li class="itemTxt">
-            <strong class="tit">제안한 평균 금리</strong>
+            <strong class="tit">평균 성사율</strong>
             <div class="dash_data">
               <span class="dataSize">
                 <strong>67.8</strong>

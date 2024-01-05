@@ -106,6 +106,12 @@
             <span class="r">리스 신청 번호 202308090001</span>
           </div>
 
+          
+          <h3 class="tit45">메모 및 참고사항</h3>
+          <div class="memoView">
+            메모 및 참고사항 내용이 나오는 영역 입니다.
+          </div>
+          
           <h3 class="tit45">제안서 요약 내용</h3> 
           <div class="table_wrap">
             <table class="bbs_list">
@@ -167,17 +173,16 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col" >리스금액(취득원가)</th>
-                  <th scope="col" colspan="2">보증금</th>
-                  <th scope="col">취득원가 비율</th>
+                  <th scope="col" >취득원가</th>
+                  <th scope="col">보증금 비율</th>
+                  <th scope="col">제안 리스 금액</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1,000,000,000 <p class="sub">(일십억원)</p></td>
-                  <td>KRW</td>
-                  <td>100,000,000 <p class="sub">(일억원)</p></td>
+                  <td>KRW 1,000,000,000 </td>
                   <td>10%</td>
+                  <td>KRW 100,000,000</td>
                 </tr>
               </tbody>
             </table>
@@ -195,6 +200,7 @@
                   <th scope="col">수량</th>
                   <th scope="col">가격</th>
                   <th scope="col">제조사</th>
+                  <th scope="col">제조일자</th>
                   <th scope="col">공급업체</th>
                 </tr>
               </thead>
@@ -204,6 +210,7 @@
                   <td>10</td>
                   <td>10,000,000</td>
                   <td>리스 제조사 1</td>
+                  <td>2023-08-31</td>
                   <td>리스 공급업체 1</td>
                 </tr>
               </tbody>
@@ -219,14 +226,16 @@
               <thead class="double">
                 <tr>
                   <th scope="col" colspan="4 ">제안 금리(제안서 제출일 기준)</th>
-                  <th scope="col" rowspan="2">리스 기간</th>
-                  <th scope="col" rowspan="2">리스 방식 </th>
+                  <th scope="col" rowspan="2">상환 방식</th>
+                  <th scope="col" rowspan="2">리스 기간 </th>
+                  <th scope="col" rowspan="2">거치 기간 </th>
+                  <th scope="col" rowspan="2">보증인 </th>
                 </tr>
                 <tr>
                   <th scope="col">유형 </th>
-                  <th scope="col">기준금리 </th>
-                  <th scope="col">가산금리 </th>
-                  <th scope="col">당일 기준 합산 금리 </th>
+                  <th scope="col">기준금리(A) </th>
+                  <th scope="col">가산금리(B) </th>
+                  <th scope="col">당일 기준 합산 금리(A+B) </th>
                 </tr>
               </thead>
               <tbody>
@@ -235,8 +244,10 @@
                   <td>CD91 일몰(5.1%)</td>
                   <td>4.0%</td>
                   <td>연 9.1%</td> 
+                  <td>기타: 기타내용이나옴</td>
                   <td>48개월</td>
-                  <td>원금균등 </td>
+                  <td>48개월</td>
+                  <td>필요<br>(기타:기타내용이 나옴) </td>
                 </tr>
               </tbody>
             </table>
@@ -249,7 +260,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">양도 담보 조건</th>
+                  <th scope="col">양도 담보 제공</th>
                   <th scope="col">기타 조건</th>
                   <th scope="col" colspan="2">이자 부과 시기 및 방법</th>
                   <th scope="col">연체 금리 </th>
@@ -259,7 +270,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>유</td>
+                  <td>필요</td>
                   <td>기타 조건을 입력한 <br>내용입니다</td>
                   <td>1개월 </td>
                   <td>후취 </td>
@@ -271,7 +282,29 @@
               </tbody>
             </table>
           </div>
+
+          
           <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>리스 취급 시 부대 비용</caption>
+              <colgroup>
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">리스 취급 시 부대 비용</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>리스 취급시 부대 비용 상세 내용 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <!-- <div class="table_wrap">
             <table class="bbs_list">
               <caption>이자 내용</caption>
               <colgroup>
@@ -328,7 +361,39 @@
                 </tr>
               </tbody>
             </table>
+          </div> -->
+
+
+
+
+          
+          <h4 class="tit45_g">상품명 2: 길동바로론</h4>
+          <div class="table_wrap">
+            <table class="bbs_list">
+              <caption>제안서 요약 내용</caption>
+              <colgroup>
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">리스 구분</th>
+                  <th scope="col">신규기기 여부</th>
+                  <th scope="col">내수 구분</th>
+                  <th scope="col" colspan="2">자금 상세 용도</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>기계 설비 리스</td>
+                  <td>중고기기</td>
+                  <td>국내</td>
+                  <td>기타</td>
+                  <td>다른 은행 운전자금 상환</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+
 
 
           <div class="center_ment">

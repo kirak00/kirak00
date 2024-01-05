@@ -45,16 +45,16 @@
         <div class="titBg flexBetween">
           <div>
             <h3>길동중앙회 서교동지점</h3>
-            <span class="info">마포지부</span>
+            <!-- <span class="info">마포지부</span> -->
           </div>
           <!-- <p class="sub">금융 담당자 <strong>고길동</strong> (02-123-4567)</p> -->
-          <div class="manager_filler"><!-- 1.9 수정-->
+          <!-- <div class="manager_filler">
             <select name="" id="" title="담당자 선택">
               <option value="">담당자 선택</option>
               <option value="">고희동(sh000000)</option>
             </select>
             <button type='button' class='btnWhiteLine2 mm'>적용</button>
-          </div>
+          </div> -->
         </div>
         <!-- 검색 -->
         <fieldset>
@@ -64,25 +64,25 @@
               <div class="searchControlItem">
                 <label id="inputLabel1" class="label srOnly">기간선택</label>
                 <div class="rangeControl" aria-labelledby="inputLabel1">
-                  <input type="text" class="input calendarMonth" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
                   <span class="uit">~</span>
-                  <input type="text" class="input calendarMonth" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
                 </div>
               </div>
-              <div class="searchControlItem expand">
-                <label for="inputLabel2" class="label">대출 신청 번호 </label>
+              <div class="searchControlItem ">
+                <label for="inputLabel2" class="label">사업자등록번호 </label>
                 <div class="formRow">
                   <input type="text" class="input" id="inputLabel2" placeholder="대출 신청 번호를 입력해 주세요">
                 </div>
               </div>
-            </div>
-            <div class="searchControlGroup">
               <div class="searchControlItem expand"><!--1.5 -->
                 <label for="selectLabelState" class="label">기업명</label>
                 <div class="formRow">
                   <input type="text" class="input wid240" id="selectLabelState" placeholder="기업명을 입력해 주세요">
                 </div>
               </div>
+            </div>
+            <div class="searchControlGroup">
               <div class="searchControlItem">
                 <label id="selectLabelPay" class="label">실행 금액</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
@@ -95,39 +95,10 @@
                   </select>
                 </div>
               </div>
-              <div class="searchControlItem">
-                <label id="selectLabelPay2" class="label">대출 기간</label>
-                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay2">
-                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
-                  <span class="unit">개월</span>
-                  <span class="line"></span>
-                  <select title="범위">
-                    <option>이상</option>
-                    <option>이하</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="searchControlGroup">
-              <div class="searchControlItem">
-                <label for="selectLabelArea2" class="label">담보 유무</label>
-                <div class="formRow">
-                  <select id="selectLabelArea2">
-                    <option>전체</option>
-                    <option>셀렉트</option>
-                  </select>
-                </div>
-              </div>
-              <div class="searchControlItem"><!-- 1.9 수정-->
+              <div class="searchControlItem expand"><!-- 1.9 수정-->
                 <label for="selectLabelArea21" class="label">담당자</label>
                 <div class="formRow">
                   <input type="text" class="input wid240" id="selectLabelArea21" placeholder="">
-                </div>
-              </div>
-              <div class="searchControlItem">
-                <label for="selectLabelArea22" class="label">사업자등록번호</label>
-                <div class="formRow">
-                  <input type="text" class="input wid240" id="selectLabelArea22" placeholder="">
                 </div>
               </div>
               <div class="searchBtns">
@@ -166,13 +137,10 @@
                 { 
                   "Name1": "sh000001",
                   "Name2": "홍길동",
-                  "Name3": "S_203809_0001",
-                  "Name4": "(주)길동건설", 
-                  "Name5": "123-45-456789", 
-                  "Name6": "250,000,000<p class='sub'>(이억오천만원)</p>", 
-                  "Name7": "2023-07-22", 
-                  "Name8": "24개월", 
-                  "Name9": "유", 
+                  "Name3": "(주)길동건설", 
+                  "Name4": "123-45-456789", 
+                  "Name5": "250,000,000<p class='sub'>(이억오천만원)</p>", 
+                  "Name6": "2023-07-22", 
                 },
               ]; 
               
@@ -185,13 +153,10 @@
                 fields: [
                   { name: "Name1",  type: "text", title : "아이디", width: 120},
                   { name: "Name2",  type: "text", title : "담당자", width: 120},
-                  { name: "Name3",  type: "text", title : "대출 신청 번호", width: 150},
-                  { name: "Name4",  type: "text", title : "기업명", width: 150},
-                  { name: "Name5",  type: "text", title : "사업자등록번호", width: 150},
-                  { name: "Name6", type: "text", title : "실행 금액", width: 160 },
-                  { name: "Name7", type: "text", title : "대출 실행일", width: 120 },
-                  { name: "Name8", type: "text", title : "대출 기간", width: 100 },
-                  { name: "Name9", type: "text", title : "담보 유무", width: 100 },
+                  { name: "Name3",  type: "text", title : "기업명", width: 150},
+                  { name: "Name4",  type: "text", title : "사업자등록번호", width: 150},
+                  { name: "Name5", type: "text", title : "실행 금액", width: 160 },
+                  { name: "Name6", type: "text", title : "대출 실행일", width: 120 },
                 ],
                 
                 pagerContainer: "#externalPager2",

@@ -23,7 +23,7 @@
   <div class="container" id="skip_content"  aria-label="컨텐츠">
 
     <section class="pageTop">
-      <h2 class="pageTit">제안 이력 관리 </h2>
+      <h2 class="pageTit">리스 제안 이력 관리 </h2>
       <ul class="breadcrumb">
           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
           <li><a href="#none"><span>제안서 등록</span></a></li>
@@ -118,7 +118,7 @@
                 </div>
               </div>
               <div class="searchControlItem ">
-                <label for="selectLabelArea2_2" class="label">제안 금액</label>
+                <label for="selectLabelArea2_2" class="label">제안 리스 금액</label>
                 <div class="formRow formGroup">
                   <input class="input wid82" type="text" name="inpUnitOut" id="selectLabelArea2_2" placeholder="000" value="">
                   <span class="unit">억</span>
@@ -197,11 +197,11 @@
     var clients = [
       { 
         "Name1": "2023-05-02",
-        "Name2": "202308090001",
+        "Name2": "<a href='#' class='goLink'>202308090001</a>",
         "Name3": "(주)길동건설", 
         "Name4": "123-45-67891", 
         "Name5": "단일", 
-        "Name6": "100,000,000<p class='sub'>(일억원)</p>", 
+        "Name6": "KRW<br>100,000,000", 
         "Name7": "시설자금", 
         "Name8": "유", 
         "Name9": "3개월", 
@@ -209,6 +209,7 @@
         "Name11": "홍길동", 
         "Name12": "채택", 
         "Name13": "실행", 
+        "Name14": '<button type="button" class="btnWhite" onclick="alert(1)">상세보기</button>', 
       },
     
     ];
@@ -220,16 +221,17 @@
       headerRowRenderer: function () { //
         var $result = $("<tr class='jsgrid-header-row'>")
         $result.append(`
-            <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">제출일</th>
-            <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">대출 신청 번호</th>
+            <th scope='col' width='100px' class='jsgrid-header-cell' rowspan="2">제출일</th>
+            <th scope='col' width='150px' class='jsgrid-header-cell' rowspan="2">대출 신청 번호</th>
             <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">기업명</th>
             <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">사업자등록번호</th>
 
             <th scope='col' width='540px' class='jsgrid-header-cell' colspan="6">제안 정보</th>
 
-            <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">제안 직원명</th>
-            <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">제안서<br>상태</th>
-            <th scope='col' width='110px' class='jsgrid-header-cell' rowspan="2">대출<br>실행 여부</th>
+            <th scope='col' width='80px' class='jsgrid-header-cell' rowspan="2">제안 직원명</th>
+            <th scope='col' width='80px' class='jsgrid-header-cell' rowspan="2">제안서<br>상태</th>
+            <th scope='col' width='80px' class='jsgrid-header-cell' rowspan="2">대출<br>실행 여부</th>
+            <th scope='col' width='120px' class='jsgrid-header-cell' rowspan="2" >상세보기</th>
           `);  
           var $tr = $("<tr class='jsgrid-header-row'>");   
           var grid = this;
@@ -256,6 +258,7 @@
         { name: "Name11", width: 90, type: "text", title : "제안 직원명", },
         { name: "Name12", width: 110, type: "text", title : "제안서<br>상태", },
         { name: "Name13", width: 110, type: "text", title : "대출<br>실행 여부", },
+        { name: "Name14", width: 160, type: "text", title : "상세보기", },
       ],
           
       pagerContainer: "#externalPager",
