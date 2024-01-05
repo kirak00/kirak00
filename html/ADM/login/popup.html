@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../../adm_css/contents_ADM.css">
+  <script src="../../../adm_js/juqery-3.7.0.min.js"></script>
+  <script src="../../../adm_js/jquery-ui.js"></script>
+  <script src="../../../adm_js/lib/fecha.js"></script>
+  <script src="../../../adm_js/lib/rangeDatepicker.js"></script>
+  <script src="../../../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../adm_js/common.js"></script>
+  <script src="../../../adm_js/common_adm.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+ 
+
+</style>
+</head>
+<body>
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="컨텐츠">
+      <!-- <section class="">
+        <h3 style="margin-bottom: 10px">알럿</h3>
+        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>대출제한대상 사유</button>
+        <script>
+          function sample_alert_1(obj){
+            layer_alert(
+              "대출제한대상은 신청이 불가합니다.<p class='status'>[사유:세금체납]</p>", 
+              obj, 
+              {
+                confirm : {
+                  txt : "확인",
+                  callback : function(){
+                  }
+                },
+                closebtn : {
+                  show: true, // default :  false
+                  callback : function(){
+                    // alert("닫기")
+                  }
+                }
+              }
+            )
+          }
+        </script>
+      </section> -->
+      <!-- <section style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px">버튼 2개</h3>
+        <button type="button" class="btnSuccess" id="confirmClick">비로그인 접근</button>
+        <script>
+          $("#confirmClick").on("click",function(){
+            // layer alert
+            layer_confirm(
+              "대출 비교 서비스를 이용하기 위해선<br/>로그인 또는 회원가입이 필요합니다.",
+              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "로그인", 
+                  callback : function(){ 
+                    // alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "회원가입",
+                  callback : function(){
+                    // alert(2)
+                  }
+                }
+              }
+            )
+            // layer alert
+  
+          })
+        </script>
+      </section> -->
+      <section style="margin-top: 20px;">
+        <h3 style="margin-bottom: 10px">팝업</h3>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">운영자 등록</button>
+        <div style="margin: 10px 0;"></div>
+      </section>
+      
+    </div>
+    
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+  
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+    <div class="layerWrap" id="sampleLayer" role="dialog" aria-modal="true" >
+      <!-- 너비 800px 경우 .sizeM 추가 -->
+      <div class="layerBody wid640">
+        <div class="layerHead">
+          <h3>운영자 등록</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <div class="formListTable">
+            <table>
+              <caption>운영자 등록 정보</caption>
+              <colgroup>
+                <col width="120px">
+                <col width="auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpId">사번</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <input id="inpId" class="input" type="text" placeholder="" value="">
+                      <button type="button" class="btnSuccess">검증</button><!-- v0.9 워딩수정 -->
+                      <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
+                    </div>
+                    <!-- <p class="notiTxt">사번은 숫자만 입력 가능합니다.</p> -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpIdreadonly">사번</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <input id="inpIdreadonly" class="input" type="text" placeholder="" value="9311457" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdName">이름</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <input id="inpBrdName" class="input" type="text" placeholder="" value="" readonly>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBrdPart">부서명</label>
+                  </th>
+                  <td>
+                    <div class="formRow">
+                      <input id="inpBrdPart" class="input" type="text" placeholder="" value="" readonly>
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="inpBizTel">직통전화</label>
+                  </th>
+                  <td>
+                    <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
+                      <input class="input wid70" type="text" title="직통전화(1/3)" placeholder="000" value="" readonly>
+                      <span class="unit">-</span>
+                      <input class="input wid80" type="text" title="직통전화(2/3)" placeholder="0000" value="" readonly>
+                      <span class="unit">-</span>
+                      <input class="input wid80" type="text" title="직통전화(3/3)" placeholder="0000" value="" readonly>
+                    </div>
+                    <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" for="labelMemo">운영자 메모</label>
+                  </th>
+                  <td>
+                    <div class="formRow fullType">
+                      <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
+                    </div>
+                    <!-- <p class="notiTxt">운영자의 역할 등을 입력하세요.</p> -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="pt15">
+                    <label class="label" id="labelRoute">관리 권한</label>
+                  </th>
+                  <td>
+                    <div class="formVertical" role="group" aria-labelledby="labelRoute">
+                      <span class="checkbox">
+                        <input type="checkbox" id="testRdoSns1" name="testRdoSns" value="" />
+                        <label for="testRdoSns1"><span></span>회원관리</label>
+                      </span>
+                      <span class="checkbox">
+                        <input type="checkbox" id="testRdoSns2" name="testRdoSns" value="" />
+                        <label for="testRdoSns2"><span></span>통계</label>
+                      </span>
+                      <span class="checkbox"> 
+                        <input type="checkbox" id="testRdoSns3" name="testRdoSns" value="" />
+                        <label for="testRdoSns3"><span></span>정산 현황</label>
+                      </span>
+                      <span class="checkbox"> 
+                        <input type="checkbox" id="testRdoSns4" name="testRdoSns" value="" />
+                        <label for="testRdoSns4"><span></span>이용자 현황</label>
+                      </span>
+                      <span class="checkbox"> 
+                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                        <label for="testRdoSns5"><span></span>이벤트 관리</label>
+                      </span>
+                      <span class="checkbox"> 
+                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                        <label for="testRdoSns5"><span></span>정책관리</label>
+                      </span>
+                      <span class="checkbox"> 
+                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
+                        <label for="testRdoSns5"><span></span>게시판관리</label>
+                      </span>
+                    </div>
+                    <p class="notiTxt">운영자에게 제공할 화면을 선택해 주세요.<br/> 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
+                  </td>
+                </tr>
+              
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
+          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+  
+  
+  </body>
+  </html>

@@ -461,7 +461,7 @@ ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 
 /* 버튼 */
 .btnBarSet { display: inline-flex; align-items: center;}
-.btnBarSet button, .btnBarSet a { width: 110px; padding: 0 20px; font-weight: 700;}
+.btnBarSet button, .btnBarSet a { padding: 0 16px; font-weight: 700;}
 .btnBarSet * + *::before { content: ''; display: block; position: absolute; top: 50%; left: 0; width: 1px; height: 20px; margin-top: -10px; background: #ddd; }
 
 .countBarSet { display: inline-flex; align-items: center;}
