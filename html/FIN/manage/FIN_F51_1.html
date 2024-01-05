@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="../../../js/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <link href="../../../js/lib/rangeDatepicker.css" rel="stylesheet">
+  <script src="../../../js/lib/fecha.js"></script>
+  <script src="../../../js/lib/rangeDatepicker.js"></script>
+
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+</style>
+</head>
+<body>
+    <!-- **************** -->
+    <!-- contents : start -->
+    <!-- **************** -->
+    <hr/>
+    <div class="container" id="skip_content"  aria-label="컨텐츠">
+
+      <section class="pageTop">
+        <h2 class="pageTit">리스 실적 상세</h2>
+        <ul class="breadcrumb">
+           <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+           <li><a href="#none"><span>중앙회 관리</span></a></li>
+           <li><a href="#none"><span>리스 실적 관리</span></a></li>
+           <li><a href="#none"><strong>리스 실적 상세</strong></a></li>
+        </ul>
+      </section>
+
+      <section class="">
+        <div class="titBg flexBetween">
+          <h3>신용보증기금 남대문지점</h3>
+        </div>
+        <!-- 검색 -->
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="searchControlItem">
+                <div class="rangeControl">
+                  <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                  <span class="uit">~</span>
+                  <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label id="selectLabelPay" class="label">실행 금액</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                  <select name="" title="">
+                    <option value="">전체</option>
+                  </select>
+                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem expand">
+                <label id="selectLabelPay" class="label">보증금 비율</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">%</span>
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem expand">
+                <label id="selectLabelPay" class="label">리스 기간율</label>
+                <div class="formRow formGroup" role="group" aria-labelledby="selectLabelPay">
+                  <input class="input wid82" type="text" name="inpUnitOut" id="inpUnitOut" placeholder="000" value="">
+                  <span class="unit">개월 </span>
+                  <span class="line"></span>
+                  <select title="범위">
+                    <option>이상</option>
+                    <option>이하</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem expand">
+                <label for="label_tit_1" class="label">기업명 </label>
+                <div class="formRow">
+                  <input type="text" class="input" id="label_tit_1" placeholder="기업명을 입력해 주세요">
+                </div>
+              </div>
+            </div>
+            <div class="searchControlGroup">
+              <div class="searchControlItem ">
+                <label for="label_tit_1" class="label">담당자</label>
+                <div class="formRow">
+                  <input type="text" class="input" id="label_tit_1" placeholder="담당자를 입력해 주세요">
+                </div>
+              </div>
+              <div class="searchControlItem expand2">
+                <label for="selectLabelState" class="label">사업자등록번호</label>
+                <div class="formRow">
+                  <input type="text" class="input wid240" id="selectLabelState" placeholder="사업자등록번호 를입력해 주세요">
+                </div>
+              </div>
+              <div class="searchBtns">
+                <button type="button" class="btnReset">초기화</button>
+                <button type="button" class="btnSuccess">조회</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <!-- 검색 -->
+      
+        <section class="">
+          <fieldset class="tableFilterGroup">
+            <span class="count">총 <strong>15</strong>건</span>
+            <div class="formRow" role="group"><!--1.5 -->
+              <p class="filterLabel">2023-07-01 한국신용정보원 데이터 수집 기준</p>
+              <select title="정렬 선택 (실행일 최신순)">
+                <option>실행일 최신순</option>
+                <option>본부2</option>
+              </select>
+              <button type="button" class="btnDkGreen">적용</button>
+            </div>
+          </fieldset>
+
+          <div class="jsGridWrap">
+            <div id="jsGrid2" class="bbs" caption="실적 목록"></div>    
+            <div id="externalPager2" class="external-pager"></div>
+          </div>
+
+                  
+          <script>
+            $(function() {
+
+              var clients = [
+                { 
+                  "Name1": "Sh0000000001",
+                  "Name2": "홍길동", 
+                  "Name3": "202308090001", 
+                  "Name4": "(주)길동건설", 
+                  "Name5": "123-45-67897", 
+                  "Name6": "KRW 1,250,000,000", 
+                  "Name7": "2023-07-22", 
+                  "Name8": "24개월", 
+                  "Name9": "50%", 
+                },
+              ]; 
+              
+
+
+              $("#jsGrid2").jsGrid({
+                data: clients,
+                noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'></p></div>",
+
+                fields: [
+                  { name: "Name1",  type: "text", title : "아이디", },
+                  { name: "Name2",  type: "text", title : "담당자", },
+                  { name: "Name3",  type: "text", title : "리스 신청 번호", },
+                  { name: "Name4",  type: "text", title : "기업명", },
+                  { name: "Name5",  type: "text", title : "사업자등록번호", },
+                  { name: "Name6",  type: "text", title : "실행 금액", },
+                  { name: "Name7",  type: "text", title : "리스 실행일", },
+                  { name: "Name8", type: "text", title : "리스 기간",  },
+                  { name: "Name9", type: "text", title : "보증금 비율",},
+                ],
+                 
+                pagerContainer: "#externalPager2",
+
+              });
+            });
+          </script>
+        </section>
+      </section>
+
+    </div>
+    <!-- **************** -->
+    <!-- contents : end -->
+    <!-- **************** -->
+
+<script>
+</script>
+   
+
+</body>
+</html>

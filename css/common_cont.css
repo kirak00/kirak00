@@ -480,6 +480,7 @@ a.ico_down       {color:#069B66; }
 .ico_down.black::after       { background-image:url(../images/common/ico_18_download_primary.png); }
 .ico_down:disabled       {color:#333; opacity: .4; }
 .ico_down:disabled::after       {background:url(../images/common/ico_24_download_w.png) no-repeat 50% 50% / contain; }
+.table_bt .ico_down:disabled       {color:#555; opacity: 1; }
 
 
 .ico_send {padding:0 32px; color:#069B66; font-weight: 700;}
@@ -855,7 +856,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .switch [type="checkbox"]::before { content: ""; position: absolute; left: 2px; top: 1px; width: 18px; height: 18px; border-radius: 50%; background-color: #fff; transition: left 250ms linear;}
 .switch [type="checkbox"]:checked { background-color: #069B66; border-color: #069B66;}
 .switch [type="checkbox"]:checked::before { background-color: white; left: 22px;}
-.switch [type="checkbox"]:disabled { border-color: #888; background: #888; cursor: not-allowed;}
+.switch [type="checkbox"]:disabled { border-color: #888; background: #888; cursor: not-allowed;  opacity: .4;}
+.switch [type="checkbox"]:disabled:checked { background: #069B66; opacity: .4;}
 .switch [type="checkbox"]:disabled:before { background-color: #fff;}
 .switch [type="checkbox"]:disabled+span { cursor: not-allowed;}
 .switch [type="checkbox"]:focus-visible { outline-offset: 2px; outline: 2px solid #069B66;}
@@ -1619,6 +1621,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt      { 
   display: grid; grid-template-columns: repeat(3, 1fr);
    position: relative; width:100%; max-width: 1400px; margin:40px auto 0px;}
+.table_bt.fullType      {display:block; }
 .table_bt.mt80 { margin-top: 80px;}
 .table_bt.hasLine { padding-top: 20px; border-top: 1px solid #ddd;}
 .table_bt.hasLine .icoLink { display: block; margin-top: -10px;}
@@ -1630,6 +1633,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .table_bt.small button,
 .jsGridWrap .table_bt a,
 .table_bt.small a { padding: 0 30px; height: 40px; }
+.jsGridWrap .table_bt .btn_c button {height:50px; }
 .jsGridWrap .table_bt .btn_l * + *,
 .jsGridWrap .table_bt .btn_r * + *,
 .table_bt.small .btn_l * + *,
@@ -1815,6 +1819,7 @@ table { width: 100%;}
 .layerCont .tableLabel { margin-top: 0;}
 .tableLabel { margin-top: 20px; color: #555; font-size: 16px; text-align: right;}
 .textTable .tableLabel {margin-bottom:10px; }
+.textTable .tableLabel.mt0 {margin-top:0; }
 .tableLabel.pntCol_1 { color: #FE5050;}
 .tableLabel + .titH3 { margin-top: 20px;}
 .tableLabel + .titH5 { margin-top: 12px;}
@@ -1914,7 +1919,7 @@ table { width: 100%;}
 
 .formGrayBox {  margin: 20px 0 0; padding: 40px; background: #EFF5EF; border-radius: 16px;}
 .formGrayBox .formListTable { margin-top: 20px;}
-.formGrayBox.type2 { padding: 40px 60px 60px;}
+.formGrayBox.type2 { padding: 40px ;}
 .formGrayBox th { padding-left: 60px;}
 .formGrayBox th:first-child { padding-left: 0;}
 
@@ -2078,6 +2083,7 @@ th{word-break: break-all;}
 .noTableData  { margin: 60px 0; padding: 40px 0; text-align: center;}
 .noTableData .txt { margin-top:10px; color: #555;}  
 .noTableData i.icoReview::after    { width:80px; height:80px; background:url(../images/common/log_process_02_disabled.png) no-repeat 0 0;  }  
+.noTableData i.icoNosearch     { display:inline-block; width:56px; height:56px; background:url(../images/common/ico_24_notice_g.png) no-repeat 50% 50%;  }  
 
 .jsgrid-control-field   {padding:0 10px; }
 .jsgrid-control-field .jsgrid-cancel-edit-button,
@@ -2869,17 +2875,36 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .bbsReplyArea {  margin-top: 40px; overflow: hidden;}
 /* .bbsReplyArea > *:nth-child(odd) { background: #F6FBF7} */
 /* .bbsReplyArea > *:nth-child(even) { background: #fff} */
+.bbsReplyArea .replyTit  { margin-bottom:20px;  }
+.bbsReplyArea .replyTit strong.tit  { font-size:16px;  }
+.bbsReplyArea .replyTit span.date    {  }
+.bbsReplyBox > .attachBox    { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd; }
+
 .bbsReplyBox {position: relative; padding: 30px; border-radius: 16px;}
 .bbsReplyBox .ico_edit { position: absolute; top: 40px; right: 60px; }
-.bbsReplyBox .tit { display: flex; align-items: center; font-size: 16px;}
+.bbsReplyBox .tit { display: flex; align-items: center; font-size: 16px; margin-bottom: 25px;}
+.bbsReplyBox .tit.que::before {display:none; }
 .bbsReplyBox .tit .date { margin-left: 16px; color: #555; font-size: 14px; font-weight: 400;} 
 .bbsReplyBox .tit::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../images/common/ico_24_comment_g.png'); vertical-align: middle;}
 .bbsReplyBox .cont { margin-top: 25px; padding-left: 30px;}
 .bbsReplyBox > .cont .attachBox { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;}
 
+
 .bbsReplyBox { background: #F6FBF7; }
 .bbsReplyBox.reply { background: #FFF; padding: 0 40px; margin: 40px 0;}
 .bbsReplyBox.reply .tit { color: #069B66; }
+
+
+
+.lineBlock .bbsReplyArea   {margin-top:20px; }
+.lineBlock .bbsReplyBox   { padding:20px; border-radius:8px; border:1px solid #ddd;   }
+.lineBlock .bbsReplyBox + .bbsReplyBox   { margin-top:20px; }
+.lineBlock .bbsReplyBox.manager   {background:#EEF0F1;  margin-top:30px; }
+.lineBlock .bbsReplyBox.reply   {margin-top:30px; }
+.lineBlock .inqueryForm   { padding:0; border:0;  }
+.lineBlock .inqueryForm .filebox   { margin:0; border:0;  }
+.lineBlock .inqueryForm .textarea   { padding:20px; border:1px solid #ddd; }
+
 
 
 .inqueryTit { display: flex; align-items: center; padding: 0 30px;}
@@ -3178,5 +3203,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .taxBill table td th   { background: #fff;}
 
 
-
+ul.dotList    {}
+ul.dotList li    {}
+ul.dotList li::before    {content:"ㆍ"; }
 

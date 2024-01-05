@@ -84,7 +84,7 @@
                           <tr>
                             <td>0.5%</td>
                             <td>-0.2%</td>
-                            <td class="blue">0.3%</td>
+                            <td><strong class="blue">0.3%</strong></td>
                           </tr>
                         </tbody>
                       </table>
@@ -99,6 +99,82 @@
                 <tr> 
                   <th scope="row">이의 신청 기일</th> 
                   <td>2023-09-06</td>
+                </tr>
+                <tr> 
+                  <th scope="row">세금계산서 발행 여부</th> 
+                  <td><button type="button" class="btnGray2 mm">세금계산서 보기</button></td>
+                </tr>
+                <tr> 
+                  <th scope="row">정산 여부</th> 
+                  <td>-</td>
+                </tr>
+                <tr> 
+                  <th scope="row">환출 대상 내역</th> 
+                  <td>
+                    <div class="table_wrap">
+                      <table class="bbs_list">
+                        <caption>청구액 수수료율</caption>
+                        <thead>
+                          <tr>
+                            <th>금융 회사 정보</th>
+                            <th>대상 기업 정보</th>
+                            <th>실행일</th>
+                            <th>실행 금액</th>
+                            <th>수수료율</th>
+                            <th>청구액</th>
+                            <th>정산 완료일</th>
+                            <th>정산액</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>새마을금고/ <br>
+                              가회지점
+                              <p class="sub">(105-99-78745)</p></td>
+                            <td>
+                              아이코스
+                              <p class="sub">(105-86-78945)</p>
+                            </td>
+                            <td>2023-08-12</td>
+                            <td>400,000,000 <p class="sub">(사억원) </p></td>
+                            <td>0.5%</td>
+                            <td>2,000,000 <p class="sub">(이백만원)</p></td>
+                            <td>2023-12-14</td>
+                            <td>2,000,000 <p class="sub">(이백만원)</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <th scope="row">환출 대상 내역</th> 
+                  <td>
+                    <div class="table_wrap">
+                      <table class="bbs_list">
+                        <caption>청구액 수수료율</caption>
+                        <thead>
+                          <tr>
+                            <th>환출 등록일</th>
+                            <th>환출 사유</th>
+                            <th>증빙자료</th>
+                            <th>환출액</th>
+                            <th>등록자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2023-08-12</td>
+                            <td>금융 회원의 증빙 서류 확인 결과 환출 대상임이 증빙됨</td>
+                            <td>Noname.jpg</td>
+                            <td>40,000 <p class="sub">(사만원)</p></td>
+                            <td>홍길동 <p class="sub">(14789632)</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="notiTxt">환출 관련 문의사항은 1:1 문의를 통해 진행 하실 수 있습니다.</p>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -130,7 +206,7 @@
                 <label for="exFilename" class="btnBlack">파일 선택</label>
                 <div class="attached"></div>
               </div>
-              <p class="notiTxt">지원하는 파일 형식: .xlsx</p>
+              <p class="notiTxt">지원하는 파일 형식: jpg, png, gif, pdf 형식 최대 3개까지 등록 가능</p>
               <!-- Comment 1 -->
               <div class="table_bt">
                 <div class="btn_c">

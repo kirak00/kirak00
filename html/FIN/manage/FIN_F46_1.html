@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/contents_FIN.css">
+  <script src="../../../js/juqery-3.7.0.min.js"></script>
+  <script src="../../../js/jquery-ui.js"></script>
+  <script src="../../../js/lib/jsgrid-1.5.3/dist/jsgrid.js"></script>
+  <script src="../../../js/common.js"></script>
+  <script src="../../../js/common_FIN.js"></script>
+  <title>SHINHAN</title>
+<style>
+
+
+</style>
+</head>
+<body>
+  <!-- **************** -->
+  <!-- contents : start -->
+  <!-- **************** -->
+  <hr/>
+  <div class="container" id="skip_content"  aria-label="컨텐츠">
+    <section class="pageTop">
+      <h2 class="pageTit">리스 실적 관리</h2>
+      <ul class="breadcrumb">
+          <li><a href="#none" class="home"><span class="hide">홈</span></a></li>
+          <li><a href="#none"><span>마이페이지</span></a></li>
+          <li><a href="#none"><strong>리스 실적 관리</strong></a></li>
+      </ul>
+    </section>
+
+    <section class="">
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="searchControlBox">
+          <div class="searchControlGroup">
+            <div class="rangeControl" id="search_tab_date_2_2" >
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>
+          </div>
+          <div class="searchControlGroup">
+            <div class="searchControlItem expand">
+              <label for="labelLoan" class="label">소속 지점 조회 </label>
+              <div class="formRow formGroup">
+                <select id="selectLabelState">
+                  <option>지역본부</option>
+                </select>
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>금고본점</option>
+                </select>
+                <span class="line"></span>
+                <select id="selectLabelState">
+                  <option>지점</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
+              <button type="button" class="btnSuccess">조회</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      
+      <section class="">
+        <fieldset class="tableFilterGroup">
+          <span class="count">총 <strong>0</strong>건</span>
+          <div class="formRow" role="group">
+            <select title="정렬 선택">
+              <option>청구일 최신순</option>
+              <option>본부2</option>
+            </select>
+            <select title="정렬 선택(보기갯수)">
+              <option>10개씩 보기</option>
+              <option>본부2</option>
+            </select>
+            <button type="button" class="btnDkGreen">적용</button>
+          </div>
+        </fieldset>
+        <div class="jsGridWrap">
+          <div id="jsGrid" class="bbs" caption="심사 요청관리 목록"></div>
+          <div class="table_bt">
+            <div id="externalPager" class="external-pager"></div>
+            <div class="btn_r">
+              <button type="button" class="btnSuccess ico_down mm">엑셀 다운로드</button>
+            </div>
+          </div>
+        </div>
+        <script>
+          
+/* jsgrid sample */
+$(function() {
+
+var clients = [
+  { 
+    "Name1": "서울지역본부",
+    "Name2": "마포본점", 
+    "Name3": "가좌지점", 
+    "Name4": "20회", 
+    "Name5": "15건", 
+    "Name6": "5건", 
+    "Name7": "<button type='button' class='btnWhite'>보기</button>", 
+  },
+];
+
+
+$("#jsGrid").jsGrid({
+  data: clients,
+  noDataContent: "<div class='noTableData'><i class='icoNosearch'></i><p class='txt'> 소속 금융 회사와 조회하실 기간을 선택해 주세요.</p></div>",
+  fields: [
+    { name: "Name1",type: "text", title : "지역본부", width: 100 },
+    { name: "Name2",type: "text", title : "금고본점", width: 100 },
+    { name: "Name3",type: "text", title : "지점", width: 100 },
+    { name: "Name4", type: "text", title : "심사 횟수", width: 100},
+    { name: "Name5", type: "text", title : "제출 제안서 수", width: 100},
+    { name: "Name6", type: "text", title : "리스 실행", width: 100},
+    { name: "Name7", type: "button", title : "리스 실행 내역 보기", width: 100},
+  ],
+      
+  pagerContainer: "#externalPager",
+  
+  });
+
+});
+
+
+        </script>
+       
+      </section>
+    </section>
+
+
+  </div>
+  <!-- **************** -->
+  <!-- contents : end -->
+  <!-- **************** -->
+
+
+</body>
+</html>
