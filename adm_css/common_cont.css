@@ -595,6 +595,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../adm_images/common/radio_active.png")}
 .radio input[type=radio]:checked:disabled  + label span { background-image: url("../adm_images/common/radio_disable.png")}
+.radio input[type=radio]:disabled + label { color: #888; }
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 50%;}
 
@@ -852,7 +853,7 @@ select.wid430 { min-width: 430px;}
 .searchControlBox .dateTab button + button{margin:-1px -1px 0 0  ;}
 .searchControlBox .dateTab button.on {background:#069B66; color:#fff; font-weight: 700; }
 
-.searchControlBox .dateTab + [role="tabpanel"] select{ width: 206px;}
+.searchControlBox .dateTab + [role="tabpanel"] select{ width: 196px;}
 
 .searchControlItem {display: inline-flex; height: 50px; border-radius: 8px;} 
 .searchControlItem .label { position: relative; display:inline-block; color: #555; font-size: 16px; padding-left: 16px; padding-right: 20px; line-height: 50px; white-space: nowrap;
@@ -941,8 +942,9 @@ select.wid430 { min-width: 430px;}
 .formListWrap .formList .radio .label { width: auto;}
 .formListWrap .formList .formRow { max-width: calc(100% - 175px);}
 .formListWrap .formList .formRow.fullType { max-width: 100%;}
-.formListWrap .formList .notiTxt { margin-left: 175px;}
+.formListWrap .formList .notiTxt { margin-left: 175px; width: 100%;}
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
+.formList .label.alignTop { align-self: flex-start;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
 .formList .formRow.wid1130 { width: 1130px;}

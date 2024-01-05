@@ -60,6 +60,7 @@ header .line   {display:block; height:130px; z-index:499; top:0;  background:#ff
 
 .container      {padding-top:60px; }
 .bgWrap       {padding:40px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#FAFAFA; }
+.bgWrap .tableLabel { margin-top: 0;}
 .bgWrap table.bbs_list td      {background:#EEF0F1; }
 .bgWrap .formBorderBox table.bbs_list td      {background:#fff; }
 

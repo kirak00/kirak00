@@ -25,13 +25,13 @@
     <!-- **************** -->
     <hr/>
     <div class="container" id="skip_content"  aria-label="컨텐츠">
-      <!-- <section class="">
+      <section class="">
         <h3 style="margin-bottom: 10px">알럿</h3>
-        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>대출제한대상 사유</button>
+        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>확인메시지</button>
         <script>
           function sample_alert_1(obj){
             layer_alert(
-              "대출제한대상은 신청이 불가합니다.<p class='status'>[사유:세금체납]</p>", 
+              "운영자에서 제외 되었습니다.", 
               obj, 
               {
                 confirm : {
@@ -49,25 +49,25 @@
             )
           }
         </script>
-      </section> -->
-      <!-- <section style="margin-top: 20px;">
+      </section>
+      <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">버튼 2개</h3>
-        <button type="button" class="btnSuccess" id="confirmClick">비로그인 접근</button>
+        <button type="button" class="btnSuccess" id="confirmClick">운영자 제외</button>
         <script>
           $("#confirmClick").on("click",function(){
             // layer alert
             layer_confirm(
-              "대출 비교 서비스를 이용하기 위해선<br/>로그인 또는 회원가입이 필요합니다.",
+              "해당 운영자를 제외하시겠습니까?",
               this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
               {
                 confirm:{ //  확인 
-                  txt : "로그인", 
+                  txt : "삭제", 
                   callback : function(){ 
                     // alert(3)
                   }
                 },
                 cancel:{ //  취소 
-                  txt : "회원가입",
+                  txt : "취소",
                   callback : function(){
                     // alert(2)
                   }
@@ -78,11 +78,14 @@
   
           })
         </script>
-      </section> -->
+      </section>
       <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">팝업</h3>
-        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">운영자 등록</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">서비스 점검안내</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer2">게시물 등록</button>
         <div style="margin: 10px 0;"></div>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer3">상세팝업(수정/삭제)</button>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer4">정보마당관리(영상등록/상세 팝업)</button>
       </section>
       
     </div>
@@ -96,137 +99,39 @@
     <!-- **************** -->
     <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
     <div class="layerWrap" id="sampleLayer" role="dialog" aria-modal="true" >
-      <!-- 너비 800px 경우 .sizeM 추가 -->
       <div class="layerBody wid640">
         <div class="layerHead">
-          <h3>운영자 등록</h3>
+          <h3>미리보기</h3>
           <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
         </div>
         <div class="layerCont">
-          <div class="formListTable">
-            <table>
-              <caption>운영자 등록 정보</caption>
-              <colgroup>
-                <col width="120px">
-                <col width="auto">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpId">사번</label>
-                  </th>
-                  <td>
-                    <div class="formRow">
-                      <input id="inpId" class="input" type="text" placeholder="" value="">
-                      <button type="button" class="btnSuccess">검증</button><!-- v0.9 워딩수정 -->
-                      <p class="errorTxt">중복 아이디입니다. 다시 입력해주세요.</p>
-                    </div>
-                    <!-- <p class="notiTxt">사번은 숫자만 입력 가능합니다.</p> -->
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpIdreadonly">사번</label>
-                  </th>
-                  <td>
-                    <div class="formRow">
-                      <input id="inpIdreadonly" class="input" type="text" placeholder="" value="9311457" readonly>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpBrdName">이름</label>
-                  </th>
-                  <td>
-                    <div class="formRow">
-                      <input id="inpBrdName" class="input" type="text" placeholder="" value="" readonly>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpBrdPart">부서명</label>
-                  </th>
-                  <td>
-                    <div class="formRow">
-                      <input id="inpBrdPart" class="input" type="text" placeholder="" value="" readonly>
-                    </div>
-                  </td>
-                </tr>
-              
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="inpBizTel">직통전화</label>
-                  </th>
-                  <td>
-                    <div class="formRow textCenter" role="group" aria-labelledby="inpBizTel">
-                      <input class="input wid70" type="text" title="직통전화(1/3)" placeholder="000" value="" readonly>
-                      <span class="unit">-</span>
-                      <input class="input wid80" type="text" title="직통전화(2/3)" placeholder="0000" value="" readonly>
-                      <span class="unit">-</span>
-                      <input class="input wid80" type="text" title="직통전화(3/3)" placeholder="0000" value="" readonly>
-                    </div>
-                    <!-- <p class="errorTxt">에러입니다. 다시 입력해주세요.</p> -->
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label class="label" for="labelMemo">운영자 메모</label>
-                  </th>
-                  <td>
-                    <div class="formRow fullType">
-                      <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
-                    </div>
-                    <!-- <p class="notiTxt">운영자의 역할 등을 입력하세요.</p> -->
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="pt15">
-                    <label class="label" id="labelRoute">관리 권한</label>
-                  </th>
-                  <td>
-                    <div class="formVertical" role="group" aria-labelledby="labelRoute">
-                      <span class="checkbox">
-                        <input type="checkbox" id="testRdoSns1" name="testRdoSns" value="" />
-                        <label for="testRdoSns1"><span></span>회원관리</label>
-                      </span>
-                      <span class="checkbox">
-                        <input type="checkbox" id="testRdoSns2" name="testRdoSns" value="" />
-                        <label for="testRdoSns2"><span></span>통계</label>
-                      </span>
-                      <span class="checkbox"> 
-                        <input type="checkbox" id="testRdoSns3" name="testRdoSns" value="" />
-                        <label for="testRdoSns3"><span></span>정산 현황</label>
-                      </span>
-                      <span class="checkbox"> 
-                        <input type="checkbox" id="testRdoSns4" name="testRdoSns" value="" />
-                        <label for="testRdoSns4"><span></span>이용자 현황</label>
-                      </span>
-                      <span class="checkbox"> 
-                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                        <label for="testRdoSns5"><span></span>이벤트 관리</label>
-                      </span>
-                      <span class="checkbox"> 
-                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                        <label for="testRdoSns5"><span></span>정책관리</label>
-                      </span>
-                      <span class="checkbox"> 
-                        <input type="checkbox" id="testRdoSns5" name="testRdoSns" value="" />
-                        <label for="testRdoSns5"><span></span>게시판관리</label>
-                      </span>
-                    </div>
-                    <p class="notiTxt">운영자에게 제공할 화면을 선택해 주세요.<br/> 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
-                  </td>
-                </tr>
-              
-              </tbody>
-            </table>
+          <div class="titBox">
+            <div>
+            <h3 class="tit"><span class="badgeWhite">공지사항</span>서비스 점검 안내</h3>
+            <p class="date"><span class="label">등록일</span>2023-10-10</p>
+            </div>
           </div>
-        </div>
-        <div class="layerFoot">
-          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
-          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+          <div class="evtCont">
+            <div class="evtTxt">
+              안녕하세요. 론앤비즈 입니다.<br/><br/>
+
+  안정적인 서비스 운영을 위해 아래 기간동안 잠시 서비스를 이용하실 수 없습니다.<br/>
+  더 나은 서비스를 위한 점검이으로 많은 양해 부탁드립니다.<br/><br/>
+
+  서비스 점검기간<br/>
+  2023년 10월 14일 23:00부터 2023년 10월 15일<br/>
+  위 기간 내에 정상적인 서비스 접속이 불가할 수 있습니다.<br/><br/>
+
+  더 나은 서비스를 위해 최선을 다하겠습니다.<br/><br/>
+
+  감사합니다.
+            </div>
+          </div>
+          <div class="table_bt mt40">
+            <div class="btn_c">
+              <button type="button" class="btnSuccess">닫기</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="layerDimm"></div>
@@ -234,7 +139,186 @@
     <!-- **************** -->
     <!-- layer : end -->
     <!-- **************** -->
-  
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+    <div class="layerWrap" id="sampleLayer2" role="dialog" aria-modal="true" >
+      <div class="layerBody wid1400">
+        <div class="layerHead">
+          <h3>미리보기</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayer2" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <div class="titBox">
+            <div>
+            <h3 class="tit">가입 후 첫 대출 완료 시 금리 1년 0.2% 인하 이벤트!</h3>
+            <p class="date"><span class="label">등록일</span>2023-10-10</p>
+            </div>
+            <p class="blue textBold">준법감시인 심의필 제 2023-광고-059호</p>
+          </div>
+          <div class="evtCont">
+            <div class="evtImg">
+              <img src="../../../images/COP/evt_detail.png" alt="">
+            </div>
+            <div class="evtTxt">
+              가입 후 첫 대출 진행을 완료한 금융기관 고객님께 드리는 수수료 0.2% 인하 이벤트! <br><br>
+              Loan&amp;Biz 플랫폼에서 대출을 진행한 금융기관을 대상으로 정산 시 수수료 0.2%를 인하 해드려요 (월보 데이터 기준)<br><br>
+              금융기관의 많은 참여 부탁드려요~
+            </div>
+          </div>
+          <div class="table_bt mt40">
+            <div class="btn_c">
+              <button type="button" class="btnSuccess">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+    <div class="layerWrap" id="sampleLayer3" role="dialog" aria-modal="true" >
+      <!-- 너비 800px 경우 .sizeM 추가 -->
+      <div class="layerBody wid640">
+        <div class="layerHead">
+          <h3>FAQ 상세</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayer3" aria-label="레이어 닫기"></button>
+        </div>
+        <!-- 검색 -->
+        <fieldset>
+          <legend>게시물 검색</legend>
+          <div class="searchControlBox">
+            <div class="searchControlGroup">
+              <div class="searchControlItem expand">
+                <label for="selectLabelState1_1" class="label">노출 여부</label>
+                <div class="formRow">
+                  <select id="selectLabelState1_1">
+                    <option>노출</option>
+                    <option>노출</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="layerCont">
+          <div class="formQna">
+            <label class="q" for="labelExtraOp1">Q</label>
+            <div class="cont">
+              <div class="formRow textareaWrap">
+                <textarea id="labelExtraOp1" class="textarea h40" placeholder="문의 내용을 입력해 주세요.">개인사업자도 회원 가입이 가능하나요?</textarea>
+                <span class="countSet"><span class="count">20</span>/100</span>
+              </div>
+              <!-- <p class="notiTxt">작성은 최대 100자 까지 가능합니다.</p> --><!-- v1.0 삭제 -->
+            </div>
+          </div>
+          <div class="formQna">
+            <label class="a" for="labelExtraOp2">A</label>
+            <div class="cont">
+              <div class="formRow textareaWrap">
+                <textarea id="labelExtraOp2" class="textarea h120" placeholder="문의 내용을 입력해 주세요.">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다.</textarea>
+                <span class="countSet"><span class="count">20</span>/500</span>
+              </div>
+              <!-- <p class="notiTxt">작성은 최대 500자 까지 가능합니다.</p> --><!-- v1.0 삭제 -->
+            </div>
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer3')">확인</button>
+          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer3')">삭제</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
+
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+    <div class="layerWrap" id="sampleLayer4" role="dialog" aria-modal="true" >
+      <div class="layerBody wid640">
+        <div class="layerHead">
+          <h3>등록</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayer4" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <p class="tableLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p><!-- v1.0 추가 -->
+          <div class="formList">
+            <label class="label">등록일</label>
+            <div class="formRow">2023-01-0</div>
+          </div>
+          <div class="formList">
+            <label class="label">등록자</label>
+            <div class="formRow">홍길동</div>
+          </div>
+          <div class="formList">
+            <label class="label" for="labelExtraOp1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>영상 경로</label><!-- v1.0 필수값 추가 -->
+            <div class="formRow">
+              <input class="input" id="labelExtraOp1" type="text" placeholder="Youtube에 업로드 후 영상의 경로를 입력해 주세요" value=""><!-- v1.0 placeholder 수정  -->
+            </div>
+            <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>Youtube에 업로드 후 영상의 경로를 입력해 주세요</p> --><!-- v1.0 삭제 -->
+          </div>
+          <div class="formList">
+            <label class="label" for="labelExtraOp2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>제목</label><!-- v1.0 필수값 추가 -->
+            <div class="formRow inputWrap isActive"><!-- v1.0 .inputWrap 추가, 입력상태 isActive 추가  -->
+              <input class="input" id="labelExtraOp2" type="text" placeholder="" value="Loan&Biz 소개 영상">
+              <span class="countSet"><span class="count">14</span>/50</span>
+            </div>
+            <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>제목은 50자 미만으로 입력해 주세요</p> --><!-- v1.0 삭제 -->
+          </div>
+          <div class="formList">
+            <label class="label" for="labelExtraOp3">준법감시인<br>심의필</label>
+            <div class="formRow">
+              <input class="input" id="labelExtraOp3" type="text" placeholder="심의 번호를 입력하세요." value="">
+            </div>
+            <p class="notiTxt">영상 등록 전 준법감시인 심의필 여부를 반드시 확인해 주세요</p><!-- v1.0 워딩 수정 -->
+          </div>
+          <div class="formList">
+            <label class="label" id="labelExtraOp4">심의 기간</label>
+            <div class="formRow">
+              <div class="rangeControl" role="group" aria-labelledby="labelExtraOp4">
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+                <span class="uit">~</span>
+                <input type="text" class="input calendar" value="2023-07-01" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+              </div>           
+            </div>
+          </div>
+          <div class="formList">
+            <label class="label" id="labelExtraOp5">노출 여부</label>
+            <div class="formRow" role="group" aria-labelledby="labelExtraOp5">
+              <span class="radio">
+                <input type="radio" id="formLabel1_1" name="formLabel1" value="" checked/>
+                <label class="label" for="formLabel1_1"><span></span>노출</label>
+              </span>        
+              <span class="radio">
+                <input type="radio" id="formLabel1_2" name="formLabel1" value="" checked/>
+                <label class="label" for="formLabel1_2"><span></span>비노출</label>
+              </span>        
+            </div>
+          </div>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer4')">등록</button>
+          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer4')">취소</button>
+          <button type="button" class="btnBlack" onclick="layer_close('sampleLayer4')">삭제</button>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
+    <!-- **************** -->
   
   </body>
   </html>
