@@ -435,8 +435,8 @@ table.bbs_list .btnDkGreen,
 .jsGridWrap table .btnDkGreen,
 table.bbs_list .btnLine,
 .jsGridWrap table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
-table.bbs_list button.full { width: 100%;}
 
+table.bbs_list button.full { width: 100%;}
 .btnFixed .bbs_list button { min-width: 140px;}
 
 table.bbs_list a.btnSuccess,

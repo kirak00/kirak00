@@ -134,6 +134,8 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 *****************************/
 .notiTxt {  color: #4C9DA2; padding-left: 22px; text-indent: -22px; }
 .notiTxt::before { content: ''; display: inline-block; width: 18px; height: 18px; margin-right: 4px; background: url('../images/common/ico_24_notice_secondary.png') no-repeat center / contain; vertical-align: -3px; flex-shrink: 0;}
+.notiTxt.star { padding-left:10px; text-indent: -10px;}
+.notiTxt.star::before { content: '*'; width: 6px; text-indent: 0px; background: none; }
 .notiTxt.textCenter { justify-content: center;}
 .notiTxt.mt8 { margin-top: 8px;}
 .notiTxt.mt40 { margin-top: 40px;}
@@ -145,7 +147,7 @@ ul.commissionItem li span     {display:inline-block;  line-height:26px; }
 
 .formRow + .notiTxt { margin-top :10px; }
 
-.formListTable .notiTxt { margin-top: 8px; }
+.formListTable .notiTxt { margin-top: 16px; }
 
 .tableNoti { margin-top: 10px; color: #4C9DA2; }
 .tableNoti::before { content: ''; display: inline-block; width: 24px; height: 24px; margin-right: 8px; background: url('../adm_images/common/ico_24_notice_secondary.png') no-repeat center / 24px 24px;  vertical-align: text-top;}
@@ -253,22 +255,38 @@ a.btnBlack       {display:inline-block; line-height:50px; white-space: nowrap;}
 label.btnDkGray   {padding:0 50px; height:50px; line-height: 50px; background:#555; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#fff; }
 label.btnWhite       {display:inline-block; padding:0 50px; height:50px; line-height:50px; background:#ffffff; border-radius: 8px; font-size: 18px; text-align: center; font-weight: 700; color:#069B66; border:1px solid #069B66; }
 
-table .btnSuccess,
-table .btnSky,
-table .btnWhite,
-table .btnGray,
-table .btnWhiteLine,
-table .btnDkGreen,
-table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
+table.bbs_list .btnSuccess,
+.jsGridWrap table .btnSuccess,
+table.bbs_list .btnSky,
+.jsGridWrap table .btnSky,
+table.bbs_list .btnWhite,
+.jsGridWrap table .btnWhite,
+table.bbs_list .btnGray,
+.jsGridWrap table .btnGray,
+table.bbs_list .btnBlack,
+.jsGridWrap table .btnBlack,
+table.bbs_list .btnWhiteLine,
+.jsGridWrap table .btnWhiteLine,
+table.bbs_list .btnDkGreen,
+.jsGridWrap table .btnDkGreen,
+table.bbs_list .btnLine,
+.jsGridWrap table .btnLine          {padding:0 20px; height:36px; font-size:14px; }
 table button.full { width: 100%;}
 
-table a.btnSuccess        { line-height: 36px;}
-table a.btnSky         { line-height: 36px;}
-table a.btnWhite       { line-height: 36px;}
-table a.btnGray       { line-height: 36px;}
-table a.btnWhiteLine       { line-height: 36px;}
-table a.btnDkGreen       { line-height: 36px;}
-table a.btnLine       { line-height: 36px;}
+table.bbs_list a.btnSuccess,
+.jsGridWrap table a.btnSuccess,
+table.bbs_list a.btnSky,
+.jsGridWrap table a.btnSky,
+table.bbs_list a.btnWhite,      
+.jsGridWrap table a.btnWhite,      
+table.bbs_list a.btnGray,     
+.jsGridWrap table a.btnGray,     
+table.bbs_list a.btnWhiteLine,    
+.jsGridWrap table a.btnWhiteLine,    
+table.bbs_list a.btnDkGreen,
+.jsGridWrap table a.btnDkGreen,
+table.bbs_list a.btnLine,
+.jsGridWrap table a.btnLine        { line-height: 34px;}
 
 
 .btnSuccess:focus,
@@ -469,7 +487,9 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .btnSuccess.ico_edit::after  {background-image:url(../adm_images/common/ico_18_edit_g.png); }
 .btnSuccess.ico_edit:disabled::after  {background-image:url(../adm_images/common/ico_18_edit_g.png); }
 
-.ico_active { color: #555; font-weight: 700;}
+.ico_except { color: #555; font-weight: 700;}
+.ico_except::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_except.png) no-repeat center / contain; }
+.ico_active { color: #069B66; font-weight: 700;}
 .ico_active::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_unlock.png) no-repeat center / contain; }
 .ico_inactive { color: #FE5050; font-weight: 700;}
 .ico_inactive::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_lock.png) no-repeat center / contain; }
@@ -773,7 +793,7 @@ select.wid430 { min-width: 430px;}
 
 /* form 정력 */
 /* .formVertical .formRow ~ .radio { margin-top: 20px; } */
-.layerCont .formVertical { align-items: flex-start; width: 100%; gap: 10px}
+.layerCont .formVertical { align-items: flex-start; width: 100%; gap: 16px}
 .formVertical { display: flex; flex-direction: column; gap: 20px;}
 .formVertical.mt10 { margin-top: 10px;}
 .formVertical.mt20 { margin-top: 20px;}
@@ -1171,6 +1191,7 @@ section   {margin:0 auto; max-width: 1400px;}
 .tableFilterGroup .count .dkGreen { color: #4C9DA2;}
 .tableFilterGroup select { height: 40px; padding: 0 64px 0 16px }
 .tableFilterGroup ~ .bbs_list { margin-top: 20px;}
+.tableFilterGroup .btnSuccess { padding: 0 30px;}
 .tableFilterGroup .btnDkGreen { height: 40px;  width: 88px; padding: 0;}
 .tableFilterGroup .btnSky { height: 40px;  padding: 0 30px;}
 .tableFilterGroup .bbsTip { padding:0; padding-right:12px; }

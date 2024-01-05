@@ -25,13 +25,13 @@
     <!-- **************** -->
     <hr/>
     <div class="container" id="skip_content"  aria-label="컨텐츠">
-      <!-- <section class="">
+      <section class="">
         <h3 style="margin-bottom: 10px">알럿</h3>
-        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>대출제한대상 사유</button>
+        <button type="button" class="btnSuccess" onclick='sample_alert_1(this)'>확인메시지</button>
         <script>
           function sample_alert_1(obj){
             layer_alert(
-              "대출제한대상은 신청이 불가합니다.<p class='status'>[사유:세금체납]</p>", 
+              "운영자에서 제외 되었습니다.", 
               obj, 
               {
                 confirm : {
@@ -49,25 +49,25 @@
             )
           }
         </script>
-      </section> -->
-      <!-- <section style="margin-top: 20px;">
+      </section>
+      <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">버튼 2개</h3>
-        <button type="button" class="btnSuccess" id="confirmClick">비로그인 접근</button>
+        <button type="button" class="btnSuccess" id="confirmClick">운영자 제외</button>
         <script>
           $("#confirmClick").on("click",function(){
             // layer alert
             layer_confirm(
-              "대출 비교 서비스를 이용하기 위해선<br/>로그인 또는 회원가입이 필요합니다.",
+              "해당 운영자를 제외하시겠습니까?",
               this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
               {
                 confirm:{ //  확인 
-                  txt : "로그인", 
+                  txt : "삭제", 
                   callback : function(){ 
                     // alert(3)
                   }
                 },
                 cancel:{ //  취소 
-                  txt : "회원가입",
+                  txt : "취소",
                   callback : function(){
                     // alert(2)
                   }
@@ -78,7 +78,7 @@
   
           })
         </script>
-      </section> -->
+      </section>
       <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">팝업</h3>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">운영자 등록</button>
@@ -130,7 +130,7 @@
                   </th>
                   <td>
                     <div class="formRow">
-                      <input id="inpIdreadonly" class="input" type="text" placeholder="" value="9311457" readonly>
+                      <input id="inpIdreadonly" class="input" type="text" placeholder="" value="93114507" readonly>
                     </div>
                   </td>
                 </tr>
@@ -140,7 +140,7 @@
                   </th>
                   <td>
                     <div class="formRow">
-                      <input id="inpBrdName" class="input" type="text" placeholder="" value="" readonly>
+                      <input id="inpBrdName" class="input" type="text" placeholder="" value="홍*동" readonly>
                     </div>
                   </td>
                 </tr>
@@ -150,7 +150,7 @@
                   </th>
                   <td>
                     <div class="formRow">
-                      <input id="inpBrdPart" class="input" type="text" placeholder="" value="" readonly>
+                      <input id="inpBrdPart" class="input" type="text" placeholder="" value="디지털전략부" readonly>
                     </div>
                   </td>
                 </tr>
@@ -176,7 +176,7 @@
                   </th>
                   <td>
                     <div class="formRow fullType">
-                      <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력하세요." value="">
+                      <input id="labelMemo" class="input" type="text" placeholder="운영자의 역할 등을 입력해 주세요." value="">
                     </div>
                     <!-- <p class="notiTxt">운영자의 역할 등을 입력하세요.</p> -->
                   </td>
@@ -216,7 +216,7 @@
                         <label for="testRdoSns5"><span></span>게시판관리</label>
                       </span>
                     </div>
-                    <p class="notiTxt">운영자에게 제공할 화면을 선택해 주세요.<br/> 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
+                    <p class="notiTxt star">운영자에게 제공할 화면을 선택해 주세요.<br/> 선택되지 않은 메뉴는 해당 운영자에게 노출되지 않습니다.</p>
                   </td>
                 </tr>
               
@@ -226,6 +226,10 @@
         </div>
         <div class="layerFoot">
           <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">등록</button>
+          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
+        </div>
+        <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer')">수정</button>
           <button type="button" class="btnWhite" onclick="layer_close('sampleLayer')">취소</button>
         </div>
       </div>
