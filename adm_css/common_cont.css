@@ -2305,11 +2305,12 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 
 
 
-.inqueryTit { display: flex;}
+.inqueryTit { display: flex; align-items: center;}
+.inqueryTit .status { margin-left: 16px; color: #FE5050 }
 .inqueryTit a { padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .inqueryTit .icoReply{ display: none; flex-shrink: 0; align-self: center; margin-left: 16px; font-weight: 700;}
 .inqueryTit.hasReply .icoReply{ display: inline-flex;}
-
+.inqueryTit.hasDelete {}
 
 /* .processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
 .processStepWrap .left .tit { line-height: 55px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 

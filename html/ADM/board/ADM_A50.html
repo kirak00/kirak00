@@ -59,6 +59,7 @@
               <!-- //v1.2 추가 -->
             </div>
           </div>
+          <!-- 공지사항 경우 노출 -->
           <div class="formList">
             <label class="label" for="inpLabelTitle"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>공지사항 제목</label><!-- v1.2 i태그 추가 -->
             <div class="formRow">
@@ -67,9 +68,31 @@
                 <span class="countSet"><span class="count">0</span>/50</span>
               </div>
             </div>
-            <!-- 팝업의 경우 노출 -->
+          </div>
+          <!-- //이벤트 경우 노출 -->
+          <!-- 이벤트 경우 노출 -->
+          <div class="formList">
+            <label class="label" for="inpLabelTitle"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이벤트 제목</label><!-- v1.2 i태그 추가 -->
+            <div class="formRow">
+              <div class="inputWrap">
+                <input id="inpLabelTitle" class="input" type="text" value="" placeholder="제목은 50자 미만으로 입력해 주세요."> <!-- v1.0 placeholder 수정-->
+                <span class="countSet"><span class="count">0</span>/50</span>
+              </div>
+            </div>
+          </div>
+          <!-- //이벤트 경우 노출 -->
+          <!-- 팝업의 경우 노출 -->
+          <div class="formList">
+            <label class="label" for="inpLabelTitle"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>팝업 제목</label><!-- v1.2 i태그 추가 -->
+            <div class="formRow">
+              <div class="inputWrap">
+                <input id="inpLabelTitle" class="input" type="text" value="" placeholder="제목은 50자 미만으로 입력해 주세요."> <!-- v1.0 placeholder 수정-->
+                <span class="countSet"><span class="count">0</span>/50</span>
+              </div>
+            </div>
             <p class="notiTxt">팝업 제목은 목록에만 노출됩니다.</p>
           </div>
+          <!-- //팝업의 경우 노출 -->
           <div class="formList">
             <label class="label" for="inpLabelShow"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>노출여부</label><!-- v1.2 i태그 추가 -->
             <div class="formRow" role="group" aria-labelledby="inpLabelShow">
@@ -84,7 +107,7 @@
             </div>
             <p class="notiTxt">기본 설정은 비노출 입니다. 바로 노출을 희망할 경우 노출로 설정을 변경하세요.</p>
           </div>
-          <!-- v1.2 추가 // 이벤트 선택 할 경우 노출 -->
+          <!-- v1.2 추가 // 이벤트의 경우 노출 -->
           <div class="formList">
             <label class="label" for="inpBrdName2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이벤트 기간</label>
             <div class="formRow">
@@ -95,8 +118,8 @@
               </div>    
             </div>
           </div>
-          <!--// v1.2 추가 -->
-          <!-- v1.2 추가 // 팝업 선택 할 경우 노출 -->
+          <!--// v1.2 추가 // 이벤트의 경우 노출 -->
+          <!-- v1.2 추가 // 팝업의 경우 노출 -->
           <div class="formList">
             <label class="label" for="inpBrdName2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>팝업 노출 기간</label>
             <div class="formRow">
@@ -107,15 +130,16 @@
               </div>    
             </div>
           </div>
-          <!--// v1.2 추가 -->
+          <!--// v1.2 추가 // 팝업의 경우 노출  -->
           <div class="formList">
             <label class="label" for="inpLabelFor"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>게시 대상</label><!-- v1.2 i태그 추가 -->
             <div class="formRow">
-              <select class="wid200" id="inpLabelFor">
-                <option>전체 (법인/금융)</option>
+              <select class="wid200" id="inpLabelFor" disabled>
+                <option>법인</option>
               </select>
             </div>
           </div>
+          <!-- v1.2 공지사항, 이벤트의 경우 노출 -->
           <div class="formList">
             <label class="label" id="inpLabelImage">이미지 등록</label>
             <div class="formRow filebox wid1130">
@@ -125,16 +149,8 @@
             </div>
             <p class="notiTxt">이미지는 1개만 등록 가능하며 jpg, gif, png만 등록 가능합니다.</p><!-- v1.2 추가  -->
           </div>
-          <div class="formList">
-            <label class="label alignTop" for="inpDetailInfo"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상세 내용</label><!-- v1.2 i태그, alignTop 추가 -->
-            <div class="formRow">
-              <div class="textareaWrap">
-                <textarea id="inpDetailInfo" class="textarea" type="text" value="" placeholder="내용은 1,000자 미만으로 입력해 주세요."></textarea> <!-- v1.0 placeholder 수정-->
-                <span class="countSet"><span class="count">0</span>/1,000</span><!-- v1.2 1,000 -->
-              </div>
-            </div>
-          </div>
-          <!-- v1.2 팝업일 경우 필수값 -->
+          <!-- //v1.2 공지사항, 이벤트의 경우 노출 -->
+          <!-- v1.2 팝업의 경우 노출 -->
           <div class="formList">
             <label class="label" id="inpLabelImage"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이미지 등록</label>
             <div class="formRow filebox wid1130">
@@ -144,7 +160,18 @@
             </div>
             <p class="notiTxt">이미지는 1개만(500x500) 등록 가능하며 jpg, gif, png만 등록 가능합니다.</p><!-- v1.2 추가  -->
           </div>
-          <!-- //v1.2 팝업일 경우 필수값 -->
+          <!-- //v1.2 팝업의 경우 노출 -->
+          <!-- v1.2 공지사항, 이벤트의 경우 노출 -->
+          <div class="formList">
+            <label class="label alignTop" for="inpDetailInfo"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>상세 내용</label><!-- v1.2 i태그, alignTop 추가 -->
+            <div class="formRow">
+              <div class="textareaWrap">
+                <textarea id="inpDetailInfo" class="textarea" type="text" value="" placeholder="내용은 1,000자 미만으로 입력해 주세요."></textarea> <!-- v1.0 placeholder 수정-->
+                <span class="countSet"><span class="count">0</span>/1,000</span><!-- v1.2 1,000 -->
+              </div>
+            </div>
+          </div>
+          <!-- //v1.2 공지사항, 이벤트의 경우 노출 -->
                 
           <div class="table_bt small">
             <div class="btn_r">
