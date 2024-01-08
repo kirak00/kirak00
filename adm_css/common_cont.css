@@ -1584,6 +1584,11 @@ th{word-break: break-all;}
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status span {color:#888; }
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status strong {color:#333;  }
 .jsgrid-grid-body tbody tr.error  > .jsgrid-cell {background: rgba(254, 80, 80, 0.20); }
+.jsgrid-grid-body tbody tr.disabled  > .jsgrid-cell {background: #fafafa; }
+
+.jsgrid-grid-body tbody tr.disabled { background: #ddd; }
+tr.disabled td { color: #555; }
+
 
 .noTableData  { margin: 60px 0; padding: 40px 0;}
 .noTableData .txt { margin-top: 30px; color: #555;}  

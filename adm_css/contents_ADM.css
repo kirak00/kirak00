@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @import url('../adm_js/lib/jsgrid-1.5.3/dist/jsgrid.css');
-@import url('../adm_js/lib/jsgrid-1.5.3/dist/jsgrid-theme.css');
 @import url('./font/Pretendard-1.3.8/web/static/pretendard.css');
 @import url('./base.css');
 @import url('./common_cont.css');
