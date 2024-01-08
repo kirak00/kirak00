@@ -47,18 +47,6 @@
         <div class="searchControlBox">
           <!-- v0.9 수정 -->
           <div class="searchControlGroup">
-            <div class="dateTab tabScript" role="tablist">
-              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">조회 기간</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >기간 설정</button>
-            </div>
-            <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
-              <input type="text" class="input calendarMonth" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-            </div>
-            <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
-              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
-              <span class="uit">~</span>
-              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
-            </div>
             <div class="searchControlItem">
               <label for="selectLabelState1_4" class="label">게시물 상태</label>
               <div class="formRow">
@@ -77,7 +65,47 @@
                 </select>
               </div>
             </div>
+            <div class="searchControlItem">
+              <label for="selectLabelState1_6" class="label">유형</label>
+              <div class="formRow">
+                <select id="selectLabelState1_6">
+                  <option>전체</option>
+                  <option>전체</option>
+                </select>
+              </div>
+            </div>
+            <div class="dateTab tabScript" role="tablist">
+              <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">조회 기간</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >기간 설정</button>
+            </div>
+            <div class="formRow" id="search_tab_date_1" role="tabpanel" tabindex="0">
+              <div class="searchControlItem">
+                <label for="selectLabelState1_3" class="label">연도</label>
+                <div class="formRow">
+                  <select id="selectLabelState1_3">
+                    <option>전체</option>
+                    <option>전체</option>
+                  </select>
+                </div>
+              </div>
+              <div class="searchControlItem">
+                <label for="selectLabelState1_4" class="label">월</label>
+                <div class="formRow">
+                  <select id="selectLabelState1_4">
+                    <option>전체</option>
+                    <option>전체</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="rangeControl" id="search_tab_date_2" role="tabpanel" tabindex="0">
+              <input type="text" class="input calendar" title="기간선택 시작" aria-label="달력 입력(예시:2023-09-01)">
+              <span class="uit">~</span>
+              <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
+            </div>
+            
             <div class="searchBtns">
+              <button type="button" class="btnReset">초기화</button>
               <button type="button" class="btnSuccess">조회</button>
             </div>
           </div>
@@ -108,22 +136,98 @@
             var clients = [
               { 
                 "Name1": "2023-08-12",
+                "Name11": "-",
+                "Name12": "-",
                 "Name2": "<span class='textBold blue'>노출</span>", 
                 "Name3": "공지", 
+                "Name7": "금융회원", 
                 "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
                 "Name5": "25", 
-                "Name6": "홍신한", 
-                "Name7": "금융 회원", 
+                "Name6": "김*한", 
                 "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
               { 
                 "Name1": "2023-08-12",
-                "Name2": "<span class='textBold'>비노출</span>", //v1.0 textBold 추가
-                "Name3": "공지", 
+                "Name11": "2023-08-12",
+                "Name12": "2023-08-12",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "팝업", 
+                "Name7": "법인회원", 
                 "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
                 "Name5": "25", 
-                "Name6": "홍신한", 
-                "Name7": "금융 회원", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "2023-08-12",
+                "Name12": "2023-08-12",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "이벤트", 
+                "Name7": "법인/금융회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "2023-08-12",
+                "Name12": "2023-08-12",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "팝업", 
+                "Name7": "법인회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "2023-08-12",
+                "Name12": "2023-08-12",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "이벤트", 
+                "Name7": "법인/금융회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "-",
+                "Name12": "-",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "공지", 
+                "Name7": "법인/금융회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "-",
+                "Name12": "-",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "공지", 
+                "Name7": "법인/금융회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
+                "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
+              },
+              { 
+                "Name1": "2023-08-12",
+                "Name11": "-",
+                "Name12": "-",
+                "Name2": "<span class='textBold blue'>비노출</span>", //v1.2 textBold blue 추가
+                "Name3": "공지", 
+                "Name7": "법인/금융회원", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>새롭게 첫 선을 보이는 론앤비즈를 소개합니다.</a></p>", 
+                "Name5": "25", 
+                "Name6": "김*한", 
                 "Name8": "<button type='button' class='btnWhite'>상세보기</button>", 
               },
             ]; 
@@ -132,15 +236,17 @@
               data: clients,
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>OOOOO 있어요.</p></div>",
 
-              fields: [
-                { name: "Name1",  type: "text", title : "등록일", width: 180},
-                { name: "Name2",  type: "text", title : "상태", width: 170},
-                { name: "Name3", type: "text", title : "유형", width: 170 },
+              fields: [ //<!-- v1.2 전체 width 수정  -->
+                { name: "Name1",  type: "text", title : "등록일", width: 150},
+                { name: "Name11",  type: "text", title : "시작일", width: 140}, //<!-- v1.2 추가 -->
+                { name: "Name12",  type: "text", title : "종료일", width: 140}, //<!-- v1.2 추가 -->
+                { name: "Name2",  type: "text", title : "상태", width: 80},
+                { name: "Name3", type: "text", title : "유형", width: 100 },
+                { name: "Name7", type: "button", title : "대상", width: 160 }, //<!-- v1.2 위치 수정 -->
                 { name: "Name4", type: "text", title : "제목", width: 'auto' },
                 { name: "Name5", type: "text", title : "조회수", width: 120 },
-                { name: "Name6", type: "text", title : "작성자", width: 150 },
-                { name: "Name7", type: "button", title : "대상", width: 170 },
-                { name: "Name8", type: "button", title : "상세", width: 200 },
+                { name: "Name6", type: "text", title : "작성자", width: 120 },
+                { name: "Name8", type: "button", title : "상세", width: 150 },
               ],
               
               pagerContainer: "#externalPager2",

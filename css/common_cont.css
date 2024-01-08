@@ -801,7 +801,7 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .radio input[type=radio] + label.on span,
 .radio input[type=radio]:checked  + label span { background-image: url("../images/common/radio_active.png")}
 .radio input[type=radio]:checked:disabled  + label span { background-image: url("../images/common/radio_disable.png")}
-.radio input[type=radio]:checked:disabled + label { color: #888; }
+.radio input[type=radio]:disabled + label { color: #888; }
 .radio input[type=radio]:focus + label span::before,
 .radio input[type=radio]:focus + label.on span::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dashed #069B66; border-radius: 50%;}
 
@@ -2910,7 +2910,7 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 
 
 .inqueryTit { display: flex; align-items: center; padding: 0 30px;}
-.inqueryTit .tit { width: 148px; color: #555;}
+.inqueryTit .tit { width: 148px; color: #555; padding: 0; text-overflow: initial; flex-shrink: 0;}
 .inqueryTit a {padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .inqueryTit .icoReply{ display: none; flex-shrink: 0; align-self: center; margin-left: 16px; font-weight: 700;}
 .inqueryTit.hasReply .icoReply{ display: inline-flex;}
