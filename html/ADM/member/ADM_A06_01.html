@@ -45,7 +45,7 @@
           <div class="searchControlBox">
             <div class="searchControlGroup">
               <div class="searchControlItem">
-                <label for="label_tit_1" class="label">구분 </label> 
+                <label for="label_tit_1" class="label">회원 목록 </label> 
                 <div class="formRow">
                   <select name="" id="">
                     <option value="">법인회원</option>
@@ -75,7 +75,7 @@
             </div>
             <div class="searchControlGroup">
               <div class="searchControlItem expand">
-                <label id="selectLabelArea" class="label">대출/리스 신청</label>
+                <label id="selectLabelArea" class="label">신청 분류</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
                   <select title="범위">
                     <option>유</option>
@@ -83,7 +83,7 @@
                 </div>
               </div>
               <div class="searchControlItem expand">
-                <label id="selectLabelArea" class="label">대출/리스 실행</label>
+                <label id="selectLabelArea" class="label">실행 분류</label>
                 <div class="formRow formGroup" role="group" aria-labelledby="selectLabelArea">
                   <select title="범위">
                     <option>유</option>
@@ -107,7 +107,7 @@
         </fieldset>
 
         <fieldset class="tableFilterGroup">
-          <span class="count"></span>
+          <span class="count">총 회원수 <strong>000</strong>명</span>
           <div class="formRow" role="group">
 
             <select title="보기갯수 선택">
@@ -135,61 +135,16 @@
 
             var clients = [
               { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
+                "Name1": "(주)신한은행",
+                "Name2": "홍길동",
+                "Name3": "123-12-1234567", 
                 "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name2": "채택",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
-              },
-              { 
-                "Name1": "S_230809_0001",
-                "Name3": "(주)길동건설", 
-                "Name4": "단일", 
-                "Name5": "12억 5000만원", 
-                "Name6": "시설자금", 
-                "Name7": "유", 
-                "Name8": "24개월", 
+                "Name5": "2023-01-01", 
+                "Name6": "정상", 
+                "Name7": "2023-01-02", 
+                "Name8": "2023-01-02", 
+                "Name9": "2023-01-02", 
+                "Name10": "2023-01-02", 
               },
             
             ]; 
@@ -200,13 +155,15 @@
               data: clients,
               noDataContent: "<div class='noTableData'><i class='icoReview'></i><p class='txt'>현재 금융회사들이 고객님의 대출을 심사하고 있어요.</p></div>",
               fields: [
-                { name: "Name1",  type: "text", title : "번호", width: 110},
+                { name: "Name1",  type: "text", title : "상호명", width: 110},
                 { name: "Name3", type: "text", title : "대표자명", width: 120 },
                 { name: "Name4", type: "text", title : "사업자등록번호", width: 70 },
                 { name: "Name5", type: "text", title : "가입일", width: 158 },
                 { name: "Name6", type: "text", title : "회원 상태", width: 90 },
-                { name: "Name7", type: "text", title : "대출/리스 비교 신청일", width: 110 },
-                { name: "Name8", type: "text", title : "대출/리스 실행일", width: 110 },
+                { name: "Name7", type: "text", title : "대출 비교 신청일", width: 110 },
+                { name: "Name8", type: "text", title : "리스 비교 신청일", width: 110 },
+                { name: "Name9", type: "text", title : "대출 실행일", width: 110 },
+                { name: "Name10", type: "text", title : "리스 실행일", width: 110 },
               ],
               
               pagerContainer: "#externalPager2",

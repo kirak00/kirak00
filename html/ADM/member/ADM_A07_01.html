@@ -40,8 +40,9 @@
       <div class="tabLineWrap">
         <div class="inner">
           <ul class="tabLine tabScript" role="tablist">
-            <li class="on"><button type="button" role="tab" aria-selected="false" aria-controls="">금융 회원 정보</button></li>
-            <li><button type="button" role="tab" aria-selected="true" aria-controls="">메모</button></li>
+            <li class="on"><button type="button" role="tab" >금융 회원 정보</button></li>
+            <li><button type="button" role="tab" >메모</button></li>
+            <li><button type="button" role="tab" >수수료 변경 이력</button></li>
           </ul>
         </div>
       </div>
@@ -96,7 +97,15 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <label class="label" id="inpBizAdd">주소</label>
+                    <label class="label" id="inpBizAdd">지역</label>
+                  </th>
+                  <td colspan="3">
+                    <input class="input wid240" type="text" placeholder="" value="" readonly>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label class="label" id="inpBizAdd">상세 주소</label>
                   </th>
                   <td role="group" aria-labelledby="inpBizAdd" colspan="3">
                     <div class="formRow">

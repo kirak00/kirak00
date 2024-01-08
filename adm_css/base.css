@@ -29,6 +29,7 @@ hr, legend, caption {display:none; }
 button,select,input[type=radio],input[type=checkbox],label,textarea {cursor:pointer;font-size:14px; border-radius:0;-webkit-appearance:none}
 } */
 
+i {font-style: normal;}
 /* ---[ reset html5 element ]---------------- */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;}
 

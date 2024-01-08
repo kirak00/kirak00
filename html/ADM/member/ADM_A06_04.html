@@ -58,7 +58,12 @@
                   <th scope="row">
                     <label for="formText">내용</label>
                   </th>
-                  <td><textarea class="textarea" name="" id="formText" cols="30" rows="10" ></textarea></td>
+                  <td>
+                    <div class="textareaWrap"><!-- v1.2 숫자 count 추가 -->
+                      <textarea class="textarea" name="" id="formText" cols="30" rows="10" placeholder="내용은 1,000자 미만으로 입력해 주세요." ></textarea>
+                      <span class="countSet"><span class="count">0</span>/100</span>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -45,18 +45,18 @@
           <div class="searchControlBox">
             <div class="searchControlGroup">
               <div class="searchControlItem">
-                <label for="label_tit_1" class="label">구분 </label> 
+                <label for="label_tit_1" class="label">회원 목록 </label> 
                 <div class="formRow">
-                  <select name="" id="">
+                  <select name="" id=""  class="wid240">
                     <option value="">금융회원</option>
                   </select>
                 </div>
               </div>
               <div class="searchControlItem">
                 <label for="selectLabelOption1" class="label">금융 회사명</label>
-                <div class="formRow">
-                  <select title="범위" id="selectLabelOption1">
-                    <option>금융 회사명을 입력해 주세요</option>
+                <div class="formRow ">
+                  <select title="금융 회사명" class="wid240" id="selectLabelOption1">
+                    <option>전체</option>
                   </select>
                 </div>
               </div>
@@ -83,7 +83,7 @@
               <div class="searchControlItem ">
                 <label id="selectLabelArea" class="label">지점명</label>
                 <div class="formRow">
-                  <input type="text" class="input" placeholder="000-00-00000">
+                  <input type="text" class="input" placeholder="지점명을 입력하세요">
                 </div>
               </div>
               <div class="searchBtns">
@@ -99,11 +99,21 @@
           <span class="count">총 회원수 <strong>000</strong>명</span>
           <div class="formRow" role="group">
 
-            <select title="보기갯수 선택">
-              <option>10개씩 보기</option>
-              <option>본부2</option>
-            </select>
-            <button type="button" class="btnDkGreen">적용</button>
+            <div class="formRow">
+              <div class="bbsTip">
+                <p class="lebelInfo">
+                  <span><em>A</em> 조회 권한</span>
+                  <span><em>B</em> 관리 권한</span>
+                  <span><em>C</em> 대출 제안 권한</span>
+                  <span><em>D</em> 대출+리스 제안 권한</span>
+                </p>
+              </div>
+              <select title="보기갯수 선택">
+                <option>10개씩 보기</option>
+                <option>본부2</option>
+              </select>
+              <button type="button" class="btnDkGreen">적용</button>
+            </div>
           </div>
         </fieldset>
 
@@ -124,118 +134,19 @@
 
             var clients = [
               { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
+                "Name2": "새마을금고", 
+                "Name3": "종로지점", 
+                "Name4": "123-15-123132", 
                 "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
+                "Name6": "MG_1234567", 
+                "Name61": "홍길동", 
+                "Name62": "A", 
+                "Name8": "2",  
                 "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
+                "Name10": "2023-01-01", 
+                "Name11": "2023-01-01", 
                 "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
               },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-              { 
-                "Name2": "(주)길동건설", 
-                "Name3": "새마을금고", 
-                "Name4": "종로지점", 
-                "Name5": "0850123",  
-                "Name6": "유", 
-                "Name7": "MG_1234567",
-                "Name8": "2023-10-02",  
-                "Name9": "<button type='button' class='btnWhite'>초기화</button>", 
-                "Name10": "홍길동", 
-                "Name11": "홍길동", 
-                "Name12": "홍길동", 
-                "Name13": "<button type='button' class='btnWhite'>초기화</button>", 
-              },
-            
             ]; 
             
 
@@ -252,16 +163,17 @@
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">사업자등록번호</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">지점코드</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">아이디</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">담당자</th>
+                    <th scope='col' class='jsgrid-header-cell' rowspan="2">권한</th>
                     <th scope='col' class='jsgrid-header-cell' colspan="2">심사</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">가입일</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">인증일</th>
-                    <th scope='col' class='jsgrid-header-cell' rowspan="2">담당자</th>
                     <th scope='col' class='jsgrid-header-cell' rowspan="2">비밀번호 관리</th>
                   `); 
                   var $tr = $("<tr class='jsgrid-header-row'>");   
                   var grid = this;
                   grid._eachField(function(field, index) {
-                      if (4 < index && index<7) {
+                      if (6 < index && index<9) {
                         var $th = $("<th class='jsgrid-header-cell'>").text(field.title).width(field.width).appendTo($tr);
                       } 
                   });
@@ -273,12 +185,12 @@
                 { name: "Name4", type: "text", title : "사업자등록번호", width: 110 },
                 { name: "Name5", type: "text", title : "지점코드", width: 110 },
                 { name: "Name6", type: "text", title : "아이디", width: 110 },
-                // { name: "Name7", type: "text", title : "유형", width: 110 },
+                { name: "Name61", type: "text", title : "담당자", width: 110 },
+                { name: "Name62", type: "text", title : "권한", width: 110 },
                 { name: "Name8", type: "text", title : "횟수", width: 110 },
                 { name: "Name9", type: "text", title : "초기화", width: 110 },
                 { name: "Name10", type: "text", title : "가입일", width: 110 },
                 { name: "Name11", type: "text", title : "인증일  ", width: 110 },
-                { name: "Name12", type: "text", title : "담당자", width: 110 },
                 { name: "Name13", type: "text", title : "비밀번호 관리", width: 110 },
               ],
               

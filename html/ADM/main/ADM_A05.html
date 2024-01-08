@@ -40,6 +40,17 @@
         <legend>게시물 검색</legend>
         <div class="searchControlBox">
           <div class="searchControlGroup">
+            <div class="searchControlItem">
+              <label for="label_tit_1" class="label">구분 </label> 
+              <div class="formRow">
+                <select name="" id="gubun">
+                  <option value="" txt="대출/리스">전체</option>
+                  <option value="" txt="대출">대출</option>
+                  <option value="" txt="리스">리스</option>
+                </select>
+              </div>
+            </div>
+
             <div class="dateTab tabScript" role="tablist">
               <button type="button" role="tab" aria-selected="true"  aria-controls="search_tab_date_1" class="on">년/월 선택</button>
               <button type="button" role="tab" aria-selected="false" aria-controls="search_tab_date_2" >직접 선택</button>
@@ -61,7 +72,23 @@
               <input type="text" class="input calendar" title="기간선택 종료" aria-label="달력 입력(예시:2023-09-01)">
             </div>
             <div class="searchBtns">
-              <button type="button" class="btnSuccess">조회</button>
+              <button type="button" class="btnSuccess" id="testBtn">조회</button>
+              <script>
+                $("#testBtn").on("click",function(){
+                  var select = $("#gubun")[0]
+                  var idx = select.selectedIndex;
+                  var option = select.getElementsByTagName('option')[idx];
+                  
+                  // 대출/리스 , 대출 , 리스 
+                  $("i").html(option.getAttribute('txt'))
+
+                  // 리스 -> 양도 담보 변경
+                  $(".txtChange").each(function(){
+                    this.innerHTML = this.getAttribute(option.text)
+                  })
+                })
+
+              </script>
             </div>
           </div>
 
@@ -79,11 +106,11 @@
             <strong><em>257</em>명</strong>
           </li>
           <li class="box memCount">
-            <span class="ico_2">대출 신청 법인</span>
+            <span class="ico_2"><i>대출/리스</i> 신청 법인</span>
             <strong><em>257</em>명</strong>
           </li>
           <li class="box memCount">
-            <span class="ico_3">대출 성사 법인 회원</span>
+            <span class="ico_3"><i>대출/리스</i> 실행 법인</span>
             <strong><em>257</em>명</strong>
           </li>
           <li class="box memCount bgGreen">
@@ -95,7 +122,7 @@
 
       <div class="memberStatus">
         <ul class="boxWrap">
-          <li class="box usageStatus">
+          <!-- <li class="box usageStatus">
             <span class="tit ico_1">이용 현황</span>
             <ul>
               <li>
@@ -111,7 +138,7 @@
                 <strong>10건</strong>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class="box usageStatus">
             <span class="tit ico_2 ">누적 방문 현황</span>
             <ul>
@@ -156,7 +183,7 @@
           <li class="box loanStatus">
             <ul>
               <li>
-                <span class="ico_1">대출 비교 신청</span>
+                <span class="ico_1"><i>대출/리스</i> 비교 신청</span>
                 <strong>142건</strong>
               </li>
               <li>
@@ -172,11 +199,11 @@
                 <strong>142건</strong>
               </li>
               <li>
-                <span class="ico_5">대출 실행</span>
+                <span class="ico_5"><i>대출/리스</i> 성사 건 수</span>
                 <strong>142건</strong>
               </li>
               <li>
-                <span class="ico_6">대출 실행 비율</span>
+                <span class="ico_6"><i>대출/리스</i> 성사율</span>
                 <strong>142건</strong>
               </li>
             </ul>
@@ -186,19 +213,49 @@
 
       <div class="memberStatus">
         <ul class="boxWrap float">
+          <li class="box loadMoney ">
+            <ul>
+              <li>
+                <span class="icon_1"><i>대출/리스</i> <br>비교 신청 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+              <li>
+                <span class="icon_2"><i>대출/리스</i> <br>실행 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+              <li>
+                <span class="icon_3">전체 정산 액</span>
+                <strong>14억 2500만원</strong>
+              </li>
+            </ul>
+          </li>
+          <li class="box rightCount">
+            <div>
+              <span><i>대출/리스</i> 신청별  <br>평균 제안서 제출 수</span>
+              <strong><em>4건</em></strong>
+            </div>
+            <div>
+              <span><i>대출/리스</i> 신청 대비 <br>제안서 접수 비율 </span>
+              <strong><em>80%</em></strong>
+            </div>
+            <div>
+              <span>제안서와 실행 금액 <br>일치율 </span>
+              <strong><em>80%</em></strong>
+            </div>
+          </li>
           <li class="box loanIngStatus">
-            <span class="tit ico_1">대출 비교하기 진행 상태 (누적 중간 저장 값)</span>
+            <span class="tit ico_1"><i>대출/리스</i> 비교하기 진행 상태 값 (누적 중간 저장 값)</span>
             <div class="tableBox">
               <table>
                 <colgroup>
                   <col span="5" width="20%" />
                 </colgroup>
                 <tr>
-                  <th>대표자 정보 제공 및<br> 조회 동의</th>
+                  <th>대표자 정보 제공 및 <br>조회 동의</th>
                   <th>희망 대출 정보</th>
                   <th>기업 정보 <br>(업체 개요)</th>
-                  <th>기업 정보 <br>(경영진 정보)</th>
-                  <th>기업 정보 <br>(주주 정보)</th>
+                  <th>기업 정보 <br>(경영진 현황)</th>
+                  <th>기업 정보 <br>(주주 현황)</th>
                 </tr>
                 <tr>
                   <td>14건</td>
@@ -217,7 +274,7 @@
                   <th>기업 정보 <br>(법인 서류 등록)</th>
                   <th>재무 현황</th>
                   <th>제출 자료</th>
-                  <th>세금계산서 합계표</th>
+                  <th>매출/매입 현황</th>
                 </tr>
                 <tr>
                   <td>14건</td>
@@ -229,30 +286,6 @@
               </table>
             </div>
           </li>
-          <li class="box loadMoney ">
-            <ul>
-              <li>
-                <span class="icon_1">대출 비교 신청 액</span>
-                <strong>14억 2500만원</strong>
-              </li>
-              <li>
-                <span class="icon_2">대출 실행 액</span>
-                <strong>14억 2500만원</strong>
-              </li>
-              <li>
-                <span class="icon_3">전체 정산 액</span>
-                <strong>14억 2500만원</strong>
-              </li>
-            </ul>
-          </li>
-          <li class="box rightCount">
-            <span>대출 신청별 평균 제안서 제출 수</span>
-            <strong><em>4건</em></strong>
-          </li>
-          <li class="box rightCount">
-            <span>제안서와 실행 금액 일치율 </span>
-            <strong><em>80%</em></strong>
-          </li>
         </ul>
       </div>
 
@@ -260,19 +293,24 @@
 
 
     <section class="dashboard ">
-      <h3 class="">대출 상세 현황 </h3>
+      <h3 class=""><i>대출/리스</i> 상세 현황 </h3>
       <div class="memberStatus">
         <ul class="boxWrap detail">
           <li class="box detail_1">
-            <span class="tit">대출 신청 용도 유형</span>
+            <span class="tit"><i>대출/리스</i> 신청 용도 유형</span>
             <table>
+              <caption>
+                <col span="3" width="33%">
+              </caption>
               <tr>
                 <th>시설자금</th>
                 <th>운전자금</th>
+                <th>기계기구 리스</th>
               </tr>
               <tr>
-                <td><strong>20</strong> 건</td>
-                <td><strong>25</strong> 건</td>
+                <td><strong>20건</strong> </td>
+                <td><strong>25건</strong> </td>
+                <td><strong>25건</strong> </td>
               </tr>
             </table>
             <span class="tit">제안 금리 유형</span>
@@ -344,9 +382,35 @@
             </script>
 
           </li>
-          <li class="box detail_3">
+          <!-- <li class="box detail_3">
             <span class="tit">제안 평균 금리</span>
             <strong>7.5%</strong>
+          </li> -->
+          <li class="box detail_1">
+            <span class="tit">제안 평균 금리</span>
+            <table>
+              <tr>
+                <th>전체</th>
+                <th class="txtChange" 전체="담보" 대출="담보" 리스="양도 담보">담보</th>
+                <th>신용</th>
+              </tr>
+              <tr>
+                <td><strong>7.5%</strong></td>
+                <td><strong>4.3%</strong></td>
+                <td><strong>4.3%</strong></td>
+              </tr>
+            </table>
+            <span class="tit"><i>대출/리스</i> 비교신청 미완료 현황</span>
+            <table>
+              <tr>
+                <th>미완료 건</th>
+                <th>미완료 비율</th>
+              </tr>
+              <tr>
+                <td><strong>20</strong></td>
+                <td><strong>22%</strong></td>
+              </tr>
+            </table>
           </li>
           <li class="box detail_4">
             <span class="tit">고객 피드백</span>

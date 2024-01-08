@@ -20,6 +20,8 @@ tr.guide td a  {color:#fff; background:#919ae9;  }
 tr th   {background:#639c67; height:50px; color:#fff; } 
 tr td.date   {text-align: center; } 
 tr:hover td {background:#ebfced}
+tr.disabled td ,
+tr.disabled td a {text-decoration: line-through; color:#bbb }
 
 h1  {text-align: center; font-size:24px;}
 
@@ -75,7 +77,7 @@ table {margin:0 20px; width:calc(100% - 40px)}
    {
     tit : '대시보드', folder : 'main', page : '', status : false, pop : false, ment : '', end : '09/08',
     sub : [
-      {tit : '대시보드', folder : '', page : 'ADM_A02.html', status : true, ment : 'v1.2', end : '' },
+      {disabled:true, tit : '대시보드', folder : '', page : 'ADM_A02.html', status : true, ment : 'v1.2', end : '' },
       {tit : '대시보드', folder : '', page : 'ADM_A05.html', status : true, ment : 'v1.2', end : '' },
       {tit : '방문자 상세 정보', folder : '', page : 'ADM_A05_001.html', status : true, ment : 'v1.2', end : '' },
     ],
@@ -86,16 +88,18 @@ table {margin:0 20px; width:calc(100% - 40px)}
       {tit : '법인회원 > 회원목록(법인회원)', folder : '', page : 'ADM_A06_01.html', status : false, ment : 'v1.1', end : '' },
       {tit : '법인회원 > 회원상세(법인회원) > 법인정보', folder : '', page : 'ADM_A06_02.html', status : false, ment : 'v1.1', end : '' },
       {tit : '법인회원 > 회원상세(법인회원) > 법인정보(탈퇴)', folder : '', page : 'ADM_A06_02_1.html', status : false, ment : 'v1.1', end : '' },
-      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 엄체개요', folder : '', page : 'ADM_A06_03_1.html', status : false, ment : 'v1.1', end : '' },
-      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 경영진인적사항', folder : '', page : 'ADM_A06_03_2.html', status : false, ment : 'v1.1', end : '' },
-      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 주주인적사항', folder : '', page : 'ADM_A06_03_3.html', status : false, ment : 'v1.1 ', end : '' },
-      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 노사관계 및 연혁', folder : '', page : 'ADM_A06_03_4.html', status : false, ment : 'v1.1 ', end : '' },
-      {tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 필요서류제출', folder : '', page : 'ADM_A06_03_5.html', status : false, ment : 'v1.1 ', end : '' },
       {tit : '법인회원 > 회원상세 > 메모', folder : '', page : 'ADM_A06_04.html', status : false, ment : 'v1.1 ', end : '' },
+      {disabled:true, tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 경영진인적사항', folder : '', page : 'ADM_A06_03_2.html', status : false, ment : 'v1.1', end : '' },
+      {disabled:true, tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 엄체개요', folder : '', page : 'ADM_A06_03_1.html', status : false, ment : 'v1.1', end : '' },
+      {disabled:true, tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 주주인적사항', folder : '', page : 'ADM_A06_03_3.html', status : false, ment : 'v1.1 ', end : '' },
+      {disabled:true, tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 노사관계 및 연혁', folder : '', page : 'ADM_A06_03_4.html', status : false, ment : 'v1.1 ', end : '' },
+      {disabled:true, tit : '법인회원 > 회원상세(법인회원) > 대출비교신청정보 > 필요서류제출', folder : '', page : 'ADM_A06_03_5.html', status : false, ment : 'v1.1 ', end : '' },
 
       {tit : '금융회원 > 회원목록', folder : '', page : 'ADM_A07.html', status : false, ment : 'v1.0', end : '' },
       {tit : '금융회원 > 회원상세(금융회원정보)', folder : '', page : 'ADM_A07_01.html', status : false, ment : 'v1.0', end : '' },
       {tit : '금융회원 > 회원상세 > 메모(법인 동일)', folder : '', page : 'ADM_A06_04.html', status : false, ment : 'v1.0', end : '' },
+      {tit : '금융회원 > 회원상세 > 수수료율 변경 이력(팝업)', folder : '', page : '', status : false, ment : '<a href="/html/ADM/policy/ADM_A37.html">정책 관리 > 수수료관리</a>', end : '' },
+
       {tit : '금융회원 > 정보조회이력관리', folder : '', page : 'ADM_A08.html', status : false, ment : 'v1.0', end : '' },
       
       {tit : '금융회사 관리', folder : '', page : 'ADM_A09.html', status : false, ment : 'v1.0', end : '' },
@@ -212,6 +216,9 @@ table {margin:0 20px; width:calc(100% - 40px)}
       if(o.tit == "레이아웃") {
         status_1 += " guide"
       }
+
+      if(o.popup == true){
+      }
       if(o.page !=''){
         txt += `
           <tr class="${status_1}">
@@ -228,29 +235,43 @@ table {margin:0 20px; width:calc(100% - 40px)}
             <td rowspan="${row1+ row2+1}" class="td_1">${o.tit}</td>
           </tr>\n`
       }
-      if(o.sub)
-      o.sub.forEach((o2,i2)=>{
-        status = o2.status != true ? '-' : '완료' ;
-        url = o2.page;
-        // if(i2==0) txt += `<tr class="${status}"><td rowspan="${o.sub.length}">${o2.tit}</td><td class="${status}">${status}</td><td><a href="${folder + '/'+url}">${o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
-        // else txt += `<tr class="${status}"><td>${status}</td><td><a href="${o2.page}">${o2.tit}</a></td><td>${o2.ment}</td></tr>\n`;
-        txt += `
-          <tr class="${o2.status}">
-            <td >${o2.tit}</td><td class="status">${status}</td>
-            <td><a target="_blank" href="${folder + '/'+url}">${folder +"/" +o2.page} </a></td>
-            <td class="date">${o2.end}</td>
-            <td>${o2.ment}</td>
-          </tr>\n`;
+      if(o.sub){
+        o.sub.forEach((o2,i2)=>{
+          status = o2.status != true ? '-' : '완료' ;
+          url = o2.page;
+          var openaTarget = '_blank'
           
-        // if(o2.sub)
-        // o2.sub.forEach((o3,i3)=>{
-        // status = !o.status ? '-' : '완료' ;
-        // txt += `<tr class="${status}"><td>22${status}</td><td><a href="${o3.page}">${o3.tit}</a></td><td></td></tr>\n`
-        //   // o3.sub.forEach((o3,i3)=>{
-        //   //   txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td>${o3.folder}</td><td><a href="${o3.page}">${o3.tit}</a></td><tr>\n`
-        //   // })
-        // })
-      })
+          var fullUrl = folder +"/" + url;
+          if(o2.popup){
+            fullUrl = `javascript:window.open('${fullUrl}','list','width=500,height=500,toolbar=no,scrollbars=no,resizable=no,status=no,menubar=no,location=no')`
+            console.log(fullUrl)
+            openaTarget = ""
+            
+          }
+          
+
+          // if(i2==0) txt += `<tr class="${status}"><td rowspan="${o.sub.length}">${o2.tit}</td><td class="${status}">${status}</td><td><a href="${folder + '/'+url}">${o2.page} </a></td><td>${o2.ment}</td></tr>\n`;
+          // else txt += `<tr class="${status}"><td>${status}</td><td><a href="${o2.page}">${o2.tit}</a></td><td>${o2.ment}</td></tr>\n`;
+          var disabled = "";
+          if(o2.disabled == true) disabled = 'disabled'
+          txt += `
+            <tr class="${o2.status}  ${disabled}">
+              <td >${o2.tit}</td><td class="status">${status}</td>
+              <td><a target="${openaTarget}" href="${fullUrl}">${folder +"/" +o2.page} </a></td>
+              <td class="date">${o2.end}</td>
+              <td>${o2.ment}</td>
+            </tr>\n`;
+            
+          // if(o2.sub)
+          // o2.sub.forEach((o3,i3)=>{
+          // status = !o.status ? '-' : '완료' ;
+          // txt += `<tr class="${status}"><td>22${status}</td><td><a href="${o3.page}">${o3.tit}</a></td><td></td></tr>\n`
+          //   // o3.sub.forEach((o3,i3)=>{
+          //   //   txt += `<tr><td>${o.folder}</td><td>${o2.folder}</td><td>${o3.folder}</td><td><a href="${o3.page}">${o3.tit}</a></td><tr>\n`
+          //   // })
+          // })
+        })
+      }
   })
 
   document.querySelector("#ddd").innerHTML = txt
