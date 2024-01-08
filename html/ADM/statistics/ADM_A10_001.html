@@ -156,7 +156,7 @@
             </script>
           </li>
           <li class="box">
-            <span class="tit">대출/리스 신청 신용/담보 비율</span>
+            <span class="tit">대출 신청 <br>신용/담보 비율</span>
             <div>
               <div class="chart" id="barChart_2"  ></div>
             </div>  
@@ -171,7 +171,7 @@
             </script>
           </li>
           <li class="box">
-            <span class="tit">대출/리스 실행 신용/담보 비율</span>
+            <span class="tit">대출 실행  <br>신용/담보 비율</span>
             <div>
               <div class="chart" id="barChart_3" ></div>
             </div>  
@@ -184,6 +184,108 @@
                 ]
               )
             </script>
+          </li>
+          <li class="box">
+            <span class="tit">대출 신청 <br>자금 용도 비율</span>
+            
+            <div class="pie" id="pieChart_1"></div>
+            <script>
+              var chartDom = document.getElementById('pieChart_1');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '대출 유형 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '운전 자금'  , itemStyle : {color:'#46B9B2'}},
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 시설 자금</li>
+              <li> <em style="background:#46B9B2"></em> 운전 자금</li>
+            </ul>
+
+          </li>
+          <li class="box">
+            <span class="tit">대출 실행  <br>자금 용도 비율</span>
+            
+            <div class="pie" id="pieChart_2"></div>
+            <script>
+              var chartDom = document.getElementById('pieChart_2');
+              var myChart_pie1 = echarts.init(chartDom);
+              var option = {
+                tooltip: {
+                  trigger: 'item'
+                },
+                series: [
+                  {
+                    name: '대출 유형 비율',
+                    type: 'pie',
+                    radius: ['35%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                      borderRadius: 0,
+                      borderColor: '#fff',
+                      borderWidth: 2
+                    },
+                    label: {
+                      show: false,
+                      position: 'center'
+                    },
+                    emphasis: {
+                      label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'bold'
+                      }
+                    },
+                    labelLine: {
+                      show: false
+                    },
+                    data: [
+                      { value: 1048, name: '시설 자금' , itemStyle : {color:'#5066B6'} },
+                      { value: 735, name: '운전 자금'  , itemStyle : {color:'#46B9B2'} },
+                    ]
+                  }
+                ]
+              };
+              myChart_pie1.setOption(option);
+            </script>
+            <ul class="legend">
+              <li> <em style="background:#5066B6"></em> 시설 자금</li>
+              <li> <em style="background:#46B9B2"></em> 운전 자금</li>
+            </ul>
+
           </li>
         </ul>
         <ul class="boxWrap chartBox">
@@ -241,34 +343,11 @@
               )
             </script>
           </li>
-        </ul>
-        <ul class="boxWrap payData">
-          <li class="box">
-            <span class="tit">대출/리스 비교 신청 총 액</span>
-            <strong>304억 8000만원</strong>
-          </li>
-          <li class="box">
-            <span class="tit">대출/리스 실행 총 액</span>
-            <strong>201억 1000만원</strong>
-          </li>
-          <li class="box">
-            <span class="tit">제안서 금리 비율</span>
-            <div class="barChart">
-              <span class="bar">
-                <em class="type_1" style="width:29%"><span>29%</span></em> 
-                <em class="type_2" style="width:71%"><span>71%</span></em>
-              </span>
-              <span class="legend">
-                <em class="icon_1">고정</em>
-                <em class="icon_2">변동</em>
-              </span>
-            </div>
-          </li>
           <li class="box">
             <span class="tit">제안서 대비 실행 일치율</span>
-            <p class="ment">대출 실행 대상 중 리뷰 참여자 기준</p>
             
-            <div class="pie" id="pieChart_4" style="height:180px;  "></div>
+            <div class="pie" id="pieChart_4"></div>
+            <p class="ment">대출 실행 대상 중 리뷰 참여자 기준</p>
             <script>
               var chartDom = document.getElementById('pieChart_4');
               var myChart_pie3 = echarts.init(chartDom);
@@ -313,6 +392,29 @@
               };
               myChart_pie3.setOption(option);
             </script>
+          </li>
+        </ul>
+        <ul class="boxWrap payData">
+          <li class="box">
+            <span class="tit">대출 비교 신청 총 액</span>
+            <strong>304억 8000만원</strong>
+          </li>
+          <li class="box">
+            <span class="tit">대출 실행 총 액</span>
+            <strong>201억 1000만원</strong>
+          </li>
+          <li class="box">
+            <span class="tit">제안서 금리 비율</span>
+            <div class="barChart">
+              <span class="bar">
+                <em class="type_1" style="width:29%"><span>29%</span></em> 
+                <em class="type_2" style="width:71%"><span>71%</span></em>
+              </span>
+              <span class="legend">
+                <em class="icon_1">고정</em>
+                <em class="icon_2">변동</em>
+              </span>
+            </div>
           </li>
           <!-- <li class="box">
             <span class="tit">평균 대출 금리</span>

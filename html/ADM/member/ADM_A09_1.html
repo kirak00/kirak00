@@ -57,15 +57,15 @@
                 <div class="formRow" ><input type="text" class="input" id="inpLabel_003" placeholder="조직은 한/영문, 숫자, 특수기호만 입력 가능합니다. (최대 30자)"></div>
               </div>
               <div class="formList">
-                <label class="label" id="inpLabel_004"><span class="required">*</span>조직 2</label>
+                <label class="label" id="inpLabel_004">조직 2</label>
                 <div class="formRow" ><input type="text" class="input" id="inpLabel_004" placeholder="조직은 한/영문, 숫자, 특수기호만 입력 가능합니다. (최대 30자)"></div>
               </div>
               <div class="formList">
-                <label class="label" id="inpLabel_005"><span class="required">*</span>조직 3</label>
+                <label class="label" id="inpLabel_005">조직 3</label>
                 <div class="formRow" ><input type="text" class="input" id="inpLabel_005" placeholder="조직은 한/영문, 숫자, 특수기호만 입력 가능합니다. (최대 30자)"></div>
               </div>
               <div class="formList">
-                <label class="label" id="inpLabel_006"><span class="required">*</span>조직 4</label>
+                <label class="label" id="inpLabel_006">조직 4</label>
                 <div class="formRow" ><input type="text" class="input" id="inpLabel_006" placeholder="조직은 한/영문, 숫자, 특수기호만 입력 가능합니다. (최대 30자)"></div>
               </div>
             </div>
@@ -172,6 +172,14 @@
             </div> 
           </div>
 
+
+          
+          <div class="table_bt">
+            <div class="btn_c">
+              <button type="button" class="btnSuccess">등록</button>
+              <button type="button" class="btnWhite">취소</button>
+            </div>
+          </div>
                  
         </section>
       </div>
@@ -186,7 +194,82 @@
 
 
   <!-- **************** -->
-  <!-- layer : start -->
+  <!-- layer : start  등록 -->
+  <!-- **************** -->
+  <div class="layerWrap modal show" id="layer_manager_admin_edit" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid640">
+      <div class="layerHead">
+        <h3>관리자 수정</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        
+        <div class="layer_adminManage">
+          <h4 class="titH4">관리자 계정</h4>
+          <div class="formListWrap longLabel">
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_001"><span class="required">*</span>아이디</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_001" placeholder="예) SH0000001 / 영문 2자+숫자 7자리" readonly></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>담당자명</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 홍길동 / 한글"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>사업자 등록번호</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 105-88-78745 / 숫자+하이픈"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_003"><span class="required">*</span>대표 전화번호</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_003" placeholder="예) 02-3444-1124 / 숫자+하이픈"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_004"><span class="required">*</span>대표 이메일 아이디</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_004" placeholder="예) sh102114 / 영문, 숫자, 특수문자"></div>
+            </div>
+          </div>
+
+          <h4 class="titH4">조회 계정</h4>
+          <div class="formListWrap longLabel">
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_001"><span class="required">*</span>아이디</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_001" placeholder="예) SH0000001 / 영문 2자+숫자 7자리" readonly></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>담당자명</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 홍길동 / 한글"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>사업자 등록번호</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 105-88-78745 / 숫자+하이픈"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_003"><span class="required">*</span>대표 전화번호</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_003" placeholder="예) 02-3444-1124 / 숫자+하이픈"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_004"><span class="required">*</span>대표 이메일 아이디</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_004" placeholder="예) sh102114 / 영문, 숫자, 특수문자"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess " >수정</button>
+        <button type="button" class="btnWhite " >취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
+
+
+
+  <!-- **************** -->
+  <!-- layer : start  수정 -->
   <!-- **************** -->
   <div class="layerWrap modal show" id="layer_manager_admin" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
     <div class="layerBody wid640">
@@ -202,6 +285,10 @@
             <div class="formList">
               <label class="label" id="layer_inpLabel_001"><span class="required">*</span>아이디</label>
               <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_001" placeholder="예) SH0000001 / 영문 2자+숫자 7자리"></div>
+            </div>
+            <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>담당자명</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 홍길동 / 한글"></div>
             </div>
             <div class="formList">
               <label class="label" id="layer_inpLabel_002"><span class="required">*</span>사업자 등록번호</label>
@@ -224,6 +311,10 @@
               <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_001" placeholder="예) SH0000001 / 영문 2자+숫자 7자리"></div>
             </div>
             <div class="formList">
+              <label class="label" id="layer_inpLabel_002"><span class="required">*</span>담당자명</label>
+              <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 홍길동 / 한글"></div>
+            </div>
+            <div class="formList">
               <label class="label" id="layer_inpLabel_002"><span class="required">*</span>사업자 등록번호</label>
               <div class="formRow" ><input type="text" class="input" id="layer_inpLabel_002" placeholder="예) 105-88-78745 / 숫자+하이픈"></div>
             </div>
@@ -240,7 +331,7 @@
 
       </div>
       <div class="layerFoot">
-        <button type="button" class="btnSuccess " >수정</button>
+        <button type="button" class="btnSuccess " >등록</button>
         <button type="button" class="btnWhite " >취소</button>
       </div>
     </div>

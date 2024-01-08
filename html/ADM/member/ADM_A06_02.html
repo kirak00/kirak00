@@ -40,10 +40,10 @@
       <div class="tabLineWrap">
         <div class="inner">
           <ul class="tabLine tabScript" role="tablist">
-            <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="main_loan_cont_1">법인 정보</button></li>
+            <li class="on"><button type="button" role="tab" aria-selected="true" aria-controls="main_loan_cont_1">법인회원 정보</button></li>
             <li><button type="button" role="tab" aria-selected="false" aria-controls="main_loan_cont_3">메모</button></li>
           </ul>
-          <p class="info_txt"><span>상태 변경일   2023-10-01</span> <span>상태 변경자   14785412</span></p>
+          <p class="info_txt"><span>상태 변경일   2023-10-01</span> <span>상태 변경자   홍*동/14785412</span></p>
         </div>
       </div>
       <div class="bgWrap">
@@ -224,7 +224,7 @@
                           </colgroup>
                           <thead>
                             <tr>
-                              <th>성명</th>
+                              <th>이름</th>
                               <th>휴대 전화 번호</th>
                               <th>수신 동의일</th>
                             </tr>
@@ -249,6 +249,7 @@
           <div class="table_bt">
             <div class="btn_r">
               <button type="button" class="btnSuccess mm open_layer"  aria-controls="member_disabled">계정 비활성화</button>
+              <button type="button" class="btnSuccess mm open_layer"  aria-controls="member_activate">계정 활성화</button>
             </div>
           </div>
 
@@ -269,6 +270,60 @@
     <!-- contents : end -->
     <!-- **************** -->
 
+
+    
+  <!-- **************** -->
+  <!-- layer : start -->
+  <!-- **************** -->
+  <div class="layerWrap modal  " id="member_activate" role="dialog" aria-modal="true" > <!-- 'modal' class 추가하면 dimm 영역 클릭해도 레이어 닫히지 않음 -->
+    <div class="layerBody wid500">
+      <div class="layerHead">
+        <h3>계정 활성화</h3>
+        <button type="button" class="layerClose" popup-close="sampleLayer" aria-label="레이어 닫기"></button>
+      </div>
+      <div class="layerCont">
+        <div class="member_disabledChk">
+          <div class="memberMent">
+            <strong>해당 회원의 계정을 활성화 하시겠습니까?</strong>
+            <div>
+              활성화 처리된 계정은 대출 비교 서비스를 이용할 수 있습니다.
+              
+            </div>
+          </div>
+          <div class="sTit">
+            ·  계정 활성화 사유를 입력해 주세요
+          </div>
+          <div class="formVertical ">
+            <div class="textareaWrap">
+              <textarea class="textarea" placeholder="사유 또는 활성화 처리를 위해 발생한 이슈 등을 기재해 주세요."></textarea>
+              <span class="count">0/1,000</span>
+            </div>
+          </div>
+          <div class="sTit">
+            ·  증빙 서류 등록 (선택)
+          </div>
+          <div class="formRow filebox multi">
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
+            <label for="exFilename" class="btnBlack">파일 선택</label>  
+            <div class="attached"></div>
+          </div>
+          <p class="notiTxt">
+            증빙 서류는 JPG, PNG, GIF만 가능합니다.
+          </p>
+  
+        </div>
+
+      </div>
+      <div class="layerFoot">
+        <button type="button" class="btnSuccess " >비활성화</button>
+        <button type="button" class="btnWhite " onclick="layer_close('member_activate')"  aria-label="레이어 닫기">취소</button>
+      </div>
+    </div>
+    <div class="layerDimm"></div>
+  </div>
+  <!-- **************** -->
+  <!-- layer : end -->
+  <!-- **************** -->
 
     
   <!-- **************** -->
@@ -310,12 +365,12 @@
               <label class="label" for="testRdoBoxC"><span></span>기타</label>
             </span>
           </div>
-          <div class="formVertical mt10">
+          <!-- <div class="formVertical mt10">
             <div class="textareaWrap">
               <textarea class="textarea" placeholder="1000자 미만으로 입력해주세요"></textarea>
               <span class="count">0/1,000</span>
             </div>
-          </div>
+          </div> -->
           <div class="sTit">
             ·  이슈 발생 이력
           </div>
@@ -326,13 +381,16 @@
             </div>
           </div>
           <div class="sTit">
-            ·  증빙 서류 등록
+            ·  증빙 서류 등록(선택)
           </div>
           <div class="formRow filebox multi">
             <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
             <label for="exFilename" class="btnBlack">파일 선택</label>  
             <div class="attached"></div>
           </div>
+          <p class="notiTxt">
+            증빙 서류는 JPG, PNG, GIF만 가능합니다.
+          </p>
   
         </div>
 
