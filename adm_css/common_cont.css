@@ -386,7 +386,14 @@ a.ico_down       {color:#069B66; }
 
 a.download       {padding-left:32px; font-weight: 700; color:#069B66;  background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 0% 50%; }
 a.download2       {padding-right:26px; font-weight: 700; color:#069B66;  background:url(../adm_images/common/ico_24_download_blue.png) no-repeat 100% 0% / 18px; }
-a.attach       {padding-left:32px; font-weight: 700; color:#555;  background:url(../images/common/ico_18_clip_primary.png) no-repeat 0% 50% / 24px 24px ; }
+.attach       {padding-left:32px; font-weight: 700; color:#555;  background:url(../images/common/ico_18_clip_primary.png) no-repeat 0% 50% / 24px 24px ; }
+.attach.mt40 { margin-top: 40px;}
+.attach.mint { color: #4C9DA2; background-image: url(../images/common/ico_18_clip_mint.png)}
+.attach a { text-decoration:  underline;}
+.attach.delete a { text-decoration:  line-through;}
+.attach a:not(:last-child)::after { content: ','; display: inline-block;}
+
+
 
 a.lnk       {padding-right:32px; font-weight: 700; color:#069B66;  background:url(../adm_images/common/ico_24_blank_primary.png) no-repeat 100% 50%; }
 
@@ -478,6 +485,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .icoReceipt::after { content:""; display:inline-block; width: 111px; height:92px; background: url('../adm_images/common/ico_suggest.png')  no-repeat center / 111px 92px; }
 .icoReply { display: inline-flex; align-items: center; color: #069B66}
 .icoReply::before{ content:""; display:inline-block; width:18px; height:18px; margin-right: 4px; background: url('../adm_images/common/ico_24_chat.png')  no-repeat center / contain; }
+tr.disabled .icoReply { color: #888;}
+tr.disabled .icoReply::before{ content:""; display:inline-block; width:18px; height:18px; margin-right: 4px; background: url('../adm_images/common/ico_18_chat_disabled.png')  no-repeat center / contain; }
 
 
 .icoBank1::after { content:""; display:inline-block; width:150px; height:55px; background: url('../adm_images/common/ico_bank1.png')  no-repeat center / cover }
@@ -500,6 +509,8 @@ em.greenLine        {display:inline-block; height:24px; line-height:22px; paddin
 .ico_detail::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_blank_w.png) no-repeat center / contain; }
 .ico_delete { color: #555; font-weight: 700;}
 .ico_delete::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_24_trash_g.png) no-repeat center / contain; }
+.ico_memo { color: #555; font-weight: 700;}
+.ico_memo::after { content:""; display:inline-block; margin-left:8px; width:18px; height:18px; vertical-align: -3px; background:url(../adm_images/common/ico_18_memo1.png) no-repeat center / contain; }
 
 /* .ico_drag { color: #555;} */
 .icoDrag::before{ content:""; display:inline-block; width:32px; height:40px; background: url('../adm_images/common/ico_drag.png')  no-repeat center / 32px 40px; }
@@ -780,6 +791,9 @@ select.wid430 { min-width: 430px;}
 .textareaWrap .countSet .count { color: #888;}
 .textareaWrap.isActive .countSet .count { color: #069B66;}
 
+.textareaWrap.disabled { background: #f4f6f8;color: #999;  }
+
+
 .inputWrap { width: 100%; position: relative; }
 .inputWrap .input { padding-right: 100px; }
 .inputWrap .countSet { display: inline-flex; align-items: center; position: absolute; right: 20px; top: 14px; }
@@ -943,6 +957,7 @@ select.wid430 { min-width: 430px;}
 .formListWrap .formList .formRow { max-width: calc(100% - 175px);}
 .formListWrap .formList .formRow.fullType { max-width: 100%;}
 .formListWrap .formList .notiTxt { margin-left: 175px; width: 100%;}
+.formListWrap.hasBar + .formListWrap.hasBar { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd; }
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .label.alignTop { align-self: flex-start;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
@@ -969,6 +984,14 @@ select.wid430 { min-width: 430px;}
 .layerCont .formList .radio .label { width: auto;}
 .layerCont .formList .formRow { max-width: calc(100% - 100px);}
 .layerCont .formList .notiTxt { margin-left: 100px;}
+
+
+
+
+.formList .label.wid90 { width: 90px;}
+.formList .label.wid90 ~ .formDesc,
+.formList .label.wid90 ~ .formRow + * { margin-left: 90px; }
+
  
 /****************************
 **********  accordion  **********
@@ -1584,14 +1607,13 @@ th{word-break: break-all;}
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status span {color:#888; }
 .jsgrid-grid-body tbody tr > .jsgrid-cell.status strong {color:#333;  }
 .jsgrid-grid-body tbody tr.error  > .jsgrid-cell {background: rgba(254, 80, 80, 0.20); }
-.jsgrid-grid-body tbody tr.disabled  > .jsgrid-cell {background: #fafafa; }
-
-.jsgrid-grid-body tbody tr.disabled { background: #ddd; }
-tr.disabled td { color: #555; }
+.jsgrid-grid-body tbody tr.disabled  > .jsgrid-cell {background: #fafafa; color: #555; }
+tr.disabled td,
+tr.disabled td .blue { color: #555; }
 
 
 .noTableData  { margin: 60px 0; padding: 40px 0;}
-.noTableData .txt { margin-top: 30px; color: #555;}  
+.noTableData .txt { margin-top: 30px; color: #888;}  
 
 .jsgrid-control-field   {padding:0 10px; }
 .jsgrid-control-field .jsgrid-cancel-edit-button,
@@ -1950,6 +1972,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .date {color: #555; }
 .bbsDetailBox .titBox .sub { font-size: 18px; }
 .bbsDetailBox .detailCont     {border:1px solid #ddd; padding: 40px; background: #fff;  border-top:0; border-radius:0 0 16px 16px;  }
+
+
 .bbsDetailBox .detailCont .attachBox { margin-top: 40px;}
 .bbsDetailBox .detailCont .attachBox li + li { margin-top: 10px;}
 .bbsDetailBox .detailCont .guideBox { padding: 40px 60px;}
@@ -2315,7 +2339,8 @@ ol.auditInfo li em  {position:absolute; left:0;  display:inline-block; width:24p
 .inqueryTit a { padding: 20px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .inqueryTit .icoReply{ display: none; flex-shrink: 0; align-self: center; margin-left: 16px; font-weight: 700;}
 .inqueryTit.hasReply .icoReply{ display: inline-flex;}
-.inqueryTit.hasDelete {}
+.inqueryTit .status { display: none;}
+tr.disabled .inqueryTit .status { display: block;}
 
 /* .processStepWrap { display: flex; gap: 30px; margin-top: 20px;}
 .processStepWrap .left .tit { line-height: 55px; background: #069B66; border-radius: 60px; color: #fff; font-weight: 700; text-align: center; } 

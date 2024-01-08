@@ -113,13 +113,25 @@
 
             var clients = [
               { 
+                "status": "erro",
                 "Name1": "<span class='textBold'>접수</span>",
                 "Name2": "2023-08-12", 
                 "Name11": "금융회원", 
                 "Name3": "(주)튼튼철강", 
-                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
-                "Name5": "김*한", //<!-- v1.2 -->
-                "Name6": "2023-06-01", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
+                "Name5": "-", //<!-- v1.2 -->
+                "Name6": "-", 
+                "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>", // v1.0 .wid110 추가
+              },
+              { 
+                "status": "erro",
+                "Name1": "<span class='textBold'>접수</span>",
+                "Name2": "2023-08-12", 
+                "Name11": "금융회원", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
+                "Name5": "-", //<!-- v1.2 -->
+                "Name6": "-", 
                 "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>", // v1.0 .wid110 추가
               },
               { 
@@ -127,7 +139,7 @@
                 "Name2": "2023-08-12", 
                 "Name11": "법인회원", 
                 "Name3": "(주)튼튼철강", 
-                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span></p>", 
+                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
                 "Name5": "김*한", //<!-- v1.2 -->
                 "Name6": "2023-06-01", 
                 "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>", // v1.0 .wid110 추가
@@ -137,10 +149,30 @@
                 "Name2": "2023-08-12", 
                 "Name11": "법인회원", 
                 "Name3": "(주)튼튼철강", 
-                "Name4": "<p class='inqueryTit hasReply hasDelete'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
+                "Name4": "<p class='inqueryTit hasReply deleted'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
                 "Name5": "김*한", 
                 "Name6": "2023-06-01", 
                 "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>", 
+              },
+              { 
+                "Name1": "<span class='textBold blue'>답변 완료</span>",
+                "Name2": "2023-08-12", 
+                "Name11": "법인회원", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
+                "Name5": "김*한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>",
+              },
+              { 
+                "Name1": "<span class='textBold blue'>답변 완료</span>",
+                "Name2": "2023-08-12", 
+                "Name11": "법인회원", 
+                "Name3": "(주)튼튼철강", 
+                "Name4": "<p class='inqueryTit hasReply'><a href='#;'>대출 비교 요청 신청하면 얼마 정도 소요 되나요?</a><span class='icoReply'>2</span><span class='status'>문의 삭제</span></p>", 
+                "Name5": "김*한", 
+                "Name6": "2023-06-01", 
+                "Name7": "<button type='button' class='btnWhite wid110'>상세보기</button>",
               },
             ]; 
 
@@ -156,12 +188,16 @@
                 { name: "Name4", type: "text", title : "문의 제목", width: 'auto' },
                 { name: "Name5", type: "text", title : "답변자", width: 120 },
                 { name: "Name6", type: "text", title : "답변일", width: 170 },
-                { name: "Name7", type: "button", title : "상세", width: 230 },
+                { name: "Name7", type: "button", title : "상세", width: 230, isDisbled: "disabled" },
               ],
-              
               pagerContainer: "#externalPager2",
-
+              //문의 삭제의 경우 tr에 disabled 클래스 추가
+              rowClass: function(item, itemIndex) {
+                  return $(item.Name4).hasClass('deleted') ? 'disabled' : '';
+              },
             });
+
+
           });
         </script>
       </div>

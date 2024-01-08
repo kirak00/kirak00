@@ -78,9 +78,36 @@
   
           })
         </script>
+        <button type="button" class="btnSuccess" id="confirmClick2">작성 중 목록이동</button>
+        <script>
+          $("#confirmClick2").on("click",function(){
+            // layer alert
+            layer_confirm(
+              "작성중인 답변이 있습니다. <br/>저장하지 않고 나가시겠습니까?",
+              this ,  //  focus 조절을 위해 현재 Element를 넘겨줘야함
+              {
+                confirm:{ //  확인 
+                  txt : "확인", 
+                  callback : function(){ 
+                    // alert(3)
+                  }
+                },
+                cancel:{ //  취소 
+                  txt : "취소",
+                  callback : function(){
+                    // alert(2)
+                  }
+                }
+              }
+            )
+            // layer alert
+  
+          })
+        </script>
       </section>
       <section style="margin-top: 20px;">
         <h3 style="margin-bottom: 10px">팝업</h3>
+        <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayerMemo">회원 메모</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer">서비스 점검안내</button>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer2">게시물 등록</button>
         <div style="margin: 10px 0;"></div>
@@ -92,6 +119,56 @@
     
     <!-- **************** -->
     <!-- contents : end -->
+    <!-- **************** -->
+  
+    <!-- **************** -->
+    <!-- layer : start -->
+    <!-- **************** -->
+    <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
+    <div class="layerWrap show" id="sampleLayerMemo" role="dialog" aria-modal="true" >
+      <div class="layerBody wid640">
+        <div class="layerHead">
+          <h3>회원 메모</h3>
+          <button type="button" class="layerClose" popup-close="sampleLayerMemo" aria-label="레이어 닫기"></button>
+        </div>
+        <div class="layerCont">
+          <div class="formListWrap hasBar">
+            <div class="formList">
+              <span class="label">등록</span>
+              <div><span>2023-01-04</span> 13:14:53 / 홍길동</div>
+            </div>
+            <div class="formList">
+              <span class="label">내용</span>
+              <div>계정 비활성화 설정</div>
+            </div>
+          </div>
+          <div class="formListWrap hasBar">
+            <div class="formList">
+              <span class="label">등록</span>
+              <div>2023-01-04 13:14:53 / 홍길동</div>
+            </div>
+            <div class="formList">
+              <span class="label alignTop">내용</span>
+              <div class="formRow">
+                <div class="textareaWrap disabled">
+                  <textarea class="textarea h120" placeholder="답변은 최대 1,000자 까지 가능 합니다." readonly>금융 회사의 요청에 의하면 법인 정보 중 상당수의 자료가 허위임으로 확인되었습니다. 
+  이에 따라 해당 법인회원의 대표 번호로 연락을 취하였으나 연락이 되지 않아 정상적인 법인회원으로 분류할 수 없어 비활성화로 처리하였습니다.</textarea>
+                  <!-- <span class="countSet"><span class="count">0</span>/1,000</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table_bt mt40">
+            <div class="btn_c">
+              <button type="button" class="btnSuccess">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layerDimm"></div>
+    </div>
+    <!-- **************** -->
+    <!-- layer : end -->
     <!-- **************** -->
   
     <!-- **************** -->
