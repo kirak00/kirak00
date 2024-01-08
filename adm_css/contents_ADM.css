@@ -482,8 +482,8 @@ ul.dashboardWrap.userEnvir li.chart_pie .pie    {width:320px; height:320px; }
 .formQna + .formQna { margin-top: 30px;}
 .formQna .q,
 .formQna .a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; color: #fff; font-weight: 700; }
-.formQna .q { background-color: #069B66;}
-.formQna .a { background-color: #4C9DA2;}
+.formQna .q { margin-top: 12px; background-color: #069B66;}
+.formQna .a { margin-top: 12px; background-color: #4C9DA2;}
 .formQna .cont { flex: 1;}
 /* .formQna .cont .textarea { height: 108px;} */
 

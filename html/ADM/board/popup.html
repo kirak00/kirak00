@@ -112,6 +112,7 @@
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer2">게시물 등록</button>
         <div style="margin: 10px 0;"></div>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer3">상세팝업(수정/삭제)</button>
+        <div style="margin: 10px 0;"></div>
         <button type="button" class="btnSuccess open_layer" aria-controls="sampleLayer4">정보마당관리(영상등록/상세 팝업)</button>
       </section>
       
@@ -125,7 +126,7 @@
     <!-- layer : start -->
     <!-- **************** -->
     <!-- 작업 시 .show 삭제! (팝업 부여주기 용) -->
-    <div class="layerWrap show" id="sampleLayerMemo" role="dialog" aria-modal="true" >
+    <div class="layerWrap" id="sampleLayerMemo" role="dialog" aria-modal="true" >
       <div class="layerBody wid640">
         <div class="layerHead">
           <h3>회원 메모</h3>
@@ -135,7 +136,7 @@
           <div class="formListWrap hasBar">
             <div class="formList">
               <span class="label">등록</span>
-              <div><span>2023-01-04</span> 13:14:53 / 홍길동</div>
+              <div>2023-01-04 13:14:53 / 홍길동</div>
             </div>
             <div class="formList">
               <span class="label">내용</span>
@@ -151,7 +152,7 @@
               <span class="label alignTop">내용</span>
               <div class="formRow">
                 <div class="textareaWrap disabled">
-                  <textarea class="textarea h120" placeholder="답변은 최대 1,000자 까지 가능 합니다." readonly>금융 회사의 요청에 의하면 법인 정보 중 상당수의 자료가 허위임으로 확인되었습니다. 
+                  <textarea class="textarea h120" placeholder="" readonly>금융 회사의 요청에 의하면 법인 정보 중 상당수의 자료가 허위임으로 확인되었습니다. 
   이에 따라 해당 법인회원의 대표 번호로 연락을 취하였으나 연락이 되지 않아 정상적인 법인회원으로 분류할 수 없어 비활성화로 처리하였습니다.</textarea>
                   <!-- <span class="countSet"><span class="count">0</span>/1,000</span> -->
                 </div>
@@ -267,6 +268,8 @@
       <div class="layerBody wid640">
         <div class="layerHead">
           <h3>FAQ 상세</h3>
+          <!-- 등록 페이지일 경우 -->
+          <!-- <h3>FAQ 등록</h3> -->
           <button type="button" class="layerClose" popup-close="sampleLayer3" aria-label="레이어 닫기"></button>
         </div>
         <!-- 검색 -->
@@ -294,7 +297,6 @@
                 <textarea id="labelExtraOp1" class="textarea h40" placeholder="문의 내용을 입력해 주세요.">개인사업자도 회원 가입이 가능하나요?</textarea>
                 <span class="countSet"><span class="count">20</span>/100</span>
               </div>
-              <!-- <p class="notiTxt">작성은 최대 100자 까지 가능합니다.</p> --><!-- v1.0 삭제 -->
             </div>
           </div>
           <div class="formQna">
@@ -304,7 +306,6 @@
                 <textarea id="labelExtraOp2" class="textarea h120" placeholder="문의 내용을 입력해 주세요.">Loan&Biz 회원 가입은 법인 회원만 이용이 가능합니다.</textarea>
                 <span class="countSet"><span class="count">20</span>/500</span>
               </div>
-              <!-- <p class="notiTxt">작성은 최대 500자 까지 가능합니다.</p> --><!-- v1.0 삭제 -->
             </div>
           </div>
         </div>
@@ -312,6 +313,11 @@
           <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer3')">확인</button>
           <button type="button" class="btnWhite" onclick="layer_close('sampleLayer3')">삭제</button>
         </div>
+         <!-- 등록 페이지일 경우 -->
+        <!-- <div class="layerFoot">
+          <button type="button" class="btnSuccess" onclick="layer_close('sampleLayer3')">등록</button>
+          <button type="button" class="btnWhite" onclick="layer_close('sampleLayer3')">취소</button>
+        </div> -->
       </div>
       <div class="layerDimm"></div>
     </div>
@@ -331,9 +337,15 @@
         </div>
         <div class="layerCont">
           <p class="tableLabel pntCol_1">* 표시는 필수 입력 항목입니다.</p><!-- v1.0 추가 -->
-          <div class="formList">
-            <label class="label">등록일</label>
-            <div class="formRow">2023-01-0</div>
+          <div class="formListRow">
+            <div class="formList">
+              <label class="label">등록일</label>
+              <div class="formRow">2023-01-0</div>
+            </div>
+            <div class="formList">
+              <label class="label">최종 수정일</label>
+              <div class="formRow">2023-01-0</div>
+            </div>
           </div>
           <div class="formList">
             <label class="label">등록자</label>

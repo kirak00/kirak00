@@ -947,7 +947,7 @@ select.wid430 { min-width: 430px;}
 
 .formListWrap {position: relative; }
 /* .formListWrap.wid1020 { width: 1020px; } */
-.formListWrap.hasBorder { padding: 32px 40px; border: 1px solid #ddd; border-radius: 16px;}
+.formListWrap.hasBorder { padding: 32px 40px 60px; border: 1px solid #ddd; border-radius: 16px;}
 .formListWrap.hasBorder .searchBtns { position: absolute; right: 40px; bottom: 40px;}
 .formList { display: flex; align-items: center; flex-wrap: wrap;  margin: 40px 0 20px; }
 .formListWrap .formList { flex-wrap: wrap;  margin: 0;}
@@ -958,11 +958,18 @@ select.wid430 { min-width: 430px;}
 .formListWrap .formList .formRow.fullType { max-width: 100%;}
 .formListWrap .formList .notiTxt { margin-left: 175px; width: 100%;}
 .formListWrap.hasBar + .formListWrap.hasBar { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd; }
+
+.formListRow { display: flex; align-items: flex-start; gap: 40px;} 
+.layerCont .formListRow .formList { width: 100%; margin: 0;}
+.layerCont .formListRow .formList + .formList { margin: 0;}
+
+
 .formList .label { margin-right: 60px; font-weight: 700; flex-shrink: 0;}
 .formList .label.alignTop { align-self: flex-start;}
 .formList .btnSuccess.px32 { padding: 0 32px;}
 .formList .formRow { width: 100%;}
 .formList .formRow.wid1130 { width: 1130px;}
+.formList .formRow.wid1230 { width: 1230px;}
 
 
 
@@ -1388,7 +1395,8 @@ table { width: 100%;}
 .tableLabel + .titH3 { margin-top: 20px;}
 .tableLabel + .titH5 { margin-top: 20px;}
 .tableLabel .num { display: inline-block; margin-left: 4px;}
-.tableLabel + .formList { margin-top: 20px;}
+.tableLabel + .formList,
+.tableLabel + .formListRow { margin-top: 20px;}
 
 /* 라인 NO */
 .titH4.hasLine + .viewNolineTable { padding-top: 0px}
@@ -1556,8 +1564,8 @@ table { width: 100%;}
 .jsgrid-cell    {height:60px;  }
 .jsgrid-cell .done { font-weight: 700;}
 .jsgrid-cell .deny { color: #888;}
-.bbs .tit { padding-left: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-
+.bbs .tit { padding: 0 30px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left;}
+.bbs .tit.textCenter { text-align: center;}
 
 .double .jsgrid-header-row > .jsgrid-header-cell  {height:40px; }
 
@@ -1961,6 +1969,7 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 /* bbs detail */
 
 .bbsDetailBox       {  overflow: hidden; }
+.bbsDetailBox.disabled .titBox { background: #EEF0F1; }
 /* .tabLine ~ .bbsDetailBox       {margin-top:40px; } */
 .bbsDetailBox .titBox     {width:100%; padding:24px 40px; border: 1px solid #ddd; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
 .bbsDetailBox .titBox.typeDark { background: #069B66; color: #fff;}
@@ -1981,6 +1990,8 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .bbsDetailBox .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
 .bbsDetailBox .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;}
 
+
+.bbsDetailBox .barList .list.delete { display: none; color: #FE5050; }
 /* .layerBody.eventPop .titBox     {width:100%; padding:24px 40px; background:#EAFAEB; border-radius:16px 16px 0 0; display:flex; justify-content: space-between; align-items: center; }
 .layerBody.eventPop .titBox.typeDark { background: #069B66; color: #fff;}
 .layerBody.eventPop .titBox .mainTit  { font-size: 30px; font-weight: 700;}
@@ -2001,9 +2012,17 @@ dl.faqCont dt.on::after  {transform: rotate(180deg) translateY(50%) ;}
 .layerBody.eventPop .titBox .btnSet button + button { position: relative; margin-left: 16px; padding-left: 16px; }
 .layerBody.eventPop .titBox .btnSet button + button:before { content: ''; position: absolute; top: 50%; left: 0; margin-top: -10px; display: block; width: 1px; height: 20px; background: #ddd;} */
 
-.titBox .brand .label { position: relative; padding-right: 16px; margin-right: 16px;}
-.titBox .brand .label::after { position: absolute; top: 50%; right: 0; content: ''; display: block; width: 1px; height: 16px; margin-top: -8px; background: #888;}
+.titBox .barList { margin-top: 16px;}
+.titBox .barList .list { color: #555;}
+.titBox .barList .list + .list { position: relative; padding-left: 16px; margin-left: 16px;}
+.titBox .barList .list + .list::before { height: 20px; margin-top: -10px; background-color: #ddd;}
 
+
+.bbsDetailBox.disabled { color: #888}
+.bbsDetailBox.disabled .barList .list { color: #888;}
+.bbsDetailBox.disabled .barList .list.delete,
+.bbsDetailBox.disabled .barList .list.delete .date { display: inline-block; color: #FE5050; }
+.bbsDetailBox.disabled .btnBarSet { display: none;}
 
 .layerBody.wid1400 .layerCont .titBox { margin-bottom: 40px;}
 .layerCont .evtImg img { display: block; max-width: 100%; width: 100%; margin: 0 auto; }

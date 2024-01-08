@@ -57,21 +57,23 @@
 
       <div class="formListWrap hasBorder">
         <div class="formList">
-          <label class="label" for="inputLabel1">파일 위치</label>
-          <div class="formRow wid1130">
-            <input class="input" id="inputLabel1" type="text" placeholder="이미지 이행 등록 후 해당 파일의 경로를 입력해 주세요" value="http://lnb.shinhan.com/lnb/yak/20230911123457799">
+          <label class="label" for="inputLabel1"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이미지 등록</label><!-- v1.2 -->
+          <div class="formRow filebox wid1130">
+            <input type="text" class="input" placeholder="" value="" disabled="disabled" title="선택 파일">
+            <label for="exFilename" class="btnBlack">파일 찾기</label>
+            <input type="file" id="exFilename" class="uploadHidden" title="첨부파일">
           </div>
-          <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>S-Basic에 등록 후 해당 파일의 경로를 입력해 주세요</p> --><!-- v1.0 삭제 -->
+          <p class="notiTxt">이미지 이행 등록 후 해당 파일의 경로를 입력해주세요.</p>
         </div>
         <div class="formList">
-          <label class="label" for="inputLabel2">이미지 설명</label>
-          <div class="formRow wid1130">
-            <input class="input" id="inputLabel2" type="text" placeholder="이미지 설명은 100자 이내로 입력해 주세요" value="수수로율 이미지">
+          <label class="label" for="inputLabel2"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>이미지 설명</label>
+          <div class="formRow inputWrap"><!-- v1.2 .inputWrap 추가, 입력상태 isActive 추가  -->
+            <input class="input" id="inputLabel2" type="text" placeholder="" value="">
+            <span class="countSet"><span class="count">0</span>/100</span>
           </div>
-          <!-- <p class="notiTxt"><span class="pntCol_1">(필수)</span>주요 변경사항은 100자 이내로 입력해 주세요</p> --><!-- v1.0 삭제 -->
         </div>
         <div class="formList">
-          <label class="label" id="inputLabel3">적용 영역</label>
+          <label class="label" id="inputLabel3"><i aria-hidden="true" class="required">*</i><span class="srOnly">필수값</span>적용 영역</label>
           <div class="formRow">
             <div class="formRow" role="group" aria-labelledby="inputLabel3">
               <span class="radio">
@@ -96,6 +98,7 @@
               </span>        
             </div>
           </div>
+          <p class="notiTxt">적용할 영역을 선택해 주세요.</p>
         </div>
         <div class="searchBtns">
           <button type="button" class="btnSuccess">등록</button>
@@ -118,22 +121,22 @@
                 "Name1": "<span class='textBold blue'>Y</span>",
                 "Name2": "2023-08-12", 
                 "Name3": "김신한", 
-                "Name4": "메인 화면 상단", 
-                "Name5": "2023 가을 이미지", 
+                "Name4": "<p class='tit'>메인 화면 상단</p>", 
+                "Name5": "<p class='tit'>2023 가을 이미지</p>", 
               },
               { 
                 "Name1": "<span class='textBold blue'>Y</span>",
                 "Name2": "2023-08-12", 
                 "Name3": "김신한", 
-                "Name4": "메인 화면 상단", 
-                "Name5": "2023 가을 이미지", 
+                "Name4": "<p class='tit'>메인 화면 상단</p>", 
+                "Name5": "<p class='tit'>2023 가을 이미지</p>", 
               },
               { 
                 "Name1": "<span class='textBold'>N</span>", //v1.0 추가
                 "Name2": "2023-08-12", 
                 "Name3": "김신한", 
-                "Name4": "메인 화면 상단", 
-                "Name5": "2023 가을 이미지", 
+                "Name4": "<p class='tit'>메인 화면 상단</p>", 
+                "Name5": "<p class='tit'>2023 가을 이미지</p>", 
               },
             ]; 
 
